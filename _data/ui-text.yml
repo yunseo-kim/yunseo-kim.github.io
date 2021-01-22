@@ -633,7 +633,7 @@ ko: &DEFAULT_KO
   comment_form_website_label : "웹사이트(선택사항)"
   comment_btn_submit         : "댓글 등록"
   comment_btn_submitted      : "등록됨"
-  comment_success_msg        : "감사합니다! 댓글이 머지된 후 확인하실 수 있습니다."
+  comment_success_msg        : "감사합니다! 댓글이 승인된 후 확인하실 수 있습니다."
   comment_error_msg          : "댓글 등록에 문제가 있습니다. 필요 필드를 작성했는지 확인하고 다시 시도하세요."
   loading_label              : "로딩중..."
   search_label_text          :
