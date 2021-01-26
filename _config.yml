@@ -100,7 +100,7 @@ author:
   email            : # yunseo47@protonmail.ch
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+      icon: "fas fa-fw fa-envelope"
       url: "mailto:yunseo47@protonmail.ch"
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -109,7 +109,7 @@ author:
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
     - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+      icon: "fab fa-fw fa-facebook"
       url: "https://facebook.com/yunseo47"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -118,6 +118,7 @@ author:
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/yunseokim47"
     - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/yunseo-kim-162909202"
 
 # Site Footer
