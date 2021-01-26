@@ -117,6 +117,8 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/yunseokim47"
+    - label: "LinkedIn"
+      url: "https://www.linkedin.com/in/yunseo-kim-162909202"
 
 # Site Footer
 footer:
