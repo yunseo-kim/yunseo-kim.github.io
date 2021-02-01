@@ -20,7 +20,7 @@ title                    : "Yunseo47's Insight"
 title_separator          : "|"
 subtitle                 : "AI breakthrough for fusion energy" # site tagline that appears below site title in masthead
 name                     : "김윤서(Yunseo Kim)"
-description              : 
+description              : "Yunseo47's Fusion Energy & Data Science Blog"
 url                      : "https://yunseo47.github.io/"# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : ""# the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
