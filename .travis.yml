@@ -3,8 +3,8 @@
 language: ruby
 cache: bundler
 before_install:
-  - bundle install
-  # - gem install bundler
+  # - bundle install
+  - gem install bundler
 script:
   - bundle exec jekyll algolia
 branches:
@@ -12,4 +12,4 @@ branches:
     # Change this to gh-pages if you're deploying using the gh-pages branch
     - main
 rvm:
- - 2.4
+ - 3.0
