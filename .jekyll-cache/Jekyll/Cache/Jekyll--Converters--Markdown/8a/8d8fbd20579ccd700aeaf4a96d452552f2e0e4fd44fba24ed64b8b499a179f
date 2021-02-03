@@ -1,0 +1,231 @@
+I"'<p>GitHub Pages 활용을 위해서는 <strong>markdown</strong> 문법에 대해 알 필요가 있다.
+GitHub 공식 문서의 <a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a>과 <a href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">Basic writing and formatting syntax</a>를 참고하여 작성하였다.</p>
+
+<h2 id="1-마크다운이란">1. 마크다운이란</h2>
+<blockquote>
+  <p><strong>마크다운(markdown)</strong>은 일반 텍스트 기반의 경량 마크업 언어다. 일반 텍스트로 서식이 있는 문서를 작성하는 데 사용되며, 일반 마크업 언어에 비해 문법이 쉽고 간단한 것이 특징이다. HTML과 리치 텍스트(RTF) 등 서식 문서로 쉽게 변환되기 때문에 응용 소프트웨어와 함께 배포되는 README 파일이나 온라인 게시물 등에 많이 사용된다.</p>
+  <blockquote>
+    <p>존 그루버는 2004년에 문법 면에서 에런 스워츠와 중대한 협업을 통해 마크다운 언어를 만들었으며, 사람들이 읽기 쉽고 쓰기 쉬운 플레인 텍스트 포맷을 사용하여 쓸 수 있으면서 구조적으로 유효한 XHTML(또는 HTML)로 선택적 변환이 가능하게 하는 것이 목표이다.</p>
+  </blockquote>
+</blockquote>
+
+<p>-<a href="https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4">위키백과, 마크다운</a></p>
+
+<h2 id="2-마크다운-문법">2. 마크다운 문법</h2>
+<p>마크다운은 정해진 표준이 없기 때문에 세부 문법은 사용처마다 조금씩 다를 수 있다. 여기서 정리한 마크다운 문법은 <a href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">GitHub Flavored Markdown</a> 기준이다.</p>
+
+<h3 id="21-줄바꿈-문단-구분">2.1. 줄바꿈, 문단 구분</h3>
+<p>마크다운에서는 엔터키 한 번은 줄바꿈으로 인식하지 않는다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>첫째 문장.
+둘째 문장.
+셋째 문장.
+</code></pre></div></div>
+<p>첫째 문장.
+둘째 문장.
+셋째 문장.</p>
+
+<p>줄바꿈은 공백을 연속하여 두 칸 이상 입력하면 적용된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>첫째 문장.  
+둘째 문장.  
+셋째 문장.
+</code></pre></div></div>
+<p>첫째 문장.<br />
+둘째 문장.<br />
+셋째 문장.</p>
+
+<p>문단과 문단 사이는 빈 줄(엔터키 두 번)로 구분한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>하나의 문단.
+
+다른 문단.
+</code></pre></div></div>
+<p>하나의 문단.</p>
+
+<p>다른 문단.</p>
+
+<h3 id="22-글머리headers">2.2. 글머리(Headers)</h3>
+<p>총 6단계가 있다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This is an H1
+## This is an H2
+### This is an H3
+#### This is an H4
+##### This is an H5
+###### This is an H6
+</code></pre></div></div>
+<h1 id="this-is-an-h1">This is an H1</h1>
+<h2 id="this-is-an-h2">This is an H2</h2>
+<h3 id="this-is-an-h3">This is an H3</h3>
+<h4 id="this-is-an-h4">This is an H4</h4>
+<h5 id="this-is-an-h5">This is an H5</h5>
+<h6 id="this-is-an-h6">This is an H6</h6>
+
+<h3 id="23-강조">2.3. 강조</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*This text is italicized*
+_This is italicized too_
+
+**This is bold text**
+__This is bold text too__
+
+~~This was mistaken text~~
+
+_You **can** combine them_
+
+***All this text is important***
+</code></pre></div></div>
+<p><em>This text is italicized</em><br />
+<em>This is italicized too</em></p>
+
+<p><strong>This is bold text</strong><br />
+<strong>This is bold text too</strong></p>
+
+<p><del>This was mistaken text</del></p>
+
+<p><em>You <strong>can</strong> combine them</em></p>
+
+<p><strong><em>All this text is important</em></strong></p>
+
+<h3 id="24-텍스트-인용">2.4. 텍스트 인용</h3>
+<p>&gt;을 이용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; This is a first blockquote.
+&gt;&gt; This is a second blockquote.
+&gt;&gt;&gt; This is a third blockquote.
+</code></pre></div></div>
+<blockquote>
+  <p>This is a first blockquote.</p>
+  <blockquote>
+    <p>This is a second blockquote.</p>
+    <blockquote>
+      <p>This is a third blockquote.</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h3 id="25-코드-인용">2.5. 코드 인용</h3>
+<p>``` 또는 ~~~을 이용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
+git status
+git add
+git commit
+```
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+git add
+git commit
+</code></pre></div></div>
+
+<p>프로그래밍 언어를 지정하여 문법 강조 표시를 활성화할 수도 있다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+</code></pre></div></div>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'redcarpet'</span>
+<span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">markdown</span><span class="p">.</span><span class="nf">to_html</span>
+</code></pre></div></div>
+
+<h3 id="26-링크">2.6. 링크</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[GitHub Pages](https://pages.github.com/)
+&lt;https://pages.github.com/&gt;
+</code></pre></div></div>
+<p><a href="https://pages.github.com/">GitHub Pages</a><br />
+<a href="https://pages.github.com/">https://pages.github.com/</a></p>
+
+<p>리퍼지토리 내의 다른 파일을 가리키는 상대경로 링크도 사용할 수 있다. 사용법은 터미널에서와 동일하다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[README](../README.md)
+</code></pre></div></div>
+
+<h3 id="27-비정렬-목록">2.7. 비정렬 목록</h3>
+<p>-나 *을 이용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- George Washington
+- John Adams
+- Thomas Jefferson
+</code></pre></div></div>
+<ul>
+  <li>George Washington</li>
+  <li>John Adams</li>
+  <li>Thomas Jefferson</li>
+</ul>
+
+<h3 id="28-정렬-목록">2.8. 정렬 목록</h3>
+<p>숫자를 이용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. James Madison
+2. James Monroe
+3. John Quincy Adams
+</code></pre></div></div>
+<ol>
+  <li>James Madison</li>
+  <li>James Monroe</li>
+  <li>John Quincy Adams</li>
+</ol>
+
+<h3 id="29-중첩-목록">2.9. 중첩 목록</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. First list item
+   - First nested list item
+     - Second nested list item
+</code></pre></div></div>
+<ol>
+  <li>First list item
+    <ul>
+      <li>First nested list item
+        <ul>
+          <li>Second nested list item</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="210-할-일-목록">2.10. 할 일 목록</h3>
+<p>할 일 목록을 만드려면 각 항목 앞에 [ ]을 추가한다.
+완료된 일을 표시하려면 [x]을 이용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
+</code></pre></div></div>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Finish my changes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Push my commits to GitHub</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Open a pull request</li>
+</ul>
+
+<h3 id="211-이미지-첨부">2.11. 이미지 첨부</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>방법: ![(선택)이미지 설명](url)
+![GitHub Logo](/images/logo.png)
+![GitHub Logo](/images/logo.png){: .align-center}
+</code></pre></div></div>
+
+<h3 id="212-표-생성">2.12. 표 생성</h3>
+<p>|와 -을 이용해 표를 생성할 수 있다.
+표 앞에 한줄을 비워 놓아야 정상적으로 표시된다.
+적어도 3개 이상의 -을 사용해야 정상적으로 인식한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Left-aligned</th>
+      <th style="text-align: center">Center-aligned</th>
+      <th style="text-align: right">Right-aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">git status</td>
+      <td style="text-align: center">git status</td>
+      <td style="text-align: right">git status</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">git diff</td>
+      <td style="text-align: center">git diff</td>
+      <td style="text-align: right">git diff</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET
