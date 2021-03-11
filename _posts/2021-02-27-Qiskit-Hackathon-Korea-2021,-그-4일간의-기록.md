@@ -58,9 +58,19 @@ IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리�
 
 #### 1-2-1. 큐비트
 영상 내용에 따르면 큐비트의 상태는 **2차원 복소벡터공간상의 단위 벡터**로 표현하며, 이 큐비트 상태는 **unitary operations**, 즉 **양자 게이트(quantum gates)**를 통해 변화한다고 한다. 수식으로 나타내면 다음과 같다.  
-\begin{equation}\label{qubit}
-\|0\rangle := \begin{bmatrix}1\\0\end{bmatrix} \neq 0, \|1\rangle := \begin{bmatrix}0\\1\end{bmatrix} \neq 1  
-\|\psi〉= \alpha\|0〉+ \beta\|1〉= \begin{bmatrix} \alpha \\ \beta \end{bmatrix} (\alpha, \beta \in \mathbb{c}, \|\alpha\|^{2} + \|\beta\|^{2} = 1)
+\begin{equation} \label{qubit} \notag
+\|0\rangle := \begin{bmatrix}
+1 \\ 0
+\end{bmatrix} \neq 0, 
+\|1\rangle := \begin{bmatrix}
+0 \\ 1
+\end{bmatrix} \neq 1 \newline
+
+\|\psi〉= \alpha\|0〉+ \beta\|1〉
+= \begin{bmatrix}
+\alpha \\ \beta 
+\end{bmatrix} 
+(\alpha, \beta \in \mathbb{c}, \|\alpha\|^{2} + \|\beta\|^{2} = 1)
 \end{equation}
 
 #### 1-2-2. 유니터리 연산(Unitary Operation)
@@ -70,9 +80,17 @@ IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리�
 - 역연산 가능(Reversible)
 - 상태들 간의 논리적 관계를 보존함
 
-\begin{equation}\label{unitary_operation}
-\|\psi\rangle = \alpha\|0\rangle + \beta\|1\rangle, \|\phi\rangle = \gamma\|0\rangle + \delta\|1\rangle  
-\langle\phi\|\psi\rangle = \begin{bmatrix} \gamma^{\*} & \delta^{*} \end{bmatrix}\begin{bmatrix} \alpha \\ \beta \end{bmatrix}  
+\begin{equation} \label{unitary_operation} \notag
+\|\psi\rangle = \alpha\|0\rangle + \beta\|1\rangle, 
+\|\phi\rangle = \gamma\|0\rangle + \delta\|1\rangle \newline
+
+\langle\phi\|\psi\rangle 
+= \begin{bmatrix} 
+\gamma^{\*} & \delta^{*} 
+\end{bmatrix}
+\begin{bmatrix} 
+\alpha \\ \beta 
+\end{bmatrix} \newline
 \langle\phi\|U^{†}U\|\psi\rangle = \langle\phi\|\psi\rangle
 \end{equation}
 
