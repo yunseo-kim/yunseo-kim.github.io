@@ -58,19 +58,19 @@ IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리�
 
 #### 1-2-1. 큐비트
 영상 내용에 따르면 큐비트의 상태는 **2차원 복소벡터공간상의 단위 벡터**로 표현하며, 이 큐비트 상태는 **unitary operations**, 즉 **양자 게이트(quantum gates)**를 통해 변화한다고 한다. 수식으로 나타내면 다음과 같다.  
-\begin{equation}\label{qubit}\notag
+$$
 \|0\rangle := \begin{bmatrix}
 1 \\ 0
-\end{bmatrix} \neq 0, 
+\end{bmatrix} \neq 0 \quad
 \|1\rangle := \begin{bmatrix}
 0 \\ 1
 \end{bmatrix} \neq 1 \\
 \|\psi〉= \alpha\|0〉+ \beta\|1〉
 = \begin{bmatrix}
 \alpha \\ \beta 
-\end{bmatrix} 
+\end{bmatrix} \\
 (\alpha, \beta \in \mathbb{c}, \|\alpha\|^{2} + \|\beta\|^{2} = 1)
-\end{equation}
+$$
 
 #### 1-2-2. 유니터리 연산(Unitary Operation)
 **유니터리 연산(Unitary Operaion)**이란 2차원 복소벡터공간 안에서의 실수 회전(real rotations)의 일반적인 표현(generalization)이다. 다음과 같은 특성들을 지닌다.
@@ -79,8 +79,8 @@ IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리�
 - 역연산 가능(Reversible)
 - 상태들 간의 논리적 관계를 보존함
 
-\begin{equation}\label{unitary_operation}\notag
-\|\psi\rangle = \alpha\|0\rangle + \beta\|1\rangle, 
+$$
+\|\psi\rangle = \alpha\|0\rangle + \beta\|1\rangle \quad
 \|\phi\rangle = \gamma\|0\rangle + \delta\|1\rangle \\
 \langle\phi\|\psi\rangle 
 = \begin{bmatrix} 
@@ -88,9 +88,9 @@ IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리�
 \end{bmatrix}
 \begin{bmatrix} 
 \alpha \\ \beta 
-\end{bmatrix} \newline
+\end{bmatrix} \\
 \langle\phi\|U^{†}U\|\psi\rangle = \langle\phi\|\psi\rangle
-\end{equation}
+$$
 
 #### 1-2-3. 양자 게이트
 양자 게이트의 경우 단일 큐비트 게이트로는 **Pauli-X 게이트**, **Hadamard(H) 게이트**, **Pauli-Z gate** 등이 있고, 2큐비트 게이트로는 **CNOT 게이트**가 대표적이다(물론 이거 말고도 많다). X 게이트는 고전적인 컴퓨터에서의 NOT 게이트에 해당하는 녀석이고, Hadamard(H) 게이트는 기본 상태 \|0〉은 $\frac{\|0\rangle + \|1\rangle}{\sqrt{2}}$로, 기본 상태 \|1〉은 $\frac{\|0\rangle- \|1\rangle}{\sqrt{2}}$로 변환하여 \|0〉과 \|1〉이 측정될 확률이 각각 $\frac{1}{2}$로 같은 **중첩(superposition)** 상태를 만들어 주는 역할을 한다고 한다. Z 게이트는 단일 큐비트의 위상을 바꾸는 역할을 한다고 하는데 이 부분은 제대로 이해하지 못해서 아무래도 공부가 더 필요할 듯하다. CNOT 게이트는 2개의 큐비트상에서 동작하며, 큐비트의 입력 값이 \|0〉 또는 \|1〉로 한정될 경우 고전적인 컴퓨터에서의 XOR 게이트와 같은 역할을 한다.
