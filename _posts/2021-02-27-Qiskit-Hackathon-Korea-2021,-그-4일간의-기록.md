@@ -64,7 +64,7 @@ IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리�
 \end{bmatrix} \neq 0, 
 \|1\rangle := \begin{bmatrix}
 0 \\ 1
-\end{bmatrix} \neq 1 \newline
+\end{bmatrix} \neq 1 \\
 \|\psi〉= \alpha\|0〉+ \beta\|1〉
 = \begin{bmatrix}
 \alpha \\ \beta 
@@ -81,7 +81,7 @@ IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리�
 
 \begin{equation}\label{unitary_operation}\notag
 \|\psi\rangle = \alpha\|0\rangle + \beta\|1\rangle, 
-\|\phi\rangle = \gamma\|0\rangle + \delta\|1\rangle \newline
+\|\phi\rangle = \gamma\|0\rangle + \delta\|1\rangle \\
 \langle\phi\|\psi\rangle 
 = \begin{bmatrix} 
 \gamma^{\*} & \delta^{*} 
