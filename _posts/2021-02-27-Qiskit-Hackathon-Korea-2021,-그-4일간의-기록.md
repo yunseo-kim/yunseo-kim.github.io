@@ -68,19 +68,20 @@ $$
 \end{bmatrix} \neq 1 \\
 |\psi〉= \alpha|0〉+ \beta|1〉
 = \begin{bmatrix}
-\alpha \\ \beta 
-\end{bmatrix} \\
+\alpha \\ \beta \;
+\end{bmatrix}
 (\alpha, \beta \in \mathbb{c}, |\alpha|^{2} + |\beta|^{2} = 1)
 }
 $$
 
 #### 1-2-2. 유니터리 연산(Unitary Operation)
 **유니터리 연산(Unitary Operaion)**이란 2차원 복소벡터공간 안에서의 실수 회전(real rotations)의 일반적인 표현(generalization)이다. 다음과 같은 특성들을 지닌다.
-- $U^{†}=U^{-1}, UU^{†}=U^{†}U=I$
+- $U^{†}=U^{-1}, \; UU^{†}=U^{†}U=I$
 - 선형적(Linear)
 - 역연산 가능(Reversible)
 - 상태들 간의 논리적 관계를 보존함
 
+따라서 다음이 성립한다.
 $$
 \displaylines{
 |\psi\rangle = \alpha|0\rangle + \beta|1\rangle, \quad
