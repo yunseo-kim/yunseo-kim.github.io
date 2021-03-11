@@ -10,7 +10,7 @@ use_math: true
 ---
 
 ## 이 글의 목적
-최근 2월 16일부터 2월 19일까지 4일간 진행된 [**Qiskit Hackathon Korea 2021**](https://www.hackerearth.com/challenges/hackathon/qiskit-hackathon-korea/)에 "Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현"이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 소감까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 **Qiskit Hackathon Korea 2021**에서 4일간 경험한 것들에 대한 기록이다.
+최근 2월 16일부터 2월 19일까지 4일간 진행된 [**Qiskit Hackathon Korea 2021**](https://www.hackerearth.com/challenges/hackathon/qiskit-hackathon-korea/)에 "Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현"이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 느낀 점까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 **Qiskit Hackathon Korea 2021**에서 4일간 경험한 것들에 대한 기록이다.
 
 ## 팀 & 프로젝트 소개
 글을 시작하기에 앞서 팀 소개를 먼저 해야 할 듯하다.
@@ -42,19 +42,19 @@ Quantum Computing KR 그룹 내에 계신 경북대학교 배준현 교수님께
 첫날과 둘째 날에는 오리엔테이션과 특별 강연들이 준비되어 있었다.
 
 ### 1-1. Qiskit 설치
-신소영 님께서 zoom으로 맥과 리눅스 환경에서의 Qiskit 설치 방법을 설명해 주셨다. Qiskit이 워낙 활발하게 개발 중인 프레임워크이다 보니 버전업 속도도 굉장히 빠른 편이어서, 패키지 버전에 따른 의존성 문제가 많이 발생하는 편이라고 한다. 때문에 Qiskit에서는 데이터 사이언스를 위한 대부분의 파이썬 패키지들이 미리 갖춰져 있는 [Anaconda](https://www.anaconda.com/)를 이용하는 것을 권장하고 있다. 나는 원래는 아나콘다보다 파이썬 내에서 venv를 사용해서 가상환경을 직접 구축하는 쪽을 더 선호하는 편이지만, 공식적으로 아나콘다를 강하게 권장하는 데는 다 이유가 있을 테니 이번에는 아나콘다를 사용하여 진행하였다. 
+신소영 님께서 zoom으로 Qiskit 설치 가이드를 제공해 주셨다. Qiskit이 워낙 활발하게 개발 중인 프레임워크이다 보니 버전업 속도도 굉장히 빠른 편이어서, 패키지 버전에 따른 의존성 문제가 많이 발생하는 편이라고 한다. 때문에 Qiskit에서는 데이터 사이언스를 위한 대부분의 파이썬 패키지들이 미리 갖춰져 있는 [Anaconda](https://www.anaconda.com/)를 이용하는 것을 권장하고 있다. 나는 원래는 아나콘다보다 파이썬 내에서 venv를 사용해서 가상환경을 직접 구축하는 쪽을 더 선호하는 편이지만, 공식적으로 아나콘다를 강하게 권장하는 데는 다 이유가 있을 테니 이번에는 아나콘다를 사용하여 진행하였다. 
 
-리눅스 기준으로, [Anaconda 리눅스 설치 가이드](https://docs.anaconda.com/anaconda/install/linux/)대로 따라하면서 아나콘다를 설치하되 도중에 “**Do you wish the installer to initialize Anaconda3 by running conda init?**”라고 묻는 단계에서 "**yes**"를 입력하기만 하면 보통은 별다른 문제 없이 잘 동작한다. 아나콘다 설치 완료 후에는 터미널 창을 닫고 새로 열거나, **source ~/.bashrc** 명령을 실행해 준다. 
+리눅스 기준으로, [Anaconda 리눅스 설치 가이드](https://docs.anaconda.com/anaconda/install/linux/)대로 따라하면서 아나콘다를 설치하되 도중에 ```Do you wish the installer to initialize Anaconda3 by running conda init?```라고 묻는 단계에서 ```yes```를 입력하기만 하면 보통은 별다른 문제 없이 잘 동작한다. 아나콘다 설치 완료 후에는 터미널 창을 닫고 새로 열거나, ```source ~/.bashrc``` 명령을 실행해 준다. 
 
 다음으로 Qiskit을 사용할 가상환경을 하나 생성해줘야 한다. 다음 명령으로 콘다 가상환경 생성 후 활성화해준다.
 ```
 $ conda create --name (환경 이름)
 $ conda activate (환경 이름)
 ```
-여기까지 끝났다면 마지막으로 Qiskit을 설치해주면 되는데, 왜인지 잘은 모르지만 신소영 님께서 그냥 터미널에서 pip를 사용해서 설치할 경우 종종 에러가 발생하곤 한다며 주피터 노트북 실행 후 노트북 셀에서 **!pip install qiskit[visualization]** 를 실행해 달라고 상당히 강조하셨다. 마찬가지로 다 이유가 있을 테니 말씀하신 대로 주피터 노트북 내에서 설치하였다. 초보자도 따라할 수 있게끔 각 단계별로 친절하게 설명해 주셔서 다행히 별다른 어려움 없이 잘 설치할 수 있었다.
+여기까지 끝났다면 마지막으로 Qiskit을 설치해주면 되는데, 왜인지 잘은 모르지만 신소영 님께서 그냥 터미널에서 pip를 사용해서 설치할 경우 종종 문제가 발생하곤 한다며 주피터 노트북 실행 후 노트북 셀에서 ```!pip install qiskit[visualization]``` 를 실행해 달라고 상당히 강조하셨다. 이것도 다 이유가 있을 테니 말씀하신 대로 주피터 노트북 내에서 설치하였다. 초보자도 따라할 수 있게끔 각 단계별로 친절하게 설명해 주셔서 다행히 별다른 어려움 없이 잘 설치할 수 있었다.
 
 ### 1-2. 양자 게이트 & 알고리즘 강의
-IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리즘에 관한 귀중한 강의를 제공해 주셨다. 오전에는 큐비트를 어떤 형태로 표현하는지와 양자 게이트에 대한 영상을 볼 수 있었다.
+IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리즘에 관한 양질의 강의를 제공해 주셨다. 오전에는 큐비트를 어떤 형태로 표현하는지와 양자 게이트에 대한 영상을 볼 수 있었다.
 
 #### 1-2-1. 큐비트
 영상 내용에 따르면 큐비트의 상태는 **2차원 복소벡터공간상의 단위 벡터**로 표현하며, 이 큐비트 상태는 **unitary operations**, 즉 **양자 게이트(quantum gates)**를 통해 변화한다고 한다. 수식으로 나타내면 다음과 같다.  
@@ -68,20 +68,21 @@ $$
 \end{bmatrix} \neq 1 \\
 |\psi〉= \alpha|0〉+ \beta|1〉
 = \begin{bmatrix}
-\alpha \\ \beta \;
+\alpha \\ \beta \quad
 \end{bmatrix}
-(\alpha, \beta \in \mathbb{c}, |\alpha|^{2} + |\beta|^{2} = 1)
+(\alpha, \beta \in \mathbb{c}, \; |\alpha|^{2} + |\beta|^{2} = 1)
 }
 $$
 
 #### 1-2-2. 유니터리 연산(Unitary Operation)
-**유니터리 연산(Unitary Operaion)**이란 2차원 복소벡터공간 안에서의 실수 회전(real rotations)의 일반적인 표현(generalization)이다. 다음과 같은 특성들을 지닌다.
+**유니터리 연산(Unitary Operaion)**이란 2차원 복소벡터공간 안에서의 실수 회전(real rotations)의 일반적인 표현(generalization)이다. 아래와 같은 특성들을 지닌다.
 - $U^{†}=U^{-1}, \; UU^{†}=U^{†}U=I$
 - 선형적(Linear)
 - 역연산 가능(Reversible)
 - 상태들 간의 논리적 관계를 보존함
 
 따라서 다음이 성립한다.
+
 $$
 \displaylines{
 |\psi\rangle = \alpha|0\rangle + \beta|1\rangle, \quad
