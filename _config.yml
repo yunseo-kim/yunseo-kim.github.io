@@ -70,7 +70,7 @@ naver_site_verification  : 705b2244d3d659d91f84930ff048d987b3293f49
 
 # Social Sharing
 twitter:
-  username               :
+  username               : YunseoKim47
 facebook:
   username               :
   app_id                 :
@@ -82,9 +82,10 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : 김윤서(Yunseo Kim) # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - https://twitter.com/YunseoKim47
     - https://facebook.com/yunseo47
     - https://github.com/yunseo47
-    - https://www.linkedin.com/in/yunseo-kim-162909202
+    - https://www.linkedin.com/in/yunseo47
 
 # Analytics
 analytics:
@@ -109,8 +110,8 @@ author:
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/YunseoKim47"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook"
       url: "https://facebook.com/yunseo47"
@@ -122,7 +123,7 @@ author:
       # url: "https://instagram.com/yunseokim47"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/yunseo-kim-162909202"
+      url: "https://www.linkedin.com/in/yunseo47"
 
 # Site Footer
 footer:
