@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://yunseo47.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yunseo47.github.io//" rel="alternate" type="text/html" /><updated>2021-04-30T16:34:01+09:00</updated><id>https://yunseo47.github.io//feed.xml</id><title type="html">Yunseo47’s Insight</title><subtitle>Yunseo47's Fusion Energy &amp; Data Science Blog</subtitle><author><name>김윤서(Yunseo Kim)</name></author><entry><title type="html">kaggle-Intro to Machine Learning 코스 내용 정리</title><link href="https://yunseo47.github.io//data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="kaggle-Intro to Machine Learning 코스 내용 정리" /><published>2021-04-04T00:00:00+09:00</published><updated>2021-04-04T00:00:00+09:00</updated><id>https://yunseo47.github.io//data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="https://yunseo47.github.io//data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/">&lt;p&gt;최근 박해선 님께서 진행하시는 머신러닝 스터디 잼에 참가하게 되었다.&lt;/p&gt;
+&lt;iframe src=&quot;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fhaesunrpark%2Fposts%2F1181208872309434&amp;amp;width=400&amp;amp;show_text=true&amp;amp;height=493&amp;amp;appId&quot; width=&quot;400&quot; height=&quot;493&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.kaggle.com/learn/overview&quot;&gt;Kaggle 공개 코스들&lt;/a&gt;을 이용하는 스터디 그룹 형식이고, 5개의 코스를 모두 수료하면 GDE(Google Developer Expert) 티셔츠도 받을 수 있다. &lt;del&gt;뭔가 Qiskit 해커톤을 시작으로 티셔츠 빌런이 되어가는 느낌이다. IBM에 이어 이번엔 GDE다.&lt;/del&gt;&lt;br /&gt;
+각 코스를 수료할 때마다 해당 코스의 내용을 간단히 정리할 계획이다. 첫 번째 글은 &lt;strong&gt;Intro to Machine Learning&lt;/strong&gt; 코스의 요약이다.&lt;/p&gt;
+
+&lt;h1 id=&quot;intro-to-machine-learning&quot;&gt;Intro to Machine Learning&lt;/h1&gt;
+&lt;p&gt;Learn the core ideas in machine learning, and build your first models.&lt;/p&gt;
+
+&lt;h2 id=&quot;lesson-1-how-models-work&quot;&gt;Lesson 1. How Models Work&lt;/h2&gt;
+&lt;p&gt;처음에는 부담 없이 가볍게 시작한다. 머신러닝 모델들이 어떻게 작동하고, 어떻게 사용되는지에 관한 내용이다. 부동산 가격 예측을 해야 하는 상황을 가정하면서 간단한 결정 트리(Decision Tree) 분류 모델을 예로 들어 설명하고 있다.&lt;/p&gt;
+
+&lt;p&gt;데이터로부터 패턴을 찾아내는 것을 모델을 &lt;strong&gt;훈련&lt;/strong&gt;한다고 한다(&lt;strong&gt;fitting&lt;/strong&gt; or &lt;strong&gt;training&lt;/strong&gt; the model). 모델을 훈련할 때 사용하는 데이터를 &lt;strong&gt;훈련 데이터(training data)&lt;/strong&gt;라고 한다. 훈련을 마치면 이 모델을 새로운 데이터에 적용해서 &lt;strong&gt;예측(predict)&lt;/strong&gt;할 수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;lesson-2-basic-data-exploration&quot;&gt;Lesson 2. Basic Data Exploration&lt;/h2&gt;
+&lt;p&gt;어떤 머신러닝 프로젝트에서든 가장 먼저 해야 할 일은 개발자 본인이 그 데이터에 익숙해지는 것이다. 데이터가 어떤 특성을 지니는지를 먼저 파악해야 그에 적합한 모델을 설계할 수 있다. 데이터를 탐색하고 조작하는 용도로 거의 필수적으로 판다스(Pandas) 라이브러리를 사용하는데, 이 판다스에 관한 기본적인 내용이다.&lt;/p&gt;
+
+&lt;p&gt;판다스 라이브러리의 핵심은 데이터프레임(DataFrame)인데, 이 데이터프레임은 일종의 표 같은 거라고 생각하면 된다. 엑셀의 시트나 SQL 데이터베이스의 테이블과 비슷하다. read_csv 메서드를 사용해서 CSV 형식 데이터를 불러올 수 있다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# 필요할 때마다 쉽게 접근하기 위해 파일 경로를 변수로 저장하는 것이 좋다.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'(파일 경로)'&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# 데이터를 읽어들여서 'data_1'이라는 이름의 데이터프레임으로 저장한다(물론 실제로는 알아보기 쉬운 이름을 쓰는 것이 좋다).
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;describe 메서드를 사용해서 데이터의 요약 정보를 확인할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;data_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;그러면 8항목의 정보를 확인 가능하다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;count&lt;/strong&gt;: 실제 값이 들어 있는 행의 개수(값이 누락된 것은 제외)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;mean&lt;/strong&gt;: 평균&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;std&lt;/strong&gt;: 표준편차&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;min&lt;/strong&gt;: 최솟값&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;25%&lt;/strong&gt;: 하위 25%의 값&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;50%&lt;/strong&gt;: 중간값&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;75%&lt;/strong&gt;: 하위 75%의 값&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;max&lt;/strong&gt;: 최댓값&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lesson-3-your-first-machine-learning-model&quot;&gt;Lesson 3. Your First Machine Learning Model&lt;/h2&gt;
+&lt;h3 id=&quot;데이터-가공&quot;&gt;데이터 가공&lt;/h3&gt;
+&lt;p&gt;주어진 데이터에서 어떤 변수들을 모델링에 활용할 것인지 결정해야 한다. 데이터프레임의 &lt;strong&gt;columns&lt;/strong&gt; 속성을 이용하여 열 레이블을 확인할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;file_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'../input/melbourne-housing-snapshot/melb_data.csv'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;melbourne_file_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;melbourne_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;주어진 데이터에서 필요한 부분을 골라내는 방법은 여러 가지인데, 캐글의 &lt;a href=&quot;https://www.kaggle.com/learn/pandas&quot;&gt;Pandas Micro-Course&lt;/a&gt;에서 깊이 있게 다룬다고 한다(이 내용도 나중에 정리할 것이다). 여기서는 다음의 두 가지 방법을 사용한다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Dot notation&lt;/li&gt;
+  &lt;li&gt;리스트 사용&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;우선, &lt;strong&gt;dot-notation&lt;/strong&gt;으로 &lt;strong&gt;예측 대상(prediction target)&lt;/strong&gt;에 해당하는 열을 골라낸다. 이때 이 단일 열은 &lt;strong&gt;시리즈(Series)&lt;/strong&gt;에 저장한다. 시리즈는 대략 하나의 열로만 구성된 데이터프레임이라 생각하면 된다. 관습적으로 예측 대상은 &lt;strong&gt;y&lt;/strong&gt;로 지칭한다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;melbourne_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Price&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;예측을 위해 모델에 입력하는 열들을 “특성(features)”이라고 한다. 예제로 주어진 멜버른 집값 데이터의 경우에는 집값 예측에 사용할 열들이 된다. 주어진 데이터에서 예측 대상을 제외한 모든 열들을 특성으로 사용할 때도 있고, 그 중 일부만 골라내어 사용하는 게 더 나을 때도 있다.&lt;br /&gt;
+아래와 같이 리스트를 사용하여 여러 개의 특성들을 골라낼 수 있다. 이때 이 리스트의 모든 요소들은 문자열이어야 한다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;melbourne_features&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Rooms'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Bathroom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Landsize'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Lattitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Longtitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;관습적으로 이 데이터는 &lt;strong&gt;X&lt;/strong&gt;로 지칭한다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;melbourne_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;melbourne_features&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;데이터를 분석할 때 describe 이외에 유용하게 사용할 수 있는 메서드로 head도 있다. 처음 5개의 행을 보여준다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;모델-설계&quot;&gt;모델 설계&lt;/h3&gt;
+&lt;p&gt;모델링 단계에서는 보통 &lt;strong&gt;사이킷런(scikit-learn)&lt;/strong&gt; 라이브러리를 많이 사용한다. 모델을 설계하고 사용하는 과정은 크게 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;모델 정의(Define)&lt;/strong&gt;: 모델의 종류와 매개변수들(parameters)을 결정한다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;훈련(Fit)&lt;/strong&gt;: 주어진 데이터에서 규칙성을 찾아낸다. 모델링의 핵심이다.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;예측(Predict)&lt;/strong&gt;: ㅈㄱㄴ&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;검증(Evaluate)&lt;/strong&gt;: 모델의 예측이 얼마나 정확한지 평가한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;아래는 사이킷런으로 모델을 정의하고 훈련하는 예시이다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.tree&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecisionTreeRegressor&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Define model. Specify a number for random_state to ensure same results each run
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;melbourne_model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecisionTreeRegressor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random_state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Fit model
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;melbourne_model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;많은 머신러닝 모델들은 훈련 과정에서 어느 정도 무작위성을 지니고 있다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;random_state&lt;/code&gt;값을 지정함으로써 매 실행마다 같은 결과를 얻도록 할 수 있으며, 특별한 이유가 없다면 지정하는 것이 좋은 습관이다. 어떤 값을 사용하든 상관없다. &lt;del&gt;내 아이디가 yunseo&lt;strong&gt;47&lt;/strong&gt;이기 때문에, 개인적으로 나는 47을 많이 사용한다.&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;모델 훈련을 완료하면 다음과 같이 예측을 수행할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Making predictions for the following 5 houses:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The predictions are&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;melbourne_model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;lesson-4-model-validation&quot;&gt;Lesson 4. Model Validation&lt;/h2&gt;
+&lt;h3 id=&quot;모델-검증-방법&quot;&gt;모델 검증 방법&lt;/h3&gt;
+&lt;p&gt;모델을 반복적으로 개선해 나가려면 모델의 성능을 측정해야 한다. 어떤 모델을 이용하여 예측을 했을 때, 맞춘 경우도 있고 틀린 경우도 있을 것이다. 이때 이 모델의 예측 성능을 확인하기 위한 지표가 필요하다. 다양한 종류의 지표가 있는데, 여기서는 &lt;strong&gt;MAE(Mean Absolute Error, 평균 절대 오차)&lt;/strong&gt;를 사용한다.&lt;/p&gt;
+
+&lt;p&gt;멜버른 집값 예측의 경우에, 각각의 집값에 대한 예측 오차는 다음과 같다.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-error=actual−predicted```&quot;&gt;MAE는 각각의 예측 오차의 절대값을 취하여 이 절대 오차들의 평균을 구함으로써 계산한다. 사이킷런으로 다음과 같이 구현할 수 있다.
+```python
+from sklearn.metrics import mean_absolute_error
+
+predicted_home_prices = melbourne_model.predict(X)
+mean_absolute_error(y, predicted_home_prices)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;훈련-데이터를-검증에-사용하는-것의-문제점&quot;&gt;훈련 데이터를 검증에 사용하는 것의 문제점&lt;/h3&gt;
+&lt;p&gt;위의 코드에서는 하나의 데이터셋으로 모델 훈련과 검증을 모두 수행하였다. 그런데 이렇게 하면 안 된다. 이 코스에서는 하나의 예시를 들어 이유를 설명하고 있다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;실제 부동산 시장에서 문의 색깔은 집값과는 무관하다.&lt;/p&gt;
+
+  &lt;p&gt;그러나 우연히도 훈련에 사용한 데이터에서는 초록색 문을 가진 집들은 모두 매우 비싸다고 한다. 모델의 역할은 데이터에서 집값 예측에 활용할 만한 규칙성을 찾아내는 것이므로, 이 경우 우리의 모델은 이 규칙성을 감지하고 초록 문을 가진 집은 가격이 비싸다고 예측할 것이다.&lt;/p&gt;
+
+  &lt;p&gt;이와 같이 예측을 수행한다면, 주어진 훈련 데이터에 대해서는 정확한 것처럼 보일 것이다.&lt;/p&gt;
+
+  &lt;p&gt;그러나 “초록 문을 가진 집은 비싸다”라는 규칙이 통하지 않는 새로운 데이터에 대해 예측을 수행하면, 이 모델은 매우 부정확할 것이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;모델은 새로운 데이터로부터 예측을 수행해야 의미가 있는 것이므로, 우리는 모델 훈련에 사용하지 않은 데이터를 사용하여 검증을 수행해야 한다. 가장 간단한 방법은 모델링 과정에서 일부 데이터를 분리하여 성능 측정용으로 사용하는 것이다. 이 데이터를 &lt;strong&gt;검증 데이터(validation data)&lt;/strong&gt;라고 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;검증-데이터셋-분리&quot;&gt;검증 데이터셋 분리&lt;/h3&gt;
+&lt;p&gt;사이킷런 라이브러리에는 데이터를 둘로 분리하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;train_test_split&lt;/code&gt; 함수가 있다. 아래의 코드는 데이터를 둘로 분리하여 하나는 훈련용으로 사용하고, 다른 하나는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mean_absolute_error&lt;/code&gt; 측정을 위한 검증용으로 사용하는 코드이다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.model_selection&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_test_split&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# split data into training and validation data, for both features and target
+# The split is based on a random number generator. Supplying a numeric value to
+# the random_state argument guarantees we get the same split every time we
+# run this script.
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val_y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_test_split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Define model
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;melbourne_model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecisionTreeRegressor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Fit model
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;melbourne_model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# get predicted prices on validation data
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val_predictions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;melbourne_model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mean_absolute_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val_predictions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;lesson-5-underfitting-and-overfitting&quot;&gt;Lesson 5. Underfitting and Overfitting&lt;/h2&gt;
+&lt;h3 id=&quot;과대적합과-과소적합&quot;&gt;과대적합과 과소적합&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;과대적합(overfitting)&lt;/strong&gt;: 모델이 훈련 데이터셋에만 매우 정확하게 들어맞고, 검증 데이터셋이나 다른 새로운 데이터에 대해서는 제대로 예측을 하지 못하는 현상&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;과소적합(underfitting)&lt;/strong&gt;: 모델이 주어진 데이터에서 중요한 특성과 규칙성을 찾아내지 못하여, 훈련 데이터셋에서도 제대로 예측을 하지 못하는 현상&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;아래 이미지의 초록색 선이 과대적합된 모델을 나타내며, 검은색 선이 바람직한 모델을 나타낸다.
+&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/1/19/Overfitting.svg&quot; alt=&quot;Overfitting&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;이미지 출처&lt;/em&gt;&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;저작자: 에스파냐 위키피디아 유저 &lt;a href=&quot;https://commons.wikimedia.org/wiki/User:Ignacio_Icke&quot;&gt;Ignacio Icke&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;라이선스: &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0&quot;&gt;CC BY-SA 4.0&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;우리에게 중요한 것은 새로운 데이터에서의 예측 정확도이며, 검증 데이터셋을 이용하여 새로운 데이터에서의 예측 성능을 추산한다. 과소적합과 과대적합 간의 최적점(sweet spot)을 찾는 것이 목표이다.&lt;br /&gt;
+&lt;img src=&quot;https://i.imgur.com/2q85n9s.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+이 코스에서는 계속해서 결정 트리 분류 모델을 예로 들어 설명하고 있지만, 과대적합과 과소적합은 모든 머신러닝 모델에 적용되는 개념이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;하이퍼파라미터hyperparameter-튜닝&quot;&gt;하이퍼파라미터(hyperparameter) 튜닝&lt;/h3&gt;
+&lt;p&gt;아래의 예시는 결정 트리 모델의 &lt;em&gt;max_leaf_nodes&lt;/em&gt; 인수의 값을 바꿔 보면서 모델의 성능을 비교 측정하는 코드이다.(데이터를 불러오고, 검증 데이터셋을 떼어내는 부분은 생략)&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.metrics&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean_absolute_error&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.tree&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecisionTreeRegressor&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_mae&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_leaf_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DecisionTreeRegressor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_leaf_nodes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_leaf_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;preds_val&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;mae&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean_absolute_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;preds_val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mae&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# compare MAE with differing values of max_leaf_nodes
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;max_leaf_nodes&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;my_mae&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;get_mae&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_leaf_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Max leaf nodes: %d  &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t\t&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; Mean Absolute Error:  %d&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;max_leaf_nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_mae&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;하이퍼파라미터 튜닝을 완료하면, 마지막으로 전체 데이터로 모델을 훈련시켜 성능을 극대화한다. 더 이상 검증 데이터셋을 떼어 놓을 필요가 없기 때문이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;lesson-6-random-forests&quot;&gt;Lesson 6. Random Forests&lt;/h2&gt;
+&lt;p&gt;서로 다른 여러 모델을 함께 사용하면 단일 모델모다 더 좋은 성능을 낼 수 있다. &lt;strong&gt;랜덤 포레스트(random forest)&lt;/strong&gt;가 좋은 예시이다.&lt;/p&gt;
+
+&lt;p&gt;랜덤 포레스트는 수많은 결정 트리들로 구성되어 있으며, 각 트리의 예측값의 평균을 내어 최종 예측을 한다. 많은 경우에 단일 결정 트리보다 더 나은 예측 정확도를 보이며, 매개변수들을 기본값 그대로 사용하여도 잘 작동한다.&lt;/p&gt;</content><author><name>김윤서(Yunseo Kim)</name></author><category term="Data science" /><category term="Machine learning" /><summary type="html">최근 박해선 님께서 진행하시는 머신러닝 스터디 잼에 참가하게 되었다.</summary></entry><entry><title type="html">Qiskit Hackathon Korea 2021, 그 4일간의 기록</title><link href="https://yunseo47.github.io//quantum%20computing/Qiskit-Hackathon-Korea-2021,-%EA%B7%B8-4%EC%9D%BC%EA%B0%84%EC%9D%98-%EA%B8%B0%EB%A1%9D/" rel="alternate" type="text/html" title="Qiskit Hackathon Korea 2021, 그 4일간의 기록" /><published>2021-02-27T00:00:00+09:00</published><updated>2021-02-27T00:00:00+09:00</updated><id>https://yunseo47.github.io//quantum%20computing/Qiskit-Hackathon-Korea-2021,-%EA%B7%B8-4%EC%9D%BC%EA%B0%84%EC%9D%98-%EA%B8%B0%EB%A1%9D</id><content type="html" xml:base="https://yunseo47.github.io//quantum%20computing/Qiskit-Hackathon-Korea-2021,-%EA%B7%B8-4%EC%9D%BC%EA%B0%84%EC%9D%98-%EA%B8%B0%EB%A1%9D/">&lt;h1 id=&quot;이-글의-목적&quot;&gt;이 글의 목적&lt;/h1&gt;
+&lt;p&gt;최근 2월 16일부터 2월 19일까지 4일간 진행된 &lt;a href=&quot;https://www.hackerearth.com/challenges/hackathon/qiskit-hackathon-korea/&quot;&gt;&lt;strong&gt;Qiskit Hackathon Korea 2021&lt;/strong&gt;&lt;/a&gt;에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 느낀 점까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 &lt;strong&gt;Qiskit Hackathon Korea 2021&lt;/strong&gt;에서 4일간 경험한 것들에 대한 기록이다.&lt;/p&gt;
+
+&lt;h1 id=&quot;팀--프로젝트-소개&quot;&gt;팀 &amp;amp; 프로젝트 소개&lt;/h1&gt;
+&lt;p&gt;글을 시작하기에 앞서 팀 소개를 먼저 해야 할 듯하다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;팀명: &lt;strong&gt;Quanputing&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;프로젝트 주제: &lt;em&gt;Exploring Hybrid quantum-classical Neural Networks with PyTorch and Qiskit&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;프로젝트 아이디어:
+    &lt;blockquote&gt;
+      &lt;p&gt;While examining Qiskit and Tensorflow Quantum tutorial documents about &lt;em&gt;hybrid ML&lt;/em&gt;, we found something interesting. In &lt;strong&gt;Qiskit&lt;/strong&gt; tutorial documents, classical convolution layers are combined with quantum fully-connected layers. In the &lt;strong&gt;Tensorflow Quantum&lt;/strong&gt; tutorial, on the other hand, quantum convolution layers are combined with classical fully-connected layers. Then one question arises: where is it better to apply the quantum layer?&lt;/p&gt;
+
+      &lt;p&gt;In this project, we will do the following:&lt;/p&gt;
+      &lt;ol&gt;
+        &lt;li&gt;Build MNIST multi-label classifiers using classical convolution layers and quantum fully-connected layers.&lt;/li&gt;
+        &lt;li&gt;Build MNIST multi-label classifiers using quantum convolution layers and classical fully-connected layers.&lt;/li&gt;
+        &lt;li&gt;Compare the performance of these two models.&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;팀 리포지터리: &lt;a href=&quot;https://github.com/yh08037/quantum-neural-network&quot;&gt;https://github.com/yh08037/quantum-neural-network&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;팀 HackerEarth 페이지: &lt;a href=&quot;https://www.hackerearth.com/challenges/hackathon/qiskit-hackathon-korea/dashboard/648082e/&quot;&gt;https://www.hackerearth.com/challenges/hackathon/qiskit-hackathon-korea/dashboard/648082e/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;해커톤 결과: &lt;strong&gt;Community Choice Award&lt;/strong&gt; 수상&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pre-해커톤-참가-동기&quot;&gt;pre. 해커톤 참가 동기&lt;/h1&gt;
+&lt;h2 id=&quot;pre-1-quantum-computing-kr-페이스북-그룹&quot;&gt;pre-1. Quantum Computing KR 페이스북 그룹&lt;/h2&gt;
+&lt;p&gt;작년 7월 말쯤에 &lt;a href=&quot;https://www.facebook.com/groups/QuantumComputingKR&quot;&gt;Quantum Computing KR&lt;/a&gt;이라는 페이스북 그룹에 가입하게 되었다. 나는 페이스북을 주로 그룹을 통한 정보 습득 목적으로 사용하는데, 그날도 양자컴퓨팅 관련 정보를 찾다가 이 그룹을 발견했다. 그리고 1월 말에 신소영 님께서 그룹에 Qiskit Hackathon Korea 소개글을 올려 주셔서 처음 이 대회를 알게 되었다.&lt;/p&gt;
+
+&lt;h2 id=&quot;pre-2-해커톤-등록-기대-반-걱정-반&quot;&gt;pre-2. 해커톤 등록, 기대 반 걱정 반&lt;/h2&gt;
+&lt;p&gt;처음 해커톤 소개글을 봤을 때는 좀 많이 망설였다. 사실 나는 이번 해커톤을 통해 처음 양자컴퓨팅에 입문하였기 때문에, 그 전까지는 양자컴퓨팅 관련 코딩 경험이 전무한 상태였다(사실 Qiskit이라는 게 있는 줄도 이번에 처음 알았다…). 하지만 신소영 님께서 양자컴퓨터 초보자를 위한 교육 세션이 준비되어 있다고 하셨기 때문에, 일단 쉬운 프로젝트라도 무작정 덤벼들어 보자는 마음으로 참가를 결심하였다(결과적으로 탁월한 선택이었다!). 다행히 페이스북 그룹 내 반응을 살펴보니 양자컴퓨팅 입문자가 나만은 아닌 것 같아 위안이 많이 되었고, 기대도 되기 시작했다.&lt;/p&gt;
+
+&lt;h2 id=&quot;pre-3-입문자용-강의--사전-행사&quot;&gt;pre-3. 입문자용 강의 &amp;amp; 사전 행사&lt;/h2&gt;
+&lt;p&gt;Quantum Computing KR 그룹 내에 계신 경북대학교 배준현 교수님께서 정말 감사하게도 입문자용 강의 영상들을 유튜브에 올려주셨다. 해커톤 사전행사에서 제공해주신 강연 역시 유튜브 라이브 방송으로 업로드되어 있다.&lt;br /&gt;
+&lt;a href=&quot;https://youtube.com/playlist?list=PLHqxB9kMLLaMS6F5RSA973qptBlFsk5RE&quot;&gt;주니온TV 아무거나연구소 - 어서와! 양자컴퓨팅은 처음이지?&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;1-12일차-오리엔테이션--특별-강연&quot;&gt;1. 1~2일차 오리엔테이션 &amp;amp; 특별 강연&lt;/h1&gt;
+&lt;p&gt;첫날과 둘째 날에는 오리엔테이션과 특별 강연들이 준비되어 있었다.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-1-qiskit-설치&quot;&gt;1-1. Qiskit 설치&lt;/h2&gt;
+&lt;p&gt;신소영 님께서 zoom으로 Qiskit 설치 가이드를 제공해 주셨다. Qiskit이 워낙 활발하게 개발 중인 프레임워크이다 보니 버전업 속도도 굉장히 빠른 편이어서, 패키지 버전에 따른 의존성 문제가 많이 발생하는 편이라고 한다. 때문에 Qiskit에서는 데이터 사이언스를 위한 대부분의 파이썬 패키지들이 미리 갖춰져 있는 &lt;a href=&quot;https://www.anaconda.com/&quot;&gt;Anaconda&lt;/a&gt;를 이용하는 것을 권장하고 있다. 나는 원래는 아나콘다보다 파이썬 내에서 venv를 사용해서 가상환경을 직접 구축하는 쪽을 더 선호하는 편이지만, 공식적으로 아나콘다를 강하게 권장하는 데는 다 이유가 있을 테니 이번에는 아나콘다를 사용하여 진행하였다.&lt;/p&gt;
+
+&lt;p&gt;리눅스 기준으로, &lt;a href=&quot;https://docs.anaconda.com/anaconda/install/linux/&quot;&gt;Anaconda 리눅스 설치 가이드&lt;/a&gt;대로 따라하면서 아나콘다를 설치하되 도중에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Do you wish the installer to initialize Anaconda3 by running conda init?&lt;/code&gt;라고 묻는 단계에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yes&lt;/code&gt;를 입력하기만 하면 보통은 별다른 문제 없이 잘 동작한다. 아나콘다 설치 완료 후에는 터미널 창을 닫고 새로 열거나, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source ~/.bashrc&lt;/code&gt; 명령을 실행해 준다.&lt;/p&gt;
+
+&lt;p&gt;다음으로 Qiskit을 사용할 가상환경을 하나 생성해줘야 한다. 다음 명령으로 콘다 가상환경 생성 후 활성화해준다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ conda create --name (환경 이름)
+$ conda activate (환경 이름)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;여기까지 끝났다면 마지막으로 Qiskit을 설치해주면 되는데, 왜인지 잘은 모르지만 신소영 님께서 그냥 터미널에서 pip를 사용해서 설치할 경우 종종 문제가 발생하곤 한다며 주피터 노트북 실행 후 노트북 셀에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;!pip install qiskit[visualization]&lt;/code&gt; 를 실행해 달라고 상당히 강조하셨다. 이것도 다 이유가 있을 테니 말씀하신 대로 주피터 노트북 내에서 설치하였다. 초보자도 따라할 수 있게끔 각 단계별로 친절하게 설명해 주셔서 다행히 별다른 어려움 없이 잘 설치할 수 있었다.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-2-양자-게이트--알고리즘-강의&quot;&gt;1-2. 양자 게이트 &amp;amp; 알고리즘 강의&lt;/h2&gt;
+&lt;p&gt;IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리즘에 관한 양질의 강의를 제공해 주셨다. 오전에는 큐비트를 어떤 형태로 표현하는지와 양자 게이트에 대한 영상을 볼 수 있었다.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-2-1-큐비트&quot;&gt;1-2-1. 큐비트&lt;/h3&gt;
+&lt;p&gt;영상 내용에 따르면 큐비트의 상태는 &lt;strong&gt;2차원 복소벡터공간상의 단위 벡터&lt;/strong&gt;로 표현하며, 이 큐비트 상태는 &lt;strong&gt;unitary operations&lt;/strong&gt;, 즉 &lt;strong&gt;양자 게이트(quantum gates)&lt;/strong&gt;를 통해 변화한다고 한다. 수식으로 나타내면 다음과 같다.
+\(\displaylines{
+|0\rangle := \begin{bmatrix}
+1 \\ 0
+\end{bmatrix} \neq 0, \quad
+|1\rangle := \begin{bmatrix}
+0 \\ 1
+\end{bmatrix} \neq 1 \\
+|\psi〉= \alpha|0〉+ \beta|1〉
+= \begin{bmatrix}
+\alpha \\ \beta
+\end{bmatrix} \\
+(\alpha, \beta \in \mathbb{c}, \; |\alpha|^{2} + |\beta|^{2} = 1)
+}\)&lt;/p&gt;
+
+&lt;h3 id=&quot;1-2-2-유니터리-연산unitary-operation&quot;&gt;1-2-2. 유니터리 연산(Unitary Operation)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;유니터리 연산(Unitary Operaion)&lt;/strong&gt;이란 2차원 복소벡터공간 안에서의 실수 회전(real rotations)의 일반적인 표현(generalization)이다. 아래와 같은 특성들을 지닌다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$U^{†}=U^{-1}, \; UU^{†}=U^{†}U=I$&lt;/li&gt;
+  &lt;li&gt;선형적(Linear)&lt;/li&gt;
+  &lt;li&gt;역연산 가능(Reversible)&lt;/li&gt;
+  &lt;li&gt;상태들 간의 논리적 관계를 보존함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;따라서 다음이 성립한다.&lt;/p&gt;
+
+\[\displaylines{
+|\psi\rangle = \alpha|0\rangle + \beta|1\rangle, \quad
+|\phi\rangle = \gamma|0\rangle + \delta|1\rangle \\
+\langle\phi|\psi\rangle 
+= \begin{bmatrix} 
+\gamma^{*} &amp;amp; \delta^{*} 
+\end{bmatrix}\begin{bmatrix} 
+\alpha \\ \beta 
+\end{bmatrix} \\
+\langle\phi|U^{†}U|\psi\rangle = \langle\phi|\psi\rangle
+}\]
+
+&lt;h3 id=&quot;1-2-3-양자-게이트&quot;&gt;1-2-3. 양자 게이트&lt;/h3&gt;
+&lt;p&gt;양자 게이트의 경우 단일 큐비트 게이트로는 &lt;strong&gt;Pauli-X 게이트&lt;/strong&gt;, &lt;strong&gt;Hadamard(H) 게이트&lt;/strong&gt;, &lt;strong&gt;Pauli-Z gate&lt;/strong&gt; 등이 있고, 2큐비트 게이트로는 &lt;strong&gt;CNOT 게이트&lt;/strong&gt;가 대표적이다(물론 이거 말고도 많다).&lt;/p&gt;
+
+&lt;h4 id=&quot;pauli-x-게이트&quot;&gt;Pauli-X 게이트&lt;/h4&gt;
+&lt;p&gt;X 게이트는 고전적인 컴퓨터에서의 NOT 게이트에 해당하는 녀석이고,&lt;/p&gt;
+
+&lt;h4 id=&quot;hadamardh-게이트&quot;&gt;Hadamard(H) 게이트&lt;/h4&gt;
+&lt;p&gt;Hadamard(H) 게이트는 기본 상태 |0〉은 $\frac{|0\rangle + |1\rangle}{\sqrt{2}}$로, 기본 상태 |1〉은 $\frac{|0\rangle- |1\rangle}{\sqrt{2}}$로 변환하여 |0〉과 |1〉이 측정될 확률이 각각 $\frac{1}{2}$로 같은 &lt;strong&gt;중첩(superposition)&lt;/strong&gt; 상태를 만들어 주는 역할을 한다고 한다.&lt;/p&gt;
+
+&lt;h4 id=&quot;pauli-z-게이트&quot;&gt;Pauli-Z 게이트&lt;/h4&gt;
+&lt;p&gt;Z 게이트는 단일 큐비트의 위상을 바꾸는 역할을 한다고 하는데 이 부분은 제대로 이해하지 못해서 아무래도 공부가 더 필요할 듯하다.&lt;/p&gt;
+
+&lt;h4 id=&quot;cnot-게이트&quot;&gt;CNOT 게이트&lt;/h4&gt;
+&lt;p&gt;CNOT 게이트는 2개의 큐비트상에서 동작하며, 큐비트의 입력 값이 |0〉 또는 |1〉로 한정될 경우 고전적인 컴퓨터에서의 XOR 게이트와 같은 역할을 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-2-4-측정&quot;&gt;1-2-4. 측정&lt;/h3&gt;
+&lt;p&gt;큐비트의 상태를 직접적으로 확인하는 것은 불가능하여 &lt;strong&gt;측정(measurement)&lt;/strong&gt;을 통해 큐비트로 부호화된 정보를 읽어와야 하며, 이때 큐비트는 양자역학에 따라 확률적으로 행동하기 때문에 측정을 여러 번 실행하여 0과 1 각각의 값을 측정할 통계적 확률을 구한다고 한다. Qiskit에서는 이 측정 실행 횟수를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shots&lt;/code&gt;라는 변수로 지정해 줄 수 있고, 기본값은 1024이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-2-5-위상&quot;&gt;1-2-5. 위상&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;위상(Phase)&lt;/strong&gt;의 경우, $|\psi〉= \alpha|0〉+\beta|1〉=\begin{bmatrix} \alpha\ \beta \end{bmatrix} = |\alpha|e^{i\theta_{0}}|0〉+ |\beta|e^{i\theta_{1}}|1〉$를 $|\psi〉= e^{i\theta_{0}}(|\alpha||0〉+ |\beta|e^{i\phi}), \phi = \theta_{1}-\theta_{0}$ 꼴로 정리했을 때 $e^{i\theta_{0}}$이 &lt;strong&gt;Global Phase&lt;/strong&gt;,  $e^{i\phi}$이 &lt;strong&gt;Relative Phase&lt;/strong&gt;에 해당하는 부분이라고 한다. Global Phase는 측정을 통해 감지할 수 없지만 Relative Phase는 감지해낼 수 있다. 아까 Z 게이트도 그렇고 위상에 관한 부분은 내가 제대로 이해를 못 해서 앞으로 더 공부가 필요한 부분이다.&lt;/p&gt;</content><author><name>김윤서(Yunseo Kim)</name></author><category term="Quantum Computing" /><category term="Machine learning" /><category term="Deep learning" /><category term="Qiskit" /><summary type="html">이 글의 목적 최근 2월 16일부터 2월 19일까지 4일간 진행된 Qiskit Hackathon Korea 2021에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 느낀 점까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 Qiskit Hackathon Korea 2021에서 4일간 경험한 것들에 대한 기록이다.</summary></entry><entry><title type="html">머신러닝 개발환경 구축하기</title><link href="https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/" rel="alternate" type="text/html" title="머신러닝 개발환경 구축하기" /><published>2021-02-07T00:00:00+09:00</published><updated>2021-02-07T00:00:00+09:00</updated><id>https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0</id><content type="html" xml:base="https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/">&lt;h2 id=&quot;개요&quot;&gt;개요&lt;/h2&gt;
+&lt;p&gt;이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;구축할 기술 스택
+    &lt;ul&gt;
+      &lt;li&gt;Ubuntu 20.04 LTS&lt;/li&gt;
+      &lt;li&gt;Python 3.8&lt;/li&gt;
+      &lt;li&gt;pip 21.0.1&lt;/li&gt;
+      &lt;li&gt;jupyter&lt;/li&gt;
+      &lt;li&gt;matplotlib&lt;/li&gt;
+      &lt;li&gt;numpy&lt;/li&gt;
+      &lt;li&gt;pandas&lt;/li&gt;
+      &lt;li&gt;scipy&lt;/li&gt;
+      &lt;li&gt;scikit-learn&lt;/li&gt;
+      &lt;li&gt;CUDA 11.0.3&lt;/li&gt;
+      &lt;li&gt;cuDNN 8.0.5&lt;/li&gt;
+      &lt;li&gt;딥러닝 프레임워크(각 환경당 하나만 선택하여 설치하는 것을 권장)
+        &lt;ul&gt;
+          &lt;li&gt;PyTorch 1.7.1&lt;/li&gt;
+          &lt;li&gt;TensorFlow 2.4.0&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;0-사전-확인사항&quot;&gt;0. 사전 확인사항&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;머신러닝 공부를 위해서는 리눅스 사용을 권장한다. 윈도우 상에서도 가능은 하지만, 여러 자잘한 부분에서 시간낭비가 많이 일어날 수 있다. 우분투 최신 LTS 버전을 사용하는 것이 제일 무난하다. 오픈소스가 아닌 독점 드라이버들도 자동 설치되어 편리하며, 사용자 수가 많기 때문에 대부분의 기술 문서가 우분투 기준으로 작성되어 있다.&lt;/li&gt;
+  &lt;li&gt;일반적으로 우분투를 비롯한 대부분의 리눅스 배포판에는 파이썬이 기본 설치되어 있다. 그러나 만약 파이썬이 설치되어 있지 않다면, 이 글을 따라하기에 앞서 파이썬을 먼저 설치해야 한다.
+    &lt;ul&gt;
+      &lt;li&gt;현재 설치된 파이썬 버전은 다음 명령어로 확인 가능하다.
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python3 --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;텐서플로2 혹은 파이토치를 사용할 것이라면 호환 가능한 파이썬 버전을 확인해야 한다. 이 글 작성 시점을 기준으로 &lt;a href=&quot;https://pytorch.org/get-started/locally/#linux-python&quot;&gt;파이토치 최신 버전이 지원하는 파이썬 버전&lt;/a&gt;은 3.6-3.8, &lt;a href=&quot;https://www.tensorflow.org/install&quot;&gt;텐서플로2 최신 버전이 지원하는 파이썬 버전&lt;/a&gt;은 3.5-3.8이다.&lt;br /&gt;
+이 글에서는 파이썬 3.8 버전을 사용한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;로컬 머신에서 머신러닝을 공부할 계획이라면 GPU를 하나 이상 준비하는 것이 좋다. 데이터 전처리 정도는 CPU로도 가능하지만, 모델 학습 단계에서는 모델의 규모가 커질수록 CPU와 GPU의 학습 속도 차이는 압도적이다(특히 딥러닝의 경우가 그렇다).
+    &lt;ul&gt;
+      &lt;li&gt;머신러닝을 위해서라면 GPU 제조사 선택지는 사실상 하나뿐이다. NVIDIA 제품을 이용해야 한다. NVIDIA는 머신러닝 분야에 상당히 많은 투자를 해 온 회사이며, 거의 모든 머신러닝 프레임워크에서 NVIDIA의 CUDA 라이브러리를 이용한다.&lt;/li&gt;
+      &lt;li&gt;머신러닝용으로 GPU를 사용할 계획이라면, 사용하려는 그래픽카드가 CUDA 사용이 가능한 모델인지 우선 확인해야 한다. 현재 컴퓨터에 장착된 GPU 모델명은 터미널에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvidia-smi&lt;/code&gt; 명령으로 확인 가능하다. &lt;a href=&quot;https://developer.nvidia.com/cuda-gpus&quot;&gt;링크&lt;/a&gt;에 있는 GPU 목록에서 해당하는 모델명을 찾은 뒤, &lt;strong&gt;Compute Capability&lt;/strong&gt; 수치를 확인하자. 이 수치가 적어도 3.5 이상이어야 CUDA 사용이 가능하다.&lt;/li&gt;
+      &lt;li&gt;GPU 선정 기준은 다음 글에 잘 정리되어 있다. 글쓴이가 지속적으로 업데이트하고 있는 글이다.&lt;br /&gt;
+&lt;a href=&quot;https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/&quot;&gt;Which GPU(s) to Get for Deep Learning&lt;/a&gt;&lt;br /&gt;
+같은 분이 작성한 &lt;a href=&quot;https://timdettmers.com/2018/12/16/deep-learning-hardware-guide/&quot;&gt;A Full Hardware Guide to Deep Learning&lt;/a&gt;이라는 글도 매우 유익하다. 참고로 위 글의 결론은 아래와 같다.
+        &lt;blockquote&gt;
+          &lt;p&gt;The RTX 3070 and RTX 3080 are mighty cards, but they lack a bit of memory. For many tasks, however, you do not need that amount of memory.&lt;br /&gt;
+The RTX 3070 is perfect if you want to learn deep learning. This is so because the basic skills of training most architectures can be learned by just scaling them down a bit or using a bit smaller input images. If I would learn deep learning again, I would probably roll with one RTX 3070, or even multiple if I have the money to spare.
+The RTX 3080 is currently by far the most cost-efficient card and thus ideal for prototyping. For prototyping, you want the largest memory, which is still cheap. With prototyping, I mean here prototyping in any area: Research, competitive Kaggle, hacking ideas/models for a startup, experimenting with research code. For all these applications, the RTX 3080 is the best GPU.&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;위에서 언급한 모든 사항들을 충족하였다면 작업환경 구축을 시작하자.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-작업-디렉터리-생성&quot;&gt;1. 작업 디렉터리 생성&lt;/h2&gt;
+&lt;p&gt;터미널을 열고 .bashrc 파일을 수정하여 환경변수를 등록한다($ 프롬프트 다음이 명령이다).&lt;br /&gt;
+우선 다음 명령을 이용해 nano 에디터를 연다(vim이나 그 외에 다른 에디터도 상관없다).&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ nano ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;마지막 줄에 다음 내용을 추가한다.&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export ML_PATH=&quot;$HOME/ml&quot;&lt;/code&gt;  # 원하는 경로로 바꿔도 된다.&lt;/p&gt;
+
+&lt;p&gt;Ctrl+O를 눌러 저장한 뒤 Ctrl+X로 빠져나온다.&lt;/p&gt;
+
+&lt;p&gt;이제 아래 명령어를 실행하여 환경변수를 적용한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ source ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;디렉터리를 생성한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir -p $ML_PATH
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;2-pip-패키지-설치또는-업그레이드&quot;&gt;2. pip 패키지 설치(또는 업그레이드)&lt;/h2&gt;
+&lt;p&gt;머신러닝을 위해 필요한 파이썬 패키지들을 설치하는 방법은 여러 가지이다. 아나콘다 같은 과학 파이썬 배포판을 이용해도 되고(윈도우 운영체제의 경우 권장하는 방법), 파이썬 자체 패키징 도구인 pip를 사용할 수도 있다. 여기서는 리눅스나 맥OS의 배시 셸(bash shell)에서 pip 명령을 사용할 것이다.&lt;/p&gt;
+
+&lt;p&gt;시스템에 pip가 설치되어 있는지 다음 명령으로 확인한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip3 --version
+
+명령어 'pip3' 을(를) 찾을 수 없습니다. 그러나 다음을 통해 설치할 수 있습니다:
+
+sudo apt install python3-pip
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위와 같이 나온다면 시스템에 pip가 설치되지 않은 것이다. 시스템의 패키지 매니저(여기선 apt)를 사용하여 설치해준다(만약 버전명이 나온다면, 설치되어 있는 것이니 이 명령은 건너뛴다).&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo apt install python3-pip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이제 pip가 설치되었다. 그런데 문제는 시스템의 패키지 매니저(이 경우 apt)를 이용해 pip를 설치할 시 우분투의 미러 서버에 있는 바이너리 파일을 다운로드받아 설치하게 되는데, 이 바이너리 파일은 일반적으로 업데이트가 늦어 최신버전이 아닌 경우가 많다(필자의 경우 20.3.4 버전이 설치되었다). 최신 버전의 pip를 사용하기 위해 다음 명령을 실행하여 업그레이드한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo python3 -m pip install -U pip
+
+Collecting pip
+(중략)
+Successfully installed pip-21.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;pip가 이 글을 작성한 시점 기준으로 최신인 21.0.1 버전으로 업그레이드된 것을 볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;참고로, pip를 이용하여 패키지를 설치할 때 시스템 pip를 이용하는 방법과 파이썬 pip를 이용하는 방법이 있다. 그런데 시스템 pip를 이용해 패키지를 설치하였을 경우, 추후 이 시스템 pip를 업그레이드하면 문제가 발생할 수도 있다고 한다. 따라서 가상환경 내에서가 아니라면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; 명령 대신 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python3 -m pip&lt;/code&gt; 명령을 이용하여 파이썬 pip를 대신 사용하도록 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-독립적인-가상환경-만들기권장사항&quot;&gt;3. 독립적인 가상환경 만들기(권장사항)&lt;/h2&gt;
+&lt;p&gt;독립된 개발 환경(다른 프로젝트의 라이브러리 버전과 충돌하는 것을 피하기 위함)을 만들기 위해서는 venv를 설치한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo apt install python3-venv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;그런 다음 독립적인 파이썬 환경을 다음과 같이 생성한다. 이렇게 하는 이유는 프로젝트마다 필요한 라이브러리 버전이 달라 충돌하는 것을 막기 위함이므로, 새 프로젝트를 시작할 때마다 새로운 가상환경을 생성해서 독립된 환경을 구축해주면 된다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd $ML_PATH
+$ python3 -m venv ./(환경 이름)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;다음부터 이 환경을 활성화하려면 터미널을 열고 다음 명령을 입력하면 된다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd $ML_PATH
+$ source ./(환경 이름)/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;환경을 비활성화 하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deactivate&lt;/code&gt; 명령을 사용한다. 환경을 활성화한 상태에서는 pip 명령으로 설치하는 어떤 패키지든 독립된 이 환경에 설치되고 파이썬은 이 패키지만 사용한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-머신러닝용-패키지jupyter-matplotlib-numpy-pandas-scipy-scikit-learn-설치&quot;&gt;4. 머신러닝용 패키지(jupyter, matplotlib, numpy, pandas, scipy, scikit-learn) 설치&lt;/h2&gt;
+&lt;p&gt;다음 pip 명령으로 필요한 패키지와 의존성으로 연결된 다른 패키지를 모두 설치한다.&lt;br /&gt;
+venv를 사용하지 않는다면 관리자 권한이 필요하다.&lt;br /&gt;
+또한 필자의 경우 venv를 사용하기 때문에 그냥 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; 명령을 사용하였는데, 만약 venv를 사용하지 않는다면 앞서 &lt;a href=&quot;#2-pip-패키지-설치또는-업그레이드&quot;&gt;2단계&lt;/a&gt; 끝부분에서 언급하였듯이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python3 -m pip&lt;/code&gt; 명령을 대신 사용하는 것을 권장한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(env) $ pip3 install --upgrade jupyter matplotlib numpy pandas scipy scikit-learn
+
+Collecting jupyter
+  Downloading jupyter-1.0.0-py2.py3-none-any.whl (2.7 kB)
+Collecting matplotlib
+(후략)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;venv를 사용했다면 주피터에 커널을 등록하고 이름을 정한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(env) $ python3 -m ipykernel install --user --name=python3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이제부터 주피터를 실행하려면 다음 명령을 이용하면 된다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(env) $ jupyter notebook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;5-cuda--cudnn-설치&quot;&gt;5. CUDA &amp;amp; cuDNN 설치&lt;/h2&gt;
+&lt;h3 id=&quot;5-1-필요한-cuda--cudnn-버전-확인&quot;&gt;5-1. 필요한 CUDA &amp;amp; cuDNN 버전 확인&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://pytorch.org/get-started/locally/&quot;&gt;파이토치 공식 문서&lt;/a&gt;에서 지원하는 CUDA 버전을 확인한다.&lt;br /&gt;
+&lt;img src=&quot;https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png&quot; alt=&quot;PyTorch 호환 CUDA 버전 확인&quot; /&gt;&lt;br /&gt;
+파이토치 1.7.1 버전 기준으로 지원하는 CUDA 버전은 9.2, 10.1, 10.2, 11.0이다. NVIDIA 30시리즈 GPU의 경우 CUDA 11을 필요로 하므로, 11.0 버전이 필요하다는 것을 알 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.tensorflow.org/install/gpu&quot;&gt;텐서플로2 공식 문서&lt;/a&gt;에서도 필요한 CUDA 버전을 확인한다.&lt;br /&gt;
+&lt;img src=&quot;https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/TensorFlow_GPU_support.png&quot; alt=&quot;TensorFlow2 호환 CUDA 버전 확인&quot; /&gt;&lt;br /&gt;
+텐서플로 2.4.0 버전 기준으로, CUDA는 마찬가지로 11.0 버전, cuDNN은 8.0 버전이 필요한 것을 확인하였다.&lt;/p&gt;
+
+&lt;p&gt;필자는 경우에 따라 파이토치를 사용할 때도, 텐서플로2를 사용할 때도 있기 때문에 두 패키지 모두 호환 가능한 CUDA 버전을 확인하였다. 자신이 필요한 패키지의 요구 조건을 확인하여 거기에 맞추면 된다.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-2-cuda-설치&quot;&gt;5-2. CUDA 설치&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.nvidia.com/cuda-toolkit-archive&quot;&gt;CUDA Toolkit Archive&lt;/a&gt;에 접속한 다음 앞에서 확인한 버전을 선택하여 들어간다. 이 글에서는 &lt;a href=&quot;https://developer.nvidia.com/cuda-11.0-update1-download-archive&quot;&gt;CUDA Toolkit 11.0 Update1&lt;/a&gt;을 선택해 들어간다.&lt;br /&gt;
+&lt;img src=&quot;https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-1.png&quot; alt=&quot;CUDA 11.0 Update 1&quot; /&gt;&lt;br /&gt;
+이제 해당하는 플랫폼과 인스톨러 종류를 선택하고, 화면에 나타나는 지시를 따르면 된다. 이때 &lt;a href=&quot;https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#choose-installation-method&quot;&gt;인스톨러의 경우 가급적 시스템 패키지 매니저를 이용하는 것이 좋다&lt;/a&gt;. 필자가 선호하는 방법은 deb (network)이다.&lt;br /&gt;
+&lt;img src=&quot;https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-2.png&quot; alt=&quot;CUDA 플랫폼 선택&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-3.png&quot; alt=&quot;CUDA 설치&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;아래 명령을 실행하여 CUDA를 설치한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+$ sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+$ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+$ sudo add-apt-repository &quot;deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /&quot;
+$ sudo apt update
+$ sudo apt install cuda-toolkit-11-0 cuda-drivers
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;눈썰미가 좋다면 마지막 줄이 이미지에 나타난 지시와 약간 다르다는 것을 알아챘을 것이다. 네트워크 설치에서 이미지에 나타난 대로 cuda만 입력하면 최신 버전인 11.2 버전이 설치되는데, 이는 우리가 원하는 바가 아니다. &lt;a href=&quot;https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#package-manager-metas&quot;&gt;CUDA 11.0 리눅스 설치 가이드&lt;/a&gt;에서 여러 메타 패키지 옵션을 살펴볼 수 있다. 여기서는 CUDA Toolkit 패키지를 11.0 버전으로 지정 설치하고, 드라이버 패키지는 자동 업그레이드 되도록 하기 위해 마지막 줄을 수정하였다.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-3-cudnn-설치&quot;&gt;5-3. cuDNN 설치&lt;/h3&gt;
+&lt;p&gt;다음과 같이 cuDNN을 설치한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo apt install libcudnn8=8.0.5.39-1+cuda11.0
+$ sudo apt install libcudnn8-dev=8.0.5.39-1+cuda11.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;6-pytorch-설치&quot;&gt;6. PyTorch 설치&lt;/h2&gt;
+&lt;p&gt;앞서 3단계에서 가상환경을 생성하였다면 사용할 가상환경을 활성화한 상태로 진행한다. 파이토치가 필요하지 않다면 이 단계는 건너뛴다.&lt;br /&gt;
+&lt;a href=&quot;https://pytorch.org/get-started/locally/&quot;&gt;PyTorch 홈페이지&lt;/a&gt;에 접속하여 설치할 파이토치 빌드(Stable)와 운영체제(Linux), 패키지(Pip), 언어(Python), CUDA(11.0)을 선택하고 화면에 나타나는 지시를 따른다.&lt;br /&gt;
+&lt;img src=&quot;https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png&quot; alt=&quot;PyTorch 설치&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(env) $ pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;파이토치를 제대로 설치했는지 검증하기 위해 파이썬 인터프리터 실행 후 다음 명령을 실행해본다. 텐서가 반환된다면 성공한 것이다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(env) $ python3
+Python 3.8.5 (default, Jul 28 2020, 12:59:40) 
+[GCC 9.3.0] on linux
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&amp;gt;&amp;gt;&amp;gt; import torch
+&amp;gt;&amp;gt;&amp;gt; x = torch.rand(5, 3)
+&amp;gt;&amp;gt;&amp;gt; print(x)&quot;
+tensor([[0.8187, 0.5925, 0.2768],
+        [0.9884, 0.8298, 0.8553],
+        [0.6350, 0.7243, 0.2323],
+        [0.9205, 0.9239, 0.9065],
+        [0.2424, 0.1018, 0.3426]])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;GPU 드라이버와 CUDA가 활성화되어 있고 사용 가능한지 확인하기 위해 다음 명령을 실행해본다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; torch.cuda.is_available()
+True
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;7-tensorflow-2-설치&quot;&gt;7. TensorFlow 2 설치&lt;/h2&gt;
+&lt;p&gt;6단계에서 파이토치를 가상환경에 설치하였다면, 그 가상환경은 비활성화한 후 3, 4단계로 돌아가 새로운 가상환경을 생성하고 활성화한 뒤 진행한다. 6단계를 건너뛰었다면 그냥 그대로 진행하면 된다.&lt;br /&gt;
+다음과 같이 텐서플로를 설치한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(env2) $ pip install --upgrade tensorflow
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;텐서플로를 제대로 설치했는지 검증하기 위해 다음 명령을 실행해본다. GPU 이름을 표시하고, 텐서를 반환한다면 성공한 것이다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(env2) $ python -c &quot;import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))&quot;
+
+2021-02-07 22:45:51.390640: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+(중략)
+2021-02-07 22:45:54.592749: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6878 MB memory) -&amp;gt; physical GPU (device: 0, name: GeForce RTX 3070, pci bus id: 0000:01:00.0, compute capability: 8.6)
+tf.Tensor(526.1059, shape=(), dtype=float32)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>김윤서(Yunseo Kim)</name></author><category term="Data science" /><category term="Machine learning" /><category term="Deep learning" /><summary type="html">개요 이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.</summary></entry><entry><title type="html">GitHub 마크다운 문법 정리</title><link href="https://yunseo47.github.io//jekyll/GitHub-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="GitHub 마크다운 문법 정리" /><published>2021-01-31T00:00:00+09:00</published><updated>2021-01-31T00:00:00+09:00</updated><id>https://yunseo47.github.io//jekyll/GitHub-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="https://yunseo47.github.io//jekyll/GitHub-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC/">&lt;p&gt;GitHub Pages 활용을 위해서는 &lt;strong&gt;markdown&lt;/strong&gt; 문법에 대해 알 필요가 있다.
+GitHub 공식 문서의 &lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;Mastering Markdown&lt;/a&gt;과 &lt;a href=&quot;https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax&quot;&gt;Basic writing and formatting syntax&lt;/a&gt;를 참고하여 작성하였다.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-마크다운이란&quot;&gt;1. 마크다운이란&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;마크다운(markdown)&lt;/strong&gt;은 일반 텍스트 기반의 경량 마크업 언어다. 일반 텍스트로 서식이 있는 문서를 작성하는 데 사용되며, 일반 마크업 언어에 비해 문법이 쉽고 간단한 것이 특징이다. HTML과 리치 텍스트(RTF) 등 서식 문서로 쉽게 변환되기 때문에 응용 소프트웨어와 함께 배포되는 README 파일이나 온라인 게시물 등에 많이 사용된다.&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;존 그루버는 2004년에 문법 면에서 에런 스워츠와 중대한 협업을 통해 마크다운 언어를 만들었으며, 사람들이 읽기 쉽고 쓰기 쉬운 플레인 텍스트 포맷을 사용하여 쓸 수 있으면서 구조적으로 유효한 XHTML(또는 HTML)로 선택적 변환이 가능하게 하는 것이 목표이다.&lt;/p&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;-&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4&quot;&gt;위키백과, 마크다운&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2-마크다운-문법&quot;&gt;2. 마크다운 문법&lt;/h2&gt;
+&lt;p&gt;마크다운은 정해진 표준이 없기 때문에 세부 문법은 사용처마다 조금씩 다를 수 있다. 여기서 정리한 마크다운 문법은 &lt;a href=&quot;https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax&quot;&gt;GitHub Flavored Markdown&lt;/a&gt; 기준이다.&lt;/p&gt;
+
+&lt;h3 id=&quot;21-줄바꿈-문단-구분&quot;&gt;2.1. 줄바꿈, 문단 구분&lt;/h3&gt;
+&lt;p&gt;마크다운에서는 엔터키 한 번은 줄바꿈으로 인식하지 않는다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;첫째 문장.
+둘째 문장.
+셋째 문장.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;첫째 문장.
+둘째 문장.
+셋째 문장.&lt;/p&gt;
+
+&lt;p&gt;줄바꿈은 공백을 연속하여 두 칸 이상 입력하면 적용된다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;첫째 문장.  
+둘째 문장.  
+셋째 문장.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;첫째 문장.&lt;br /&gt;
+둘째 문장.&lt;br /&gt;
+셋째 문장.&lt;/p&gt;
+
+&lt;p&gt;문단과 문단 사이는 빈 줄(엔터키 두 번)로 구분한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;하나의 문단.
+
+다른 문단.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;하나의 문단.&lt;/p&gt;
+
+&lt;p&gt;다른 문단.&lt;/p&gt;
+
+&lt;h3 id=&quot;22-글머리headers&quot;&gt;2.2. 글머리(Headers)&lt;/h3&gt;
+&lt;p&gt;총 6단계가 있다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# This is an H1
+## This is an H2
+### This is an H3
+#### This is an H4
+##### This is an H5
+###### This is an H6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&quot;this-is-an-h1&quot;&gt;This is an H1&lt;/h1&gt;
+&lt;h2 id=&quot;this-is-an-h2&quot;&gt;This is an H2&lt;/h2&gt;
+&lt;h3 id=&quot;this-is-an-h3&quot;&gt;This is an H3&lt;/h3&gt;
+&lt;h4 id=&quot;this-is-an-h4&quot;&gt;This is an H4&lt;/h4&gt;
+&lt;h5 id=&quot;this-is-an-h5&quot;&gt;This is an H5&lt;/h5&gt;
+&lt;h6 id=&quot;this-is-an-h6&quot;&gt;This is an H6&lt;/h6&gt;
+
+&lt;h3 id=&quot;23-강조&quot;&gt;2.3. 강조&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*This text is italicized*
+_This is italicized too_
+
+**This is bold text**
+__This is bold text too__
+
+~~This was mistaken text~~
+
+_You **can** combine them_
+
+***All this text is important***
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;This text is italicized&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;This is italicized too&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This is bold text&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;This is bold text too&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;This was mistaken text&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You &lt;strong&gt;can&lt;/strong&gt; combine them&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;All this text is important&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;24-텍스트-인용&quot;&gt;2.4. 텍스트 인용&lt;/h3&gt;
+&lt;p&gt;&amp;gt;을 이용한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; This is a first blockquote.
+&amp;gt;&amp;gt; This is a second blockquote.
+&amp;gt;&amp;gt;&amp;gt; This is a third blockquote.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;This is a first blockquote.&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;This is a second blockquote.&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;This is a third blockquote.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;25-코드-인용&quot;&gt;2.5. 코드 인용&lt;/h3&gt;
+&lt;p&gt;``` 또는 ~~~을 이용한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```
+git status
+git add
+git commit
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git status
+git add
+git commit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;프로그래밍 언어를 지정하여 문법 강조 표시를 활성화할 수도 있다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```ruby
+require 'redcarpet'
+markdown = Redcarpet.new(&quot;Hello World!&quot;)
+puts markdown.to_html
+```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'redcarpet'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;markdown&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Redcarpet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_html&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;26-링크&quot;&gt;2.6. 링크&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[GitHub Pages](https://pages.github.com/)
+&amp;lt;https://pages.github.com/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://pages.github.com/&quot;&gt;https://pages.github.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;리퍼지토리 내의 다른 파일을 가리키는 상대경로 링크도 사용할 수 있다. 사용법은 터미널에서와 동일하다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[README](../README.md)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;27-비정렬-목록&quot;&gt;2.7. 비정렬 목록&lt;/h3&gt;
+&lt;p&gt;-나 *을 이용한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- George Washington
+- John Adams
+- Thomas Jefferson
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;George Washington&lt;/li&gt;
+  &lt;li&gt;John Adams&lt;/li&gt;
+  &lt;li&gt;Thomas Jefferson&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;28-정렬-목록&quot;&gt;2.8. 정렬 목록&lt;/h3&gt;
+&lt;p&gt;숫자를 이용한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. James Madison
+2. James Monroe
+3. John Quincy Adams
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;James Madison&lt;/li&gt;
+  &lt;li&gt;James Monroe&lt;/li&gt;
+  &lt;li&gt;John Quincy Adams&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;29-중첩-목록&quot;&gt;2.9. 중첩 목록&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. First list item
+   - First nested list item
+     - Second nested list item
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;First list item
+    &lt;ul&gt;
+      &lt;li&gt;First nested list item
+        &lt;ul&gt;
+          &lt;li&gt;Second nested list item&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;210-할-일-목록&quot;&gt;2.10. 할 일 목록&lt;/h3&gt;
+&lt;p&gt;할 일 목록을 만드려면 각 항목 앞에 [ ]을 추가한다.
+완료된 일을 표시하려면 [x]을 이용한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Finish my changes&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Push my commits to GitHub&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Open a pull request&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;211-이미지-첨부&quot;&gt;2.11. 이미지 첨부&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;방법: ![(선택)이미지 설명](url){(선택)추가옵션}
+![GitHub Logo](/images/logo.png)
+![GitHub Logo](/images/logo.png){: .align-center}
+![GitHub Logo](/images/logo.png){: width=&quot;50%&quot; height=&quot;50%&quot;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;212-표-생성&quot;&gt;2.12. 표 생성&lt;/h3&gt;
+&lt;p&gt;|와 -을 이용해 표를 생성할 수 있다.
+표 앞에 한줄을 비워 놓아야 정상적으로 표시된다.
+적어도 3개 이상의 -을 사용해야 정상적으로 인식한다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Left-aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center-aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right-aligned&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;git status&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;git status&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;git status&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;git diff&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;git diff&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;git diff&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>김윤서(Yunseo Kim)</name></author><category term="Jekyll" /><category term="Jekyll" /><summary type="html">GitHub Pages 활용을 위해서는 markdown 문법에 대해 알 필요가 있다. GitHub 공식 문서의 Mastering Markdown과 Basic writing and formatting syntax를 참고하여 작성하였다.</summary></entry></feed>

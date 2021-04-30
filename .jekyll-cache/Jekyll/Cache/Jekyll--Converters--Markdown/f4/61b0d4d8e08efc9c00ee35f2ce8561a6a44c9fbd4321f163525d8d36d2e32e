@@ -1,4 +1,4 @@
-I"'<p>GitHub Pages 활용을 위해서는 <strong>markdown</strong> 문법에 대해 알 필요가 있다.
+I"q'<p>GitHub Pages 활용을 위해서는 <strong>markdown</strong> 문법에 대해 알 필요가 있다.
 GitHub 공식 문서의 <a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a>과 <a href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">Basic writing and formatting syntax</a>를 참고하여 작성하였다.</p>
 
 <h2 id="1-마크다운이란">1. 마크다운이란</h2>
@@ -190,9 +190,10 @@ puts markdown.to_html
 </ul>
 
 <h3 id="211-이미지-첨부">2.11. 이미지 첨부</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>방법: ![(선택)이미지 설명](url)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>방법: ![(선택)이미지 설명](url){(선택)추가옵션}
 ![GitHub Logo](/images/logo.png)
 ![GitHub Logo](/images/logo.png){: .align-center}
+![GitHub Logo](/images/logo.png){: width="50%" height="50%"}
 </code></pre></div></div>
 
 <h3 id="212-표-생성">2.12. 표 생성</h3>

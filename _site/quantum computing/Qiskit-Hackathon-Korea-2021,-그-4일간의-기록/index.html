@@ -1,0 +1,883 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Qiskit Hackathon Korea 2021, 그 4일간의 기록 | Yunseo47’s Insight</title>
+<meta name="description" content="이 글의 목적 최근 2월 16일부터 2월 19일까지 4일간 진행된 Qiskit Hackathon Korea 2021에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 느낀 점까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 Qiskit Hackathon Korea 2021에서 4일간 경험한 것들에 대한 기록이다.">
+
+
+  <meta name="author" content="김윤서(Yunseo Kim)">
+  
+  <meta property="article:author" content="김윤서(Yunseo Kim)">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Yunseo47's Insight">
+<meta property="og:title" content="Qiskit Hackathon Korea 2021, 그 4일간의 기록">
+<meta property="og:url" content="https://yunseo47.github.io//quantum%20computing/Qiskit-Hackathon-Korea-2021,-%EA%B7%B8-4%EC%9D%BC%EA%B0%84%EC%9D%98-%EA%B8%B0%EB%A1%9D/">
+
+
+  <meta property="og:description" content="이 글의 목적 최근 2월 16일부터 2월 19일까지 4일간 진행된 Qiskit Hackathon Korea 2021에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 느낀 점까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 Qiskit Hackathon Korea 2021에서 4일간 경험한 것들에 대한 기록이다.">
+
+
+
+  <meta property="og:image" content="https://yunseo47.github.io//assets/img/electronic-square.jpg">
+
+
+
+  <meta name="twitter:site" content="@YunseoKim47">
+  <meta name="twitter:title" content="Qiskit Hackathon Korea 2021, 그 4일간의 기록">
+  <meta name="twitter:description" content="이 글의 목적 최근 2월 16일부터 2월 19일까지 4일간 진행된 Qiskit Hackathon Korea 2021에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 느낀 점까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 Qiskit Hackathon Korea 2021에서 4일간 경험한 것들에 대한 기록이다.">
+  <meta name="twitter:url" content="https://yunseo47.github.io//quantum%20computing/Qiskit-Hackathon-Korea-2021,-%EA%B7%B8-4%EC%9D%BC%EA%B0%84%EC%9D%98-%EA%B8%B0%EB%A1%9D/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://yunseo47.github.io//assets/img/electronic-square.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2021-02-27T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://yunseo47.github.io//quantum%20computing/Qiskit-Hackathon-Korea-2021,-%EA%B7%B8-4%EC%9D%BC%EA%B0%84%EC%9D%98-%EA%B8%B0%EB%A1%9D/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "김윤서(Yunseo Kim)",
+      "url": "https://yunseo47.github.io//",
+      "sameAs": ["https://twitter.com/YunseoKim47","https://facebook.com/yunseo47","https://github.com/yunseo47","https://www.linkedin.com/in/yunseo47"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="AUlHZNteJbS4CdnOj-2_RSqAmRuvZGuSqxlSXrrLVhY" />
+
+
+  <meta name="msvalidate.01" content="770DA7541FB457119B57EA8B392D03BB">
+
+
+
+
+  <meta name="naver-site-verification" content="705b2244d3d659d91f84930ff048d987b3293f49">
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Yunseo47's Insight Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    
+      <script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+    
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Yunseo47's Insight
+          <span class="site-subtitle">AI breakthrough for fusion energy</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">김윤서(Yunseo Kim)</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Fusion Energy &amp; Data Science enthusiast</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="mailto:yunseo47@protonmail.ch" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/YunseoKim47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+            <li><a href="https://facebook.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span class="label">Facebook</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Qiskit Hackathon Korea 2021, 그 4일간의 기록">
+    <meta itemprop="description" content="이 글의 목적최근 2월 16일부터 2월 19일까지 4일간 진행된 Qiskit Hackathon Korea 2021에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 느낀 점까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 Qiskit Hackathon Korea 2021에서 4일간 경험한 것들에 대한 기록이다.">
+    <meta itemprop="datePublished" content="2021-02-27T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Qiskit Hackathon Korea 2021, 그 4일간의 기록
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-02-27T00:00:00+09:00">February 27, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#이-글의-목적">이 글의 목적</a></li><li><a href="#팀--프로젝트-소개">팀 &amp; 프로젝트 소개</a></li><li><a href="#pre-해커톤-참가-동기">pre. 해커톤 참가 동기</a><ul><li><a href="#pre-1-quantum-computing-kr-페이스북-그룹">pre-1. Quantum Computing KR 페이스북 그룹</a></li><li><a href="#pre-2-해커톤-등록-기대-반-걱정-반">pre-2. 해커톤 등록, 기대 반 걱정 반</a></li><li><a href="#pre-3-입문자용-강의--사전-행사">pre-3. 입문자용 강의 &amp; 사전 행사</a></li></ul></li><li><a href="#1-12일차-오리엔테이션--특별-강연">1. 1~2일차 오리엔테이션 &amp; 특별 강연</a><ul><li><a href="#1-1-qiskit-설치">1-1. Qiskit 설치</a></li><li><a href="#1-2-양자-게이트--알고리즘-강의">1-2. 양자 게이트 &amp; 알고리즘 강의</a><ul><li><a href="#1-2-1-큐비트">1-2-1. 큐비트</a></li><li><a href="#1-2-2-유니터리-연산unitary-operation">1-2-2. 유니터리 연산(Unitary Operation)</a></li><li><a href="#1-2-3-양자-게이트">1-2-3. 양자 게이트</a><ul><li><a href="#pauli-x-게이트">Pauli-X 게이트</a></li><li><a href="#hadamardh-게이트">Hadamard(H) 게이트</a></li><li><a href="#pauli-z-게이트">Pauli-Z 게이트</a></li><li><a href="#cnot-게이트">CNOT 게이트</a></li></ul></li><li><a href="#1-2-4-측정">1-2-4. 측정</a></li><li><a href="#1-2-5-위상">1-2-5. 위상</a></li></ul></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="이-글의-목적">이 글의 목적</h1>
+<p>최근 2월 16일부터 2월 19일까지 4일간 진행된 <a href="https://www.hackerearth.com/challenges/hackathon/qiskit-hackathon-korea/"><strong>Qiskit Hackathon Korea 2021</strong></a>에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 느낀 점까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 <strong>Qiskit Hackathon Korea 2021</strong>에서 4일간 경험한 것들에 대한 기록이다.</p>
+
+<h1 id="팀--프로젝트-소개">팀 &amp; 프로젝트 소개</h1>
+<p>글을 시작하기에 앞서 팀 소개를 먼저 해야 할 듯하다.</p>
+<ul>
+  <li>팀명: <strong>Quanputing</strong></li>
+  <li>프로젝트 주제: <em>Exploring Hybrid quantum-classical Neural Networks with PyTorch and Qiskit</em></li>
+  <li>프로젝트 아이디어:
+    <blockquote>
+      <p>While examining Qiskit and Tensorflow Quantum tutorial documents about <em>hybrid ML</em>, we found something interesting. In <strong>Qiskit</strong> tutorial documents, classical convolution layers are combined with quantum fully-connected layers. In the <strong>Tensorflow Quantum</strong> tutorial, on the other hand, quantum convolution layers are combined with classical fully-connected layers. Then one question arises: where is it better to apply the quantum layer?</p>
+
+      <p>In this project, we will do the following:</p>
+      <ol>
+        <li>Build MNIST multi-label classifiers using classical convolution layers and quantum fully-connected layers.</li>
+        <li>Build MNIST multi-label classifiers using quantum convolution layers and classical fully-connected layers.</li>
+        <li>Compare the performance of these two models.</li>
+      </ol>
+    </blockquote>
+  </li>
+  <li>팀 리포지터리: <a href="https://github.com/yh08037/quantum-neural-network">https://github.com/yh08037/quantum-neural-network</a></li>
+  <li>팀 HackerEarth 페이지: <a href="https://www.hackerearth.com/challenges/hackathon/qiskit-hackathon-korea/dashboard/648082e/">https://www.hackerearth.com/challenges/hackathon/qiskit-hackathon-korea/dashboard/648082e/</a></li>
+  <li>해커톤 결과: <strong>Community Choice Award</strong> 수상</li>
+</ul>
+
+<h1 id="pre-해커톤-참가-동기">pre. 해커톤 참가 동기</h1>
+<h2 id="pre-1-quantum-computing-kr-페이스북-그룹">pre-1. Quantum Computing KR 페이스북 그룹</h2>
+<p>작년 7월 말쯤에 <a href="https://www.facebook.com/groups/QuantumComputingKR">Quantum Computing KR</a>이라는 페이스북 그룹에 가입하게 되었다. 나는 페이스북을 주로 그룹을 통한 정보 습득 목적으로 사용하는데, 그날도 양자컴퓨팅 관련 정보를 찾다가 이 그룹을 발견했다. 그리고 1월 말에 신소영 님께서 그룹에 Qiskit Hackathon Korea 소개글을 올려 주셔서 처음 이 대회를 알게 되었다.</p>
+
+<h2 id="pre-2-해커톤-등록-기대-반-걱정-반">pre-2. 해커톤 등록, 기대 반 걱정 반</h2>
+<p>처음 해커톤 소개글을 봤을 때는 좀 많이 망설였다. 사실 나는 이번 해커톤을 통해 처음 양자컴퓨팅에 입문하였기 때문에, 그 전까지는 양자컴퓨팅 관련 코딩 경험이 전무한 상태였다(사실 Qiskit이라는 게 있는 줄도 이번에 처음 알았다…). 하지만 신소영 님께서 양자컴퓨터 초보자를 위한 교육 세션이 준비되어 있다고 하셨기 때문에, 일단 쉬운 프로젝트라도 무작정 덤벼들어 보자는 마음으로 참가를 결심하였다(결과적으로 탁월한 선택이었다!). 다행히 페이스북 그룹 내 반응을 살펴보니 양자컴퓨팅 입문자가 나만은 아닌 것 같아 위안이 많이 되었고, 기대도 되기 시작했다.</p>
+
+<h2 id="pre-3-입문자용-강의--사전-행사">pre-3. 입문자용 강의 &amp; 사전 행사</h2>
+<p>Quantum Computing KR 그룹 내에 계신 경북대학교 배준현 교수님께서 정말 감사하게도 입문자용 강의 영상들을 유튜브에 올려주셨다. 해커톤 사전행사에서 제공해주신 강연 역시 유튜브 라이브 방송으로 업로드되어 있다.<br />
+<a href="https://youtube.com/playlist?list=PLHqxB9kMLLaMS6F5RSA973qptBlFsk5RE">주니온TV 아무거나연구소 - 어서와! 양자컴퓨팅은 처음이지?</a></p>
+
+<h1 id="1-12일차-오리엔테이션--특별-강연">1. 1~2일차 오리엔테이션 &amp; 특별 강연</h1>
+<p>첫날과 둘째 날에는 오리엔테이션과 특별 강연들이 준비되어 있었다.</p>
+
+<h2 id="1-1-qiskit-설치">1-1. Qiskit 설치</h2>
+<p>신소영 님께서 zoom으로 Qiskit 설치 가이드를 제공해 주셨다. Qiskit이 워낙 활발하게 개발 중인 프레임워크이다 보니 버전업 속도도 굉장히 빠른 편이어서, 패키지 버전에 따른 의존성 문제가 많이 발생하는 편이라고 한다. 때문에 Qiskit에서는 데이터 사이언스를 위한 대부분의 파이썬 패키지들이 미리 갖춰져 있는 <a href="https://www.anaconda.com/">Anaconda</a>를 이용하는 것을 권장하고 있다. 나는 원래는 아나콘다보다 파이썬 내에서 venv를 사용해서 가상환경을 직접 구축하는 쪽을 더 선호하는 편이지만, 공식적으로 아나콘다를 강하게 권장하는 데는 다 이유가 있을 테니 이번에는 아나콘다를 사용하여 진행하였다.</p>
+
+<p>리눅스 기준으로, <a href="https://docs.anaconda.com/anaconda/install/linux/">Anaconda 리눅스 설치 가이드</a>대로 따라하면서 아나콘다를 설치하되 도중에 <code class="language-plaintext highlighter-rouge">Do you wish the installer to initialize Anaconda3 by running conda init?</code>라고 묻는 단계에서 <code class="language-plaintext highlighter-rouge">yes</code>를 입력하기만 하면 보통은 별다른 문제 없이 잘 동작한다. 아나콘다 설치 완료 후에는 터미널 창을 닫고 새로 열거나, <code class="language-plaintext highlighter-rouge">source ~/.bashrc</code> 명령을 실행해 준다.</p>
+
+<p>다음으로 Qiskit을 사용할 가상환경을 하나 생성해줘야 한다. 다음 명령으로 콘다 가상환경 생성 후 활성화해준다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ conda create --name (환경 이름)
+$ conda activate (환경 이름)
+</code></pre></div></div>
+<p>여기까지 끝났다면 마지막으로 Qiskit을 설치해주면 되는데, 왜인지 잘은 모르지만 신소영 님께서 그냥 터미널에서 pip를 사용해서 설치할 경우 종종 문제가 발생하곤 한다며 주피터 노트북 실행 후 노트북 셀에서 <code class="language-plaintext highlighter-rouge">!pip install qiskit[visualization]</code> 를 실행해 달라고 상당히 강조하셨다. 이것도 다 이유가 있을 테니 말씀하신 대로 주피터 노트북 내에서 설치하였다. 초보자도 따라할 수 있게끔 각 단계별로 친절하게 설명해 주셔서 다행히 별다른 어려움 없이 잘 설치할 수 있었다.</p>
+
+<h2 id="1-2-양자-게이트--알고리즘-강의">1-2. 양자 게이트 &amp; 알고리즘 강의</h2>
+<p>IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리즘에 관한 양질의 강의를 제공해 주셨다. 오전에는 큐비트를 어떤 형태로 표현하는지와 양자 게이트에 대한 영상을 볼 수 있었다.</p>
+
+<h3 id="1-2-1-큐비트">1-2-1. 큐비트</h3>
+<p>영상 내용에 따르면 큐비트의 상태는 <strong>2차원 복소벡터공간상의 단위 벡터</strong>로 표현하며, 이 큐비트 상태는 <strong>unitary operations</strong>, 즉 <strong>양자 게이트(quantum gates)</strong>를 통해 변화한다고 한다. 수식으로 나타내면 다음과 같다.
+\(\displaylines{
+|0\rangle := \begin{bmatrix}
+1 \\ 0
+\end{bmatrix} \neq 0, \quad
+|1\rangle := \begin{bmatrix}
+0 \\ 1
+\end{bmatrix} \neq 1 \\
+|\psi〉= \alpha|0〉+ \beta|1〉
+= \begin{bmatrix}
+\alpha \\ \beta
+\end{bmatrix} \\
+(\alpha, \beta \in \mathbb{c}, \; |\alpha|^{2} + |\beta|^{2} = 1)
+}\)</p>
+
+<h3 id="1-2-2-유니터리-연산unitary-operation">1-2-2. 유니터리 연산(Unitary Operation)</h3>
+<p><strong>유니터리 연산(Unitary Operaion)</strong>이란 2차원 복소벡터공간 안에서의 실수 회전(real rotations)의 일반적인 표현(generalization)이다. 아래와 같은 특성들을 지닌다.</p>
+<ul>
+  <li>$U^{†}=U^{-1}, \; UU^{†}=U^{†}U=I$</li>
+  <li>선형적(Linear)</li>
+  <li>역연산 가능(Reversible)</li>
+  <li>상태들 간의 논리적 관계를 보존함</li>
+</ul>
+
+<p>따라서 다음이 성립한다.</p>
+
+\[\displaylines{
+|\psi\rangle = \alpha|0\rangle + \beta|1\rangle, \quad
+|\phi\rangle = \gamma|0\rangle + \delta|1\rangle \\
+\langle\phi|\psi\rangle 
+= \begin{bmatrix} 
+\gamma^{*} &amp; \delta^{*} 
+\end{bmatrix}\begin{bmatrix} 
+\alpha \\ \beta 
+\end{bmatrix} \\
+\langle\phi|U^{†}U|\psi\rangle = \langle\phi|\psi\rangle
+}\]
+
+<h3 id="1-2-3-양자-게이트">1-2-3. 양자 게이트</h3>
+<p>양자 게이트의 경우 단일 큐비트 게이트로는 <strong>Pauli-X 게이트</strong>, <strong>Hadamard(H) 게이트</strong>, <strong>Pauli-Z gate</strong> 등이 있고, 2큐비트 게이트로는 <strong>CNOT 게이트</strong>가 대표적이다(물론 이거 말고도 많다).</p>
+
+<h4 id="pauli-x-게이트">Pauli-X 게이트</h4>
+<p>X 게이트는 고전적인 컴퓨터에서의 NOT 게이트에 해당하는 녀석이고,</p>
+
+<h4 id="hadamardh-게이트">Hadamard(H) 게이트</h4>
+<p>Hadamard(H) 게이트는 기본 상태 |0〉은 $\frac{|0\rangle + |1\rangle}{\sqrt{2}}$로, 기본 상태 |1〉은 $\frac{|0\rangle- |1\rangle}{\sqrt{2}}$로 변환하여 |0〉과 |1〉이 측정될 확률이 각각 $\frac{1}{2}$로 같은 <strong>중첩(superposition)</strong> 상태를 만들어 주는 역할을 한다고 한다.</p>
+
+<h4 id="pauli-z-게이트">Pauli-Z 게이트</h4>
+<p>Z 게이트는 단일 큐비트의 위상을 바꾸는 역할을 한다고 하는데 이 부분은 제대로 이해하지 못해서 아무래도 공부가 더 필요할 듯하다.</p>
+
+<h4 id="cnot-게이트">CNOT 게이트</h4>
+<p>CNOT 게이트는 2개의 큐비트상에서 동작하며, 큐비트의 입력 값이 |0〉 또는 |1〉로 한정될 경우 고전적인 컴퓨터에서의 XOR 게이트와 같은 역할을 한다.</p>
+
+<h3 id="1-2-4-측정">1-2-4. 측정</h3>
+<p>큐비트의 상태를 직접적으로 확인하는 것은 불가능하여 <strong>측정(measurement)</strong>을 통해 큐비트로 부호화된 정보를 읽어와야 하며, 이때 큐비트는 양자역학에 따라 확률적으로 행동하기 때문에 측정을 여러 번 실행하여 0과 1 각각의 값을 측정할 통계적 확률을 구한다고 한다. Qiskit에서는 이 측정 실행 횟수를 <code class="language-plaintext highlighter-rouge">shots</code>라는 변수로 지정해 줄 수 있고, 기본값은 1024이다.</p>
+
+<h3 id="1-2-5-위상">1-2-5. 위상</h3>
+<p><strong>위상(Phase)</strong>의 경우, $|\psi〉= \alpha|0〉+\beta|1〉=\begin{bmatrix} \alpha\ \beta \end{bmatrix} = |\alpha|e^{i\theta_{0}}|0〉+ |\beta|e^{i\theta_{1}}|1〉$를 $|\psi〉= e^{i\theta_{0}}(|\alpha||0〉+ |\beta|e^{i\phi}), \phi = \theta_{1}-\theta_{0}$ 꼴로 정리했을 때 $e^{i\theta_{0}}$이 <strong>Global Phase</strong>,  $e^{i\phi}$이 <strong>Relative Phase</strong>에 해당하는 부분이라고 한다. Global Phase는 측정을 통해 감지할 수 없지만 Relative Phase는 감지해낼 수 있다. 아까 Z 게이트도 그렇고 위상에 관한 부분은 내가 제대로 이해를 못 해서 앞으로 더 공부가 필요한 부분이다.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#deep-learning" class="page__taxonomy-item" rel="tag">Deep learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#machine-learning" class="page__taxonomy-item" rel="tag">Machine learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#qiskit" class="page__taxonomy-item" rel="tag">Qiskit</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#quantum-computing" class="page__taxonomy-item" rel="tag">Quantum Computing</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2021-02-27T00:00:00+09:00">February 27, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=YunseoKim47&text=Qiskit+Hackathon+Korea+2021%2C+%EA%B7%B8+4%EC%9D%BC%EA%B0%84%EC%9D%98+%EA%B8%B0%EB%A1%9D%20https%3A%2F%2Fyunseo47.github.io%2F%2Fquantum%2520computing%2FQiskit-Hackathon-Korea-2021%2C-%25EA%25B7%25B8-4%25EC%259D%25BC%25EA%25B0%2584%25EC%259D%2598-%25EA%25B8%25B0%25EB%25A1%259D%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyunseo47.github.io%2F%2Fquantum%2520computing%2FQiskit-Hackathon-Korea-2021%2C-%25EA%25B7%25B8-4%25EC%259D%25BC%25EA%25B0%2584%25EC%259D%2598-%25EA%25B8%25B0%25EB%25A1%259D%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fyunseo47.github.io%2F%2Fquantum%2520computing%2FQiskit-Hackathon-Korea-2021%2C-%25EA%25B7%25B8-4%25EC%259D%25BC%25EA%25B0%2584%25EC%259D%2598-%25EA%25B8%25B0%25EB%25A1%259D%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/" class="pagination--pager" title="머신러닝 개발환경 구축하기
+">이전</a>
+    
+    
+      <a href="/data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/" class="pagination--pager" title="kaggle-Intro to Machine Learning 코스 내용 정리
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/electronic.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/" rel="permalink">kaggle-Intro to Machine Learning 코스 내용 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-04-04T00:00:00+09:00">April 4, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">최근 박해선 님께서 진행하시는 머신러닝 스터디 잼에 참가하게 되었다.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/electronic.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/" rel="permalink">머신러닝 개발환경 구축하기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-02-07T00:00:00+09:00">February 7, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          7 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">개요
+이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/electronic.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/jekyll/GitHub-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC/" rel="permalink">GitHub 마크다운 문법 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-01-31T00:00:00+09:00">January 31, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">GitHub Pages 활용을 위해서는 markdown 문법에 대해 알 필요가 있다.
+GitHub 공식 문서의 Mastering Markdown과 Basic writing and formatting syntax를 참고하여 작성하였다.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/YunseoKim47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://facebook.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 김윤서(Yunseo Kim). Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: '1RQK4YZOQ8',
+  apiKey: 'b816880a7fda54e7bade61ee4c00dc95',
+  indexName: 'yunseo47.github.io',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: '검색어를 입력하세요...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://yunseo47.github.io//quantum%20computing/Qiskit-Hackathon-Korea-2021,-%EA%B7%B8-4%EC%9D%BC%EA%B0%84%EC%9D%98-%EA%B8%B0%EB%A1%9D/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/quantum%20computing/Qiskit-Hackathon-Korea-2021,-그-4일간의-기록"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://yunseo47-github.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

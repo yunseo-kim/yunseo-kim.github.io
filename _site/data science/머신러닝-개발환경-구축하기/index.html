@@ -1,0 +1,959 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>머신러닝 개발환경 구축하기 | Yunseo47’s Insight</title>
+<meta name="description" content="개요 이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.">
+
+
+  <meta name="author" content="김윤서(Yunseo Kim)">
+  
+  <meta property="article:author" content="김윤서(Yunseo Kim)">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Yunseo47's Insight">
+<meta property="og:title" content="머신러닝 개발환경 구축하기">
+<meta property="og:url" content="https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/">
+
+
+  <meta property="og:description" content="개요 이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.">
+
+
+
+  <meta property="og:image" content="https://yunseo47.github.io//assets/img/electronic-square.jpg">
+
+
+
+  <meta name="twitter:site" content="@YunseoKim47">
+  <meta name="twitter:title" content="머신러닝 개발환경 구축하기">
+  <meta name="twitter:description" content="개요 이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.">
+  <meta name="twitter:url" content="https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://yunseo47.github.io//assets/img/electronic-square.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2021-02-07T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "김윤서(Yunseo Kim)",
+      "url": "https://yunseo47.github.io//",
+      "sameAs": ["https://twitter.com/YunseoKim47","https://facebook.com/yunseo47","https://github.com/yunseo47","https://www.linkedin.com/in/yunseo47"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="AUlHZNteJbS4CdnOj-2_RSqAmRuvZGuSqxlSXrrLVhY" />
+
+
+  <meta name="msvalidate.01" content="770DA7541FB457119B57EA8B392D03BB">
+
+
+
+
+  <meta name="naver-site-verification" content="705b2244d3d659d91f84930ff048d987b3293f49">
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Yunseo47's Insight Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Yunseo47's Insight
+          <span class="site-subtitle">AI breakthrough for fusion energy</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">김윤서(Yunseo Kim)</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Fusion Energy &amp; Data Science enthusiast</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="mailto:yunseo47@protonmail.ch" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/YunseoKim47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+            <li><a href="https://facebook.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span class="label">Facebook</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="머신러닝 개발환경 구축하기">
+    <meta itemprop="description" content="개요이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.">
+    <meta itemprop="datePublished" content="2021-02-07T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">머신러닝 개발환경 구축하기
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-02-07T00:00:00+09:00">February 7, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#개요">개요</a></li><li><a href="#0-사전-확인사항">0. 사전 확인사항</a></li><li><a href="#1-작업-디렉터리-생성">1. 작업 디렉터리 생성</a></li><li><a href="#2-pip-패키지-설치또는-업그레이드">2. pip 패키지 설치(또는 업그레이드)</a></li><li><a href="#3-독립적인-가상환경-만들기권장사항">3. 독립적인 가상환경 만들기(권장사항)</a></li><li><a href="#4-머신러닝용-패키지jupyter-matplotlib-numpy-pandas-scipy-scikit-learn-설치">4. 머신러닝용 패키지(jupyter, matplotlib, numpy, pandas, scipy, scikit-learn) 설치</a></li><li><a href="#5-cuda--cudnn-설치">5. CUDA &amp; cuDNN 설치</a><ul><li><a href="#5-1-필요한-cuda--cudnn-버전-확인">5-1. 필요한 CUDA &amp; cuDNN 버전 확인</a></li><li><a href="#5-2-cuda-설치">5-2. CUDA 설치</a></li><li><a href="#5-3-cudnn-설치">5-3. cuDNN 설치</a></li></ul></li><li><a href="#6-pytorch-설치">6. PyTorch 설치</a></li><li><a href="#7-tensorflow-2-설치">7. TensorFlow 2 설치</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="개요">개요</h2>
+<p>이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.</p>
+
+<ul>
+  <li>구축할 기술 스택
+    <ul>
+      <li>Ubuntu 20.04 LTS</li>
+      <li>Python 3.8</li>
+      <li>pip 21.0.1</li>
+      <li>jupyter</li>
+      <li>matplotlib</li>
+      <li>numpy</li>
+      <li>pandas</li>
+      <li>scipy</li>
+      <li>scikit-learn</li>
+      <li>CUDA 11.0.3</li>
+      <li>cuDNN 8.0.5</li>
+      <li>딥러닝 프레임워크(각 환경당 하나만 선택하여 설치하는 것을 권장)
+        <ul>
+          <li>PyTorch 1.7.1</li>
+          <li>TensorFlow 2.4.0</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="0-사전-확인사항">0. 사전 확인사항</h2>
+<ul>
+  <li>머신러닝 공부를 위해서는 리눅스 사용을 권장한다. 윈도우 상에서도 가능은 하지만, 여러 자잘한 부분에서 시간낭비가 많이 일어날 수 있다. 우분투 최신 LTS 버전을 사용하는 것이 제일 무난하다. 오픈소스가 아닌 독점 드라이버들도 자동 설치되어 편리하며, 사용자 수가 많기 때문에 대부분의 기술 문서가 우분투 기준으로 작성되어 있다.</li>
+  <li>일반적으로 우분투를 비롯한 대부분의 리눅스 배포판에는 파이썬이 기본 설치되어 있다. 그러나 만약 파이썬이 설치되어 있지 않다면, 이 글을 따라하기에 앞서 파이썬을 먼저 설치해야 한다.
+    <ul>
+      <li>현재 설치된 파이썬 버전은 다음 명령어로 확인 가능하다.
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python3 --version
+</code></pre></div>        </div>
+      </li>
+      <li>텐서플로2 혹은 파이토치를 사용할 것이라면 호환 가능한 파이썬 버전을 확인해야 한다. 이 글 작성 시점을 기준으로 <a href="https://pytorch.org/get-started/locally/#linux-python">파이토치 최신 버전이 지원하는 파이썬 버전</a>은 3.6-3.8, <a href="https://www.tensorflow.org/install">텐서플로2 최신 버전이 지원하는 파이썬 버전</a>은 3.5-3.8이다.<br />
+이 글에서는 파이썬 3.8 버전을 사용한다.</li>
+    </ul>
+  </li>
+  <li>로컬 머신에서 머신러닝을 공부할 계획이라면 GPU를 하나 이상 준비하는 것이 좋다. 데이터 전처리 정도는 CPU로도 가능하지만, 모델 학습 단계에서는 모델의 규모가 커질수록 CPU와 GPU의 학습 속도 차이는 압도적이다(특히 딥러닝의 경우가 그렇다).
+    <ul>
+      <li>머신러닝을 위해서라면 GPU 제조사 선택지는 사실상 하나뿐이다. NVIDIA 제품을 이용해야 한다. NVIDIA는 머신러닝 분야에 상당히 많은 투자를 해 온 회사이며, 거의 모든 머신러닝 프레임워크에서 NVIDIA의 CUDA 라이브러리를 이용한다.</li>
+      <li>머신러닝용으로 GPU를 사용할 계획이라면, 사용하려는 그래픽카드가 CUDA 사용이 가능한 모델인지 우선 확인해야 한다. 현재 컴퓨터에 장착된 GPU 모델명은 터미널에서 <code class="language-plaintext highlighter-rouge">nvidia-smi</code> 명령으로 확인 가능하다. <a href="https://developer.nvidia.com/cuda-gpus">링크</a>에 있는 GPU 목록에서 해당하는 모델명을 찾은 뒤, <strong>Compute Capability</strong> 수치를 확인하자. 이 수치가 적어도 3.5 이상이어야 CUDA 사용이 가능하다.</li>
+      <li>GPU 선정 기준은 다음 글에 잘 정리되어 있다. 글쓴이가 지속적으로 업데이트하고 있는 글이다.<br />
+<a href="https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/">Which GPU(s) to Get for Deep Learning</a><br />
+같은 분이 작성한 <a href="https://timdettmers.com/2018/12/16/deep-learning-hardware-guide/">A Full Hardware Guide to Deep Learning</a>이라는 글도 매우 유익하다. 참고로 위 글의 결론은 아래와 같다.
+        <blockquote>
+          <p>The RTX 3070 and RTX 3080 are mighty cards, but they lack a bit of memory. For many tasks, however, you do not need that amount of memory.<br />
+The RTX 3070 is perfect if you want to learn deep learning. This is so because the basic skills of training most architectures can be learned by just scaling them down a bit or using a bit smaller input images. If I would learn deep learning again, I would probably roll with one RTX 3070, or even multiple if I have the money to spare.
+The RTX 3080 is currently by far the most cost-efficient card and thus ideal for prototyping. For prototyping, you want the largest memory, which is still cheap. With prototyping, I mean here prototyping in any area: Research, competitive Kaggle, hacking ideas/models for a startup, experimenting with research code. For all these applications, the RTX 3080 is the best GPU.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>위에서 언급한 모든 사항들을 충족하였다면 작업환경 구축을 시작하자.</p>
+
+<h2 id="1-작업-디렉터리-생성">1. 작업 디렉터리 생성</h2>
+<p>터미널을 열고 .bashrc 파일을 수정하여 환경변수를 등록한다($ 프롬프트 다음이 명령이다).<br />
+우선 다음 명령을 이용해 nano 에디터를 연다(vim이나 그 외에 다른 에디터도 상관없다).</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nano ~/.bashrc
+</code></pre></div></div>
+<p>마지막 줄에 다음 내용을 추가한다.<br />
+<code class="language-plaintext highlighter-rouge">export ML_PATH="$HOME/ml"</code>  # 원하는 경로로 바꿔도 된다.</p>
+
+<p>Ctrl+O를 눌러 저장한 뒤 Ctrl+X로 빠져나온다.</p>
+
+<p>이제 아래 명령어를 실행하여 환경변수를 적용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source ~/.bashrc
+</code></pre></div></div>
+<p>디렉터리를 생성한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir -p $ML_PATH
+</code></pre></div></div>
+
+<h2 id="2-pip-패키지-설치또는-업그레이드">2. pip 패키지 설치(또는 업그레이드)</h2>
+<p>머신러닝을 위해 필요한 파이썬 패키지들을 설치하는 방법은 여러 가지이다. 아나콘다 같은 과학 파이썬 배포판을 이용해도 되고(윈도우 운영체제의 경우 권장하는 방법), 파이썬 자체 패키징 도구인 pip를 사용할 수도 있다. 여기서는 리눅스나 맥OS의 배시 셸(bash shell)에서 pip 명령을 사용할 것이다.</p>
+
+<p>시스템에 pip가 설치되어 있는지 다음 명령으로 확인한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip3 --version
+
+명령어 'pip3' 을(를) 찾을 수 없습니다. 그러나 다음을 통해 설치할 수 있습니다:
+
+sudo apt install python3-pip
+
+</code></pre></div></div>
+<p>위와 같이 나온다면 시스템에 pip가 설치되지 않은 것이다. 시스템의 패키지 매니저(여기선 apt)를 사용하여 설치해준다(만약 버전명이 나온다면, 설치되어 있는 것이니 이 명령은 건너뛴다).</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install python3-pip
+</code></pre></div></div>
+<p>이제 pip가 설치되었다. 그런데 문제는 시스템의 패키지 매니저(이 경우 apt)를 이용해 pip를 설치할 시 우분투의 미러 서버에 있는 바이너리 파일을 다운로드받아 설치하게 되는데, 이 바이너리 파일은 일반적으로 업데이트가 늦어 최신버전이 아닌 경우가 많다(필자의 경우 20.3.4 버전이 설치되었다). 최신 버전의 pip를 사용하기 위해 다음 명령을 실행하여 업그레이드한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo python3 -m pip install -U pip
+
+Collecting pip
+(중략)
+Successfully installed pip-21.0.1
+</code></pre></div></div>
+<p>pip가 이 글을 작성한 시점 기준으로 최신인 21.0.1 버전으로 업그레이드된 것을 볼 수 있다.</p>
+
+<p>참고로, pip를 이용하여 패키지를 설치할 때 시스템 pip를 이용하는 방법과 파이썬 pip를 이용하는 방법이 있다. 그런데 시스템 pip를 이용해 패키지를 설치하였을 경우, 추후 이 시스템 pip를 업그레이드하면 문제가 발생할 수도 있다고 한다. 따라서 가상환경 내에서가 아니라면, <code class="language-plaintext highlighter-rouge">pip</code> 명령 대신 <code class="language-plaintext highlighter-rouge">python3 -m pip</code> 명령을 이용하여 파이썬 pip를 대신 사용하도록 한다.</p>
+
+<h2 id="3-독립적인-가상환경-만들기권장사항">3. 독립적인 가상환경 만들기(권장사항)</h2>
+<p>독립된 개발 환경(다른 프로젝트의 라이브러리 버전과 충돌하는 것을 피하기 위함)을 만들기 위해서는 venv를 설치한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install python3-venv
+</code></pre></div></div>
+<p>그런 다음 독립적인 파이썬 환경을 다음과 같이 생성한다. 이렇게 하는 이유는 프로젝트마다 필요한 라이브러리 버전이 달라 충돌하는 것을 막기 위함이므로, 새 프로젝트를 시작할 때마다 새로운 가상환경을 생성해서 독립된 환경을 구축해주면 된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd $ML_PATH
+$ python3 -m venv ./(환경 이름)
+</code></pre></div></div>
+<p>다음부터 이 환경을 활성화하려면 터미널을 열고 다음 명령을 입력하면 된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd $ML_PATH
+$ source ./(환경 이름)/bin/activate
+</code></pre></div></div>
+<p>환경을 비활성화 하려면 <code class="language-plaintext highlighter-rouge">deactivate</code> 명령을 사용한다. 환경을 활성화한 상태에서는 pip 명령으로 설치하는 어떤 패키지든 독립된 이 환경에 설치되고 파이썬은 이 패키지만 사용한다.</p>
+
+<h2 id="4-머신러닝용-패키지jupyter-matplotlib-numpy-pandas-scipy-scikit-learn-설치">4. 머신러닝용 패키지(jupyter, matplotlib, numpy, pandas, scipy, scikit-learn) 설치</h2>
+<p>다음 pip 명령으로 필요한 패키지와 의존성으로 연결된 다른 패키지를 모두 설치한다.<br />
+venv를 사용하지 않는다면 관리자 권한이 필요하다.<br />
+또한 필자의 경우 venv를 사용하기 때문에 그냥 <code class="language-plaintext highlighter-rouge">pip</code> 명령을 사용하였는데, 만약 venv를 사용하지 않는다면 앞서 <a href="#2-pip-패키지-설치또는-업그레이드">2단계</a> 끝부분에서 언급하였듯이 <code class="language-plaintext highlighter-rouge">python3 -m pip</code> 명령을 대신 사용하는 것을 권장한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(env) $ pip3 install --upgrade jupyter matplotlib numpy pandas scipy scikit-learn
+
+Collecting jupyter
+  Downloading jupyter-1.0.0-py2.py3-none-any.whl (2.7 kB)
+Collecting matplotlib
+(후략)
+</code></pre></div></div>
+<p>venv를 사용했다면 주피터에 커널을 등록하고 이름을 정한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(env) $ python3 -m ipykernel install --user --name=python3
+</code></pre></div></div>
+<p>이제부터 주피터를 실행하려면 다음 명령을 이용하면 된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(env) $ jupyter notebook
+</code></pre></div></div>
+
+<h2 id="5-cuda--cudnn-설치">5. CUDA &amp; cuDNN 설치</h2>
+<h3 id="5-1-필요한-cuda--cudnn-버전-확인">5-1. 필요한 CUDA &amp; cuDNN 버전 확인</h3>
+<p><a href="https://pytorch.org/get-started/locally/">파이토치 공식 문서</a>에서 지원하는 CUDA 버전을 확인한다.<br />
+<img src="https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png" alt="PyTorch 호환 CUDA 버전 확인" /><br />
+파이토치 1.7.1 버전 기준으로 지원하는 CUDA 버전은 9.2, 10.1, 10.2, 11.0이다. NVIDIA 30시리즈 GPU의 경우 CUDA 11을 필요로 하므로, 11.0 버전이 필요하다는 것을 알 수 있다.</p>
+
+<p><a href="https://www.tensorflow.org/install/gpu">텐서플로2 공식 문서</a>에서도 필요한 CUDA 버전을 확인한다.<br />
+<img src="https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/TensorFlow_GPU_support.png" alt="TensorFlow2 호환 CUDA 버전 확인" /><br />
+텐서플로 2.4.0 버전 기준으로, CUDA는 마찬가지로 11.0 버전, cuDNN은 8.0 버전이 필요한 것을 확인하였다.</p>
+
+<p>필자는 경우에 따라 파이토치를 사용할 때도, 텐서플로2를 사용할 때도 있기 때문에 두 패키지 모두 호환 가능한 CUDA 버전을 확인하였다. 자신이 필요한 패키지의 요구 조건을 확인하여 거기에 맞추면 된다.</p>
+
+<h3 id="5-2-cuda-설치">5-2. CUDA 설치</h3>
+<p><a href="https://developer.nvidia.com/cuda-toolkit-archive">CUDA Toolkit Archive</a>에 접속한 다음 앞에서 확인한 버전을 선택하여 들어간다. 이 글에서는 <a href="https://developer.nvidia.com/cuda-11.0-update1-download-archive">CUDA Toolkit 11.0 Update1</a>을 선택해 들어간다.<br />
+<img src="https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-1.png" alt="CUDA 11.0 Update 1" /><br />
+이제 해당하는 플랫폼과 인스톨러 종류를 선택하고, 화면에 나타나는 지시를 따르면 된다. 이때 <a href="https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#choose-installation-method">인스톨러의 경우 가급적 시스템 패키지 매니저를 이용하는 것이 좋다</a>. 필자가 선호하는 방법은 deb (network)이다.<br />
+<img src="https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-2.png" alt="CUDA 플랫폼 선택" /><br />
+<img src="https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-3.png" alt="CUDA 설치" /></p>
+
+<p>아래 명령을 실행하여 CUDA를 설치한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+$ sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+$ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+$ sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+$ sudo apt update
+$ sudo apt install cuda-toolkit-11-0 cuda-drivers
+</code></pre></div></div>
+<p>눈썰미가 좋다면 마지막 줄이 이미지에 나타난 지시와 약간 다르다는 것을 알아챘을 것이다. 네트워크 설치에서 이미지에 나타난 대로 cuda만 입력하면 최신 버전인 11.2 버전이 설치되는데, 이는 우리가 원하는 바가 아니다. <a href="https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#package-manager-metas">CUDA 11.0 리눅스 설치 가이드</a>에서 여러 메타 패키지 옵션을 살펴볼 수 있다. 여기서는 CUDA Toolkit 패키지를 11.0 버전으로 지정 설치하고, 드라이버 패키지는 자동 업그레이드 되도록 하기 위해 마지막 줄을 수정하였다.</p>
+
+<h3 id="5-3-cudnn-설치">5-3. cuDNN 설치</h3>
+<p>다음과 같이 cuDNN을 설치한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt install libcudnn8=8.0.5.39-1+cuda11.0
+$ sudo apt install libcudnn8-dev=8.0.5.39-1+cuda11.0
+</code></pre></div></div>
+<h2 id="6-pytorch-설치">6. PyTorch 설치</h2>
+<p>앞서 3단계에서 가상환경을 생성하였다면 사용할 가상환경을 활성화한 상태로 진행한다. 파이토치가 필요하지 않다면 이 단계는 건너뛴다.<br />
+<a href="https://pytorch.org/get-started/locally/">PyTorch 홈페이지</a>에 접속하여 설치할 파이토치 빌드(Stable)와 운영체제(Linux), 패키지(Pip), 언어(Python), CUDA(11.0)을 선택하고 화면에 나타나는 지시를 따른다.<br />
+<img src="https://yunseo47.github.io/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png" alt="PyTorch 설치" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(env) $ pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+</code></pre></div></div>
+<p>파이토치를 제대로 설치했는지 검증하기 위해 파이썬 인터프리터 실행 후 다음 명령을 실행해본다. 텐서가 반환된다면 성공한 것이다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(env) $ python3
+Python 3.8.5 (default, Jul 28 2020, 12:59:40) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; import torch
+&gt;&gt;&gt; x = torch.rand(5, 3)
+&gt;&gt;&gt; print(x)"
+tensor([[0.8187, 0.5925, 0.2768],
+        [0.9884, 0.8298, 0.8553],
+        [0.6350, 0.7243, 0.2323],
+        [0.9205, 0.9239, 0.9065],
+        [0.2424, 0.1018, 0.3426]])
+</code></pre></div></div>
+<p>GPU 드라이버와 CUDA가 활성화되어 있고 사용 가능한지 확인하기 위해 다음 명령을 실행해본다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; torch.cuda.is_available()
+True
+</code></pre></div></div>
+
+<h2 id="7-tensorflow-2-설치">7. TensorFlow 2 설치</h2>
+<p>6단계에서 파이토치를 가상환경에 설치하였다면, 그 가상환경은 비활성화한 후 3, 4단계로 돌아가 새로운 가상환경을 생성하고 활성화한 뒤 진행한다. 6단계를 건너뛰었다면 그냥 그대로 진행하면 된다.<br />
+다음과 같이 텐서플로를 설치한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(env2) $ pip install --upgrade tensorflow
+</code></pre></div></div>
+<p>텐서플로를 제대로 설치했는지 검증하기 위해 다음 명령을 실행해본다. GPU 이름을 표시하고, 텐서를 반환한다면 성공한 것이다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(env2) $ python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
+2021-02-07 22:45:51.390640: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+(중략)
+2021-02-07 22:45:54.592749: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6878 MB memory) -&gt; physical GPU (device: 0, name: GeForce RTX 3070, pci bus id: 0000:01:00.0, compute capability: 8.6)
+tf.Tensor(526.1059, shape=(), dtype=float32)
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#deep-learning" class="page__taxonomy-item" rel="tag">Deep learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#machine-learning" class="page__taxonomy-item" rel="tag">Machine learning</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#data-science" class="page__taxonomy-item" rel="tag">Data science</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2021-02-07T00:00:00+09:00">February 7, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=YunseoKim47&text=%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D+%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD+%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0%20https%3A%2F%2Fyunseo47.github.io%2F%2Fdata%2520science%2F%25EB%25A8%25B8%25EC%258B%25A0%25EB%259F%25AC%25EB%258B%259D-%25EA%25B0%259C%25EB%25B0%259C%25ED%2599%2598%25EA%25B2%25BD-%25EA%25B5%25AC%25EC%25B6%2595%25ED%2595%2598%25EA%25B8%25B0%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyunseo47.github.io%2F%2Fdata%2520science%2F%25EB%25A8%25B8%25EC%258B%25A0%25EB%259F%25AC%25EB%258B%259D-%25EA%25B0%259C%25EB%25B0%259C%25ED%2599%2598%25EA%25B2%25BD-%25EA%25B5%25AC%25EC%25B6%2595%25ED%2595%2598%25EA%25B8%25B0%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fyunseo47.github.io%2F%2Fdata%2520science%2F%25EB%25A8%25B8%25EC%258B%25A0%25EB%259F%25AC%25EB%258B%259D-%25EA%25B0%259C%25EB%25B0%259C%25ED%2599%2598%25EA%25B2%25BD-%25EA%25B5%25AC%25EC%25B6%2595%25ED%2595%2598%25EA%25B8%25B0%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/jekyll/GitHub-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC/" class="pagination--pager" title="GitHub 마크다운 문법 정리
+">이전</a>
+    
+    
+      <a href="/quantum%20computing/Qiskit-Hackathon-Korea-2021,-%EA%B7%B8-4%EC%9D%BC%EA%B0%84%EC%9D%98-%EA%B8%B0%EB%A1%9D/" class="pagination--pager" title="Qiskit Hackathon Korea 2021, 그 4일간의 기록
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/electronic.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/" rel="permalink">kaggle-Intro to Machine Learning 코스 내용 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-04-04T00:00:00+09:00">April 4, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">최근 박해선 님께서 진행하시는 머신러닝 스터디 잼에 참가하게 되었다.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/electronic.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/quantum%20computing/Qiskit-Hackathon-Korea-2021,-%EA%B7%B8-4%EC%9D%BC%EA%B0%84%EC%9D%98-%EA%B8%B0%EB%A1%9D/" rel="permalink">Qiskit Hackathon Korea 2021, 그 4일간의 기록
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-02-27T00:00:00+09:00">February 27, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">이 글의 목적
+최근 2월 16일부터 2월 19일까지 4일간 진행된 Qiskit Hackathon Korea 2021에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/electronic.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/jekyll/GitHub-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC/" rel="permalink">GitHub 마크다운 문법 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-01-31T00:00:00+09:00">January 31, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">GitHub Pages 활용을 위해서는 markdown 문법에 대해 알 필요가 있다.
+GitHub 공식 문서의 Mastering Markdown과 Basic writing and formatting syntax를 참고하여 작성하였다.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/YunseoKim47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://facebook.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 김윤서(Yunseo Kim). Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: '1RQK4YZOQ8',
+  apiKey: 'b816880a7fda54e7bade61ee4c00dc95',
+  indexName: 'yunseo47.github.io',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: '검색어를 입력하세요...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/data%20science/머신러닝-개발환경-구축하기"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://yunseo47-github.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

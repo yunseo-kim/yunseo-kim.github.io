@@ -1,0 +1,189 @@
+I"�W<p>최근 박해선 님께서 진행하시는 머신러닝 스터디 잼에 참가하게 되었다.</p>
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fhaesunrpark%2Fposts%2F1181208872309434&amp;width=400&amp;show_text=true&amp;height=493&amp;appId" width="400" height="493" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+<p><a href="https://www.kaggle.com/learn/overview">Kaggle 공개 코스들</a>을 이용하는 스터디 그룹 형식이고, 5개의 코스를 모두 수료하면 GDE(Google Developer Expert) 티셔츠도 받을 수 있다. <del>뭔가 Qiskit 해커톤을 시작으로 티셔츠 빌런이 되어가는 느낌이다. IBM에 이어 이번엔 GDE다.</del><br />
+각 코스를 수료할 때마다 해당 코스의 내용을 간단히 정리할 계획이다. 첫 번째 글은 <strong>Intro to Machine Learning</strong> 코스의 요약이다.</p>
+
+<h1 id="intro-to-machine-learning">Intro to Machine Learning</h1>
+<p>Learn the core ideas in machine learning, and build your first models.</p>
+
+<h2 id="lesson-1-how-models-work">Lesson 1. How Models Work</h2>
+<p>처음에는 부담 없이 가볍게 시작한다. 머신러닝 모델들이 어떻게 작동하고, 어떻게 사용되는지에 관한 내용이다. 부동산 가격 예측을 해야 하는 상황을 가정하면서 간단한 결정 트리(Decision Tree) 분류 모델을 예로 들어 설명하고 있다.</p>
+
+<p>데이터로부터 패턴을 찾아내는 것을 모델을 <strong>훈련</strong>한다고 한다(<strong>fitting</strong> or <strong>training</strong> the model). 모델을 훈련할 때 사용하는 데이터를 <strong>훈련 데이터(training data)</strong>라고 한다. 훈련을 마치면 이 모델을 새로운 데이터에 적용해서 <strong>예측(predict)</strong>할 수 있다.</p>
+
+<h2 id="lesson-2-basic-data-exploration">Lesson 2. Basic Data Exploration</h2>
+<p>어떤 머신러닝 프로젝트에서든 가장 먼저 해야 할 일은 개발자 본인이 그 데이터에 익숙해지는 것이다. 데이터가 어떤 특성을 지니는지를 먼저 파악해야 그에 적합한 모델을 설계할 수 있다. 데이터를 탐색하고 조작하는 용도로 거의 필수적으로 판다스(Pandas) 라이브러리를 사용하는데, 이 판다스에 관한 기본적인 내용이다.</p>
+
+<p>판다스 라이브러리의 핵심은 데이터프레임(DataFrame)인데, 이 데이터프레임은 일종의 표 같은 거라고 생각하면 된다. 엑셀의 시트나 SQL 데이터베이스의 테이블과 비슷하다. read_csv 메서드를 사용해서 CSV 형식 데이터를 불러올 수 있다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 필요할 때마다 쉽게 접근하기 위해 파일 경로를 변수로 저장하는 것이 좋다.
+</span><span class="n">file_path</span> <span class="o">=</span> <span class="s">'(파일 경로)'</span>
+<span class="c1"># 데이터를 읽어들여서 'data_1'이라는 이름의 데이터프레임으로 저장한다(물론 실제로는 알아보기 쉬운 이름을 쓰는 것이 좋다).
+</span><span class="n">data_1</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</code></pre></div></div>
+<p>describe 메서드를 사용해서 데이터의 요약 정보를 확인할 수 있다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data_1</span><span class="p">.</span><span class="n">describe</span><span class="p">()</span>
+</code></pre></div></div>
+<p>그러면 8항목의 정보를 확인 가능하다.</p>
+<ul>
+  <li><strong>count</strong>: 실제 값이 들어 있는 행의 개수(값이 누락된 것은 제외)</li>
+  <li><strong>mean</strong>: 평균</li>
+  <li><strong>std</strong>: 표준편차</li>
+  <li><strong>min</strong>: 최솟값</li>
+  <li><strong>25%</strong>: 하위 25%의 값</li>
+  <li><strong>50%</strong>: 중간값</li>
+  <li><strong>75%</strong>: 하위 75%의 값</li>
+  <li><strong>max</strong>: 최댓값</li>
+</ul>
+
+<h2 id="lesson-3-your-first-machine-learning-model">Lesson 3. Your First Machine Learning Model</h2>
+<h3 id="데이터-가공">데이터 가공</h3>
+<p>주어진 데이터에서 어떤 변수들을 모델링에 활용할 것인지 결정해야 한다. 데이터프레임의 <strong>columns</strong> 속성을 이용하여 열 레이블을 확인할 수 있다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="n">file_path</span> <span class="o">=</span> <span class="s">'../input/melbourne-housing-snapshot/melb_data.csv'</span>
+<span class="n">data_1</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">melbourne_file_path</span><span class="p">)</span> 
+<span class="n">melbourne_data</span><span class="p">.</span><span class="n">columns</span>
+</code></pre></div></div>
+<p>주어진 데이터에서 필요한 부분을 골라내는 방법은 여러 가지인데, 캐글의 <a href="https://www.kaggle.com/learn/pandas">Pandas Micro-Course</a>에서 깊이 있게 다룬다고 한다(이 내용도 나중에 정리할 것이다). 여기서는 다음의 두 가지 방법을 사용한다.</p>
+<ol>
+  <li>Dot notation</li>
+  <li>리스트 사용</li>
+</ol>
+
+<p>우선, <strong>dot-notation</strong>으로 <strong>예측 대상(prediction target)</strong>에 해당하는 열을 골라낸다. 이때 이 단일 열은 <strong>시리즈(Series)</strong>에 저장한다. 시리즈는 대략 하나의 열로만 구성된 데이터프레임이라 생각하면 된다. 관습적으로 예측 대상은 <strong>y</strong>로 지칭한다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y</span> <span class="o">=</span> <span class="n">melbourne_data</span><span class="p">.</span><span class="n">Price</span>
+</code></pre></div></div>
+
+<p>예측을 위해 모델에 입력하는 열들을 “특성(features)”이라고 한다. 예제로 주어진 멜버른 집값 데이터의 경우에는 집값 예측에 사용할 열들이 된다. 주어진 데이터에서 예측 대상을 제외한 모든 열들을 특성으로 사용할 때도 있고, 그 중 일부만 골라내어 사용하는 게 더 나을 때도 있다.<br />
+아래와 같이 리스트를 사용하여 여러 개의 특성들을 골라낼 수 있다. 이때 이 리스트의 모든 요소들은 문자열이어야 한다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">melbourne_features</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Rooms'</span><span class="p">,</span> <span class="s">'Bathroom'</span><span class="p">,</span> <span class="s">'Landsize'</span><span class="p">,</span> <span class="s">'Lattitude'</span><span class="p">,</span> <span class="s">'Longtitude'</span><span class="p">]</span>
+</code></pre></div></div>
+<p>관습적으로 이 데이터는 <strong>X</strong>로 지칭한다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="n">melbourne_data</span><span class="p">[</span><span class="n">melbourne_features</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>데이터를 분석할 때 describe 이외에 유용하게 사용할 수 있는 메서드로 head도 있다. 처음 5개의 행을 보여준다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="모델-설계">모델 설계</h3>
+<p>모델링 단계에서는 보통 <strong>사이킷런(scikit-learn)</strong> 라이브러리를 많이 사용한다. 모델을 설계하고 사용하는 과정은 크게 다음과 같다.</p>
+<ul>
+  <li><strong>모델 정의(Define)</strong>: 모델의 종류와 매개변수들(parameters)을 결정한다.</li>
+  <li><strong>훈련(Fit)</strong>: 주어진 데이터에서 규칙성을 찾아낸다. 모델링의 핵심이다.</li>
+  <li><strong>예측(Predict)</strong>: ㅈㄱㄴ</li>
+  <li><strong>검증(Evaluate)</strong>: 모델의 예측이 얼마나 정확한지 평가한다.</li>
+</ul>
+
+<p>아래는 사이킷런으로 모델을 정의하고 훈련하는 예시이다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
+
+<span class="c1"># Define model. Specify a number for random_state to ensure same results each run
+</span><span class="n">melbourne_model</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Fit model
+</span><span class="n">melbourne_model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>많은 머신러닝 모델들은 훈련 과정에서 어느 정도 무작위성을 지니고 있다. <code class="language-plaintext highlighter-rouge">random_state</code>값을 지정함으로써 매 실행마다 같은 결과를 얻도록 할 수 있으며, 특별한 이유가 없다면 지정하는 것이 좋은 습관이다. 어떤 값을 사용하든 상관없다. <del>내 아이디가 yunseo<strong>47</strong>이기 때문에, 개인적으로 나는 47을 많이 사용한다.</del></p>
+
+<p>모델 훈련을 완료하면 다음과 같이 예측을 수행할 수 있다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Making predictions for the following 5 houses:"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="n">head</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"The predictions are"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">melbourne_model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="n">head</span><span class="p">()))</span>
+</code></pre></div></div>
+
+<h2 id="lesson-4-model-validation">Lesson 4. Model Validation</h2>
+<h3 id="모델-검증-방법">모델 검증 방법</h3>
+<p>모델을 반복적으로 개선해 나가려면 모델의 성능을 측정해야 한다. 어떤 모델을 이용하여 예측을 했을 때, 맞춘 경우도 있고 틀린 경우도 있을 것이다. 이때 이 모델의 예측 성능을 확인하기 위한 지표가 필요하다. 다양한 종류의 지표가 있는데, 여기서는 <strong>MAE(Mean Absolute Error, 평균 절대 오차)</strong>를 사용한다.</p>
+
+<p>멜버른 집값 예측의 경우에, 각각의 집값에 대한 예측 오차는 다음과 같다.</p>
+<pre><code class="language-error=actual−predicted```">MAE는 각각의 예측 오차의 절대값을 취하여 이 절대 오차들의 평균을 구함으로써 계산한다. 사이킷런으로 다음과 같이 구현할 수 있다.
+```python
+from sklearn.metrics import mean_absolute_error
+
+predicted_home_prices = melbourne_model.predict(X)
+mean_absolute_error(y, predicted_home_prices)
+</code></pre>
+
+<h3 id="훈련-데이터를-검증에-사용하는-것의-문제점">훈련 데이터를 검증에 사용하는 것의 문제점</h3>
+<p>위의 코드에서는 하나의 데이터셋으로 모델 훈련과 검증을 모두 수행하였다. 그런데 이렇게 하면 안 된다. 이 코스에서는 하나의 예시를 들어 이유를 설명하고 있다.</p>
+
+<blockquote>
+  <p>실제 부동산 시장에서 문의 색깔은 집값과는 무관하다.</p>
+
+  <p>그러나 우연히도 훈련에 사용한 데이터에서는 초록색 문을 가진 집들은 모두 매우 비싸다고 한다. 모델의 역할은 데이터에서 집값 예측에 활용할 만한 규칙성을 찾아내는 것이므로, 이 경우 우리의 모델은 이 규칙성을 감지하고 초록 문을 가진 집은 가격이 비싸다고 예측할 것이다.</p>
+
+  <p>이와 같이 예측을 수행한다면, 주어진 훈련 데이터에 대해서는 정확한 것처럼 보일 것이다.</p>
+
+  <p>그러나 “초록 문을 가진 집은 비싸다”라는 규칙이 통하지 않는 새로운 데이터에 대해 예측을 수행하면, 이 모델은 매우 부정확할 것이다.</p>
+</blockquote>
+
+<p>모델은 새로운 데이터로부터 예측을 수행해야 의미가 있는 것이므로, 우리는 모델 훈련에 사용하지 않은 데이터를 사용하여 검증을 수행해야 한다. 가장 간단한 방법은 모델링 과정에서 일부 데이터를 분리하여 성능 측정용으로 사용하는 것이다. 이 데이터를 <strong>검증 데이터(validation data)</strong>라고 한다.</p>
+
+<h3 id="검증-데이터셋-분리">검증 데이터셋 분리</h3>
+<p>사이킷런 라이브러리에는 데이터를 둘로 분리하는 <code class="language-plaintext highlighter-rouge">train_test_split</code> 함수가 있다. 아래의 코드는 데이터를 둘로 분리하여 하나는 훈련용으로 사용하고, 다른 하나는 <code class="language-plaintext highlighter-rouge">mean_absolute_error</code> 측정을 위한 검증용으로 사용하는 코드이다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="c1"># split data into training and validation data, for both features and target
+# The split is based on a random number generator. Supplying a numeric value to
+# the random_state argument guarantees we get the same split every time we
+# run this script.
+</span><span class="n">train_X</span><span class="p">,</span> <span class="n">val_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">val_y</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Define model
+</span><span class="n">melbourne_model</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">()</span>
+<span class="c1"># Fit model
+</span><span class="n">melbourne_model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">)</span>
+
+<span class="c1"># get predicted prices on validation data
+</span><span class="n">val_predictions</span> <span class="o">=</span> <span class="n">melbourne_model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">val_X</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">val_y</span><span class="p">,</span> <span class="n">val_predictions</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="lesson-5-underfitting-and-overfitting">Lesson 5. Underfitting and Overfitting</h2>
+<h3 id="과대적합과-과소적합">과대적합과 과소적합</h3>
+<ul>
+  <li><strong>과대적합(overfitting)</strong>: 모델이 훈련 데이터셋에만 매우 정확하게 들어맞고, 검증 데이터셋이나 다른 새로운 데이터에 대해서는 제대로 예측을 하지 못하는 현상</li>
+  <li><strong>과소적합(underfitting)</strong>: 모델이 주어진 데이터에서 중요한 특성과 규칙성을 찾아내지 못하여, 훈련 데이터셋에서도 제대로 예측을 하지 못하는 현상</li>
+</ul>
+
+<p>아래 이미지의 초록색 선이 과대적합된 모델을 나타내며, 검은색 선이 바람직한 모델을 나타낸다.
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Overfitting.svg" alt="Overfitting" /></p>
+<blockquote>
+  <p><em>이미지 출처</em></p>
+  <ul>
+    <li>저작자: 에스파냐 위키피디아 유저 <a href="https://commons.wikimedia.org/wiki/User:Ignacio_Icke">Ignacio Icke</a></li>
+    <li>라이선스: <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></li>
+  </ul>
+</blockquote>
+
+<p>우리에게 중요한 것은 새로운 데이터에서의 예측 정확도이며, 검증 데이터셋을 이용하여 새로운 데이터에서의 예측 성능을 추산한다. 과소적합과 과대적합 간의 최적점(sweet spot)을 찾는 것이 목표이다.<br />
+<img src="https://i.imgur.com/2q85n9s.png" alt="" /><br />
+이 코스에서는 계속해서 결정 트리 분류 모델을 예로 들어 설명하고 있지만, 과대적합과 과소적합은 모든 머신러닝 모델에 적용되는 개념이다.</p>
+
+<h3 id="하이퍼파라미터hyperparameter-튜닝">하이퍼파라미터(hyperparameter) 튜닝</h3>
+<p>아래의 예시는 결정 트리 모델의 <em>max_leaf_nodes</em> 인수의 값을 바꿔 보면서 모델의 성능을 비교 측정하는 코드이다.(데이터를 불러오고, 검증 데이터셋을 떼어내는 부분은 생략)</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
+
+<span class="k">def</span> <span class="nf">get_mae</span><span class="p">(</span><span class="n">max_leaf_nodes</span><span class="p">,</span> <span class="n">train_X</span><span class="p">,</span> <span class="n">val_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">val_y</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">max_leaf_nodes</span><span class="o">=</span><span class="n">max_leaf_nodes</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">)</span>
+    <span class="n">preds_val</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">val_X</span><span class="p">)</span>
+    <span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">val_y</span><span class="p">,</span> <span class="n">preds_val</span><span class="p">)</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">mae</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># compare MAE with differing values of max_leaf_nodes
+</span><span class="k">for</span> <span class="n">max_leaf_nodes</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">5000</span><span class="p">]:</span>
+    <span class="n">my_mae</span> <span class="o">=</span> <span class="n">get_mae</span><span class="p">(</span><span class="n">max_leaf_nodes</span><span class="p">,</span> <span class="n">train_X</span><span class="p">,</span> <span class="n">val_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">val_y</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Max leaf nodes: %d  </span><span class="se">\t\t</span><span class="s"> Mean Absolute Error:  %d"</span> <span class="o">%</span><span class="p">(</span><span class="n">max_leaf_nodes</span><span class="p">,</span> <span class="n">my_mae</span><span class="p">))</span>
+</code></pre></div></div>
+<p>하이퍼파라미터 튜닝을 완료하면, 마지막으로 전체 데이터로 모델을 훈련시켜 성능을 극대화한다. 더 이상 검증 데이터셋을 떼어 놓을 필요가 없기 때문이다.</p>
+
+<h2 id="lesson-6-random-forests">Lesson 6. Random Forests</h2>
+<p>서로 다른 여러 모델을 함께 사용하면 단일 모델모다 더 좋은 성능을 낼 수 있다. <strong>랜덤 포레스트(random forest)</strong>가 좋은 예시이다.</p>
+
+<p>랜덤 포레스트는 수많은 결정 트리들로 구성되어 있으며, 각 트리의 예측값의 평균을 내어 최종 예측을 한다. 많은 경우에 단일 결정 트리보다 더 나은 예측 정확도를 보이며, 매개변수들을 기본값 그대로 사용하여도 잘 작동한다.</p>
+:ET

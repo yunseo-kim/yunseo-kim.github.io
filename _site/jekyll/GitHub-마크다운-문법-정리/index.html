@@ -1,0 +1,980 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>GitHub 마크다운 문법 정리 | Yunseo47’s Insight</title>
+<meta name="description" content="GitHub Pages 활용을 위해서는 markdown 문법에 대해 알 필요가 있다. GitHub 공식 문서의 Mastering Markdown과 Basic writing and formatting syntax를 참고하여 작성하였다.">
+
+
+  <meta name="author" content="김윤서(Yunseo Kim)">
+  
+  <meta property="article:author" content="김윤서(Yunseo Kim)">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Yunseo47's Insight">
+<meta property="og:title" content="GitHub 마크다운 문법 정리">
+<meta property="og:url" content="https://yunseo47.github.io//jekyll/GitHub-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC/">
+
+
+  <meta property="og:description" content="GitHub Pages 활용을 위해서는 markdown 문법에 대해 알 필요가 있다. GitHub 공식 문서의 Mastering Markdown과 Basic writing and formatting syntax를 참고하여 작성하였다.">
+
+
+
+  <meta property="og:image" content="https://yunseo47.github.io//assets/img/electronic-square.jpg">
+
+
+
+  <meta name="twitter:site" content="@YunseoKim47">
+  <meta name="twitter:title" content="GitHub 마크다운 문법 정리">
+  <meta name="twitter:description" content="GitHub Pages 활용을 위해서는 markdown 문법에 대해 알 필요가 있다. GitHub 공식 문서의 Mastering Markdown과 Basic writing and formatting syntax를 참고하여 작성하였다.">
+  <meta name="twitter:url" content="https://yunseo47.github.io//jekyll/GitHub-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://yunseo47.github.io//assets/img/electronic-square.jpg">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2021-01-31T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://yunseo47.github.io//jekyll/GitHub-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "김윤서(Yunseo Kim)",
+      "url": "https://yunseo47.github.io//",
+      "sameAs": ["https://twitter.com/YunseoKim47","https://facebook.com/yunseo47","https://github.com/yunseo47","https://www.linkedin.com/in/yunseo47"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="AUlHZNteJbS4CdnOj-2_RSqAmRuvZGuSqxlSXrrLVhY" />
+
+
+  <meta name="msvalidate.01" content="770DA7541FB457119B57EA8B392D03BB">
+
+
+
+
+  <meta name="naver-site-verification" content="705b2244d3d659d91f84930ff048d987b3293f49">
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Yunseo47's Insight Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+    
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Yunseo47's Insight
+          <span class="site-subtitle">AI breakthrough for fusion energy</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">김윤서(Yunseo Kim)</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Fusion Energy &amp; Data Science enthusiast</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="mailto:yunseo47@protonmail.ch" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://twitter.com/YunseoKim47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+            <li><a href="https://facebook.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span class="label">Facebook</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="GitHub 마크다운 문법 정리">
+    <meta itemprop="description" content="GitHub Pages 활용을 위해서는 markdown 문법에 대해 알 필요가 있다.GitHub 공식 문서의 Mastering Markdown과 Basic writing and formatting syntax를 참고하여 작성하였다.">
+    <meta itemprop="datePublished" content="2021-01-31T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">GitHub 마크다운 문법 정리
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-01-31T00:00:00+09:00">January 31, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#1-마크다운이란">1. 마크다운이란</a></li><li><a href="#2-마크다운-문법">2. 마크다운 문법</a><ul><li><a href="#21-줄바꿈-문단-구분">2.1. 줄바꿈, 문단 구분</a></li><li><a href="#22-글머리headers">2.2. 글머리(Headers)</a></li></ul></li><li><a href="#this-is-an-h2">This is an H2</a><ul><li><a href="#this-is-an-h3">This is an H3</a><ul><li><a href="#this-is-an-h4">This is an H4</a><ul><li><a href="#this-is-an-h5">This is an H5</a><ul><li><a href="#this-is-an-h6">This is an H6</a></li></ul></li></ul></li></ul></li><li><a href="#23-강조">2.3. 강조</a></li><li><a href="#24-텍스트-인용">2.4. 텍스트 인용</a></li><li><a href="#25-코드-인용">2.5. 코드 인용</a></li><li><a href="#26-링크">2.6. 링크</a></li><li><a href="#27-비정렬-목록">2.7. 비정렬 목록</a></li><li><a href="#28-정렬-목록">2.8. 정렬 목록</a></li><li><a href="#29-중첩-목록">2.9. 중첩 목록</a></li><li><a href="#210-할-일-목록">2.10. 할 일 목록</a></li><li><a href="#211-이미지-첨부">2.11. 이미지 첨부</a></li><li><a href="#212-표-생성">2.12. 표 생성</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>GitHub Pages 활용을 위해서는 <strong>markdown</strong> 문법에 대해 알 필요가 있다.
+GitHub 공식 문서의 <a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a>과 <a href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">Basic writing and formatting syntax</a>를 참고하여 작성하였다.</p>
+
+<h2 id="1-마크다운이란">1. 마크다운이란</h2>
+<blockquote>
+  <p><strong>마크다운(markdown)</strong>은 일반 텍스트 기반의 경량 마크업 언어다. 일반 텍스트로 서식이 있는 문서를 작성하는 데 사용되며, 일반 마크업 언어에 비해 문법이 쉽고 간단한 것이 특징이다. HTML과 리치 텍스트(RTF) 등 서식 문서로 쉽게 변환되기 때문에 응용 소프트웨어와 함께 배포되는 README 파일이나 온라인 게시물 등에 많이 사용된다.</p>
+  <blockquote>
+    <p>존 그루버는 2004년에 문법 면에서 에런 스워츠와 중대한 협업을 통해 마크다운 언어를 만들었으며, 사람들이 읽기 쉽고 쓰기 쉬운 플레인 텍스트 포맷을 사용하여 쓸 수 있으면서 구조적으로 유효한 XHTML(또는 HTML)로 선택적 변환이 가능하게 하는 것이 목표이다.</p>
+  </blockquote>
+</blockquote>
+
+<p>-<a href="https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4">위키백과, 마크다운</a></p>
+
+<h2 id="2-마크다운-문법">2. 마크다운 문법</h2>
+<p>마크다운은 정해진 표준이 없기 때문에 세부 문법은 사용처마다 조금씩 다를 수 있다. 여기서 정리한 마크다운 문법은 <a href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">GitHub Flavored Markdown</a> 기준이다.</p>
+
+<h3 id="21-줄바꿈-문단-구분">2.1. 줄바꿈, 문단 구분</h3>
+<p>마크다운에서는 엔터키 한 번은 줄바꿈으로 인식하지 않는다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>첫째 문장.
+둘째 문장.
+셋째 문장.
+</code></pre></div></div>
+<p>첫째 문장.
+둘째 문장.
+셋째 문장.</p>
+
+<p>줄바꿈은 공백을 연속하여 두 칸 이상 입력하면 적용된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>첫째 문장.  
+둘째 문장.  
+셋째 문장.
+</code></pre></div></div>
+<p>첫째 문장.<br />
+둘째 문장.<br />
+셋째 문장.</p>
+
+<p>문단과 문단 사이는 빈 줄(엔터키 두 번)로 구분한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>하나의 문단.
+
+다른 문단.
+</code></pre></div></div>
+<p>하나의 문단.</p>
+
+<p>다른 문단.</p>
+
+<h3 id="22-글머리headers">2.2. 글머리(Headers)</h3>
+<p>총 6단계가 있다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This is an H1
+## This is an H2
+### This is an H3
+#### This is an H4
+##### This is an H5
+###### This is an H6
+</code></pre></div></div>
+<h1 id="this-is-an-h1">This is an H1</h1>
+<h2 id="this-is-an-h2">This is an H2</h2>
+<h3 id="this-is-an-h3">This is an H3</h3>
+<h4 id="this-is-an-h4">This is an H4</h4>
+<h5 id="this-is-an-h5">This is an H5</h5>
+<h6 id="this-is-an-h6">This is an H6</h6>
+
+<h3 id="23-강조">2.3. 강조</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*This text is italicized*
+_This is italicized too_
+
+**This is bold text**
+__This is bold text too__
+
+~~This was mistaken text~~
+
+_You **can** combine them_
+
+***All this text is important***
+</code></pre></div></div>
+<p><em>This text is italicized</em><br />
+<em>This is italicized too</em></p>
+
+<p><strong>This is bold text</strong><br />
+<strong>This is bold text too</strong></p>
+
+<p><del>This was mistaken text</del></p>
+
+<p><em>You <strong>can</strong> combine them</em></p>
+
+<p><strong><em>All this text is important</em></strong></p>
+
+<h3 id="24-텍스트-인용">2.4. 텍스트 인용</h3>
+<p>&gt;을 이용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; This is a first blockquote.
+&gt;&gt; This is a second blockquote.
+&gt;&gt;&gt; This is a third blockquote.
+</code></pre></div></div>
+<blockquote>
+  <p>This is a first blockquote.</p>
+  <blockquote>
+    <p>This is a second blockquote.</p>
+    <blockquote>
+      <p>This is a third blockquote.</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h3 id="25-코드-인용">2.5. 코드 인용</h3>
+<p>``` 또는 ~~~을 이용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
+git status
+git add
+git commit
+```
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+git add
+git commit
+</code></pre></div></div>
+
+<p>프로그래밍 언어를 지정하여 문법 강조 표시를 활성화할 수도 있다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+</code></pre></div></div>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'redcarpet'</span>
+<span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">markdown</span><span class="p">.</span><span class="nf">to_html</span>
+</code></pre></div></div>
+
+<h3 id="26-링크">2.6. 링크</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[GitHub Pages](https://pages.github.com/)
+&lt;https://pages.github.com/&gt;
+</code></pre></div></div>
+<p><a href="https://pages.github.com/">GitHub Pages</a><br />
+<a href="https://pages.github.com/">https://pages.github.com/</a></p>
+
+<p>리퍼지토리 내의 다른 파일을 가리키는 상대경로 링크도 사용할 수 있다. 사용법은 터미널에서와 동일하다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[README](../README.md)
+</code></pre></div></div>
+
+<h3 id="27-비정렬-목록">2.7. 비정렬 목록</h3>
+<p>-나 *을 이용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- George Washington
+- John Adams
+- Thomas Jefferson
+</code></pre></div></div>
+<ul>
+  <li>George Washington</li>
+  <li>John Adams</li>
+  <li>Thomas Jefferson</li>
+</ul>
+
+<h3 id="28-정렬-목록">2.8. 정렬 목록</h3>
+<p>숫자를 이용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. James Madison
+2. James Monroe
+3. John Quincy Adams
+</code></pre></div></div>
+<ol>
+  <li>James Madison</li>
+  <li>James Monroe</li>
+  <li>John Quincy Adams</li>
+</ol>
+
+<h3 id="29-중첩-목록">2.9. 중첩 목록</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. First list item
+   - First nested list item
+     - Second nested list item
+</code></pre></div></div>
+<ol>
+  <li>First list item
+    <ul>
+      <li>First nested list item
+        <ul>
+          <li>Second nested list item</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="210-할-일-목록">2.10. 할 일 목록</h3>
+<p>할 일 목록을 만드려면 각 항목 앞에 [ ]을 추가한다.
+완료된 일을 표시하려면 [x]을 이용한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
+</code></pre></div></div>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Finish my changes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Push my commits to GitHub</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Open a pull request</li>
+</ul>
+
+<h3 id="211-이미지-첨부">2.11. 이미지 첨부</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>방법: ![(선택)이미지 설명](url){(선택)추가옵션}
+![GitHub Logo](/images/logo.png)
+![GitHub Logo](/images/logo.png){: .align-center}
+![GitHub Logo](/images/logo.png){: width="50%" height="50%"}
+</code></pre></div></div>
+
+<h3 id="212-표-생성">2.12. 표 생성</h3>
+<p>|와 -을 이용해 표를 생성할 수 있다.
+표 앞에 한줄을 비워 놓아야 정상적으로 표시된다.
+적어도 3개 이상의 -을 사용해야 정상적으로 인식한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Left-aligned</th>
+      <th style="text-align: center">Center-aligned</th>
+      <th style="text-align: right">Right-aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">git status</td>
+      <td style="text-align: center">git status</td>
+      <td style="text-align: right">git status</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">git diff</td>
+      <td style="text-align: center">git diff</td>
+      <td style="text-align: right">git diff</td>
+    </tr>
+  </tbody>
+</table>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#jekyll" class="page__taxonomy-item" rel="tag">Jekyll</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#jekyll" class="page__taxonomy-item" rel="tag">Jekyll</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2021-01-31T00:00:00+09:00">January 31, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=YunseoKim47&text=GitHub+%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4+%EB%AC%B8%EB%B2%95+%EC%A0%95%EB%A6%AC%20https%3A%2F%2Fyunseo47.github.io%2F%2Fjekyll%2FGitHub-%25EB%25A7%2588%25ED%2581%25AC%25EB%258B%25A4%25EC%259A%25B4-%25EB%25AC%25B8%25EB%25B2%2595-%25EC%25A0%2595%25EB%25A6%25AC%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyunseo47.github.io%2F%2Fjekyll%2FGitHub-%25EB%25A7%2588%25ED%2581%25AC%25EB%258B%25A4%25EC%259A%25B4-%25EB%25AC%25B8%25EB%25B2%2595-%25EC%25A0%2595%25EB%25A6%25AC%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fyunseo47.github.io%2F%2Fjekyll%2FGitHub-%25EB%25A7%2588%25ED%2581%25AC%25EB%258B%25A4%25EC%259A%25B4-%25EB%25AC%25B8%25EB%25B2%2595-%25EC%25A0%2595%25EB%25A6%25AC%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">이전</a>
+    
+    
+      <a href="/data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/" class="pagination--pager" title="머신러닝 개발환경 구축하기
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/electronic.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/" rel="permalink">kaggle-Intro to Machine Learning 코스 내용 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-04-04T00:00:00+09:00">April 4, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">최근 박해선 님께서 진행하시는 머신러닝 스터디 잼에 참가하게 되었다.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/electronic.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/quantum%20computing/Qiskit-Hackathon-Korea-2021,-%EA%B7%B8-4%EC%9D%BC%EA%B0%84%EC%9D%98-%EA%B8%B0%EB%A1%9D/" rel="permalink">Qiskit Hackathon Korea 2021, 그 4일간의 기록
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-02-27T00:00:00+09:00">February 27, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">이 글의 목적
+최근 2월 16일부터 2월 19일까지 4일간 진행된 Qiskit Hackathon Korea 2021에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/img/electronic.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/" rel="permalink">머신러닝 개발환경 구축하기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2021-02-07T00:00:00+09:00">February 7, 2021</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          7 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">개요
+이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/YunseoKim47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://facebook.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/yunseo47" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 김윤서(Yunseo Kim). Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: '1RQK4YZOQ8',
+  apiKey: 'b816880a7fda54e7bade61ee4c00dc95',
+  indexName: 'yunseo47.github.io',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: '검색어를 입력하세요...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://yunseo47.github.io//jekyll/GitHub-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/jekyll/GitHub-마크다운-문법-정리"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://yunseo47-github.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
