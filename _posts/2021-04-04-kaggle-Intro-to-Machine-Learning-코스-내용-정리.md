@@ -113,7 +113,9 @@ print(melbourne_model.predict(X.head()))
 모델을 반복적으로 개선해 나가려면 모델의 성능을 측정해야 한다. 어떤 모델을 이용하여 예측을 했을 때, 맞춘 경우도 있고 틀린 경우도 있을 것이다. 이때 이 모델의 예측 성능을 확인하기 위한 지표가 필요하다. 다양한 종류의 지표가 있는데, 여기서는 **MAE(Mean Absolute Error, 평균 절대 오차)**를 사용한다.
 
 멜버른 집값 예측의 경우에, 각각의 집값에 대한 예측 오차는 다음과 같다.  
-```error=actual−predicted```  
+```
+error=actual−predicted
+```
 MAE는 각각의 예측 오차의 절대값을 취하여 이 절대 오차들의 평균을 구함으로써 계산한다. 사이킷런으로 다음과 같이 구현할 수 있다.
 ```python
 from sklearn.metrics import mean_absolute_error
