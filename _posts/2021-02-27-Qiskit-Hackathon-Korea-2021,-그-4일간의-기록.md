@@ -41,8 +41,9 @@ Quantum Computing KR 그룹 내에 계신 경북대학교 배준현 교수님께
 [주니온TV 아무거나연구소 - 어서와! 양자컴퓨팅은 처음이지?](https://youtube.com/playlist?list=PLHqxB9kMLLaMS6F5RSA973qptBlFsk5RE)
 
 ## pre-4. IBM Quantum Experience
-[IBM Quantum Experience](https://quantum-computing.ibm.com/)는 IBM Quantum에서 제공하는 클라우드 양자컴퓨팅 플랫폼이다. 현재 총 20개의 양자컴퓨터 시스템(12개는 IBM Q Network 회원 전용 프리미엄 서비스, 8개는 무료 이용 가능)과 5개의 시뮬레이터를 제공한다.
+[IBM Quantum Experience](https://quantum-computing.ibm.com/)는 IBM Quantum에서 제공하는 클라우드 양자컴퓨팅 플랫폼이다.
 ![IBM Quantum Experience](/assets/img/Qiskit-Hackathon-Korea-2021,-그-4일간의-기록/IBM_Quantum_Experience.png)
+현재 총 20개의 양자컴퓨터 시스템(12개는 IBM Q Network 회원 전용 프리미엄 서비스, 8개는 무료 이용 가능)과 5개의 시뮬레이터를 제공한다.
 ![IBM Quantum services](/assets/img/Qiskit-Hackathon-Korea-2021,-그-4일간의-기록/IBM_Quantum_services.png)
 IBM Quantum Composer을 이용하여 GUI 환경에서 양자 회로를 구성하거나, IBM Quantum Lab을 이용하여 웹 상에서 주피터 노트북으로 작업할 수 있다.
 ![IBM Quantum Composer](/assets/img/Qiskit-Hackathon-Korea-2021,-그-4일간의-기록/IBM_Quantum_Composer.png)
@@ -177,7 +178,7 @@ Qiskit Terra는 양자 회로를 기계어 혹은 그에 가까운 저수준의 
 Qiskit Aqua는 사용자들이 직접 양자 프로그래밍을 하지 않고도 이용할 수 있는 도구들을 제공한다. 화학, 인공지능, 최적화 문제, 그리고 금융과 같은 특정 분야에 적용 가능한 응용 프로그램을 제작할 수 있다. 고전적인 코드를 그에 상응하는 양자 알고리즘으로 변환하여 실행해 주는 것으로 보인다.
 
 ### 1-3-3. Qiskit Aer
-단기적으로는 양자 소프트웨어의 개발은 소형 양자컴퓨터의 에뮬레이션에 상당 부분 의존할 것이다(아직 양자컴퓨터가 널리 보급된 단계는 아니기 때문에, 실제 양자컴퓨터를 이용한 실험은 제한적이다). Qiskit Aer는 고전적인 컴퓨터를 이용한 양자컴퓨터 에뮬레이션 및 시뮬레이션을 지원한다. 현재 Qiskit Aer의 Qasm 시뮬레이터는 로컬 머신에서는 최대 30큐비트, IBM Quantum 서버에서는 최대 32큐비트까지 시뮬레이션을 실행할 수 있다. 이번 해커톤에서 우리 팀이 가장 많이 사용한 구성요소이기도 하다.
+단기적으로는 양자 소프트웨어의 개발은 소형 양자컴퓨터의 에뮬레이션에 상당 부분 의존할 것이다(아직 양자컴퓨터가 널리 보급된 단계는 아니기 때문에 실제 양자컴퓨터를 이용한 실험은 제한적이다). Qiskit Aer는 고전적인 컴퓨터를 이용한 양자컴퓨터 에뮬레이션 및 시뮬레이션을 지원한다. 현재 Qiskit Aer의 Qasm 시뮬레이터는 로컬 머신에서는 최대 30큐비트, IBM Quantum 서버에서는 최대 32큐비트까지 시뮬레이션을 실행할 수 있다. 이번 해커톤에서 우리 팀이 가장 많이 사용한 구성요소이기도 하다.
 
 ### 1-3-4. Qiskit Ignis
 큐비트는 고전적 비트보다 노이즈에 민감하다는 문제가 있다. 현 시점에서 양자컴퓨터의 오류율은 기존의 고전적 컴퓨터에 비해 매우 높으며, 양자컴퓨터에서 연산 도중 발생하는 양자 오류를 완벽히 억제하는 것은 적어도 가까운 미래에는 불가능할 것으로 보인다. 그렇기 때문에 발생한 양자 오류를 검출하고 보정하는 것은 양자컴퓨터 상용화를 위해 매우 중요한 과제이다. Qiskit Ignis는 근미래의 양자 시스템에서의 양자 오류 연구 및 개선을 위해 설계되었으며, 양자 오류를 검출하고, 회로를 개선하고, 노이즈가 존재하는 환경에서도 연산을 수행할 수 있도록 지원한다.
