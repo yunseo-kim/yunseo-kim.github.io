@@ -1,0 +1,55 @@
+I"�<h1 id="pandas">Pandas</h1>
+<p>Solve short hands-on challenges to perfect your data manipulation skills.</p>
+
+<h2 id="lesson-1-creating-reading-and-writing">Lesson 1. Creating, Reading and Writing</h2>
+<h3 id="판다스-불러오기">판다스 불러오기</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+</code></pre></div></div>
+<p>판다스에는 <strong>데이터프레임(DataFrame)</strong>과 <strong>시리즈(Series)</strong>라는 2개의 핵심적인 객체가 있다.</p>
+
+<h3 id="데이터프레임">데이터프레임</h3>
+<p>데이터프레임(DataFrame)은 표이다. 개별 <em>항목들(entries)</em>로 이루어진 행렬을 포함하는데, 이때 각 항목은 특정 <em>값(value)</em>을 가지며 하나의 <em>행</em>(<em>row</em> 또는 <em>record</em>)과 열(<em>column</em>)에 대응한다. 데이터프레임 항목들은 꼭 정수일 필요는 없다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'Bob'</span><span class="p">:</span> <span class="p">[</span><span class="s">'I liked it.'</span><span class="p">,</span> <span class="s">'It was awful.'</span><span class="p">],</span> <span class="s">'Sue'</span><span class="p">:</span> <span class="p">[</span><span class="s">'Pretty good.'</span><span class="p">,</span> <span class="s">'Bland.'</span><span class="p">]})</span>
+</code></pre></div></div>
+<p>데이터프레임의 선언은 파이썬의 딕셔너리(dictionary) 형식으로 한다. 키(key)에는 열 이름, 값(value)에는 기재할 항목들로 구성된 리스트(list)를 넣는다.</p>
+
+<p>보통 데이터프레임 선언 시 열 레이블에는 그 열의 이름이 할당되지만, 행 레이블에는 0, 1, 2…의 정수가 할당된다. 필요하다면 행 레이블을 수동으로 지정해줄 수 있다. 데이터프레임에서 행 레이블들의 리스트를 <strong>인덱스(Index)</strong>라고 하며, <code class="language-plaintext highlighter-rouge">index</code> 매개변수를 사용하여 값을 지정할 수 있다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s">'Bob'</span><span class="p">:</span> <span class="p">[</span><span class="s">'I liked it.'</span><span class="p">,</span> <span class="s">'It was awful.'</span><span class="p">],</span> 
+              <span class="s">'Sue'</span><span class="p">:</span> <span class="p">[</span><span class="s">'Pretty good.'</span><span class="p">,</span> <span class="s">'Bland.'</span><span class="p">]},</span>
+             <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">'Product A'</span><span class="p">,</span> <span class="s">'Product B'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<h3 id="시리즈">시리즈</h3>
+<p>시리즈(Series)는 데이터 값들로 이루어진 수열(sequence)이다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pd</span><span class="p">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</code></pre></div></div>
+<p>시리즈는 본질적으로 데이터프레임의 단일 열과 같다. 따라서 마찬가지로 인덱스를 지정할 수 있다. 다만 차이점은, ‘열 이름’ 대신 ‘이름’, <code class="language-plaintext highlighter-rouge">name</code>을 가진다는 것이다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pd</span><span class="p">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">'2015 Sales'</span><span class="p">,</span> <span class="s">'2016 Sales'</span><span class="p">,</span> <span class="s">'2017 Sales'</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s">'Product A'</span><span class="p">)</span>
+</code></pre></div></div>
+<p>시리즈와 데이터프레임은 밀접한 관련이 있다. 데이터프레임을 그냥 시리즈들의 묶음이라고 생각하면 이해하는 데 도움이 된다.</p>
+
+<h3 id="데이터-파일-읽어들이기">데이터 파일 읽어들이기</h3>
+<p>많은 경우에 데이터를 직접 작성하기보다는 이미 있는 데이터를 가져와서 사용한다. 데이터는 다양한 형식으로 저장되어 있을 수 있는데, 가장 기본적인 형태는 CSV 파일이다. CSV 파일의 내용물은 보통 아래와 같다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Product A,Product B,Product C,
+30,21,9,
+35,34,1,
+41,11,11
+</code></pre></div></div>
+<p>즉 CSV 파일은 각 값들을 쉼표(comma)로 구분하는 표이다. 그래서 이름이 “Comma-Separated Values”, CSV이다.</p>
+
+<p>CSV 파일 형식의 데이터를 데이터프레임으로 불러올 때는 <code class="language-plaintext highlighter-rouge">pd.read_csv()</code> 함수를 사용한다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">shape</code> 속성을 사용하여 데이터프레임의 크기를 확인할 수 있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">head()</code> 명령을 사용하여 데이터프레임의 첫 다섯 행을 확인할 수 있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">pd.read_csv()</code> 함수에는 30개가 넘는 매개변수들이 있다. 예를 들어 불러오려는 CSV 파일이 자체적으로 인덱스를 포함할 경우, <code class="language-plaintext highlighter-rouge">index_col</code> 매개변수의 값을 지정하여 판다스에서 자동으로 인덱스를 매기는 대신 해당 열을 인덱스로 사용하도록 할 수 있다.</p>
+
+<h3 id="데이터-기록하기">데이터 기록하기</h3>
+<p><code class="language-plaintext highlighter-rouge">to_csv()</code> 메서드를 사용하면 데이터프레임을 CSV 파일로 내보낼 수 있다. 다음과 같이 사용한다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="n">데이터프레임</span> <span class="n">이름</span><span class="p">).</span><span class="n">to_csv</span><span class="p">(</span><span class="s">"(CSV 파일 경로)"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="lesson-2-indexing-selecting--assigning">Lesson 2. Indexing, Selecting &amp; Assigning</h2>
+<p>판다스 데이터프레임 또는 시리즈에서 사용할 특정 값들을 선택하는 것은 거의 모든 데이터를 이용하는 작업에서 거치는 단계이다.</p>
+:ET
