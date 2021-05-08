@@ -195,3 +195,24 @@ Qiskit Aqua는 사용자들이 직접 양자 프로그래밍을 하지 않고도
 - Fully quantum machine learning: 완전 양자 머신러닝
 
 ### 1-4-2. 앞으로 나아가야 할 방향
+- 머신러닝, 특히 딥러닝 성능을 결정하는 것은 결국 방대한 행렬 연산을 병렬 처리하는 능력이다. 현재 GPU가 이러한 분야에서 매우 효율적이며, 널리 보급되어 쓰이고 있다. 따라서 큐비트를 활용하는 양자 머신러닝이 기존의 고전적 머신러닝 대비 비교우위를 가지기 위해서, 제일 먼저 뛰어넘어야 하는 경쟁 상대는 GPU이다.
+- 가까운 미래에 상용화할 가능성이 높은 형태는 Hybrid QML이다. 기존에 축적한 고전적인 비트 형식의 데이터셋을 그대로 활용할 수 있으면서, 대규모 연산이 필요한 곳에 부분적으로 양자 레이어를 적용하여 적은 자원으로도 효율적 연산이 가능하다면 향후 적극적으로 도입이 가능할 것이다.
+- Fully QML의 경우, 학습에 사용하는 데이터셋 역시 기존과는 다른, 큐비트 형식으로 부호화된 양자 정보로 주어져야 한다. 이를 위해서는 데이터의 수집 단계에서부터 양자정보 기술을 적용해야 하고 또 충분한 양의 데이터셋을 새로 확보해야 하므로, 상용화하기까지는 시간이 꽤 걸릴 것이다.
+
+# 2. 해커톤 진행 과정
+## 2-1. 팀 구성
+[**Team "Quanputing"**](https://github.com/qiskit-community/qiskit-hackathon-korea-21/issues/12)
+| name | github | role |
+|-------|--------|---------|
+|Kifumi Numata|[@kifumi](https://github.com/kifumi)|Coach, Qiskit Advocate|
+|Anna Phan|[@attp](https://github.com/attp)|Coach, Qiskit Advocate|
+|Dohun Kim|[@yh08037](https://github.com/yh08037)|Code development - model1/model2|
+|Yunseo Kim|[@Yunseo47](https://github.com/Yunseo47)|Code development - model2, Presentation|
+|Jaehoon Hahm|[@Jaehoon-zx](https://github.com/Jaehoon-zx)|Create presentation slides, Presentation|
+|DaeHeon Yoon|[@Greathoney](https://github.com/Greathoney)|Code development - model1, Create presentation slides|
+|Yoon Kwon|[@vhapfks](https://github.com/vhapfks)|Create presentation slides|
+|Eunchan Lee|[@purang2](https://github.com/purang2)|Code development - model1|
+
+## 2-2. 프로젝트 아이디어 구상
+2일차에 팀 구성이 완료되고 나서 협업을 위해 슬랙 채널을 개설하였다. 다음날인 3일차부터는 아침부터 곧바로 작업을 시작해야 하기 때문에 9시부터 슬랙 통화로 아이디어 회의를 진행하였다.  
+[Qiskit 문서 "Hybrid quantum-classical Neural Networks with PyTorch and Qiskit"](https://qiskit.org/textbook/ch-machine-learning/machine-learning-qiskit-pytorch.html)를 참고하여 PyTorch와 Qiskit을 이용한 하이브리드 양자신경망을 탐구한다는 큰 틀만 있는 상태였기에 우선 세부적인 목표와 방향을 설정해야 했다.
