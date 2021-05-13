@@ -22,4 +22,10 @@ var store = [{
         "tags": ["Machine learning"],
         "url": "https://yunseo47.github.io//data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/",
         "teaser": "https://yunseo47.github.io//assets/img/electronic.jpg"
+      },{
+        "title": "kaggle-Pandas 코스 내용 정리",
+        "excerpt":"Pandas Solve short hands-on challenges to perfect your data manipulation skills. Lesson 1. Creating, Reading and Writing 판다스 불러오기 import pandas as pd 판다스에는 데이터프레임(DataFrame)과 시리즈(Series)라는 2개의 핵심적인 객체가 있다. 데이터프레임 데이터프레임(DataFrame)은 표이다. 개별 항목들(entries)로 이루어진 행렬을 포함하는데, 이때 각 항목은 특정 값(value)을 가지며 하나의 행(row 또는 record)과 열(column)에 대응한다....","categories": ["Data science"],
+        "tags": ["Machine learning"],
+        "url": "https://yunseo47.github.io//data%20science/kaggle-Pandas-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/",
+        "teaser": "https://yunseo47.github.io//assets/img/electronic.jpg"
       }]

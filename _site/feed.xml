@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://yunseo47.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yunseo47.github.io//" rel="alternate" type="text/html" /><updated>2021-04-30T16:34:01+09:00</updated><id>https://yunseo47.github.io//feed.xml</id><title type="html">Yunseo47’s Insight</title><subtitle>Yunseo47's Fusion Energy &amp; Data Science Blog</subtitle><author><name>김윤서(Yunseo Kim)</name></author><entry><title type="html">kaggle-Intro to Machine Learning 코스 내용 정리</title><link href="https://yunseo47.github.io//data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="kaggle-Intro to Machine Learning 코스 내용 정리" /><published>2021-04-04T00:00:00+09:00</published><updated>2021-04-04T00:00:00+09:00</updated><id>https://yunseo47.github.io//data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="https://yunseo47.github.io//data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/">&lt;p&gt;최근 박해선 님께서 진행하시는 머신러닝 스터디 잼에 참가하게 되었다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://yunseo47.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yunseo47.github.io//" rel="alternate" type="text/html" /><updated>2021-05-05T12:47:51+09:00</updated><id>https://yunseo47.github.io//feed.xml</id><title type="html">Yunseo47’s Insight</title><subtitle>Yunseo47's Fusion Energy &amp; Data Science Blog</subtitle><author><name>김윤서(Yunseo Kim)</name></author><entry><title type="html">kaggle-Pandas 코스 내용 정리</title><link href="https://yunseo47.github.io//data%20science/kaggle-Pandas-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="kaggle-Pandas 코스 내용 정리" /><published>2021-04-10T00:00:00+09:00</published><updated>2021-04-10T00:00:00+09:00</updated><id>https://yunseo47.github.io//data%20science/kaggle-Pandas-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="https://yunseo47.github.io//data%20science/kaggle-Pandas-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/">&lt;h1 id=&quot;pandas&quot;&gt;Pandas&lt;/h1&gt;
+&lt;p&gt;Solve short hands-on challenges to perfect your data manipulation skills.&lt;/p&gt;
+
+&lt;h2 id=&quot;lesson-1-creating-reading-and-writing&quot;&gt;Lesson 1. Creating, Reading and Writing&lt;/h2&gt;
+&lt;h3 id=&quot;판다스-불러오기&quot;&gt;판다스 불러오기&lt;/h3&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;판다스에는 &lt;strong&gt;데이터프레임(DataFrame)&lt;/strong&gt;과 &lt;strong&gt;시리즈(Series)&lt;/strong&gt;라는 2개의 핵심적인 객체가 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;데이터프레임&quot;&gt;데이터프레임&lt;/h3&gt;
+&lt;p&gt;데이터프레임(DataFrame)은 표이다. 개별 &lt;em&gt;항목들(entries)&lt;/em&gt;로 이루어진 행렬을 포함하는데, 이때 각 항목은 특정 &lt;em&gt;값(value)&lt;/em&gt;을 가지며 하나의 &lt;em&gt;행&lt;/em&gt;(&lt;em&gt;row&lt;/em&gt; 또는 &lt;em&gt;record&lt;/em&gt;)과 열(&lt;em&gt;column&lt;/em&gt;)에 대응한다. 데이터프레임 항목들은 꼭 정수일 필요는 없다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Bob'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'I liked it.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'It was awful.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Sue'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Pretty good.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Bland.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;데이터프레임의 선언은 파이썬의 딕셔너리(dictionary) 형식으로 한다. 키(key)에는 열 이름, 값(value)에는 기재할 항목들로 구성된 리스트(list)를 넣는다.&lt;/p&gt;
+
+&lt;p&gt;보통 데이터프레임 선언 시 열 레이블에는 그 열의 이름이 할당되지만, 행 레이블에는 0, 1, 2…의 정수가 할당된다. 필요하다면 행 레이블을 수동으로 지정해줄 수 있다. 데이터프레임에서 행 레이블들의 리스트를 &lt;strong&gt;인덱스(Index)&lt;/strong&gt;라고 하며, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index&lt;/code&gt; 매개변수를 사용하여 값을 지정할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Bob'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'I liked it.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'It was awful.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; 
+              &lt;span class=&quot;s&quot;&gt;'Sue'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Pretty good.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Bland.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]},&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Product A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Product B'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;시리즈&quot;&gt;시리즈&lt;/h3&gt;
+&lt;p&gt;시리즈(Series)는 데이터 값들로 이루어진 수열(sequence)이다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;시리즈는 본질적으로 데이터프레임의 단일 열과 같다. 따라서 마찬가지로 인덱스를 지정할 수 있다. 다만 차이점은, ‘열 이름’ 대신 ‘이름’, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;name&lt;/code&gt;을 가진다는 것이다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Series&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'2015 Sales'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'2016 Sales'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'2017 Sales'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Product A'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;시리즈와 데이터프레임은 밀접한 관련이 있다. 데이터프레임을 그냥 시리즈들의 묶음이라고 생각하면 이해하는 데 도움이 된다.&lt;/p&gt;
+
+&lt;h3 id=&quot;데이터-파일-읽어들이기&quot;&gt;데이터 파일 읽어들이기&lt;/h3&gt;
+&lt;p&gt;많은 경우에 데이터를 직접 작성하기보다는 이미 있는 데이터를 가져와서 사용한다. 데이터는 다양한 형식으로 저장되어 있을 수 있는데, 가장 기본적인 형태는 CSV 파일이다. CSV 파일의 내용물은 보통 아래와 같다.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Product A,Product B,Product C,
+30,21,9,
+35,34,1,
+41,11,11
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;즉 CSV 파일은 각 값들을 쉼표(comma)로 구분하는 표이다. 그래서 이름이 “Comma-Separated Values”, CSV이다.&lt;/p&gt;
+
+&lt;p&gt;CSV 파일 형식의 데이터를 데이터프레임으로 불러올 때는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pd.read_csv()&lt;/code&gt; 함수를 사용한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shape&lt;/code&gt; 속성을 사용하여 데이터프레임의 크기를 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;head()&lt;/code&gt; 명령을 사용하여 데이터프레임의 첫 다섯 행을 확인할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pd.read_csv()&lt;/code&gt; 함수에는 30개가 넘는 매개변수들이 있다. 예를 들어 불러오려는 CSV 파일이 자체적으로 인덱스를 포함할 경우, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index_col&lt;/code&gt; 매개변수의 값을 지정하여 판다스에서 자동으로 인덱스를 매기는 대신 해당 열을 인덱스로 사용하도록 할 수 있다.&lt;/p&gt;
+
+&lt;h3 id=&quot;데이터-기록하기&quot;&gt;데이터 기록하기&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to_csv()&lt;/code&gt; 메서드를 사용하면 데이터프레임을 CSV 파일로 내보낼 수 있다. 다음과 같이 사용한다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;데이터프레임&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;이름&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;(CSV 파일 경로)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;lesson-2-indexing-selecting--assigning&quot;&gt;Lesson 2. Indexing, Selecting &amp;amp; Assigning&lt;/h2&gt;
+&lt;p&gt;판다스 데이터프레임 또는 시리즈에서 사용할 특정 값들을 선택하는 것은 거의 모든 데이터를 이용하는 작업에서 거치는 단계이다.&lt;/p&gt;</content><author><name>김윤서(Yunseo Kim)</name></author><category term="Data science" /><category term="Machine learning" /><summary type="html">Pandas Solve short hands-on challenges to perfect your data manipulation skills.</summary></entry><entry><title type="html">kaggle-Intro to Machine Learning 코스 내용 정리</title><link href="https://yunseo47.github.io//data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/" rel="alternate" type="text/html" title="kaggle-Intro to Machine Learning 코스 내용 정리" /><published>2021-04-04T00:00:00+09:00</published><updated>2021-04-04T00:00:00+09:00</updated><id>https://yunseo47.github.io//data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC</id><content type="html" xml:base="https://yunseo47.github.io//data%20science/kaggle-Intro-to-Machine-Learning-%EC%BD%94%EC%8A%A4-%EB%82%B4%EC%9A%A9-%EC%A0%95%EB%A6%AC/">&lt;p&gt;최근 박해선 님께서 진행하시는 머신러닝 스터디 잼에 참가하게 되었다.&lt;/p&gt;
 &lt;iframe src=&quot;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fhaesunrpark%2Fposts%2F1181208872309434&amp;amp;width=400&amp;amp;show_text=true&amp;amp;height=493&amp;amp;appId&quot; width=&quot;400&quot; height=&quot;493&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;true&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.kaggle.com/learn/overview&quot;&gt;Kaggle 공개 코스들&lt;/a&gt;을 이용하는 스터디 그룹 형식이고, 5개의 코스를 모두 수료하면 GDE(Google Developer Expert) 티셔츠도 받을 수 있다. &lt;del&gt;뭔가 Qiskit 해커톤을 시작으로 티셔츠 빌런이 되어가는 느낌이다. IBM에 이어 이번엔 GDE다.&lt;/del&gt;&lt;br /&gt;
@@ -100,13 +153,14 @@
 &lt;p&gt;모델을 반복적으로 개선해 나가려면 모델의 성능을 측정해야 한다. 어떤 모델을 이용하여 예측을 했을 때, 맞춘 경우도 있고 틀린 경우도 있을 것이다. 이때 이 모델의 예측 성능을 확인하기 위한 지표가 필요하다. 다양한 종류의 지표가 있는데, 여기서는 &lt;strong&gt;MAE(Mean Absolute Error, 평균 절대 오차)&lt;/strong&gt;를 사용한다.&lt;/p&gt;
 
 &lt;p&gt;멜버른 집값 예측의 경우에, 각각의 집값에 대한 예측 오차는 다음과 같다.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-error=actual−predicted```&quot;&gt;MAE는 각각의 예측 오차의 절대값을 취하여 이 절대 오차들의 평균을 구함으로써 계산한다. 사이킷런으로 다음과 같이 구현할 수 있다.
-```python
-from sklearn.metrics import mean_absolute_error
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;error=actual−predicted
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;MAE는 각각의 예측 오차의 절대값을 취하여 이 절대 오차들의 평균을 구함으로써 계산한다. 사이킷런으로 다음과 같이 구현할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.metrics&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean_absolute_error&lt;/span&gt;
 
-predicted_home_prices = melbourne_model.predict(X)
-mean_absolute_error(y, predicted_home_prices)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;n&quot;&gt;predicted_home_prices&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;melbourne_model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;mean_absolute_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;predicted_home_prices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;훈련-데이터를-검증에-사용하는-것의-문제점&quot;&gt;훈련 데이터를 검증에 사용하는 것의 문제점&lt;/h3&gt;
 &lt;p&gt;위의 코드에서는 하나의 데이터셋으로 모델 훈련과 검증을 모두 수행하였다. 그런데 이렇게 하면 안 된다. 이 코스에서는 하나의 예시를 들어 이유를 설명하고 있다.&lt;/p&gt;
@@ -189,7 +243,7 @@ mean_absolute_error(y, predicted_home_prices)
 &lt;p&gt;최근 2월 16일부터 2월 19일까지 4일간 진행된 &lt;a href=&quot;https://www.hackerearth.com/challenges/hackathon/qiskit-hackathon-korea/&quot;&gt;&lt;strong&gt;Qiskit Hackathon Korea 2021&lt;/strong&gt;&lt;/a&gt;에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 느낀 점까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 &lt;strong&gt;Qiskit Hackathon Korea 2021&lt;/strong&gt;에서 4일간 경험한 것들에 대한 기록이다.&lt;/p&gt;
 
 &lt;h1 id=&quot;팀--프로젝트-소개&quot;&gt;팀 &amp;amp; 프로젝트 소개&lt;/h1&gt;
-&lt;p&gt;글을 시작하기에 앞서 팀 소개를 먼저 해야 할 듯하다.&lt;/p&gt;
+&lt;p&gt;글을 시작하기에 앞서 프로젝트 소개를 하고자 한다.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;팀명: &lt;strong&gt;Quanputing&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;프로젝트 주제: &lt;em&gt;Exploring Hybrid quantum-classical Neural Networks with PyTorch and Qiskit&lt;/em&gt;&lt;/li&gt;
@@ -215,17 +269,26 @@ mean_absolute_error(y, predicted_home_prices)
 &lt;p&gt;작년 7월 말쯤에 &lt;a href=&quot;https://www.facebook.com/groups/QuantumComputingKR&quot;&gt;Quantum Computing KR&lt;/a&gt;이라는 페이스북 그룹에 가입하게 되었다. 나는 페이스북을 주로 그룹을 통한 정보 습득 목적으로 사용하는데, 그날도 양자컴퓨팅 관련 정보를 찾다가 이 그룹을 발견했다. 그리고 1월 말에 신소영 님께서 그룹에 Qiskit Hackathon Korea 소개글을 올려 주셔서 처음 이 대회를 알게 되었다.&lt;/p&gt;
 
 &lt;h2 id=&quot;pre-2-해커톤-등록-기대-반-걱정-반&quot;&gt;pre-2. 해커톤 등록, 기대 반 걱정 반&lt;/h2&gt;
-&lt;p&gt;처음 해커톤 소개글을 봤을 때는 좀 많이 망설였다. 사실 나는 이번 해커톤을 통해 처음 양자컴퓨팅에 입문하였기 때문에, 그 전까지는 양자컴퓨팅 관련 코딩 경험이 전무한 상태였다(사실 Qiskit이라는 게 있는 줄도 이번에 처음 알았다…). 하지만 신소영 님께서 양자컴퓨터 초보자를 위한 교육 세션이 준비되어 있다고 하셨기 때문에, 일단 쉬운 프로젝트라도 무작정 덤벼들어 보자는 마음으로 참가를 결심하였다(결과적으로 탁월한 선택이었다!). 다행히 페이스북 그룹 내 반응을 살펴보니 양자컴퓨팅 입문자가 나만은 아닌 것 같아 위안이 많이 되었고, 기대도 되기 시작했다.&lt;/p&gt;
+&lt;p&gt;처음 해커톤 소개글을 봤을 때는 좀 많이 망설였다. 사실 나는 이번 해커톤을 통해 처음 양자컴퓨팅에 입문하였기 때문에, 그 전까지는 양자컴퓨팅 관련 코딩 경험이 전무한 상태였다(사실 Qiskit이라는 게 있는 줄도 이번에 처음 알았다…). 하지만 신소영 님께서 양자컴퓨터 초보자를 위한 교육 세션이 준비되어 있다고 하셨기 때문에, 일단 쉬운 프로젝트라도 무작정 덤벼들어 보자는 마음으로 참가를 결심하였다(결과적으로 탁월한 선택이었다!). 다행히 페이스북 그룹 내 반응을 살펴보니 양자컴퓨팅 입문자가 나만은 아닌 것 같아 위안이 많이 되었다.&lt;/p&gt;
 
 &lt;h2 id=&quot;pre-3-입문자용-강의--사전-행사&quot;&gt;pre-3. 입문자용 강의 &amp;amp; 사전 행사&lt;/h2&gt;
 &lt;p&gt;Quantum Computing KR 그룹 내에 계신 경북대학교 배준현 교수님께서 정말 감사하게도 입문자용 강의 영상들을 유튜브에 올려주셨다. 해커톤 사전행사에서 제공해주신 강연 역시 유튜브 라이브 방송으로 업로드되어 있다.&lt;br /&gt;
 &lt;a href=&quot;https://youtube.com/playlist?list=PLHqxB9kMLLaMS6F5RSA973qptBlFsk5RE&quot;&gt;주니온TV 아무거나연구소 - 어서와! 양자컴퓨팅은 처음이지?&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;pre-4-ibm-quantum-experience&quot;&gt;pre-4. IBM Quantum Experience&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://quantum-computing.ibm.com/&quot;&gt;IBM Quantum Experience&lt;/a&gt;는 IBM Quantum에서 제공하는 클라우드 양자컴퓨팅 플랫폼이다.
+&lt;img src=&quot;/assets/img/Qiskit-Hackathon-Korea-2021,-그-4일간의-기록/IBM_Quantum_Experience.png&quot; alt=&quot;IBM Quantum Experience&quot; /&gt;
+현재 총 20개의 양자컴퓨터 시스템(12개는 IBM Q Network 회원 전용 프리미엄 서비스, 8개는 무료 이용 가능)과 5개의 시뮬레이터를 제공한다.
+&lt;img src=&quot;/assets/img/Qiskit-Hackathon-Korea-2021,-그-4일간의-기록/IBM_Quantum_services.png&quot; alt=&quot;IBM Quantum services&quot; /&gt;
+IBM Quantum Composer을 이용하여 GUI 환경에서 양자 회로를 구성하거나, IBM Quantum Lab을 이용하여 웹 상에서 주피터 노트북으로 작업할 수 있다.
+&lt;img src=&quot;/assets/img/Qiskit-Hackathon-Korea-2021,-그-4일간의-기록/IBM_Quantum_Composer.png&quot; alt=&quot;IBM Quantum Composer&quot; /&gt;
+&lt;img src=&quot;/assets/img/Qiskit-Hackathon-Korea-2021,-그-4일간의-기록/IBM_Quantum_Lab.png&quot; alt=&quot;IBM Quantum Lab&quot; /&gt;&lt;/p&gt;
+
 &lt;h1 id=&quot;1-12일차-오리엔테이션--특별-강연&quot;&gt;1. 1~2일차 오리엔테이션 &amp;amp; 특별 강연&lt;/h1&gt;
 &lt;p&gt;첫날과 둘째 날에는 오리엔테이션과 특별 강연들이 준비되어 있었다.&lt;/p&gt;
 
 &lt;h2 id=&quot;1-1-qiskit-설치&quot;&gt;1-1. Qiskit 설치&lt;/h2&gt;
-&lt;p&gt;신소영 님께서 zoom으로 Qiskit 설치 가이드를 제공해 주셨다. Qiskit이 워낙 활발하게 개발 중인 프레임워크이다 보니 버전업 속도도 굉장히 빠른 편이어서, 패키지 버전에 따른 의존성 문제가 많이 발생하는 편이라고 한다. 때문에 Qiskit에서는 데이터 사이언스를 위한 대부분의 파이썬 패키지들이 미리 갖춰져 있는 &lt;a href=&quot;https://www.anaconda.com/&quot;&gt;Anaconda&lt;/a&gt;를 이용하는 것을 권장하고 있다. 나는 원래는 아나콘다보다 파이썬 내에서 venv를 사용해서 가상환경을 직접 구축하는 쪽을 더 선호하는 편이지만, 공식적으로 아나콘다를 강하게 권장하는 데는 다 이유가 있을 테니 이번에는 아나콘다를 사용하여 진행하였다.&lt;/p&gt;
+&lt;p&gt;신소영 님께서 Zoom으로 Qiskit 설치 가이드를 제공해 주셨다. Qiskit이 워낙 활발하게 개발 중인 프레임워크이다 보니 버전업 속도도 굉장히 빠른 편이어서, 패키지 버전에 따른 의존성 문제가 많이 발생하는 편이라고 한다. 때문에 Qiskit에서는 데이터 사이언스를 위한 대부분의 파이썬 패키지들이 미리 갖춰져 있는 &lt;a href=&quot;https://www.anaconda.com/&quot;&gt;Anaconda&lt;/a&gt;를 이용하는 것을 권장하고 있다. 나는 원래는 아나콘다보다 파이썬 내에서 venv를 사용해서 가상환경을 직접 구축하는 쪽을 더 선호하는 편이지만, 공식적으로 아나콘다를 강하게 권장하는 데는 다 이유가 있을 테니 이번에는 아나콘다를 사용하여 진행하였다.&lt;/p&gt;
 
 &lt;p&gt;리눅스 기준으로, &lt;a href=&quot;https://docs.anaconda.com/anaconda/install/linux/&quot;&gt;Anaconda 리눅스 설치 가이드&lt;/a&gt;대로 따라하면서 아나콘다를 설치하되 도중에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Do you wish the installer to initialize Anaconda3 by running conda init?&lt;/code&gt;라고 묻는 단계에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yes&lt;/code&gt;를 입력하기만 하면 보통은 별다른 문제 없이 잘 동작한다. 아나콘다 설치 완료 후에는 터미널 창을 닫고 새로 열거나, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source ~/.bashrc&lt;/code&gt; 명령을 실행해 준다.&lt;/p&gt;
 
@@ -236,11 +299,12 @@ $ conda activate (환경 이름)
 &lt;p&gt;여기까지 끝났다면 마지막으로 Qiskit을 설치해주면 되는데, 왜인지 잘은 모르지만 신소영 님께서 그냥 터미널에서 pip를 사용해서 설치할 경우 종종 문제가 발생하곤 한다며 주피터 노트북 실행 후 노트북 셀에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;!pip install qiskit[visualization]&lt;/code&gt; 를 실행해 달라고 상당히 강조하셨다. 이것도 다 이유가 있을 테니 말씀하신 대로 주피터 노트북 내에서 설치하였다. 초보자도 따라할 수 있게끔 각 단계별로 친절하게 설명해 주셔서 다행히 별다른 어려움 없이 잘 설치할 수 있었다.&lt;/p&gt;
 
 &lt;h2 id=&quot;1-2-양자-게이트--알고리즘-강의&quot;&gt;1-2. 양자 게이트 &amp;amp; 알고리즘 강의&lt;/h2&gt;
-&lt;p&gt;IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리즘에 관한 양질의 강의를 제공해 주셨다. 오전에는 큐비트를 어떤 형태로 표현하는지와 양자 게이트에 대한 영상을 볼 수 있었다.&lt;/p&gt;
+&lt;p&gt;IBM의 강화정 박사님께서 양자 게이트와 양자컴퓨팅 알고리즘에 관한 양질의 강의를 제공해 주셨다. 오전에는 큐비트를 어떤 형태로 표현하는지와 양자 게이트에 대한 영상을 볼 수 있었다. 오후에는 양자 알고리즘에 관한 강의가 있었으나, 나는 그때 다른 일정이 있어서 아쉽게도 듣지 못했다. 강의자료를 제공해 주셔서 나중에 혼자서라도 공부해 볼 수 있는 점이 그나마 다행이다.&lt;/p&gt;
 
 &lt;h3 id=&quot;1-2-1-큐비트&quot;&gt;1-2-1. 큐비트&lt;/h3&gt;
-&lt;p&gt;영상 내용에 따르면 큐비트의 상태는 &lt;strong&gt;2차원 복소벡터공간상의 단위 벡터&lt;/strong&gt;로 표현하며, 이 큐비트 상태는 &lt;strong&gt;unitary operations&lt;/strong&gt;, 즉 &lt;strong&gt;양자 게이트(quantum gates)&lt;/strong&gt;를 통해 변화한다고 한다. 수식으로 나타내면 다음과 같다.
-\(\displaylines{
+&lt;p&gt;영상 내용에 따르면 큐비트의 상태는 &lt;strong&gt;2차원 복소벡터공간상의 단위 벡터&lt;/strong&gt;로 표현하며, 이 큐비트 상태는 &lt;strong&gt;unitary operations&lt;/strong&gt;, 즉 &lt;strong&gt;양자 게이트(quantum gates)&lt;/strong&gt;를 통해 변화한다고 한다. 수식으로 나타내면 다음과 같다.&lt;/p&gt;
+
+\[\displaylines{
 |0\rangle := \begin{bmatrix}
 1 \\ 0
 \end{bmatrix} \neq 0, \quad
@@ -252,7 +316,7 @@ $ conda activate (환경 이름)
 \alpha \\ \beta
 \end{bmatrix} \\
 (\alpha, \beta \in \mathbb{c}, \; |\alpha|^{2} + |\beta|^{2} = 1)
-}\)&lt;/p&gt;
+}\]
 
 &lt;h3 id=&quot;1-2-2-유니터리-연산unitary-operation&quot;&gt;1-2-2. 유니터리 연산(Unitary Operation)&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;유니터리 연산(Unitary Operaion)&lt;/strong&gt;이란 2차원 복소벡터공간 안에서의 실수 회전(real rotations)의 일반적인 표현(generalization)이다. 아래와 같은 특성들을 지닌다.&lt;/p&gt;
@@ -278,25 +342,86 @@ $ conda activate (환경 이름)
 }\]
 
 &lt;h3 id=&quot;1-2-3-양자-게이트&quot;&gt;1-2-3. 양자 게이트&lt;/h3&gt;
-&lt;p&gt;양자 게이트의 경우 단일 큐비트 게이트로는 &lt;strong&gt;Pauli-X 게이트&lt;/strong&gt;, &lt;strong&gt;Hadamard(H) 게이트&lt;/strong&gt;, &lt;strong&gt;Pauli-Z gate&lt;/strong&gt; 등이 있고, 2큐비트 게이트로는 &lt;strong&gt;CNOT 게이트&lt;/strong&gt;가 대표적이다(물론 이거 말고도 많다).&lt;/p&gt;
+&lt;p&gt;양자 게이트의 경우 단일 큐비트 게이트로는 &lt;strong&gt;Pauli-X 게이트&lt;/strong&gt;, &lt;strong&gt;Hadamard(H) 게이트&lt;/strong&gt;, &lt;strong&gt;Pauli-Z gate&lt;/strong&gt; 등이 있고, 2큐비트 게이트로는 &lt;strong&gt;CNOT 게이트&lt;/strong&gt;가 대표적이다(물론 이거 말고도 많다). 강의 내용과 &lt;a href=&quot;https://en.wikipedia.org/wiki/Quantum_logic_gate&quot;&gt;영문 위키피디아&lt;/a&gt;를 참고하여 간략하게 정리해 보았다.&lt;/p&gt;
 
 &lt;h4 id=&quot;pauli-x-게이트&quot;&gt;Pauli-X 게이트&lt;/h4&gt;
-&lt;p&gt;X 게이트는 고전적인 컴퓨터에서의 NOT 게이트에 해당하는 녀석이고,&lt;/p&gt;
+&lt;p&gt;X 게이트는 고전적인 컴퓨터에서의 NOT 게이트에 해당하는 녀석이다. 기본 상태 |0〉을 |1〉로, |1〉을 |0〉으로 바꾼다. 다음과 같은 Pauli X 행렬로 표현할 수 있다.&lt;/p&gt;
+
+\[X =
+\begin{bmatrix}
+0 &amp;amp; 1\\
+1 &amp;amp; 0
+\end{bmatrix}\]
 
 &lt;h4 id=&quot;hadamardh-게이트&quot;&gt;Hadamard(H) 게이트&lt;/h4&gt;
-&lt;p&gt;Hadamard(H) 게이트는 기본 상태 |0〉은 $\frac{|0\rangle + |1\rangle}{\sqrt{2}}$로, 기본 상태 |1〉은 $\frac{|0\rangle- |1\rangle}{\sqrt{2}}$로 변환하여 |0〉과 |1〉이 측정될 확률이 각각 $\frac{1}{2}$로 같은 &lt;strong&gt;중첩(superposition)&lt;/strong&gt; 상태를 만들어 주는 역할을 한다고 한다.&lt;/p&gt;
+&lt;p&gt;Hadamard(H) 게이트는 기본 상태 |0〉은 $\frac{|0\rangle + |1\rangle}{\sqrt{2}}$로, 기본 상태 |1〉은 $\frac{|0\rangle- |1\rangle}{\sqrt{2}}$로 변환하여 |0〉과 |1〉이 측정될 확률이 각각 $\frac{1}{2}$로 같은 &lt;strong&gt;중첩(superposition)&lt;/strong&gt; 상태를 만들어 주는 역할을 한다. 다음과 같은 Hadamard 행렬로 표현할 수 있다.&lt;/p&gt;
+
+\[H = 
+\frac{1}{\sqrt{2}}
+\begin{bmatrix}
+1 &amp;amp; 1\\ 
+1 &amp;amp; -1
+\end{bmatrix}\]
 
 &lt;h4 id=&quot;pauli-z-게이트&quot;&gt;Pauli-Z 게이트&lt;/h4&gt;
-&lt;p&gt;Z 게이트는 단일 큐비트의 위상을 바꾸는 역할을 한다고 하는데 이 부분은 제대로 이해하지 못해서 아무래도 공부가 더 필요할 듯하다.&lt;/p&gt;
+&lt;p&gt;Z 게이트는 단일 큐비트의 위상을 바꾸는 역할을 한다고 하는데 큐비트의 위상에 관한 부분은 제대로 이해하지 못해서 아무래도 공부가 더 필요할 듯하다. 기본 상태 |0〉은 그대로 놔두고, 기본 상태 |1〉은 -|1〉로 바꾼다고 한다. 역시 다음과 같은 Pauli Z 행렬로 표현할 수 있다.&lt;/p&gt;
+
+\[Z = 
+\begin{bmatrix}
+1 &amp;amp; 0\\
+0 &amp;amp; -1
+\end{bmatrix}\]
 
 &lt;h4 id=&quot;cnot-게이트&quot;&gt;CNOT 게이트&lt;/h4&gt;
-&lt;p&gt;CNOT 게이트는 2개의 큐비트상에서 동작하며, 큐비트의 입력 값이 |0〉 또는 |1〉로 한정될 경우 고전적인 컴퓨터에서의 XOR 게이트와 같은 역할을 한다.&lt;/p&gt;
+&lt;p&gt;CNOT 게이트는 2개의 큐비트상에서 동작하며, 큐비트의 입력 값이 |0〉 또는 |1〉로 한정될 경우 고전적인 컴퓨터에서의 XOR 게이트와 같은 역할을 한다. 기본 상태 |00〉, |01〉, |10〉, |11〉에 대하여 다음과 같은 행렬로 표현할 수 있다.&lt;/p&gt;
+
+\[CNOT = CX = 
+\begin{bmatrix}
+1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0\\ 
+0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0\\ 
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1\\ 
+0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0
+\end{bmatrix}\]
 
 &lt;h3 id=&quot;1-2-4-측정&quot;&gt;1-2-4. 측정&lt;/h3&gt;
 &lt;p&gt;큐비트의 상태를 직접적으로 확인하는 것은 불가능하여 &lt;strong&gt;측정(measurement)&lt;/strong&gt;을 통해 큐비트로 부호화된 정보를 읽어와야 하며, 이때 큐비트는 양자역학에 따라 확률적으로 행동하기 때문에 측정을 여러 번 실행하여 0과 1 각각의 값을 측정할 통계적 확률을 구한다고 한다. Qiskit에서는 이 측정 실행 횟수를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shots&lt;/code&gt;라는 변수로 지정해 줄 수 있고, 기본값은 1024이다.&lt;/p&gt;
 
 &lt;h3 id=&quot;1-2-5-위상&quot;&gt;1-2-5. 위상&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;위상(Phase)&lt;/strong&gt;의 경우, $|\psi〉= \alpha|0〉+\beta|1〉=\begin{bmatrix} \alpha\ \beta \end{bmatrix} = |\alpha|e^{i\theta_{0}}|0〉+ |\beta|e^{i\theta_{1}}|1〉$를 $|\psi〉= e^{i\theta_{0}}(|\alpha||0〉+ |\beta|e^{i\phi}), \phi = \theta_{1}-\theta_{0}$ 꼴로 정리했을 때 $e^{i\theta_{0}}$이 &lt;strong&gt;Global Phase&lt;/strong&gt;,  $e^{i\phi}$이 &lt;strong&gt;Relative Phase&lt;/strong&gt;에 해당하는 부분이라고 한다. Global Phase는 측정을 통해 감지할 수 없지만 Relative Phase는 감지해낼 수 있다. 아까 Z 게이트도 그렇고 위상에 관한 부분은 내가 제대로 이해를 못 해서 앞으로 더 공부가 필요한 부분이다.&lt;/p&gt;</content><author><name>김윤서(Yunseo Kim)</name></author><category term="Quantum Computing" /><category term="Machine learning" /><category term="Deep learning" /><category term="Qiskit" /><summary type="html">이 글의 목적 최근 2월 16일부터 2월 19일까지 4일간 진행된 Qiskit Hackathon Korea 2021에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 느낀 점까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 Qiskit Hackathon Korea 2021에서 4일간 경험한 것들에 대한 기록이다.</summary></entry><entry><title type="html">머신러닝 개발환경 구축하기</title><link href="https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/" rel="alternate" type="text/html" title="머신러닝 개발환경 구축하기" /><published>2021-02-07T00:00:00+09:00</published><updated>2021-02-07T00:00:00+09:00</updated><id>https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0</id><content type="html" xml:base="https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/">&lt;h2 id=&quot;개요&quot;&gt;개요&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;위상(Phase)&lt;/strong&gt;의 경우, $|\psi〉= \alpha|0〉+\beta|1〉=\begin{bmatrix} \alpha\ \beta \end{bmatrix} = |\alpha|e^{i\theta_{0}}|0〉+ |\beta|e^{i\theta_{1}}|1〉$를 $|\psi〉= e^{i\theta_{0}}(|\alpha||0〉+ |\beta|e^{i\phi}), \phi = \theta_{1}-\theta_{0}$ 꼴로 정리했을 때 $e^{i\theta_{0}}$이 &lt;strong&gt;Global Phase&lt;/strong&gt;,  $e^{i\phi}$이 &lt;strong&gt;Relative Phase&lt;/strong&gt;에 해당하는 부분이라고 한다. Global Phase는 측정을 통해 감지할 수 없지만 Relative Phase는 감지해낼 수 있다. 아까 Z 게이트도 그렇고 위상에 관한 부분은 내가 제대로 이해를 못 해서 앞으로 더 공부가 필요한 부분이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-3-qiskit-프레임워크의-구성요소별-기능&quot;&gt;1-3. Qiskit 프레임워크의 구성요소별 기능&lt;/h2&gt;
+&lt;p&gt;Qiskit 프레임워크는 크게 4개의 구성요소로 이루어져 있다. 각각 4원소설의 흙, 물, 공기, 불에서 이름을 따 왔다. &lt;del&gt;이름이 제법 멋있다.&lt;/del&gt;
+&lt;img src=&quot;/assets/img/Qiskit-Hackathon-Korea-2021,-그-4일간의-기록/Qiskit's_elements.jpeg&quot; alt=&quot;Qiskit's elements&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;*이미지 출처: &lt;a href=&quot;https://medium.com/qiskit/qiskit-and-its-fundamental-elements-bcd7ead80492&quot;&gt;Qiskit Medium 블로그&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;1-3-1-qiskit-terra&quot;&gt;1-3-1. Qiskit Terra&lt;/h3&gt;
+&lt;p&gt;Qiskit Terra는 양자 회로를 기계어 혹은 그에 가까운 저수준의 코드로 생성할 수 있게 지원한다. 양자 프로세스를 게이트 단위로 설계하고 원격으로 양자컴퓨터에서 시뮬레이션하도록 지원한다. Qiskit Terra를 이용한 모의실험들이 연구논문으로도 많이 발표된다고 한다.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-3-2-qiskit-aqua&quot;&gt;1-3-2. Qiskit Aqua&lt;/h3&gt;
+&lt;p&gt;Qiskit Aqua는 사용자들이 직접 양자 프로그래밍을 하지 않고도 이용할 수 있는 도구들을 제공한다. 화학, 인공지능, 최적화 문제, 그리고 금융과 같은 특정 분야에 적용 가능한 응용 프로그램을 제작할 수 있다. 고전적인 코드를 그에 상응하는 양자 알고리즘으로 변환하여 실행해 주는 것으로 보인다.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-3-3-qiskit-aer&quot;&gt;1-3-3. Qiskit Aer&lt;/h3&gt;
+&lt;p&gt;단기적으로는 양자 소프트웨어의 개발은 소형 양자컴퓨터의 에뮬레이션에 상당 부분 의존할 것이다(아직 양자컴퓨터가 널리 보급된 단계는 아니기 때문에 실제 양자컴퓨터를 이용한 실험은 제한적이다). Qiskit Aer는 고전적인 컴퓨터를 이용한 양자컴퓨터 에뮬레이션 및 시뮬레이션을 지원한다. 현재 Qiskit Aer의 Qasm 시뮬레이터는 로컬 머신에서는 최대 30큐비트, IBM Quantum 서버에서는 최대 32큐비트까지 시뮬레이션을 실행할 수 있다. 이번 해커톤에서 우리 팀이 가장 많이 사용한 구성요소이기도 하다.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-3-4-qiskit-ignis&quot;&gt;1-3-4. Qiskit Ignis&lt;/h3&gt;
+&lt;p&gt;큐비트는 고전적 비트보다 노이즈에 민감하다는 문제가 있다. 현 시점에서 양자컴퓨터의 오류율은 기존의 고전적 컴퓨터에 비해 매우 높으며, 양자컴퓨터에서 연산 도중 발생하는 양자 오류를 완벽히 억제하는 것은 적어도 가까운 미래에는 불가능할 것으로 보인다. 그렇기 때문에 발생한 양자 오류를 검출하고 보정하는 것은 양자컴퓨터 상용화를 위해 매우 중요한 과제이다. Qiskit Ignis는 근미래의 양자 시스템에서의 양자 오류 연구 및 개선을 위해 설계되었으며, 양자 오류를 검출하고, 회로를 개선하고, 노이즈가 존재하는 환경에서도 연산을 수행할 수 있도록 지원한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-4-quantum-machine-learning-강연&quot;&gt;1-4. “Quantum Machine Learning” 강연&lt;/h2&gt;
+&lt;p&gt;둘째 날 오전에는 IBM의 Paul Nation 님의 “Introduction to Quantum Computing”, KAIST 이준구 교수님의 “Quantum Machine Learning”, IBM의 백한희 님의 “Introduction to Superconducting Qubits”, 그리고 IBM Zlatko Minev 님과 Thomas McConkey 님의 “Qiskit Metal Intro &amp;amp; Demonstration” 강연이 있었다.&lt;/p&gt;
+
+&lt;p&gt;“Introduction to Superconducting Qubits”와 “Qiskit Metal Intro &amp;amp; Demonstration” 강연은 실제 초전도 큐비트를 물리적으로 구현하는 방법에 관한 강연 같았는데, 상당히 전문적이고 깊이 있는 내용이라 현재 내 수준으로는 이해하기가 어려웠다. 다행히 이준구 교수님이 진행하신 “Quantum Machine Learning” 강연은 나 역시도 내용을 이해할 수 있었기에 간략하게 정리해 보고자 한다(물론 내용 일부는 내가 잘못 이해했을 수도 있다).&lt;/p&gt;
+
+&lt;h3 id=&quot;1-4-1-qmlquantum-machine-learning-양자-머신러닝의-유형&quot;&gt;1-4-1. QML(Quantum Machine Learning, 양자 머신러닝)의 유형&lt;/h3&gt;
+&lt;p&gt;양자컴퓨팅이 적용된 범위에 따라 다음의 3가지로 분류할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Classical machine learning: 고전적인 머신러닝&lt;/li&gt;
+  &lt;li&gt;Hybrid quantum machine learning: 고전적인 레이어 + 양자 레이어 혼합 모델&lt;/li&gt;
+  &lt;li&gt;Fully quantum machine learning: 완전 양자 머신러닝&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;1-4-2-앞으로-나아가야-할-방향&quot;&gt;1-4-2. 앞으로 나아가야 할 방향&lt;/h3&gt;</content><author><name>김윤서(Yunseo Kim)</name></author><category term="Quantum Computing" /><category term="Machine learning" /><category term="Deep learning" /><category term="Qiskit" /><summary type="html">이 글의 목적 최근 2월 16일부터 2월 19일까지 4일간 진행된 Qiskit Hackathon Korea 2021에 “Qiskit과 PyTorch를 이용한 양자 하이브리드 신경망 구현”이라는 주제로 참여할 기회가 있었다. 시간이 오래 지나면 이번 해커톤에 대한 기억이 희미해질 것 같아, 좀 두서없는 글이라도 참가 동기부터 4일간의 활동, 그리고 해커톤이 끝난 후에 얻은 교훈과 느낀 점까지 가능한 많은 세부사항을 기록해 두기로 결심하였다. 이 글은 Qiskit Hackathon Korea 2021에서 4일간 경험한 것들에 대한 기록이다.</summary></entry><entry><title type="html">머신러닝 개발환경 구축하기</title><link href="https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/" rel="alternate" type="text/html" title="머신러닝 개발환경 구축하기" /><published>2021-02-07T00:00:00+09:00</published><updated>2021-02-07T00:00:00+09:00</updated><id>https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0</id><content type="html" xml:base="https://yunseo47.github.io//data%20science/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0/">&lt;h2 id=&quot;개요&quot;&gt;개요&lt;/h2&gt;
 &lt;p&gt;이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.&lt;/p&gt;
 
 &lt;ul&gt;
