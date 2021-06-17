@@ -8,10 +8,7 @@ toc: true
 toc_sticky: true
 ---
 
-최근 박해선 님께서 진행하시는 머신러닝 스터디 잼에 참가하게 되었다. 
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fhaesunrpark%2Fposts%2F1181208872309434&width=400&show_text=true&height=493&appId" width="400" height="493" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-
-[Kaggle 공개 코스들](https://www.kaggle.com/learn/overview)을 이용하는 스터디 그룹 형식이고, 5개의 코스를 모두 수료하면 GDE(Google Developer Expert) 티셔츠도 받을 수 있다. ~~뭔가 Qiskit 해커톤을 시작으로 티셔츠 빌런이 되어가는 느낌이다. IBM에 이어 이번엔 GDE다.~~  
+[Kaggle 공개 코스들](https://www.kaggle.com/learn/overview)을 공부하기로 하였다.
 각 코스를 수료할 때마다 해당 코스의 내용을 간단히 정리할 계획이다. 첫 번째 글은 **Intro to Machine Learning** 코스의 요약이다.
 
 # Intro to Machine Learning
