@@ -17,3 +17,5 @@ group :jekyll_plugins do
 gem "bundler"
 gem "rake"
 end
+
+gem "webrick", "~> 1.7"
