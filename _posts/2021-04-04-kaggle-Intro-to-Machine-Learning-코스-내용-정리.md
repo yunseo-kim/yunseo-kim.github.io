@@ -1,9 +1,9 @@
 ---
 title: "kaggle-Intro to Machine Learning 코스 내용 정리"
 categories:
-  - Data science
+  - Data Science
 tags:
-  - Machine learning
+  - Machine Learning
 toc: true
 toc_sticky: true
 ---

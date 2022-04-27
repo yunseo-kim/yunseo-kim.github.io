@@ -1,6 +1,6 @@
 ---
 title: "변수분리법(Separation of variables)"
-categories: [Mathematics, Differential equation]
+categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 ---
