@@ -1,14 +1,12 @@
 ---
-title: "kaggle-Intro to Machine Learning 코스 내용 정리"
-categories:
-  - Data Science
-tags:
-  - Machine Learning
+title: "Kaggle-Intro to Machine Learning 코스 내용 정리"
+categories: [Data Science, Machine Learning]
+tags: [Kaggle Courses, Pandas, scikit-learn]
 toc: true
 toc_sticky: true
 ---
 
-[Kaggle 공개 코스들](https://www.kaggle.com/learn/overview)을 공부하기로 하였다.
+[Kaggle 공개 코스들](https://www.kaggle.com/learn/overview)을 공부하기로 했다.
 각 코스를 수료할 때마다 해당 코스의 내용을 간단히 정리할 계획이다. 첫 번째 글은 **Intro to Machine Learning** 코스의 요약이다.
 
 # Intro to Machine Learning
@@ -95,7 +93,7 @@ melbourne_model = DecisionTreeRegressor(random_state=1)
 melbourne_model.fit(X, y)
 ```
 
-많은 머신러닝 모델들은 훈련 과정에서 어느 정도 무작위성을 지니고 있다. ```random_state```값을 지정함으로써 매 실행마다 같은 결과를 얻도록 할 수 있으며, 특별한 이유가 없다면 지정하는 것이 좋은 습관이다. 어떤 값을 사용하든 상관없다. ~~내 아이디가 yunseo**47**이기 때문에, 개인적으로 나는 47을 많이 사용한다.~~
+많은 머신러닝 모델들은 훈련 과정에서 어느 정도 무작위성을 지니고 있다. ```random_state```값을 지정함으로써 매 실행마다 같은 결과를 얻도록 할 수 있으며, 특별한 이유가 없다면 지정하는 것이 좋은 습관이다. 어떤 값을 사용하든 상관없다.
 
 모델 훈련을 완료하면 다음과 같이 예측을 수행할 수 있다.
 ```python

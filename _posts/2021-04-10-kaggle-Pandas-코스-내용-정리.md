@@ -1,9 +1,7 @@
 ---
-title: "kaggle-Pandas 코스 내용 정리"
-categories:
-  - Data Science
-tags:
-  - Machine Learning
+title: "Kaggle-Pandas 코스 내용 정리"
+categories: [Data Science, Machine Learning]
+tags: [Kaggle Courses, Pandas]
 toc: true
 toc_sticky: true
 ---
