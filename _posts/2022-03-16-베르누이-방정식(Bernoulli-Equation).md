@@ -7,7 +7,7 @@ math: true
 
 ## 베르누이 방정식(Bernoulli Equation)
 
-$$ y'+p(x)y=g(x)y^a\quad \text{(a는 임의의 실수)}  \tag{1} $$
+$$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{는 임의의 실수)}  \tag{1} $$
 
 베르누이 방정식 (1)은 $a=0$ 또는 $a=1$이면 선형이고, 그 밖의 경우에는 비선형이다. 그러나 아래의 과정을 거쳐 선형으로 변환할 수 있다.
 
