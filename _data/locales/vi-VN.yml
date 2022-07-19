@@ -31,13 +31,13 @@ copyright:
   # Shown at the bottom of the post
   license:
     template: Bài viết này được cấp phép bởi tác giả theo giấy phép :LICENSE_NAME.
-    name: CC BY 4.0
-    link: https://creativecommons.org/licenses/by/4.0/
+    name: CC BY-NC 4.0
+    link: https://creativecommons.org/licenses/by-nc/4.0/
 
   # Displayed in the footer
   brief: Một số quyền được bảo lưu.
   verbose: >-
-    Trừ khi có ghi chú khác, các bài viết đăng trên trang này được cấp phép bởi tác giả theo giấy phép Creative Commons Attribution 4.0 International (CC BY 4.0).
+    Trừ khi có ghi chú khác, các bài viết đăng trên trang này được cấp phép bởi tác giả theo giấy phép Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0).
 meta: Trang web này được tạo bởi :PLATFORM với chủ đề :THEME.
 
 not_found:

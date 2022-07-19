@@ -31,14 +31,14 @@ copyright:
   # Shown at the bottom of the post
   license:
     template: Esta entrada está licenciada bajo :LICENSE_NAME por el autor.
-    name: CC BY 4.0
-    link: https://creativecommons.org/licenses/by/4.0/
+    name: CC BY-NC 4.0
+    link: https://creativecommons.org/licenses/by-nc/4.0/
 
   # Displayed in the footer
   brief: Algunos derechos reservados.
   verbose: >-
     Salvo que se indique explícitamente, las entradas de este blog están licenciadas
-    bajo la Creative Commons Attribution 4.0 International (CC BY 4.0) License por el autor.
+    bajo la Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License por el autor.
 meta: Hecho con :PLATFORM usando el tema :THEME.
 
 not_found:

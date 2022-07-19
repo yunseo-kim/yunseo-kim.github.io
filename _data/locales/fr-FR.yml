@@ -31,14 +31,14 @@ copyright:
   # Shown at the bottom of the post
   license:
     template: Cet article est sous licence :LICENSE_NAME par l'auteur.
-    name: CC BY 4.0
-    link: https://creativecommons.org/licenses/by/4.0/
+    name: CC BY-NC 4.0
+    link: https://creativecommons.org/licenses/by-nc/4.0/
 
   # Displayed in the footer
   brief: Certains droits réservés.
   verbose: >-
     Sauf mention contraire, les articles de ce site sont publiés sous licence
-    sous la licence Creative Commons Attribution 4.0 International (CC BY 4.0) par l'auteur.
+    sous la licence Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) par l'auteur.
 meta: Propulsé par :PLATFORM avec le thème :THEME
 
 not_found:
