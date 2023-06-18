@@ -2,11 +2,11 @@
 
 source "https://rubygems.org"
 
-gem "jekyll-theme-chirpy", "~> 5.2", ">= 5.2.1"
+gem "jekyll-theme-chirpy"
 
 group :test do
-  gem "html-proofer", "~> 3.18"
-  gem "nokogiri", ">=1.13.6"
+  gem "html-proofer"
+  gem "nokogiri"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -20,4 +20,4 @@ end
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # Jekyll <= 4.2.0 compatibility with Ruby 3.0
-gem "webrick", "~> 1.7"
+gem "webrick"
