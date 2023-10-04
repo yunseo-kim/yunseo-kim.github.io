@@ -3,18 +3,18 @@
 
 platforms:
   - type: Twitter
-    icon: "fab fa-twitter"
-    link: "https://twitter.com/intent/tweet?text=TITLE&url=URL"
+    icon: "fa-brands fa-square-x-twitter"
+    link: "https://twitter.com/intent/tweet?text=TITLE&url=URL&via=yunse0_kim"
   - type: Facebook
-    icon: "fab fa-facebook-square"
+    icon: "fa-brands fa-facebook-square"
     link: "https://www.facebook.com/sharer/sharer.php?title=TITLE&u=URL"
   - type: Telegram
-    icon: "fab fa-telegram"
+    icon: "fa-brands fa-telegram"
     link: "https://t.me/share/url?url=URL&text=TITLE"
 
   # Uncomment below if you need to.
   - type: Linkedin
-    icon: "fab fa-linkedin"
+    icon: "fa-brands fa-linkedin"
     link: "https://www.linkedin.com/sharing/share-offsite/?url=URL"
   #
   # - type: Weibo

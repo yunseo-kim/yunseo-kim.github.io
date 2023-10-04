@@ -1,18 +1,17 @@
 #  The contact options.
 
--
-  type: github
-  icon: 'fab fa-github'
--
-  type: twitter
-  icon: 'fab fa-twitter'
--
-  type: email
-  icon: 'fas fa-envelope'
+- type: github
+  icon: "fa-brands fa-github"
+- type: twitter
+  icon: "fa-brands fa-x-twitter"
+- type: linkedin
+  icon: "fa-brands fa-linkedin"  # icons powered by <https://fontawesome.com/>
+  url:  'https://www.linkedin.com/in/yunseo-kim'   # Fill with your Linkedin homepage
+- type: email
+  icon: "fa-solid fa-envelope"
   noblank: true            # open link in current tab
--
-  type: rss
-  icon: 'fas fa-rss'
+- type: rss
+  icon: "fa-solid fa-rss"
   noblank: true
 
 # Uncomment and complete the url below to enable more contact options
@@ -20,10 +19,6 @@
 # - type: mastodon
 #   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
 #   url:  ''                  # Fill with your mastodon account page, rel="me" will be applied for verification
-# 
-# - type: linkedin
-#   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
-#   url:  ''                  # Fill with your Linkedin homepage
 # 
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'

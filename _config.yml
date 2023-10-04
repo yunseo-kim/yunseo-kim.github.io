@@ -12,21 +12,21 @@ baseurl: ""
 # otherwise, the layout language will use the default value of 'en'.
 lang: ko-KR
 
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Asia/Seoul
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Yunseo47's Insight              # the main title
+title: Yunseo Kim's Insight            # the main title
 
-tagline: Fusion into the Future      # it will display as the sub-title
+tagline: Mathematics, Physics, and DS. # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A personal blog that organizes what 김윤서(Yunseo Kim) have studied. Mainly covers mathematics, engineering physics(especially nuclear engineering/fusion energy), and data science.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://yunseo47.github.io"
+url: "https://yunseo-kim.github.io"
 
 github:
   username: yunseo-kim                    # change to your github username
@@ -37,7 +37,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: 김윤서(Yunseo Kim)
+  name: Yunseo Kim
   email: contact@yunseo.me         # change to your email address
   links:
     # The first element serves as the copyright owner's link
@@ -47,6 +47,7 @@ social:
     - https://www.facebook.com/yunse0.kim
     - https://www.linkedin.com/in/yunseo-kim
     - https://www.kaggle.com/yunseo47
+    - https://www.threads.net/@yxnseo.k
 
 google_site_verification: AUlHZNteJbS4CdnOj-2_RSqAmRuvZGuSqxlSXrrLVhY  # fill in to your verification string
 
@@ -56,9 +57,6 @@ google_site_verification: AUlHZNteJbS4CdnOj-2_RSqAmRuvZGuSqxlSXrrLVhY  # fill in
 google_analytics:
   id: 'G-FBSWTJ27CE'  # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
-  pv:
-    proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
-    cache_path:       # the local PV cache data, friendly to visitors from GFW region
 
 # Prefer color scheme setting.
 #
@@ -182,12 +180,12 @@ compress_html:
 exclude:
   - "*.gem"
   - "*.gemspec"
+  - docs
   - tools
   - README.md
   - CHANGELOG.md
   - LICENSE
   - rollup.config.js
-  - node_modules
   - package*.json
 
 jekyll-archives:
