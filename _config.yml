@@ -23,7 +23,7 @@ title: Yunseo Kim's Insights           # the main title
 tagline: Mathematics, Physics, and DS. # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A personal blog that organizes what 김윤서(Yunseo Kim) have studied. Mainly covers mathematics, engineering physics(especially nuclear engineering/fusion energy), and data science.
+  Yunseo Kim's personal blog, which mainly covers mathematics, physics, and DS.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://yunseo-kim.github.io"
