@@ -1,7 +1,7 @@
 ---
 title: "모델링(Modeling) 기본 개념"
 description: >-
-	수학적 모델링과 상미분방정식, 편미분방정식, 초기값 문제의 개념을 알아본다. 
+  수학적 모델링과 상미분방정식, 편미분방정식, 초기값 문제의 개념을 알아본다. 
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true

@@ -1,7 +1,7 @@
 ---
 title: "1계 선형상미분방정식의 풀이"
 description: >-
-	1계 선형상미분방정식의 풀이법을 알아보자.
+  1계 선형상미분방정식의 풀이법을 알아보자.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true

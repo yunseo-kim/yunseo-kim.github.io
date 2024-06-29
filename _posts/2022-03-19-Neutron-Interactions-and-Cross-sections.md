@@ -1,7 +1,7 @@
 ---
 title: "중성자 상호작용과 반응단면적"
 description: >-
-	중성자는 전기적으로 중성이므로 전기적 영향을 받지 않고 원자의 전자구름을 통과해 원자핵과 직접 반응할 수 있다. 중성자 상호작용의 종류와 원자핵의 반응단면적 개념을 알아본다.
+  중성자는 전기적으로 중성이므로 전기적 영향을 받지 않고 원자의 전자구름을 통과해 원자핵과 직접 반응할 수 있다. 중성자 상호작용의 종류와 원자핵의 반응단면적 개념을 알아본다.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true

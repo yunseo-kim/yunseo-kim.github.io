@@ -1,7 +1,7 @@
 ---
 title: "Kaggle-Intro to Machine Learning 코스 내용 정리"
 description: >-
-    Kaggle 공개 코스 중 'Intro to Machine Learning'의 내용을 요약하였다.
+  Kaggle 공개 코스 중 'Intro to Machine Learning'의 내용을 요약하였다.
 categories: [Data Science, Machine Learning]
 tags: [Kaggle Courses, Pandas, scikit-learn]
 toc: true

@@ -1,7 +1,7 @@
 ---
 title: "베르누이 방정식(Bernoulli Equation)"
 description: >-
-	베르누이 방정식과, 베르누이 방정식의 특수한 형태인 로지스틱 방정식의 풀이법을 알아본다.
+  베르누이 방정식과, 베르누이 방정식의 특수한 형태인 로지스틱 방정식의 풀이법을 알아본다.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true

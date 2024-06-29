@@ -1,7 +1,7 @@
 ---
 title: "완전미분방정식(Exact Differential Equation)과 적분인자"
 description: >-
-	완전미분방정식의 판별법과 풀이법, 그리고 적분인자에 대해 알아본다.
+  완전미분방정식의 판별법과 풀이법, 그리고 적분인자에 대해 알아본다.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
