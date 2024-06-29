@@ -83,7 +83,7 @@ $$ \frac {dy}{dt} = -ky$$
 $$ \frac {dy}{dt} = -ky, \qquad y(0)=0.5 $$
 
 ### 2. 수학적 풀이
-앞서 세운 상미분방정식의 일반해는 다음과 같다([변수분리법](/posts/separation-of-variables/#모델링-예제-방사성-탄소-연대측정법-radiocarbon-dating) 참고).
+앞서 세운 상미분방정식의 일반해는 다음과 같다([변수분리법](/posts/Separation-of-Variables/#모델링-예제-방사성-탄소-연대측정법radiocarbon-dating) 참고).
 
 $$ y(t)=ce^{-kt} $$
 

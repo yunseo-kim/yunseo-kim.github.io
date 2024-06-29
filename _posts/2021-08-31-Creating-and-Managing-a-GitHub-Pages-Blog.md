@@ -148,7 +148,7 @@ tags: [TAG]     # TAG names should always be lowercase
 
 ## 5. 업그레이드
 
-[3-2](/posts/creating-and-managing-a-GitHub-Pages-blog/#3-2-github-리포지터리-생성)에서 1번 방법을 채택했다고 가정하고 서술한다. 2번 방법을 채택했다면 상술했듯 최신 업스트림 태그를 직접 merge해야 한다.
+[3-2](/posts/Creating-and-Managing-a-GitHub-Pages-Blog/#3-2-github-리포지터리-생성)에서 1번 방법을 채택했다고 가정하고 서술한다. 2번 방법을 채택했다면 상술했듯 최신 업스트림 태그를 직접 merge해야 한다.
 
 1. `Gemfile`{: .filepath}을 편집해서 "jekyll-theme-chirpy" gem의 버전을 새로 지정한다.
 2. 메이저 업그레이드의 경우, "jekyll-theme-chirpy" gem에 포함되지 않은 핵심 파일들과 설정 옵션도 변경되었을 수 있다. 이때는 아래의 GitHub API로 변경사항을 확인한 후 직접 반영해 주어야 한다.

@@ -23,7 +23,7 @@ $$ y'+p(x)y=r(x) \tag{1} $$
 
 $$ y'+p(x)y=0 \tag{2}$$
 
-이고, 이를 **제차(homogeneous)** 라 한다. 이 경우 [변수분리법](/posts/separation-of-variables)을 사용할 수 있다.
+이고, 이를 **제차(homogeneous)** 라 한다. 이 경우 [변수분리법](/posts/Separation-of-Variables/)을 사용할 수 있다.
 
 $$ \frac{dy}{y} = -p(x)dx $$
 
@@ -34,7 +34,7 @@ $$ y(x) = ce^{-\int p(x)dx} \tag{3}$$
 $c=0$일 경우 **자명한 해(trivial solution)** $y(x)=0$을 얻는다.
 
 ## 비제차 선형상미분방정식
-구간 $J$에서 $r(x)\not\equiv 0$인 경우 **비제차(nonhomogeneous)** 라고 한다. 비제차 선형상미분방정식 (1)은 $x$에만 의존하는 적분인자를 가짐이 알려져 있다. 이 적분인자 $F(x)$는 [적분인자를 구하는 방법](/posts/exact-differential-equation-and-integrating-factor/#적분인자를-구하는-방법)의 식 (11)로 구할 수도 있고, 다음과 같이 직접 구할 수도 있다.
+구간 $J$에서 $r(x)\not\equiv 0$인 경우 **비제차(nonhomogeneous)** 라고 한다. 비제차 선형상미분방정식 (1)은 $x$에만 의존하는 적분인자를 가짐이 알려져 있다. 이 적분인자 $F(x)$는 [적분인자를 구하는 방법](/posts/Exact-Differential-Equation-and-Integrating-Factor/#적분인자를-구하는-방법)의 식 (11)로 구할 수도 있고, 다음과 같이 직접 구할 수도 있다.
 
 식 (1)에 $F(x)$를 곱하면
 
