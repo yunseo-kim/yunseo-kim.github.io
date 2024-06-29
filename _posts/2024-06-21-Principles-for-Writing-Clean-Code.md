@@ -1,5 +1,7 @@
 ---
-title: 좋은 코드를 작성하기 위한 원칙
+title: "좋은 코드를 작성하기 위한 원칙"
+description: >-
+  좋은 코드를 작성하는 것의 필요성과, 일반적으로 좋은 코드를 작성하기 위한 주요 원칙들을 알아본다.
 categories:
   - Programming
 tags:

@@ -1,5 +1,7 @@
 ---
 title: "중성자 감쇠와 평균 자유행정(Mean Free Path)"
+description: >-
+  단일 에너지 중성자 빔을 목표물에 조사했을 때 목표물 투과 거리에 따른 중성자 빔의 강도를 계산하고, 이로부터 중성자의 평균 자유행정을 유도한다.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true

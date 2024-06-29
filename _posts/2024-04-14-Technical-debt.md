@@ -1,5 +1,7 @@
 ---
 title: "기술 부채(Technical debt)"
+description: >-
+  기술 부채의 개념과 기술 부채가 발생하는 이유, 그리고 기술 부채를 최소화하는 방법을 알아보자.
 categories: [Programming]
 tags: [Coding]
 ---

@@ -1,5 +1,7 @@
 ---
 title: "Kaggle-Pandas 코스 내용 정리"
+description: >-
+    Kaggle 공개 코스 중 Pandas 미니 코스의 내용을 요약하였다.
 categories: [Data Science, Machine Learning]
 tags: [Kaggle Courses, Pandas]
 toc: true

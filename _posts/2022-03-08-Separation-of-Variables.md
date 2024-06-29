@@ -1,5 +1,7 @@
 ---
 title: "변수분리법(Separation of Variables)"
+description: >-
+	변수분리법에 대해 알아보고, 관련 예제 몇 가지를 소개한다.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
