@@ -10,7 +10,7 @@ baseurl: ""
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: ko-KR
+lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Asia/Seoul
@@ -141,6 +141,15 @@ pwa:
 
 paginate: 10
 
+# --------------------------
+
+# Polyglot Settings
+languages: ["en", "ko", "es", "pt_BR", "ja", "fr", "de"]
+default_lang: "en"
+exclude_from_localization: ["javascript", "images", "css", "public", "assets", "naverd"]
+parallel_localization: true
+lang_from_path: true
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
@@ -192,6 +201,7 @@ defaults:
 
 sass:
   style: compressed
+  sourcemap: never # In Jekyll 4.0 , SCSS source maps will generate improperly due to how Polyglot operates
 
 compress_html:
   clippings: all
@@ -202,13 +212,14 @@ compress_html:
   ignore:
     envs: [development]
 
-exclude:
-  - "*.gem"
-  - "*.gemspec"
+exclude: # https://github.com/untra/polyglot/issues/204 이슈 참고하여 수정.
+  # - "*.gem"
+  - jekyll-theme-chirpy.gemspec # - "*.gemspec"
   - tools
   - README.md
   - LICENSE
-  - "*.config.js"
+  - purgecss.config.js # - "*.config.js"
+  - rollup.config.js
   - package*.json
 
 jekyll-archives:
