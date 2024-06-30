@@ -1,0 +1,25 @@
+---
+title: "Mezcla homogénea y sección transversal de moléculas"
+description: >-
+  Calculemos la sección transversal macroscópica de una mezcla homogénea que contiene dos o más nucleidos.
+categories: [Ingeniería Física, Ingeniería Nuclear]
+tags: [Física Nuclear, Interacción de la Radiación con la Materia]
+math: true
+---
+## Sección transversal macroscópica de una mezcla homogénea (Homogeneous Mixture)
+Consideremos una mezcla homogénea de dos nucleidos $X$ e $Y$. Las densidades atómicas de cada nucleido son $N_X$ y $N_Y$ $\text{atom/cm}^3$ respectivamente, y las secciones transversales para una reacción específica de neutrones con estos núcleos son $\sigma_X$ y $\sigma_Y$ respectivamente.
+
+Entonces, la probabilidad de colisión por unidad de longitud de un neutrón con los núcleos $X$ e $Y$ es $\Sigma_X=N_X\sigma_X$ y $\Sigma_Y=N_Y\sigma_Y$ respectivamente (consulte [Sección transversal macroscópica](/posts/Neutron-Interactions-and-Cross-sections/#sección-transversal-macroscópica)). La probabilidad total de que un neutrón reaccione con estos dos tipos de núcleos por unidad de longitud es la siguiente:
+
+$$ \Sigma = \Sigma_X + \Sigma_Y = N_X\sigma_X + N_Y\sigma_Y \tag{1}$$
+
+## Sección transversal equivalente de una molécula (Equivalent Cross-section)
+Si los núcleos examinados anteriormente existen en forma molecular, podemos definir la sección transversal equivalente de esa molécula dividiendo la sección transversal macroscópica de la mezcla calculada por la ecuación (1) por el número de moléculas por unidad de volumen.
+
+Si hay $N$ moléculas de $X_mY_n$ por unidad de volumen, entonces $N_X=mN$, $N_Y=nN$, y de la ecuación (1) podemos calcular la sección transversal de esta molécula de la siguiente manera:
+
+$$ \sigma = \frac{\Sigma}{N}=m\sigma_X + n\sigma_Y \tag{2} $$
+
+> Las ecuaciones (1) y (2) son válidas bajo la suposición de que los núcleos $X$ e $Y$ reaccionan independientemente con los neutrones, por lo que no se pueden aplicar a la dispersión elástica por moléculas y sólidos.
+> Las secciones transversales de dispersión para neutrones de baja energía por moléculas y sólidos deben determinarse experimentalmente.
+{: .prompt-warning }
