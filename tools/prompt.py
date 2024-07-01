@@ -54,6 +54,8 @@ def translate(filepath, source_lang, target_lang):
     f.close()
 
     result_text = submit_prompt(prompt, system_prompt)
+    if not result_text[:3] == "---":
+        print("Warning: Invalid YAML front matter detected!")
     # print(language_code[target_lang])
     filename = os.path.relpath(filepath, start='../_posts/' + language_code[source_lang] + '/')
     # print(filename)

@@ -1,5 +1,3 @@
-Here's the English translation of the provided text, preserving the markdown format:
-
 ---
 title: "Setting up a Machine Learning Development Environment"
 description: >-
