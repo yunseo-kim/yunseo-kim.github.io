@@ -45,7 +45,7 @@ $$ u'=-y^{-2}y'=-y^{-2}(Ay-By^2)=B-Ay^{-1} $$
 
 $$ u'+Au=B $$
 
-[非斉次線形常微分方程式](/posts/Solution-of-First-Order-Linear-ODE/#非斉次線形常微分方程式)の解の公式により、次の一般解を求めることができる。
+[非斉次線形常微分方程式](/posts/Solution-of-First-Order-Linear-ODE/#非同次線形常微分方程式)の解の公式により、次の一般解を求めることができる。
 
 $$ u=ce^{-At}+B/A $$
 

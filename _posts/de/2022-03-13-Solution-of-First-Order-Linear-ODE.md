@@ -34,7 +34,7 @@ $$ y(x) = ce^{-\int p(x)dx} \tag{3}$$
 Für $c=0$ erhalten wir die **triviale Lösung** $y(x)=0$.
 
 ## Inhomogene lineare Differentialgleichung
-Wenn $r(x)\not\equiv 0$ im Intervall $J$, nennen wir die Gleichung **inhomogen**. Es ist bekannt, dass die inhomogene lineare Differentialgleichung (1) einen Integrationsfaktor hat, der nur von $x$ abhängt. Dieser Integrationsfaktor $F(x)$ kann entweder mit der [Methode zur Bestimmung des Integrationsfaktors](/posts/Exact-Differential-Equation-and-Integrating-Factor/#methode-zur-bestimmung-des-integrationsfaktors) aus Gleichung (11) oder direkt wie folgt bestimmt werden.
+Wenn $r(x)\not\equiv 0$ im Intervall $J$, nennen wir die Gleichung **inhomogen**. Es ist bekannt, dass die inhomogene lineare Differentialgleichung (1) einen Integrationsfaktor hat, der nur von $x$ abhängt. Dieser Integrationsfaktor $F(x)$ kann entweder mit der [Methode zur Bestimmung des Integrationsfaktors](/posts/Exact-Differential-Equation-and-Integrating-Factor/#methode-zur-bestimmung-des-integrierenden-faktors) aus Gleichung (11) oder direkt wie folgt bestimmt werden.
 
 Multiplizieren wir Gleichung (1) mit $F(x)$, erhalten wir
 

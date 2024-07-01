@@ -83,7 +83,7 @@ Wir kennen auch die **Anfangsbedingung** $y(0)=0.5$. Daher können wir unser mat
 $$ \frac {dy}{dt} = -ky, \qquad y(0)=0.5 $$
 
 ### 2. Mathematische Lösung
-Die allgemeine Lösung der oben aufgestellten gewöhnlichen Differentialgleichung lautet (siehe [Trennung der Variablen](/posts/Separation-of-Variables/#modellierungsbeispiel-radiokarbondatierung-radiocarbon-dating)):
+Die allgemeine Lösung der oben aufgestellten gewöhnlichen Differentialgleichung lautet (siehe [Trennung der Variablen](/posts/Separation-of-Variables/#modellierungsbeispiel-radiokohlenstoffdatierung-radiocarbon-dating)):
 
 $$ y(t)=ce^{-kt} $$
 

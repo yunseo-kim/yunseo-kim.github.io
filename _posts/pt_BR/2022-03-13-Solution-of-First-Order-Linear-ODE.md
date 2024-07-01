@@ -34,7 +34,7 @@ $$ y(x) = ce^{-\int p(x)dx} \tag{3}$$
 Quando $c=0$, obtemos a **solução trivial** $y(x)=0$.
 
 ## Equação Diferencial Ordinária Linear Não Homogênea
-Quando $r(x)\not\equiv 0$ no intervalo $J$, chamamos de **não homogêneo**. Sabe-se que a equação diferencial ordinária linear não homogênea (1) tem um fator integrante que depende apenas de $x$. Este fator integrante $F(x)$ pode ser encontrado usando a equação (11) do [método para encontrar fatores integrantes](/posts/Exact-Differential-Equation-and-Integrating-Factor/#método-para-encontrar-fatores-integrantes), ou pode ser encontrado diretamente da seguinte maneira:
+Quando $r(x)\not\equiv 0$ no intervalo $J$, chamamos de **não homogêneo**. Sabe-se que a equação diferencial ordinária linear não homogênea (1) tem um fator integrante que depende apenas de $x$. Este fator integrante $F(x)$ pode ser encontrado usando a equação (11) do [método para encontrar fatores integrantes](/posts/Exact-Differential-Equation-and-Integrating-Factor/#método-para-encontrar-o-fator-integrante), ou pode ser encontrado diretamente da seguinte maneira:
 
 Multiplicando a equação (1) por $F(x)$, obtemos
 

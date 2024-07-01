@@ -83,7 +83,7 @@ $$ \frac {dy}{dt} = -ky$$
 $$ \frac {dy}{dt} = -ky, \qquad y(0)=0.5 $$
 
 ### 2. 数学的解法
-先ほど立てた常微分方程式の一般解は次のようになる（[変数分離法](/posts/Separation-of-Variables/#モデリング例-放射性炭素年代測定法-radiocarbon-dating)参照）。
+先ほど立てた常微分方程式の一般解は次のようになる（[変数分離法](/posts/Separation-of-Variables/#モデリング例放射性炭素年代測定法radiocarbon-dating)参照）。
 
 $$ y(t)=ce^{-kt} $$
 

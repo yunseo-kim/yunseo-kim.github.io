@@ -83,7 +83,7 @@ Também conhecemos a **condição inicial** $y(0)=0.5$. Portanto, podemos estabe
 $$ \frac {dy}{dt} = -ky, \qquad y(0)=0.5 $$
 
 ### 2. Solução Matemática
-A solução geral da equação diferencial ordinária que estabelecemos é (veja [Método de Separação de Variáveis](/posts/Separation-of-Variables/#exemplo-de-modelagem-método-de-datação-por-carbono-14-radiocarbon-dating)):
+A solução geral da equação diferencial ordinária que estabelecemos é (veja [Método de Separação de Variáveis](/posts/Separation-of-Variables/#exemplo-de-modelagem-datação-por-radiocarbono)):
 
 $$ y(t)=ce^{-kt} $$
 

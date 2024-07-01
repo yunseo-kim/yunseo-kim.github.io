@@ -81,7 +81,7 @@ On connaît également la **condition initiale** $y(0)=0.5$. Le modèle mathéma
 $$ \frac {dy}{dt} = -ky, \qquad y(0)=0.5 $$
 
 ### 2. Résolution mathématique
-La solution générale de l'équation différentielle établie précédemment est (voir [Méthode de séparation des variables](/posts/Separation-of-Variables/#modélisation-exemple-datation-au-carbone-14-radiocarbon-dating)) :
+La solution générale de l'équation différentielle établie précédemment est (voir [Méthode de séparation des variables](/posts/Separation-of-Variables/#exemple-de-modélisation--datation-par-le-carbone-radioactif-radiocarbon-dating)) :
 
 $$ y(t)=ce^{-kt} $$
 

@@ -9,7 +9,7 @@ math: true
 ## Sección transversal macroscópica de una mezcla homogénea (Homogeneous Mixture)
 Consideremos una mezcla homogénea de dos nucleidos $X$ e $Y$. Las densidades atómicas de cada nucleido son $N_X$ y $N_Y$ $\text{átomo/cm}^3$ respectivamente, y las secciones transversales para una reacción específica de neutrones con estos núcleos son $\sigma_X$ y $\sigma_Y$. 
 
-Entonces, la probabilidad de colisión por unidad de longitud de un neutrón con los núcleos $X$ e $Y$ es $\Sigma_X=N_X\sigma_X$ y $\Sigma_Y=N_Y\sigma_Y$ respectivamente (consulte [sección transversal macroscópica](/posts/Neutron-Interactions-and-Cross-sections/#sección-transversal-macroscópica-macroscopic-cross-section)). La probabilidad total de que un neutrón reaccione con estos dos tipos de núcleos por unidad de longitud es:
+Entonces, la probabilidad de colisión por unidad de longitud de un neutrón con los núcleos $X$ e $Y$ es $\Sigma_X=N_X\sigma_X$ y $\Sigma_Y=N_Y\sigma_Y$ respectivamente (consulte [sección transversal macroscópica](/posts/Neutron-Interactions-and-Cross-sections/#sección-eficaz-macroscópica-macroscopic-cross-section)). La probabilidad total de que un neutrón reaccione con estos dos tipos de núcleos por unidad de longitud es:
 
 $$ \Sigma = \Sigma_X + \Sigma_Y = N_X\sigma_X + N_Y\sigma_Y \tag{1}$$
 

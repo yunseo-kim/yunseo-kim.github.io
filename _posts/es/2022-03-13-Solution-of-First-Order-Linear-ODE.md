@@ -34,7 +34,7 @@ $$ y(x) = ce^{-\int p(x)dx} \tag{3}$$
 Cuando $c=0$, obtenemos la **solución trivial** $y(x)=0$.
 
 ## Ecuación diferencial lineal no homogénea
-Si $r(x)\not\equiv 0$ en el intervalo $J$, se dice que es **no homogénea**. Se sabe que la ecuación diferencial lineal no homogénea (1) tiene un factor integrante que depende solo de $x$. Este factor integrante $F(x)$ se puede encontrar usando la [ecuación (11) del método para encontrar factores integrantes](/posts/Exact-Differential-Equation-and-Integrating-Factor/#método-para-encontrar-factores-integrantes), o se puede encontrar directamente de la siguiente manera.
+Si $r(x)\not\equiv 0$ en el intervalo $J$, se dice que es **no homogénea**. Se sabe que la ecuación diferencial lineal no homogénea (1) tiene un factor integrante que depende solo de $x$. Este factor integrante $F(x)$ se puede encontrar usando la [ecuación (11) del método para encontrar factores integrantes](/posts/Exact-Differential-Equation-and-Integrating-Factor/#método-para-encontrar-el-factor-integrante), o se puede encontrar directamente de la siguiente manera.
 
 Multiplicando la ecuación (1) por $F(x)$, obtenemos
 

@@ -10,7 +10,7 @@ math: true
 ## 中性子減衰（Neutron Attenuation）
 強度 $I_0$ の単一エネルギー中性子ビームを厚さ $X$ の標的に照射しており、標的の後方にある程度離れた距離に中性子検出器が置かれている。標的と検出器は両方とも非常に小さく、検出器は標的を通過して出てくる中性子の一部のみを検出できる小さな立体角を持つと仮定しよう。そうすると、標的に衝突するすべての中性子は吸収されるか散乱されて別の方向に逸脱するため、標的と反応しなかった中性子のみが検出器に入射する。
 
-標的内で距離 $x$ だけ進行する間に衝突せずに残っている中性子ビームの強度を $I(x)$ とする。中性子ビームが十分に薄い厚さ $\tau$ の標的を通過する際、単位面積当たりの衝突数は $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[neutrons/cm}^2\cdot\text{s]}$（[中性子相互作用と反応断面積](/posts/Neutron-Interactions-and-Cross-sections/#断面積cross-section-または微視的断面積microscopic-cross-section)の式（1）と（4）参照）であるため、標的内で $dx$ だけ進行する間の中性子ビーム強度の減少量は次のようになる。
+標的内で距離 $x$ だけ進行する間に衝突せずに残っている中性子ビームの強度を $I(x)$ とする。中性子ビームが十分に薄い厚さ $\tau$ の標的を通過する際、単位面積当たりの衝突数は $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[neutrons/cm}^2\cdot\text{s]}$（[中性子相互作用と反応断面積](/posts/Neutron-Interactions-and-Cross-sections/#断面積cross-sectionまたは微視的断面積microscopic-cross-section)の式（1）と（4）参照）であるため、標的内で $dx$ だけ進行する間の中性子ビーム強度の減少量は次のようになる。
 
 $$ -dI = \sigma_t IN dx = \Sigma_t I dx \tag{1} $$
 

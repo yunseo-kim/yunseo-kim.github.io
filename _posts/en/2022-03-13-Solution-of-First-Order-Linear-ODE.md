@@ -34,7 +34,7 @@ $$ y(x) = ce^{-\int p(x)dx} \tag{3}$$
 When $c=0$, we get the **trivial solution** $y(x)=0$.
 
 ## Nonhomogeneous Linear Ordinary Differential Equation
-If $r(x)\not\equiv 0$ in the interval $J$, it is called **nonhomogeneous**. It is known that the nonhomogeneous linear ordinary differential equation (1) has an integrating factor that depends only on $x$. This integrating factor $F(x)$ can be found using equation (11) from the [method of finding integrating factors](/posts/Exact-Differential-Equation-and-Integrating-Factor/#method-of-finding-integrating-factors), or it can be found directly as follows.
+If $r(x)\not\equiv 0$ in the interval $J$, it is called **nonhomogeneous**. It is known that the nonhomogeneous linear ordinary differential equation (1) has an integrating factor that depends only on $x$. This integrating factor $F(x)$ can be found using equation (11) from the [method of finding integrating factors](/posts/Exact-Differential-Equation-and-Integrating-Factor/#method-for-finding-integrating-factors), or it can be found directly as follows.
 
 Multiplying equation (1) by $F(x)$, we get
 
