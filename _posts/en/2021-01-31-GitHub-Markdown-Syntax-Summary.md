@@ -14,10 +14,10 @@ To utilize GitHub Pages, it's necessary to understand **markdown** syntax.
 This summary is based on GitHub's official documents [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) and [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ## 1. What is Markdown
-> **Markdown** is a lightweight markup language based on plain text. It is used to write formatted documents in plain text, and is characterized by its easy and simple syntax compared to general markup languages. It is widely used in README files distributed with application software or online posts because it can be easily converted to formatted documents such as HTML and Rich Text Format (RTF).
->> John Gruber created the Markdown language in 2004 through significant collaboration with Aaron Swartz on grammar, with the goal of enabling people to write using an easy-to-read and easy-to-write plain text format while allowing optional conversion to structurally valid XHTML (or HTML).
+> **Markdown** is a lightweight markup language based on plain text. It is used to write formatted documents in plain text and is characterized by its easy and simple syntax compared to general markup languages. It is widely used in README files distributed with application software or online posts because it can be easily converted to formatted documents such as HTML and Rich Text Format (RTF).
+>> John Gruber created the Markdown language in 2004, with significant collaboration from Aaron Swartz on the syntax, with the goal of enabling people to "write using an easy-to-read and easy-to-write plain text format, optionally convert it to structurally valid XHTML (or HTML)".
 
--[Wikipedia, Markdown](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)
+-[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. Markdown Syntax
 Since Markdown doesn't have a set standard, detailed syntax may vary slightly depending on where it's used. The Markdown syntax summarized here is based on [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
@@ -33,7 +33,7 @@ First sentence.
 Second sentence.
 Third sentence.
 
-A line break is applied by entering two or more consecutive spaces.
+A line break is applied when two or more consecutive spaces are entered.
 ~~~
 First sentence.  
 Second sentence.  
@@ -97,7 +97,7 @@ _You **can** combine them_
 ***All this text is important***
 
 ### 2.4. Text Quoting
-Use >.
+Use \>.
 ```
 > This is a first blockquote.
 >> This is a second blockquote.
@@ -122,7 +122,7 @@ git add
 git commit
 ```
 
-You can also activate syntax highlighting by specifying a programming language.
+You can also activate syntax highlighting by specifying the programming language.
 ~~~
 ```ruby
 require 'redcarpet'
@@ -144,13 +144,13 @@ puts markdown.to_html
 [GitHub Pages](https://pages.github.com/)  
 <https://pages.github.com/>
 
-You can also use relative path links to other files within the repository. The usage is the same as in the terminal.
+You can also use relative path links pointing to other files within the repository. The usage is the same as in the terminal.
 ```
 [README](../README.md)
 ```
 
 ### 2.7. Unordered Lists
-Use - or *.
+Use \- or \*.
 ```
 - George Washington
 - John Adams
@@ -182,8 +182,8 @@ Use numbers.
      - Second nested list item
 
 ### 2.10. Task Lists
-To create a task list, add [ ] before each item.
-To mark a task as complete, use [x].
+To create a task list, add \[ ] before each item.
+To mark a task as complete, use \[x].
 ```
 - [x] Finish my changes
 - [ ] Push my commits to GitHub
@@ -204,7 +204,7 @@ Method: ![(Optional)Image description](url){(Optional)Additional options}
 ### 2.12. Table Creation
 You can create tables using | and -.
 Leave a blank line before the table for it to display correctly.
-Use at least three - for it to be recognized correctly.
+Use at least three - for it to be recognized properly.
 ```
 
 | Left-aligned | Center-aligned | Right-aligned |

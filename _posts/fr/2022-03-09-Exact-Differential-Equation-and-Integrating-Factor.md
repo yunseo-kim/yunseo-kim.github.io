@@ -1,3 +1,5 @@
+Voici la traduction en français du texte fourni, en préservant le format markdown :
+
 ---
 title: "Équation différentielle exacte et facteur intégrant"
 description: >-
@@ -43,7 +45,7 @@ alors
 
 $$ M(x,y)dx+N(x,y)dy=\frac{\partial u}{\partial x}dx+\frac{\partial u}{\partial y}dy=du \tag{3} $$
 
-et dans ce cas, l'équation différentielle $M(x,y)dx+N(x,y)dy=0$ est appelée **équation différentielle exacte**. Cette équation différentielle peut alors s'écrire :
+et dans ce cas, l'équation différentielle ordinaire $M(x,y)dx+N(x,y)dy=0$ est appelée **équation différentielle exacte**. Cette équation différentielle peut alors être écrite sous la forme :
 
 $$ du=0 $$
 
@@ -70,14 +72,14 @@ Comme nous avons supposé la continuité, les deux dérivées partielles seconde
 
 $$ \therefore \frac {\partial M}{\partial y}=\frac {\partial N}{\partial x} \tag{5}$$
 
-Par conséquent, la condition (5) est une condition nécessaire pour que l'équation différentielle (1) soit exacte, et bien que nous ne l'ayons pas prouvé ici, c'est également une condition suffisante. Ainsi, on peut déterminer si une équation différentielle est exacte en vérifiant si cette condition est satisfaite.
+Par conséquent, on peut voir que la condition (5) est une condition nécessaire pour que l'équation différentielle (1) soit exacte, et bien que nous ne l'ayons pas prouvé ici, c'est en fait aussi une condition suffisante. Ainsi, on peut déterminer si une équation différentielle est exacte en vérifiant si cette condition est satisfaite.
 
 ## Résolution d'une équation différentielle exacte
 En intégrant l'équation (2a) par rapport à $x$, en considérant $y$ comme une constante, on obtient :
 
 $$ u = \int M(x,y) dx + k(y) \tag{6} $$
 
-Ici, $k(y)$ joue le rôle d'une constante d'intégration, car $y$ est considéré comme une constante. Maintenant, en dérivant l'équation (6) par rapport à $y$, en considérant $x$ comme une constante, on obtient $\partial u/\partial y$ comme suit :
+Ici, $k(y)$ joue le rôle d'une constante d'intégration, car $y$ est considéré comme une constante. Maintenant, en considérant $x$ comme une constante et en dérivant l'équation (6) par rapport à $y$, on obtient $\partial u/\partial y$ comme suit :
 
 $$ \frac{\partial u}{\partial y} = \frac{\partial}{\partial y}\int M(x,y) dx + \frac{dk}{dy} $$
 
@@ -97,7 +99,7 @@ $$ \int M(x,y)dx + \int N(x,y)dy - \int \left(\frac{\partial}{\partial y}\int Md
 {: .prompt-tip }
 
 ## Facteur intégrant
-Supposons qu'une équation différentielle inexacte soit donnée :
+Supposons qu'une équation différentielle ordinaire inexacte soit donnée :
 
 $$ P(x,y)dx+Q(x,y)dy = 0 \quad \left( \frac {\partial P}{\partial y} \neq \frac {\partial Q}{\partial x} \right) \tag{7} $$
 
@@ -111,7 +113,7 @@ $$ FP\ dx+FQ\ dy = 0 \tag{9} $$
 
 Dans ce cas, la fonction $F(x,y)$ est appelée **facteur intégrant** de l'équation (7).
 
-## Méthode pour trouver un facteur intégrant
+## Méthode pour trouver le facteur intégrant
 En appliquant la règle du produit à l'équation (8) et en notant les dérivées partielles en indice, on obtient :
 
 $$ F_y P + FP_y = F_x Q + FQ_x $$
@@ -129,7 +131,7 @@ $$ \begin{align*}
 
 Par conséquent, on a :
 
-> Pour l'équation différentielle donnée (7), si le côté droit de l'équation (10), noté $R$, est une fonction de $x$ uniquement, alors l'équation (7) a un facteur intégrant $F=F(x)$.
+> Pour l'équation différentielle donnée (7), si le côté droit de l'équation (10), $R$, est une fonction de $x$ uniquement, alors l'équation (7) a un facteur intégrant $F=F(x)$.
 >
 > $$ F(x)=e^{\int R(x)dx}, \quad \text{où }R=\frac{1}{Q}\left(\frac{\partial P}{\partial y}-\frac{\partial Q}{\partial x} \right) \tag{11} $$
 {: .prompt-info }
@@ -138,9 +140,9 @@ De même, si $F^\*=F^\*(y)$, on obtient à la place de l'équation (10) :
 
 $$ \frac{1}{F^*} \frac{dF^*}{dy} = \frac{1}{P}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right) \tag{12} $$
 
-Et donc :
+Par conséquent, on a :
 
-> Pour l'équation différentielle donnée (7), si le côté droit de l'équation (12), noté $R^*$, est une fonction de $y$ uniquement, alors l'équation (7) a un facteur intégrant $F^\*=F^\*(y)$.
+> Pour l'équation différentielle donnée (7), si le côté droit de l'équation (12), $R^*$, est une fonction de $y$ uniquement, alors l'équation (7) a un facteur intégrant $F^\*=F^\*(y)$.
 >
 > $$ F^*(y)=e^{\int R^*(y)dy}, \quad \text{où }R^*=\frac{1}{P}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right) \tag{13} $$
 {: .prompt-info }

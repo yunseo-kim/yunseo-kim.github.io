@@ -17,7 +17,7 @@ GitHub 공식 문서의 [Mastering Markdown](https://guides.github.com/features/
 > **마크다운(markdown)**은 일반 텍스트 기반의 경량 마크업 언어다. 일반 텍스트로 서식이 있는 문서를 작성하는 데 사용되며, 일반 마크업 언어에 비해 문법이 쉽고 간단한 것이 특징이다. HTML과 리치 텍스트(RTF) 등 서식 문서로 쉽게 변환되기 때문에 응용 소프트웨어와 함께 배포되는 README 파일이나 온라인 게시물 등에 많이 사용된다.
 >> 존 그루버는 2004년에 문법 면에서 에런 스워츠와 중대한 협업을 통해 마크다운 언어를 만들었으며, 사람들이 읽기 쉽고 쓰기 쉬운 플레인 텍스트 포맷을 사용하여 쓸 수 있으면서 구조적으로 유효한 XHTML(또는 HTML)로 선택적 변환이 가능하게 하는 것이 목표이다.
 
--[위키백과, 마크다운](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)
+-[위키백과, 마크다운](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. 마크다운 문법
 마크다운은 정해진 표준이 없기 때문에 세부 문법은 사용처마다 조금씩 다를 수 있다. 여기서 정리한 마크다운 문법은 [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) 기준이다.

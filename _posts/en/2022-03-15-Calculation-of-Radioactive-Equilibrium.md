@@ -1,7 +1,7 @@
 ---
 title: "Calculation of Radioactive Equilibrium"
 description: >-
-  We explore the relationship between decay constants, half-lives, and mean lifetimes of radioactive nuclides, and calculate the radioactivity of radioactive nuclides at an arbitrary time t in a given decay chain.
+  We explore the relationship between decay constants, half-lives, and mean lifetimes of radioactive nuclides, and calculate the radioactivity of radioactive nuclides at any given time t in a given decay chain.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
@@ -9,7 +9,7 @@ mermaid: true
 ---
 
 ## TL;DR
-> **Radioactivity at arbitrary time t**
+> **Radioactivity at any time t**
 >
 > $$\begin{align*}
 > \alpha (t) &= \lambda n(t)
@@ -84,7 +84,7 @@ The *mean lifetime* $\overline{t}$ of a radioactive nucleus is the reciprocal of
 
 $$ \overline{t}=1/\lambda $$
 
-From equation (3), we can see that over one mean lifetime, the radioactivity falls to $1/e$ of its initial value. From equation (4), the following relationship holds between mean lifetime and half-life:
+From equation (3), we can see that during one mean lifetime, the radioactivity falls to $1/e$ of its initial value. From equation (4), the following relationship holds between mean lifetime and half-life:
 
 $$ \overline{t}=\frac {T_{1/2}}{0.693}=1.44T_{1/2} \tag{6} $$
 
@@ -100,18 +100,18 @@ $$ \begin{align*}
 \end{align*}$$
 
 ## Example: Radioactive Decay Chain 1
-Assume that a radioactive nuclide is produced at a rate of $R$ atoms/s. These nuclei undergo radioactive decay as soon as they are formed. Calculate the radioactivity of this nuclide at an arbitrary time t.
+Assume that a radioactive nuclide is produced at a rate of $R$ atoms/s. These nuclei undergo radioactive decay as soon as they are formed. Calculate the radioactivity of this nuclide at any time t.
 ```mermaid
 flowchart LR
 	Start[?] -- R --> A[Mathematical Model]
 	A -- α --> End[?]
 ```
 
-### 1. Model Setup
+### 1. Setting up the Model
 
 $$ \text{Rate of change of nuclide} = \text{Production rate} - \text{Loss rate} $$
 
-Expressed in mathematical symbols:
+Expressed in mathematical notation:
 
 $$ dn/dt = -\lambda n + R $$
 
@@ -133,7 +133,7 @@ $$ e^{\lambda t}n=\frac {R}{\lambda}e^{\lambda t}+c $$
 $$ n=ce^{-\lambda t}+\frac {R}{\lambda} $$
 
 ### 3. Particular Solution
-Let the number of this nuclide at $t=0$ be $n_0$ and find the value of the constant $c$:
+Let's say the number of this nuclide at $t=0$ is $n_0$ and find the value of the constant $c$:
 
 $$ n(0)=c+\frac {R}{\lambda}=n_0 $$
 
@@ -143,7 +143,7 @@ Therefore, the particular solution for the given situation is:
 
 $$ n = n_0e^{-\lambda t}+\frac {R}{\lambda}(1-e^{-\lambda t}) \tag{7} $$
 
-Multiplying both sides of this equation by $\lambda$ gives the radioactivity of this nuclide:
+We can find the radioactivity of this nuclide by multiplying both sides of the above equation by $\lambda$:
 
 $$ \alpha = \alpha_0e^{-\lambda t}+R(1-e^{-\lambda t}) \tag{8} $$
 
@@ -157,7 +157,7 @@ flowchart LR
 	B --> C
 ```
 
-### 1. Model Setup
+### 1. Setting up the Model
 
 $$ \text{Rate of change of B nuclei} = \text{Production rate from A decay} - \text{Decay rate of B to C} $$
 
@@ -187,7 +187,7 @@ Dividing both sides by $e^{\lambda_B t}$ gives the general solution:
 $$ n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{-\lambda_A t}+ce^{-\lambda_B t} $$
 
 ### 3. Particular Solution
-Let the number of B elements at $t=0$ be $n_{B0}$ and find the value of the constant $c$:
+Let's say the number of element B at $t=0$ is $n_{B0}$ and find the value of the constant $c$:
 
 $$ n_B(0)=\frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}+c=n_{B0} $$
 

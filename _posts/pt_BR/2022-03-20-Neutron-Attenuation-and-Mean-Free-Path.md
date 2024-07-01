@@ -1,20 +1,20 @@
 ---
 title: "Atenuação de Nêutrons e Livre Caminho Médio (Mean Free Path)"
 description: >-
-  Calcula-se a intensidade do feixe de nêutrons de acordo com a distância de penetração no alvo quando um feixe de nêutrons de energia única é irradiado sobre um alvo, e a partir disso, deriva-se o livre caminho médio dos nêutrons.
+  Calcula-se a intensidade de um feixe de nêutrons de energia única quando irradiado em um alvo em função da distância de penetração no alvo, e a partir disso, deriva-se o livre caminho médio dos nêutrons.
 categories: [Engenharia Física, Engenharia Nuclear]
 tags: [Física Nuclear, Interação da Radiação com a Matéria]
 math: true
 ---
 
 ## Atenuação de Nêutrons (Neutron Attenuation)
-Um feixe de nêutrons de energia única com intensidade $I_0$ está sendo irradiado sobre um alvo de espessura $X$, e um detector de nêutrons está posicionado a uma certa distância atrás do alvo. Vamos assumir que tanto o alvo quanto o detector são muito pequenos, e que o detector tem um ângulo sólido pequeno que pode detectar apenas uma parte dos nêutrons que passam pelo alvo. Então, todos os nêutrons que colidem com o alvo serão absorvidos ou espalhados em outras direções, e apenas os nêutrons que não interagiram com o alvo incidirão no detector.
+Um feixe de nêutrons de energia única com intensidade $I_0$ está sendo irradiado em um alvo de espessura $X$, e um detector de nêutrons está posicionado a uma certa distância atrás do alvo. Vamos assumir que tanto o alvo quanto o detector são muito pequenos, e que o detector tem um ângulo sólido pequeno que pode detectar apenas uma parte dos nêutrons que passam pelo alvo. Então, todos os nêutrons que colidem com o alvo serão absorvidos ou espalhados em outras direções, e apenas os nêutrons que não interagiram com o alvo incidirão no detector.
 
-Seja $I(x)$ a intensidade do feixe de nêutrons que permanece sem colidir após percorrer uma distância $x$ dentro do alvo. Quando o feixe de nêutrons passa por uma espessura suficientemente fina $\tau$ do alvo, o número de colisões por unidade de área é $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[nêutrons/cm}^2\cdot\text{s]}$ (consulte as equações (1) e (4) em [Interações de Nêutrons e Seções de Choque](/posts/Neutron-Interactions-and-Cross-sections/#seção-de-choque-cross-section-ou-seção-de-choque-microscópica-microscopic-cross-section)). Portanto, a diminuição na intensidade do feixe de nêutrons ao percorrer uma distância $dx$ dentro do alvo é dada por:
+Vamos chamar de $I(x)$ a intensidade do feixe de nêutrons que permanece sem colidir após percorrer uma distância $x$ dentro do alvo. Quando o feixe de nêutrons passa por uma espessura suficientemente fina $\tau$ do alvo, o número de colisões por unidade de área é $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[nêutrons/cm}^2\cdot\text{s]}$ (consulte as equações (1) e (4) em [Interações de Nêutrons e Seções de Choque](/posts/Neutron-Interactions-and-Cross-sections/#seção-de-choque-cross-section-ou-seção-de-choque-microscópica-microscopic-cross-section)). Portanto, a diminuição na intensidade do feixe de nêutrons ao percorrer uma distância $dx$ dentro do alvo é dada por:
 
 $$ -dI = \sigma_t IN dx = \Sigma_t I dx \tag{1} $$
 
-Integrando a equação acima, obtemos o seguinte resultado:
+Integrando esta equação, obtemos o seguinte resultado:
 
 $$ \frac{dI}{I} = -\Sigma_t dx $$
 

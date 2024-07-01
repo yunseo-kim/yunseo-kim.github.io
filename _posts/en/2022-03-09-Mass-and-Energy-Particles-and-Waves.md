@@ -1,7 +1,7 @@
 ---
 title: "Mass and Energy, Particles and Waves"
 description: >-
-  Explore the mass-energy equivalence principle of the theory of relativity and calculate the energy of moving electrons considering relativistic effects.
+  Explore the mass-energy equivalence principle of relativity theory and calculate the energy of moving electrons considering relativistic effects.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
@@ -25,7 +25,7 @@ $$
 $$
 
 ## Mass and Energy of Moving Objects
-According to the theory of relativity, the mass of a moving object increases relative to an observer, and the equation relating the speed and mass of a moving object is defined as follows:
+According to the theory of relativity, the mass of a moving object increases relative to an observer, and the equation for the speed and mass of a moving object is defined as follows:
 
 $$ m=\frac {m_0}{\sqrt{1-v^2/c^2}} \tag{1} $$
 
@@ -43,7 +43,7 @@ E_{\text{kinetic}} &= E_{\text{total}}-E_{\text{rest}}
 \end{align*}
 $$
 
-Particularly, when $v\ll c$, using the binomial theorem for approximation:
+Especially, when $v\ll c$, using binomial expansion for approximation:
 
 $$
 \begin{align*}
@@ -53,10 +53,10 @@ E_{kinetic} &= m_0c^2\left[\frac {1}{\sqrt{1-v^2/c^2}} - 1\right]
 \end{align*}
 $$
 
-This becomes the same as the kinetic energy formula in classical mechanics. In practice, when $v\leq 0.2c$ or $E_{\text{kinetic}} \leq 0.02E_{\text{rest}}$, it can be considered as $v\ll c$, and using this approximation (i.e., ignoring relativistic effects) still yields sufficiently accurate values.
+This becomes the same as the kinetic energy formula in classical mechanics. In practice, when $v\leq 0.2c$ or $E_{\text{kinetic}} \leq 0.02E_{\text{rest}}$, it can be considered as $v\ll c$, and using this approximation (i.e., ignoring the effects of relativity theory) gives sufficiently accurate values.
 
 ### Electrons
-Since the rest-mass energy of an electron is $E_{\text{rest}}=m_ec^2=0.511 \text{MeV}$, the relativistic kinetic energy formula should be applied when the electron's kinetic energy exceeds $0.02\times 0.511 \text{MeV}=0.010 \text{MeV}=10 \text{keV}$. In nuclear engineering, the energy of electrons is often greater than 10keV, so equation (2) should be applied in most cases.
+Since the rest-mass energy of an electron is $E_{\text{rest}}=m_ec^2=0.511 \text{MeV}$, the relativistic kinetic energy formula should be applied when the kinetic energy of an electron exceeds $0.02\times 0.511 \text{MeV}=0.010 \text{MeV}=10 \text{keV}$. In nuclear engineering, the energy of electrons is often greater than 10keV, so equation (2) should be applied in most cases.
 
 ### Neutrons
 The rest-mass energy of a neutron is approximately 1000MeV, so $0.02E_{rest}=20\text{MeV}$. In nuclear engineering, it is rare to deal with situations where the kinetic energy of neutrons exceeds 20MeV, so equation (3) is usually used to calculate the kinetic energy of neutrons.
@@ -82,7 +82,7 @@ Since kinetic energy $E=1/2 mv^2$, expressing equation (6) as a function of ener
 
 $$ p=\sqrt{2mE} \tag{7} $$
 
-Substituting this into equation (5), the particle's wavelength becomes:
+Substituting this into equation (5), the wavelength of the particle becomes:
 
 $$ \lambda = \frac {h}{\sqrt{2mE}} \tag{8} $$
 
@@ -97,7 +97,7 @@ Directly solve the previous relativity equations to calculate momentum $p$.
 
 $$ p=\frac {1}{c} \sqrt{E^2_{total}-E^2_{rest}} \tag{10}$$
 
-Then, the de Broglie wavelength is:
+Then the de Broglie wavelength is:
 
 $$ \lambda = \frac {hc}{\sqrt{E_{total}-E_{rest}}} \tag{11} $$
 

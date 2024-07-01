@@ -1,28 +1,29 @@
 ---
-title: "Separation der Variablen (Separation of Variables)"
+title: "Trennung der Variablen (Separation of Variables)"
 description: >-
-  Wir betrachten die Methode der Separation der Variablen und stellen einige relevante Beispiele vor.
-categories: [Mathematics, Differential Equation]
-tags: [ODE, First-Order ODEs]
+  Wir betrachten die Methode der Trennung der Variablen und stellen einige relevante Beispiele vor.
+categories: [Mathematik, Differentialgleichung]
+tags: [ODE, Gewöhnliche Differentialgleichungen erster Ordnung]
 math: true
+
 ---
 
-## Separation der Variablen (Separation of Variables)
-**Separable Gleichung (separable equation)**: Eine Gleichung, die durch algebraische Manipulation in die Form $g(y)y'=f(x)$ gebracht werden kann.
+## Trennung der Variablen (Separation of Variables)
+**Separierbare Gleichung (separable equation)**: Eine Gleichung, die durch algebraische Manipulation in die Form $g(y)y'=f(x)$ gebracht werden kann.
 
-Wenn wir beide Seiten einer separablen Gleichung $g(y)y'=f(x)$ in Bezug auf $x$ integrieren, erhalten wir
+Wenn wir beide Seiten der separierbaren Gleichung $g(y)y'=f(x)$ in Bezug auf $x$ integrieren, erhalten wir
 
-$$ \int g(y)y'dx = \int f(x)dx + c $$ 
+$$ \int g(y)y'dx = \int f(x)dx + c $$
 
 und da $y'dx=dy$, erhalten wir
 
 $$ \int g(y)dy = \int f(x)dx + c $$
 
-wodurch wir den Ausdruck in Bezug auf die Variable $x$ und den Ausdruck in Bezug auf $y$ jeweils auf die rechte und linke Seite trennen können. Wenn $f$ und $g$ stetige Funktionen sind, können wir diese Integrale berechnen, um die allgemeine Lösung der gegebenen Differentialgleichung zu erhalten. Diese Lösungsmethode wird **Separation der Variablen (separation of variables)** genannt.
+wodurch wir den Ausdruck in Bezug auf die Variable $x$ und den Ausdruck in Bezug auf $y$ jeweils auf die rechte und linke Seite trennen können. Wenn $f$ und $g$ stetige Funktionen sind, können wir diese Integrale berechnen, um die allgemeine Lösung der gegebenen Differentialgleichung zu erhalten. Diese Lösungsmethode wird **Trennung der Variablen (separation of variables)** genannt.
 
 ## Modellierungsbeispiel: Radiokohlenstoffdatierung (Radiocarbon Dating)
-Ötzi ist eine neolithische Mumie, die 1991 in den Ötztaler Alpen entdeckt wurde. Wenn das Verhältnis von Kohlenstoff-14 zu Kohlenstoff-12 in dieser Mumie 52,5% des Verhältnisses in lebenden Organismen beträgt, wann ungefähr lebte und starb Ötzi?
-> In der Atmosphäre und in lebenden Organismen ist das Verhältnis von radioaktivem Kohlenstoff-14 zu Kohlenstoff-12 konstant. Wenn ein Organismus stirbt, hört die Aufnahme von Kohlenstoff-14 durch Atmung und Nahrung auf, aber der Zerfall von Kohlenstoff-14 setzt sich fort, wodurch der Anteil des radioaktiven Kohlenstoffs abnimmt. Daher kann das Alter eines Fossils durch Vergleich des Anteils an radioaktivem Kohlenstoff mit dem in der Atmosphäre geschätzt werden. Die Halbwertszeit von Kohlenstoff-14 beträgt 5715 Jahre.
+Ötzi ist eine neolithische Mumie, die 1991 in den Ötztaler Alpen entdeckt wurde. Wenn das Verhältnis von Kohlenstoff-14 zu Kohlenstoff-12 in dieser Mumie 52,5% des Verhältnisses in einem lebenden Organismus beträgt, wann ungefähr lebte und starb Ötzi?
+> In der Atmosphäre und in lebenden Organismen ist das Verhältnis von radioaktivem Kohlenstoff-14 zu Kohlenstoff-12 konstant. Wenn ein Organismus stirbt, hört die Aufnahme von Kohlenstoff-14 durch Atmung und Nahrung auf, aber der Zerfall von Kohlenstoff-14 setzt sich fort, wodurch der Anteil des radioaktiven Kohlenstoffs abnimmt. Daher kann man das Alter eines Fossils schätzen, indem man den Anteil des radioaktiven Kohlenstoffs im Fossil mit dem in der Atmosphäre vergleicht. Die Halbwertszeit von Kohlenstoff-14 beträgt 5715 Jahre.
 {: .prompt-info }
 
 ### Lösung
@@ -51,18 +52,18 @@ $$ t=\frac {\log 0.525}{-0.0001213}=5312$$
 $$ \therefore \text{vor etwa 5300 Jahren} $$
 
 ## Modellierungsbeispiel: Mischungsproblem
-Anfänglich enthält ein Tank 1000L Wasser, in dem 10kg Salz gelöst sind. Salzwasser fließt mit einer Rate von 10L pro Minute in den Tank, wobei dieses Salzwasser 0,5kg Salz pro Liter enthält. Die Mischung im Tank wird gut umgerührt und bleibt gleichmäßig, und diese Salzlösung fließt mit einer Rate von 10L pro Minute aus. Bestimmen Sie die Menge des Salzes $y(t)$ im Tank zur Zeit $t$.
+Anfänglich enthält ein Tank 1000L Wasser, in dem 10kg Salz gelöst sind. Salzwasser fließt mit einer Rate von 10L pro Minute in den Tank, wobei dieses Salzwasser 0,5kg Salz pro Liter enthält. Die Mischung im Tank wird gut umgerührt und bleibt gleichmäßig, und dieses Salzwasser fließt mit einer Rate von 10L pro Minute aus. Bestimmen Sie die Menge des Salzes $y(t)$ im Tank zur Zeit $t$.
 
 ### 1. Modellaufstellung
 
 $$ y'=\text{Zuflussrate} - \text{Abflussrate} $$
 
-Die Zuflussrate des Salzes beträgt 5kg pro Minute. Die Abflussrate der Salzlösung beträgt 0,01 des Gesamtvolumens der Salzlösung pro Minute, daher ist die Abflussrate des Salzes $0.01 y(t)$ pro Minute. Folglich ist das Modell die gewöhnliche Differentialgleichung
+Die Zuflussrate des Salzes beträgt 5kg pro Minute. Die Abflussrate des Salzwassers beträgt 0,01 des Gesamtvolumens des Salzwassers pro Minute, daher beträgt die Abflussrate des Salzes $0.01 y(t)$ pro Minute. Daher ist das Modell die gewöhnliche Differentialgleichung
 
 $$y'=5-0.01y=-0.01(y-500) $$
 
 ### 2. Lösung des Modells
-Die zuvor aufgestellte gewöhnliche Differentialgleichung ist separabel. Separieren wir die Variablen, integrieren und wenden dann die Exponentialfunktion auf beide Seiten an.
+Die zuvor aufgestellte gewöhnliche Differentialgleichung ist separierbar. Trennen wir die Variablen, integrieren und wenden dann die Exponentialfunktion auf beide Seiten an.
 
 $$ \frac {dy}{y-500}=-0.01 dt $$
 
@@ -70,7 +71,7 @@ $$ \log |y-500| = -0.01t+c^* $$
 
 $$ y-500=ce^{-0.01t} $$
 
-Anfänglich beträgt die Salzmenge im Tank 10kg, daher ist die Anfangsbedingung $y(0)=10$. Wenn wir $y=10,\ t=0$ in die obige Gleichung einsetzen, erhalten wir $10-500=ce^0=c$, also $c=-490$.
+Anfänglich beträgt die Salzmenge im Tank 10kg, daher ist die Anfangsbedingung $y(0)=10$. Wenn wir $y=10,\ t=0$ in die obige Gleichung einsetzen, erhalten wir $10-500=ce^0=c$, daher ist $c=-490$.
 
 $$ \therefore y(t)=500-490e^{-0.01t} $$
 
@@ -88,9 +89,9 @@ Sei $T(t)$ die Innentemperatur des Gebäudes und $T_A$ die Außentemperatur. Dan
 $$ \frac {dT}{dt}=k(T-T_A) $$
 
 ### 2. Allgemeine Lösung
-Da wir nur wissen, dass $T_A$ zwischen 10°C und 4°C variiert, aber nicht genau wissen, welchen Wert es annimmt, können wir die zuvor aufgestellte Gleichung nicht lösen. In solchen Fällen kann es hilfreich sein, *die Situation zu vereinfachen und eine einfachere Problemstellung zu versuchen*. Der Durchschnitt der beiden bekannten Werte beträgt 7°C, also nehmen wir an, dass die unbekannte Funktion $T_A$ eine Konstante $T_A=7$ ist. Auch wenn es nicht genau ist, können wir erwarten, einen Näherungswert für die gesuchte Innentemperatur $T$ des Gebäudes um 6 Uhr morgens zu erhalten.
+Wir wissen nur, dass $T_A$ zwischen 10°C und 4°C variiert, kennen aber nicht den genauen Wert, daher können wir die zuvor aufgestellte Gleichung nicht lösen. In solchen Fällen kann es hilfreich sein, *die Situation zu vereinfachen und eine einfachere Problemstellung zu versuchen*. Der Durchschnitt der beiden bekannten Werte beträgt 7°C, daher nehmen wir die unbekannte Funktion $T_A$ als konstante Funktion $T_A=7$ an. Auch wenn es nicht genau ist, können wir erwarten, eine Näherung für die gesuchte Innentemperatur $T$ des Gebäudes um 6 Uhr morgens zu erhalten.
 
-Für die Konstante $T_A=7$ ist die zuvor aufgestellte gewöhnliche Differentialgleichung separabel. Durch Separation der Variablen, Integration und Anwendung der Exponentialfunktion können wir die allgemeine Lösung erhalten.
+Für die Konstante $T_A=7$ ist die zuvor aufgestellte gewöhnliche Differentialgleichung separierbar. Durch Trennung der Variablen, Integration und Anwendung der Exponentialfunktion erhalten wir die allgemeine Lösung.
 
 $$ \frac {dT}{T-7}=k dt $$
 
@@ -108,7 +109,7 @@ $$ c=20-7=13 $$
 $$ T_p(t)=7+13e^{kt} $$
 
 ### 4. Bestimmung von $k$
-Da die Innentemperatur des Gebäudes um 2 Uhr morgens 17,4°C betrug, gilt $T(4)=17.4$. Wenn wir den Wert von $k$ algebraisch bestimmen und in $T_p(t)$ einsetzen, erhalten wir
+Um 2 Uhr morgens betrug die Innentemperatur des Gebäudes 17,4°C, also $T(4)=17.4$. Wenn wir den Wert von $k$ algebraisch bestimmen und in $T_p(t)$ einsetzen, erhalten wir
 
 $$ T_p(4)=7+13e^{4k}=17.4 $$
 
@@ -119,14 +120,14 @@ $$ k=\frac {1}{4} \log 0.8=-0.056 $$
 $$ T_p(t)=7+13e^{-0.056t} $$
 
 ### 5. Antwort und Interpretation
-6 Uhr morgens entspricht $t=8$, also
+6 Uhr morgens entspricht $t=8$, daher
 
 $$ T_p(8)=7+13e^{-0.056\cdot8}=15.3\text{[°C]} $$
 
 ## Modellierungsbeispiel: Torricellisches Theorem (Torricelli's Theorem)
 Ein Tank hat einen Durchmesser von 2m und ein Loch mit einem Durchmesser von 1cm. Die anfängliche Wasserhöhe beim Öffnen des Lochs beträgt 2,25m. Bestimmen Sie die Wasserhöhe im Tank zu einem beliebigen Zeitpunkt und die Zeit, bis der Tank leer ist.
 > **Torricellisches Theorem (Torricelli's theorem)**  
-> Die Geschwindigkeit des unter Schwerkrafteinfluss ausströmenden Wassers ist
+> Die Geschwindigkeit des unter dem Einfluss der Schwerkraft austretenden Wassers beträgt
 >
 > $$ v(t)=0.600\sqrt{2gh(t)} $$
 >
@@ -135,7 +136,7 @@ Ein Tank hat einen Durchmesser von 2m und ein Loch mit einem Durchmesser von 1cm
 {: .prompt-info }
 
 ### 1. Modellaufstellung
-Das Ausflussvolumen $\Delta V$ während einer kurzen Zeit $\Delta t$ ist
+Das Ausflussmenge $\Delta V$ während einer kurzen Zeit $\Delta t$ ist
 
 $$ \Delta V = Av\Delta t \qquad (A: \text{Fläche des Lochs})$$
 
@@ -154,7 +155,7 @@ $$ \frac {\Delta h}{\Delta t} = -\frac {A}{B}v = -\frac{A}{B}0.600\sqrt{2gh(t)} 
 $$ \frac {dh}{dt} = \lim_{t\to0}\frac {\Delta h}{\Delta t} = -26.56\frac {A}{B}\sqrt{h} $$
 
 ### 2. Allgemeine Lösung
-Diese gewöhnliche Differentialgleichung ist separabel. Durch Separation der Variablen und Integration erhalten wir
+Diese gewöhnliche Differentialgleichung ist separierbar. Durch Trennung der Variablen und Integration erhalten wir
 
 $$ \frac {dh}{\sqrt{h}} = -26.56\frac{A}{B}dt $$
 
@@ -173,15 +174,15 @@ $$ h_p(t)=(15.00-0.000332t)^2 $$
 
 $$ t = 15.00/0.000332 = 45181 \text{[s]} = 12.6 \text{[h]} $$
 
-## Umwandlung in separable Form (separable form)
-In einigen Fällen können nicht separable gewöhnliche Differentialgleichungen durch Einführung einer neuen unbekannten Funktion von $y$ in eine separable Form umgewandelt werden.
+## Umwandlung in separierbare Form (separable form)
+In einigen Fällen können nicht separierbare gewöhnliche Differentialgleichungen durch die Einführung einer neuen unbekannten Funktion von $y$ in eine separierbare Form umgewandelt werden.
 
 $$ y'=f\left(\frac {y}{x}\right) $$
 
-Um eine solche gewöhnliche Differentialgleichung zu lösen, setzen wir $y/x=u$. Dann gilt
+Um eine solche gewöhnliche Differentialgleichung zu lösen, setzen wir $y/x=u$, dann gilt
 
 $$ y=ux,\quad y'=u'x+u $$
 
 Wenn wir dies in $y'=f(y/x)$ einsetzen, erhalten wir $u'x=f(u)-u$. Wenn $f(u)-u\neq0$, dann erhalten wir die separierte Form
 
-$$ \frac {du}{f(u)-u}=\frac {dx}{x} $$
+$$ \frac {du}{f(u

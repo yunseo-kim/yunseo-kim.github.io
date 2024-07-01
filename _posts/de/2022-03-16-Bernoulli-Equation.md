@@ -1,9 +1,9 @@
 ---
 title: "Bernoulli-Gleichung (Bernoulli Equation)"
 description: >-
-  Wir betrachten die Bernoulli-Gleichung und ihre Lösungsmethode, sowie die logistische Gleichung als Spezialfall der Bernoulli-Gleichung.
-categories: [Mathematics, Differential Equation]
-tags: [ODE, First-Order ODEs]
+  Wir untersuchen die Bernoulli-Gleichung und die Lösungsmethode für die logistische Gleichung, eine spezielle Form der Bernoulli-Gleichung.
+categories: [Mathematik, Differentialgleichung]
+tags: [ODE, Differentialgleichungen erster Ordnung]
 math: true
 ---
 
@@ -25,7 +25,7 @@ u'&=(1-a)y^{-a}y'
 \\&=(1-a)(g-py^{1-a})
 \end{align*} $$
 
-In der rechten Seite ist $y^{1-a}=u$, also erhalten wir die folgende lineare gewöhnliche Differentialgleichung:
+In der rechten Seite ist $y^{1-a}=u$, also erhalten wir die folgende lineare Differentialgleichung erster Ordnung:
 
 $$ u'+(1-a)pu=(1-a)g \tag{2} $$
 
@@ -43,14 +43,14 @@ Hier ist $a=2$, also ist $u=y^{1-a}=y^{-1}$. Wenn wir dieses u differenzieren un
 
 $$ u'=-y^{-2}y'=-y^{-2}(Ay-By^2)=B-Ay^{-1} $$
 
-Der letzte Term ist $-Ay^{-1}=-Au$, also erhalten wir die folgende lineare gewöhnliche Differentialgleichung:
+Der letzte Term ist $-Ay^{-1}=-Au$, also erhalten wir die folgende lineare Differentialgleichung erster Ordnung:
 
 $$ u'+Au=B $$
 
-Nach der Lösungsformel für inhomogene lineare gewöhnliche Differentialgleichungen können wir die folgende allgemeine Lösung finden:
+Gemäß der Lösungsformel für [inhomogene lineare Differentialgleichungen erster Ordnung](/posts/Solution-of-First-Order-Linear-ODE/#inhomogene-lineare-differentialgleichung-erster-ordnung) können wir die folgende allgemeine Lösung finden:
 
 $$ u=ce^{-At}+B/A $$
 
-Da $u=1/y$ ist, erhalten wir daraus die allgemeine Lösung für Gleichung (3):
+Da $u=1/y$, erhalten wir daraus die allgemeine Lösung für Gleichung (3):
 
 $$ y=\frac{1}{u}=\frac{1}{ce^{-At}+B/A} \tag{4}$$

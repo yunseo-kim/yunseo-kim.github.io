@@ -12,20 +12,20 @@ toc_sticky: true
 Résolvez de courts défis pratiques pour perfectionner vos compétences en manipulation de données.
 
 ## Leçon 1. Création, Lecture et Écriture
-### Importer Pandas
+### Importation de pandas
 ```python
 import pandas as pd
 ```
-Pandas possède deux objets fondamentaux : le **DataFrame** et la **Series**.
+Pandas possède deux objets fondamentaux : les **DataFrames** et les **Series**.
 
 ### DataFrame
 Un DataFrame est un tableau. Il contient une matrice d'*entrées* individuelles, chacune ayant une *valeur* spécifique et correspondant à une *ligne* (*row* ou *record*) et une colonne (*column*). Les entrées d'un DataFrame ne doivent pas nécessairement être des entiers.
 ```python
 pd.DataFrame({'Bob': ['Je l'ai aimé.', 'C'était horrible.'], 'Sue': ['Plutôt bon.', 'Fade.']})
 ```
-La déclaration d'un DataFrame se fait sous forme de dictionnaire Python. Les clés (keys) sont les noms des colonnes, et les valeurs (values) sont des listes contenant les entrées.
+La déclaration d'un DataFrame se fait au format dictionnaire (dictionary) de Python. Les clés (keys) sont les noms des colonnes, et les valeurs (values) sont des listes contenant les entrées à inscrire.
 
-Généralement, lors de la déclaration d'un DataFrame, les étiquettes de colonnes sont attribuées au nom de la colonne, mais les étiquettes de lignes sont des entiers 0, 1, 2... Si nécessaire, on peut spécifier manuellement les étiquettes de lignes. La liste des étiquettes de lignes dans un DataFrame est appelée **Index**, et peut être définie en utilisant le paramètre ```index```.
+Généralement, lors de la déclaration d'un DataFrame, les étiquettes de colonnes reçoivent le nom de la colonne, mais les étiquettes de lignes reçoivent des entiers 0, 1, 2... Si nécessaire, on peut spécifier manuellement les étiquettes de lignes. La liste des étiquettes de lignes dans un DataFrame est appelée **Index**, et peut être définie en utilisant le paramètre ```index```.
 ```python
 pd.DataFrame({'Bob': ['Je l'ai aimé.', 'C'était horrible.'], 
               'Sue': ['Plutôt bon.', 'Fade.']},
@@ -57,15 +57,15 @@ Pour charger des données au format CSV dans un DataFrame, on utilise la fonctio
 
 On peut vérifier la taille d'un DataFrame en utilisant l'attribut ```shape```.
 
-On peut afficher les cinq premières lignes d'un DataFrame en utilisant la commande ```head()```.
+On peut voir les cinq premières lignes d'un DataFrame en utilisant la commande ```head()```.
 
-La fonction ```pd.read_csv()``` a plus de 30 paramètres. Par exemple, si le fichier CSV à charger contient son propre index, on peut spécifier la valeur du paramètre ```index_col``` pour utiliser cette colonne comme index au lieu de laisser Pandas attribuer automatiquement un index.
+La fonction ```pd.read_csv()``` a plus de 30 paramètres. Par exemple, si le fichier CSV que vous essayez de charger contient son propre index, vous pouvez spécifier la valeur du paramètre ```index_col``` pour utiliser cette colonne comme index au lieu de laisser pandas attribuer automatiquement un index.
 
 ### Écriture de données
-On peut exporter un DataFrame vers un fichier CSV en utilisant la méthode ```to_csv()```. Elle s'utilise comme suit :
+On peut exporter un DataFrame vers un fichier CSV en utilisant la méthode ```to_csv()```. On l'utilise comme suit :
 ```python
 (nom du DataFrame).to_csv("(chemin du fichier CSV)")
 ```
 
 ## Leçon 2. Indexation, Sélection et Affectation
-La sélection de valeurs spécifiques à utiliser dans un DataFrame ou une Series Pandas est une étape que l'on retrouve dans presque toutes les opérations utilisant des données.
+La sélection de valeurs spécifiques à utiliser dans un DataFrame ou une Series pandas est une étape que l'on retrouve dans presque toutes les opérations utilisant des données.

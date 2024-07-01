@@ -1,7 +1,7 @@
 ---
 title: "Kaggle-Pandasコース内容のまとめ"
 description: >-
-  Kaggleの公開コースの中からPandasミニコースの内容をまとめました。
+  KaggleのオープンコースのうちPandasミニコースの内容をまとめました。
 categories: [Data Science, Machine Learning]
 tags: [Kaggle Courses, Pandas]
 toc: true
@@ -9,7 +9,7 @@ toc_sticky: true
 ---
 
 # Pandas
-短い実践的な課題を解いてデータ操作スキルを完璧にしましょう。
+データ操作スキルを完璧にするための短い実践的な課題を解決します。
 
 ## レッスン1. 作成、読み込み、書き込み
 ### Pandasのインポート

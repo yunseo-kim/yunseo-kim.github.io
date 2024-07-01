@@ -2,8 +2,8 @@
 title: "Calcul de l'équilibre radiatif"
 description: >-
   Nous examinons la relation entre la constante de désintégration, la demi-vie et la durée de vie moyenne des radionucléides, et calculons l'activité des radionucléides à un temps t donné dans une chaîne de désintégration donnée.
-categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Radioactive Decay]
+categories: [Physique de l'ingénierie, Génie nucléaire]
+tags: [Physique nucléaire, Désintégration radioactive]
 math: true
 mermaid: true
 ---
@@ -34,7 +34,7 @@ mermaid: true
 - Notée par le symbole $\lambda$
 
 ## Radioactivité (Radioactivity)
-Si n(t) est le nombre de noyaux qui ne se sont pas encore désintégrés au temps t, alors en moyenne $\lambda n(t)$ noyaux se désintègrent pendant l'intervalle dt entre t et t+dt. Ce taux de désintégration est appelé *radioactivité* de l'échantillon et est noté par le symbole $\alpha$. Ainsi, la radioactivité à un temps t donné est :
+Si le nombre de noyaux qui ne se sont pas encore désintégrés au temps $t$ est n(t), alors en moyenne $\lambda n(t)$ noyaux se désintègrent pendant l'intervalle $dt$ entre $t$ et $t+dt$. Ce taux de désintégration est appelé *radioactivité* de l'échantillon et est noté par le symbole $\alpha$. Ainsi, la radioactivité à un temps $t$ donné est :
 
 $$ \alpha (t)=\lambda n(t) \tag{1}$$
 
@@ -50,7 +50,7 @@ $$ \alpha (t)=\lambda n(t) \tag{1}$$
 - $1 \text{Bq} = 2.703\times 10^{-11}\text{Ci} = 27\text{pCi}$
 
 ## Calcul de l'évolution de la radioactivité dans le temps
-Comme $\lambda n(t)$ noyaux se désintègrent pendant dt, la diminution du nombre de noyaux restants dans l'échantillon pendant dt peut être exprimée comme suit :
+Comme $\lambda n(t)$ noyaux se désintègrent pendant $dt$, la diminution du nombre de noyaux restants dans l'échantillon pendant $dt$ peut être exprimée comme suit :
 
 $$ -dn(t)=\lambda n(t)dt $$
 
@@ -74,7 +74,7 @@ En prenant le logarithme des deux côtés et en résolvant pour la demi-vie $T_{
 
 $$ T_{1/2}=\frac {\ln 2}{\lambda}=\frac {0.693}{\lambda} \tag{4}$$
 
-En résolvant cette équation pour $\lambda$ et en substituant dans l'équation (3) :
+En résolvant cette équation pour $\lambda$ et en la substituant dans l'équation (3) :
 
 $$ \alpha (t)=\alpha_0e^{-0.693t/T_{1/2}} \tag{5} $$
 
@@ -116,7 +116,7 @@ En notation mathématique :
 $$ dn/dt = -\lambda n + R $$
 
 ### 2. Solution générale
-Déplaçons tous les termes en n vers la gauche et multiplions les deux côtés par $e^{\lambda t}$.
+Déplaçons tous les termes en $n$ vers la gauche et multiplions les deux côtés par $e^{\lambda t}$.
 
 $$ \frac {dn}{dt} + \lambda n = R $$
 
@@ -133,7 +133,7 @@ $$ e^{\lambda t}n=\frac {R}{\lambda}e^{\lambda t}+c $$
 $$ n=ce^{-\lambda t}+\frac {R}{\lambda} $$
 
 ### 3. Solution particulière
-Supposons que le nombre de ce nucléide soit $n_0$ à t=0 et trouvons la valeur de la constante c.
+Supposons que le nombre de ce nucléide soit $n_0$ à $t=0$ et trouvons la valeur de la constante $c$.
 
 $$ n(0)=c+\frac {R}{\lambda}=n_0 $$
 
@@ -187,7 +187,7 @@ En divisant les deux côtés par $e^{\lambda_B t}$, on obtient la solution gén�
 $$ n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{-\lambda_A t}+ce^{-\lambda_B t} $$
 
 ### 3. Solution particulière
-Supposons que le nombre d'éléments B soit $n_{B0}$ à t=0 et trouvons la valeur de la constante c.
+Supposons que le nombre d'éléments B soit $n_{B0}$ à $t=0$ et trouvons la valeur de la constante $c$.
 
 $$ n_B(0)=\frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}+c=n_{B0} $$
 

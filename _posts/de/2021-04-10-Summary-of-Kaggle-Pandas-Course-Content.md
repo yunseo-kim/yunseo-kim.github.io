@@ -21,15 +21,15 @@ Pandas hat zwei zentrale Objekte: **DataFrame** und **Series**.
 ### DataFrame
 Ein DataFrame ist eine Tabelle. Es enthält eine Matrix aus einzelnen *Einträgen*, wobei jeder Eintrag einen bestimmten *Wert* hat und einer *Zeile* (*row* oder *record*) und einer Spalte (*column*) entspricht. Die Einträge in einem DataFrame müssen nicht unbedingt Ganzzahlen sein.
 ```python
-pd.DataFrame({'Bob': ['I liked it.', 'It was awful.'], 'Sue': ['Pretty good.', 'Bland.']})
+pd.DataFrame({'Bob': ['Ich mochte es.', 'Es war schrecklich.'], 'Sue': ['Ziemlich gut.', 'Fade.']})
 ```
-Die Deklaration eines DataFrames erfolgt im Python-Dictionary-Format. Die Schlüssel (keys) sind die Spaltennamen, die Werte (values) sind Listen der einzutragenden Elemente.
+Die Deklaration eines DataFrames erfolgt im Format eines Python-Wörterbuchs (dictionary). Die Schlüssel (keys) sind die Spaltennamen, die Werte (values) sind Listen mit den einzutragenden Elementen.
 
-Normalerweise werden bei der DataFrame-Deklaration den Spaltenbeschriftungen die Namen der Spalten zugewiesen, aber den Zeilenbeschriftungen werden die Ganzzahlen 0, 1, 2... zugewiesen. Bei Bedarf können die Zeilenbeschriftungen manuell festgelegt werden. Die Liste der Zeilenbeschriftungen in einem DataFrame wird als **Index** bezeichnet und kann mit dem Parameter ```index``` festgelegt werden.
+Normalerweise werden bei der Deklaration eines DataFrames den Spaltenbeschriftungen die Namen der Spalten zugewiesen, aber den Zeilenbeschriftungen werden die Ganzzahlen 0, 1, 2... zugewiesen. Bei Bedarf können die Zeilenbeschriftungen manuell festgelegt werden. Die Liste der Zeilenbeschriftungen in einem DataFrame wird als **Index** bezeichnet und kann mit dem Parameter ```index``` festgelegt werden.
 ```python
-pd.DataFrame({'Bob': ['I liked it.', 'It was awful.'], 
-              'Sue': ['Pretty good.', 'Bland.']},
-             index=['Product A', 'Product B'])
+pd.DataFrame({'Bob': ['Ich mochte es.', 'Es war schrecklich.'], 
+              'Sue': ['Ziemlich gut.', 'Fade.']},
+             index=['Produkt A', 'Produkt B'])
 ```
 
 ### Series
@@ -37,16 +37,16 @@ Eine Series ist eine Sequenz von Datenwerten.
 ```python
 pd.Series([1, 2, 3, 4, 5])
 ```
-Eine Series ist im Wesentlichen wie eine einzelne Spalte eines DataFrames. Daher kann auch hier ein Index festgelegt werden. Der Unterschied besteht darin, dass sie statt eines 'Spaltennamens' einen 'Namen', ```name```, hat.
+Eine Series ist im Wesentlichen wie eine einzelne Spalte eines DataFrames. Daher kann auch hier ein Index festgelegt werden. Der Unterschied besteht darin, dass sie anstelle eines "Spaltennamens" einen "Namen", ```name```, hat.
 ```python
-pd.Series([30, 35, 40], index=['2015 Sales', '2016 Sales', '2017 Sales'], name='Product A')
+pd.Series([30, 35, 40], index=['Verkäufe 2015', 'Verkäufe 2016', 'Verkäufe 2017'], name='Produkt A')
 ```
 Series und DataFrames sind eng miteinander verwandt. Es ist hilfreich, sich einen DataFrame als eine Sammlung von Series vorzustellen.
 
 ### Datendateien einlesen
-In vielen Fällen werden vorhandene Daten verwendet, anstatt sie direkt zu erstellen. Daten können in verschiedenen Formaten gespeichert sein, wobei das grundlegendste Format die CSV-Datei ist. Der Inhalt einer CSV-Datei sieht normalerweise wie folgt aus:
+In vielen Fällen erstellt man die Daten nicht selbst, sondern verwendet bereits vorhandene Daten. Daten können in verschiedenen Formaten gespeichert sein, aber das grundlegendste Format ist die CSV-Datei. Der Inhalt einer CSV-Datei sieht normalerweise so aus:
 ```
-Product A,Product B,Product C,
+Produkt A,Produkt B,Produkt C,
 30,21,9,
 35,34,1,
 41,11,11
@@ -64,8 +64,8 @@ Die Funktion ```pd.read_csv()``` hat über 30 Parameter. Wenn beispielsweise die
 ### Daten schreiben
 Mit der Methode ```to_csv()``` kann ein DataFrame in eine CSV-Datei exportiert werden. Sie wird wie folgt verwendet:
 ```python
-(DataFrame-Name).to_csv("(CSV-Dateipfad)")
+(Name des DataFrames).to_csv("(Pfad zur CSV-Datei)")
 ```
 
 ## Lektion 2. Indexieren, Auswählen & Zuweisen
-Die Auswahl bestimmter Werte aus einem Pandas DataFrame oder einer Series ist ein Schritt, der in fast allen Datenverarbeitungsaufgaben vorkommt.
+Die Auswahl bestimmter Werte aus einem Pandas DataFrame oder einer Series ist ein Schritt, der in fast allen Arbeiten mit Daten vorkommt.

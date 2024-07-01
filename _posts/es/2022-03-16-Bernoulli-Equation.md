@@ -1,5 +1,5 @@
 ---
-title: "Ecuación de Bernoulli"
+title: "Ecuación de Bernoulli (Bernoulli Equation)"
 description: >-
   Exploramos la ecuación de Bernoulli y cómo resolver la ecuación logística, una forma especial de la ecuación de Bernoulli.
 categories: [Matemáticas, Ecuación Diferencial]
@@ -7,17 +7,15 @@ tags: [EDO, EDOs de Primer Orden]
 math: true
 ---
 
-## Ecuación de Bernoulli
+## Ecuación de Bernoulli (Bernoulli Equation)
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{ es un número real arbitrario)}  \tag{1} $$
 
 La ecuación de Bernoulli (1) es lineal si $a=0$ o $a=1$, y no lineal en otros casos. Sin embargo, se puede transformar en una ecuación lineal mediante el siguiente proceso.
 
-Si establecemos
+Sea $$ u(x)=[y(x)]^{1-a} $$
 
-$$ u(x)=[y(x)]^{1-a} $$
-
-y diferenciamos, luego sustituimos $y'$ de la ecuación (1), obtenemos
+Diferenciando y sustituyendo $y'$ de la ecuación (1), obtenemos:
 
 $$ \begin{align*}
 u'&=(1-a)y^{-a}y'
@@ -29,17 +27,17 @@ En el lado derecho, $y^{1-a}=u$, por lo que obtenemos la siguiente ecuación dif
 
 $$ u'+(1-a)pu=(1-a)g \tag{2} $$
 
-## Ejemplo: Ecuación Logística
+## Ejemplo: Ecuación Logística (Logistic Equation)
 Resuelve la ecuación logística (una forma especial de la ecuación de Bernoulli).
 
 $$ y'=Ay-By^2 \tag{3} $$
 
 ### Solución
-Si escribimos la ecuación (3) en la forma de la ecuación (1), tenemos
+Escribiendo la ecuación (3) en la forma de la ecuación (1):
 
 $$ y'-Ay=-By^2 $$
 
-Aquí, $a=2$, por lo que $u=y^{1-a}=y^{-1}$. Si diferenciamos esta u y sustituimos $y'$ de la ecuación (3), obtenemos
+Aquí, $a=2$, por lo que $u=y^{1-a}=y^{-1}$. Diferenciando esta u y sustituyendo $y'$ de la ecuación (3):
 
 $$ u'=-y^{-2}y'=-y^{-2}(Ay-By^2)=B-Ay^{-1} $$
 
@@ -47,7 +45,7 @@ El último término es $-Ay^{-1}=-Au$, por lo que obtenemos la siguiente ecuaci�
 
 $$ u'+Au=B $$
 
-Según la fórmula de solución para [ecuaciones diferenciales lineales de primer orden no homogéneas](/posts/Solution-of-First-Order-Linear-ODE/#ecuaciones-diferenciales-lineales-de-primer-orden-no-homogéneas), podemos obtener la siguiente solución general:
+Según la fórmula de solución para [ecuaciones diferenciales lineales de primer orden no homogéneas](/posts/Solution-of-First-Order-Linear-ODE/#ecuación-diferencial-lineal-de-primer-orden-no-homogénea), podemos obtener la siguiente solución general:
 
 $$ u=ce^{-At}+B/A $$
 

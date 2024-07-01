@@ -24,7 +24,7 @@ Many physical concepts such as velocity or acceleration are derivatives, so mode
 
 ## Ordinary Differential Equations (ODE) and Partial Differential Equations (PDE)
 ### Ordinary Differential Equations (ODE)
-**Ordinary Differential Equation (ODE)**: An equation containing the nth-order derivative of an unknown function
+**Ordinary Differential Equation (ODE)**: An equation containing the nth order derivative of an unknown function
 
 Examples:
 
@@ -43,11 +43,11 @@ Example:
 $$ \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0 $$
 
 ## Solution
-If a function $h(x)$ is defined and differentiable on an open interval $(a, b)$, and when $y$ and $y'$ are replaced with $h$ and $h'$ respectively, the given ODE becomes an identity, then the function
+If a function $h(x)$ is defined and differentiable on an open interval $(a, b)$, and when $y$ and $y'$ are replaced with $h$ and $h'$ respectively, the given ordinary differential equation becomes an identity, then the function
 
 $$ y = h(x) $$
 
-is called a **solution** of the given ODE on the interval $(a, b)$, and the curve of $h$ is called a **solution curve**.
+is called a **solution** of the given ordinary differential equation on the interval $(a, b)$, and the curve of $h$ is called a **solution curve**.
 
 Examples:
 
@@ -55,35 +55,35 @@ $$ y'=\cos x \Leftrightarrow y=\sin x+c $$
 
 $$ y'=0.2y \Leftrightarrow y=ce^{0.2t} $$
 
-A solution containing an arbitrary constant $c$ is called a **general solution** of the ODE.
+A solution containing an arbitrary constant $c$ is called a **general solution** of the ordinary differential equation.
 
-Geometrically, the general solution of an ODE is a collection of infinitely many solution curves, with one curve corresponding to each value of the constant $c$. Selecting a specific constant $c$ yields a **particular solution** of the ODE.
+Geometrically, the general solution of an ordinary differential equation is a collection of infinitely many solution curves, with one curve corresponding to each value of the constant $c$. Selecting a specific constant $c$ yields a **particular solution** of the ordinary differential equation.
 
 ## Initial Value Problem
-To obtain a particular solution of a given problem, we need to determine the value of the arbitrary constant $c$. In many cases, this can be found through an **initial condition** such as $y(x_{0})=y_{0}$ or $y(t_{0})=y_{0}$ (it's called an initial condition even if the independent variable is not time or if $t_{0}\neq0$). An ODE with an initial condition is called an **initial value problem**.
+To obtain a particular solution of a given problem, the value of the arbitrary constant $c$ must be determined. In many cases, this can be found through an **initial condition** such as $y(x_{0})=y_{0}$ or $y(t_{0})=y_{0}$ (it's called an initial condition even if the independent variable is not time or if $t_{0}\neq0$). An ordinary differential equation with an initial condition is called an **initial value problem**.
 
 Example:
 
 $$ y'=f(x,y),\qquad y(x_{0})=y_{0} $$
 
 ## Modeling Example: Exponential Decay of Radioactive Material
-Find the amount of radioactive material remaining over time, given an initial amount of 0.5g.
-> Experiments show that radioactive material decomposes at a rate proportional to the amount of material remaining, and thus decays over time.
+Find the remaining amount of radioactive material over time when the initial amount is given as 0.5g.
+> Experiments show that radioactive material decomposes at a rate proportional to the amount of remaining material, and thus decays over time.
 {: .prompt-info }
 
 ### 1. Setting up the Mathematical Model
-Let $y(t)$ represent the amount of material remaining at time $t$. Since $y'(t)$ is proportional to $y(t)$, we obtain the **first-order ODE**:
+Let $y(t)$ represent the amount of material remaining at time $t$. Since $y'(t)$ is proportional to $y(t)$, we obtain the **first-order ordinary differential equation**:
 
 $$ \frac {dy}{dt} = -ky$$ 
 
-where $k>0$ is a constant.
+(where constant $k>0$).
 
 We also know the **initial condition** $y(0)=0.5$. Therefore, we can set up the mathematical model as the following **initial value problem**:
 
 $$ \frac {dy}{dt} = -ky, \qquad y(0)=0.5 $$
 
 ### 2. Mathematical Solution
-The general solution of the ODE we set up is as follows (refer to [Separation of Variables](/posts/Separation-of-Variables/#modeling-example-radiocarbon-dating)):
+The general solution of the differential equation we set up is as follows (refer to [Separation of Variables](/posts/Separation-of-Variables/#modeling-example-radiocarbon-dating)):
 
 $$ y(t)=ce^{-kt} $$
 

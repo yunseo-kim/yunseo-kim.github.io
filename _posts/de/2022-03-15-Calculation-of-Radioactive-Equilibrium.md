@@ -14,17 +14,17 @@ mermaid: true
 > $$\begin{align*}
 > \alpha (t) &= \lambda n(t)
 > \\ &= \alpha_0 e^{-\lambda t}
-> \\ &= \alpha_0 e^{-0.693t/T_{1/2}}
+> \\ &= \alpha_0 e^{-0,693t/T_{1/2}}
 > \end{align*}$$
 {: .prompt-info }
 
 > **Beziehung zwischen Zerfallskonstante, Halbwertszeit und mittlerer Lebensdauer**
 >
 > $$ \begin{align*}
-> T_{1/2}&=\frac {\ln 2}{\lambda} = \frac {0.693}{\lambda}
+> T_{1/2}&=\frac {\ln 2}{\lambda} = \frac {0,693}{\lambda}
 > \\
 > \\ \overline{t}&=\frac {1}{\lambda}
-> \\ &=\frac {T_{1/2}}{0.693}=1.44T_{1/2}
+> \\ &=\frac {T_{1/2}}{0,693}=1,44T_{1/2}
 > \end{align*} $$
 {: .prompt-info }
 
@@ -42,15 +42,15 @@ $$ \alpha (t)=\lambda n(t) \tag{1}$$
 ### Curie (Ci)
 - Traditionelle Einheit, die vor der Verwendung der Becquerel-Einheit verwendet wurde
 - Radioaktivität von 1g Radium-226
-- $3.7\times 10^{10}$ Kernzerfälle pro Sekunde ($3.7\times 10^{10}\text{Bq}$)
+- $3,7\times 10^{10}$ Kernzerfälle pro Sekunde ($3,7\times 10^{10}\text{Bq}$)
 
 ### Becquerel (Bq)
 - Internationale Standardeinheit (SI)
 - Ein Kernzerfall pro Sekunde
-- $1 \text{Bq} = 2.703\times 10^{-11}\text{Ci} = 27\text{pCi}$
+- $1 \text{Bq} = 2,703\times 10^{-11}\text{Ci} = 27\text{pCi}$
 
 ## Berechnung der Änderung der Radioaktivität mit der Zeit
-Da $\lambda n(t)$ Kerne in der Zeit dt zerfallen, kann die Abnahme der nicht zerfallenen Kerne in der Probe während dt wie folgt ausgedrückt werden:
+Da $\lambda n(t)$ Kerne während dt zerfallen, kann die Abnahme der nicht zerfallenen Kerne in der Probe während dt wie folgt ausgedrückt werden:
 
 $$ -dn(t)=\lambda n(t)dt $$
 
@@ -72,11 +72,11 @@ $$ \alpha_0/2=\alpha_0e^{-\lambda T_{1/2}} $$
 
 Wenn wir auf beiden Seiten den Logarithmus nehmen und nach der Halbwertszeit $T_{1/2}$ auflösen, erhalten wir:
 
-$$ T_{1/2}=\frac {\ln 2}{\lambda}=\frac {0.693}{\lambda} \tag{4}$$
+$$ T_{1/2}=\frac {\ln 2}{\lambda}=\frac {0,693}{\lambda} \tag{4}$$
 
 Wenn wir diese Gleichung nach $\lambda$ auflösen und in Gleichung (3) einsetzen, erhalten wir:
 
-$$ \alpha (t)=\alpha_0e^{-0.693t/T_{1/2}} \tag{5} $$
+$$ \alpha (t)=\alpha_0e^{-0,693t/T_{1/2}} \tag{5} $$
 
 Gleichung (5) ist oft nützlicher für Berechnungen des radioaktiven Zerfalls als Gleichung (3), da häufiger Halbwertszeiten als Zerfallskonstanten angegeben werden.
 
@@ -86,7 +86,7 @@ $$ \overline{t}=1/\lambda $$
 
 Aus Gleichung (3) können wir erkennen, dass die Radioaktivität während einer mittleren Lebensdauer auf $1/e$ ihres Anfangswertes abfällt. Aus Gleichung (4) ergibt sich folgende Beziehung zwischen mittlerer Lebensdauer und Halbwertszeit:
 
-$$ \overline{t}=\frac {T_{1/2}}{0.693}=1.44T_{1/2} \tag{6} $$
+$$ \overline{t}=\frac {T_{1/2}}{0,693}=1,44T_{1/2} \tag{6} $$
 
 ### ※ Herleitung der mittleren Lebensdauer $\overline{t}$
 
@@ -100,7 +100,7 @@ $$ \begin{align*}
 \end{align*}$$
 
 ## Beispiel: Radioaktive Zerfallskette 1
-Angenommen, ein Radionuklid wird mit einer Rate von $R$ Atomen/s erzeugt. Diese Kerne beginnen sofort nach ihrer Entstehung zu zerfallen. Berechnen Sie die Radioaktivität dieses Nuklids zu einem beliebigen Zeitpunkt t.
+Nehmen wir an, dass ein Radionuklid mit einer Rate von $R$ Atomen/s erzeugt wird. Diese Kerne beginnen sofort nach ihrer Entstehung zu zerfallen. Berechnen Sie die Radioaktivität dieses Nuklids zu einem beliebigen Zeitpunkt t.
 ```mermaid
 flowchart LR
 	Start[?] -- R --> A[Mathematisches Modell]
@@ -126,7 +126,7 @@ Da $\lambda e^{\lambda t}=\frac {d}{dt} e^{\lambda t}$, können wir dies wie fol
 
 $$ e^{\lambda t}\frac {dn}{dt}+\left(\frac {d}{dt} e^{\lambda t}\right)n = Re^{\lambda t} $$
 
-Durch Integration erhalten wir die allgemeine Lösung:
+Durch Integration beider Seiten erhalten wir die allgemeine Lösung:
 
 $$ e^{\lambda t}n=\frac {R}{\lambda}e^{\lambda t}+c $$
 
@@ -143,11 +143,11 @@ Daher lautet die spezielle Lösung für die gegebene Situation:
 
 $$ n = n_0e^{-\lambda t}+\frac {R}{\lambda}(1-e^{-\lambda t}) \tag{7} $$
 
-Durch Multiplikation beider Seiten mit $\lambda$ können wir die Radioaktivität dieses Nuklids berechnen:
+Wenn wir beide Seiten dieser Gleichung mit $\lambda$ multiplizieren, erhalten wir die Radioaktivität dieses Nuklids:
 
 $$ \alpha = \alpha_0e^{-\lambda t}+R(1-e^{-\lambda t}) \tag{8} $$
 
-Das bedeutet, für $t\to\infty$ konvergiert $\alpha$ gegen $\alpha_{\text{max}}=R$ und $n$ gegen $n_{\text{max}}=R/\lambda$.
+Das bedeutet, dass für $t\to\infty$ die Radioaktivität gegen $\alpha_{\text{max}}=R$ und die Anzahl der Kerne gegen $n_{\text{max}}=R/\lambda$ konvergiert.
 
 ## Beispiel: Radioaktive Zerfallskette 2
 Berechnen Sie die Radioaktivität des Radionuklids B in der folgenden Zerfallskette:
@@ -178,7 +178,7 @@ Da $\lambda_B e^{\lambda_B t}=\frac {d}{dt} e^{\lambda_b t}$, können wir dies w
 
 $$ e^{\lambda_B t}\frac {dn_B}{dt} + \left(\frac {d}{dt} e^{\lambda_B t}\right)n_B = n_{A0}\lambda_A e^{(\lambda_B-\lambda_A)t} $$
 
-Durch Integration erhalten wir:
+Durch Integration beider Seiten erhalten wir:
 
 $$ e^{\lambda_B t}n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{(\lambda_B-\lambda_A)t}+c $$
 

@@ -1,5 +1,5 @@
 ---
-title: "Resumen de la sintaxis de Markdown en GitHub"
+title: "Resumen de la sintaxis de Markdown de GitHub"
 description: >-
   Exploramos qué es Markdown y resumimos la sintaxis principal de Markdown según GitHub Flavored Markdown para el alojamiento de blogs en GitHub Pages.
 categories:
@@ -14,16 +14,16 @@ Para utilizar GitHub Pages, es necesario conocer la sintaxis de **markdown**.
 Este artículo se basa en los documentos oficiales de GitHub [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) y [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ## 1. ¿Qué es Markdown?
-> **Markdown** es un lenguaje de marcado ligero basado en texto plano. Se utiliza para crear documentos con formato usando texto plano y se caracteriza por tener una sintaxis más sencilla y simple que los lenguajes de marcado comunes. Se convierte fácilmente a HTML y texto enriquecido (RTF), por lo que se usa ampliamente en archivos README distribuidos con software y en publicaciones en línea.
+> **Markdown** es un lenguaje de marcado ligero basado en texto plano. Se utiliza para crear documentos con formato utilizando texto plano y se caracteriza por tener una sintaxis más sencilla y simple que los lenguajes de marcado comunes. Se convierte fácilmente a HTML y texto enriquecido (RTF), por lo que se usa ampliamente en archivos README distribuidos con software y en publicaciones en línea.
 >> John Gruber creó el lenguaje Markdown en 2004, con una importante colaboración de Aaron Swartz en la sintaxis, con el objetivo de permitir a las personas escribir usando un formato de texto plano fácil de leer y escribir, y opcionalmente convertirlo a XHTML (o HTML) estructuralmente válido.
 
--[Wikipedia, Markdown](https://es.wikipedia.org/wiki/Markdown)
+-[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. Sintaxis de Markdown
 Como no hay un estándar establecido para Markdown, la sintaxis detallada puede variar ligeramente según dónde se use. La sintaxis de Markdown resumida aquí se basa en [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
-### 2.1. Saltos de línea y párrafos
-En Markdown, una sola pulsación de la tecla Enter no se reconoce como un salto de línea.
+### 2.1. Saltos de línea, separación de párrafos
+En Markdown, presionar la tecla Enter una vez no se reconoce como un salto de línea.
 ~~~
 Primera oración.
 Segunda oración.
@@ -43,7 +43,7 @@ Primera oración.
 Segunda oración.  
 Tercera oración.
 
-Los párrafos se separan con una línea en blanco (dos pulsaciones de la tecla Enter).
+Los párrafos se separan con una línea en blanco (presionando Enter dos veces).
 ~~~
 Un párrafo.
 
@@ -122,7 +122,7 @@ git add
 git commit
 ```
 
-También se puede especificar el lenguaje de programación para activar el resaltado de sintaxis.
+También se puede activar el resaltado de sintaxis especificando el lenguaje de programación.
 ~~~
 ```ruby
 require 'redcarpet'
@@ -144,7 +144,7 @@ puts markdown.to_html
 [GitHub Pages](https://pages.github.com/)  
 <https://pages.github.com/>
 
-También se pueden usar enlaces de ruta relativa a otros archivos dentro del repositorio. La sintaxis es la misma que en la terminal.
+También se pueden usar enlaces de ruta relativa que apunten a otros archivos dentro del repositorio. El uso es el mismo que en la terminal.
 ```
 [README](../README.md)
 ```
@@ -195,7 +195,7 @@ Para marcar una tarea como completada, se usa \[x].
 
 ### 2.11. Inserción de imágenes
 ```
-Método: ![(opcional)descripción de la imagen](url){(opcional)opciones adicionales}
+Método: ![(Opcional)Descripción de la imagen](url){(Opcional)Opciones adicionales}
 ![GitHub Logo](/images/logo.png)
 ![GitHub Logo](/images/logo.png){: .align-center}
 ![GitHub Logo](/images/logo.png){: width="50%" height="50%"}

@@ -2,8 +2,8 @@
 title: "Ecuación Diferencial Exacta y Factor Integrante"
 description: >-
   Exploramos los métodos para determinar y resolver ecuaciones diferenciales exactas, así como el concepto de factor integrante.
-categories: [Mathematics, Differential Equation]
-tags: [ODE, First-Order ODEs]
+categories: [Matemáticas, Ecuación Diferencial]
+tags: [EDO, EDOs de Primer Orden]
 math: true
 mermaid: true
 ---
@@ -43,16 +43,16 @@ entonces
 
 $$ M(x,y)dx+N(x,y)dy=\frac{\partial u}{\partial x}dx+\frac{\partial u}{\partial y}dy=du \tag{3} $$
 
-y en este caso, la ecuación diferencial ordinaria $M(x,y)dx+N(x,y)dy=0$ se denomina **ecuación diferencial exacta**. Entonces, esta ecuación diferencial ordinaria se puede escribir como:
+y en este caso, la ecuación diferencial ordinaria $M(x,y)dx+N(x,y)dy=0$ se llama **ecuación diferencial exacta**. Entonces, esta ecuación diferencial ordinaria se puede escribir como:
 
 $$ du=0 $$
 
-y al integrar, obtenemos directamente la solución general en la forma:
+y al integrar, obtenemos inmediatamente la solución general en la forma:
 
 $$ u(x,y)=c \tag{4} $$
 
 ## Determinación de una Ecuación Diferencial Exacta
-Supongamos que en una región cerrada del plano xy, con una curva cerrada que no se interseca a sí misma como frontera, $M$ y $N$ y sus derivadas parciales de primer orden son continuas. Revisando la condición (2) nuevamente, tenemos:
+Supongamos que en una región cerrada del plano $xy$, con una curva cerrada que no se interseca a sí misma como frontera, $M$ y $N$ y sus derivadas parciales de primer orden son continuas. Revisando la condición (2) nuevamente, tenemos:
 
 $$ \begin{align*}
 \frac {\partial u}{\partial x}&=M(x,y) \tag{2a}
@@ -70,24 +70,24 @@ Dado que asumimos continuidad, las dos derivadas parciales de segundo orden son 
 
 $$ \therefore \frac {\partial M}{\partial y}=\frac {\partial N}{\partial x} \tag{5}$$
 
-Por lo tanto, podemos ver que la condición (5) es una condición necesaria para que la ecuación diferencial (1) sea exacta, y aunque no lo hemos demostrado aquí, de hecho, también es una condición suficiente. Es decir, podemos determinar si una ecuación diferencial es exacta verificando si cumple esta condición.
+Por lo tanto, podemos ver que la condición (5) es una condición necesaria para que la ecuación diferencial ordinaria (1) sea exacta, y aunque no lo hemos demostrado aquí, de hecho, también es una condición suficiente. Es decir, podemos determinar si una ecuación diferencial es exacta verificando si cumple esta condición.
 
-## Resolución de Ecuaciones Diferenciales Exactas
-Integrando la ecuación (2a) con respecto a x, considerando y como una constante, obtenemos:
+## Resolución de una Ecuación Diferencial Exacta
+Si integramos la ecuación (2a) con respecto a $x$, considerando $y$ como una constante, obtenemos:
 
 $$ u = \int M(x,y) dx + k(y) \tag{6} $$
 
-Aquí, $k(y)$ actúa como una constante de integración, ya que consideramos y como una constante. Ahora, diferenciamos la ecuación (6) con respecto a y, considerando x como una constante, para obtener $\partial u/\partial y$:
+Aquí, $k(y)$ actúa como una constante de integración, ya que consideramos $y$ como una constante. Ahora, diferenciamos la ecuación (6) con respecto a $y$, considerando $x$ como una constante, para obtener $\partial u/\partial y$:
 
 $$ \frac{\partial u}{\partial y} = \frac{\partial}{\partial y}\int M(x,y) dx + \frac{dk}{dy} $$
 
-Comparando esta ecuación con (2b), podemos determinar $dk/dy$:
+Ahora comparamos esta ecuación con (2b) para determinar $dk/dy$:
 
 $$ \frac{\partial}{\partial y}\int M(x,y) dx + \frac{dk}{dy} = N(x,y) $$
 
 $$ \frac{dk}{dy} = N(x,y) - \frac{\partial}{\partial y}\int M(x,y) dx $$
 
-Finalmente, integramos esta ecuación para determinar $k(y)$ y la sustituimos en la ecuación (6) para obtener la solución implícita $u(x,y)=c$:
+Finalmente, integramos esta ecuación para determinar $k(y)$, la sustituimos en la ecuación (6), y obtenemos la solución implícita $u(x,y)=c$:
 
 $$ k(y) = \int N(x,y)dy - \int \left(\frac{\partial}{\partial y}\int Mdx\right)dy + c^* $$
 
@@ -109,7 +109,7 @@ entonces podemos multiplicar la ecuación diferencial dada (7) por la función $
 
 $$ FP\ dx+FQ\ dy = 0 \tag{9} $$
 
-En este caso, la función $F(x,y)$ se denomina **factor integrante** de la ecuación (7).
+En este caso, la función $F(x,y)$ se llama **factor integrante** de la ecuación (7).
 
 ## Método para Encontrar el Factor Integrante
 Aplicando la regla del producto a la ecuación (8) y usando subíndices para denotar derivadas parciales, obtenemos:
@@ -129,7 +129,7 @@ $$ \begin{align*}
 
 Por lo tanto, se cumple lo siguiente:
 
-> Para una ecuación diferencial dada (7), si el lado derecho de la ecuación (10), $R$, es una función solo de x, entonces la ecuación (7) tiene un factor integrante $F=F(x)$.
+> Para la ecuación diferencial dada (7), si el lado derecho de la ecuación (10), $R$, es una función solo de $x$, entonces la ecuación (7) tiene un factor integrante $F=F(x)$.
 >
 > $$ F(x)=e^{\int R(x)dx}, \quad \text{donde }R=\frac{1}{Q}\left(\frac{\partial P}{\partial y}-\frac{\partial Q}{\partial x} \right) \tag{11} $$
 {: .prompt-info }
@@ -140,7 +140,7 @@ $$ \frac{1}{F^*} \frac{dF^*}{dy} = \frac{1}{P}\left(\frac{\partial Q}{\partial x
 
 Por lo tanto, se cumple lo siguiente:
 
-> Para una ecuación diferencial dada (7), si el lado derecho de la ecuación (12), $R^*$, es una función solo de y, entonces la ecuación (7) tiene un factor integrante $F^\*=F^\*(y)$.
+> Para la ecuación diferencial dada (7), si el lado derecho de la ecuación (12), $R^*$, es una función solo de $y$, entonces la ecuación (7) tiene un factor integrante $F^\*=F^\*(y)$.
 >
 > $$ F^*(y)=e^{\int R^*(y)dy}, \quad \text{donde }R^*=\frac{1}{P}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right) \tag{13} $$
 {: .prompt-info }

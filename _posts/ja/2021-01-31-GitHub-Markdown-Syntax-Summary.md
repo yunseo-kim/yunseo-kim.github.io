@@ -14,13 +14,13 @@ GitHub Pagesを活用するためには、**markdown**文法について知る�
 GitHub公式ドキュメントの[Mastering Markdown](https://guides.github.com/features/mastering-markdown/)と[Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)を参考に作成しました。
 
 ## 1. マークダウンとは
-> **マークダウン(markdown)**は一般テキストベースの軽量マークアップ言語です。一般テキストで書式付きの文書を作成するのに使用され、一般的なマークアップ言語に比べて文法が簡単で簡潔なのが特徴です。HTMLやリッチテキスト(RTF)などの書式付き文書に簡単に変換できるため、アプリケーションソフトウェアと一緒に配布されるREADMEファイルやオンライン投稿などによく使用されます。
->> ジョン・グルーバーは2004年に文法面でアーロン・スワーツと重要な協力を通じてマークダウン言語を作成し、人々が読みやすく書きやすいプレーンテキストフォーマットを使用して書くことができ、構造的に有効なXHTML（またはHTML）に選択的に変換できるようにすることが目標です。
+> **マークダウン(markdown)**は、一般的なテキストベースの軽量マークアップ言語です。一般的なテキストで書式付きの文書を作成するのに使用され、一般的なマークアップ言語に比べて文法が簡単で簡潔なのが特徴です。HTMLやリッチテキスト(RTF)などの書式付き文書に簡単に変換できるため、アプリケーションソフトウェアと一緒に配布されるREADMEファイルやオンライン投稿などによく使用されます。
+>> ジョン・グルーバーは2004年に、文法面でアーロン・スワーツとの重要な協力を通じてマークダウン言語を作成しました。人々が読みやすく書きやすいプレーンテキストフォーマットを使用して書くことができ、構造的に有効なXHTML（またはHTML）に選択的に変換できるようにすることが目標です。
 
--[ウィキペディア、マークダウン](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)
+-[ウィキペディア、マークダウン](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. マークダウン文法
-マークダウンは決まった標準がないため、詳細な文法は使用場所によって少しずつ異なる場合があります。ここでまとめたマークダウン文法は[GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)基準です。
+マークダウンは決まった標準がないため、細かい文法は使用場所によって少しずつ異なる場合があります。ここでまとめたマークダウン文法は[GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)基準です。
 
 ### 2.1. 改行、段落の区切り
 マークダウンではエンターキー1回は改行として認識されません。
@@ -144,7 +144,7 @@ puts markdown.to_html
 [GitHub Pages](https://pages.github.com/)  
 <https://pages.github.com/>
 
-リポジトリ内の他のファイルを指す相対パスリンクも使用できます。使用方法はターミナルと同じです。
+リポジトリ内の他のファイルを指す相対パスリンクも使用できます。使用方法はターミナルでと同じです。
 ```
 [README](../README.md)
 ```

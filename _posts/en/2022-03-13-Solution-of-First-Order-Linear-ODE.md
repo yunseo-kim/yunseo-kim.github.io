@@ -1,5 +1,5 @@
 ---
-title: "Solving First-Order Linear Ordinary Differential Equations"
+title: "Solution of First-Order Linear Ordinary Differential Equations"
 description: >-
   Let's explore the method of solving first-order linear ordinary differential equations.
 categories: [Mathematics, Differential Equation]
@@ -7,19 +7,19 @@ tags: [ODE, First-Order ODEs]
 math: true
 ---
 
-## First-Order Linear Ordinary Differential Equations
+## First-Order Linear Ordinary Differential Equation
 If a first-order ordinary differential equation can be algebraically brought to the form
 
 $$ y'+p(x)y=r(x) \tag{1} $$
 
-it is called **linear**, otherwise it is **nonlinear**.
+it is called **linear**, otherwise it is called **nonlinear**.
 
 The form in equation (1) is called the **standard form** of a first-order linear ordinary differential equation. If the first term of a given first-order linear ordinary differential equation is $f(x)y'$, we can obtain the standard form by dividing both sides of the equation by $f(x)$.
 
 In engineering, $r(x)$ is often called the **input**, and $y(x)$ is called the **output** or the **response** to the input (and initial conditions).
 
-## Homogeneous Linear Ordinary Differential Equations
-Let's say $J$ is an interval $a<x<b$ where we want to solve equation (1). If $r(x)\equiv 0$ for the interval $J$ in equation (1), then
+## Homogeneous Linear Ordinary Differential Equation
+Let's say $J$ is some interval $a<x<b$ where we want to solve equation (1). If $r(x)\equiv 0$ for the interval $J$ in equation (1), then
 
 $$ y'+p(x)y=0 \tag{2}$$
 
@@ -33,8 +33,8 @@ $$ y(x) = ce^{-\int p(x)dx} \tag{3}$$
 
 When $c=0$, we get the **trivial solution** $y(x)=0$.
 
-## Nonhomogeneous Linear Ordinary Differential Equations
-If $r(x)\not\equiv 0$ for the interval $J$, it is called **nonhomogeneous**. It is known that the nonhomogeneous linear ordinary differential equation (1) has an integrating factor that depends only on $x$. This integrating factor $F(x)$ can be found using equation (11) from the [method of finding integrating factors](/posts/Exact-Differential-Equation-and-Integrating-Factor/#method-of-finding-integrating-factors), or it can be found directly as follows.
+## Nonhomogeneous Linear Ordinary Differential Equation
+If $r(x)\not\equiv 0$ in the interval $J$, it is called **nonhomogeneous**. It is known that the nonhomogeneous linear ordinary differential equation (1) has an integrating factor that depends only on $x$. This integrating factor $F(x)$ can be found using equation (11) from the [method of finding integrating factors](/posts/Exact-Differential-Equation-and-Integrating-Factor/#method-of-finding-integrating-factors), or it can be found directly as follows.
 
 Multiplying equation (1) by $F(x)$, we get
 
@@ -50,14 +50,14 @@ $$ \log |F|=h=\int p\ dx $$
 
 $$ F = e^h $$
 
-Substituting into equation (1*),
+Substituting this into equation (1*), we get
 
 $$ e^hy'+h'e^hy=e^hy'+(e^h)'=(e^hy)'=re^h $$
 
-Integrating,
+Integrating, we get
 
 $$ e^hy=\int e^hr\ dx + c $$
-and dividing by $e^h$, we get the desired solution formula.
+and dividing by $e^h$, we obtain the desired solution formula.
 
 $$ y(x)=e^{-h}\left(\int e^hr\ dx + c\right),\qquad h=\int p(x)\ dx \tag{4} $$
 
@@ -72,7 +72,7 @@ we can see that:
 $$ \text{Total output}=\text{Response to input }r+\text{Response to initial condition} \tag{5} $$
 
 ## Example: RL Circuit
-Suppose an RL circuit consists of a battery with electromotive force $E=48\textrm{V}$, a resistor with $R=11\mathrm{\Omega}$, and an inductor with $L=0.1\text{H}$, and the initial current is 0. Construct the model for this RL circuit and solve the resulting ordinary differential equation for the current $I(t)$.
+Suppose an RL circuit consists of a battery with electromotive force $E=48\textrm{V}$, a resistor with $R=11\mathrm{\Omega}$, and an inductor with $L=0.1\text{H}$, and the initial current is 0. Construct the model of this RL circuit and solve the resulting ordinary differential equation for the current $I(t)$.
 > **Ohm's law**  
 > The current $I$ in the circuit causes a voltage drop $RI$ across the resistor.
 {: .prompt-info }
@@ -86,7 +86,7 @@ Suppose an RL circuit consists of a battery with electromotive force $E=48\textr
 {: .prompt-info }
 
 ### Solution
-According to the above laws, the model for the RL circuit is $LI'+RI=E(t)$, and in standard form:
+According to the above laws, the model of the RL circuit is $LI'+RI=E(t)$, and in standard form:
 
 $$ I'+\frac{R}{L}I=\frac{E(t)}{L} \tag{6}$$
 

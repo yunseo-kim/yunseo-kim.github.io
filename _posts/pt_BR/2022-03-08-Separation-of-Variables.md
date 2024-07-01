@@ -1,13 +1,13 @@
 ---
-title: "Separação de Variáveis"
+title: "Método de Separação de Variáveis"
 description: >-
-  Vamos aprender sobre o método de separação de variáveis e apresentar alguns exemplos relacionados.
-categories: [Mathematics, Differential Equation]
-tags: [ODE, First-Order ODEs]
+  Vamos explorar o método de separação de variáveis e apresentar alguns exemplos relacionados.
+categories: [Matemática, Equação Diferencial]
+tags: [EDO, EDOs de Primeira Ordem]
 math: true
 ---
 
-## Separação de Variáveis
+## Método de Separação de Variáveis
 **Equação separável**: Uma equação que pode ser expressa na forma $g(y)y'=f(x)$ através de manipulação algébrica.
 
 Integrando ambos os lados de uma equação separável $g(y)y'=f(x)$ em relação a $x$, obtemos:
@@ -18,11 +18,11 @@ Como $y'dx=dy$, temos:
 
 $$ \int g(y)dy = \int f(x)dx + c $$
 
-Assim, podemos separar as expressões em termos de $x$ e $y$ nos lados direito e esquerdo, respectivamente. Se $f$ e $g$ forem funções contínuas, podemos calcular essas integrais para obter a solução geral da equação diferencial dada. Este método de resolução é chamado de **separação de variáveis**.
+Assim, podemos separar a expressão em termos de $x$ e a expressão em termos de $y$ nos lados direito e esquerdo, respectivamente. Se $f$ e $g$ forem funções contínuas, podemos calcular essas integrais para obter a solução geral da equação diferencial dada. Este método de resolução é chamado de **método de separação de variáveis**.
 
 ## Exemplo de Modelagem: Datação por Radiocarbono
 Oetzi é uma múmia do Neolítico descoberta nos Alpes de Oetztal em 1991. Se a proporção de carbono-14 em relação ao carbono-12 nesta múmia é 52,5% da de um organismo vivo, aproximadamente quando Oetzi viveu e morreu?
-> A proporção de carbono-14 radioativo em relação ao carbono-12 é constante na atmosfera e em organismos vivos. Quando um organismo morre, a absorção de carbono-14 pela respiração e alimentação cessa, mas o decaimento do carbono-14 continua, reduzindo assim a proporção de carbono radioativo. Portanto, a idade de um fóssil pode ser estimada comparando sua proporção de carbono radioativo com a da atmosfera. A meia-vida do carbono-14 é de 5715 anos.
+> A proporção de carbono-14 radioativo em relação ao carbono-12 é constante na atmosfera e nos organismos vivos. Quando um organismo morre, a absorção de carbono-14 pela respiração e alimentação cessa, mas o decaimento do carbono-14 continua, resultando em uma diminuição da proporção de carbono radioativo. Assim, a idade de um fóssil pode ser estimada comparando sua proporção de carbono radioativo com a proporção atmosférica. A meia-vida do carbono-14 é de 5715 anos.
 {: .prompt-info }
 
 ### Solução
@@ -88,7 +88,7 @@ Seja $T(t)$ a temperatura interna do edifício e $T_A$ a temperatura externa. En
 $$ \frac {dT}{dt}=k(T-T_A) $$
 
 ### 2. Solução Geral
-Como sabemos apenas que $T_A$ varia entre 10°C e 4°C, mas não conhecemos seu valor exato, não podemos resolver a equação estabelecida anteriormente. Nestes casos, *pode ser útil simplificar a situação para um problema mais fácil*. A média dos dois valores conhecidos é 7°C, então vamos assumir que a função desconhecida $T_A$ é uma função constante $T_A=7$. Mesmo que não seja exato, podemos esperar obter um valor aproximado da temperatura interna do edifício $T$ às 6h.
+Como sabemos apenas que $T_A$ varia entre 10°C e 4°C, mas não conhecemos seu valor exato, não podemos resolver a equação estabelecida anteriormente. Nestes casos, *pode ser útil simplificar a situação para um problema mais fácil*. A média dos dois valores conhecidos é 7°C, então vamos assumir que a função desconhecida $T_A$ é uma função constante $T_A=7$. Mesmo que não seja exato, podemos esperar obter um valor aproximado da temperatura interna do edifício $T$ às 6h, que é o que queremos determinar.
 
 Para a constante $T_A=7$, a equação diferencial ordinária estabelecida anteriormente é separável. Separando as variáveis, integrando e aplicando a função exponencial, podemos obter a solução geral:
 
@@ -174,7 +174,7 @@ $$ h_p(t)=(15.00-0.000332t)^2 $$
 $$ t = 15.00/0.000332 = 45181 \text{[s]} = 12.6 \text{[h]} $$
 
 ## Transformação para a Forma Separável
-Em alguns casos, é possível transformar uma equação diferencial ordinária não separável em uma separável introduzindo uma nova função desconhecida de $y$.
+Em alguns casos, equações diferenciais ordinárias não separáveis podem ser transformadas em separáveis introduzindo uma nova função desconhecida de $y$.
 
 $$ y'=f\left(\frac {y}{x}\right) $$
 

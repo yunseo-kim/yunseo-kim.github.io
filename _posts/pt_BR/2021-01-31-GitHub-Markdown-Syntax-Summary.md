@@ -10,14 +10,14 @@ toc: true
 toc_sticky: true
 ---
 
-Para utilizar o GitHub Pages, é necessário conhecer a sintaxe **markdown**.
-Este texto foi escrito com base nos documentos oficiais do GitHub [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) e [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+É necessário conhecer a sintaxe **markdown** para utilizar o GitHub Pages.
+Este texto foi escrito com base nos documentos oficiais do GitHub [Dominando o Markdown](https://guides.github.com/features/mastering-markdown/) e [Sintaxe básica de escrita e formatação](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ## 1. O que é Markdown
-> **Markdown** é uma linguagem de marcação leve baseada em texto simples. É usada para criar documentos formatados usando texto simples e se caracteriza por ter uma sintaxe mais simples e fácil em comparação com linguagens de marcação comuns. É frequentemente usada em arquivos README distribuídos com software e em postagens online, pois pode ser facilmente convertida em HTML e Rich Text Format (RTF).
->> John Gruber criou a linguagem Markdown em 2004, com significativa colaboração de Aaron Swartz na sintaxe, com o objetivo de permitir que as pessoas escrevam usando um formato de texto simples fácil de ler e escrever, com a opção de converter para XHTML (ou HTML) estruturalmente válido.
+> **Markdown** é uma linguagem de marcação leve baseada em texto simples. É usada para criar documentos formatados usando texto simples e se caracteriza por ter uma sintaxe mais fácil e simples em comparação com linguagens de marcação comuns. É muito utilizada em arquivos README distribuídos com software e em postagens online, pois pode ser facilmente convertida em HTML e Rich Text Format (RTF), entre outros formatos de documentos.
+>> John Gruber criou a linguagem Markdown em 2004, com uma colaboração significativa de Aaron Swartz na sintaxe, com o objetivo de permitir que as pessoas "escrevam usando um formato de texto simples fácil de ler e escrever", e que possa ser opcionalmente convertido em XHTML (ou HTML) estruturalmente válido.
 
--[Wikipedia, Markdown](https://pt.wikipedia.org/wiki/Markdown)
+-[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. Sintaxe Markdown
 Como não há um padrão definido para Markdown, a sintaxe detalhada pode variar um pouco dependendo de onde é usada. A sintaxe Markdown resumida aqui é baseada no [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
@@ -43,7 +43,7 @@ Primeira frase.
 Segunda frase.  
 Terceira frase.
 
-Parágrafos são separados por uma linha em branco (pressionar Enter duas vezes).
+Os parágrafos são separados por uma linha em branco (pressionar Enter duas vezes).
 ~~~
 Um parágrafo.
 
@@ -72,40 +72,40 @@ Existem 6 níveis no total.
 
 ### 2.3. Ênfase
 ```
-*This text is italicized*
-_This is italicized too_
+*Este texto está em itálico*
+_Este também está em itálico_
 
-**This is bold text**
-__This is bold text too__
+**Este texto está em negrito**
+__Este também está em negrito__
 
-~~This was mistaken text~~
+~~Este texto foi riscado~~
 
-_You **can** combine them_
+_Você **pode** combiná-los_
 
-***All this text is important***
+***Todo este texto é importante***
 ```
-*This text is italicized*  
-_This is italicized too_
+*Este texto está em itálico*  
+_Este também está em itálico_
 
-**This is bold text**  
-__This is bold text too__
+**Este texto está em negrito**  
+__Este também está em negrito__
 
-~~This was mistaken text~~
+~~Este texto foi riscado~~
 
-_You **can** combine them_
+_Você **pode** combiná-los_
 
-***All this text is important***
+***Todo este texto é importante***
 
 ### 2.4. Citação de texto
 Use \>.
 ```
-> This is a first blockquote.
->> This is a second blockquote.
->>> This is a third blockquote.
+> Esta é uma citação de primeiro nível.
+>> Esta é uma citação de segundo nível.
+>>> Esta é uma citação de terceiro nível.
 ```
-> This is a first blockquote.
->> This is a second blockquote.
->>> This is a third blockquote.
+> Esta é uma citação de primeiro nível.
+>> Esta é uma citação de segundo nível.
+>>> Esta é uma citação de terceiro nível.
 
 ### 2.5. Citação de código
 Use \``` ou \~~~.
@@ -173,47 +173,47 @@ Use números.
 
 ### 2.9. Lista aninhada
 ```
-1. First list item
-   - First nested list item
-     - Second nested list item
+1. Primeiro item da lista
+   - Primeiro item da lista aninhada
+     - Segundo item da lista aninhada
 ```
-1. First list item
-   - First nested list item
-     - Second nested list item
+1. Primeiro item da lista
+   - Primeiro item da lista aninhada
+     - Segundo item da lista aninhada
 
 ### 2.10. Lista de tarefas
 Para criar uma lista de tarefas, adicione \[ ] antes de cada item.
 Para marcar uma tarefa como concluída, use \[x].
 ```
-- [x] Finish my changes
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
+- [x] Finalizar minhas alterações
+- [ ] Enviar meus commits para o GitHub
+- [ ] Abrir um pull request
 ```
-- [x] Finish my changes
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
+- [x] Finalizar minhas alterações
+- [ ] Enviar meus commits para o GitHub
+- [ ] Abrir um pull request
 
 ### 2.11. Anexar imagens
 ```
 Método: ![(opcional)descrição da imagem](url){(opcional)opções adicionais}
-![GitHub Logo](/images/logo.png)
-![GitHub Logo](/images/logo.png){: .align-center}
-![GitHub Logo](/images/logo.png){: width="50%" height="50%"}
+![Logo do GitHub](/images/logo.png)
+![Logo do GitHub](/images/logo.png){: .align-center}
+![Logo do GitHub](/images/logo.png){: width="50%" height="50%"}
 ```
 
 ### 2.12. Criar tabelas
-Use | e - para criar tabelas.
+Você pode criar tabelas usando | e -.
 Deixe uma linha em branco antes da tabela para que ela seja exibida corretamente.
 Use pelo menos três - para que seja reconhecido corretamente.
 ```
 
-| Left-aligned | Center-aligned | Right-aligned |
+| Alinhado à esquerda | Centralizado | Alinhado à direita |
 | :---         |     :---:      |          ---: |
 | git status   | git status     | git status    |
 | git diff     | git diff       | git diff      |
 ```
 
-| Left-aligned | Center-aligned | Right-aligned |
+| Alinhado à esquerda | Centralizado | Alinhado à direita |
 | :---         |     :---:      |          ---: |
 | git status   | git status     | git status    |
 | git diff     | git diff       | git diff      |

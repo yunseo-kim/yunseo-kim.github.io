@@ -1,5 +1,5 @@
 ---
-title: "Exact Differential Equation and Integrating Factor"
+title: "Exact Differential Equations and Integrating Factors"
 description: >-
   Learn about the identification and solution methods for exact differential equations, as well as integrating factors.
 categories: [Mathematics, Differential Equation]
@@ -16,7 +16,7 @@ flowchart TD
 
 	ODE --> IsExact
 
-	Solve[Apply solution method for exact differential equation]
+	Solve[Apply solution method for exact differential equations]
 	CheckR{Check R and R*}
 
 	IsExact -->|If exact| Solve
@@ -30,7 +30,7 @@ flowchart TD
 	DetermineFactor --> Solve
 ```
 
-## Exact Differential Equation
+## Exact Differential Equations
 A first-order ordinary differential equation $M(x,y)+N(x,y)y'=0$ can be written as:
 
 $$ M(x,y)dx+N(x,y)dy=0 \tag{1} $$
@@ -77,7 +77,7 @@ Integrating equation (2a) with respect to x, treating y as a constant:
 
 $$ u = \int M(x,y) dx + k(y) \tag{6} $$
 
-Here, $k(y)$ acts as an integration constant. Now, treating x as a constant and differentiating equation (6) with respect to y to find $\partial u/\partial y$:
+Here, $k(y)$ acts as an integration constant as y was treated as a constant. Now, treating x as a constant and differentiating equation (6) with respect to y to find $\partial u/\partial y$:
 
 $$ \frac{\partial u}{\partial y} = \frac{\partial}{\partial y}\int M(x,y) dx + \frac{dk}{dy} $$
 
@@ -96,7 +96,7 @@ $$ \int M(x,y)dx + \int N(x,y)dy - \int \left(\frac{\partial}{\partial y}\int Md
 > It's more important to understand the process of solving rather than memorizing this general solution formula as a rule.
 {: .prompt-tip }
 
-## Integrating Factor
+## Integrating Factors
 Consider an inexact differential equation:
 
 $$ P(x,y)dx+Q(x,y)dy = 0 \quad \left( \frac {\partial P}{\partial y} \neq \frac {\partial Q}{\partial x} \right) \tag{7} $$
@@ -109,7 +109,7 @@ then multiplying the given ODE (7) by function $F$ yields the following exact di
 
 $$ FP\ dx+FQ\ dy = 0 \tag{9} $$
 
-The function $F(x,y)$ is called the **integrating factor** of equation (7).
+The function $F(x,y)$ is called an **integrating factor** of equation (7).
 
 ## Method for Finding Integrating Factors
 Applying the product rule to equation (8) and using subscript notation for partial derivatives:
@@ -129,18 +129,18 @@ $$ \begin{align*}
 
 Therefore:
 
-> For a given ODE (7), if the right-hand side of equation (10), $R$, is a function of x only, then equation (7) has an integrating factor $F=F(x)$.
+> For a given ODE (7), if the right side of equation (10), $R$, is a function of x only, then equation (7) has an integrating factor $F=F(x)$.
 >
 > $$ F(x)=e^{\int R(x)dx}, \quad \text{where }R=\frac{1}{Q}\left(\frac{\partial P}{\partial y}-\frac{\partial Q}{\partial x} \right) \tag{11} $$
 {: .prompt-info }
 
-Similarly, if $F^\*=F^\*(y)$, we get:
+Similarly, if $F^*=F^*(y)$, instead of equation (10) we get:
 
 $$ \frac{1}{F^*} \frac{dF^*}{dy} = \frac{1}{P}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right) \tag{12} $$
 
 Therefore:
 
-> For a given ODE (7), if the right-hand side of equation (12), $R^*$, is a function of y only, then equation (7) has an integrating factor $F^\*=F^\*(y)$.
+> For a given ODE (7), if the right side of equation (12), $R^*$, is a function of y only, then equation (7) has an integrating factor $F^*=F^*(y)$.
 >
 > $$ F^*(y)=e^{\int R^*(y)dy}, \quad \text{where }R^*=\frac{1}{P}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right) \tag{13} $$
 {: .prompt-info }

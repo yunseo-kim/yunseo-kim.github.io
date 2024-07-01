@@ -14,43 +14,43 @@ mermaid: true
 > $$\begin{align*}
 > \alpha (t) &= \lambda n(t)
 > \\ &= \alpha_0 e^{-\lambda t}
-> \\ &= \alpha_0 e^{-0.693t/T_{1/2}}
+> \\ &= \alpha_0 e^{-0,693t/T_{1/2}}
 > \end{align*}$$
 {: .prompt-info }
 
 > **Relação entre constante de decaimento, meia-vida e vida média**
 >
 > $$ \begin{align*}
-> T_{1/2}&=\frac {\ln 2}{\lambda} = \frac {0.693}{\lambda}
+> T_{1/2}&=\frac {\ln 2}{\lambda} = \frac {0,693}{\lambda}
 > \\
 > \\ \overline{t}&=\frac {1}{\lambda}
-> \\ &=\frac {T_{1/2}}{0.693}=1.44T_{1/2}
+> \\ &=\frac {T_{1/2}}{0,693}=1,44T_{1/2}
 > \end{align*} $$
 {: .prompt-info }
 
-## Constante de Decaimento
+## Constante de Decaimento (Decay Constant)
 - Probabilidade de um núcleo decair por unidade de tempo
-- Constante independente do tempo, determinada apenas pelo radionuclídeo
+- Constante independente do tempo, determinada apenas pelo tipo de núcleo
 - Representada pelo símbolo $\lambda$
 
-## Radioatividade
+## Radioatividade (Radioactivity)
 Se o número de núcleos que ainda não decaíram no tempo $t$ for n(t), então, em média, $\lambda n(t)$ núcleos decairão durante o intervalo $dt$ entre os tempos $t$ e $t+dt$. Esta taxa de decaimento é chamada de *radioatividade* da amostra e é representada pelo símbolo $\alpha$. Portanto, a radioatividade em um tempo $t$ é:
 
 $$ \alpha (t)=\lambda n(t) \tag{1}$$
 
 ## Unidades de Radioatividade
 ### Curie (Ci)
-- Unidade tradicionalmente usada antes do becquerel
+- Unidade tradicionalmente usada antes da adoção do becquerel
 - Radioatividade de 1g de rádio-226
-- $3.7\times 10^{10}$ decaimentos nucleares por segundo ($3.7\times 10^{10}\text{Bq}$)
+- $3,7\times 10^{10}$ decaimentos nucleares por segundo ($3,7\times 10^{10}\text{Bq}$)
 
 ### Becquerel (Bq)
 - Unidade padrão internacional (SI)
 - Um decaimento nuclear por segundo
-- $1 \text{Bq} = 2.703\times 10^{-11}\text{Ci} = 27\text{pCi}$
+- $1 \text{Bq} = 2,703\times 10^{-11}\text{Ci} = 27\text{pCi}$
 
 ## Cálculo da Variação da Radioatividade com o Tempo
-Como $\lambda n(t)$ núcleos decaem durante o tempo $dt$, a diminuição do número de núcleos que permanecem sem decair na amostra durante $dt$ pode ser expressa como:
+Como $\lambda n(t)$ núcleos decaem durante o tempo $dt$, a diminuição no número de núcleos que permanecem sem decair na amostra durante $dt$ pode ser expressa como:
 
 $$ -dn(t)=\lambda n(t)dt $$
 
@@ -62,7 +62,7 @@ Multiplicando ambos os lados por $\lambda$, a radioatividade é:
 
 $$ \alpha (t)=\alpha_0e^{-\lambda t} \tag{3} $$
 
-Como a radioatividade é reduzida pela metade durante a *meia-vida*:
+Como a radioatividade é reduzida pela metade durante a *meia-vida (half-life)*:
 
 $$ \alpha (T_{1/2})=\alpha_0/2 $$
 
@@ -72,21 +72,21 @@ $$ \alpha_0/2=\alpha_0e^{-\lambda T_{1/2}} $$
 
 Tomando o logaritmo de ambos os lados e resolvendo para a meia-vida $T_{1/2}$:
 
-$$ T_{1/2}=\frac {\ln 2}{\lambda}=\frac {0.693}{\lambda} \tag{4}$$
+$$ T_{1/2}=\frac {\ln 2}{\lambda}=\frac {0,693}{\lambda} \tag{4}$$
 
-Resolvendo para $\lambda$ e substituindo na equação (3):
+Resolvendo esta equação para $\lambda$ e substituindo na equação (3):
 
-$$ \alpha (t)=\alpha_0e^{-0.693t/T_{1/2}} \tag{5} $$
+$$ \alpha (t)=\alpha_0e^{-0,693t/T_{1/2}} \tag{5} $$
 
 A equação (5) é frequentemente mais útil para cálculos de decaimento radioativo do que a equação (3), pois os valores de meia-vida são mais comumente fornecidos do que as constantes de decaimento.
 
-A *vida média* $\overline{t}$ de um núcleo radioativo é o inverso da constante de decaimento:
+A *vida média (mean-life)* $\overline{t}$ de um núcleo radioativo é o inverso da constante de decaimento:
 
 $$ \overline{t}=1/\lambda $$
 
-Da equação (3), podemos ver que durante uma vida média, a radioatividade cai para $1/e$ do seu valor inicial. Da equação (4), a relação entre a vida média e a meia-vida é:
+Da equação (3), podemos ver que durante uma vida média, a radioatividade cai para $1/e$ do seu valor inicial. Da equação (4), podemos estabelecer a seguinte relação entre a vida média e a meia-vida:
 
-$$ \overline{t}=\frac {T_{1/2}}{0.693}=1.44T_{1/2} \tag{6} $$
+$$ \overline{t}=\frac {T_{1/2}}{0,693}=1,44T_{1/2} \tag{6} $$
 
 ### ※ Derivação da vida média $\overline{t}$
 
@@ -100,7 +100,7 @@ $$ \begin{align*}
 \end{align*}$$
 
 ## Exemplo: Cadeia de Decaimento Radioativo 1
-Suponha que um radionuclídeo seja produzido a uma taxa de $R$ átomos/s. Esses núcleos começam a decair radioativamente assim que são produzidos. Calcule a radioatividade deste nuclídeo em um tempo t arbitrário.
+Suponha que um radionuclídeo seja produzido a uma taxa de $R$ átomos/s. Esses núcleos começam a decair radioativamente assim que são formados. Calcule a radioatividade deste nuclídeo em um tempo t arbitrário.
 ```mermaid
 flowchart LR
 	Start[?] -- R --> A[Modelo Matemático]
@@ -116,7 +116,7 @@ Em notação matemática:
 $$ dn/dt = -\lambda n + R $$
 
 ### 2. Solução Geral
-Movendo todos os termos em $n$ para o lado esquerdo e multiplicando ambos os lados por $e^{\lambda t}$:
+Movendo todos os termos em n para o lado esquerdo e multiplicando ambos os lados por $e^{\lambda t}$:
 
 $$ \frac {dn}{dt} + \lambda n = R $$
 
@@ -133,7 +133,7 @@ $$ e^{\lambda t}n=\frac {R}{\lambda}e^{\lambda t}+c $$
 $$ n=ce^{-\lambda t}+\frac {R}{\lambda} $$
 
 ### 3. Solução Particular
-Seja $n_0$ o número deste nuclídeo em $t=0$ e encontremos o valor da constante $c$:
+Suponha que o número deste nuclídeo seja $n_0$ quando $t=0$, e encontre o valor da constante $c$:
 
 $$ n(0)=c+\frac {R}{\lambda}=n_0 $$
 
@@ -147,7 +147,7 @@ Multiplicando ambos os lados por $\lambda$, podemos obter a radioatividade deste
 
 $$ \alpha = \alpha_0e^{-\lambda t}+R(1-e^{-\lambda t}) \tag{8} $$
 
-Ou seja, quando $t\to\infty$, $\alpha_{\text{max}}=R$ e $n_{\text{max}}=R/\lambda$.
+Ou seja, quando $t\to\infty$, converge para $\alpha_{\text{max}}=R$, $n_{\text{max}}=R/\lambda$.
 
 ## Exemplo: Cadeia de Decaimento Radioativo 2
 Calcule a radioatividade do radionuclídeo B na seguinte cadeia de decaimento:
@@ -187,7 +187,7 @@ Dividindo ambos os lados por $e^{\lambda_B t}$, obtemos a solução geral:
 $$ n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{-\lambda_A t}+ce^{-\lambda_B t} $$
 
 ### 3. Solução Particular
-Seja $n_{B0}$ o número de elementos B em $t=0$ e encontremos o valor da constante $c$:
+Suponha que o número de elementos B seja $n_{B0}$ quando $t=0$, e encontre o valor da constante $c$:
 
 $$ n_B(0)=\frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}+c=n_{B0} $$
 

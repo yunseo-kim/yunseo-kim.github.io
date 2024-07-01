@@ -1,9 +1,7 @@
-Here's the English translation of the provided text, preserving the markdown format:
-
 ---
-title: "Summary of Kaggle-Intro to Machine Learning Course"
+title: "Summary of Kaggle's Intro to Machine Learning Course"
 description: >-
-  Summarized the content of 'Intro to Machine Learning' from Kaggle's public courses.
+  I have summarized the content of the 'Intro to Machine Learning' course from Kaggle's public courses.
 categories: [Data Science, Machine Learning]
 tags: [Kaggle Courses, Pandas, scikit-learn]
 toc: true
@@ -11,24 +9,24 @@ toc_sticky: true
 ---
 
 I decided to study [Kaggle's public courses](https://www.kaggle.com/learn/overview).
-I plan to briefly summarize the content of each course as I complete them. The first post is a summary of the **Intro to Machine Learning** course.
+I plan to briefly summarize the content of each course as I complete it. This first post is a summary of the **Intro to Machine Learning** course.
 
 # Intro to Machine Learning
 Learn the core ideas in machine learning, and build your first models.
 
 ## Lesson 1. How Models Work
-It starts lightly without much pressure. This section covers how machine learning models work and how they are used. It explains using a simple decision tree classification model as an example, assuming a situation where you need to predict real estate prices.
+It starts off lightly without much pressure. This section covers how machine learning models work and how they are used. It explains using a simple decision tree classification model as an example, assuming a situation where you need to predict real estate prices.
 
 Finding patterns from data is called **fitting** or **training** the model. The data used to train the model is called **training data**. Once training is complete, this model can be applied to new data to make **predictions**.
 
 ## Lesson 2. Basic Data Exploration
-The first thing to do in any machine learning project is for the developer to become familiar with the data. You need to understand the characteristics of the data first to design an appropriate model. The Pandas library is almost essential for exploring and manipulating data, and this section covers the basics of Pandas.
+The first thing to do in any machine learning project is for the developer to become familiar with the data. You need to understand the characteristics of the data first in order to design an appropriate model. The Pandas library is almost essential for exploring and manipulating data, and this section covers the basics of Pandas.
 
 The core of the Pandas library is the DataFrame, which can be thought of as a kind of table. It's similar to an Excel sheet or an SQL database table. You can load CSV format data using the read_csv method.
 ```python
-# It's good to store the file path as a variable for easy access when needed.
+# It's good to save the file path as a variable for easy access when needed.
 file_path = '(file path)'
-# Read the data and store it as a DataFrame named 'data_1' (of course, in practice, it's better to use an easily recognizable name).
+# Read the data and save it as a DataFrame named 'data_1' (of course, in practice, it's better to use an easily recognizable name).
 data_1 = pd.read_csv(file_path)
 ```
 You can check the summary information of the data using the describe method.
@@ -59,7 +57,7 @@ There are several ways to select the necessary parts from the given data, which 
 1. Dot notation
 2. Using lists
 
-First, use **dot-notation** to select the column corresponding to the **prediction target**. This single column is stored in a **Series**. A Series can be thought of as a DataFrame consisting of only one column. Conventionally, the prediction target is referred to as **y**.
+First, select the column corresponding to the **prediction target** using **dot-notation**. This single column is stored in a **Series**. A Series can be thought of as a DataFrame consisting of only one column. Conventionally, the prediction target is referred to as **y**.
 ```python
 y = melbourne_data.Price
 ```
@@ -80,7 +78,7 @@ X.head()
 ```
 
 ### Model Design
-The **scikit-learn** library is commonly used in the modeling stage. The process of designing and using a model generally consists of the following steps:
+The **scikit-learn** library is commonly used in the modeling stage. The process of designing and using a model generally involves the following steps:
 - **Define**: Determine the type of model and its parameters.
 - **Fit**: Find patterns in the given data. This is the core of modeling.
 - **Predict**: Make predictions using the trained model.
@@ -109,7 +107,7 @@ print(melbourne_model.predict(X.head()))
 
 ## Lesson 4. Model Validation
 ### Model Validation Method
-To iteratively improve a model, you need to measure its performance. When making predictions using a model, there will be cases where it's correct and cases where it's wrong. At this point, we need a metric to check the prediction performance of this model. There are various types of metrics, but here we use **MAE (Mean Absolute Error)**.
+To iteratively improve a model, you need to measure its performance. When making predictions using a model, there will be cases where it's correct and cases where it's wrong. At this point, we need a metric to check the predictive performance of this model. There are various types of metrics, but here we use **MAE (Mean Absolute Error)**.
 
 In the case of Melbourne house price prediction, the prediction error for each house price is as follows:  
 ```
@@ -158,8 +156,8 @@ print(mean_absolute_error(val_y, val_predictions))
 
 ## Lesson 5. Underfitting and Overfitting
 ### Overfitting and Underfitting
-- **Overfitting**: A phenomenon where the model fits very accurately to the training dataset but fails to make proper predictions on the validation dataset or other new data.
-- **Underfitting**: A phenomenon where the model fails to find important features and patterns in the given data, resulting in poor predictions even on the training dataset.
+- **Overfitting**: A phenomenon where the model fits very accurately to the training dataset but fails to make proper predictions on the validation dataset or other new data
+- **Underfitting**: A phenomenon where the model fails to find important features and patterns in the given data, resulting in poor predictions even on the training dataset
 
 In the image below, the green line represents an overfitted model, while the black line represents a desirable model.
 ![Overfitting](https://upload.wikimedia.org/wikipedia/commons/1/19/Overfitting.svg)
@@ -172,7 +170,7 @@ What's important to us is the prediction accuracy on new data, and we estimate t
 This course continues to use the decision tree classification model as an example, but the concepts of overfitting and underfitting apply to all machine learning models.
 
 ### Hyperparameter Tuning
-The example below is code that compares and measures the performance of the model while changing the value of the *max_leaf_nodes* argument of the decision tree model. (The parts about loading data and separating the validation dataset are omitted.)
+The example below is code that compares and measures the performance of the model while changing the value of the *max_leaf_nodes* argument of the decision tree model. (The parts about loading data and separating the validation dataset are omitted)
 ```python
 from sklearn.metrics import mean_absolute_error
 from sklearn.tree import DecisionTreeRegressor

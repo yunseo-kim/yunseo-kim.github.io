@@ -45,7 +45,7 @@ The last term is $-Ay^{-1}=-Au$, so we obtain the following linear first-order d
 
 $$ u'+Au=B $$
 
-By the solution formula for [non-homogeneous linear first-order differential equations](/posts/Solution-of-First-Order-Linear-ODE/#non-homogeneous-linear-first-order-differential-equations), we can find the following general solution:
+By the solution formula for [non-homogeneous linear first-order differential equations](/posts/Solution-of-First-Order-Linear-ODE/#non-homogeneous-linear-first-order-differential-equation), we can find the following general solution:
 
 $$ u=ce^{-At}+B/A $$
 

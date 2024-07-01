@@ -12,15 +12,15 @@ Massa e energia são equivalentes e podem ser convertidas uma na outra.
 
 $$ E=mc^2 $$
 
-Onde $c$ é a velocidade da luz $2.9979 \times 10^{10}\ \text{cm/sec}$.
+Onde $c$ é a velocidade da luz $2,9979 \times 10^{10}\ \text{cm/seg}$
 
 ## Elétron-volt (eV)
 *Elétron-volt (eV)*: A energia cinética adquirida por um elétron ao passar por uma diferença de potencial de 1V
 
 $$
 \begin{align*} 
-1 \text{eV} &= 1.60219 \times 10^{-19}\ \text{C}\cdot \text{V}
-\\ &= 1.60219 \times 10^{-19}\ \text{J}
+1 \text{eV} &= 1,60219 \times 10^{-19}\ \text{C}\cdot \text{V}
+\\ &= 1,60219 \times 10^{-19}\ \text{J}
 \end{align*}
 $$
 
@@ -43,7 +43,7 @@ E_{\text{cinética}} &= E_{\text{total}}-E_{\text{repouso}}
 \end{align*}
 $$
 
-Especialmente, quando $v\ll c$, aproximando usando o teorema binomial:
+Especialmente, quando $v\ll c$, usando a expansão binomial para aproximação:
 
 $$
 \begin{align*}
@@ -53,23 +53,23 @@ E_{cinética} &= m_0c^2\left[\frac {1}{\sqrt{1-v^2/c^2}} - 1\right]
 \end{align*}
 $$
 
-Isso se torna igual à fórmula da energia cinética na mecânica clássica. Na prática, quando $v\leq 0.2c$ ou $E_{\text{cinética}} \leq 0.02E_{\text{repouso}}$, pode-se considerar $v\ll c$ e usar esta aproximação (ou seja, ignorar os efeitos relativísticos) para obter um valor suficientemente preciso.
+Que é igual à fórmula da energia cinética na mecânica clássica. Na prática, quando $v\leq 0,2c$ ou $E_{\text{cinética}} \leq 0,02E_{\text{repouso}}$, podemos considerar $v\ll c$ e usar esta aproximação (ou seja, ignorar os efeitos da teoria da relatividade) para obter um valor suficientemente preciso.
 
 ### Elétron
-Como a energia de repouso do elétron é $E_{\text{repouso}}=m_ec^2=0.511 \text{MeV}$, a fórmula relativística da energia cinética deve ser aplicada quando a energia cinética do elétron exceder $0.02\times 0.511 \text{MeV}=0.010 \text{MeV}=10 \text{keV}$. Na engenharia nuclear, a energia dos elétrons frequentemente excede 10keV, então na maioria dos casos a equação (2) deve ser aplicada.
+Como a energia de repouso do elétron é $E_{\text{repouso}}=m_ec^2=0,511 \text{MeV}$, devemos aplicar a fórmula relativística da energia cinética quando a energia cinética do elétron exceder $0,02\times 0,511 \text{MeV}=0,010 \text{MeV}=10 \text{keV}$. Na engenharia nuclear, a energia dos elétrons frequentemente excede 10keV, então na maioria dos casos devemos aplicar a equação (2).
 
 ### Nêutron
-A energia de repouso do nêutron é aproximadamente 1000MeV, então $0.02E_{repouso}=20\text{MeV}$. Na engenharia nuclear, é raro lidar com situações onde a energia cinética do nêutron excede 20MeV, então geralmente a equação (3) é usada para calcular a energia cinética do nêutron.
+A energia de repouso do nêutron é aproximadamente 1000MeV, então $0,02E_{repouso}=20\text{MeV}$. Na engenharia nuclear, é raro lidar com situações onde a energia cinética do nêutron excede 20MeV, então geralmente usamos a equação (3) para calcular a energia cinética do nêutron.
 
 ### Fóton
-As equações (2) e (3) são válidas apenas quando a massa de repouso não é zero, então não podem ser aplicadas a fótons, que têm massa de repouso zero. A energia total do fóton é calculada pela seguinte equação:
+As equações (2) e (3) são válidas apenas quando a massa de repouso não é zero, então não podem ser aplicadas ao fóton, que tem massa de repouso zero. A energia total do fóton é calculada pela seguinte equação:
 
 $$ E = h\nu \tag{4} $$
 
-$h$: constante de Planck ($4.316 \times 10^{-15} \text{eV}\cdot\text{s}$), $\nu$: frequência da onda eletromagnética
+$h$: constante de Planck ($4,316 \times 10^{-15} \text{eV}\cdot\text{s}$), $\nu$: frequência da onda eletromagnética
 
 ## Onda de Matéria
-Toda matéria na natureza é tanto partícula quanto onda simultaneamente. Ou seja, todas as partículas têm um comprimento de onda correspondente (*comprimento de onda de de Broglie*). O comprimento de onda $\lambda$ é uma função do momento $p$ e da constante de Planck $h$.
+Toda matéria na natureza é simultaneamente partícula e onda. Ou seja, todas as partículas têm um comprimento de onda correspondente (*comprimento de onda de de Broglie*). O comprimento de onda $\lambda$ é uma função do momento $p$ e da constante de Planck $h$.
 
 $$ \lambda = \frac {h}{p} \tag{5}$$
 
@@ -78,40 +78,40 @@ Além disso, o momento $p$ é definido pela seguinte equação:
 $$ p = mv \tag{6} $$
 
 ### Ignorando efeitos relativísticos (ex: nêutron)
-Como a energia cinética é $E=1/2 mv^2$, expressando a equação (6) em função da energia:
+Como a energia cinética é $E=1/2 mv^2$, a equação (6) expressa em função da energia é:
 
 $$ p=\sqrt{2mE} \tag{7} $$
 
-Substituindo isso na equação (5), o comprimento de onda da partícula se torna:
+Substituindo isso na equação (5), o comprimento de onda da partícula é:
 
 $$ \lambda = \frac {h}{\sqrt{2mE}} \tag{8} $$
 
-Esta equação é aplicada na engenharia nuclear para calcular o comprimento de onda de de Broglie do nêutron. Substituindo a massa de repouso do nêutron, obtemos:
+Na engenharia nuclear, esta equação é usada para calcular o comprimento de onda de de Broglie do nêutron. Substituindo a massa de repouso do nêutron, temos:
 
-$$ \lambda = \frac {2.860 \times 10^{-9}}{\sqrt{E}} \tag{9}$$
+$$ \lambda = \frac {2,860 \times 10^{-9}}{\sqrt{E}} \tag{9}$$
 
-Onde $\lambda$ está em cm e $E$ é a energia cinética do nêutron expressa em eV.
+Onde $\lambda$ está em cm e $E$ é a energia cinética do nêutron em eV.
 
 ### Considerando efeitos relativísticos (ex: elétron)
 Resolvemos diretamente as equações relativísticas anteriores para calcular o momento $p$.
 
 $$ p=\frac {1}{c} \sqrt{E^2_{total}-E^2_{repouso}} \tag{10}$$
 
-Então o comprimento de onda de de Broglie se torna:
+Então o comprimento de onda de de Broglie é:
 
 $$ \lambda = \frac {hc}{\sqrt{E_{total}-E_{repouso}}} \tag{11} $$
 
 ### Partículas com massa de repouso zero (ex: fóton)
-Para partículas com massa de repouso zero, o momento não pode ser calculado pela equação (6), então é expresso como:
+Para partículas com massa de repouso zero, o momento não pode ser calculado pela equação (6), então usamos:
 
 $$ p=\frac {E}{c} \tag{12} $$
 
-Substituindo a equação (12) na equação (5):
+Substituindo a equação (12) na equação (5), temos:
 
 $$ \lambda = \frac {hc}{E} \tag{13}$$
 
-Substituindo os valores de $h$ e $c$, a equação final para o comprimento de onda se torna:
+Substituindo os valores de $h$ e $c$, a equação final para o comprimento de onda é:
 
-$$ \lambda = \frac {1.240 \times 10^{-6}}{E} \tag{14}$$
+$$ \lambda = \frac {1,240 \times 10^{-6}}{E} \tag{14}$$
 
 Onde $\lambda$ está em m e $E$ está em eV.

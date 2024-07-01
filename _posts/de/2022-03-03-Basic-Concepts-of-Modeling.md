@@ -2,15 +2,15 @@
 title: "Grundkonzepte der Modellierung"
 description: >-
   Wir betrachten die Konzepte der mathematischen Modellierung, gewöhnliche Differentialgleichungen, partielle Differentialgleichungen und Anfangswertprobleme.
-categories: [Mathematik, Differentialgleichung]
-tags: [ODE, Gewöhnliche Differentialgleichungen erster Ordnung]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 ---
 
 ## Modellierung
 - **Modell**: Eine mathematische Formulierung eines technischen Problems durch Variablen, Funktionen und Gleichungen
-- **Mathematische Modellierung** oder **Modellierung**: Der Prozess der Erstellung eines Modells, dessen mathematische Lösung und Interpretation der Ergebnisse
+- **Mathematische Modellierung** oder **Modellierung**: Der Prozess der Erstellung eines Modells, seiner mathematischen Lösung und der Interpretation der Ergebnisse
 
 ```mermaid
 flowchart LR
@@ -20,11 +20,11 @@ flowchart LR
 	C[Mathematische Lösung] --> D[Physikalische Interpretation]
 ```
 
-Da viele physikalische Konzepte wie Geschwindigkeit oder Beschleunigung Ableitungen sind, haben Modelle oft die Form von Gleichungen, die Ableitungen unbekannter Funktionen enthalten, also **Differentialgleichungen**.
+Da viele physikalische Konzepte wie Geschwindigkeit oder Beschleunigung Ableitungen sind, haben Modelle oft die Form von **Differentialgleichungen**, die Ableitungen der unbekannten Funktion enthalten.
 
 ## Gewöhnliche Differentialgleichungen (ODE) und Partielle Differentialgleichungen (PDE)
 ### Gewöhnliche Differentialgleichungen (ODE)
-**Gewöhnliche Differentialgleichung (ordinary differential equation; ODE)**: Eine Gleichung, die die n-te Ableitung einer unbekannten Funktion enthält
+**Gewöhnliche Differentialgleichungen (ordinary differential equation; ODE)**: Gleichungen, die die n-te Ableitung einer unbekannten Funktion enthalten
 
 Beispiele:
 
@@ -36,7 +36,7 @@ $$ y'y''' - \frac{3}{2}y'^{2} = 0 $$
 
 
 ### Partielle Differentialgleichungen (PDE)
-**Partielle Differentialgleichung (partial differential equation; PDE)**: Eine Gleichung, die partielle Ableitungen einer unbekannten Funktion mit zwei oder mehr Variablen enthält
+**Partielle Differentialgleichungen (partial differential equation; PDE)**: Gleichungen, die partielle Ableitungen einer unbekannten Funktion mit zwei oder mehr Variablen enthalten
 
 Beispiel:
 
@@ -60,25 +60,25 @@ Eine Lösung, die eine beliebige Konstante $c$ enthält, wird als **allgemeine L
 Geometrisch ist die allgemeine Lösung einer gewöhnlichen Differentialgleichung eine Sammlung unendlich vieler Lösungskurven, wobei jeder Wert der Konstante $c$ einer Kurve entspricht. Durch Auswahl eines bestimmten Wertes für $c$ erhält man eine **spezielle Lösung** der gewöhnlichen Differentialgleichung.
 
 ## Anfangswertproblem
-Um eine spezielle Lösung des gegebenen Problems zu erhalten, muss der Wert der beliebigen Konstante $c$ bestimmt werden. In vielen Fällen kann dies durch eine **Anfangsbedingung** wie $y(x_{0})=y_{0}$ oder $y(t_{0})=y_{0}$ ermittelt werden (der Begriff Anfangsbedingung wird auch verwendet, wenn die unabhängige Variable nicht die Zeit ist oder $t_{0}\neq0$). Eine gewöhnliche Differentialgleichung mit einer Anfangsbedingung wird als **Anfangswertproblem** bezeichnet.
+Um eine spezielle Lösung für ein gegebenes Problem zu erhalten, muss der Wert der beliebigen Konstante $c$ bestimmt werden. In vielen Fällen kann dies durch eine **Anfangsbedingung** wie $y(x_{0})=y_{0}$ oder $y(t_{0})=y_{0}$ ermittelt werden (der Begriff Anfangsbedingung wird verwendet, auch wenn die unabhängige Variable nicht die Zeit ist oder $t_{0}\neq0$). Eine gewöhnliche Differentialgleichung mit einer Anfangsbedingung wird als **Anfangswertproblem** bezeichnet.
 
 Beispiel:
 
 $$ y'=f(x,y),\qquad y(x_{0})=y_{0} $$
 
 ## Modellierungsbeispiel: Exponentieller Zerfall radioaktiver Substanzen
-Bestimmen Sie die verbleibende Menge einer radioaktiven Substanz zu einem späteren Zeitpunkt, wenn anfänglich 0,5g gegeben sind.
+Bestimmen Sie die verbleibende Menge einer radioaktiven Substanz zu einem späteren Zeitpunkt, wenn die Anfangsmenge 0,5g beträgt.
 > Experimente zeigen, dass radioaktive Substanzen mit einer Geschwindigkeit zerfallen, die proportional zur verbleibenden Menge der Substanz ist, und daher mit der Zeit abnehmen.
 {: .prompt-info }
 
 ### 1. Aufstellen des mathematischen Modells
-Sei $y(t)$ die verbleibende Menge der Substanz zum Zeitpunkt $t$. Da $y'(t)$ proportional zu $y(t)$ ist, erhalten wir die **gewöhnliche Differentialgleichung erster Ordnung**
+Sei $y(t)$ die verbleibende Menge der Substanz zum Zeitpunkt $t$. Da $y'(t)$ proportional zu $y(t)$ ist, erhalten wir die **gewöhnliche Differentialgleichung erster Ordnung**:
 
 $$ \frac {dy}{dt} = -ky$$ 
 
-(mit Konstante $k>0$).
+(wobei $k>0$ eine Konstante ist).
 
-Wir kennen auch die **Anfangsbedingung** $y(0)=0.5$. Daher können wir das mathematische Modell als folgendes **Anfangswertproblem** aufstellen:
+Wir kennen auch die **Anfangsbedingung** $y(0)=0.5$. Daher können wir unser mathematisches Modell als folgendes **Anfangswertproblem** aufstellen:
 
 $$ \frac {dy}{dt} = -ky, \qquad y(0)=0.5 $$
 
@@ -87,7 +87,7 @@ Die allgemeine Lösung der oben aufgestellten gewöhnlichen Differentialgleichun
 
 $$ y(t)=ce^{-kt} $$
 
-Da $y(0)=c$, erhalten wir aus der Anfangsbedingung $y(0)=c=0.5$. Daher ist die gesuchte spezielle Lösung
+Da $y(0)=c$, erhalten wir aus der Anfangsbedingung $y(0)=c=0.5$. Daher ist die gesuchte spezielle Lösung:
 
 $$ y(t)=0.5e^{-kt} \quad(k>0)$$
 

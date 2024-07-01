@@ -1,13 +1,13 @@
 ---
-title: "Equação de Bernoulli"
+title: "Equação de Bernoulli (Bernoulli Equation)"
 description: >-
-  Exploramos a equação de Bernoulli e o método de solução para a equação logística, uma forma especial da equação de Bernoulli.
+  Exploramos a equação de Bernoulli e o método de resolução da equação logística, uma forma especial da equação de Bernoulli.
 categories: [Matemática, Equação Diferencial]
 tags: [EDO, EDOs de Primeira Ordem]
 math: true
 ---
 
-## Equação de Bernoulli
+## Equação de Bernoulli (Bernoulli Equation)
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{ é um número real arbitrário)}  \tag{1} $$
 
@@ -27,7 +27,7 @@ No lado direito, $y^{1-a}=u$, então obtemos a seguinte equação diferencial or
 
 $$ u'+(1-a)pu=(1-a)g \tag{2} $$
 
-## Exemplo: Equação Logística
+## Exemplo: Equação Logística (Logistic Equation)
 Resolva a equação logística (uma forma especial da equação de Bernoulli).
 
 $$ y'=Ay-By^2 \tag{3} $$
@@ -45,10 +45,10 @@ O último termo é $-Ay^{-1}=-Au$, então obtemos a seguinte equação diferenci
 
 $$ u'+Au=B $$
 
-Pela fórmula de solução para equações diferenciais ordinárias lineares não homogêneas, podemos obter a seguinte solução geral:
+Pela fórmula de solução para [equações diferenciais ordinárias lineares não homogêneas](/posts/Solution-of-First-Order-Linear-ODE/#equação-diferencial-ordinária-linear-não-homogênea), podemos obter a seguinte solução geral:
 
 $$ u=ce^{-At}+B/A $$
 
-Como $u=1/y$, a partir disso obtemos a solução geral para a equação (3):
+Como $u=1/y$, a partir disso obtemos a solução geral da equação (3):
 
 $$ y=\frac{1}{u}=\frac{1}{ce^{-At}+B/A} \tag{4}$$

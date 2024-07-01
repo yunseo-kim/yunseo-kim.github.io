@@ -2,8 +2,8 @@
 title: "Exakte Differentialgleichung und Integrierende Faktoren"
 description: >-
   Wir untersuchen die Methoden zur Bestimmung und Lösung exakter Differentialgleichungen sowie integrierende Faktoren.
-categories: [Mathematics, Differential Equation]
-tags: [ODE, First-Order ODEs]
+categories: [Mathematik, Differentialgleichung]
+tags: [ODE, Differentialgleichungen erster Ordnung]
 math: true
 mermaid: true
 ---
@@ -12,7 +12,7 @@ mermaid: true
 ```mermaid
 flowchart TD
 	ODE[Eine gewöhnliche Differentialgleichung, die möglicherweise exakt ist, wird gegeben]
-	IsExact{Prüfen, ob sie exakt ist}
+	IsExact{Prüfen auf Exaktheit}
 
 	ODE --> IsExact
 
@@ -25,17 +25,17 @@ flowchart TD
 	DetermineFactor[Integrierenden Faktor bestimmen]
 	fail[Andere Lösungsmethode versuchen]
 
-	CheckR -->|"Wenn eine Funktion R(x) oder R*(y) einer Variablen existiert"| DetermineFactor
-	CheckR --->|Wenn kein integrierender Faktor einer Variablen gefunden werden kann| fail
+	CheckR -->|"Wenn eine einvariable Funktion R(x) oder R*(y) existiert"| DetermineFactor
+	CheckR --->|Wenn kein einvariabler integrierender Faktor gefunden werden kann| fail
 	DetermineFactor --> Solve
 ```
 
 ## Exakte Differentialgleichung
-Eine gewöhnliche Differentialgleichung erster Ordnung $M(x,y)+N(x,y)y'=0$ kann als 
+Eine gewöhnliche Differentialgleichung erster Ordnung $M(x,y)+N(x,y)y'=0$ kann geschrieben werden als:
 
 $$ M(x,y)dx+N(x,y)dy=0 \tag{1} $$
 
-geschrieben werden. Wenn 
+Wenn 
 
 $$ \exists u(x,y): \frac{\partial u}{\partial x}=M(x,y) \land \frac{\partial u}{\partial y}=N(x,y) \tag{2} $$
 
@@ -43,23 +43,23 @@ dann gilt
 
 $$ M(x,y)dx+N(x,y)dy=\frac{\partial u}{\partial x}dx+\frac{\partial u}{\partial y}dy=du \tag{3} $$
 
-und in diesem Fall wird die Differentialgleichung $M(x,y)dx+N(x,y)dy=0$ als **exakte Differentialgleichung** bezeichnet. Dann kann diese Differentialgleichung als 
+und in diesem Fall wird die Differentialgleichung $M(x,y)dx+N(x,y)dy=0$ als **exakte Differentialgleichung** bezeichnet. Dann kann diese Differentialgleichung geschrieben werden als:
 
 $$ du=0 $$
 
-geschrieben werden, und durch Integration erhalten wir die allgemeine Lösung in der Form 
+und durch Integration erhalten wir die allgemeine Lösung in der Form:
 
 $$ u(x,y)=c \tag{4} $$
 
 ## Bestimmung einer exakten Differentialgleichung
-Betrachten wir ein geschlossenes Gebiet in der xy-Ebene mit einer geschlossenen Kurve als Rand, die sich nicht selbst schneidet. Nehmen wir an, dass $M$ und $N$ sowie ihre partiellen Ableitungen erster Ordnung stetig sind. Wenn wir die Bedingung (2) erneut betrachten, erhalten wir:
+Betrachten wir ein geschlossenes Gebiet in der xy-Ebene mit einer geschlossenen Kurve als Rand, die sich nicht selbst schneidet. Nehmen wir an, dass $M$ und $N$ sowie ihre partiellen Ableitungen erster Ordnung in diesem Gebiet stetig sind. Betrachten wir die Bedingung (2) erneut:
 
 $$ \begin{align*}
 \frac {\partial u}{\partial x}&=M(x,y) \tag{2a}
 \\ \frac {\partial u}{\partial y}&=N(x,y) \tag{2b}
 \end{align*}$$
 
-Wenn wir diese Gleichungen partiell ableiten, erhalten wir 
+Wenn wir diese Gleichungen partiell ableiten, erhalten wir:
 
 $$ \begin{align*}
 \frac {\partial M}{\partial y} &= \frac{\partial^2 u}{\partial y \partial x}
@@ -73,7 +73,7 @@ $$ \therefore \frac {\partial M}{\partial y}=\frac {\partial N}{\partial x} \tag
 Daher ist die Bedingung (5) eine notwendige Bedingung dafür, dass die Differentialgleichung (1) exakt ist. Obwohl wir es hier nicht bewiesen haben, ist sie tatsächlich auch eine hinreichende Bedingung. Das bedeutet, dass wir durch Überprüfung dieser Bedingung feststellen können, ob eine Differentialgleichung exakt ist.
 
 ## Lösung einer exakten Differentialgleichung
-Wenn wir Gleichung (2a) integrieren und dabei y als Konstante betrachten, erhalten wir
+Wenn wir Gleichung (2a) integrieren und dabei y als Konstante betrachten, erhalten wir:
 
 $$ u = \int M(x,y) dx + k(y) \tag{6} $$
 
@@ -97,7 +97,7 @@ $$ \int M(x,y)dx + \int N(x,y)dy - \int \left(\frac{\partial}{\partial y}\int Md
 {: .prompt-tip }
 
 ## Integrierender Faktor
-Angenommen, wir haben eine nicht-exakte Differentialgleichung:
+Betrachten wir eine nicht-exakte Differentialgleichung:
 
 $$ P(x,y)dx+Q(x,y)dy = 0 \quad \left( \frac {\partial P}{\partial y} \neq \frac {\partial Q}{\partial x} \right) \tag{7} $$
 
@@ -129,18 +129,18 @@ $$ \begin{align*}
 
 Daher gilt:
 
-> Wenn für die gegebene Differentialgleichung (7) die rechte Seite $R$ von Gleichung (10) nur eine Funktion von x ist, dann hat Gleichung (7) einen integrierenden Faktor $F=F(x)$.
+> Für eine gegebene Differentialgleichung (7), wenn die rechte Seite $R$ von Gleichung (10) nur eine Funktion von x ist, dann hat Gleichung (7) einen integrierenden Faktor $F=F(x)$.
 >
 > $$ F(x)=e^{\int R(x)dx}, \quad \text{wobei }R=\frac{1}{Q}\left(\frac{\partial P}{\partial y}-\frac{\partial Q}{\partial x} \right) \tag{11} $$
 {: .prompt-info }
 
-Ebenso, wenn $F^\*=F^\*(y)$, erhalten wir anstelle von Gleichung (10):
+Ähnlich, wenn $F^\*=F^\*(y)$, erhalten wir anstelle von Gleichung (10):
 
 $$ \frac{1}{F^*} \frac{dF^*}{dy} = \frac{1}{P}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right) \tag{12} $$
 
 Daher gilt:
 
-> Wenn für die gegebene Differentialgleichung (7) die rechte Seite $R^*$ von Gleichung (12) nur eine Funktion von y ist, dann hat Gleichung (7) einen integrierenden Faktor $F^\*=F^\*(y)$.
+> Für eine gegebene Differentialgleichung (7), wenn die rechte Seite $R^*$ von Gleichung (12) nur eine Funktion von y ist, dann hat Gleichung (7) einen integrierenden Faktor $F^\*=F^\*(y)$.
 >
 > $$ F^*(y)=e^{\int R^*(y)dy}, \quad \text{wobei }R^*=\frac{1}{P}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right) \tag{13} $$
 {: .prompt-info }

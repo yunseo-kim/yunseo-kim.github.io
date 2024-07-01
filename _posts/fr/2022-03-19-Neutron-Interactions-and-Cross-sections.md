@@ -1,7 +1,7 @@
 ---
 title: "Interactions des neutrons et sections efficaces"
 description: >-
-  Les neutrons étant électriquement neutres, ils peuvent traverser le nuage électronique des atomes sans subir d'influence électrique et interagir directement avec le noyau atomique. Nous examinerons les types d'interactions des neutrons et le concept de section efficace des noyaux atomiques.
+  Les neutrons étant électriquement neutres, ils peuvent traverser le nuage électronique des atomes sans subir d'influence électrique et interagir directement avec le noyau atomique. Nous examinons les types d'interactions des neutrons et le concept de section efficace des noyaux atomiques.
 categories: [Physique de l'ingénieur, Génie nucléaire]
 tags: [Physique nucléaire, Interaction du rayonnement avec la matière]
 math: true
@@ -13,19 +13,19 @@ Les neutrons étant électriquement neutres, ils ne sont pas affectés par l'inf
 
 ### Diffusion élastique (elastic scattering)
 - Le neutron rebondit après avoir heurté le noyau atomique
-- Le noyau atomique reste dans son état fondamental sans changement d'énergie
+- Le noyau atomique maintient son état fondamental sans changement d'énergie
 - Noté (n, n)
 
 ### Diffusion inélastique (inelastic scattering)
 - Le neutron rebondit après avoir heurté le noyau atomique
 - Contrairement à la diffusion élastique, le noyau atomique absorbe une partie de l'énergie du neutron et passe à un état excité (réaction endothermique)
 - Noté (n, n′)
-- Le noyau excité retourne à son état fondamental en émettant un rayonnement gamma, appelé *rayon gamma inélastique (inelastic $\gamma$-ray)*
+- Le noyau excité retourne à son état fondamental en émettant un rayonnement gamma, appelé *rayonnement gamma inélastique (inelastic $\gamma$-ray)*
 
 ### Capture radiative (radiative capture)
 - Le noyau atomique capture le neutron et émet un ou plusieurs rayons gamma (réaction exothermique)
 - Noté (n, $\gamma$)
-- Le rayonnement gamma émis est appelé *rayon gamma de capture (capture $\gamma$-ray)*
+- Le rayonnement gamma émis est appelé *rayonnement gamma de capture (capture $\gamma$-ray)*
 
 ### Réactions avec particules chargées
 - Le noyau atomique capture le neutron et émet des particules chargées comme des particules alpha ($\alpha$) ou des protons (p)
@@ -33,12 +33,12 @@ Les neutrons étant électriquement neutres, ils ne sont pas affectés par l'inf
 - Peut être une réaction exothermique ou endothermique selon le cas
 
 ### Réactions de production de neutrons
-- Un neutron de haute énergie entre en collision avec un noyau atomique, produisant deux neutrons ou plus (réaction endothermique)
+- Un neutron de haute énergie entre en collision avec un noyau atomique, produisant 2 neutrons ou plus (réaction endothermique)
 - Noté (n, 2n), (n, 3n), etc.
 - La réaction (n, 2n) est particulièrement importante dans les réacteurs contenant de l'eau lourde ou du béryllium, car les neutrons de $^2\text{H}$ et $^9\text{Be}$ ont une faible énergie de liaison et peuvent être facilement libérés même lors de collisions avec des neutrons de faible énergie
 
 ### Fission (fission)
-- Un neutron entre en collision avec un certain noyau atomique, le divisant en deux noyaux filles ou plus
+- Un neutron entre en collision avec un certain noyau atomique, provoquant la fission de ce noyau en deux noyaux filles ou plus
 
 ## Section efficace (cross-section) ou section efficace microscopique (microscopic cross-section)
 Supposons qu'un faisceau de neutrons monoénergétiques frappe une cible d'épaisseur (très fine) $\tau$ et de surface $A$, et que le nombre de neutrons incidents par unité de surface et par seconde sur la cible soit $I\ \text{neutrons/cm}^2\cdot \text{s}$. La proportion du volume occupé par le noyau atomique dans l'atome est très faible, et comme nous avons supposé que la cible est très mince, la plupart des neutrons traversent la cible sans interagir avec les noyaux atomiques. Alors, le nombre de neutrons entrant en collision avec les noyaux atomiques par unité de surface et par seconde est proportionnel à l'intensité du faisceau de neutrons $I$, à l'épaisseur de la cible $\tau$, et à la densité atomique de la cible $N$.
@@ -63,13 +63,13 @@ cm$^2$ étant une unité trop grande pour exprimer la section efficace microscop
 $$ 1\ \text{b} = 10^{-24}\ \text{cm}^2 $$
 
 ## Types de sections efficaces microscopiques
-- Section efficace totale : $\sigma_t$
-  - Section efficace de diffusion : $\sigma_s$
-    - Section efficace de diffusion élastique : $\sigma_e$
-    - Section efficace de diffusion inélastique : $\sigma_i$
-  - Section efficace d'absorption : $\sigma_a$
-    - Section efficace de capture radiative : $\sigma_\gamma$
-    - Section efficace de fission : $\sigma_f$
+- Section efficace totale (total) : $\sigma_t$
+  - Section efficace de diffusion (scattering) : $\sigma_s$
+    - Section efficace de diffusion élastique (elastic scattering) : $\sigma_e$
+    - Section efficace de diffusion inélastique (inelastic scattering) : $\sigma_i$
+  - Section efficace d'absorption (absorption) : $\sigma_a$
+    - Section efficace de capture radiative (radiative capture) : $\sigma_\gamma$
+    - Section efficace de fission (fission) : $\sigma_f$
     - Section efficace de réaction avec particules chargées : $\sigma_p, \sigma_\alpha, \cdots$
     - Section efficace de réaction de production de neutrons : $\sigma_{2n}, \sigma_{3n}, \cdots$
 
@@ -92,7 +92,7 @@ flowchart LR
 
 $$ \frac {p}{\tau} = \frac {1}{\tau} \frac {\Delta I}{I} = \sigma N \equiv \Sigma\ \text{[cm}^{-1}\text{]} \tag{3}$$
 
-La *section efficace macroscopique (macroscopic cross-section)* est définie comme le produit de la densité atomique $N$ et de la section efficace. Physiquement, la section efficace macroscopique représente le taux de collision par unité de distance parcourue par un neutron dans une cible donnée. Comme pour la section efficace microscopique, elle peut être subdivisée comme suit :
+La *section efficace macroscopique (macroscopic cross-section)* est définie comme le produit de la densité atomique $N$ et de la section efficace, comme indiqué ci-dessus. Physiquement, la section efficace macroscopique représente le taux de collision par unité de distance parcourue par un neutron dans une cible donnée. Comme pour la section efficace microscopique, elle peut être subdivisée comme suit :
 
 - Section efficace macroscopique totale $\Sigma_t=N\sigma_t$
   - Section efficace macroscopique de diffusion $\Sigma_s=N\sigma_s$
@@ -101,6 +101,6 @@ La *section efficace macroscopique (macroscopic cross-section)* est définie com
 En général, pour une réaction donnée, la section efficace macroscopique est $\Sigma_{reaction}=N\sigma_{reaction}$.
 
 ## Densité de collision (collision density), c'est-à-dire taux de réaction (reaction rate)
-La *densité de collision (collision density)*, ou *taux de réaction (reaction rate)*, représente le nombre de collisions par unité de temps et par unité de volume dans la cible. À partir des équations (1) et (3), on peut la définir comme suit :
+La *densité de collision (collision density)* ou *taux de réaction (reaction rate)* représente le nombre de collisions par unité de temps et par unité de volume dans la cible. À partir des équations (1) et (3), on peut la définir comme suit :
 
 $$ F = \frac {\Delta I}{\tau} = I\sigma N = I\Sigma \tag{4} $$
