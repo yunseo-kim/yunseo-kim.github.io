@@ -144,7 +144,7 @@ paginate: 10
 # --------------------------
 
 # Polyglot Settings
-languages: ["en", "ko", "es", "pt_BR", "ja", "fr", "de"]
+languages: ["en", "ko", "es", "pt-BR", "ja", "fr", "de"]
 default_lang: "en"
 exclude_from_localization: ["javascript", "images", "css", "public", "assets", "naverd"]
 parallel_localization: true
