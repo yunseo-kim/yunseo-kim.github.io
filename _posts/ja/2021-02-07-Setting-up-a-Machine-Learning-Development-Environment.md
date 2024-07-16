@@ -152,5 +152,105 @@ venvを使用した場合は、Jupyterにカーネルを登録し、名前を付
 (env) $ jupyter notebook
 ```
 
-## 5. CUDA & cuDNNのインストール
-### 5-1. 必要なCUDA & cuDNNバージョン
+## 5. CUDAとcuDNNのインストール
+### 5-1. 必要なCUDAとcuDNNのバージョンの確認
+[PyTorch公式ドキュメント](https://pytorch.org/get-started/locally/)でサポートされているCUDAバージョンを確認します。
+
+![PyTorch互換CUDAバージョンの確認](/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png)
+
+PyTorch 1.7.1バージョンでサポートされているCUDAバージョンは9.2、10.1、10.2、11.0です。NVIDIA 30シリーズGPUの場合、CUDA 11が必要なので、11.0バージョンが必要であることがわかります。
+
+[TensorFlow 2公式ドキュメント](https://www.tensorflow.org/install/gpu)でも必要なCUDAバージョンを確認します。
+
+![TensorFlow2互換CUDAバージョンの確認](/assets/img/머신러닝-개발환경-구축하기/TensorFlow_GPU_support.png)
+
+TensorFlow 2.4.0バージョンの場合、CUDAは同じく11.0バージョン、cuDNNは8.0バージョンが必要であることを確認しました。
+
+筆者の場合、状況に応じてPyTorchを使用する場合もTensorFlow 2を使用する場合もあるため、両方のパッケージと互換性のあるCUDAバージョンを確認しました。自分に必要なパッケージの要件を確認し、それに合わせればよいです。
+
+### 5-2. CUDAのインストール
+[CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive)にアクセスし、先ほど確認したバージョンを選択して進みます。この記事では[CUDA Toolkit 11.0 Update1](https://developer.nvidia.com/cuda-11.0-update1-download-archive)を選択して進みます。
+
+![CUDA 11.0 Update 1](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-1.png)
+
+次に、該当するプラットフォームとインストーラーの種類を選択し、画面に表示される指示に従います。このとき、[インストーラーの場合、できるだけシステムパッケージマネージャーを使用することをお勧めします](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#choose-installation-method)。筆者が好む方法はdeb (network)です。
+
+![CUDAプラットフォームの選択](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-2.png)
+
+![CUDAのインストール](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-3.png)
+
+以下のコマンドを実行してCUDAをインストールします。
+
+```
+$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+$ sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+$ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+$ sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+$ sudo apt update
+$ sudo apt install cuda-toolkit-11-0 cuda-drivers
+```
+
+注意深く見ると、最後の行が画像に表示された指示と少し異なることに気づくでしょう。ネットワークインストールで画像に表示されているようにcudaだけを入力すると、最新バージョンである11.2バージョンがインストールされますが、これは私たちが望むものではありません。[CUDA 11.0 Linuxインストールガイド](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#package-manager-metas)で様々なメタパッケージオプションを確認できます。ここでは、CUDA Toolkitパッケージを11.0バージョンに指定してインストールし、ドライバーパッケージは自動アップグレードされるようにするために最後の行を修正しました。
+
+### 5-3. cuDNNのインストール
+次のようにcuDNNをインストールします。
+
+```
+$ sudo apt install libcudnn8=8.0.5.39-1+cuda11.0
+$ sudo apt install libcudnn8-dev=8.0.5.39-1+cuda11.0
+```
+
+## 6. PyTorchのインストール
+先ほど3段階で仮想環境を作成した場合は、使用する仮想環境を有効にした状態で進めます。PyTorchが必要ない場合は、この段階はスキップします。
+
+[PyTorchホームページ](https://pytorch.org/get-started/locally/)にアクセスし、インストールするPyTorchビルド（Stable）、オペレーティングシステム（Linux）、パッケージ（Pip）、言語（Python）、CUDA（11.0）を選択し、画面に表示される指示に従います。
+
+![PyTorchのインストール](/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png)
+
+```
+(env) $ pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+PyTorchを正しくインストールしたかを検証するために、Pythonインタープリタを実行した後、次のコマンドを実行してみます。テンソルが返されれば成功です。
+
+```
+(env) $ python3
+Python 3.8.5 (default, Jul 28 2020, 12:59:40) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+>>> x = torch.rand(5, 3)
+>>> print(x)"
+tensor([[0.8187, 0.5925, 0.2768],
+        [0.9884, 0.8298, 0.8553],
+        [0.6350, 0.7243, 0.2323],
+        [0.9205, 0.9239, 0.9065],
+        [0.2424, 0.1018, 0.3426]])
+```
+
+GPUドライバーとCUDAが有効化されており、使用可能かどうかを確認するために次のコマンドを実行してみます。
+
+```
+>>> torch.cuda.is_available()
+True
+```
+
+## 7. TensorFlow 2のインストール
+6段階でPyTorchを仮想環境にインストールした場合は、その仮想環境を無効化した後、3、4段階に戻って新しい仮想環境を作成し、有効化してから進めます。6段階をスキップした場合は、そのまま進めればよいです。
+
+次のようにTensorFlowをインストールします。
+
+```
+(env2) $ pip install --upgrade tensorflow
+```
+
+TensorFlowを正しくインストールしたかを検証するために、次のコマンドを実行してみます。GPU名を表示し、テンソルを返せば成功です。
+
+```
+(env2) $ python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
+2021-02-07 22:45:51.390640: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+(中略)
+2021-02-07 22:45:54.592749: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6878 MB memory) -> physical GPU (device: 0, name: GeForce RTX 3070, pci bus id: 0000:01:00.0, compute capability: 8.6)
+tf.Tensor(526.1059, shape=(), dtype=float32)
+```

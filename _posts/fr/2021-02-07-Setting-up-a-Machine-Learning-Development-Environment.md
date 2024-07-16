@@ -153,18 +153,82 @@ Désormais, pour exécuter Jupyter, utilisez la commande suivante.
 ```
 
 ## 5. Installation de CUDA & cuDNN
-### 5-1. Vérification des versions nécessaires de CUDA & cuDNN
+### 5-1. Vérification des versions requises de CUDA & cuDNN
 Vérifiez les versions CUDA prises en charge dans la [documentation officielle de PyTorch](https://pytorch.org/get-started/locally/).  
 ![Vérification des versions CUDA compatibles avec PyTorch](/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png)  
-Sur la base de PyTorch version 1.7.1, les versions CUDA prises en charge sont 9.2, 10.1, 10.2, 11.0. Pour les GPU NVIDIA série 30, CUDA 11 est nécessaire, donc nous savons que la version 11.0 est nécessaire.
+Pour PyTorch version 1.7.1, les versions CUDA prises en charge sont 9.2, 10.1, 10.2, 11.0. Pour les GPU NVIDIA série 30, CUDA 11 est nécessaire, donc on peut voir que la version 11.0 est requise.
 
-Vérifiez également la version CUDA nécessaire dans la [documentation officielle de TensorFlow 2](https://www.tensorflow.org/install/gpu).  
+Vérifiez également les versions CUDA requises dans la [documentation officielle de TensorFlow 2](https://www.tensorflow.org/install/gpu).  
 ![Vérification des versions CUDA compatibles avec TensorFlow 2](/assets/img/머신러닝-개발환경-구축하기/TensorFlow_GPU_support.png)  
-Sur la base de TensorFlow version 2.4.0, nous avons confirmé que CUDA version 11.0 et cuDNN version 8.0 sont nécessaires.
+Pour TensorFlow version 2.4.0, CUDA 11.0 et cuDNN 8.0 sont nécessaires.
 
-Dans mon cas, j'utilise parfois PyTorch et parfois TensorFlow 2, donc j'ai vérifié les versions CUDA compatibles avec les deux packages. Vous devez vérifier les exigences du package dont vous avez besoin et vous y conformer.
+L'auteur vérifie les versions CUDA compatibles avec les deux packages car il utilise parfois PyTorch et parfois TensorFlow 2. Vérifiez les exigences du package dont vous avez besoin et conformez-vous à celles-ci.
 
 ### 5-2. Installation de CUDA
-Accédez à [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive), puis sélectionnez la version que vous avez vérifiée précédemment. Dans cet article, nous sélectionnons [CUDA Toolkit 11.0 Update1](https://developer.nvidia.com/cuda-11.0-update1-download-archive).  
+Accédez à [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive) et sélectionnez la version vérifiée précédemment. Dans cet article, nous sélectionnons [CUDA Toolkit 11.0 Update1](https://developer.nvidia.com/cuda-11.0-update1-download-archive).  
 ![CUDA 11.0 Update 1](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-1.png)  
-Maintenant, sélectionnez la plateforme et le type d'installateur correspondants, puis suivez les instructions qui apparaissent à l'écran. À ce moment, [il est préférable d'utiliser le gestionnaire de paquets système pour l'installateur si possible](https://docs.nvidia
+Sélectionnez ensuite la plateforme et le type d'installateur correspondants, puis suivez les instructions à l'écran. [Il est préférable d'utiliser le gestionnaire de paquets du système pour l'installateur](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#choose-installation-method). L'auteur préfère la méthode deb (network).  
+![Sélection de la plateforme CUDA](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-2.png)  
+![Installation de CUDA](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-3.png)  
+
+Exécutez les commandes suivantes pour installer CUDA :
+```
+$ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+$ sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+$ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+$ sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+$ sudo apt update
+$ sudo apt install cuda-toolkit-11-0 cuda-drivers
+```
+Si vous êtes attentif, vous remarquerez que la dernière ligne est légèrement différente des instructions de l'image. Dans l'installation réseau, si vous entrez simplement cuda comme indiqué dans l'image, la version la plus récente 11.2 sera installée, ce qui n'est pas ce que nous voulons. Vous pouvez consulter plusieurs options de méta-paquets dans le [guide d'installation Linux de CUDA 11.0](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#package-manager-metas). Ici, nous avons modifié la dernière ligne pour spécifier l'installation de la version 11.0 du paquet CUDA Toolkit et permettre la mise à jour automatique du paquet de pilotes.
+
+### 5-3. Installation de cuDNN
+Installez cuDNN comme suit :
+```
+$ sudo apt install libcudnn8=8.0.5.39-1+cuda11.0
+$ sudo apt install libcudnn8-dev=8.0.5.39-1+cuda11.0
+```
+
+## 6. Installation de PyTorch
+Si vous avez créé un environnement virtuel à l'étape 3, procédez avec l'environnement virtuel que vous allez utiliser activé. Si vous n'avez pas besoin de PyTorch, vous pouvez sauter cette étape.  
+Accédez au [site web de PyTorch](https://pytorch.org/get-started/locally/), sélectionnez la version de PyTorch à installer (Stable), le système d'exploitation (Linux), le package (Pip), le langage (Python), CUDA (11.0), puis suivez les instructions à l'écran.  
+![Installation de PyTorch](/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png)
+```
+(env) $ pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+```
+Pour vérifier si PyTorch a été correctement installé, lancez l'interpréteur Python et exécutez les commandes suivantes. Si un tenseur est renvoyé, c'est un succès.
+```
+(env) $ python3
+Python 3.8.5 (default, Jul 28 2020, 12:59:40) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+>>> x = torch.rand(5, 3)
+>>> print(x)"
+tensor([[0.8187, 0.5925, 0.2768],
+        [0.9884, 0.8298, 0.8553],
+        [0.6350, 0.7243, 0.2323],
+        [0.9205, 0.9239, 0.9065],
+        [0.2424, 0.1018, 0.3426]])
+```
+Pour vérifier si le pilote GPU et CUDA sont activés et disponibles, exécutez la commande suivante :
+```
+>>> torch.cuda.is_available()
+True
+```
+
+## 7. Installation de TensorFlow 2
+Si vous avez installé PyTorch dans un environnement virtuel à l'étape 6, désactivez cet environnement, revenez aux étapes 3 et 4 pour créer et activer un nouvel environnement virtuel, puis continuez. Si vous avez sauté l'étape 6, continuez simplement.  
+Installez TensorFlow comme suit :
+```
+(env2) $ pip install --upgrade tensorflow
+```
+Pour vérifier si TensorFlow a été correctement installé, exécutez la commande suivante. Si le nom du GPU s'affiche et qu'un tenseur est renvoyé, c'est un succès.
+```
+(env2) $ python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
+2021-02-07 22:45:51.390640: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+(omission)
+2021-02-07 22:45:54.592749: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6878 MB memory) -> physical GPU (device: 0, name: GeForce RTX 3070, pci bus id: 0000:01:00.0, compute capability: 8.6)
+tf.Tensor(526.1059, shape=(), dtype=float32)
+```

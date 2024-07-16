@@ -217,4 +217,18 @@ True
 ```
 
 ## 7. Installing TensorFlow 2
-If you installed PyTorch in a virtual environment in step 6, deactivate that virtual environment, go back to steps 3 and 4 to create and activate a new virtual environment, and then proceed. If you skipped step 6
+If you installed PyTorch in the virtual environment at step 6, deactivate that virtual environment and return to steps 3 and 4 to create and activate a new virtual environment before proceeding. If you skipped step 6, you can continue as is.
+
+Install TensorFlow as follows:
+```
+(env2) $ pip install --upgrade tensorflow
+```
+To verify that TensorFlow is installed correctly, run the following command. If it displays the GPU name and returns a tensor, the installation was successful.
+```
+(env2) $ python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
+2021-02-07 22:45:51.390640: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+(omitted)
+2021-02-07 22:45:54.592749: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6878 MB memory) -> physical GPU (device: 0, name: GeForce RTX 3070, pci bus id: 0000:01:00.0, compute capability: 8.6)
+tf.Tensor(526.1059, shape=(), dtype=float32)
+```
