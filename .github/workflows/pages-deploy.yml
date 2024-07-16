@@ -50,6 +50,11 @@ jobs:
         continue-on-error: true
         env:
           JEKYLL_ENV: "production"
+      
+      - name: Setup IndexNow 
+        # Generate files dynamically to prevent them from being leaked in public repositories.
+        # This example will put the file in the root directory of the site.You may change the location by yourself.
+        run: echo ${{ secrets.INDEXNOW_KEY }} > ${{ secrets.INDEXNOW_KEY }}.txt
 
       - name: Test site
         run: |
@@ -72,3 +77,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: indexnow-action
+        uses: bojieyang/indexnow-action@v2 # v2 is the latest major version following the action-versioning.
+        with:
+          # The location of your sitemap must start with http(s). 
+          # Currently, XML Sitemap, Sitemap index, RSS and Atom formats are supported.
+          sitemap-location: 'https://yunseo-kim.github.io/sitemap.xml' 
+          key: ${{ secrets.INDEXNOW_KEY }} # The key you get from IndexNow.
