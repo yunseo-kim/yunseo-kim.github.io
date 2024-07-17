@@ -46,7 +46,7 @@ J'ai commencé à héberger un blog sur GitHub Pages en utilisant Jekyll au déb
 
 ## 2. Choix du SSG et du thème à utiliser
 
-### Raisons du choix de Jekyll
+### 2-1. Raisons du choix de Jekyll
 Il existe plusieurs SSG comme Jekyll, Hugo, Gatsby, etc., mais j'ai décidé d'utiliser Jekyll. Voici les critères que j'ai pris en compte lors du choix du SSG et les raisons pour lesquelles j'ai choisi Jekyll :
 - Est-il possible de minimiser les essais et erreurs inutiles et de se concentrer sur l'écriture et la gestion du blog ?
   - Jekyll est le générateur de sites web statiques officiellement pris en charge par Github Pages. Bien sûr, d'autres SSG comme Hugo, Gatsby, etc. peuvent également être hébergés sur Github Pages, et il existe également l'option d'utiliser un service d'hébergement complètement différent comme Netlify, mais en réalité, pour gérer un blog personnel de cette taille, le SSG utilisé pour la construction et la vitesse de construction, les performances, etc. ne sont pas vraiment importants, donc j'ai pensé qu'il serait préférable d'opter pour quelque chose de plus simple à maintenir et avec plus de documentation de référence.
@@ -56,7 +56,7 @@ Il existe plusieurs SSG comme Jekyll, Hugo, Gatsby, etc., mais j'ai décidé d'u
   - De plus, comme j'utilise principalement C ou Python, je ne connais pas bien Ruby pour Jekyll ou Go pour Hugo, donc j'ai voulu utiliser activement les thèmes et plugins existants.
   - Avec Jekyll, j'ai pu rapidement trouver un thème qui me plaisait au premier coup d'œil, alors qu'avec Hugo ou Gatsby, il ne semblait pas y avoir autant de thèmes adaptés à un blog personnel. Comme mentionné précédemment, la compatibilité avec Github Pages, que de nombreux développeurs utilisent pour héberger leurs blogs personnels, et la période de développement semblent avoir eu un impact important ici aussi.
 
-### Choix du thème
+### 2-2. Choix du thème
 #### Minimal Mistakes (janvier 2021 - avril 2022)
 - Dépôt Github : <https://github.com/mmistakes/minimal-mistakes>
 - Page de démonstration : <https://mmistakes.github.io/minimal-mistakes/>
@@ -67,7 +67,7 @@ Il existe plusieurs SSG comme Jekyll, Hugo, Gatsby, etc., mais j'ai décidé d'u
 - Possibilité de choisir parmi des skins prédéfinis
 - Bien que j'aie ensuite découvert le thème Chirpy qui a un design plus élégant et qui me plaît davantage, en tenant compte du fait qu'il s'agit d'un blog d'ingénierie, je pense que c'était un thème assez correct à utiliser avec un design épuré, même s'il n'était pas particulièrement joli.
 
-### Thème Chirpy Jekyll (depuis avril 2022)
+#### Thème Chirpy Jekyll (depuis avril 2022)
 - Dépôt Github : <https://github.com/cotes2020/jekyll-theme-chirpy/>
 - Page de démonstration : <https://chirpy.cotes.page/>
 - Thème que j'utilise depuis que j'ai changé le thème de mon blog en avril 2022

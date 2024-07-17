@@ -46,7 +46,7 @@ tags:
 
 ## 2. 사용할 SSG와 테마 선택
 
-### Jekyll을 선택한 이유
+### 2-1. Jekyll을 선택한 이유
 Jekyll, Hugo, Gatsby 등 여러 SSG가 존재하지만, Jekyll을 사용하기로 결정하였다. 사용할 SSG를 선택하는 과정에서 고려한 기준과, Jekyll을 선택한 이유는 다음과 같다.
 - 불필요한 시행착오를 최소화하고 글 작성과 블로그 운영에 집중할 수 있는가?
   - Jekyll은 Github Pages에서 공식 지원하는 정적 웹 사이트 생성기이다. 물론 Hugo, Gatsby 등 다른 SSG들도 Github Pages에서 얼마든지 호스팅할 수 있고 Netlify 등 아예 다른 호스팅 서비스를 이용한다는 선택지도 있지만, 사실 이 정도 규모의 개인 블로그를 운영하는 데 있어서 기술적으로 어떤 SSG를 사용하여 구축했는지와 빌드 속도, 성능 등은 크게 중요하지 않으므로 그냥 조금이라도 더 유지보수가 간단하고 참고할 문서가 많은 것이 좋겠다고 판단했다.
@@ -56,7 +56,7 @@ Jekyll, Hugo, Gatsby 등 여러 SSG가 존재하지만, Jekyll을 사용하기�
   - 더군다나 나는 원래 C나 Python을 주로 활용하기 때문에, Jekyll의 Ruby나 Hugo의 Go 언어는 잘 모르는 상황이라 더더욱 기존에 개발되어 있는 테마와 플러그인들을 적극적으로 활용하려고 했다.
   - Jekyll에는 한눈에 봐도 마음에 드는 테마를 금방 찾아낼 수 있었던 반면, Hugo나 Gatsby는 상대적으로 개인 블로그 목적으로 쓰기에 적합한 테마의 수가 그리 많지는 않았던 것 같다. 아무래도 상술한 것처럼 개발자들이 개인 블로그 호스팅을 위해 많이 사용하는 Github Pages와의 연동성, 그리고 개발 기간이 여기에도 영향을 크게 미친 것 같다.
 
-### 테마 선택
+### 2-2. 테마 선택
 #### Minimal Mistakes (2021.01 ~ 2022.04)
 - Github Repo: <https://github.com/mmistakes/minimal-mistakes>
 - Demo Page: <https://mmistakes.github.io/minimal-mistakes/>
@@ -67,7 +67,7 @@ Jekyll, Hugo, Gatsby 등 여러 SSG가 존재하지만, Jekyll을 사용하기�
 - 사전 정의된 스킨 선택 가능
 - 디자인이 더 유려하고 마음에 드는 Chirpy 테마를 이후에 발견하고 넘어가긴 했지만, 어차피 공대 공대한 블로그라는 걸 감안하면 예쁘진 않아도 나름 깔끔한 디자인을 가지고 있어서 무난히 사용할 만 했던 것 같다.
 
-### Chirpy Jekyll Theme (2022.04~)
+#### Chirpy Jekyll Theme (2022.04~)
 - Github Repo: <https://github.com/cotes2020/jekyll-theme-chirpy/>
 - Demo Page: <https://chirpy.cotes.page/>
 - 2022년 4월에 블로그 테마를 이전한 이후 지금까지 사용 중인 테마

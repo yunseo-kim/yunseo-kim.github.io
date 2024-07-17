@@ -46,7 +46,7 @@ I started hosting a blog on GitHub Pages using Jekyll in early 2021. However, I 
 
 ## 2. Choosing an SSG and Theme
 
-### Reasons for Choosing Jekyll
+### 2-1. Reasons for Choosing Jekyll
 There are several SSGs like Jekyll, Hugo, Gatsby, etc., but I decided to use Jekyll. The criteria I considered when choosing an SSG and the reasons for selecting Jekyll are as follows:
 - Can it minimize unnecessary trial and error and allow focus on writing and blog operation?
   - Jekyll is the officially supported static website generator for GitHub Pages. Although other SSGs like Hugo and Gatsby can also be hosted on GitHub Pages, and there's the option of using other hosting services like Netlify, I decided that for a personal blog of this scale, the technical aspects of which SSG was used for construction and build speed, performance, etc., are not very important. So I thought it would be better to choose one that is simpler to maintain and has more reference documents.
@@ -56,7 +56,7 @@ There are several SSGs like Jekyll, Hugo, Gatsby, etc., but I decided to use Jek
   - Moreover, since I mainly use C or Python, I'm not familiar with Ruby (used by Jekyll) or Go (used by Hugo), so I wanted to actively utilize existing themes and plugins.
   - With Jekyll, I could quickly find a theme that I liked at first glance, whereas Hugo and Gatsby seemed to have relatively fewer themes suitable for personal blog purposes. This seems to be largely influenced by the connectivity with GitHub Pages, which developers often use for personal blog hosting, and the longer development period as mentioned above.
 
-### Theme Selection
+### 2-2. Theme Selection
 #### Minimal Mistakes (Jan 2021 ~ Apr 2022)
 - Github Repo: <https://github.com/mmistakes/minimal-mistakes>
 - Demo Page: <https://mmistakes.github.io/minimal-mistakes/>
@@ -67,7 +67,7 @@ There are several SSGs like Jekyll, Hugo, Gatsby, etc., but I decided to use Jek
 - Ability to choose from predefined skins
 - Although I later discovered the Chirpy theme with a more appealing design and switched to it, considering it's a rather technical blog anyway, the Minimal Mistakes theme had a clean design that was decent enough to use, even if not particularly pretty.
 
-### Chirpy Jekyll Theme (Apr 2022~)
+#### Chirpy Jekyll Theme (Apr 2022~)
 - Github Repo: <https://github.com/cotes2020/jekyll-theme-chirpy/>
 - Demo Page: <https://chirpy.cotes.page/>
 - The theme I've been using since switching blog themes in April 2022

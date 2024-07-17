@@ -46,7 +46,7 @@ Comecei a hospedar meu blog no GitHub Pages usando Jekyll no início de 2021. No
 
 ## 2. Escolhendo o SSG e o Tema a Serem Usados
 
-### Por que escolhi Jekyll
+### 2-1. Por que escolhi Jekyll
 Existem vários SSGs como Jekyll, Hugo, Gatsby, etc., mas decidi usar Jekyll. Os critérios que considerei ao escolher o SSG e as razões para escolher Jekyll são os seguintes:
 - É possível minimizar tentativas e erros desnecessários e focar na escrita e operação do blog?
   - Jekyll é o gerador de sites estáticos oficialmente suportado pelo Github Pages. Claro, outros SSGs como Hugo, Gatsby, etc. também podem ser hospedados no Github Pages, e há a opção de usar outros serviços de hospedagem como Netlify, mas na verdade, para operar um blog pessoal deste tamanho, não é tão importante tecnicamente qual SSG foi usado para construí-lo, nem a velocidade de construção ou desempenho, então julguei que seria melhor usar algo que fosse um pouco mais simples de manter e tivesse mais documentação de referência.
@@ -56,7 +56,7 @@ Existem vários SSGs como Jekyll, Hugo, Gatsby, etc., mas decidi usar Jekyll. Os
   - Além disso, como eu originalmente uso principalmente C e Python, não conheço bem Ruby do Jekyll ou Go do Hugo, então queria usar ativamente temas e plugins já desenvolvidos.
   - Com Jekyll, pude encontrar rapidamente um tema que gostei à primeira vista, enquanto Hugo e Gatsby pareciam não ter tantos temas adequados para blogs pessoais em comparação. Parece que a compatibilidade com o Github Pages, que muitos desenvolvedores usam para hospedar blogs pessoais, e o período de desenvolvimento mencionado acima também tiveram um grande impacto aqui.
 
-### Escolha do Tema
+### 2-2. Escolha do Tema
 #### Minimal Mistakes (Jan 2021 ~ Abr 2022)
 - Github Repo: <https://github.com/mmistakes/minimal-mistakes>
 - Página de Demonstração: <https://mmistakes.github.io/minimal-mistakes/>
@@ -67,7 +67,7 @@ Existem vários SSGs como Jekyll, Hugo, Gatsby, etc., mas decidi usar Jekyll. Os
 - Possibilidade de escolher skins predefinidas
 - Embora eu tenha mudado posteriormente para o tema Chirpy, que tem um design mais elegante e agradável, considerando que é um blog de engenharia de qualquer maneira, acho que foi bastante utilizável com seu design limpo, mesmo que não fosse bonito.
 
-### Tema Chirpy Jekyll (Abr 2022~)
+#### Tema Chirpy Jekyll (Abr 2022~)
 - Github Repo: <https://github.com/cotes2020/jekyll-theme-chirpy/>
 - Página de Demonstração: <https://chirpy.cotes.page/>
 - Tema que estou usando desde que mudei o tema do blog em abril de 2022

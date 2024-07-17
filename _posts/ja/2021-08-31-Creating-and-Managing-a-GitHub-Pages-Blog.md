@@ -46,7 +46,7 @@ tags:
 
 ## 2. 使用するSSGとテーマの選択
 
-### Jekyllを選んだ理由
+### 2-1. Jekyllを選んだ理由
 Jekyll、Hugo、Gatsbyなど様々なSSGが存在しますが、Jekyllを使用することに決めました。使用するSSGを選択する過程で考慮した基準と、Jekyllを選んだ理由は次の通りです。
 - 不必要な試行錯誤を最小限に抑え、記事作成とブログ運営に集中できるか？
   - JekyllはGithub Pagesが公式にサポートする静的ウェブサイトジェネレーターです。もちろんHugo、Gatsbyなど他のSSGもGithub Pagesでホスティングできますし、Netlifyなど全く別のホスティングサービスを利用するという選択肢もありますが、実際にこの程度の規模の個人ブログを運営する上で、技術的にどのSSGを使用して構築したかやビルド速度、パフォーマンスなどはそれほど重要ではないので、少しでもメンテナンスが簡単で参考にできるドキュメントが多いものが良いと判断しました。
@@ -56,7 +56,7 @@ Jekyll、Hugo、Gatsbyなど様々なSSGが存在しますが、Jekyllを使用�
   - さらに私は元々CやPythonを主に活用するため、JekyllのRubyやHugoのGo言語はよく知らない状況だったので、既存に開発されているテーマとプラグインを積極的に活用しようと考えました。
   - Jekyllには一目で気に入るテーマをすぐに見つけることができた一方、HugoやGatsbyは比較的個人ブログ目的で使用するのに適したテーマの数がそれほど多くなかったようです。おそらく上述したように、開発者が個人ブログホスティングのために多く使用するGithub Pagesとの連携性、そして開発期間がここにも大きく影響したようです。
 
-### テーマ選択
+### 2-2. テーマ選択
 #### Minimal Mistakes (2021.01 ~ 2022.04)
 - Github Repo: <https://github.com/mmistakes/minimal-mistakes>
 - Demo Page: <https://mmistakes.github.io/minimal-mistakes/>
@@ -67,7 +67,7 @@ Jekyll、Hugo、Gatsbyなど様々なSSGが存在しますが、Jekyllを使用�
 - 事前定義されたスキン選択可能
 - デザインがより洗練されていて気に入ったChirpyテーマを後に発見して移行しましたが、どちらにせよ工学部らしいブログだということを考慮すれば、綺麗ではなくてもそれなりにすっきりしたデザインを持っていて無難に使用できたと思います。
 
-### Chirpy Jekyll Theme (2022.04~)
+#### Chirpy Jekyll Theme (2022.04~)
 - Github Repo: <https://github.com/cotes2020/jekyll-theme-chirpy/>
 - Demo Page: <https://chirpy.cotes.page/>
 - 2022年4月にブログテーマを移行して以来、現在まで使用中のテーマ
