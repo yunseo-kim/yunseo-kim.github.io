@@ -12,6 +12,7 @@ layout: content
             {% if node.layout %}
                 <url>
                     <loc>{% if lang == site.default_lang %}{{ node.url | absolute_url }}{% else %}{{ node.url | prepend: lang | prepend: '/' | absolute_url }}{% endif %}</loc>
+                    {% if node.last_modified_at %}<lastmod>{% if node.last_modified_at != node.date %}{{ node.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}{% else %}{{ node.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}{% endif %}</lastmod>{% endif %}
                 </url>
             {% endif %}
         {% endunless %}
@@ -22,6 +23,7 @@ layout: content
         {% for node in site[collection.label] %}
             <url>
                 <loc>{% if lang == site.default_lang %}{{ node.url | absolute_url }}{% else %}{{ node.url | prepend: lang | prepend: '/' | absolute_url }}{% endif %}</loc>
+                {% if node.last_modified_at %}<lastmod>{% if node.last_modified_at != node.date %}{{ node.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}{% else %}{{ node.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}{% endif %}</lastmod>{% endif %}
             </url>
         {% endfor %}
     {% endfor %}
