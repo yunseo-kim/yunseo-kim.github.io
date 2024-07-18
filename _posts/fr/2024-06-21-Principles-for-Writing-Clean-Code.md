@@ -26,6 +26,7 @@ Que ce soit pour le code écrit en compétition ou le code écrit dans la pratiq
 
 ### Écrire un code concis
 > "KISS (Keep It Simple, Stupid)"
+
 - Plus le code est court et concis, moins il y a de risques de fautes de frappe ou de bugs simples, et plus le débogage est facile
 - Écrire autant que possible de manière à ce qu'il soit facile à interpréter sans commentaires séparés, et n'ajouter des commentaires que lorsque c'est vraiment nécessaire pour des explications détaillées. Il est préférable de maintenir la structure du code elle-même concise plutôt que de s'appuyer sur des commentaires.
 - Lorsque vous écrivez des commentaires, faites-le de manière claire et concise
@@ -68,18 +69,21 @@ Que ce soit pour le code écrit en compétition ou le code écrit dans la pratiq
 
 ### Modularisation du code
 > "DRY (Don't Repeat Yourself)"
+
 - Lorsque le même code est utilisé de manière répétée, séparer cette partie en fonction ou en classe pour la réutiliser
 - La modularisation pour réutiliser activement le code améliore la lisibilité, et lorsqu'il est nécessaire de modifier le code ultérieurement, il suffit de modifier la fonction ou la classe correspondante une seule fois, ce qui facilite la maintenance
 - En principe, il est idéal qu'une fonction n'effectue qu'une seule tâche et non deux ou plus. Cependant, le code écrit en PS/CP est généralement un programme de petite taille effectuant des fonctions simples, donc il y a des limites à la réutilisation, et comme le temps est limité, il peut être difficile de suivre strictement le principe comme dans la pratique professionnelle.
 
 ### Utilisation de la bibliothèque standard
 > "Don't reinvent the wheel"
+
 - Lors de l'étude des algorithmes ou des structures de données, il est utile d'implémenter directement des structures de données comme les files ou les piles, des algorithmes de tri, etc. pour comprendre les principes, mais sinon, il est préférable d'utiliser activement la bibliothèque standard
 - La bibliothèque standard a déjà été utilisée et vérifiée d'innombrables fois, et elle est bien optimisée, donc elle est plus efficace que de l'implémenter soi-même
 - Comme on peut utiliser une bibliothèque existante, il n'est pas nécessaire de perdre du temps à implémenter directement un code ayant la même fonctionnalité, et lors de la collaboration, il est plus facile pour les autres membres de l'équipe de comprendre le code écrit
 
 ### Utilisation d'une nomenclature cohérente et claire
 > "Follow standard conventions"
+
 - Utiliser des noms de variables et de fonctions non ambigus
 - Généralement, chaque langage de programmation a sa propre convention de nommage, donc il faut apprendre la convention de nommage utilisée dans la bibliothèque standard du langage utilisé et l'appliquer de manière cohérente lors de la déclaration de classes, fonctions, variables, etc.
 - Nommer de manière à ce que la fonction de chaque variable, fonction et classe soit clairement visible, et si c'est un type booléen, dans quelles conditions il renvoie vrai (True)

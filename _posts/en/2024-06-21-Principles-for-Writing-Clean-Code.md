@@ -26,6 +26,7 @@ Whether it's code written for competitions or for practical work, the conditions
 
 ### Writing Concise Code
 > "KISS (Keep It Simple, Stupid)"
+
 - The shorter and more concise the code, the less likely it is to have typos or simple bugs, and the easier it is to debug
 - Write in a way that can be easily interpreted without separate comments if possible, and add detailed explanations with comments only when absolutely necessary. It's preferable to maintain a concise code structure rather than relying on comments.
 - If you write comments, make them clear and concise
@@ -68,18 +69,21 @@ Whether it's code written for competitions or for practical work, the conditions
 
 ### Code Modularization
 > "DRY (Don't Repeat Yourself)"
+
 - If the same code is used repeatedly, separate that part into functions or classes for reuse
 - Active reuse of code through modularization improves readability, and when code needs to be modified later, only the relevant function or class needs to be modified once, making maintenance easier
 - In principle, it's ideal for one function to perform only one task and not do two or more things. However, the code written in PS/CP is usually a small-scale program that performs simple functions, so there are limitations to reuse, and due to time constraints, it may be difficult to strictly follow the principles as in practical work.
 
 ### Utilizing Standard Libraries
 > "Don't reinvent the wheel"
+
 - While it's useful to implement data structures like queues and stacks or sorting algorithms directly to understand the principles when studying algorithms or data structures, otherwise, it's better to actively use standard libraries
 - Standard libraries have already been used and verified countless times, and are well-optimized, making them more efficient than implementing them again yourself
 - Using existing libraries saves time that would be wasted implementing the same functionality unnecessarily, and makes it easier for other team members to understand your code during collaboration
 
 ### Using Consistent and Clear Naming Conventions
 > "Follow standard conventions"
+
 - Use unambiguous variable and function names
 - Usually, each programming language has its own naming conventions, so learn the naming conventions used in the standard library of the language you're using and consistently apply them when declaring classes, functions, variables, etc.
 - Name variables, functions, and classes in a way that clearly shows what they do, and for boolean types, under what conditions they return True

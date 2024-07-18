@@ -26,6 +26,7 @@ Ob es sich um Code handelt, der in einem Wettbewerb geschrieben wird, oder um Co
 
 ### Schreiben von prägnanten Code
 > "KISS (Keep It Simple, Stupid)"
+
 - Je kürzer und prägnanter der Code ist, desto geringer ist natürlich die Gefahr von Tippfehlern oder einfachen Bugs, und das Debugging wird erleichtert.
 - Schreiben Sie den Code so, dass er möglichst ohne zusätzliche Kommentare leicht zu interpretieren ist, und fügen Sie nur bei wirklicher Notwendigkeit Kommentare für detaillierte Erklärungen hinzu. Es ist besser, die Codestruktur selbst prägnant zu halten, als sich auf Kommentare zu verlassen.
 - Wenn Kommentare geschrieben werden, sollten sie klar und prägnant sein.
@@ -68,18 +69,21 @@ Ob es sich um Code handelt, der in einem Wettbewerb geschrieben wird, oder um Co
 
 ### Code-Modularisierung
 > "DRY (Don't Repeat Yourself)"
+
 - Wenn derselbe Code wiederholt verwendet wird, trennen Sie diesen Teil in Funktionen oder Klassen zur Wiederverwendung.
 - Durch aktive Wiederverwendung von Code durch Modularisierung wird die Lesbarkeit verbessert, und wenn später Codeänderungen erforderlich sind, muss nur die entsprechende Funktion oder Klasse einmal geändert werden, was die Wartung erleichtert.
 - Prinzipiell ist es ideal, wenn eine Funktion nicht mehr als eine Aufgabe erfüllt und nur eine Funktionalität hat. Allerdings ist der Code, der in PS/CP geschrieben wird, meist ein kleines Programm mit einfacher Funktionalität, sodass die Wiederverwendung begrenzt ist und aufgrund der Zeitbeschränkung die Prinzipien nicht so streng wie in der Praxis befolgt werden können.
 
 ### Nutzung von Standardbibliotheken
 > "Don't reinvent the wheel"
+
 - Während es in der Lernphase von Algorithmen und Datenstrukturen nützlich ist, Datenstrukturen wie Queues und Stacks sowie Sortieralgorithmen selbst zu implementieren, um die Prinzipien zu verstehen, ist es ansonsten besser, Standardbibliotheken aktiv zu nutzen.
 - Standardbibliotheken wurden bereits unzählige Male verwendet und getestet und sind gut optimiert, sodass sie effizienter sind als eine eigene Implementierung.
 - Da man vorhandene Bibliotheken verwenden kann, muss man keine Zeit damit verschwenden, unnötigerweise Code mit identischer Funktionalität selbst zu implementieren, und bei der Zusammenarbeit ist es für andere Teammitglieder einfacher, den geschriebenen Code zu verstehen.
 
 ### Verwendung einer konsistenten und klaren Namenskonvention
 > "Follow standard conventions"
+
 - Verwenden Sie eindeutige Variablen- und Funktionsnamen.
 - Normalerweise gibt es für jede Programmiersprache eine passende Namenskonvention. Lernen Sie die Namenskonvention, die in der Standardbibliothek der verwendeten Sprache verwendet wird, und wenden Sie sie konsistent bei der Deklaration von Klassen, Funktionen, Variablen usw. an.
 - Benennen Sie so, dass klar wird, welche Funktion jede Variable, Funktion und Klasse hat, und bei booleschen Typen, unter welchen Bedingungen sie True zurückgeben.
