@@ -85,3 +85,4 @@ jobs:
           # Currently, XML Sitemap, Sitemap index, RSS and Atom formats are supported.
           sitemap-location: 'https://yunseo-kim.github.io/sitemap.xml' 
           key: ${{ secrets.INDEXNOW_KEY }} # The key you get from IndexNow.
+          since-unit: 'month'
