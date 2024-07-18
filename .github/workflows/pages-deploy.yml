@@ -27,11 +27,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      #- name: Setup IndexNow 
-        # Generate files dynamically to prevent them from being leaked in public repositories.
-        # This example will put the file in the root directory of the site.You may change the location by yourself.
-      #  run: echo ${{ secrets.INDEXNOW_KEY }} > ${{ secrets.INDEXNOW_KEY }}.txt
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -55,6 +50,11 @@ jobs:
         continue-on-error: true
         env:
           JEKYLL_ENV: "production"
+      
+      - name: Setup IndexNow 
+        # Generate files dynamically to prevent them from being leaked in public repositories.
+        # This example will put the file in the root directory of the site.You may change the location by yourself.
+        run: echo ${{ secrets.INDEXNOW_KEY }} > ./_site/${{ secrets.INDEXNOW_KEY }}.txt
 
       - name: Test site
         run: |
