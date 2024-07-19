@@ -147,7 +147,7 @@ paginate: 10
 languages: ["en", "ko", "es", "pt-BR", "ja", "fr", "de"]
 default_lang: "en"
 exclude_from_localization: ["javascript", "images", "css", "public", "assets", "naverd"]
-parallel_localization: true
+parallel_localization: false
 lang_from_path: true
 
 # ------------ The following options are not recommended to be modified ------------------
