@@ -30,8 +30,7 @@ def submit_prompt(prompt, system_prompt):
     return response.content[0].text
 
 def translate(filepath, source_lang, target_lang):
-    language_code = {"English":"en", "Spanish":"es", "Brazilian Portuguese":"pt_BR", "Japanese":"ja", 
-                     "French":"fr", "German":"de", "Korean":"ko"}
+    language_code = {"English":"en", "Spanish":"es", "Brazilian Portuguese":"pt-BR", "Japanese":"ja", "French":"fr", "German":"de", "Korean":"ko"}
     
     system_prompt = f"You are a professional technical translator. \
         Your client is an engineering blogger who writes mainly about math, \
