@@ -24,11 +24,11 @@ math: true
 > - $$ \cos A - \cos B = -2\sin \frac{A+B}{2}\sin \frac{A-B}{2} $$
 {: .prompt-info }
 
-> 公式だけでなく、導出過程も一緒に覚えておくと良いでしょう。
+> 公式だけでなく、導出過程も一緒に覚えておくことをお勧めします。
 {: .prompt-tip }
 
 ## 前提知識
-- [三角関数の加法定理](/posts/2024-07-17-trigonometric-addition-formulas)
+- [三角関数の加法定理](/posts/trigonometric-addition-formulas)
 
 ## 積を和または差に変形する公式（積和公式）
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
@@ -37,7 +37,7 @@ math: true
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### 導出
-[三角関数の加法定理](/posts/2024-07-17-trigonometric-addition-formulas)
+[三角関数の加法定理](/posts/trigonometric-addition-formulas)
 
 $$ \begin{align}
 \sin(\alpha+\beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \tag{1}\label{eqn:sin_add}\\

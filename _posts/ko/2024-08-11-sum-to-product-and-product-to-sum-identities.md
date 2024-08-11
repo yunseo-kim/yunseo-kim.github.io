@@ -28,7 +28,7 @@ math: true
 {: .prompt-tip }
 
 ## Prerequisites
-- [삼각함수의 덧셈정리](/posts/2024-07-17-trigonometric-addition-formulas)
+- [삼각함수의 덧셈정리](/posts/trigonometric-addition-formulas)
 
 ## 곱을 합 또는 차로 변형하는 공식 (Product-to-Sum Identities)
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
@@ -37,7 +37,7 @@ math: true
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### 유도
-[삼각함수의 덧셈정리](/posts/2024-07-17-trigonometric-addition-formulas)
+[삼각함수의 덧셈정리](/posts/trigonometric-addition-formulas)
 
 $$ \begin{align}
 \sin(\alpha+\beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \tag{1}\label{eqn:sin_add}\\

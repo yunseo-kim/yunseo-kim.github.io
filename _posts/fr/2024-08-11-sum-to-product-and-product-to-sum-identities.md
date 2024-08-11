@@ -28,7 +28,7 @@ math: true
 {: .prompt-tip }
 
 ## Prérequis
-- [Théorèmes d'addition trigonométrique](/posts/2024-07-17-trigonometric-addition-formulas)
+- [Théorèmes d'addition trigonométrique](/posts/trigonometric-addition-formulas)
 
 ## Formules de produit en somme (Product-to-Sum Identities)
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
@@ -37,7 +37,7 @@ math: true
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### Dérivation
-Nous utilisons les [théorèmes d'addition trigonométrique](/posts/2024-07-17-trigonometric-addition-formulas)
+On utilise les [théorèmes d'addition trigonométrique](/posts/trigonometric-addition-formulas)
 
 $$ \begin{align}
 \sin(\alpha+\beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \tag{1}\label{eqn:sin_add}\\

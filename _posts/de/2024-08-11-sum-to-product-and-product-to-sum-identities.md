@@ -28,7 +28,7 @@ math: true
 {: .prompt-tip }
 
 ## Voraussetzungen
-- [Additionstheoreme der Trigonometrie](/posts/2024-07-17-trigonometric-addition-formulas)
+- [Additionstheoreme der Trigonometrie](/posts/trigonometric-addition-formulas)
 
 ## Produkt-zu-Summe Identitäten
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
@@ -37,7 +37,7 @@ math: true
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### Ableitung
-Wir verwenden die [Additionstheoreme der Trigonometrie](/posts/2024-07-17-trigonometric-addition-formulas)
+Wir verwenden die [Additionstheoreme der Trigonometrie](/posts/trigonometric-addition-formulas)
 
 $$ \begin{align}
 \sin(\alpha+\beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \tag{1}\label{eqn:sin_add}\\
@@ -63,13 +63,13 @@ $$ \begin{align}
 \cos(\alpha-\beta ) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta \tag{6}\label{eqn:cos_dif}
 \end{align} $$
 
-durch Addition von ($\ref{eqn:cos_add}$)+($\ref{eqn:cos_dif}$)
+Wenn wir ($\ref{eqn:cos_add}$)+($\ref{eqn:cos_dif}$) berechnen, erhalten wir
 
 $$ \cos(\alpha+\beta) + \cos(\alpha-\beta) = 2 \cos \alpha \cos \beta \tag{7}\label{cos_product_to_sum} $$
 
 $$ \therefore \cos \alpha \cos \beta = \frac { 1 } { 2 } \{ \cos(\alpha+\beta) + \cos(\alpha-\beta) \}. $$
 
-Durch Subtraktion von ($\ref{eqn:cos_add}$)-($\ref{eqn:cos_dif}$) erhalten wir
+Wenn wir ($\ref{eqn:cos_add}$)-($\ref{eqn:cos_dif}$) berechnen, erhalten wir
 
 $$ \cos(\alpha+\beta) - \cos(\alpha-\beta) = -2 \sin \alpha \sin \beta \tag{8}\label{sin_product_to_dif} $$
 
