@@ -1,14 +1,42 @@
 ---
 title: "Multiple-Angle and Half-Angle Formulas"
 description: >-
-  We examine the double angle and triple angle formulas, and derive the multiple angle formulas from the trigonometric addition theorems. We also derive the half angle formulas from the double angle formulas.
+  We examine the double-angle and triple-angle formulas and derive them from the Trigonometric Addition Formulas. We also derive the half-angle formulas from the double-angle formulas.
 categories: [Mathematics]
 tags: [Trigonometry]
 math: true
 ---
 
-## Multiple Angle Formulas
-### Double Angle Formulas
+## TL;DR
+> **Double-Angle Formulas**
+>
+> - $$ \sin 2\alpha = 2\sin \alpha \cos \alpha $$
+> - $$ \begin{align*} 
+> \cos 2\alpha &= \cos^{2}\alpha - \sin^{2}\alpha \\ 
+> &= 2\cos^{2}\alpha - 1 \\
+> &= 1 - 2\sin^{2}\alpha \end{align*} $$
+> - $$\tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2}\alpha}$$
+{: .prompt-info }
+
+> **Triple-Angle Formulas**
+>
+> - $$\sin 3\alpha = 3\sin \alpha - 4\sin^{3}\alpha$$
+> - $$\cos 3\alpha = 4\cos^{3}\alpha - 3\cos \alpha$$
+{: .prompt-info }
+
+> **Half-Angle Formulas**
+>
+> - $$\sin^{2}\frac{\alpha}{2} = \frac{1 - \cos \alpha}{2}$$
+> - $$\cos^{2}\frac{\alpha}{2} = \frac{1 + \cos \alpha}{2}$$
+> - $$\tan^{2}\frac{\alpha}{2} = \frac{1 - \cos \alpha}{1 + \cos\alpha}$$
+> - $$\tan \frac{\alpha}{2} = \frac{\sin \alpha}{1 + \cos \alpha}$$
+{: .prompt-info }
+
+## Prerequisites
+- [[Trigonometric Addition Formulas]](/posts/trigonometric-addition-formulas)
+
+## Multiple-Angle Formulas
+### Double-Angle Formulas
 - $$ \sin 2\alpha = 2\sin \alpha \cos \alpha $$
 - $$ \begin{align*} 
 \cos 2\alpha &= \cos^{2}\alpha - \sin^{2}\alpha \\ 
@@ -17,7 +45,7 @@ math: true
 - $$\tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2}\alpha}$$
 
 #### Derivation
-The double angle formulas can be derived from the trigonometric addition theorems.
+We can derive the double-angle formulas from the [Trigonometric Addition Formulas](/posts/trigonometric-addition-formulas).
 
 $$ \begin{gather} \sin ( \alpha + \beta ) = \sin \alpha \cos \beta + \cos \alpha \sin \beta \label{eqn:sin_add} \\
 \cos ( \alpha + \beta ) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \label{eqn:cos_add} \\
@@ -37,35 +65,35 @@ From equation ($\ref{eqn:tan_add}$):
 
 $$ \tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2} \alpha} $$
 
-### Triple Angle Formulas
+### Triple-Angle Formulas
 - $$\sin 3\alpha = 3\sin \alpha - 4\sin^{3}\alpha$$
 - $$\cos 3\alpha = 4\cos^{3}\alpha - 3\cos \alpha$$
 
 #### Derivation
-Using $\sin 2\alpha = 2\sin\alpha \cos\alpha$ and $\cos 2 \alpha = 1 - 2\sin^{2}\alpha$:
+Using $\sin 2\alpha = 2\sin\alpha \cos\alpha$ and $\cos 2 \alpha = 1 - 2\sin^{2}\alpha$, we get:
 
 $$ \begin{align*} \sin 3 \alpha &= \sin ( \alpha + 2 \alpha ) = \sin \alpha \cos 2 \alpha + \cos \alpha \sin 2 \alpha \\ &= \sin \alpha ( 1 - 2 \sin ^ { 2 } \alpha ) + \cos \alpha ( 2 \sin \alpha \cos \alpha ) \\ &= \sin a ( 1 - 2 \sin ^ { 2 } \alpha ) + 2 \sin \alpha ( 1 - \sin ^ { 2 } \alpha ) \\ &= 3 \sin \alpha - 4 \sin ^ { 3 } \alpha . \end{align*} $$
 
-Similarly, using $\sin 2\alpha = 2\sin\alpha \cos\alpha$ and $\cos 2 \alpha = 2\cos^{2}\alpha - 1$:
+Similarly, using $\sin 2\alpha = 2\sin\alpha \cos\alpha$ and $\cos 2 \alpha = 2\cos^{2}\alpha - 1$, we get:
 
 $$ \begin{align*} \cos 3 \alpha &= \cos ( \alpha + 2 \alpha ) = \cos \alpha \cos 2 \alpha - \sin \alpha \sin 2 \alpha \\ &= \cos \alpha ( 2 \cos ^ { 2 } \alpha - 1 ) - \sin \alpha ( 2 \sin \alpha \cos \alpha ) \\ &= \cos \alpha ( 2 \cos ^ { 2 } \alpha - 1 ) - 2 \cos \alpha ( 1 - \cos ^ { 2 } \alpha ) \\ &= 4 \cos ^ { 3 } \alpha - 3 \cos \alpha \end{align*} $$
 
-## Half Angle Formulas
+## Half-Angle Formulas
 - $$\sin^{2}\frac{\alpha}{2} = \frac{1 - \cos \alpha}{2}$$
 - $$\cos^{2}\frac{\alpha}{2} = \frac{1 + \cos \alpha}{2}$$
 - $$\tan^{2}\frac{\alpha}{2} = \frac{1 - \cos \alpha}{1 + \cos\alpha}$$
 - $$\tan \frac{\alpha}{2} = \frac{\sin \alpha}{1 + \cos \alpha}$$
 
 #### Derivation
-From the double angle formula $\cos 2\alpha = 2\cos^{2}\alpha - 1 = 1 - 2\sin^{2}\alpha$, substituting $\frac{\alpha}{2}$ for $\alpha$:
+From the double-angle formula $\cos 2\alpha = 2\cos^{2}\alpha - 1 = 1 - 2\sin^{2}\alpha$, substituting $\frac{\alpha}{2}$ for $\alpha$, we get:
 
 $$ \cos \alpha = 1 - 2\sin^{2}\frac{\alpha}{2} = 2 \cos^{2}\frac{\alpha}{2} - 1 .$$
 
-From $ \cos \alpha = 1 - 2\sin^{2}\frac{\alpha}{2} $:
+From $ \cos \alpha = 1 - 2\sin^{2}\frac{\alpha}{2} $, we get:
 
 $$ \sin^{2}\frac{\alpha}{2}=\frac{1-\cos \alpha}{2} .$$
 
-From $ \cos \alpha = 2 \cos^{2}\frac{\alpha}{2} - 1 $:
+From $ \cos \alpha = 2 \cos^{2}\frac{\alpha}{2} - 1 $, we get:
 
 $$ \cos^{2}\frac{\alpha}{2}=\frac{1+\cos \alpha}{2} .$$
 

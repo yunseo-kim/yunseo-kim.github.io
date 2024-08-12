@@ -1,11 +1,39 @@
 ---
-title: "배각·반각의 공식"
+title: "배각·반각의 공식(Multiple-Angle and Half-Angle Formulas)"
 description: >-
-  2배각, 3배각의 공식을 살펴보고 삼각함수의 덧셈정리로부터 배각의 공식을 유도한다. 그리고 2배각의 공식으로부터 반각의 공식 또한 유도한다.
+  2배각, 3배각의 공식을 살펴보고 삼각함수의 덧셈정리(Trigonometric Addition Formulas)로부터 이들을 유도한다. 그리고 2배각의 공식으로부터 반각의 공식 또한 유도한다.
 categories: [Mathematics]
 tags: [Trigonometry]
 math: true
 ---
+
+## TL;DR
+> **2배각의 공식 (Double-Angle Formulas)**
+>
+> - $$ \sin 2\alpha = 2\sin \alpha \cos \alpha $$
+> - $$ \begin{align*} 
+> \cos 2\alpha &= \cos^{2}\alpha - \sin^{2}\alpha \\ 
+> &= 2\cos^{2}\alpha - 1 \\
+> &= 1 - 2\sin^{2}\alpha \end{align*} $$
+> - $$\tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2}\alpha}$$
+{: .prompt-info }
+
+> **3배각의 공식 (Triple-Angle Formulas)**
+>
+> - $$\sin 3\alpha = 3\sin \alpha - 4\sin^{3}\alpha$$
+> - $$\cos 3\alpha = 4\cos^{3}\alpha - 3\cos \alpha$$
+{: .prompt-info }
+
+> **반각의 공식 (Half-Angle Formulas)**
+>
+> - $$\sin^{2}\frac{\alpha}{2} = \frac{1 - \cos \alpha}{2}$$
+> - $$\cos^{2}\frac{\alpha}{2} = \frac{1 + \cos \alpha}{2}$$
+> - $$\tan^{2}\frac{\alpha}{2} = \frac{1 - \cos \alpha}{1 + \cos\alpha}$$
+> - $$\tan \frac{\alpha}{2} = \frac{\sin \alpha}{1 + \cos \alpha}$$
+{: .prompt-info }
+
+## Prerequisites
+- [[삼각함수의 덧셈정리]](/posts/trigonometric-addition-formulas)
 
 ## 배각의 공식
 ### 2배각의 공식
@@ -17,7 +45,7 @@ math: true
 - $$\tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2}\alpha}$$
 
 #### 유도
-삼각함수의 덧셈정리로부터 배각의 공식을 유도할 수 있다.
+[삼각함수의 덧셈정리](/posts/trigonometric-addition-formulas)로부터 2배각의 공식을 유도할 수 있다.
 
 $$ \begin{gather} \sin ( \alpha + \beta ) = \sin \alpha \cos \beta + \cos \alpha \sin \beta \label{eqn:sin_add} \\
 \cos ( \alpha + \beta ) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \label{eqn:cos_add} \\

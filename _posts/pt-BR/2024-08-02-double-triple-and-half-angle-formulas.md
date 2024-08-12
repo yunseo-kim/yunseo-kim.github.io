@@ -1,14 +1,42 @@
 ---
-title: "Fórmulas de ângulo múltiplo e meio ângulo"
+title: "Fórmulas de Ângulo Múltiplo e Meio Ângulo"
 description: >-
-  Examinamos as fórmulas de ângulo duplo e triplo, e derivamos as fórmulas de ângulo múltiplo a partir dos teoremas de adição de funções trigonométricas. Também derivamos as fórmulas de meio ângulo a partir das fórmulas de ângulo duplo.
+  Examinamos as fórmulas de ângulo duplo e triplo e as derivamos das Fórmulas de Adição Trigonométrica. Também derivamos as fórmulas de meio ângulo a partir das fórmulas de ângulo duplo.
 categories: [Mathematics]
 tags: [Trigonometry]
 math: true
 ---
 
-## Fórmulas de ângulo múltiplo
-### Fórmulas de ângulo duplo
+## TL;DR
+> **Fórmulas de Ângulo Duplo**
+>
+> - $$ \sin 2\alpha = 2\sin \alpha \cos \alpha $$
+> - $$ \begin{align*} 
+> \cos 2\alpha &= \cos^{2}\alpha - \sin^{2}\alpha \\ 
+> &= 2\cos^{2}\alpha - 1 \\
+> &= 1 - 2\sin^{2}\alpha \end{align*} $$
+> - $$\tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2}\alpha}$$
+{: .prompt-info }
+
+> **Fórmulas de Ângulo Triplo**
+>
+> - $$\sin 3\alpha = 3\sin \alpha - 4\sin^{3}\alpha$$
+> - $$\cos 3\alpha = 4\cos^{3}\alpha - 3\cos \alpha$$
+{: .prompt-info }
+
+> **Fórmulas de Meio Ângulo**
+>
+> - $$\sin^{2}\frac{\alpha}{2} = \frac{1 - \cos \alpha}{2}$$
+> - $$\cos^{2}\frac{\alpha}{2} = \frac{1 + \cos \alpha}{2}$$
+> - $$\tan^{2}\frac{\alpha}{2} = \frac{1 - \cos \alpha}{1 + \cos\alpha}$$
+> - $$\tan \frac{\alpha}{2} = \frac{\sin \alpha}{1 + \cos \alpha}$$
+{: .prompt-info }
+
+## Pré-requisitos
+- [[Fórmulas de Adição Trigonométrica]](/posts/trigonometric-addition-formulas)
+
+## Fórmulas de Ângulo Múltiplo
+### Fórmulas de Ângulo Duplo
 - $$ \sin 2\alpha = 2\sin \alpha \cos \alpha $$
 - $$ \begin{align*} 
 \cos 2\alpha &= \cos^{2}\alpha - \sin^{2}\alpha \\ 
@@ -17,7 +45,7 @@ math: true
 - $$\tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2}\alpha}$$
 
 #### Derivação
-As fórmulas de ângulo duplo podem ser derivadas dos teoremas de adição de funções trigonométricas.
+Podemos derivar as fórmulas de ângulo duplo a partir das [Fórmulas de Adição Trigonométrica](/posts/trigonometric-addition-formulas).
 
 $$ \begin{gather} \sin ( \alpha + \beta ) = \sin \alpha \cos \beta + \cos \alpha \sin \beta \label{eqn:sin_add} \\
 \cos ( \alpha + \beta ) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \label{eqn:cos_add} \\
@@ -25,19 +53,19 @@ $$ \begin{gather} \sin ( \alpha + \beta ) = \sin \alpha \cos \beta + \cos \alpha
 
 Substituindo $\beta$ por $\alpha$:
 
-Da equação ($\ref{eqn:sin_add}$):
+Da equação ($\ref{eqn:sin_add}$)
 
 $$\sin 2\alpha = 2\sin \alpha \cos \alpha$$
 
-Da equação ($\ref{eqn:cos_add}$):
+Da equação ($\ref{eqn:cos_add}$)
 
 $$\begin{align*} \cos 2 \alpha &= \cos ^ { 2 } \alpha - \sin ^ { 2 } \alpha \\ &= 2 \cos ^ { 2 } \alpha - 1 \\ &= 1 - 2 \sin ^ { 2 } \alpha \end{align*}$$
 
-Da equação ($\ref{eqn:tan_add}$):
+Da equação ($\ref{eqn:tan_add}$)
 
 $$ \tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2} \alpha} $$
 
-### Fórmulas de ângulo triplo
+### Fórmulas de Ângulo Triplo
 - $$\sin 3\alpha = 3\sin \alpha - 4\sin^{3}\alpha$$
 - $$\cos 3\alpha = 4\cos^{3}\alpha - 3\cos \alpha$$
 
@@ -50,7 +78,7 @@ Da mesma forma, usando $\sin 2\alpha = 2\sin\alpha \cos\alpha$ e $\cos 2 \alpha 
 
 $$ \begin{align*} \cos 3 \alpha &= \cos ( \alpha + 2 \alpha ) = \cos \alpha \cos 2 \alpha - \sin \alpha \sin 2 \alpha \\ &= \cos \alpha ( 2 \cos ^ { 2 } \alpha - 1 ) - \sin \alpha ( 2 \sin \alpha \cos \alpha ) \\ &= \cos \alpha ( 2 \cos ^ { 2 } \alpha - 1 ) - 2 \cos \alpha ( 1 - \cos ^ { 2 } \alpha ) \\ &= 4 \cos ^ { 3 } \alpha - 3 \cos \alpha \end{align*} $$
 
-## Fórmulas de meio ângulo
+## Fórmulas de Meio Ângulo
 - $$\sin^{2}\frac{\alpha}{2} = \frac{1 - \cos \alpha}{2}$$
 - $$\cos^{2}\frac{\alpha}{2} = \frac{1 + \cos \alpha}{2}$$
 - $$\tan^{2}\frac{\alpha}{2} = \frac{1 - \cos \alpha}{1 + \cos\alpha}$$
