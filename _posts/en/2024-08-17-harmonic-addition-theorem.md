@@ -27,7 +27,7 @@ For a function $f(\theta) = a \cos \theta + b \sin \theta$ composed of a sum of 
 
 ![Geometric Derivation of the Harmonic Addition Theorem](/assets/img/trigonometry/harmonic-addition.png)
 
-As shown in the figure, if we take a point $P(a,b)$ on the coordinate plane and let $\alpha$ be the angle between the line segment $\overline{OP}$ and the positive direction of the x-axis, then
+As shown in the figure, if we take a point $P(a,b)$ on the coordinate plane and let $\alpha$ be the angle formed by the line segment $\overline{OP}$ and the positive direction of the x-axis, then
 
 $$ \overline{OP} = \sqrt{a^2+b^2} $$
 
@@ -43,7 +43,7 @@ a \sin \theta + b \cos \theta &= \sqrt{a^{2}+b^{2}} \left(\frac{a}{\sqrt{a^{2}+b
 &= \sqrt{a^{2}+b^{2}} \sin(\theta + \alpha). \tag{2}
 \end{align*} $$
 
-Similarly, if we take a point $P^{\prime}(b,a)$ and let $\beta$ be the angle between the line segment $\overline{OP}$ and the positive direction of the x-axis, we get:
+Similarly, if we take a point $P^{\prime}(b,a)$ and let $\beta$ be the angle formed by the line segment $\overline{OP^{\prime}}$ and the positive direction of the x-axis, we get:
 
 $$ a \sin \theta + b \cos \theta = \sqrt{a^{2}+b^{2}}\cos(\theta-\beta). \tag{3} $$
 

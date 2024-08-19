@@ -25,7 +25,7 @@ math: true
 ## Harmonische Addition (Harmonic Addition Theorem)
 Für eine Funktion f(θ) = a cos θ + b sin θ, die als Summe trigonometrischer Funktionen dargestellt ist, existieren immer reelle Zahlen α und β, die f(θ)=√(a²+b²) sin(θ+α) = √(a²+b²) cos(θ-β) erfüllen.
 
-![Geometrische Herleitung des Harmonic Addition Theorem](/assets/img/trigonometry/harmonic-addition.png)
+![Geometrische Herleitung des Harmonic Addition Theorems](/assets/img/trigonometry/harmonic-addition.png)
 
 Wie in der Abbildung gezeigt, wählen wir den Punkt P(a,b) in der Koordinatenebene und bezeichnen den Winkel zwischen der Strecke OP und der positiven x-Achse als α. Dann gilt:
 
@@ -43,7 +43,7 @@ a \sin \theta + b \cos \theta &= \sqrt{a^{2}+b^{2}} \left(\frac{a}{\sqrt{a^{2}+b
 &= \sqrt{a^{2}+b^{2}} \sin(\theta + \alpha). \tag{2}
 \end{align*} $$
 
-Auf die gleiche Weise wählen wir den Punkt P'(b,a) und bezeichnen den Winkel zwischen der Strecke OP und der positiven x-Achse als β. Dann erhalten wir:
+Auf die gleiche Weise wählen wir den Punkt P'(b,a) und bezeichnen den Winkel zwischen der Strecke OP' und der positiven x-Achse als β. Dann erhalten wir:
 
 $$ a \sin \theta + b \cos \theta = \sqrt{a^{2}+b^{2}}\cos(\theta-\beta). \tag{3} $$
 
@@ -52,7 +52,7 @@ $$ wobei\ \cos \beta = \frac{b}{\sqrt{a^{2}+b^{2}}},\ \sin \beta = \frac{a}{\sqr
 Diese Umformung einer trigonometrischen Funktion der Form a sin θ + b sin θ in die Form r sin(θ+α) oder r cos(θ-β) wird als harmonische Addition (Harmonic Addition) bezeichnet.
 
 ## Beispiel
-Gegeben sei die Funktion f(θ)=-√3 sin θ + cos(θ - π/3). Bestimmen Sie den Maximal- und Minimalwert der Funktion f(θ) im Intervall [0, 2π].
+Sei f(θ)=-√3 sin θ + cos(θ - π/3). Bestimmen Sie den Maximal- und Minimalwert der Funktion f(θ) im Intervall [0, 2π].
 
 ### 1. Umformung in die Form a sin θ + b cos θ
 Unter Verwendung der [Additionstheoreme der Trigonometrie](/posts/trigonometric-addition-formulas) können wir die gegebene Funktion umformen:

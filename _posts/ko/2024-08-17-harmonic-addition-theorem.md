@@ -43,7 +43,7 @@ a \sin \theta + b \cos \theta &= \sqrt{a^{2}+b^{2}} \left(\frac{a}{\sqrt{a^{2}+b
 &= \sqrt{a^{2}+b^{2}} \sin(\theta + \alpha). \tag{2}
 \end{align*} $$
 
-같은 방법으로 점 $P^{\prime}(b,a)$를 잡고 선분 $\overline{OP}$와 $x$축의 양의 방향이 이루는 각의 크기를 $\beta$라고 하면 다음을 얻는다.
+같은 방법으로 점 $P^{\prime}(b,a)$를 잡고 선분 $\overline{OP^{\prime}}$과 $x$축의 양의 방향이 이루는 각의 크기를 $\beta$라고 하면 다음을 얻는다.
 
 $$ a \sin \theta + b \cos \theta = \sqrt{a^{2}+b^{2}}\cos(\theta-\beta). \tag{3} $$
 

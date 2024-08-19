@@ -27,7 +27,7 @@ Pour une fonction $f(\theta) = a \cos \theta + b \sin \theta$ composée d'une so
 
 ![Dérivation géométrique du théorème d'addition harmonique](/assets/img/trigonometry/harmonic-addition.png)
 
-Comme illustré sur la figure, prenons un point $P(a,b)$ sur le plan de coordonnées et soit $\alpha$ l'angle formé par le segment $\overline{OP}$ et la direction positive de l'axe $x$. Alors,
+Comme illustré sur la figure, prenons un point $P(a,b)$ sur le plan de coordonnées et appelons $\alpha$ l'angle formé entre le segment $\overline{OP}$ et la direction positive de l'axe $x$. Alors,
 
 $$ \overline{OP} = \sqrt{a^2+b^2} $$
 
@@ -43,7 +43,7 @@ a \sin \theta + b \cos \theta &= \sqrt{a^{2}+b^{2}} \left(\frac{a}{\sqrt{a^{2}+b
 &= \sqrt{a^{2}+b^{2}} \sin(\theta + \alpha). \tag{2}
 \end{align*} $$
 
-De la même manière, en prenant un point $P^{\prime}(b,a)$ et en définissant $\beta$ comme l'angle formé par le segment $\overline{OP}$ et la direction positive de l'axe $x$, on obtient :
+De la même manière, en prenant un point $P^{\prime}(b,a)$ et en appelant $\beta$ l'angle formé entre le segment $\overline{OP^{\prime}}$ et la direction positive de l'axe $x$, on obtient :
 
 $$ a \sin \theta + b \cos \theta = \sqrt{a^{2}+b^{2}}\cos(\theta-\beta). \tag{3} $$
 
@@ -55,7 +55,7 @@ Cette transformation d'une fonction trigonométrique de la forme $a \sin \theta 
 Soit la fonction $f(\theta)=-\sqrt{3}\sin \theta + \cos \left(\theta - \frac{\pi}{3} \right)$. Trouvez les valeurs maximale et minimale de la fonction $f(\theta)$ dans l'intervalle $[0, 2\pi]$.
 
 ### 1. Transformation en forme $a\sin\theta + b\cos\theta$
-En utilisant les [formules d'addition trigonométriques](/posts/trigonometric-addition-formulas), on transforme la fonction donnée comme suit :
+En utilisant les [formules d'addition trigonométriques](/posts/trigonometric-addition-formulas), on transforme l'expression donnée :
 
 $$ \begin{align*}
 f(\theta) &= -\sqrt{3}\sin \theta + \cos \left(\theta - \frac{\pi}{3} \right) \\

@@ -35,7 +35,7 @@ e
 
 $$ \cos \alpha = \frac{a}{\sqrt{a^{2} + b^{2}}},\ \sin \alpha = \frac{b}{\sqrt{a^{2} + b^{2}}} \tag{1} $$
 
-Então,
+Neste caso,
 
 $$ \begin{align*}
 a \sin \theta + b \cos \theta &= \sqrt{a^{2}+b^{2}} \left(\frac{a}{\sqrt{a^{2}+b^{2}}}\sin \theta + \frac{b}{\sqrt{a^{2}+b^{2}}}\cos \theta \right) \\
@@ -43,13 +43,13 @@ a \sin \theta + b \cos \theta &= \sqrt{a^{2}+b^{2}} \left(\frac{a}{\sqrt{a^{2}+b
 &= \sqrt{a^{2}+b^{2}} \sin(\theta + \alpha). \tag{2}
 \end{align*} $$
 
-Da mesma forma, se tomarmos um ponto P'(b,a) e chamarmos de β o ângulo formado entre o segmento OP e a direção positiva do eixo x, obtemos:
+Da mesma forma, se tomarmos um ponto P'(b,a) e chamarmos de β o ângulo formado entre o segmento OP' e a direção positiva do eixo x, obtemos:
 
 $$ a \sin \theta + b \cos \theta = \sqrt{a^{2}+b^{2}}\cos(\theta-\beta). \tag{3} $$
 
 $$ onde,\ \cos \beta = \frac{b}{\sqrt{a^{2}+b^{2}}},\ \sin \beta = \frac{a}{\sqrt{a^{2}+b^{2}}}. $$
 
-A transformação de uma função trigonométrica da forma a sin θ + b sin θ em r sin(θ+α) ou r cos(θ-β) é chamada de Adição Harmônica.
+A transformação de uma função trigonométrica da forma a sin θ + b sin θ em uma forma r sin(θ+α) ou r cos(θ-β) é chamada de Adição Harmônica.
 
 ## Exemplo
 Dada a função f(θ)=-√3 sin θ + cos(θ - π/3), encontre os valores máximo e mínimo da função f(θ) no intervalo [0, 2π].
