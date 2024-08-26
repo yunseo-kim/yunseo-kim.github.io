@@ -59,6 +59,10 @@ jobs:
       - name: Setup Naver Site Verification
         run: |
           echo naver-site-verification: ${{ secrets.NAVER_SITE_VERIFICATION }} > ./_site/${{ secrets.NAVER_SITE_VERIFICATION }}
+      
+      - name: Create CNAME file
+        run: |
+          echo www.yunseo.kim > ./_site/CNAME
 
       - name: Test site
         run: |
