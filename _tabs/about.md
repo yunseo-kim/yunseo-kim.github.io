@@ -14,7 +14,7 @@ order: 4
 I agree with *[Lev Artsimovich](https://en.wikipedia.org/wiki/Lev_Artsimovich)*: fusion power will arrive **"when mankind needs it – maybe a short time before that"**!
 - - -
 
-### Social Links <img src = "https://media.giphy.com/media/pLo39nQ9yGahnDFbay/giphy.gif" width=32>
+### Social Links <img src = "https://media.giphy.com/media/pLo39nQ9yGahnDFbay/giphy.gif" width=32 alt="">
 [![Blog Badge](https://img.shields.io/badge/-Blog-3884FF?style=flat-square&logo=Gitbook&logoColor=white&link=https://www.yunseo.kim)](https://www.yunseo.kim)
 [![Email Badge](https://img.shields.io/badge/-Email-8B89CC?style=flat-square&logo=Mail.Ru&logoColor=white&link=mailto:contact@yunseo.kim)](mailto:contact@yunseo.kim)
 [![Facebook Badge](https://img.shields.io/badge/-Facebook-1877F2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/yunse0-kim/)](https://www.facebook.com/yunse0-kim/)
@@ -26,7 +26,7 @@ I agree with *[Lev Artsimovich](https://en.wikipedia.org/wiki/Lev_Artsimovich)*:
 B.S. in Nuclear Engineering
 - - -
 
-### Badges <img src = "https://media.giphy.com/media/oUhQb6SSMXEDnvBnbJ/giphy.gif" width=32>
+### Badges <img src = "https://media.giphy.com/media/oUhQb6SSMXEDnvBnbJ/giphy.gif" width=32 alt="">
 <!--START_SECTION:badges-->
 [![Qiskit Global Summer School 2022 - Quantum Excellence](https://images.credly.com/size/150x150/images/e3d55ead-2e2a-4ed9-916b-db890b307583/image.png)](https://www.credly.com/badges/0a42bffd-1d2e-49ec-ab59-f8a150cec992 "Qiskit Global Summer School 2022 - Quantum Excellence")
 <!--END_SECTION:badges-->
