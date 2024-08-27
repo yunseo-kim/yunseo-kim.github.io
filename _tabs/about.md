@@ -28,6 +28,6 @@ B.S. in Nuclear Engineering
 
 ### Badges <img src = "https://media.giphy.com/media/oUhQb6SSMXEDnvBnbJ/giphy.gif" width=32>
 <!--START_SECTION:badges-->
-[![Qiskit Global Summer School 2022 - Quantum Excellence](https://images.credly.com/size/150x150/images/e3d55ead-2e2a-4ed9-916b-db890b307583/image.png)](http://www.credly.com/badges/0a42bffd-1d2e-49ec-ab59-f8a150cec992 "Qiskit Global Summer School 2022 - Quantum Excellence")
+[![Qiskit Global Summer School 2022 - Quantum Excellence](https://images.credly.com/size/150x150/images/e3d55ead-2e2a-4ed9-916b-db890b307583/image.png)](https://www.credly.com/badges/0a42bffd-1d2e-49ec-ab59-f8a150cec992 "Qiskit Global Summer School 2022 - Quantum Excellence")
 <!--END_SECTION:badges-->
 - - -
