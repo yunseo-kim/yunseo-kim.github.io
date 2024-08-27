@@ -38,7 +38,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Yunseo Kim
-  email: contact@yunseo.me         # change to your email address
+  email: contact@yunseo.kim        # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/yunseo-kim       # change to your github homepage
