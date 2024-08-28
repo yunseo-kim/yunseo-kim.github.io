@@ -4,9 +4,10 @@ description: >-
   이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.
 categories:
   - Data Science
-tags:
   - Machine Learning
   - Deep Learning
+tags:
+  - Development Environment
 toc: true
 toc_sticky: true
 ---
@@ -41,7 +42,7 @@ toc_sticky: true
   이 글에서는 파이썬 3.8 버전을 사용한다.
 - 로컬 머신에서 머신러닝을 공부할 계획이라면 GPU를 하나 이상 준비하는 것이 좋다. 데이터 전처리 정도는 CPU로도 가능하지만, 모델 학습 단계에서는 모델의 규모가 커질수록 CPU와 GPU의 학습 속도 차이는 압도적이다(특히 딥러닝의 경우가 그렇다).
   - 머신러닝을 위해서라면 GPU 제조사 선택지는 사실상 하나뿐이다. NVIDIA 제품을 이용해야 한다. NVIDIA는 머신러닝 분야에 상당히 많은 투자를 해 온 회사이며, 거의 모든 머신러닝 프레임워크에서 NVIDIA의 CUDA 라이브러리를 이용한다.
-  - 머신러닝용으로 GPU를 사용할 계획이라면, 사용하려는 그래픽카드가 CUDA 사용이 가능한 모델인지 우선 확인해야 한다. 현재 컴퓨터에 장착된 GPU 모델명은 터미널에서 ```nvidia-smi``` 명령으로 확인 가능하다. [링크](https://developer.nvidia.com/cuda-gpus)에 있는 GPU 목록에서 해당하는 모델명을 찾은 뒤, **Compute Capability** 수치를 확인하자. 이 수치가 적어도 3.5 이상이어야 CUDA 사용이 가능하다.
+  - 머신러닝용으로 GPU를 사용할 계획이라면, 사용하려는 그래픽카드가 CUDA 사용이 가능한 모델인지 우선 확인해야 한다. 현재 컴퓨터에 장착된 GPU 모델명은 터미널에서 `uname -m && cat /etc/*release` 명령으로 확인 가능하다. [링크](https://developer.nvidia.com/cuda-gpus)에 있는 GPU 목록에서 해당하는 모델명을 찾은 뒤, **Compute Capability** 수치를 확인하자. 이 수치가 적어도 3.5 이상이어야 CUDA 사용이 가능하다.
   - GPU 선정 기준은 다음 글에 잘 정리되어 있다. 글쓴이가 지속적으로 업데이트하고 있는 글이다.  
   [Which GPU(s) to Get for Deep Learning](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)  
   같은 분이 작성한 [A Full Hardware Guide to Deep Learning](https://timdettmers.com/2018/12/16/deep-learning-hardware-guide/)이라는 글도 매우 유익하다. 참고로 위 글의 결론은 아래와 같다.
@@ -129,12 +130,11 @@ $ nano ~/.bashrc
 ```export PATH="$HOME/.local/bin"```  
 ```export PATH="(기존 경로):$HOME/.local/bin"```
 
-[시스템 pip를 시스템 패키지 매니저 이외의 다른 방법으로 업그레이드하면 버전 충돌로 인해 문제가 발생할 수 있다](https://github.com/pypa/pip/issues/5599). 그래서 ```sudo```를 사용하지 않고 사용자의 홈 디렉터리에 pip를 설치하는 것이다. 같은 이유로 가상환경 내에서가 아니라면 ```pip``` 명령 대신 ```python3 -m pip``` 명령을 이용하여 pip를 사용하는 것이 좋다.
+[시스템 pip를 시스템 패키지 매니저 이외의 다른 방법으로 업그레이드하면 버전 충돌로 인해 문제가 발생할 수 있다](https://github.com/pypa/pip/issues/5599). 그래서 사용자의 홈 디렉터리에 별도로 pip를 설치하는 것이다. 같은 이유로 가상환경 내에서가 아니라면 ```pip``` 명령 대신 ```python3 -m pip``` 명령을 이용하여 pip를 사용하는 것이 좋다.
 
 ## 4. 머신러닝용 패키지(jupyter, matplotlib, numpy, pandas, scipy, scikit-learn) 설치
 다음 pip 명령으로 필요한 패키지와 의존성으로 연결된 다른 패키지를 모두 설치한다.  
-venv를 사용하지 않는다면 관리자 권한이 필요하다.  
-또한 필자의 경우 venv를 사용하기 때문에 그냥 ```pip``` 명령을 사용하였는데, 만약 venv를 사용하지 않는다면 앞서 언급하였듯이 ```python3 -m pip``` 명령을 대신 사용하는 것을 권장한다.
+필자의 경우 venv를 사용하기 때문에 그냥 ```pip``` 명령을 사용하였는데, 만약 venv를 사용하지 않는다면 앞서 언급하였듯이 ```python3 -m pip``` 명령을 대신 사용하는 것을 권장한다.
 ```
 (env) $ pip install -U jupyter matplotlib numpy pandas scipy scikit-learn
 
@@ -217,6 +217,7 @@ True
 ```
 
 ## 7. TensorFlow 2 설치
+텐서플로가 필요하지 않다면 이 단계는 무시하면 된다.  
 6단계에서 파이토치를 가상환경에 설치하였다면, 그 가상환경은 비활성화한 후 3, 4단계로 돌아가 새로운 가상환경을 생성하고 활성화한 뒤 진행한다. 6단계를 건너뛰었다면 그냥 그대로 진행하면 된다.  
 다음과 같이 텐서플로를 설치한다.
 ```
