@@ -3,10 +3,6 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
-# Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
-# and doesn't have a custom domain.
-baseurl: ""
-
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
@@ -20,29 +16,30 @@ timezone: Asia/Seoul
 
 title: Yunseo Kim's Insights           # the main title
 
-tagline: Mathematics, Physics, and DS. # it will display as the sub-title
+tagline: Mathematics, Physics, and DS. # it will display as the subtitle
 
 description: >-                        # used by seo meta and the atom feed
   Yunseo Kim's personal blog, which mainly covers mathematics, physics, and DS.
 
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
+# fill in the protocol & hostname for your site
+# E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://www.yunseo.kim"
 
 github:
-  username: yunseo-kim                    # change to your github username
+  username: yunseo-kim                    # change to your GitHub username
 
 twitter:
-  username: yunse0_kim                 # change to your twitter username
+  username: yunse0_kim                 # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Yunseo Kim
-  email: contact@yunseo.me         # change to your email address
+  email: contact@yunseo.kim        # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://github.com/yunseo-kim       # change to your github homepage
-    - https://twitter.com/yunse0_kim   # change to your twitter homepage
+    - https://github.com/yunseo-kim       # change to your GitHub homepage
+    - https://twitter.com/yunse0_kim   # change to your Twitter homepage
     # Uncomment below to add more social links
     - https://www.facebook.com/yunse0.kim
     - https://www.linkedin.com/in/yunseo-kim
@@ -75,8 +72,10 @@ analytics:
     domain: # fill in your Matomo domain
   cloudflare:
     id: # fill in your Cloudflare Web Analytics token
+  fathom:
+    id: # fill in your Fathom Site ID
 
-# Pageviews settings
+# Page views settings
 pageviews:
   provider: goatcounter # now only supports 'goatcounter'
 
@@ -88,8 +87,8 @@ pageviews:
 #
 # Available options:
 #
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
+#     light — Use the light color scheme
+#     dark — Use the dark color scheme
 #
 theme_mode:   # [light|dark]
 
@@ -107,7 +106,7 @@ avatar: '/assets/img/profile.tiff'
 toc: true
 
 comments:
-  # Global switch for the post comment system. Keeping it empty means disabled.
+  # Global switch for the post-comment system. Keeping it empty means disabled.
   provider: disqus # [disqus | utterances | giscus]
   # The provider options are as follows:
   disqus:
@@ -137,9 +136,19 @@ assets:
     env:          # [development|production]
 
 pwa:
-  enabled: true   # the option for PWA feature
+  enabled: true # The option for PWA feature (installable)
+  cache:
+    enabled: true # The option for PWA offline cache
+    # Paths defined here will be excluded from the PWA cache.
+    # Usually its value is the `baseurl` of another website that
+    # shares the same domain name as the current website.
+    deny_paths:
+      # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
 paginate: 10
+
+# The base URL of your site
+baseurl: ""
 
 # --------------------------
 

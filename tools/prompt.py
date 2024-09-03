@@ -11,7 +11,7 @@ def submit_prompt(prompt, system_prompt):
     # print("- Submit prompt")
     response = client.messages.create(
         model="claude-3-5-sonnet-20240620",
-        max_tokens=4000,
+        max_tokens=8192,
         temperature=0,
         system=system_prompt,
         messages=[
