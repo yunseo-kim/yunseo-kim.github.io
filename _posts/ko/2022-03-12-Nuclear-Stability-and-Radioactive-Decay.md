@@ -58,8 +58,6 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 $$ ^{20}\text{O} \overset{\beta^-}{\rightarrow}\;^{20}\text{F} \overset{\beta^-}{\rightarrow}\;^{20}\text{Ne (stable)} $$ 
 
 ## 전자포획(Electron Capture) 또는 K-포획(K-capture)
-~~Korea-capture가 아니다~~
-
 $$ p + e \to n + \nu_e $$
 
 - 중성자 수가 상대적으로 부족한 경우 일어남
