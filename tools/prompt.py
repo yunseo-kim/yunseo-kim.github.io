@@ -37,6 +37,8 @@ def translate(filepath, source_lang, target_lang):
         physics (especially nuclear physics, quantum mechanics, and quantum information theory), \
         and data science. Translate the markdown-formatted text provided by the user \
         from {source_lang} to {target_lang} while preserving the format. \
+        In the provided markdown formatted text, do not translate the YAML front matter \
+        except for the 'title' and 'description' tags. \
         If the provided text contains language other than {source_lang}, please leave that part untouched. \
         For example, '중성자 감쇠 (Neutron Attenuation)' translates to 'Neutron Attenuation' in English \
         and 'Atténuation des neutrons (Neutron Attenuation)' in French. \
@@ -55,6 +57,7 @@ def translate(filepath, source_lang, target_lang):
     result_text = submit_prompt(prompt, system_prompt)
     if not result_text[:3] == "---":
         print("Warning: Invalid YAML front matter detected!")
+    result_text = result_text+'\n'
     # print(language_code[target_lang])
     filename = os.path.relpath(filepath, start='../_posts/' + language_code[source_lang] + '/')
     # print(filename)
