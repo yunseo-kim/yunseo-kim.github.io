@@ -1,13 +1,13 @@
 ---
 title: "Kernstabilität und radioaktiver Zerfall"
 description: >-
-  Wir untersuchen die Segré-Tabelle, Arten des radioaktiven Zerfalls und isomere Übergänge.
-categories: [Technische Physik, Kerntechnik]
-tags: [Kernphysik, Radioaktiver Zerfall]
+  Wir betrachten das Segré-Diagramm, Arten des radioaktiven Zerfalls und isomere Übergänge.
+categories: [Engineering Physics, Nuclear Engineering]
+tags: [Nuclear Physics, Radioactive Decay]
 math: true
 ---
 
-## Segré-Tabelle oder Nuklidkarte
+## Segré-Diagramm oder Nuklidkarte
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *Bildquelle*
 > - Autor: Wikimedia-Benutzer [Sjlegg](https://commons.wikimedia.org/wiki/User:Sjlegg)
@@ -19,7 +19,7 @@ math: true
 ## Gründe für radioaktiven Zerfall
 - Nur bestimmte Kombinationen von Neutronen und Protonen bilden stabile Nuklide
 - Wenn das Verhältnis von Neutronen zu Protonen zu hoch oder zu niedrig ist, ist das Nuklid instabil und unterliegt dem *radioaktiven Zerfall*
-- Der nach dem Zerfall gebildete Kern ist meist in einem angeregten Zustand und gibt Energie in Form von Gamma- oder Röntgenstrahlung ab
+- Der nach dem Zerfall gebildete Kern befindet sich meist in einem angeregten Zustand und gibt Energie in Form von Gamma- oder Röntgenstrahlung ab
 
 ## Beta-Zerfall ($\beta$-Zerfall)
 ### Positiver Beta-Zerfall ($\beta^+$-Zerfall)
@@ -58,7 +58,6 @@ Oft ist das durch Beta-Zerfall gebildete *Tochternuklid* ebenfalls instabil und 
 $$ ^{20}\text{O} \overset{\beta^-}{\rightarrow}\;^{20}\text{F} \overset{\beta^-}{\rightarrow}\;^{20}\text{Ne (stabil)} $$ 
 
 ## Elektroneneinfang oder K-Einfang
-~~Kein Korea-Einfang~~
 
 $$ p + e \to n + \nu_e $$
 
@@ -71,8 +70,8 @@ $$ p + e \to n + \nu_e $$
 ## Alpha-Zerfall ($\alpha$-Zerfall)
 - Emission eines Alpha-Teilchens ($\alpha$, $^4_2\text{He}$)
 - Die Ordnungszahl nimmt um 2 ab und die Massenzahl um 4
-- Häufig bei Kernen schwerer als Blei
-- Im Gegensatz zum Beta-Zerfall ist die Energie der emittierten Alpha-Teilchen beim Alpha-Zerfall quantisiert
+- Tritt häufig bei Kernen schwerer als Blei auf
+- Im Gegensatz zum Beta-Zerfall ist die Energie der emittierten Alpha-Teilchen quantisiert
 
 Beispiel: $^{238}\_{92}\text{U} \to\;^{234}\_{90}\text{Th} +\; ^4_2\text{He}$
 
@@ -80,9 +79,9 @@ Beispiel: $^{238}\_{92}\text{U} \to\;^{234}\_{90}\text{Th} +\; ^4_2\text{He}$
 - Sehr schwere und instabile Nuklide können sich ohne Neutronenabsorption selbst spalten
 - Wird im weiteren Sinne zum radioaktiven Zerfall gezählt
 
-## Protonenemmission
+## Protonenemission
 - Bei extrem protonenreichen instabilen Nukliden kann ein einzelnes Proton emittiert werden
-- Ordnungszahl und Massenzahl nehmen um 1 ab
+- Die Ordnungszahl und die Massenzahl nehmen um 1 ab
 - Tritt sehr selten auf
 
 ## Zerfallsschema und isomerer Übergang
@@ -90,10 +89,10 @@ Beispiel: $^{238}\_{92}\text{U} \to\;^{234}\_{90}\text{Th} +\; ^4_2\text{He}$
 *Zerfallsschema*: Eine visuelle Darstellung aller Zerfallswege eines radioaktiven Materials
 
 ### Isomerer Übergang
-- Kerne, die durch radioaktiven Zerfall gebildet werden, können nach der Umwandlung in einem angeregten Zustand verbleiben und geben dann Energie in Form von Gammastrahlung ab (obwohl die Emission von Gammastrahlung streng genommen kein Zerfall ist, da sich das Nuklid nicht ändert, wird der Begriff Gammazerfall manchmal umgangssprachlich verwendet).
-- Die meisten angeregten Kerne gehen sehr schnell durch Emission von Gammastrahlung in den Grundzustand über, aber in bestimmten Fällen kann die Emission von Gammastrahlung verzögert sein, so dass der Kern wie in einem metastabilen Zustand erscheint. Dieser verzögerte Zustand wird als *isomerer Zustand* des Kerns bezeichnet.
-- Der Übergang vom isomeren Zustand in den Grundzustand durch Emission von Gammastrahlung wird als *isomerer Übergang* bezeichnet und mit IT abgekürzt.
+- Kerne, die durch radioaktiven Zerfall gebildet werden, können nach der Umwandlung in einem angeregten Zustand verbleiben und Energie in Form von Gammastrahlung abgeben (obwohl die Emission von Gammastrahlung streng genommen kein Zerfall ist, da sich das Nuklid nicht ändert, wird der Begriff "Gammazerfall" manchmal umgangssprachlich verwendet).
+- Die meisten angeregten Kerne geben sehr schnell Gammastrahlung ab und gehen in den Grundzustand über, aber in bestimmten Fällen kann die Emission von Gammastrahlung verzögert sein und wie ein metastabiler Zustand erscheinen. Dieser verzögerte Zustand wird als *isomerer Zustand* des Kerns bezeichnet.
+- Der Übergang vom isomeren Zustand in den Grundzustand unter Emission von Gammastrahlung wird als *isomerer Übergang* bezeichnet und mit IT abgekürzt.
 ![Au-198 Zerfallsschema](https://upload.wikimedia.org/wikipedia/commons/0/04/Au-198_Decay_Scheme.svg)
 > *Bildquelle*
 > - Autor: Britischer Wikimedia-Benutzer [Daveturnr](https://commons.wikimedia.org/wiki/User:Daveturnr)
-> - Lizenz: Frei verwendbar für jeden Zweck ohne Einschränkungen, solange es nicht gegen geltendes Recht verstößt
+> - Lizenz: Frei zur Verwendung für jeden Zweck ohne Einschränkungen, sofern nicht gesetzlich verboten

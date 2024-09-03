@@ -1,9 +1,9 @@
 ---
 title: "Estabilidade Nuclear e Decaimento Radioativo"
 description: >-
-  Aprenda sobre o Gráfico de Segré, tipos de decaimento radioativo e transição isomérica.
-categories: [Física de Engenharia, Engenharia Nuclear]
-tags: [Física Nuclear, Decaimento Radioativo]
+  Aprenda sobre o gráfico de Segré, tipos de decaimento radioativo e transição isomérica.
+categories: [Engineering Physics, Nuclear Engineering]
+tags: [Nuclear Physics, Radioactive Decay]
 math: true
 ---
 
@@ -14,12 +14,12 @@ math: true
 > - Licença: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
 
 - Para nuclídeos com número atômico $Z$ maior que 20, são necessários mais nêutrons do que prótons para estabilização
-- Os nêutrons têm a função de manter o núcleo unido, superando a repulsão elétrica entre os prótons
+- Os nêutrons desempenham o papel de manter o núcleo unido, superando a repulsão elétrica entre os prótons
 
 ## Por que ocorre o Decaimento Radioativo
 - Apenas certas combinações de nêutrons e prótons formam nuclídeos estáveis
 - Se o número de nêutrons em relação ao número de prótons for muito alto ou muito baixo, o nuclídeo é instável e sofre *decaimento radioativo*
-- O núcleo formado após o decaimento geralmente está em estado excitado, liberando energia na forma de raios gama ou raios X
+- O núcleo formado após o decaimento geralmente está em um estado excitado, liberando energia na forma de raios gama ou raios X
 
 ## Decaimento Beta ($\beta$-decay)
 ### Decaimento Beta Positivo ($\beta^+$-decay)
@@ -53,35 +53,34 @@ Exemplo: $^3_1\text{H} \to\;^3_2\text{He} + e^- + \overline{\nu}_e$
 - Decaimento $\beta^+$: $\overline{E}\approx 0.4E_{\text{max}}$
 
 ### Cadeia de Decaimento
-Frequentemente, o *nuclídeo filho* formado pelo decaimento beta também é instável e sofre decaimentos beta subsequentes. Isso leva a uma *cadeia de decaimento* como a seguinte:
+Frequentemente, o *nuclídeo filho* formado pelo decaimento beta também é instável e sofre decaimento beta subsequente. Isso leva a uma *cadeia de decaimento* como a seguinte:
 
 $$ ^{20}\text{O} \overset{\beta^-}{\rightarrow}\;^{20}\text{F} \overset{\beta^-}{\rightarrow}\;^{20}\text{Ne (estável)} $$ 
 
-## Captura Eletrônica ou Captura K
-~~Não é captura da Coreia~~
+## Captura de Elétrons ou Captura K
 
 $$ p + e \to n + \nu_e $$
 
 - Ocorre quando há uma relativa falta de nêutrons
-- Um elétron da camada mais interna (camada K) é capturado, convertendo um próton do núcleo em um nêutron
+- Captura um elétron da camada mais interna (camada K) e converte um próton do núcleo em um nêutron
 - O número atômico diminui em 1, o número de massa não muda
-- Após a captura eletrônica, forma-se um espaço vazio na nuvem eletrônica, que é posteriormente preenchido por um elétron de uma camada externa, emitindo raios X ou elétrons Auger
-- O nuclídeo filho produzido pela captura eletrônica é idêntico ao produzido pelo decaimento $\beta^+$, portanto esses dois processos competem entre si.
+- Após a captura de elétrons, forma-se um espaço vazio na nuvem de elétrons, que é posteriormente preenchido por um elétron de uma camada externa, emitindo raios X ou elétrons Auger
+- O nuclídeo filho formado pela captura de elétrons é idêntico ao formado pelo decaimento $\beta^+$, então esses dois processos competem entre si.
 
 ## Decaimento Alfa ($\alpha$-decay)
 - Emite uma partícula alfa ($\alpha$, $^4_2\text{He}$)
 - O número atômico diminui em 2 e o número de massa diminui em 4
 - Comum em núcleos mais pesados que o chumbo
-- Diferentemente do decaimento beta, a energia da partícula alfa emitida no decaimento alfa é quantizada.
+- Diferentemente do decaimento beta, a energia das partículas alfa emitidas no decaimento alfa é quantizada.
 
 Exemplo: $^{238}\_{92}\text{U} \to\;^{234}\_{90}\text{Th} +\; ^4_2\text{He}$
 
 ## Fissão Espontânea
 - Nuclídeos muito pesados e instáveis podem sofrer fissão espontaneamente, sem absorver nêutrons
-- É considerado um tipo de decaimento radioativo em sentido amplo
+- Incluído no decaimento radioativo em sentido amplo
 
 ## Emissão de Prótons
-- Nuclídeos extremamente instáveis com excesso de prótons podem emitir um único próton
+- Em nuclídeos extremamente instáveis com excesso de prótons, um único próton pode ser emitido
 - O número atômico e o número de massa diminuem em 1
 - Ocorre muito raramente
 
@@ -90,8 +89,8 @@ Exemplo: $^{238}\_{92}\text{U} \to\;^{234}\_{90}\text{Th} +\; ^4_2\text{He}$
 *Esquema de decaimento*: Um diagrama que representa visualmente todas as vias de decaimento de um material radioativo
 
 ### Transição Isomérica
-- O núcleo formado após o decaimento radioativo pode permanecer em um estado excitado, liberando energia na forma de raios gama (embora a emissão de raios gama não mude o nuclídeo, às vezes é chamada informalmente de decaimento gama).
-- A maioria dos núcleos excitados emite raios gama e transita para o estado fundamental muito rapidamente, mas em alguns casos, a emissão de raios gama é atrasada, parecendo um estado metaestável. Este estado atrasado é chamado de *estado isomérico* do núcleo.
+- Os núcleos formados pelo decaimento radioativo podem permanecer em um estado excitado após a transformação, emitindo energia na forma de raios gama (embora a emissão de raios gama não mude o nuclídeo, convencionalmente às vezes é chamada de decaimento gama).
+- A maioria dos núcleos excitados emite raios gama e transita para o estado fundamental em um tempo muito curto, mas em certos casos, a emissão de raios gama é atrasada, parecendo um estado metaestável. Este estado atrasado é chamado de *estado isomérico* do núcleo.
 - A transição do estado isomérico para o estado fundamental através da emissão de raios gama é chamada de *transição isomérica* e é indicada por IT.
 ![Esquema de Decaimento do Au-198](https://upload.wikimedia.org/wikipedia/commons/0/04/Au-198_Decay_Scheme.svg)
 > *Fonte da imagem*

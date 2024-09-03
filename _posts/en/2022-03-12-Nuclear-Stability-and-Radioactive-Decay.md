@@ -53,12 +53,11 @@ Example) $^3_1\text{H} \to\;^3_2\text{He} + e^- + \overline{\nu}_e$
 - $\beta^+$ decay: $\overline{E}\approx 0.4E_{\text{max}}$
 
 ### Decay Chain
-Often, the *daughter nuclide* formed through beta decay is also unstable and undergoes subsequent beta decay. This leads to a *decay chain* as follows:
+Often, the *daughter nuclide* formed through beta decay is also unstable and undergoes successive beta decays. This leads to a *decay chain* as follows:
 
 $$ ^{20}\text{O} \overset{\beta^-}{\rightarrow}\;^{20}\text{F} \overset{\beta^-}{\rightarrow}\;^{20}\text{Ne (stable)} $$ 
 
 ## Electron Capture or K-capture
-~~Not Korea-capture~~
 
 $$ p + e \to n + \nu_e $$
 
@@ -91,7 +90,7 @@ Example) $^{238}\_{92}\text{U} \to\;^{234}\_{90}\text{Th} +\; ^4_2\text{He}$
 
 ### Isomeric Transition
 - Nuclei formed by radioactive decay may remain in an excited state after transformation, in which case they release energy in the form of gamma rays (although not strictly decay, the term gamma decay is conventionally used when gamma rays are emitted without changing the nuclide).
-- Most excited nuclei transition to the ground state by emitting gamma rays in a very short time, but in certain cases, gamma ray emission is delayed, appearing like a metastable state. This delayed state is called the *isomeric state* of the nucleus.
+- Most excited nuclei emit gamma rays and transition to the ground state in a very short time, but in certain cases, gamma ray emission is delayed, appearing like a metastable state. This delayed state is called the *isomeric state* of the nucleus.
 - The transition from an isomeric state to the ground state by emitting gamma rays is called an *isomeric transition* and is denoted as IT.
 ![Au-198 Decay Scheme](https://upload.wikimedia.org/wikipedia/commons/0/04/Au-198_Decay_Scheme.svg)
 > *Image source*

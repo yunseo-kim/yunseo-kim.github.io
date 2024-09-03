@@ -32,8 +32,8 @@ Este artigo aborda como configurar um ambiente de desenvolvimento para estudar m
     - TensorFlow 2.4.0
 
 ## 0. Pré-requisitos
-- Para estudar machine learning, recomenda-se o uso do Linux. Embora seja possível no Windows, pode haver muita perda de tempo em vários pequenos detalhes. Usar a versão LTS mais recente do Ubuntu é a opção mais segura. Drivers proprietários não open source também são instalados automaticamente, o que é conveniente, e como tem muitos usuários, a maioria da documentação técnica é escrita com base no Ubuntu.
-- Geralmente, o Python já vem pré-instalado na maioria das distribuições Linux, incluindo o Ubuntu. No entanto, se o Python não estiver instalado, você deve instalá-lo antes de seguir este guia.
+- Para estudar machine learning, recomenda-se o uso do Linux. Embora seja possível no Windows, pode haver muita perda de tempo com pequenos detalhes. A versão LTS mais recente do Ubuntu é a mais conveniente. Drivers proprietários são instalados automaticamente, o que é conveniente, e como tem muitos usuários, a maioria da documentação técnica é escrita com base no Ubuntu.
+- Geralmente, o Python já vem instalado na maioria das distribuições Linux, incluindo o Ubuntu. No entanto, se o Python não estiver instalado, você deve instalá-lo antes de seguir este guia.
   - Você pode verificar a versão atual do Python instalada com o seguinte comando:
   ```
   $ python3 --version
@@ -41,8 +41,8 @@ Este artigo aborda como configurar um ambiente de desenvolvimento para estudar m
   - Se você planeja usar TensorFlow 2 ou PyTorch, deve verificar as versões compatíveis do Python. No momento da escrita deste artigo, [a versão mais recente do PyTorch suporta Python 3.6-3.8](https://pytorch.org/get-started/locally/#linux-python), e [a versão mais recente do TensorFlow 2 suporta Python 3.5-3.8](https://www.tensorflow.org/install).  
   Neste artigo, usaremos Python 3.8.
 - Se você planeja estudar machine learning em uma máquina local, é recomendável ter pelo menos uma GPU. Embora o pré-processamento de dados possa ser feito na CPU, na fase de treinamento do modelo, a diferença de velocidade entre CPU e GPU se torna esmagadora à medida que o modelo cresce (especialmente no caso de deep learning).
-  - Para machine learning, há realmente apenas uma opção de fabricante de GPU. Você deve usar produtos NVIDIA. A NVIDIA é uma empresa que investiu muito no campo de machine learning, e quase todos os frameworks de machine learning usam a biblioteca CUDA da NVIDIA.
-  - Se você planeja usar uma GPU para machine learning, primeiro deve verificar se o modelo da placa gráfica que pretende usar é compatível com CUDA. Você pode verificar o nome do modelo da GPU atualmente instalada em seu computador usando o comando `uname -m && cat /etc/*release` no terminal. Encontre o nome do modelo correspondente na lista de GPUs [neste link](https://developer.nvidia.com/cuda-gpus) e verifique o valor de **Compute Capability**. Este valor deve ser pelo menos 3.5 para que o CUDA possa ser usado.
+  - Para machine learning, há essencialmente apenas uma opção de fabricante de GPU. Você deve usar produtos NVIDIA. A NVIDIA é uma empresa que investiu muito no campo de machine learning, e quase todos os frameworks de machine learning usam a biblioteca CUDA da NVIDIA.
+  - Se você planeja usar uma GPU para machine learning, deve primeiro verificar se o modelo da placa gráfica que pretende usar é compatível com CUDA. Você pode verificar o nome do modelo da GPU atualmente instalada em seu computador usando o comando `uname -m && cat /etc/*release` no terminal. Encontre o nome do modelo correspondente na lista de GPUs [neste link](https://developer.nvidia.com/cuda-gpus) e verifique o valor de **Compute Capability**. Este valor deve ser pelo menos 3.5 para que o CUDA possa ser usado.
   - Os critérios para seleção de GPU estão bem resumidos no seguinte artigo. O autor continua atualizando o artigo.  
   [Which GPU(s) to Get for Deep Learning](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)  
   [A Full Hardware Guide to Deep Learning](https://timdettmers.com/2018/12/16/deep-learning-hardware-guide/) escrito pelo mesmo autor também é muito útil. A propósito, a conclusão do artigo acima é a seguinte:
@@ -53,7 +53,7 @@ Este artigo aborda como configurar um ambiente de desenvolvimento para estudar m
 Se você atender a todos os requisitos mencionados acima, vamos começar a configurar o ambiente de trabalho.
 
 ## 1. Criando o diretório de trabalho
-Abra o terminal e modifique o arquivo .bashrc para registrar a variável de ambiente (o comando vem após o prompt $).  
+Abra o terminal e modifique o arquivo .bashrc para registrar variáveis de ambiente (o comando vem após o prompt $).  
 Primeiro, use o seguinte comando para abrir o editor nano (você pode usar vim ou qualquer outro editor, se preferir):
 ```
 $ nano ~/.bashrc
@@ -79,12 +79,12 @@ Verifique se o pip está instalado em seu sistema com o seguinte comando:
 ```
 $ pip3 --version
 
-Comando 'pip3' não encontrado, mas pode ser instalado com:
+O comando 'pip3' não foi encontrado, mas pode ser instalado com:
 
 sudo apt install python3-pip
 
 ```
-Se você ver algo como acima, significa que o pip não está instalado em seu sistema. Use o gerenciador de pacotes do sistema (apt neste caso) para instalá-lo (se o número da versão aparecer, significa que já está instalado, então pule este comando):
+Se aparecer algo assim, significa que o pip não está instalado em seu sistema. Use o gerenciador de pacotes do sistema (neste caso, apt) para instalá-lo (se o número da versão aparecer, significa que já está instalado, então pule este comando):
 ```
 $ sudo apt install python3-pip
 ```
@@ -109,10 +109,10 @@ Após ativar o ambiente virtual, atualize o pip dentro do ambiente virtual:
 ```
 (env) $ pip install -U pip
 ```
-Para desativar o ambiente virtual mais tarde, use o comando ```deactivate```. Quando o ambiente está ativado, qualquer pacote que você instalar usando o comando pip será instalado neste ambiente independente e o Python usará esses pacotes.
+Para desativar o ambiente virtual mais tarde, use o comando ```deactivate```. Quando o ambiente está ativado, qualquer pacote que você instalar usando o comando pip será instalado neste ambiente independente, e o Python usará esses pacotes.
 
 ## 3′. (Se não criar um ambiente virtual) Atualizando a versão do pip
-Ao instalar o pip no sistema, você baixa e instala um arquivo binário do servidor espelho da distribuição (Ubuntu neste caso), mas esse arquivo binário geralmente não é atualizado e frequentemente não é a versão mais recente (no meu caso, a versão 20.3.4 foi instalada). Para usar a versão mais recente do pip, execute o seguinte comando para instalar (ou atualizar, se já estiver instalado) o pip no *diretório home do usuário*:  
+Ao instalar o pip no sistema, você baixa e instala um arquivo binário do servidor espelho da distribuição (neste caso, Ubuntu), mas esse arquivo binário geralmente não é atualizado e frequentemente não é a versão mais recente (no meu caso, a versão 20.3.4 foi instalada). Para usar a versão mais recente do pip, execute o seguinte comando para instalar (ou atualizar, se já estiver instalado) o pip no *diretório home do usuário*:  
 ```
 $ python3 -m pip install -U pip
 
@@ -126,15 +126,15 @@ Abra novamente o arquivo .bashrc com um editor:
 ```
 $ nano ~/.bashrc
 ```
-Desta vez, procure a linha que começa com ```export PATH=```. Se não houver nenhum caminho escrito depois disso, basta adicionar o conteúdo como fizemos no [passo 1](#1-criando-o-diretório-de-trabalho). Se já houver outros caminhos registrados, adicione o conteúdo após eles usando dois pontos:  
+Desta vez, procure a linha que começa com ```export PATH=```. Se não houver nenhum caminho escrito depois disso, basta adicionar o conteúdo como fizemos na [etapa 1](#1-criando-o-diretório-de-trabalho). Se já houver outros caminhos registrados, adicione o conteúdo após eles usando dois pontos:  
 ```export PATH="$HOME/.local/bin"```  
 ```export PATH="(caminho existente):$HOME/.local/bin"```
 
 [Atualizar o pip do sistema de outra forma que não seja o gerenciador de pacotes do sistema pode causar problemas devido a conflitos de versão](https://github.com/pypa/pip/issues/5599). É por isso que instalamos o pip separadamente no diretório home do usuário. Pela mesma razão, é melhor usar o comando ```python3 -m pip``` em vez do comando ```pip``` para usar o pip, a menos que esteja dentro de um ambiente virtual.
 
 ## 4. Instalando pacotes para machine learning (jupyter, matplotlib, numpy, pandas, scipy, scikit-learn)
-Instale todos os pacotes necessários e suas dependências com o seguinte comando pip:  
-No meu caso, como estou usando venv, usei apenas o comando ```pip```, mas se você não estiver usando venv, recomendo usar o comando ```python3 -m pip``` como mencionado anteriormente.
+Instale todos os pacotes necessários e suas dependências com o seguinte comando pip.  
+No meu caso, como estou usando venv, usei apenas o comando ```pip```, mas se você não estiver usando venv, recomendo usar o comando ```python3 -m pip``` em vez disso, como mencionado anteriormente.
 ```
 (env) $ pip install -U jupyter matplotlib numpy pandas scipy scikit-learn
 
@@ -167,8 +167,8 @@ Eu verifiquei as versões de CUDA compatíveis com ambos os pacotes porque às v
 ### 5-2. Instalando CUDA
 Acesse o [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive) e selecione a versão que verificamos anteriormente. Neste artigo, selecionamos [CUDA Toolkit 11.0 Update1](https://developer.nvidia.com/cuda-11.0-update1-download-archive).  
 ![CUDA 11.0 Update 1](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-1.png)  
-Agora selecione a plataforma e o tipo de instalador correspondentes e siga as instruções que aparecem na tela. Neste ponto, [é recomendável usar o gerenciador de pacotes do sistema para o instalador, se possível](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#choose-installation-method). Meu método preferido é deb (network).  
-![Selecionando plataforma CUDA](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-2.png)  
+Agora, selecione a plataforma e o tipo de instalador correspondentes e siga as instruções que aparecem na tela. Neste ponto, [é recomendável usar o gerenciador de pacotes do sistema para o instalador, se possível](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#choose-installation-method). Meu método preferido é deb (network).  
+![Selecionando a plataforma CUDA](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-2.png)  
 ![Instalando CUDA](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-3.png)  
 
 Execute os seguintes comandos para instalar o CUDA:
@@ -189,7 +189,7 @@ $ sudo apt install libcudnn8=8.0.5.39-1+cuda11.0
 $ sudo apt install libcudnn8-dev=8.0.5.39-1+cuda11.0
 ```
 ## 6. Instalando PyTorch
-Se você criou um ambiente virtual no passo 3, prossiga com o ambiente virtual que deseja usar ativado. Se você não precisa do PyTorch, pode pular esta etapa.  
+Se você criou um ambiente virtual na etapa 3, prossiga com o ambiente virtual que deseja usar ativado. Se você não precisa do PyTorch, pode pular esta etapa.  
 Acesse o [site do PyTorch](https://pytorch.org/get-started/locally/), selecione a versão do PyTorch (Stable), sistema operacional (Linux), pacote (Pip), linguagem (Python) e CUDA (11.0) que deseja instalar e siga as instruções que aparecem na tela.  
 ![Instalando PyTorch](/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png)
 ```
@@ -210,7 +210,7 @@ tensor([[0.8187, 0.5925, 0.2768],
         [0.9205, 0.9239, 0.9065],
         [0.2424, 0.1018, 0.3426]])
 ```
-Para verificar se o driver da GPU e o CUDA estão ativos e disponíveis para uso, execute o seguinte comando:
+Para verificar se o driver da GPU e o CUDA estão ativos e disponíveis, execute o seguinte comando:
 ```
 >>> torch.cuda.is_available()
 True
@@ -218,7 +218,7 @@ True
 
 ## 7. Instalando TensorFlow 2
 Se você não precisa do TensorFlow, pode ignorar esta etapa.  
-Se você instalou o PyTorch em um ambiente virtual no passo 6, desative esse ambiente virtual, volte aos passos 3 e 4 para criar e ativar um novo ambiente virtual antes de prosseguir. Se você pulou o passo 6, pode continuar normalmente.  
+Se você instalou o PyTorch em um ambiente virtual na etapa 6, desative esse ambiente virtual, volte às etapas 3 e 4 para criar e ativar um novo ambiente virtual antes de prosseguir. Se você pulou a etapa 6, pode continuar normalmente.  
 Instale o TensorFlow da seguinte forma:
 ```
 (env2) $ pip install --upgrade tensorflow
