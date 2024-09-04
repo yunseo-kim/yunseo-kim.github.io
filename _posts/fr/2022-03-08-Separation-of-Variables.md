@@ -2,8 +2,8 @@
 title: "Séparation des variables (Separation of Variables)"
 description: >-
   Nous explorons la méthode de séparation des variables et présentons quelques exemples connexes.
-categories: [Mathématiques, Équation différentielle]
-tags: [EDO, EDO du premier ordre]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 
 ---

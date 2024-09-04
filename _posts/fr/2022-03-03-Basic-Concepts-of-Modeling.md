@@ -2,8 +2,8 @@
 title: "Concepts de base de la modélisation"
 description: >-
   Découvrez les concepts de modélisation mathématique, d'équations différentielles ordinaires, d'équations aux dérivées partielles et de problèmes à valeur initiale.
-categories: [Mathématiques, Équation différentielle]
-tags: [EDO, EDO du premier ordre]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 ---

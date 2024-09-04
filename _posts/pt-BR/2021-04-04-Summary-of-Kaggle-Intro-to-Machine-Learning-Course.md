@@ -2,8 +2,8 @@
 title: "Resumo do curso Kaggle - Introdução ao Aprendizado de Máquina"
 description: >-
   Resumo do conteúdo do curso público do Kaggle 'Introdução ao Aprendizado de Máquina'.
-categories: [Ciência de Dados, Aprendizado de Máquina]
-tags: [Cursos Kaggle, Pandas, scikit-learn]
+categories: [Data Science, Machine Learning]
+tags: [Kaggle Courses, Pandas, scikit-learn]
 toc: true
 toc_sticky: true
 ---

@@ -2,8 +2,8 @@
 title: "Bernoulli-Gleichung (Bernoulli Equation)"
 description: >-
   Wir untersuchen die Bernoulli-Gleichung und die Lösungsmethode für die logistische Gleichung, eine spezielle Form der Bernoulli-Gleichung.
-categories: [Mathematik, Differentialgleichung]
-tags: [ODE, Differentialgleichungen erster Ordnung]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 ---
 

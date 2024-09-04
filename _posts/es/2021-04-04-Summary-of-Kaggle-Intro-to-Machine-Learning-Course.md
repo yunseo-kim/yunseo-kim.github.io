@@ -2,8 +2,8 @@
 title: "Resumen del curso Kaggle-Intro to Machine Learning"
 description: >-
   He resumido el contenido del curso público de Kaggle 'Intro to Machine Learning'.
-categories: [Ciencia de Datos, Aprendizaje Automático]
-tags: [Cursos de Kaggle, Pandas, scikit-learn]
+categories: [Data Science, Machine Learning]
+tags: [Kaggle Courses, Pandas, scikit-learn]
 toc: true
 toc_sticky: true
 ---

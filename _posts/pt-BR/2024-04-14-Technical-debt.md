@@ -2,8 +2,8 @@
 title: "Dívida Técnica (Technical debt)"
 description: >-
   Vamos explorar o conceito de dívida técnica, as razões pelas quais ela ocorre e como minimizá-la.
-categories: [Programação]
-tags: [Codificação]
+categories: [Programming]
+tags: [Coding]
 ---
 
 ## Dívida Técnica (Technical debt)

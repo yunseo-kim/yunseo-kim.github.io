@@ -2,8 +2,8 @@
 title: "Exakte Differentialgleichung und Integrierende Faktoren"
 description: >-
   Wir untersuchen die Methoden zur Bestimmung und Lösung exakter Differentialgleichungen sowie integrierende Faktoren.
-categories: [Mathematik, Differentialgleichung]
-tags: [ODE, Differentialgleichungen erster Ordnung]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 ---

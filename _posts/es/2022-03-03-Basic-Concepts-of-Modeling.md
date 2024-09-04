@@ -2,8 +2,8 @@
 title: "Conceptos básicos de modelado (Modeling)"
 description: >-
   Exploramos los conceptos de modelado matemático, ecuaciones diferenciales ordinarias, ecuaciones diferenciales parciales y problemas de valor inicial.
-categories: [Matemáticas, Ecuación Diferencial]
-tags: [EDO, EDOs de primer orden]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 ---

@@ -2,8 +2,8 @@
 title: "Atenuación de neutrones y recorrido libre medio (Mean Free Path)"
 description: >-
   Calculamos la intensidad del haz de neutrones en función de la distancia de penetración en el objetivo cuando se irradia un haz de neutrones monoenergético sobre un objetivo, y de esto derivamos el recorrido libre medio de los neutrones.
-categories: [Ingeniería Física, Ingeniería Nuclear]
-tags: [Física Nuclear, Interacción de la Radiación con la Materia]
+categories: [Engineering Physics, Nuclear Engineering]
+tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 ---
 

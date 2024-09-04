@@ -2,8 +2,8 @@
 title: "합 또는 차의 공식(Product-to-Sum and Sum-to-Product Identities)"
 description: >-
   삼각함수의 곱을 합 또는 차의 형태로 변형하는 공식을 알아보고, 삼각함수의 덧셈정리로부터 해당 공식을 유도한다. 그리고 이로부터 삼각함수의 합 또는 차의 형태를 곱의 형태로 변형하는 공식 또한 유도한다.
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
 math: true
 ---
 

@@ -2,8 +2,8 @@
 title: "Resumen del curso Kaggle-Pandas"
 description: >-
   He resumido el contenido del mini curso de Pandas de los cursos públicos de Kaggle.
-categories: [Ciencia de Datos, Aprendizaje Automático]
-tags: [Cursos de Kaggle, Pandas]
+categories: [Data Science, Machine Learning]
+tags: [Kaggle Courses, Pandas]
 toc: true
 toc_sticky: true
 ---

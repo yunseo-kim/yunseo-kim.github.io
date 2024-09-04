@@ -1,11 +1,9 @@
-Voici la traduction en français du texte fourni, en préservant le format markdown :
-
 ---
 title: "Équation différentielle exacte et facteur intégrant"
 description: >-
   Nous examinons les méthodes pour déterminer et résoudre les équations différentielles exactes, ainsi que le concept de facteur intégrant.
-categories: [Mathématiques, Équation différentielle]
-tags: [EDO, EDO du premier ordre]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 ---

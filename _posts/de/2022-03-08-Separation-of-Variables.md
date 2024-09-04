@@ -2,8 +2,8 @@
 title: "Trennung der Variablen (Separation of Variables)"
 description: >-
   Wir betrachten die Methode der Trennung der Variablen und stellen einige relevante Beispiele vor.
-categories: [Mathematik, Differentialgleichung]
-tags: [ODE, Gewöhnliche Differentialgleichungen erster Ordnung]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 ---
 

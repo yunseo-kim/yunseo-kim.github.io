@@ -2,8 +2,8 @@
 title: "Solución de ecuaciones diferenciales lineales de primer orden"
 description: >-
   Aprendamos cómo resolver ecuaciones diferenciales lineales de primer orden.
-categories: [Matemáticas, Ecuación Diferencial]
-tags: [EDO, EDOs de Primer Orden]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 ---
 

@@ -2,8 +2,8 @@
 title: "Équation de Bernoulli (Bernoulli Equation)"
 description: >-
   Nous examinons l'équation de Bernoulli et la méthode de résolution de l'équation logistique, qui est une forme spéciale de l'équation de Bernoulli.
-categories: [Mathématiques, Équation différentielle]
-tags: [EDO, EDO du premier ordre]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 ---
 

@@ -2,8 +2,8 @@
 title: "Dette technique (Technical debt)"
 description: >-
   Examinons le concept de dette technique, les raisons de son apparition, et les moyens de la minimiser.
-categories: [Programmation]
-tags: [Codage]
+categories: [Programming]
+tags: [Coding]
 ---
 
 ## Dette technique (Technical debt)

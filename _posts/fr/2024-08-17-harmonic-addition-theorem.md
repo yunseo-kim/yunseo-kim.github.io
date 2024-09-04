@@ -2,8 +2,8 @@
 title: "Théorème d'addition harmonique"
 description: >-
   Nous explorons la méthode pour trouver une fonction trigonométrique unique correspondante r sin(θ+α) ou r cos(θ-β) pour une somme de fonctions trigonométriques de la forme f(θ) = a cos θ + b sin θ.
-categories: [Mathématiques]
-tags: [Trigonométrie]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
 ---
 

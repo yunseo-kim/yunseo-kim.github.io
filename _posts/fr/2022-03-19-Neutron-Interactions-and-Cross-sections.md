@@ -2,8 +2,8 @@
 title: "Interactions des neutrons et sections efficaces"
 description: >-
   Les neutrons étant électriquement neutres, ils peuvent traverser le nuage électronique des atomes sans subir d'influence électrique et interagir directement avec le noyau atomique. Nous examinons les types d'interactions des neutrons et le concept de section efficace des noyaux atomiques.
-categories: [Physique de l'ingénieur, Génie nucléaire]
-tags: [Physique nucléaire, Interaction du rayonnement avec la matière]
+categories: [Engineering Physics, Nuclear Engineering]
+tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
 ---

@@ -2,8 +2,8 @@
 title: "삼각함수의 덧셈정리"
 description: >-
   삼각함수의 정의와 삼각함수 사이의 관계식을 살펴보고, 이로부터 삼각함수의 덧셈정리 및 파생 공식을 유도한다.
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas]
 math: true
 ---
 

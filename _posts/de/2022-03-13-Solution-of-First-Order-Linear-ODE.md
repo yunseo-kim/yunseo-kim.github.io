@@ -2,8 +2,8 @@
 title: "Lösung von linearen Differentialgleichungen erster Ordnung"
 description: >-
   Lasst uns die Lösungsmethode für lineare Differentialgleichungen erster Ordnung betrachten.
-categories: [Mathematik, Differentialgleichung]
-tags: [ODE, Differentialgleichungen erster Ordnung]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 ---
 

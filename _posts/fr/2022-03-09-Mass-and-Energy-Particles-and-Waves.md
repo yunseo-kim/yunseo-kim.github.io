@@ -2,8 +2,8 @@
 title: "Masse et énergie, particules et ondes"
 description: >-
   Explorons le principe d'équivalence masse-énergie de la théorie de la relativité et calculons l'énergie d'un électron en mouvement en tenant compte des effets relativistes.
-categories: [Physique de l'ingénierie, Génie nucléaire]
-tags: [Physique nucléaire, Théorie de la relativité]
+categories: [Engineering Physics, Nuclear Engineering]
+tags: [Nuclear Physics, Theory of Relativity]
 math: true
 ---
 

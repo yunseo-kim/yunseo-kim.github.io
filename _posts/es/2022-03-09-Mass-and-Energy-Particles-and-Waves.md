@@ -2,8 +2,8 @@
 title: "Masa y energía, partículas y ondas"
 description: >-
   Exploremos el principio de equivalencia masa-energía de la teoría de la relatividad y calculemos la energía de un electrón en movimiento considerando los efectos relativistas.
-categories: [Física de Ingeniería, Ingeniería Nuclear]
-tags: [Física Nuclear, Teoría de la Relatividad]
+categories: [Engineering Physics, Nuclear Engineering]
+tags: [Nuclear Physics, Theory of Relativity]
 math: true
 ---
 

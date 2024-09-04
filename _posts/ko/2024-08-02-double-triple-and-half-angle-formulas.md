@@ -2,8 +2,8 @@
 title: "배각·반각의 공식(Multiple-Angle and Half-Angle Formulas)"
 description: >-
   2배각, 3배각의 공식을 살펴보고 삼각함수의 덧셈정리(Trigonometric Addition Formulas)로부터 이들을 유도한다. 그리고 2배각의 공식으로부터 반각의 공식 또한 유도한다.
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
 ---
 

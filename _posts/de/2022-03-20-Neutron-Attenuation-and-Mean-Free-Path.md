@@ -2,8 +2,8 @@
 title: "Neutronenabschwächung und mittlere freie Weglänge (Mean Free Path)"
 description: >-
   Berechnung der Intensität eines monoenergetischen Neutronenstrahls bei Bestrahlung eines Targets in Abhängigkeit von der Durchdringungstiefe und Ableitung der mittleren freien Weglänge der Neutronen daraus.
-categories: [Technische Physik, Kerntechnik]
-tags: [Kernphysik, Wechselwirkung von Strahlung mit Materie]
+categories: [Engineering Physics, Nuclear Engineering]
+tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 ---
 

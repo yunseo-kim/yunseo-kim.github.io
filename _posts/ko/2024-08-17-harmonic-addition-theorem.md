@@ -2,8 +2,8 @@
 title: "삼각함수의 합성(Harmonic Addition Theorem)"
 description: >-
   f(θ) = a cos θ + b sin θ와 같은 형태의 삼각함수의 합에 대해, 그에 대응하는 단일 삼각함수 r sin(θ+α) 또는 r cos(θ-β)를 구하는 방법을 알아본다.
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
 ---
 

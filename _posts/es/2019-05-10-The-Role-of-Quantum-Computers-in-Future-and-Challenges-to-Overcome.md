@@ -2,8 +2,8 @@
 title: "El papel de las computadoras cuánticas en la sociedad futura y los desafíos a resolver"
 description: >-
   Exploramos los conceptos básicos de las computadoras cuánticas y sus ventajas sobre las computadoras clásicas, el papel que se espera que desempeñen en el futuro, y consideramos la necesidad de que Corea se prepare con anticipación para la era de la computación cuántica. Este ensayo fue escrito por el autor cuando estaba en segundo año de secundaria.
-categories: [Física de Ingeniería, Computación Cuántica]
-tags: [Computación Cuántica]
+categories: [Engineering Physics, Quantum Computing]
+tags: [Quantum Computing]
 ---
 
 Durante las últimas décadas, desde la década de 1960, la capacidad de cálculo de las computadoras ha aumentado exponencialmente. Este desarrollo se ha logrado miniaturizando los componentes llamados transistores que se encuentran dentro del procesador de la computadora, permitiendo integrar un mayor número en la misma área. Un ejemplo que ilustra bien la velocidad de desarrollo del rendimiento de las computadoras es que los smartphones más recientes que usamos hoy en día superan el rendimiento de las supercomputadoras más potentes de la década de 1990. Dado que es prácticamente imposible encontrar un campo que no utilice computadoras hoy en día, el rendimiento de las computadoras es un factor clave que determina la velocidad general del desarrollo tecnológico en la sociedad moderna. Sin embargo, el problema es que, a medida que el tamaño de cada transistor se vuelve extremadamente pequeño, este método de mejora de la capacidad de cálculo de las computadoras está llegando a sus límites físicos. Esta es la razón por la que los científicos están prestando atención a las computadoras cuánticas. En este artículo, hablaremos sobre las características de las computadoras cuánticas, sus ventajas sobre las computadoras existentes, el papel que se espera que desempeñen en la sociedad futura y los desafíos que deben superarse para lograrlo.

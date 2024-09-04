@@ -3,7 +3,7 @@ title: "Harmonische Addition (Harmonic Addition Theorem)"
 description: >-
   Wir untersuchen die Methode zur Bestimmung einer einzelnen trigonometrischen Funktion r sin(θ+α) oder r cos(θ-β), die einer Summe von trigonometrischen Funktionen der Form f(θ) = a cos θ + b sin θ entspricht.
 categories: [Mathematics]
-tags: [Trigonometrie]
+tags: [Trigonometry]
 math: true
 ---
 

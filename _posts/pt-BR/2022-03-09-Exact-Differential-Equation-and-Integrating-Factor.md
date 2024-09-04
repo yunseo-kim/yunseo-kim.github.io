@@ -2,8 +2,8 @@
 title: "Equação Diferencial Exata e Fator Integrante"
 description: >-
   Aprenda sobre os métodos de identificação e resolução de equações diferenciais exatas, bem como sobre fatores integrantes.
-categories: [Matemática, Equação Diferencial]
-tags: [EDO, EDOs de Primeira Ordem]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 ---

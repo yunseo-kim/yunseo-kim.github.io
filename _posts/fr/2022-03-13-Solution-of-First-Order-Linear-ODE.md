@@ -2,8 +2,8 @@
 title: "Solution des équations différentielles linéaires du premier ordre"
 description: >-
   Examinons la méthode de résolution des équations différentielles linéaires du premier ordre.
-categories: [Mathématiques, Équation différentielle]
-tags: [EDO, EDO du premier ordre]
+categories: [Mathematics, Differential Equation]
+tags: [ODE, First-Order ODEs]
 math: true
 ---
 
