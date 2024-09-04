@@ -1,7 +1,7 @@
 ---
 title: "Théorème d'addition harmonique"
 description: >-
-  Nous explorons la méthode pour trouver une fonction trigonométrique unique correspondante r sin(θ+α) ou r cos(θ-β) pour une somme de fonctions trigonométriques de la forme f(θ) = a cos θ + b sin θ.
+  Nous explorons comment trouver une fonction trigonométrique unique correspondante r sin(θ+α) ou r cos(θ-β) pour une somme de fonctions trigonométriques de la forme f(θ) = a cos θ + b sin θ.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
@@ -27,7 +27,7 @@ Pour une fonction $f(\theta) = a \cos \theta + b \sin \theta$ composée d'une so
 
 ![Dérivation géométrique du théorème d'addition harmonique](/assets/img/trigonometry/harmonic-addition.png)
 
-Comme illustré sur la figure, prenons un point $P(a,b)$ sur le plan de coordonnées et appelons $\alpha$ l'angle formé entre le segment $\overline{OP}$ et la direction positive de l'axe $x$. Alors,
+Comme illustré sur la figure, prenons un point $P(a,b)$ sur le plan de coordonnées et soit $\alpha$ l'angle formé entre le segment $\overline{OP}$ et la direction positive de l'axe $x$. Alors,
 
 $$ \overline{OP} = \sqrt{a^2+b^2} $$
 
@@ -43,7 +43,7 @@ a \sin \theta + b \cos \theta &= \sqrt{a^{2}+b^{2}} \left(\frac{a}{\sqrt{a^{2}+b
 &= \sqrt{a^{2}+b^{2}} \sin(\theta + \alpha). \tag{2}
 \end{align*} $$
 
-De la même manière, en prenant un point $P^{\prime}(b,a)$ et en appelant $\beta$ l'angle formé entre le segment $\overline{OP^{\prime}}$ et la direction positive de l'axe $x$, on obtient :
+De la même manière, en prenant un point $P^{\prime}(b,a)$ et en définissant $\beta$ comme l'angle formé entre le segment $\overline{OP^{\prime}}$ et la direction positive de l'axe $x$, nous obtenons :
 
 $$ a \sin \theta + b \cos \theta = \sqrt{a^{2}+b^{2}}\cos(\theta-\beta). \tag{3} $$
 
@@ -55,7 +55,7 @@ Cette transformation d'une fonction trigonométrique de la forme $a \sin \theta 
 Soit la fonction $f(\theta)=-\sqrt{3}\sin \theta + \cos \left(\theta - \frac{\pi}{3} \right)$. Trouvez les valeurs maximale et minimale de la fonction $f(\theta)$ dans l'intervalle $[0, 2\pi]$.
 
 ### 1. Transformation en forme $a\sin\theta + b\cos\theta$
-En utilisant les [formules d'addition trigonométriques](/posts/trigonometric-addition-formulas), on transforme l'expression donnée :
+En utilisant les [formules d'addition trigonométriques](/posts/trigonometric-addition-formulas), nous transformons la fonction donnée :
 
 $$ \begin{align*}
 f(\theta) &= -\sqrt{3}\sin \theta + \cos \left(\theta - \frac{\pi}{3} \right) \\
@@ -64,11 +64,11 @@ f(\theta) &= -\sqrt{3}\sin \theta + \cos \left(\theta - \frac{\pi}{3} \right) \\
 \end{align*} $$
 
 ### 2. Transformation en forme $r\sin(\theta+\alpha)$
-En posant $a=-\frac{\sqrt{3}}{2}$ et $b=\frac{1}{2}$, on obtient :
+En posant $a=-\frac{\sqrt{3}}{2}$ et $b=\frac{1}{2}$, nous obtenons :
 
 $$ r = \sqrt{a^2+b^2} = \sqrt{\frac{3}{4}+\frac{1}{4}} = 1 $$
 
-De plus, il existe une valeur réelle unique $\alpha$ telle que $0 \leq \alpha<2\pi$, $\cos\alpha = a$, et $\sin\alpha = b$. À partir des valeurs trigonométriques des angles spéciaux, on peut déduire que $\alpha = \frac{5}{6}\pi$. 
+De plus, il existe une valeur réelle unique $\alpha$ telle que $0 \leq \alpha<2\pi$, $\cos\alpha = a$, et $\sin\alpha = b$. À partir des valeurs trigonométriques des angles spéciaux, nous pouvons déduire que $\alpha = \frac{5}{6}\pi$. 
 
 Par conséquent, la fonction donnée $f(\theta)$ transformée en forme $r\sin(\theta+\alpha)$ devient :
 

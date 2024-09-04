@@ -1,20 +1,20 @@
 ---
 title: "Formules d'addition des fonctions trigonométriques"
 description: >-
-  Nous examinons les définitions des fonctions trigonométriques et les relations entre elles, puis nous en déduisons les formules d'addition des fonctions trigonométriques et leurs formules dérivées.
-categories: [Mathematics]
-tags: [Trigonometry]
+  Examinons les définitions des fonctions trigonométriques et les relations entre elles, puis dérivons les formules d'addition trigonométriques et les formules dérivées.
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas]
 math: true
 ---
 
 ## Définition des fonctions trigonométriques
 ![Cercle unitaire et vecteur rayon](/assets/img/trigonometry/definition.png)
-Comme illustré sur la figure, lorsque $\theta$ est l'angle formé par le rayon vecteur $\overline{OP}$ et la direction positive de l'axe $x$,
+Comme illustré sur la figure, lorsque la taille de l'angle formé par le rayon vecteur $\overline{OP}$ et la direction positive de l'axe $x$ est $\theta$,
 $$
 \begin{gather}\begin{split}
 \sin \theta = \frac { y } { r } ,\; \cos \theta = \frac { x } { r } ,\; \tan \theta = \frac { y } { x } \\ \csc \theta = \frac { r } { y } ,\; \sec \theta = \frac { r } { x } ,\; \cot \theta = \frac { x } { y } \end{split}\end{gather}
 $$
-sont définies comme telles, et collectivement appelées fonctions trigonométriques.
+sont définies ainsi, et collectivement appelées fonctions trigonométriques.
 
 ## Relations entre les fonctions trigonométriques
 1. $$ \csc \theta = \frac { 1 } { \sin \theta } ,\; \sec \theta = \frac { 1 } { \cos \theta } ,\; \cot \theta = \frac { 1 } { \tan \theta } \tag{2}$$
@@ -26,9 +26,9 @@ sont définies comme telles, et collectivement appelées fonctions trigonométri
 \end{gather*} 
 $$
 
-## Formules d'addition des fonctions trigonométriques
+## Formules d'addition trigonométriques
 ![Dérivation des formules d'addition trigonométriques](/assets/img/trigonometry/trigonometric-addition-formulas.png)
-Comme illustré sur la figure, soit $P, Q, P^{\prime}, Q^{\prime}$ les points d'intersection du cercle unitaire avec quatre rayons vecteurs formant des angles de $\alpha+\beta,\, 0,\, \alpha,\, -\beta$ respectivement avec la direction positive de l'axe $x$.
+Comme illustré sur la figure, soit $P, Q, P^{\prime}, Q^{\prime}$ les points où quatre rayons vecteurs formant des angles de $\alpha+\beta,\, 0,\, \alpha,\, -\beta$ avec la direction positive de l'axe $x$ rencontrent le cercle unitaire.
 
 Les coordonnées des deux points $P, Q$ sont
 
@@ -56,7 +56,7 @@ $$
 \cos ( \alpha - \beta ) = \cos \alpha \cos \beta + \sin \alpha \sin \beta \label{eqn:cos_2} \tag{6}
 $$
 
-Comme $\cos ( \frac { \pi } { 2 } - \theta ) = \sin \theta ,\, \sin ( \frac { \pi } { 2 } - \theta ) = \cos \theta$, on a
+Comme $\cos ( \frac { \pi } { 2 } - \theta ) = \sin \theta ,\, \sin ( \frac { \pi } { 2 } - \theta ) = \cos \theta$,
 
 $$
 \begin{align*} \sin ( \alpha + \beta ) &= \cos ( \frac { \pi } { 2 } - ( \alpha + \beta ) ) = \cos ( ( \frac { \pi } { 2 } - \alpha ) - \beta) \\ &= \cos ( \frac { \pi } { 2 } - x ) \cos \beta + \sin ( \frac { \pi } { 2 } - \alpha ) \sin \beta \\ &= \sin \alpha \cos \beta + \cos \alpha \sin \beta. \end{align*}
@@ -92,7 +92,7 @@ $$
 
 ## Angle aigu formé par deux droites de pentes données
 ![Angle formé par deux droites](/assets/img/trigonometry/angle-formed-by-two-lines.png)
-En utilisant l'équation ($\ref{eqn:tan_2}$), on peut calculer la taille de l'angle aigu formé par deux droites de pentes données. Si $\theta_{1}$ et $\theta_{2}$ sont les angles formés par les deux droites $y=mx+b$ et $y=m^{\prime} x+b^{\prime}$ avec la direction positive de l'axe $x$ respectivement, alors
+En utilisant l'équation ($\ref{eqn:tan_2}$), on peut trouver la taille de l'angle aigu formé par deux droites de pentes données. Si $\theta_{1}$ et $\theta_{2}$ sont les angles formés par les deux droites $y=mx+b$ et $y=m^{\prime} x+b^{\prime}$ avec la direction positive de l'axe $x$ respectivement, alors
 
 $$
 \tan{\theta_{1}}=m,\, \tan{\theta_{2}}=m^{\prime}

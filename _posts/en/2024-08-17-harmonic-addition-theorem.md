@@ -2,8 +2,8 @@
 title: "Harmonic Addition Theorem"
 description: >-
   We explore the method of finding a corresponding single trigonometric function r sin(θ+α) or r cos(θ-β) for a sum of trigonometric functions in the form of f(θ) = a cos θ + b sin θ.
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
 ---
 
@@ -23,7 +23,7 @@ math: true
 - [Trigonometric Addition Formulas](/posts/trigonometric-addition-formulas)
 
 ## Harmonic Addition Theorem
-For a function $f(\theta) = a \cos \theta + b \sin \theta$ composed of a sum of trigonometric functions, there always exist real numbers $\alpha$ and $\beta$ that satisfy $f(\theta)=\sqrt{a^2+b^2} \sin(\theta+\alpha) = \sqrt{a^2+b^2} \cos(\theta-\beta)$.
+For a function $f(\theta) = a \cos \theta + b \sin \theta$ in the form of a sum of trigonometric functions, there always exist real numbers $\alpha$ and $\beta$ that satisfy $f(\theta)=\sqrt{a^2+b^2} \sin(\theta+\alpha) = \sqrt{a^2+b^2} \cos(\theta-\beta)$.
 
 ![Geometric Derivation of the Harmonic Addition Theorem](/assets/img/trigonometry/harmonic-addition.png)
 

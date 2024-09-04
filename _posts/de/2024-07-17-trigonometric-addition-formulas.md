@@ -2,8 +2,8 @@
 title: "Additionstheoreme der trigonometrischen Funktionen"
 description: >-
   Wir betrachten die Definition der trigonometrischen Funktionen und die Beziehungen zwischen ihnen, um daraus die Additionstheoreme der trigonometrischen Funktionen und abgeleitete Formeln herzuleiten.
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas]
 math: true
 ---
 

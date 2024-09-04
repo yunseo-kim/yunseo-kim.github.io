@@ -1,9 +1,9 @@
 ---
 title: "Fórmulas de Produto para Soma e Soma para Produto (Product-to-Sum and Sum-to-Product Identities)"
 description: >-
-  Exploramos as fórmulas para transformar o produto de funções trigonométricas em somas ou diferenças, derivando essas fórmulas a partir dos teoremas de adição trigonométrica. Também derivamos fórmulas para transformar somas ou diferenças de funções trigonométricas em produtos.
-categories: [Mathematics]
-tags: [Trigonometry]
+  Explore as fórmulas para transformar produtos de funções trigonométricas em somas ou diferenças, derivando essas fórmulas a partir dos teoremas de adição trigonométrica. Além disso, derive fórmulas para transformar somas ou diferenças de funções trigonométricas em produtos.
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
 math: true
 ---
 
@@ -92,7 +92,7 @@ Resolvendo estas equações para $\alpha$ e $\beta$, obtemos
 
 $$ \alpha = \frac{A+B}{2}, \quad \beta = \frac{A-B}{2}. $$
 
-Substituindo estes valores em ($\ref{sin_product_to_sum}$), ($\ref{cos_product_to_dif}$), ($\ref{cos_product_to_sum}$), ($\ref{sin_product_to_dif}$), respectivamente, obtemos as seguintes fórmulas:
+Substituindo estes valores em ($\ref{sin_product_to_sum}$), ($\ref{cos_product_to_dif}$), ($\ref{cos_product_to_sum}$), ($\ref{sin_product_to_dif}$) respectivamente, obtemos as seguintes fórmulas:
 
 $$ \begin{align*}
 \sin A + \sin B &= 2\sin \frac{A+B}{2}\cos \frac{A-B}{2} \\

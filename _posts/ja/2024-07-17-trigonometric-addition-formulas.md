@@ -2,13 +2,13 @@
 title: "三角関数の加法定理"
 description: >-
   三角関数の定義と三角関数間の関係式を確認し、これらから三角関数の加法定理および派生公式を導出する。
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas]
 math: true
 ---
 
 ## 三角関数の定義
-![単位円と半径ベクトル](/assets/img/trigonometry/definition.png)
+![Unit Circle and Radius Vector](/assets/img/trigonometry/definition.png)
 図のように、動径 $\overline{OP}$ が $x$ 軸の正の方向となす角の大きさを $\theta$ とするとき、
 $$
 \begin{gather}\begin{split}
@@ -27,7 +27,7 @@ $$
 $$
 
 ## 三角関数の加法定理
-![三角関数の加法定理の導出](/assets/img/trigonometry/trigonometric-addition-formulas.png)
+![Deriving the Trigonometric Addition Formulas](/assets/img/trigonometry/trigonometric-addition-formulas.png)
 図のように、$x$ 軸の正の方向となす角の大きさが $\alpha+\beta,\, 0,\, \alpha,\, -\beta$ である4つの動径が単位円と交わる点をそれぞれ $P, Q, P^{\prime}, Q^{\prime}$ とする。
 
 2点 $P, Q$ の座標は
@@ -78,7 +78,7 @@ $$
 \tan ( \alpha + \beta ) = \frac { \sin ( \alpha + \beta ) } { \cos ( \alpha + \beta ) } = \frac { \sin \alpha \cos \beta + \cos \alpha \sin \beta } { \cos \alpha \cos \beta - \sin \alpha \sin \beta }
 $$
 
-において、分母と分子をそれぞれ $\cos{\alpha} \cos{\beta}$ で割って整理すると
+において分母と分子をそれぞれ $\cos{\alpha} \cos{\beta}$ で割って整理すると
 
 $$
 \tan ( \alpha + \beta ) = \frac { \tan \alpha + \tan \beta } { 1 - \tan \alpha \tan \beta } \label{eqn:tan_1} \tag{9}
@@ -93,7 +93,7 @@ $$
 となる。
 
 ## 傾きが与えられた2直線がなす鋭角の大きさ
-![2直線がなす角](/assets/img/trigonometry/angle-formed-by-two-lines.png)
+![Angle formed by two lines](/assets/img/trigonometry/angle-formed-by-two-lines.png)
 式 ($\ref{eqn:tan_2}$) を用いると、傾きが与えられた2直線がなす鋭角の大きさを求めることができる。2直線 $y=mx+b$, $y=m^{\prime} x+b^{\prime}$ が $x$ 軸の正の方向となす角の大きさをそれぞれ $\theta_{1}$, $\theta_{2}$ とすると
 
 $$

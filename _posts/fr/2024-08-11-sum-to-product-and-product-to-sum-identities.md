@@ -1,9 +1,9 @@
 ---
 title: "Formules de produit en somme et de somme en produit (Product-to-Sum and Sum-to-Product Identities)"
 description: >-
-  Découvrez les formules pour transformer le produit de fonctions trigonométriques en somme ou différence, et dérivez ces formules à partir des théorèmes d'addition trigonométrique. Ensuite, dérivez également les formules pour transformer la somme ou la différence de fonctions trigonométriques en produit.
-categories: [Mathematics]
-tags: [Trigonometry]
+  Découvrez les formules pour transformer le produit de fonctions trigonométriques en somme ou différence, dérivez ces formules à partir des théorèmes d'addition trigonométrique, et utilisez-les pour déduire les formules transformant les sommes ou différences de fonctions trigonométriques en produits.
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
 math: true
 ---
 
@@ -28,7 +28,7 @@ math: true
 {: .prompt-tip }
 
 ## Prérequis
-- [Théorèmes d'addition trigonométrique](/posts/trigonometric-addition-formulas)
+- [Formules d'addition trigonométriques](/posts/trigonometric-addition-formulas)
 
 ## Formules de produit en somme (Product-to-Sum Identities)
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
@@ -37,7 +37,7 @@ math: true
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### Dérivation
-On utilise les [théorèmes d'addition trigonométrique](/posts/trigonometric-addition-formulas)
+Nous utilisons les [formules d'addition trigonométriques](/posts/trigonometric-addition-formulas)
 
 $$ \begin{align}
 \sin(\alpha+\beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \tag{1}\label{eqn:sin_add}\\
@@ -82,11 +82,11 @@ $$ \therefore \sin \alpha \sin \beta = -\frac { 1 } { 2 } \{ \cos(\alpha+\beta) 
 - $$ \cos A - \cos B = -2\sin \frac{A+B}{2}\sin \frac{A-B}{2} $$
 
 ### Dérivation
-On peut également dériver les formules de somme en produit (Sum-to-Product Identities) à partir des formules de produit en somme (Product-to-Sum Identities).
+On peut dériver les formules de somme en produit (Sum-to-Product Identities) à partir des formules de produit en somme (Product-to-Sum Identities).
 
 Posons $$ \alpha + \beta = A, \quad \alpha - \beta = B $$
 
-En résolvant ces deux équations pour $\alpha$ et $\beta$, on obtient
+En résolvant ces équations pour $\alpha$ et $\beta$, on obtient
 
 $$ \alpha = \frac{A+B}{2}, \quad \beta = \frac{A-B}{2}. $$
 

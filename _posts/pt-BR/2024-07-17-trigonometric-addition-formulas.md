@@ -1,15 +1,15 @@
 ---
-title: "Teoremas de Adição de Funções Trigonométricas"
+title: "Fórmulas de Adição Trigonométricas"
 description: >-
-  Examinamos as definições de funções trigonométricas e as relações entre elas, e a partir disso derivamos os teoremas de adição de funções trigonométricas e fórmulas relacionadas.
-categories: [Mathematics]
-tags: [Trigonometry]
+  Examinamos as definições das funções trigonométricas e as relações entre elas, e a partir disso derivamos as fórmulas de adição trigonométricas e fórmulas relacionadas.
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas]
 math: true
 ---
 
-## Definição de Funções Trigonométricas
-![Círculo Unitário e Vetor Raio](/assets/img/trigonometry/definition.png)
-Como mostrado na figura, quando o tamanho do ângulo formado pelo raio vetor $\overline{OP}$ e a direção positiva do eixo $x$ é $\theta$,
+## Definição das Funções Trigonométricas
+![Unit Circle and Radius Vector](/assets/img/trigonometry/definition.png)
+Como mostrado na figura, quando o ângulo formado pelo raio vetor $\overline{OP}$ e a direção positiva do eixo $x$ é $\theta$,
 $$
 \begin{gather}\begin{split}
 \sin \theta = \frac { y } { r } ,\; \cos \theta = \frac { x } { r } ,\; \tan \theta = \frac { y } { x } \\ \csc \theta = \frac { r } { y } ,\; \sec \theta = \frac { r } { x } ,\; \cot \theta = \frac { x } { y } \end{split}\end{gather}
@@ -26,9 +26,9 @@ são definidas assim, e coletivamente chamadas de funções trigonométricas.
 \end{gather*} 
 $$
 
-## Teoremas de Adição de Funções Trigonométricas
-![Derivando as Fórmulas de Adição Trigonométrica](/assets/img/trigonometry/trigonometric-addition-formulas.png)
-Como mostrado na figura, sejam $P, Q, P^{\prime}, Q^{\prime}$ os pontos onde quatro raios vetores que formam ângulos de $\alpha+\beta,\, 0,\, \alpha,\, -\beta$ com a direção positiva do eixo $x$ encontram o círculo unitário, respectivamente.
+## Fórmulas de Adição Trigonométricas
+![Deriving the Trigonometric Addition Formulas](/assets/img/trigonometry/trigonometric-addition-formulas.png)
+Como mostrado na figura, sejam $P, Q, P^{\prime}, Q^{\prime}$ os pontos onde quatro raios vetores que formam ângulos de $\alpha+\beta,\, 0,\, \alpha,\, -\beta$ com a direção positiva do eixo $x$ intersectam o círculo unitário, respectivamente.
 
 As coordenadas dos dois pontos $P, Q$ são
 
@@ -56,7 +56,7 @@ $$
 \cos ( \alpha - \beta ) = \cos \alpha \cos \beta + \sin \alpha \sin \beta \label{eqn:cos_2} \tag{6}
 $$
 
-Como $\cos ( \frac { \pi } { 2 } - \theta ) = \sin \theta ,\, \sin ( \frac { \pi } { 2 } - \theta ) = \cos \theta$, temos
+Como $\cos ( \frac { \pi } { 2 } - \theta ) = \sin \theta ,\, \sin ( \frac { \pi } { 2 } - \theta ) = \cos \theta$,
 
 $$
 \begin{align*} \sin ( \alpha + \beta ) &= \cos ( \frac { \pi } { 2 } - ( \alpha + \beta ) ) = \cos ( ( \frac { \pi } { 2 } - \alpha ) - \beta) \\ &= \cos ( \frac { \pi } { 2 } - x ) \cos \beta + \sin ( \frac { \pi } { 2 } - \alpha ) \sin \beta \\ &= \sin \alpha \cos \beta + \cos \alpha \sin \beta. \end{align*}
@@ -90,15 +90,15 @@ $$
 \tan ( \alpha - \beta ) = \frac { \tan \alpha - \tan \beta } { 1 + \tan \alpha \tan \beta } \label{eqn:tan_2} \tag{10}
 $$
 
-## Tamanho do Ângulo Agudo Formado por Duas Retas com Inclinações Dadas
-![Ângulo formado por duas retas](/assets/img/trigonometry/angle-formed-by-two-lines.png)
-Usando a equação ($\ref{eqn:tan_2}$), podemos calcular o tamanho do ângulo agudo formado por duas retas com inclinações dadas. Se $\theta_{1}$ e $\theta_{2}$ são os tamanhos dos ângulos formados pelas duas retas $y=mx+b$ e $y=m^{\prime} x+b^{\prime}$ com a direção positiva do eixo $x$, respectivamente, então
+## Ângulo Agudo Formado por Duas Retas com Inclinações Dadas
+![Angle formed by two lines](/assets/img/trigonometry/angle-formed-by-two-lines.png)
+Usando a equação ($\ref{eqn:tan_2}$), podemos calcular o ângulo agudo formado por duas retas com inclinações dadas. Se $\theta_{1}$ e $\theta_{2}$ são os ângulos formados pelas duas retas $y=mx+b$ e $y=m^{\prime} x+b^{\prime}$ com a direção positiva do eixo $x$, respectivamente, então
 
 $$
 \tan{\theta_{1}}=m,\, \tan{\theta_{2}}=m^{\prime}
 $$
 
-Portanto, se $\theta$ é o tamanho do ângulo agudo formado pelas duas retas, temos
+Portanto, se $\theta$ é o ângulo agudo formado pelas duas retas,
 
 $$
 \tag{11} \begin{align*}

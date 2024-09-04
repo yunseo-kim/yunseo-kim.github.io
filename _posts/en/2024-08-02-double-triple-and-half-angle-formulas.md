@@ -2,8 +2,8 @@
 title: "Multiple-Angle and Half-Angle Formulas"
 description: >-
   We examine the double-angle and triple-angle formulas and derive them from the Trigonometric Addition Formulas. We also derive the half-angle formulas from the double-angle formulas.
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
 ---
 
@@ -51,17 +51,17 @@ $$ \begin{gather} \sin ( \alpha + \beta ) = \sin \alpha \cos \beta + \cos \alpha
 \cos ( \alpha + \beta ) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \label{eqn:cos_add} \\
 \tan ( \alpha + \beta ) = \frac { \tan \alpha + \tan \beta } { 1 - \tan \alpha \tan \beta } \label{eqn:tan_add} \end{gather} $$
 
-Substituting $\alpha$ for $\beta$ in these equations:
+If we substitute $\alpha$ for $\beta$:
 
-From equation ($\ref{eqn:sin_add}$):
+From equation ($\ref{eqn:sin_add}$)
 
 $$\sin 2\alpha = 2\sin \alpha \cos \alpha$$
 
-From equation ($\ref{eqn:cos_add}$):
+From equation ($\ref{eqn:cos_add}$)
 
 $$\begin{align*} \cos 2 \alpha &= \cos ^ { 2 } \alpha - \sin ^ { 2 } \alpha \\ &= 2 \cos ^ { 2 } \alpha - 1 \\ &= 1 - 2 \sin ^ { 2 } \alpha \end{align*}$$
 
-From equation ($\ref{eqn:tan_add}$):
+From equation ($\ref{eqn:tan_add}$)
 
 $$ \tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2} \alpha} $$
 
@@ -85,7 +85,7 @@ $$ \begin{align*} \cos 3 \alpha &= \cos ( \alpha + 2 \alpha ) = \cos \alpha \cos
 - $$\tan \frac{\alpha}{2} = \frac{\sin \alpha}{1 + \cos \alpha}$$
 
 #### Derivation
-From the double-angle formula $\cos 2\alpha = 2\cos^{2}\alpha - 1 = 1 - 2\sin^{2}\alpha$, substituting $\frac{\alpha}{2}$ for $\alpha$, we get:
+From the double-angle formula $\cos 2\alpha = 2\cos^{2}\alpha - 1 = 1 - 2\sin^{2}\alpha$, if we substitute $\frac{\alpha}{2}$ for $\alpha$, we get:
 
 $$ \cos \alpha = 1 - 2\sin^{2}\frac{\alpha}{2} = 2 \cos^{2}\frac{\alpha}{2} - 1 .$$
 
@@ -97,7 +97,7 @@ From $ \cos \alpha = 2 \cos^{2}\frac{\alpha}{2} - 1 $, we get:
 
 $$ \cos^{2}\frac{\alpha}{2}=\frac{1+\cos \alpha}{2} .$$
 
-From these, we can show:
+From these, we can show that:
 
 $$ \tan ^ { 2 } \frac { \alpha } { 2 } = \left . \left( \sin ^ { 2 } \frac{\alpha}{2}\right) \middle/ \left( \cos ^ { 2 } \frac { \alpha } { 2 } \right) \right . = \frac { 1 - \cos \alpha } { 1 + \cos \alpha } $$
 

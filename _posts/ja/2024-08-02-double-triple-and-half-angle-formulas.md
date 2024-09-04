@@ -1,9 +1,9 @@
 ---
-title: "倍角・半角の公式(Multiple-Angle and Half-Angle Formulas)"
+title: "倍角・半角の公式（Multiple-Angle and Half-Angle Formulas）"
 description: >-
-  2倍角、3倍角の公式を見て、三角関数の加法定理(Trigonometric Addition Formulas)からこれらを導出する。そして2倍角の公式から半角の公式も導出する。
-categories: [Mathematics]
-tags: [Trigonometry]
+  2倍角、3倍角の公式を見て、三角関数の加法定理（Trigonometric Addition Formulas）からこれらを導出します。そして2倍角の公式から半角の公式も導出します。
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
 ---
 
@@ -45,7 +45,7 @@ math: true
 - $$\tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2}\alpha}$$
 
 #### 導出
-[三角関数の加法定理](/posts/trigonometric-addition-formulas)から2倍角の公式を導出することができる。
+[三角関数の加法定理](/posts/trigonometric-addition-formulas)から2倍角の公式を導出することができます。
 
 $$ \begin{gather} \sin ( \alpha + \beta ) = \sin \alpha \cos \beta + \cos \alpha \sin \beta \label{eqn:sin_add} \\
 \cos ( \alpha + \beta ) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \label{eqn:cos_add} \\
@@ -70,11 +70,11 @@ $$ \tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2} \alpha} $$
 - $$\cos 3\alpha = 4\cos^{3}\alpha - 3\cos \alpha$$
 
 #### 導出
-$\sin 2\alpha = 2\sin\alpha \cos\alpha$, $\cos 2 \alpha = 1 - 2\sin^{2}\alpha$を用いると
+$\sin 2\alpha = 2\sin\alpha \cos\alpha$、$\cos 2 \alpha = 1 - 2\sin^{2}\alpha$を用いると
 
 $$ \begin{align*} \sin 3 \alpha &= \sin ( \alpha + 2 \alpha ) = \sin \alpha \cos 2 \alpha + \cos \alpha \sin 2 \alpha \\ &= \sin \alpha ( 1 - 2 \sin ^ { 2 } \alpha ) + \cos \alpha ( 2 \sin \alpha \cos \alpha ) \\ &= \sin a ( 1 - 2 \sin ^ { 2 } \alpha ) + 2 \sin \alpha ( 1 - \sin ^ { 2 } \alpha ) \\ &= 3 \sin \alpha - 4 \sin ^ { 3 } \alpha . \end{align*} $$
 
-同様に、$\sin 2\alpha = 2\sin\alpha \cos\alpha$, $\cos 2 \alpha = 2\cos^{2}\alpha - 1$を用いると
+同様に、$\sin 2\alpha = 2\sin\alpha \cos\alpha$、$\cos 2 \alpha = 2\cos^{2}\alpha - 1$を用いると
 
 $$ \begin{align*} \cos 3 \alpha &= \cos ( \alpha + 2 \alpha ) = \cos \alpha \cos 2 \alpha - \sin \alpha \sin 2 \alpha \\ &= \cos \alpha ( 2 \cos ^ { 2 } \alpha - 1 ) - \sin \alpha ( 2 \sin \alpha \cos \alpha ) \\ &= \cos \alpha ( 2 \cos ^ { 2 } \alpha - 1 ) - 2 \cos \alpha ( 1 - \cos ^ { 2 } \alpha ) \\ &= 4 \cos ^ { 3 } \alpha - 3 \cos \alpha \end{align*} $$
 
@@ -85,7 +85,7 @@ $$ \begin{align*} \cos 3 \alpha &= \cos ( \alpha + 2 \alpha ) = \cos \alpha \cos
 - $$\tan \frac{\alpha}{2} = \frac{\sin \alpha}{1 + \cos \alpha}$$
 
 #### 導出
-2倍角の公式 $\cos 2\alpha = 2\cos^{2}\alpha - 1 = 1 - 2\sin^{2}\alpha$に$\alpha$に$\frac{\alpha}{2}$を代入すると
+2倍角の公式 $\cos 2\alpha = 2\cos^{2}\alpha - 1 = 1 - 2\sin^{2}\alpha$に$\alpha$の代わりに$\frac{\alpha}{2}$を代入すると
 
 $$ \cos \alpha = 1 - 2\sin^{2}\frac{\alpha}{2} = 2 \cos^{2}\frac{\alpha}{2} - 1 .$$
 
@@ -97,7 +97,7 @@ $ \cos \alpha = 2 \cos^{2}\frac{\alpha}{2} - 1 $から
 
 $$ \cos^{2}\frac{\alpha}{2}=\frac{1+\cos \alpha}{2} .$$
 
-これより
+これらから
 
 $$ \tan ^ { 2 } \frac { \alpha } { 2 } = \left . \left( \sin ^ { 2 } \frac{\alpha}{2}\right) \middle/ \left( \cos ^ { 2 } \frac { \alpha } { 2 } \right) \right . = \frac { 1 - \cos \alpha } { 1 + \cos \alpha } $$
 
@@ -105,4 +105,4 @@ $$ \tan ^ { 2 } \frac { \alpha } { 2 } = \left . \left( \sin ^ { 2 } \frac{\alph
 
 $$ \tan \frac { \alpha } { 2 } = \frac { \sin \frac { \alpha } { 2 } } { \cos \frac { \alpha } { 2 } } = \frac { 2 \sin \frac { \alpha } { 2 } \cos \frac { \alpha } { 2 } } { 2 \cos ^ { 2 } \frac { \alpha } { 2 } } = \frac { \sin \alpha } { 1 + \cos \alpha } $$
 
-も成り立つ。
+も成り立ちます。

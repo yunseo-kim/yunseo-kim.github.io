@@ -2,13 +2,13 @@
 title: "Teoremas de adición de funciones trigonométricas"
 description: >-
   Examinamos las definiciones de las funciones trigonométricas y las relaciones entre ellas, y de ahí derivamos los teoremas de adición de funciones trigonométricas y fórmulas relacionadas.
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas]
 math: true
 ---
 
 ## Definición de funciones trigonométricas
-![Círculo unitario y vector radio](/assets/img/trigonometry/definition.png)
+![Unit Circle and Radius Vector](/assets/img/trigonometry/definition.png)
 Como se muestra en la figura, cuando el tamaño del ángulo formado por el radio vector $\overline{OP}$ y la dirección positiva del eje $x$ es $\theta$,
 $$
 \begin{gather}\begin{split}
@@ -27,7 +27,7 @@ se definen así, y colectivamente se denominan funciones trigonométricas.
 $$
 
 ## Teoremas de adición de funciones trigonométricas
-![Derivación de las fórmulas de adición trigonométrica](/assets/img/trigonometry/trigonometric-addition-formulas.png)
+![Deriving the Trigonometric Addition Formulas](/assets/img/trigonometry/trigonometric-addition-formulas.png)
 Como se muestra en la figura, sean $P, Q, P^{\prime}, Q^{\prime}$ los puntos donde cuatro radios vectores que forman ángulos de $\alpha+\beta,\, 0,\, \alpha,\, -\beta$ con la dirección positiva del eje $x$ intersectan el círculo unitario, respectivamente.
 
 Las coordenadas de los dos puntos $P, Q$ son
@@ -50,7 +50,7 @@ $$
  \therefore \cos ( \alpha + \beta ) = \cos \alpha \cos \beta - \sin \alpha \sin \beta. \label{eqn:cos_1} \tag{5}
 $$
 
-Si sustituimos $-\beta$ por $\beta$ en la ecuación anterior y simplificamos, obtenemos
+Si sustituimos $\beta$ por $-\beta$ en la ecuación anterior y reorganizamos,
 
 $$
 \cos ( \alpha - \beta ) = \cos \alpha \cos \beta + \sin \alpha \sin \beta \label{eqn:cos_2} \tag{6}
@@ -66,7 +66,7 @@ $$
 \therefore \sin ( \alpha + \beta ) = \sin \alpha \cos \beta + \cos \alpha \sin \beta. \label{eqn:sin_1} \tag{7}
 $$
 
-Si sustituimos $-\beta$ por $\beta$ en esta ecuación y simplificamos, obtenemos
+Si sustituimos $\beta$ por $-\beta$ en esta ecuación y reorganizamos,
 
 $$
 \sin ( \alpha - \beta ) = \sin \alpha \cos \beta - \cos \alpha \sin \beta. \label{eqn:sin_2} \tag{8}
@@ -78,27 +78,27 @@ $$
 \tan ( \alpha + \beta ) = \frac { \sin ( \alpha + \beta ) } { \cos ( \alpha + \beta ) } = \frac { \sin \alpha \cos \beta + \cos \alpha \sin \beta } { \cos \alpha \cos \beta - \sin \alpha \sin \beta }
 $$
 
-Si dividimos tanto el numerador como el denominador por $\cos{\alpha} \cos{\beta}$ y simplificamos, obtenemos
+Si dividimos tanto el numerador como el denominador por $\cos{\alpha} \cos{\beta}$ y reorganizamos,
 
 $$
 \tan ( \alpha + \beta ) = \frac { \tan \alpha + \tan \beta } { 1 - \tan \alpha \tan \beta } \label{eqn:tan_1} \tag{9}
 $$
 
-y si sustituimos $-\beta$ por $\beta$ en esta ecuación y simplificamos, obtenemos
+y si sustituimos $\beta$ por $-\beta$ en esta ecuación y reorganizamos,
 
 $$
 \tan ( \alpha - \beta ) = \frac { \tan \alpha - \tan \beta } { 1 + \tan \alpha \tan \beta } \label{eqn:tan_2} \tag{10}
 $$
 
 ## Tamaño del ángulo agudo formado por dos líneas rectas con pendientes dadas
-![Ángulo formado por dos líneas](/assets/img/trigonometry/angle-formed-by-two-lines.png)
-Usando la ecuación ($\ref{eqn:tan_2}$), podemos calcular el tamaño del ángulo agudo formado por dos líneas rectas con pendientes dadas. Si $\theta_{1}$ y $\theta_{2}$ son los tamaños de los ángulos formados por las dos líneas $y=mx+b$ y $y=m^{\prime} x+b^{\prime}$ con la dirección positiva del eje $x$ respectivamente, entonces
+![Angle formed by two lines](/assets/img/trigonometry/angle-formed-by-two-lines.png)
+Usando la ecuación ($\ref{eqn:tan_2}$), podemos calcular el tamaño del ángulo agudo formado por dos líneas rectas con pendientes dadas. Si $\theta_{1}$ y $\theta_{2}$ son los tamaños de los ángulos formados por las dos líneas rectas $y=mx+b$ y $y=m^{\prime} x+b^{\prime}$ con la dirección positiva del eje $x$ respectivamente,
 
 $$
 \tan{\theta_{1}}=m,\, \tan{\theta_{2}}=m^{\prime}
 $$
 
-Por lo tanto, si $\theta$ es el tamaño del ángulo agudo formado por las dos líneas, entonces
+por lo tanto, si $\theta$ es el tamaño del ángulo agudo formado por las dos líneas rectas,
 
 $$
 \tag{11} \begin{align*}

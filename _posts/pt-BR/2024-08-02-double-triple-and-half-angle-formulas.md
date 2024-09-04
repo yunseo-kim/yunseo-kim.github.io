@@ -2,8 +2,8 @@
 title: "Fórmulas de Ângulo Múltiplo e Meio Ângulo"
 description: >-
   Examinamos as fórmulas de ângulo duplo e triplo e as derivamos das Fórmulas de Adição Trigonométrica. Também derivamos as fórmulas de meio ângulo a partir das fórmulas de ângulo duplo.
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
 ---
 
@@ -85,7 +85,7 @@ $$ \begin{align*} \cos 3 \alpha &= \cos ( \alpha + 2 \alpha ) = \cos \alpha \cos
 - $$\tan \frac{\alpha}{2} = \frac{\sin \alpha}{1 + \cos \alpha}$$
 
 #### Derivação
-Substituindo $\alpha$ por $\frac{\alpha}{2}$ na fórmula de ângulo duplo $\cos 2\alpha = 2\cos^{2}\alpha - 1 = 1 - 2\sin^{2}\alpha$:
+Da fórmula de ângulo duplo $\cos 2\alpha = 2\cos^{2}\alpha - 1 = 1 - 2\sin^{2}\alpha$, substituindo $\alpha$ por $\frac{\alpha}{2}$:
 
 $$ \cos \alpha = 1 - 2\sin^{2}\frac{\alpha}{2} = 2 \cos^{2}\frac{\alpha}{2} - 1 .$$
 

@@ -2,8 +2,8 @@
 title: "Product-to-Sum and Sum-to-Product Identities"
 description: >-
   Explore formulas for transforming products of trigonometric functions into sums or differences, derive these formulas from trigonometric addition theorems, and then derive formulas for transforming sums or differences of trigonometric functions into products.
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
 math: true
 ---
 
@@ -56,7 +56,7 @@ $$ \sin(\alpha+\beta) - \sin(\alpha-\beta) = 2 \cos \alpha \sin \beta \tag{4}\la
 
 $$ \therefore \cos \alpha \sin \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) - \sin ( \alpha - \beta ) \}. $$
 
-Similarly, from
+Similarly, using
 
 $$ \begin{align}
 \cos(\alpha+\beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \tag{5}\label{eqn:cos_add} \\

@@ -2,8 +2,8 @@
 title: "和または差の公式（積和公式と和積公式）"
 description: >-
   三角関数の積を和または差の形に変形する公式を学び、三角関数の加法定理からその公式を導出します。そして、これらから三角関数の和または差の形を積の形に変形する公式も導出します。
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
 math: true
 ---
 
@@ -24,7 +24,7 @@ math: true
 > - $$ \cos A - \cos B = -2\sin \frac{A+B}{2}\sin \frac{A-B}{2} $$
 {: .prompt-info }
 
-> 公式だけでなく、導出過程も一緒に覚えておくことをお勧めします。
+> 公式だけでなく、導出過程も一緒に覚えておくと良いでしょう。
 {: .prompt-tip }
 
 ## 前提知識

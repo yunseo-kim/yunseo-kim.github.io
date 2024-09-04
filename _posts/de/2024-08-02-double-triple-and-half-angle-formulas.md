@@ -2,8 +2,8 @@
 title: "Mehrfach- und Halbwinkelformeln (Multiple-Angle and Half-Angle Formulas)"
 description: >-
   Wir betrachten die Formeln für den doppelten und dreifachen Winkel und leiten diese aus den trigonometrischen Additionstheoreme (Trigonometric Addition Formulas) ab. Außerdem leiten wir die Halbwinkelformeln aus den Formeln für den doppelten Winkel ab.
-categories: [Mathematics]
-tags: [Trigonometry]
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
 ---
 
@@ -45,7 +45,7 @@ math: true
 - $$\tan 2\alpha = \frac{2\tan \alpha}{1 - \tan^{2}\alpha}$$
 
 #### Herleitung
-Wir können die Formeln für den doppelten Winkel aus den [trigonometrischen Additionstheoremen](/posts/trigonometric-addition-formulas) herleiten.
+Die Formeln für den doppelten Winkel können aus den [trigonometrischen Additionstheoremen](/posts/trigonometric-addition-formulas) hergeleitet werden.
 
 $$ \begin{gather} \sin ( \alpha + \beta ) = \sin \alpha \cos \beta + \cos \alpha \sin \beta \label{eqn:sin_add} \\
 \cos ( \alpha + \beta ) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \label{eqn:cos_add} \\
@@ -74,7 +74,7 @@ Mit Hilfe von $\sin 2\alpha = 2\sin\alpha \cos\alpha$ und $\cos 2 \alpha = 1 - 2
 
 $$ \begin{align*} \sin 3 \alpha &= \sin ( \alpha + 2 \alpha ) = \sin \alpha \cos 2 \alpha + \cos \alpha \sin 2 \alpha \\ &= \sin \alpha ( 1 - 2 \sin ^ { 2 } \alpha ) + \cos \alpha ( 2 \sin \alpha \cos \alpha ) \\ &= \sin a ( 1 - 2 \sin ^ { 2 } \alpha ) + 2 \sin \alpha ( 1 - \sin ^ { 2 } \alpha ) \\ &= 3 \sin \alpha - 4 \sin ^ { 3 } \alpha . \end{align*} $$
 
-Auf ähnliche Weise können wir mit $\sin 2\alpha = 2\sin\alpha \cos\alpha$ und $\cos 2 \alpha = 2\cos^{2}\alpha - 1$ herleiten:
+Auf ähnliche Weise, mit $\sin 2\alpha = 2\sin\alpha \cos\alpha$ und $\cos 2 \alpha = 2\cos^{2}\alpha - 1$:
 
 $$ \begin{align*} \cos 3 \alpha &= \cos ( \alpha + 2 \alpha ) = \cos \alpha \cos 2 \alpha - \sin \alpha \sin 2 \alpha \\ &= \cos \alpha ( 2 \cos ^ { 2 } \alpha - 1 ) - \sin \alpha ( 2 \sin \alpha \cos \alpha ) \\ &= \cos \alpha ( 2 \cos ^ { 2 } \alpha - 1 ) - 2 \cos \alpha ( 1 - \cos ^ { 2 } \alpha ) \\ &= 4 \cos ^ { 3 } \alpha - 3 \cos \alpha \end{align*} $$
 

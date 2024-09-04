@@ -1,9 +1,9 @@
 ---
-title: "Fórmulas de producto a suma y suma a producto (Product-to-Sum and Sum-to-Product Identities)"
+title: "Fórmulas de producto a suma y de suma a producto (Product-to-Sum and Sum-to-Product Identities)"
 description: >-
-  Exploramos las fórmulas para transformar el producto de funciones trigonométricas en sumas o diferencias, y las derivamos de los teoremas de adición trigonométrica. También derivamos fórmulas para transformar sumas o diferencias de funciones trigonométricas en productos.
-categories: [Mathematics]
-tags: [Trigonometry]
+  Exploramos las fórmulas para transformar el producto de funciones trigonométricas en sumas o diferencias, derivándolas de los teoremas de adición trigonométrica. También derivamos fórmulas para transformar sumas o diferencias de funciones trigonométricas en productos.
+categories: [Mathematics, Trigonometry]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
 math: true
 ---
 
@@ -56,7 +56,7 @@ $$ \sin(\alpha+\beta) - \sin(\alpha-\beta) = 2 \cos \alpha \sin \beta \tag{4}\la
 
 $$ \therefore \cos \alpha \sin \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) - \sin ( \alpha - \beta ) \}. $$
 
-De manera similar, de
+De manera similar, usando
 
 $$ \begin{align}
 \cos(\alpha+\beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \tag{5}\label{eqn:cos_add} \\
@@ -82,13 +82,13 @@ $$ \therefore \sin \alpha \sin \beta = -\frac { 1 } { 2 } \{ \cos(\alpha+\beta) 
 - $$ \cos A - \cos B = -2\sin \frac{A+B}{2}\sin \frac{A-B}{2} $$
 
 ### Derivación
-Las fórmulas de suma a producto (Sum-to-Product Identities) también se pueden derivar de las fórmulas de producto a suma (Product-to-Sum Identities).
+Podemos derivar las fórmulas de suma a producto (Sum-to-Product Identities) a partir de las fórmulas de producto a suma (Product-to-Sum Identities).
 
 Establecemos
 
 $$ \alpha + \beta = A, \quad \alpha - \beta = B $$
 
-y resolvemos estas dos ecuaciones simultáneamente para $\alpha$ y $\beta$:
+y resolvemos estas ecuaciones simultáneamente para $\alpha$ y $\beta$:
 
 $$ \alpha = \frac{A+B}{2}, \quad \beta = \frac{A-B}{2}. $$
 
