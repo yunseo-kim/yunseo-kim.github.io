@@ -11,7 +11,7 @@ math: true
 ### Leyes fundamentales en las reacciones nucleares
 *Reacción nuclear (nuclear reaction)*: Una reacción en la que dos núcleos atómicos diferentes o un núcleo atómico y un nucleón colisionan para producir dos o más nuevas partículas nucleares o rayos gamma.
 
-Si dos núcleos atómicos $a$ y $b$ reaccionan para producir núcleos atómicos o rayos gamma $c$ y $d$, esta reacción se expresa de la siguiente manera:
+Cuando dos núcleos atómicos $a$ y $b$ reaccionan para producir núcleos atómicos o rayos gamma $c$ y $d$, esta reacción se expresa de la siguiente manera:
 
 $$ a + b \rightarrow c + d \tag{1} \label{nuclear_reaction}$$
 
@@ -31,8 +31,8 @@ Reorganizando esta ecuación, obtenemos:
 
 $$ (E_c + E_d) - (E_a + E_b) = [(M_a + M_b) - (M_c + M_d)]c^2. $$
 
-Es decir, podemos ver que la diferencia en la energía cinética antes y después de la reacción nuclear es igual a la diferencia en la masa en reposo.
-El lado derecho de la última ecuación se denomina *valor Q (Q-value)* de la reacción nuclear y se define como:
+Es decir, podemos ver que la diferencia en la energía cinética antes y después de la reacción nuclear es igual a la diferencia en la masa en reposo antes y después de la reacción.
+El lado derecho de la última ecuación se denomina *valor Q (Q-value)* de la reacción nuclear y se define de la siguiente manera:
 
 $$ Q = [(M_a + M_b) - (M_c + M_d)]c^2 \ \text{MeV}.\tag{2} \label{Q_value} $$
 
@@ -48,8 +48,8 @@ $$ Q = [(M_a + M_b) - (M_c + M_d)]\cdot 931 \ \text{MeV}.\tag{3} $$
 | Reacción exotérmica | $Q>0$ | $\Delta m<0$ (disminución) | $\Delta E>0$ (aumento) |
 | Reacción endotérmica | $Q<0$ | $\Delta m>0$ (aumento) | $\Delta E<0$ (disminución) |
 
-### Representación abreviada de las reacciones nucleares
-La reacción nuclear de la ecuación ($\ref{nuclear_reaction}$) puede representarse de forma abreviada como:
+### Expresión abreviada de las reacciones nucleares
+La reacción nuclear de la ecuación ($\ref{nuclear_reaction}$) puede expresarse de forma abreviada de la siguiente manera:
 
 $$ a(b, c)d $$
 
@@ -85,7 +85,7 @@ y la masa de $a$ es
 
 $$ M_a = Z_a M_p + N_a M_n - \text{BE}(a) $$
 
-De la misma manera, para los núcleos $b$, $c$, y $d$:
+De la misma manera, para los núcleos $b$, $c$, y $d$
 
 $$ \begin{align*}
 M_b &= Z_b M_p + N_b M_n - \text{BE}(b) \\
@@ -107,18 +107,18 @@ $$ Q = [\text{BE}(c) + \text{BE}(d)] - [\text{BE}(a) + \text{BE}(b)] $$
 Esto significa que siempre se libera energía cuando dos núcleos menos estables se combinan para formar un núcleo más estable a través de un proceso de reacción nuclear.
 
 ### Fusión nuclear (Nuclear Fusion) y fisión nuclear (Nuclear Fission)
-En el caso de la reacción nuclear donde el deuterio con una energía de enlace de $2.23\text{MeV}$ y el tritio con una energía de enlace de $8.48\text{MeV}$ se combinan para formar $^4\text{He}$ con una energía de enlace de $28.3\text{MeV}$:
+En el caso de una reacción nuclear donde el deuterio con una energía de enlace de $2.23\text{MeV}$ y el tritio con una energía de enlace de $8.48\text{MeV}$ se combinan para producir $^4\text{He}$ con una energía de enlace de $28.3\text{MeV}$ y emitir un neutrón
 
-$$ ^2\text{H} + {^3\text{H}} \rightarrow {^4\text{He}} + p \tag{4} \label{nuclear_fusion}$$
+$$ ^2\text{H} + {^3\text{H}} \rightarrow {^4\text{He}} + n \tag{4} \label{nuclear_fusion}$$
 
-Se libera una energía de $28.3-(2.23+8.48)=17.6\text{MeV}$ (3.52MeV por nucleón), correspondiente a la diferencia en las energías de enlace antes y después de la reacción, en forma de energía cinética del núcleo de helio y el protón.
+se libera una energía de $28.3-(2.23+8.48)=17.6\text{MeV}$ (3.52MeV por nucleón), que corresponde a la diferencia en las energías de enlace antes y después de la reacción, en forma de energía cinética del núcleo de helio y el neutrón.
 
-La reacción como la de la ecuación ($\ref{nuclear_fusion}$), donde dos núcleos atómicos ligeros con números másicos pequeños se combinan para formar un núcleo atómico pesado con un número másico mayor que antes de la reacción, se denomina *fusión nuclear (nuclear fusion)*. Esta es la fuente de energía de todas las estrellas, incluido el Sol, y algún día la humanidad podrá utilizarla directamente como fuente de energía.
+Una reacción como la ecuación ($\ref{nuclear_fusion}$), donde dos núcleos atómicos ligeros con números másicos pequeños se combinan para formar un núcleo atómico pesado con un número másico mayor que antes de la reacción, se denomina *fusión nuclear (nuclear fusion)*. Esta es la fuente de energía de todas las estrellas, incluido el Sol, y algún día la humanidad podrá utilizarla directamente como fuente de energía.
 
-Por otro lado, en el caso de la reacción nuclear donde el $^{235}\text{U}$ con una energía de enlace de aproximadamente $1780\text{MeV}$ absorbe un neutrón y luego se separa en $^{92}\text{Kr}$ con una energía de enlace de $783\text{MeV}$ y $^{141}\text{Ba}$ con aproximadamente $1170\text{MeV}$, liberando tres neutrones:
+Por otro lado, en el caso de una reacción nuclear donde el $^{235}\text{U}$ con una energía de enlace de aproximadamente $1780\text{MeV}$ absorbe un neutrón y luego se separa en $^{92}\text{Kr}$ con una energía de enlace de $783\text{MeV}$ y $^{141}\text{Ba}$ con aproximadamente $1170\text{MeV}$, emitiendo tres neutrones
 
 $$ {^{235}\text{U}} + n \rightarrow {^{92}\text{Kr}} + {^{141}\text{Ba}} + 3n \tag{5} \label{nuclear_fission}$$
 
-Se libera una energía de $783+1170-1780=173\text{MeV}$ (0.733MeV por nucleón), correspondiente a la diferencia en las energías de enlace antes y después de la reacción.
+se libera una energía de $783+1170-1780=173\text{MeV}$ (0.733MeV por nucleón), que corresponde a la diferencia en las energías de enlace antes y después de la reacción.
 
-La reacción como la de la ecuación ($\ref{nuclear_fission}$), donde un núcleo atómico pesado se divide en núcleos atómicos más ligeros, se denomina *fisión nuclear (nuclear fission)*. Desde el discurso "Átomos para la Paz" (Atoms for Peace) del 34º presidente de los Estados Unidos, Dwight D. Eisenhower, y la central nuclear de Obninsk en la Unión Soviética, se ha utilizado ampliamente como fuente de energía eléctrica.
+Una reacción como la ecuación ($\ref{nuclear_fission}$), donde un núcleo atómico pesado se divide en núcleos atómicos más ligeros, se denomina *fisión nuclear (nuclear fission)*. Desde el discurso "Átomos para la Paz" (Atoms for Peace) del 34º presidente de los Estados Unidos, Dwight D. Eisenhower, y la central nuclear de Obninsk en la Unión Soviética, se ha utilizado ampliamente como fuente de energía eléctrica.

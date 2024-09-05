@@ -43,13 +43,13 @@ $$ Q = [(M_a + M_b) - (M_c + M_d)]\cdot 931 \ \text{MeV}.\tag{3} $$
 - *Reação exotérmica (exothermic reaction)*: Reação nuclear onde $Q>0$, parte da massa é convertida em energia cinética, aumentando a energia cinética após a reação
 - *Reação endotérmica (endothermic reaction)*: Reação nuclear onde $Q<0$, parte da energia cinética é convertida em massa, diminuindo a energia cinética após a reação
 
-| Tipo de Reação Nuclear | Valor Q | Mudança na Massa Antes e Depois da Reação | Mudança na Energia Cinética Antes e Depois da Reação |
+| Tipo de Reação Nuclear | Valor Q | Mudança na Massa | Mudança na Energia Cinética |
 | :---: | :---: | :---: | :---: |
 | Reação Exotérmica | $Q>0$ | $\Delta m<0$ (diminui) | $\Delta E>0$ (aumenta) |
 | Reação Endotérmica | $Q<0$ | $\Delta m>0$ (aumenta) | $\Delta E<0$ (diminui) |
 
-### Representação Simplificada de Reações Nucleares
-A reação nuclear na equação ($\ref{nuclear_reaction}$) pode ser representada de forma simplificada como:
+### Representação Abreviada de Reações Nucleares
+A reação nuclear na equação ($\ref{nuclear_reaction}$) pode ser representada de forma abreviada como:
 
 $$ a(b, c)d $$
 
@@ -69,7 +69,7 @@ Se a massa do núcleo for $M_A$, o defeito de massa $\Delta$ de qualquer núcleo
 
 $$ \Delta = ZM_p + NM_n - M_A. $$
 
-Quando o defeito de massa $\Delta$ é expresso em unidades de energia, representa a energia necessária para separar um núcleo em seus nucleons constituintes. Como é a energia que mantém os nucleons unidos, é chamada de *energia de ligação (binding energy)*. Por outro lado, quando um núcleo atômico é formado a partir de A nucleons, o nível de energia diminui em $\Delta$, então essa quantidade de energia é liberada para o ambiente durante o processo de reação nuclear.
+Quando o defeito de massa $\Delta$ é expresso em unidades de energia, representa a energia necessária para separar um núcleo em seus nucleons constituintes. Como é a energia que mantém os nucleons unidos, é chamada de *energia de ligação (binding energy)*. Inversamente, quando um núcleo atômico é formado a partir de A nucleons, o nível de energia diminui em $\Delta$, então essa quantidade de energia é liberada para o ambiente durante o processo de reação nuclear.
 
 ### Energia de Ligação Média por Nucleon
 A energia de ligação total de um núcleo atômico aumenta com o aumento do número de massa $A$, mas a inclinação não é constante.  
@@ -100,22 +100,22 @@ Z_a + Z_b &= Z_c + Z_d\, , \\
 N_a + N_b &= N_c + N_d
 \end{align*}$$
 
-e substituindo estas equações na equação ($\ref{Q_value}$), obtemos:
+e substituindo estas equações na equação ($\ref{Q_value}$), obtemos
 
 $$ Q = [\text{BE}(c) + \text{BE}(d)] - [\text{BE}(a) + \text{BE}(b)] $$
 
 Isso significa que sempre que dois núcleos menos estáveis se combinam para formar um núcleo mais estável através de um processo de reação nuclear, energia é liberada.
 
 ### Fusão Nuclear (Nuclear Fusion) e Fissão Nuclear (Nuclear Fission)
-No caso de uma reação nuclear onde o deutério, com energia de ligação de $2.23\text{MeV}$, e o trítio, com energia de ligação de $8.48\text{MeV}$, se combinam para formar $^4\text{He}$ com energia de ligação de $28.3\text{MeV}$:
+No caso de uma reação nuclear onde o deutério, com energia de ligação de $2.23\text{MeV}$, e o trítio, com energia de ligação de $8.48\text{MeV}$, se combinam para produzir $^4\text{He}$ com energia de ligação de $28.3\text{MeV}$ e emitem um nêutron:
 
-$$ ^2\text{H} + {^3\text{H}} \rightarrow {^4\text{He}} + p \tag{4} \label{nuclear_fusion}$$
+$$ ^2\text{H} + {^3\text{H}} \rightarrow {^4\text{He}} + n \tag{4} \label{nuclear_fusion}$$
 
-A diferença na energia de ligação antes e depois da reação, $28.3-(2.23+8.48)=17.6\text{MeV}$ de energia (3.52MeV por nucleon), é liberada na forma de energia cinética do núcleo de hélio e do próton.
+A diferença na energia de ligação antes e depois da reação, $28.3-(2.23+8.48)=17.6\text{MeV}$ de energia (3.52MeV por nucleon), é liberada na forma de energia cinética do núcleo de hélio e do nêutron.
 
-Reações como a equação ($\ref{nuclear_fusion}$), onde dois núcleos atômicos leves com números de massa pequenos se combinam para formar um núcleo atômico pesado com número de massa maior do que antes da reação, são chamadas de *fusão nuclear (nuclear fusion)*. Esta é a fonte de energia de todas as estrelas, incluindo o Sol, e um dia poderá ser usada diretamente pela humanidade como fonte de energia.
+Reações como a equação ($\ref{nuclear_fusion}$), onde dois núcleos atômicos leves se combinam para formar um núcleo atômico mais pesado do que antes da reação, são chamadas de *fusão nuclear (nuclear fusion)*. Esta é a fonte de energia de todas as estrelas, incluindo o Sol, e um dia poderá ser utilizada diretamente pela humanidade como fonte de energia.
 
-Por outro lado, em uma reação nuclear onde $^{235}\text{U}$, com energia de ligação de aproximadamente $1780\text{MeV}$, absorve um nêutron e então se separa em $^{92}\text{Kr}$ com energia de ligação de $783\text{MeV}$ e $^{141}\text{Ba}$ com aproximadamente $1170\text{MeV}$, liberando 3 nêutrons:
+Por outro lado, em uma reação nuclear onde $^{235}\text{U}$, com energia de ligação de aproximadamente $1780\text{MeV}$, absorve um nêutron e então se divide em $^{92}\text{Kr}$ com energia de ligação de $783\text{MeV}$ e $^{141}\text{Ba}$ com aproximadamente $1170\text{MeV}$, emitindo 3 nêutrons:
 
 $$ {^{235}\text{U}} + n \rightarrow {^{92}\text{Kr}} + {^{141}\text{Ba}} + 3n \tag{5} \label{nuclear_fission}$$
 

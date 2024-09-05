@@ -93,32 +93,32 @@ M_c &= Z_c M_p + N_c M_n - \text{BE}(c) \\
 M_d &= Z_d M_p + N_d M_n - \text{BE}(d) \\
 \end{align*} $$
 
-Unter der Annahme, dass
+Wenn wir annehmen, dass
 
 $$ \begin{align*}
 Z_a + Z_b &= Z_c + Z_d\, , \\
 N_a + N_b &= N_c + N_d
 \end{align*}$$
 
-und durch Einsetzen der obigen Gleichungen in Gleichung ($\ref{Q_value}$) erhalten wir:
+und diese Gleichungen in Gleichung ($\ref{Q_value}$) einsetzen, erhalten wir
 
 $$ Q = [\text{BE}(c) + \text{BE}(d)] - [\text{BE}(a) + \text{BE}(b)] $$
 
-Dies bedeutet, dass immer dann Energie freigesetzt wird, wenn durch einen Kernreaktionsprozess zwei weniger stabile Kerne zu einem stabileren Kern verschmelzen.
+Dies bedeutet, dass immer dann, wenn durch einen Kernreaktionsprozess zwei weniger stabile Kerne zu einem stabileren Kern verschmelzen, Energie freigesetzt wird.
 
 ### Kernfusion (Nuclear Fusion) und Kernspaltung (Nuclear Fission)
-Im Fall einer Kernreaktion, bei der Deuterium mit einer Bindungsenergie von $2,23\text{MeV}$ und Tritium mit einer Bindungsenergie von $8,48\text{MeV}$ zu $^4\text{He}$ mit einer Bindungsenergie von $28,3\text{MeV}$ verschmelzen:
+Im Fall einer Kernreaktion, bei der Deuterium mit einer Bindungsenergie von $2,23\text{MeV}$ und Tritium mit einer Bindungsenergie von $8,48\text{MeV}$ zu $^4\text{He}$ mit einer Bindungsenergie von $28,3\text{MeV}$ verschmelzen und ein Neutron freisetzen:
 
-$$ ^2\text{H} + {^3\text{H}} \rightarrow {^4\text{He}} + p \tag{4} \label{nuclear_fusion}$$
+$$ ^2\text{H} + {^3\text{H}} \rightarrow {^4\text{He}} + n \tag{4} \label{nuclear_fusion}$$
 
-wird die Energiedifferenz von $28,3-(2,23+8,48)=17,6\text{MeV}$ (3,52 MeV pro Nukleon) in Form von kinetischer Energie des Heliumkerns und des Protons freigesetzt.
+wird die Energiedifferenz von $28,3-(2,23+8,48)=17,6\text{MeV}$ (entspricht $3,52\text{MeV}$ pro Nukleon) in Form von kinetischer Energie des Heliumkerns und des Neutrons freigesetzt.
 
 Eine Reaktion wie in Gleichung ($\ref{nuclear_fusion}$), bei der zwei leichte Atomkerne mit kleiner Massenzahl zu einem schwereren Atomkern mit größerer Massenzahl als vor der Reaktion verschmelzen, wird als *Kernfusion (nuclear fusion)* bezeichnet. Dies ist die Energiequelle der Sonne und aller anderen Sterne, und eines Tages wird die Menschheit sie möglicherweise direkt als Energiequelle nutzen können.
 
-Andererseits, im Fall einer Kernreaktion, bei der $^{235}\text{U}$ mit einer Bindungsenergie von etwa $1780\text{MeV}$ ein Neutron absorbiert und dann in $^{92}\text{Kr}$ mit einer Bindungsenergie von $783\text{MeV}$ und $^{141}\text{Ba}$ mit etwa $1170\text{MeV}$ gespalten wird, wobei drei Neutronen freigesetzt werden:
+Andererseits, bei einer Kernreaktion, in der $^{235}\text{U}$ mit einer Bindungsenergie von etwa $1780\text{MeV}$ ein Neutron absorbiert und dann in $^{92}\text{Kr}$ mit einer Bindungsenergie von $783\text{MeV}$ und $^{141}\text{Ba}$ mit etwa $1170\text{MeV}$ zerfällt und dabei 3 Neutronen freisetzt:
 
 $$ {^{235}\text{U}} + n \rightarrow {^{92}\text{Kr}} + {^{141}\text{Ba}} + 3n \tag{5} \label{nuclear_fission}$$
 
-wird eine Energie von $783+1170-1780=173\text{MeV}$ (0,733 MeV pro Nukleon) freigesetzt, die der Differenz der Bindungsenergien vor und nach der Reaktion entspricht.
+wird eine Energie von $783+1170-1780=173\text{MeV}$ freigesetzt, was $0,733\text{MeV}$ pro Nukleon entspricht.
 
-Eine Reaktion wie in Gleichung ($\ref{nuclear_fission}$), bei der ein schwerer Atomkern in leichtere Atomkerne gespalten wird, wird als *Kernspaltung (nuclear fission)* bezeichnet. Seit der Rede "Atome für den Frieden" (Atoms for Peace) des 34. US-Präsidenten Eisenhower und dem Kernkraftwerk Obninsk in der Sowjetunion wird sie weithin als Energiequelle genutzt.
+Eine Reaktion wie in Gleichung ($\ref{nuclear_fission}$), bei der ein schwerer Atomkern in leichtere Atomkerne zerfällt, wird als *Kernspaltung (nuclear fission)* bezeichnet. Seit der Rede "Atome für den Frieden" (Atoms for Peace) des 34. US-Präsidenten Eisenhower und dem Kernkraftwerk Obninsk in der Sowjetunion wird sie weithin als Energiequelle genutzt.

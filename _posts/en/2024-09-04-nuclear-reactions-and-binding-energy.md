@@ -74,7 +74,7 @@ When the mass defect $\Delta$ is expressed in energy units, it represents the en
 ### Average Binding Energy per Nucleon
 While the total binding energy of an atomic nucleus increases with increasing mass number $A$, the rate of increase is not constant.  
 ![the average binding energy per nucleon for a varied number of neutrons](https://upload.wikimedia.org/wikipedia/commons/5/53/Binding_energy_curve_-_common_isotopes.svg)  
-As can be seen in the image above, the average binding energy per nucleon $\Delta/A$ increases steeply at low mass numbers but decreases with a gentle slope for heavy atomic nuclei with $A\geq56$.
+As can be seen in the image above, the average binding energy per nucleon $\Delta/A$ increases sharply at low mass numbers but decreases with a gentle slope for heavy atomic nuclei with $A\geq56$.
 
 ### Relationship between Q-value of Nuclear Reactions and Binding Energy
 In the nuclear reaction of equation ($\ref{nuclear_reaction}$), the binding energy of nucleus $a$ is 
@@ -93,7 +93,7 @@ M_c &= Z_c M_p + N_c M_n - \text{BE}(c) \\
 M_d &= Z_d M_p + N_d M_n - \text{BE}(d) \\
 \end{align*} $$
 
-Considering that
+Assuming
 
 $$ \begin{align*}
 Z_a + Z_b &= Z_c + Z_d\, , \\
@@ -107,18 +107,18 @@ $$ Q = [\text{BE}(c) + \text{BE}(d)] - [\text{BE}(a) + \text{BE}(b)] $$
 This means that energy is always released when two less stable nuclei combine to form a more stable nucleus through a nuclear reaction process.
 
 ### Nuclear Fusion and Nuclear Fission
-In the case of a nuclear reaction where deuterium with a binding energy of $2.23\text{MeV}$ and tritium with a binding energy of $8.48\text{MeV}$ combine to form $^4\text{He}$ with a binding energy of $28.3\text{MeV}$:
+In the case of a nuclear reaction where deuterium with a binding energy of $2.23\text{MeV}$ and tritium with a binding energy of $8.48\text{MeV}$ combine to produce $^4\text{He}$ with a binding energy of $28.3\text{MeV}$ and emit one neutron:
 
-$$ ^2\text{H} + {^3\text{H}} \rightarrow {^4\text{He}} + p \tag{4} \label{nuclear_fusion}$$
+$$ ^2\text{H} + {^3\text{H}} \rightarrow {^4\text{He}} + n \tag{4} \label{nuclear_fusion}$$
 
-The energy difference in binding energies before and after the reaction, $28.3-(2.23+8.48)=17.6\text{MeV}$ (or $3.52\text{MeV}$ per nucleon), is released in the form of kinetic energy of the helium nucleus and proton.
+The energy corresponding to the difference in binding energies before and after the reaction, $28.3-(2.23+8.48)=17.6\text{MeV}$ (or $3.52\text{MeV}$ per nucleon), is released in the form of kinetic energy of the helium nucleus and neutron.
 
 A reaction like equation ($\ref{nuclear_fusion}$), where two light atomic nuclei with small mass numbers combine to form a heavier atomic nucleus with a larger mass number than before the reaction, is called *nuclear fusion*. This is the energy source of all stars, including the Sun, and someday humans may directly use it as a power source.
 
-On the other hand, in a nuclear reaction where $^{235}\text{U}$ with a binding energy of about $1780\text{MeV}$ absorbs a neutron and then separates into $^{92}\text{Kr}$ with a binding energy of $783\text{MeV}$ and $^{141}\text{Ba}$ with about $1170\text{MeV}$, releasing 3 neutrons:
+On the other hand, in the case of a nuclear reaction where $^{235}\text{U}$ with a binding energy of about $1780\text{MeV}$ absorbs a neutron and then separates into $^{92}\text{Kr}$ with a binding energy of $783\text{MeV}$ and $^{141}\text{Ba}$ with about $1170\text{MeV}$, emitting 3 neutrons:
 
 $$ {^{235}\text{U}} + n \rightarrow {^{92}\text{Kr}} + {^{141}\text{Ba}} + 3n \tag{5} \label{nuclear_fission}$$
 
-The energy difference in binding energies before and after the reaction, $783+1170-1780=173\text{MeV}$ (or $0.733\text{MeV}$ per nucleon), is released.
+The energy corresponding to the difference in binding energies before and after the reaction, $783+1170-1780=173\text{MeV}$ (or $0.733\text{MeV}$ per nucleon), is released.
 
 A reaction like equation ($\ref{nuclear_fission}$), where a heavy atomic nucleus separates into lighter atomic nuclei, is called *nuclear fission*. Since President Eisenhower's "Atoms for Peace" speech and the Soviet Union's Obninsk Nuclear Power Plant, it has been widely used as a power source.
