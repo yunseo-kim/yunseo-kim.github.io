@@ -182,7 +182,7 @@ TensorFlow 2.4.0バージョンを基準に、CUDAも同様に11.0バージョ�
 
 ### 5-2. CUDAのインストール
 [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive)にアクセスした後、前で確認したバージョンを選択して進みます。この記事では[CUDA Toolkit 11.0 Update1](https://developer.nvidia.com/cuda-11.0-update1-download-archive)を選択して進みます。  
-![CUDA 11.0 Update 1](/assets/img/머신러닝-개발환境-구축하기/CUDA_installation-1.png)  
+![CUDA 11.0 Update 1](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-1.png)  
 次に、該当するプラットフォームとインストーラーの種類を選択し、画面に表示される指示に従います。この時、[インストーラーの場合、できるだけシステムパッケージマネージャーを利用することをお勧めします](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#choose-installation-method)。筆者が好む方法はdeb (network)です。  
 ![CUDAプラットフォームの選択](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-2.png)  
 ![CUDAのインストール](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-3.png)  
