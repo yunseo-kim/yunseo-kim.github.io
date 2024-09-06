@@ -54,6 +54,7 @@ jobs:
       - name: Setup IndexNow 
         # Generate files dynamically to prevent them from being leaked in public repositories.
         # This example will put the file in the root directory of the site.You may change the location by yourself.
+        run: echo ${{ secrets.LEGACY_INDEXNOW_KEY }} > ./_site/${{ secrets.LEGACY_INDEXNOW_KEY }}.txt
         run: echo ${{ secrets.INDEXNOW_KEY }} > ./_site/${{ secrets.INDEXNOW_KEY }}.txt
       
       - name: Setup Naver Site Verification
@@ -86,12 +87,22 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: indexnow-action
+      - name: indexnow-action(Old Domain)
         uses: bojieyang/indexnow-action@v2 # v2 is the latest major version following the action-versioning.
         with:
           # The location of your sitemap must start with http(s). 
           # Currently, XML Sitemap, Sitemap index, RSS and Atom formats are supported.
           sitemap-location: 'https://yunseo-kim.github.io/sitemap.xml' 
+          key: ${{ secrets.LEGACY_INDEXNOW_KEY }} # The key you get from IndexNow.
+          since: 2
+          since-unit: 'week'
+      
+      - name: indexnow-action
+        uses: bojieyang/indexnow-action@v2 # v2 is the latest major version following the action-versioning.
+        with:
+          # Currently, XML Sitemap, Sitemap index, RSS and Atom formats are supported.
+          # The location of your sitemap must start with http(s). 
+          sitemap-location: 'https://www.yunseo.kim/sitemap.xml' 
           key: ${{ secrets.INDEXNOW_KEY }} # The key you get from IndexNow.
           since: 2
           since-unit: 'week'
