@@ -31,6 +31,22 @@ toc_sticky: true
     - PyTorch 1.7.1
     - TensorFlow 2.4.0
 
+### 새로 작성한 머신러닝 개발환경 구축 가이드와의 비교표
+비록 블로그에 업로드한지 3년 반 정도가 지났지만, 여전히 이 글의 내용은 패키지 버전이나 NVIDIA 오픈소스 드라이버 발표 등의 몇몇 세부적인 부분을 제외하면 큰 틀에서는 유효하다. 그러나 2024년 여름에 새로운 PC를 구입하고 개발환경을 구축하면서 몇 가지 변경점이 있어 [새로운 개발환경 구축 가이드](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1/)를 작성하였다. 달라진 점들은 아래 표와 같다.
+
+| 차이점 | 본문 (2021 버전) | 새로운 글 (2024 버전) |
+| --- | --- | --- |
+| 리눅스 배포판 | Ubuntu 기준 | Ubuntu 외에도 Fedora/RHEL/Centos,<br> Debian, openSUSE/SLES 등에서 적용 가능 |
+| 개발환경 구축 방식 | venv를 이용한 파이썬 가상환경 | [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit)을 이용한<br> Docker 컨테이너 기반 환경 |
+| NVIDIA 그래픽 드라이버 설치 | O | O |
+| 호스트 시스템에 <br>CUDA 및 cuDNN 직접 설치 | O (Apt 패키지 매니저 사용) | X ([Docker Hub에서 NVIDIA가 제공하는 사전 설치<br> 이미지](https://hub.docker.com/r/nvidia/cuda)를 사용하므로 직접 작업할 필요 없음)
+| 이식성 | 다른 시스템으로 이전할 때마다<br> 개발환경을 새로 구축해야 함 | Docker 기반이므로, 제작해 둔 Dockerfile로 <br>필요할 때마다 새로운 이미지를 빌드하거나 <br>기존에 사용하던 이미지(추가 볼륨이나 네트워크<br> 설정 제외)를 쉽게 이식 가능 |
+| cuDNN 외 추가적인 <br>GPU 가속 라이브러리 활용 | X | [CuPy](https://cupy.dev/), [cuDF](https://docs.rapids.ai/api/cudf/stable/), [cuML](https://docs.rapids.ai/api/cuml/stable/), [DALI](https://developer.nvidia.com/DALI) 도입 |
+| Jupyter Notebook 인터페이스 | Jupyter Notebook (classic) | JupyterLab (Next-Generation) |
+| SSH 서버 설정 | 따로 다루지 않음 | 3편에서 기초적인 SSH 서버 설정 구성을 포함 |
+
+Docker가 아닌 venv 등의 파이썬 가상환경을 활용하고 싶다면, 기존에 작성한 이 글 역시 여전히 유효하므로 계속해서 읽어도 괜찮다. 높은 이식성 등 Docker 컨테이너 도입의 장점을 누리고 싶거나, Fedora 등 Ubuntu 이외의 다른 리눅스 배포판을 사용할 예정이거나, NVIDIA 그래픽카드를 사용하는 환경이고 CuPy, cuDF, cuML, DALI 등 추가적인 GPU 가속 라이브러리를 활용하고 싶거나, 또는 SSH 및 JupyterLab 설정을 통해 원격 접속하고 싶다면 [새로운 가이드](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1/)도 참고해 보는 것을 추천한다.
+
 ## 0. 사전 확인사항
 - 머신러닝 공부를 위해서는 리눅스 사용을 권장한다. 윈도우 상에서도 가능은 하지만, 여러 자잘한 부분에서 시간낭비가 많이 일어날 수 있다. 우분투 최신 LTS 버전을 사용하는 것이 제일 무난하다. 오픈소스가 아닌 독점 드라이버들도 자동 설치되어 편리하며, 사용자 수가 많기 때문에 대부분의 기술 문서가 우분투 기준으로 작성되어 있다.
 - 일반적으로 우분투를 비롯한 대부분의 리눅스 배포판에는 파이썬이 기본 설치되어 있다. 그러나 만약 파이썬이 설치되어 있지 않다면, 이 글을 따라하기에 앞서 파이썬을 먼저 설치해야 한다.
