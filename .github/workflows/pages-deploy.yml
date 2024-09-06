@@ -104,5 +104,5 @@ jobs:
           # The location of your sitemap must start with http(s). 
           sitemap-location: 'https://www.yunseo.kim/sitemap.xml' 
           key: ${{ secrets.INDEXNOW_KEY }} # The key you get from IndexNow.
-          since: 2
-          since-unit: 'week'
+          since: 1
+          since-unit: 'month'
