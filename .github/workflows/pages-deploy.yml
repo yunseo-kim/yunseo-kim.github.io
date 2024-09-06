@@ -51,10 +51,14 @@ jobs:
         env:
           JEKYLL_ENV: "production"
       
-      - name: Setup IndexNow 
+      - name: Setup IndexNow(Old Domain)
         # Generate files dynamically to prevent them from being leaked in public repositories.
         # This example will put the file in the root directory of the site.You may change the location by yourself.
         run: echo ${{ secrets.LEGACY_INDEXNOW_KEY }} > ./_site/${{ secrets.LEGACY_INDEXNOW_KEY }}.txt
+      
+      - name: Setup IndexNow(Old Domain)
+        # Generate files dynamically to prevent them from being leaked in public repositories.
+        # This example will put the file in the root directory of the site.You may change the location by yourself.
         run: echo ${{ secrets.INDEXNOW_KEY }} > ./_site/${{ secrets.INDEXNOW_KEY }}.txt
       
       - name: Setup Naver Site Verification
@@ -104,5 +108,5 @@ jobs:
           # The location of your sitemap must start with http(s). 
           sitemap-location: 'https://www.yunseo.kim/sitemap.xml' 
           key: ${{ secrets.INDEXNOW_KEY }} # The key you get from IndexNow.
-          since: 1
-          since-unit: 'month'
+          since: 2
+          since-unit: 'week'
