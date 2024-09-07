@@ -1,11 +1,21 @@
-{% for lang in site.languages %}
-  {% if lang == site.active_lang %}
-<b>{{ lang }}</b>
-  {% else %}
-    {% if lang == site.default_lang %}
-<a href=" {{ page.url }}" style="display:inline-block; white-space:nowrap;">{{ lang }}</a>
-    {% else %}
-<a href="/{{ lang }}{{ page.url }}" style="display:inline-block; white-space:nowrap;">{{ lang }}</a>
-    {% endif %}
-  {% endif %}
-{% endfor %}
+<p>
+{%- for lang in site.languages -%}
+  {%- if lang == site.default_lang -%}
+<a ferh="{{ page.url }}" style="display:inline-block; white-space:nowrap;">
+    {%- if lang == site.active_lang -%}
+      <b>{{ lang }}</b>
+    {%- else -%}
+      {{ lang }}
+    {%- endif -%}
+</a>
+  {%- else -%}
+<a href="/{{ lang }}{{ page.url }}" style="display:inline-block; white-space:nowrap;">
+  {%- if lang == site.active_lang -%}
+      <b>{{ lang }}</b>
+    {%- else -%}
+      {{ lang }}
+    {%- endif -%}
+</a>
+  {%- endif -%}
+{%- endfor -%}
+</p>

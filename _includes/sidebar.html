@@ -43,7 +43,9 @@
   </nav>
 
   <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-    {%- include lang-selector.html -%}
+    <div class="lang-selector">
+      {%- include lang-selector.html -%}
+    </div>
 
     {% unless site.theme_mode %}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
