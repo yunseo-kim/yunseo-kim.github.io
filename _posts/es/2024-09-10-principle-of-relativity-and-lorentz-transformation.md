@@ -2,8 +2,8 @@
 title: "Principio de relatividad y transformación de Lorentz"
 description: >-
   Exploramos el concepto de sistemas de referencia y la transformación de Galileo ampliamente utilizada en la mecánica clásica. También examinamos brevemente las ecuaciones de Maxwell y el experimento de Michelson-Morley que sirvieron de base para la aparición de la transformación de Lorentz, y derivamos la matriz de transformación de Lorentz.
-categories: [Física de Ingeniería, Física Moderna]
-tags: [Teoría de la Relatividad, Transformación Lineal, Transformación de Lorentz]
+categories: [Engineering Physics, Modern Physics]
+tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
 ---
 
