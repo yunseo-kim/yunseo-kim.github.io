@@ -10,16 +10,16 @@ math: true
 ## Reference Frames and the Principle of Relativity
 ### Frame of Reference
 - **Frame of reference**: The motion of an object means that its position changes relative to other objects. Since all motion is relative, to describe any motion, a reference frame must be established as its basis.
-- **Inertial frames of reference**: A frame in which Newton's first law of motion ("The motion state of an object remains unchanged as long as the net force acting on the object is 0") holds. Any reference frame moving at a constant velocity relative to an inertial frame is also an inertial frame.
+- **Inertial frames of reference**: A frame in which Newton's First Law of Motion ("The motion state of an object remains unchanged as long as the net force acting on the object is 0") holds. Any reference frame moving at a constant velocity relative to an inertial frame is also an inertial frame.
 
 ### Principle of Relativity
-One of the main concepts and basic premises of physics, it states that all physical laws should be the same in different reference frames moving at constant velocities relative to each other. If physical laws were different for observers moving relative to each other, this difference could be used to establish an absolute reference frame and determine who is stationary and who is moving. However, according to the principle of relativity, there is no such distinction, so there is no absolute reference frame or absolute motion for the entire universe, and all inertial reference frames are equivalent.
+One of the main concepts and basic premises of physics, stating that all physical laws should be the same in different reference frames moving at constant velocities relative to each other. If physical laws were different for observers moving relative to each other, this difference could be used to establish an absolute reference frame and determine who is stationary and who is moving. However, according to the principle of relativity, there is no such distinction, so there is no absolute reference frame or absolute motion for the entire universe, and all inertial reference frames are equivalent.
 
 ## Limitations of the Galilean Transformation
 ### Galilean Transformation
-Suppose there are two inertial frames $S$ and $S^{\prime}$, and $S^{\prime}$ is moving at a constant velocity $\vec{v}$ in the $+x$ direction relative to $S$. The same event is observed in $S$ at coordinates $(x, y, z)$ at time $t$, and in $S^{\prime}$ at coordinates $(x^{\prime}, y^{\prime}, z^{\prime})$ at time $t^{\prime}$.
+Suppose there are two inertial frames $S$ and $S^{\prime}$, and $S^{\prime}$ is moving at a constant velocity $\vec{v}$ in the $+x$ direction relative to $S$. An identical event is observed to occur at coordinates $(x, y, z)$ at time $t$ in $S$, and at coordinates $(x^{\prime}, y^{\prime}, z^{\prime})$ at time $t^{\prime}$ in $S^{\prime}$.
 
-In this case, the $x$ direction value of the motion measured in $S^{\prime}$ will be $\vec{v}t$ more than the value measured in $S$, which is the distance $S^{\prime}$ has moved relative to $S$ in the $x$ direction, so
+In this case, the $x$ direction value of the motion measured in $S^{\prime}$ will be greater than the value measured in $S$ by $\vec{v}t$, which is the distance $S^{\prime}$ has moved relative to $S$ in the $x$ direction, so
 
 $$ x^{\prime} = x - \vec{v}t \label{eqn:galilean_transform_x} \tag{1} $$
 
@@ -34,10 +34,10 @@ and intuitively,
 
 $$ t^{\prime} = t \tag{4} \label{eqn:galilean_transform_t}$$
 
-can be assumed. The coordinate transformation between different inertial frames classically used in physics, as shown in equations ($\ref{eqn:galilean_transform_x}$) to ($\ref{eqn:galilean_transform_t}$) above, is called the **Galilean transformation**, which is simple and intuitive as it fits most everyday situations. However, as will be discussed later, this contradicts Maxwell's equations.
+can be assumed. The coordinate transformation between different inertial frames classically used in physics, as shown in equations ($\ref{eqn:galilean_transform_x}$) to ($\ref{eqn:galilean_transform_t}$) above, is called the **Galilean transformation**. It is simple and intuitive, and holds true in most everyday situations. However, as will be discussed later, it contradicts Maxwell's equations.
 
 ### Maxwell's Equations
-In the late 19th century, Maxwell expanded on the ideas and previous research results proposed by other scientists such as Faraday and Ampere, revealing that electricity and magnetism are actually one force, and derived the following four equations describing the electromagnetic field.
+In the late 19th century, Maxwell expanded on the ideas and previous research results proposed by other scientists such as Faraday and Ampere, revealing that electricity and magnetism are actually one force, and derived the following four equations describing the electromagnetic field:
 
 1. $$\begin{gather*}\nabla\cdot{E}=\frac{q}{\epsilon_0} \\
  \text{: The electric flux through any closed surface is equal to the net charge inside (Gauss's law).}
@@ -46,13 +46,13 @@ In the late 19th century, Maxwell expanded on the ideas and previous research re
 \text{: Magnetic monopoles do not exist.}
 \end{gather*}$$
 3. $$\begin{gather*}\nabla\times{E}=-\frac{\partial B}{\partial t} \\
-\text{: Changes in magnetic field create an electric field (Faraday's law).}
+\text{: A changing magnetic field creates an electric field (Faraday's law).}
 \end{gather*}$$
 4. $$\begin{gather*}\nabla\times{B}=\mu_0\left(J+\epsilon_0\frac{\partial E}{\partial t}\right) \\
-\text{: Changes in electric field and currents create a magnetic field (Ampère-Maxwell law).}
+\text{: Electric currents and changing electric fields create magnetic fields (Ampère-Maxwell law).}
 \end{gather*}$$
 
-Maxwell's equations could successfully explain all known electrical and magnetic phenomena, predicted the existence of electromagnetic waves, and derived that the speed of electromagnetic waves in vacuum, $c$, is an invariant constant, establishing themselves as the core formulas of electromagnetism.
+Maxwell's equations successfully explained all known electrical and magnetic phenomena up to that point, predicted the existence of electromagnetic waves, and derived that the speed of electromagnetic waves in vacuum, $c$, is an invariant constant, establishing themselves as the core formulas of electromagnetism.
 
 ### Contradiction Between Galilean Transformation and Maxwell's Equations
 Newtonian mechanics, which utilizes the Galilean transformation, has been the foundation of physics for over 200 years, and Maxwell's equations are, as mentioned above, the core equations describing electrical and magnetic phenomena. However, there is a contradiction between the two:
@@ -77,9 +77,9 @@ To verify this hypothesis, in 1887, Michelson collaborated with Morley to perfor
 > - Author: Albert Abraham Michelson with Edward Morley
 > - License: public domain
 
-In this experiment, the light beam is split into two by passing through a half-mirror, then each travels back and forth along the two perpendicular arms of the interferometer, covering a total distance of about 11m, and meets at the midpoint. At this time, constructive or destructive interference patterns appear depending on the phase difference between the two light beams. According to aether theory, it was expected that the speed of light would differ depending on the relative velocity to the aether, so this phase difference would also change, and changes in the interference pattern could be observed. However, in reality, no change in the interference pattern could be observed. There were several attempts to explain these experimental results, among which FitzGerald and Lorentz proposed the *Lorentz–FitzGerald contraction* or *length contraction*, which states that the length of an object contracts when it moves relative to the aether, leading to the Lorentz transformation.
+In this experiment, the light beam is split into two by passing through a half-mirror, then each travels back and forth along the two perpendicular arms of the interferometer for a total of about 11m before meeting at the midpoint, where constructive or destructive interference patterns appear depending on the phase difference between the two light beams. According to aether theory, the speed of light would differ depending on the relative velocity to the aether, so this phase difference would also change, and it was expected that changes in the interference pattern could be observed. However, in reality, no change in the interference pattern could be observed. There were several attempts to explain these experimental results, among which FitzGerald and Lorentz proposed the *Lorentz–FitzGerald contraction* or *length contraction*, which states that an object contracts in length when it moves <u>relative to the aether</u>, leading to the Lorentz transformation.
 
-> At this time, Lorentz believed that aether existed and thought that length contraction occurred due to relative motion to the aether. Later, Einstein interpreted the true physical meaning of the Lorentz transformation with his *Theory of Special Relativity*, explaining length contraction with the concept of spacetime rather than aether, and it was also later revealed that aether does not exist.
+> At this time, Lorentz believed that aether existed and thought that length contraction occurred due to relative motion to the aether. Later, Einstein interpreted the true physical meaning of the Lorentz transformation with his *Theory of Special Relativity*, explaining length contraction in terms of spacetime rather than aether, and it was also later revealed that aether does not exist.
 {: .prompt-info }
 
 ## Lorentz Transformation
@@ -91,10 +91,10 @@ $$ x^{\prime} = \gamma(x-\vec{v}t). \label{eqn:lorentz_transform_x}\tag{5}$$
 Here, $\gamma$ is independent of $x$ and $t$, but may be a function of $\vec{v}$. The reasons for making this assumption are as follows:
 
 - For events occurring in $S$ and $S^{\prime}$ to have a one-to-one correspondence, $x$ and $x^{\prime}$ must have a linear relationship.
-- Since it is known that the Galilean transformation is correct in mechanics for everyday situations, it should be possible to approximate it with equation ($\ref{eqn:galilean_transform_x}$).
-- It should be in as simple a form as possible.
+- It should be able to approximate equation ($\ref{eqn:galilean_transform_x}$), as the Galilean transformation is known to be correct in everyday mechanical situations.
+- It should be as simple as possible.
 
-Since physical formulas should have the same form in reference frames $S$ and $S^{\prime}$, to express $x$ in terms of $x^{\prime}$ and $t$, we only need to change the sign of $\vec{v}$ (the direction of relative motion), and since there should be no difference between the two reference frames other than the sign of $\vec{v}$, $\gamma$ should be the same.
+Since physical formulas should have the same form in reference frames $S$ and $S^{\prime}$, to express $x$ in terms of $x^{\prime}$ and $t$, we only need to change the sign of $\vec{v}$ (the direction of relative motion), and since there should be no difference between the two reference frames except for the sign of $\vec{v}$, $\gamma$ should be the same.
 
 $$ x = \gamma(x^{\prime}+\vec{v}t^{\prime}). \label{eqn:lorentz_transform_x_inverse}\tag{6}$$
 
@@ -115,7 +115,7 @@ $$ t^{\prime} = \gamma t + \left(\frac{1-\gamma^2}{\gamma \vec{v}}\right)x \labe
 
 holds.
 
-Also, to avoid contradiction with Maxwell's equations, the speed of light should be the same $c$ in both reference frames, which can be used to find $\gamma$. If the origins of the two reference frames were at the same place when $t=0$, then by this initial condition, $t^\prime = 0$. Now, let's consider a situation where there was a flash of light at the common origin of $S$ and $S^\prime$ when $t=t^\prime=0$, and observers in each reference frame measure the speed of this light. In this case, in reference frame $S$,
+Also, to avoid contradiction with Maxwell's equations, the speed of light should be $c$ in both reference frames, which can be used to find $\gamma$. If the origins of the two reference frames were at the same place when $t=0$, then by this initial condition, $t^\prime = 0$. Now, let's consider a situation where there was a flash of light at the common origin of $S$ and $S^\prime$ when $t=t^\prime=0$, and observers in each reference frame measure the speed of this light. In this case, in reference frame $S$,
 
 $$ x = ct \label{eqn:ct_S}\tag{9}$$
 
@@ -123,7 +123,7 @@ and in reference frame $S^\prime$,
 
 $$ x^\prime = ct^\prime \label{eqn:ct_S_prime}\tag{10}$$
 
-Using equations ($\ref{eqn:lorentz_transform_x}$) and ($\ref{eqn:lorentz_transform_t}$) to substitute $x$ and $t$ in the above equation,
+Substituting $x$ and $t$ in the above equation using equations ($\ref{eqn:lorentz_transform_x}$) and ($\ref{eqn:lorentz_transform_t}$),
 
 $$ \gamma (x-\vec{v}t) = c\gamma t + \left(\frac{1-\gamma^2}{\gamma \vec{v}}\right)cx $$
 
@@ -156,7 +156,7 @@ The final transformation equations obtained above are as follows:
 - $$ z^\prime = z $$
 - $$ t^\prime = \frac{t-\cfrac{\vec{v}x}{c^2}}{\sqrt{1-v^2/c^2}} $$
 
-These equations are the **Lorentz transformation**. If we set $\vec{\beta}=\vec{v}/c$, it can be expressed in matrix form as follows:
+These equations are the **Lorentz transformation**. If we let $\vec{\beta}=\vec{v}/c$, it can be expressed in matrix form as follows:
 
 $$ \begin{pmatrix}
 x_1^\prime \\ x_2^\prime \\ x_3^\prime \\ ct^\prime
@@ -171,7 +171,7 @@ x_1^\prime \\ x_2^\prime \\ x_3^\prime \\ ct^\prime
 x_1 \\ x_2 \\ x_3 \\ ct
 \end{pmatrix}.$$
 
-Lorentz showed that when using these transformation equations, the basic formulas of electromagnetism hold in the same form in all inertial reference frames. Also, we can confirm that when the speed $v$ is very small compared to the speed of light $c$, $\gamma \to 1$, so it can be approximated by the Galilean transformation.
+Lorentz showed that when using this transformation equation, the basic formulas of electromagnetism hold in the same form in all inertial reference frames. Also, we can see that when the velocity $v$ is very small compared to the speed of light $c$, $\gamma \to 1$, so it can be approximated by the Galilean transformation.
 
 Generalizing to the case where the relative velocity of $S^\prime$ with respect to the inertial reference frame $S$ is $\vec{v}=v_x\hat{i}+v_y\hat{j}+v_z\hat{k}$, $\vec{\beta}=\vec{v}/c$, and the position vectors measured in the two reference frames are $\vec{x}=x_1\hat{i}+x_2\hat{j}+x_3\hat{k}$ and $\vec{x^\prime}=x_1^\prime\hat{i}+x_2^\prime\hat{j}+x_3^\prime\hat{k}$ respectively, the Lorentz transformation can be written as follows:
 
