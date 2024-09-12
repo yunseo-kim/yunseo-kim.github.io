@@ -69,7 +69,7 @@ $$ t^{\prime} = t \tag{4} \label{eqn:galilean_transform_t}$$
 ![Aether Wind](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *이미지 출처*
 > - 저작자: 위키미디어 유저 [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)
-> - 라이선스: [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+> - 라이선스: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
 이러한 가설을 검증하기 위해, 1887년 마이컬슨(Michelson)은 몰리(Morley)와 협력하여 아래의 간섭계를 활용한 *마이컬슨-몰리 실험(Michelson-Morley Experiment)*을 수행했다.  
 ![마이컬슨-몰리 간섭계](https://upload.wikimedia.org/wikipedia/commons/f/fb/On_the_Relative_Motion_of_the_Earth_and_the_Luminiferous_Ether_-_Fig_4.png)

@@ -69,7 +69,7 @@ According to aether theory, even if outer space is a vacuum, it is filled with a
 ![Aether Wind](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *Image source*
 > - Author: Wikimedia user [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)
-> - License: [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+> - License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
 To verify this hypothesis, in 1887, Michelson collaborated with Morley to perform the *Michelson-Morley Experiment* using the interferometer shown below.  
 ![Michelson-Morley Interferometer](https://upload.wikimedia.org/wikipedia/commons/f/fb/On_the_Relative_Motion_of_the_Earth_and_the_Luminiferous_Ether_-_Fig_4.png)

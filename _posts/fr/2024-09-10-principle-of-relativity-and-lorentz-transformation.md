@@ -69,7 +69,7 @@ Selon la théorie de l'éther, même si l'espace est vide, il serait rempli d'é
 ![Vent d'éther](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *Source de l'image*
 > - Auteur : Utilisateur Wikimedia [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)
-> - Licence : [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+> - Licence : [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
 Pour vérifier cette hypothèse, en 1887, Michelson (Michelson) a collaboré avec Morley (Morley) pour réaliser l'*expérience de Michelson-Morley (Michelson-Morley Experiment)* utilisant l'interféromètre ci-dessous.  
 ![Interféromètre de Michelson-Morley](https://upload.wikimedia.org/wikipedia/commons/f/fb/On_the_Relative_Motion_of_the_Earth_and_the_Luminiferous_Ether_-_Fig_4.png)

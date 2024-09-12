@@ -69,7 +69,7 @@ Según la teoría del éter, incluso si el espacio exterior estuviera vacío, es
 ![Viento de éter](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *Fuente de la imagen*
 > - Autor: Usuario de Wikimedia [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)
-> - Licencia: [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+> - Licencia: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
 Para verificar esta hipótesis, en 1887 Michelson (Michelson) colaboró con Morley (Morley) para realizar el *experimento de Michelson-Morley (Michelson-Morley Experiment)* utilizando el interferómetro que se muestra a continuación.  
 ![Interferómetro de Michelson-Morley](https://upload.wikimedia.org/wikipedia/commons/f/fb/On_the_Relative_Motion_of_the_Earth_and_the_Luminiferous_Ether_-_Fig_4.png)

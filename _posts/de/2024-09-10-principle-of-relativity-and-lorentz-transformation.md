@@ -69,7 +69,7 @@ Nach der Äthertheorie ist der Weltraum, auch wenn er ein Vakuum ist, mit Äther
 ![Aether Wind](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *Bildquelle*
 > - Autor: Wikimedia-Benutzer [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)
-> - Lizenz: [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+> - Lizenz: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
 Um diese Hypothese zu überprüfen, führte Michelson 1887 in Zusammenarbeit mit Morley das *Michelson-Morley-Experiment* durch, bei dem das folgende Interferometer verwendet wurde.  
 ![Michelson-Morley-Interferometer](https://upload.wikimedia.org/wikipedia/commons/f/fb/On_the_Relative_Motion_of_the_Earth_and_the_Luminiferous_Ether_-_Fig_4.png)

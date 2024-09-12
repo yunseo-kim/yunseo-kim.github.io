@@ -69,7 +69,7 @@ $$ t^{\prime} = t \tag{4} \label{eqn:galilean_transform_t}$$
 ![Aether Wind](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *画像出典*
 > - 作者: ウィキメディアユーザー [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)
-> - ライセンス: [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+> - ライセンス: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
 このような仮説を検証するために、1887年にマイケルソン(Michelson)はモーリー(Morley)と協力して、以下の干渉計を用いた*マイケルソン・モーリーの実験(Michelson-Morley Experiment)*を行った。  
 ![マイケルソン・モーリーの干渉計](https://upload.wikimedia.org/wikipedia/commons/f/fb/On_the_Relative_Motion_of_the_Earth_and_the_Luminiferous_Ether_-_Fig_4.png)
