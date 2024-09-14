@@ -69,6 +69,10 @@ jobs:
         run: |
           echo naver-site-verification: ${{ secrets.NAVER_SITE_VERIFICATION }} > ./_site/${{ secrets.NAVER_SITE_VERIFICATION }}
       
+      - name: Setup Ads.txt
+        run: |
+          echo google.com, pub-8691553075583022, DIRECT, f08c47fec0942fa0 > ./_site/ads.txt
+      
       - name: Create CNAME file
         run: |
           echo www.yunseo.kim > ./_site/CNAME
