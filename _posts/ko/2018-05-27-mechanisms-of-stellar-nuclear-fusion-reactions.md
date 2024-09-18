@@ -11,8 +11,8 @@ math: true
 ## 양성자-양성자 연쇄반응 (proton-proton chain reaction)
 사람들에게 가장 흔히 알려져 있는 항성의 핵융합 반응입니다. 중수소의 핵인 중양성자(deuteron)는 양성자(p) 하나와 중성자(n) 하나가 결합하여 만들어집니다. 따라서 양성자와 양성자가 결합하여 중수소의 핵이 되려면 둘 중에 한 양성자는 중성자로 바뀌어야 합니다. 그렇다면 어떻게 양성자가 중성자로 바뀔 수 있을까요?
 
-- 중성자($n$)가 양성자($p$)로 바뀌면서 전자($e⁻$)와 반중성미자($\nu_e$)를 내놓는 것이 ‘[베타붕괴](/posts/Nuclear-Stability-and-Radioactive-Decay/#negative-beta-decay-beta--decay)’입니다. 이를 반응식으로 쓰면 $n \rightarrow p + e^{-} + \overline{\nu_e}$입니다. 
-- 양성자($p$)가 중성자($n$)로 바뀌는 과정은 베타붕괴의 반대과정에 해당합니다. 그래서 이를 ‘[역베타붕괴](/posts/Nuclear-Stability-and-Radioactive-Decay/#positive-beta-decay-beta-decay)’라 부릅니다. 그러면 역베타붕괴 반응식은 어떻게 생겼을까요? 핵반응식이라고 해서 특별한 건 없습니다. 양성자와 중성자의 위치를 바꾸고 전자를 양전자로, 반중성미자를 중성미자로 바꿔 주면 됩니다. 식으로 표현하면 $p \rightarrow n + e^{+} + \nu_e$입니다.
+- 중성자($n$)가 양성자($p$)로 바뀌면서 전자($e⁻$)와 반중성미자($\nu_e$)를 내놓는 것이 ‘[베타붕괴](/posts/Nuclear-Stability-and-Radioactive-Decay/#음의-베타붕괴beta--decay)’입니다. 이를 반응식으로 쓰면 $n \rightarrow p + e^{-} + \overline{\nu_e}$입니다. 
+- 양성자($p$)가 중성자($n$)로 바뀌는 과정은 베타붕괴의 반대과정에 해당합니다. 그래서 이를 ‘[역베타붕괴](/posts/Nuclear-Stability-and-Radioactive-Decay/#양의-베타붕괴beta-decay)’라 부릅니다. 그러면 역베타붕괴 반응식은 어떻게 생겼을까요? 핵반응식이라고 해서 특별한 건 없습니다. 양성자와 중성자의 위치를 바꾸고 전자를 양전자로, 반중성미자를 중성미자로 바꿔 주면 됩니다. 식으로 표현하면 $p \rightarrow n + e^{+} + \nu_e$입니다.
 
 위의 과정을 거쳐 중수소 원자핵이 만들어진 후에는 $^2_1D + p \rightarrow {^3_2He}$으로 헬륨-3 원자핵이 만들어지고, 마지막으로 헬륨-3 원자핵 2개가 충돌하여 헬륨-4 원자핵과 양성자 2개가 만들어지게 됩니다.  
 ![p-p chain reaction](https://upload.wikimedia.org/wikipedia/commons/8/85/Fusion_in_the_Sun.svg)
