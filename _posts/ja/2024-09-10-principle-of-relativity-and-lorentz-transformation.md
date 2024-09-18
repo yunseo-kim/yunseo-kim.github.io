@@ -65,7 +65,7 @@ $$ t^{\prime} = t \tag{4} \label{eqn:galilean_transform_t}$$
 ## エーテル(aether)理論とマイケルソン・モーリーの実験
 一方、19世紀の物理学では、光も水面波や音波のような他の波動と同様に*エーテル(aether)*という仮想の媒質によって伝達されると考えられており、このエーテルの存在を発見しようと努力した。
 
-エーテル理論によれば、宇宙空間は真空であっても、エーテルで満たされているため、太陽に対して約30km/sの速度で運動する地球の公転によって地球を横切るエーテル風が形成されると考えられた。
+エーテル理論によれば、宇宙空間は真空であっても、エーテルで満たされているため、太陽に対して約30km/sの速度で運動する地球の公転によって地球を横切るエーテル風が形成されると考えられた。  
 ![Aether Wind](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *画像出典*
 > - 作者: ウィキメディアユーザー [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)

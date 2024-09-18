@@ -65,7 +65,7 @@ Therefore, Maxwell's equations and the Galilean transformation are incompatible,
 ## Aether Theory and the Michelson-Morley Experiment
 Meanwhile, in 19th-century physics, it was believed that light, like other waves such as surface waves and sound waves, was transmitted by a hypothetical medium called *aether*, and efforts were made to discover the existence of this aether.
 
-According to aether theory, even if outer space is a vacuum, it is filled with aether, so it was thought that an aether wind would be formed across the Earth due to the Earth's orbital motion, which moves at a speed of about 30km/s relative to the Sun.
+According to aether theory, even if outer space is a vacuum, it is filled with aether, so it was thought that an aether wind would be formed across the Earth due to the Earth's orbital motion, which moves at a speed of about 30km/s relative to the Sun.  
 ![Aether Wind](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *Image source*
 > - Author: Wikimedia user [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)

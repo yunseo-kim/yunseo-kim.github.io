@@ -65,7 +65,7 @@ $$ t^{\prime} = t \tag{4} \label{eqn:galilean_transform_t}$$
 ## 에테르(aether) 이론과 마이컬슨-몰리 실험
 한편 19세기 물리학에서는 빛도 수면파나 음파와 같은 다른 파동과 마찬가지로 *에테르(aether)*라는 가상의 매질에 의해 전달된다고 여겼으며, 이 에테르의 존재를 발견하고자 노력하였다.
 
-에테르 이론에 따르면 우주공간은 진공이라 할지라도 에테르로 가득 채워져 있으므로, 태양에 대해 약 30km/s의 속력으로 운동하는 지구의 공전에 의해 지구를 가로지르는 에테르 바람이 형성될 것이라 생각하였다.
+에테르 이론에 따르면 우주공간은 진공이라 할지라도 에테르로 가득 채워져 있으므로, 태양에 대해 약 30km/s의 속력으로 운동하는 지구의 공전에 의해 지구를 가로지르는 에테르 바람이 형성될 것이라 생각하였다.  
 ![Aether Wind](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *이미지 출처*
 > - 저작자: 위키미디어 유저 [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)

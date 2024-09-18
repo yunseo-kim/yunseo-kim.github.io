@@ -65,7 +65,7 @@ Par conséquent, les équations de Maxwell et la transformation galiléenne sont
 ## Théorie de l'éther (aether) et expérience de Michelson-Morley
 Par ailleurs, la physique du 19ème siècle considérait que la lumière, comme les autres ondes telles que les ondes de surface ou les ondes sonores, était transmise par un milieu hypothétique appelé *éther (aether)*, et des efforts ont été faits pour découvrir l'existence de cet éther.
 
-Selon la théorie de l'éther, même si l'espace est vide, il serait rempli d'éther, et en raison de la révolution de la Terre autour du Soleil à une vitesse d'environ 30 km/s, un vent d'éther traverserait la Terre.
+Selon la théorie de l'éther, même si l'espace est vide, il serait rempli d'éther, et en raison de la révolution de la Terre autour du Soleil à une vitesse d'environ 30 km/s, un vent d'éther traverserait la Terre.  
 ![Vent d'éther](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *Source de l'image*
 > - Auteur : Utilisateur Wikimedia [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)

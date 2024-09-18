@@ -65,7 +65,7 @@ Daher passen die Maxwell-Gleichungen und die Galilei-Transformation nicht zusamm
 ## Äthertheorie und Michelson-Morley-Experiment
 In der Physik des 19. Jahrhunderts nahm man an, dass Licht, wie andere Wellen wie Wasserwellen oder Schallwellen, durch ein hypothetisches Medium namens *Äther (aether)* übertragen wird, und man bemühte sich, die Existenz dieses Äthers nachzuweisen.
 
-Nach der Äthertheorie wäre der Weltraum, selbst wenn er ein Vakuum wäre, mit Äther gefüllt, und durch die Erdumlaufbahn, die sich mit einer Geschwindigkeit von etwa 30 km/s relativ zur Sonne bewegt, würde ein Ätherwind entstehen, der die Erde durchquert.
+Nach der Äthertheorie wäre der Weltraum, selbst wenn er ein Vakuum wäre, mit Äther gefüllt, und durch die Erdumlaufbahn, die sich mit einer Geschwindigkeit von etwa 30 km/s relativ zur Sonne bewegt, würde ein Ätherwind entstehen, der die Erde durchquert.  
 ![Aether Wind](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *Bildquelle*
 > - Autor: Wikimedia-Benutzer [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)

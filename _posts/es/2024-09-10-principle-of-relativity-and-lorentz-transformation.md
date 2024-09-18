@@ -65,7 +65,7 @@ Por lo tanto, las ecuaciones de Maxwell y la transformación de Galileo son inco
 ## Teoría del éter (aether) y experimento de Michelson-Morley
 Por otro lado, en la física del siglo XIX se creía que la luz, al igual que otras ondas como las ondas en el agua o el sonido, se propagaba a través de un medio hipotético llamado *éter (aether)*, y se hicieron esfuerzos para descubrir la existencia de este éter.
 
-Según la teoría del éter, incluso si el espacio exterior estuviera vacío, estaría lleno de éter, por lo que se pensaba que el movimiento orbital de la Tierra, que se mueve a una velocidad de aproximadamente 30 km/s respecto al Sol, formaría un viento de éter que atravesaría la Tierra.
+Según la teoría del éter, incluso si el espacio exterior estuviera vacío, estaría lleno de éter, por lo que se pensaba que el movimiento orbital de la Tierra, que se mueve a una velocidad de aproximadamente 30 km/s respecto al Sol, formaría un viento de éter que atravesaría la Tierra.  
 ![Viento de éter](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *Fuente de la imagen*
 > - Autor: Usuario de Wikimedia [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)

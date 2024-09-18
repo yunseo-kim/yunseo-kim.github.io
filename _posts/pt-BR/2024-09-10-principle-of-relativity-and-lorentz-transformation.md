@@ -65,7 +65,7 @@ Portanto, as equações de Maxwell e a transformação de Galileu são incompat�
 ## Teoria do Éter (aether) e o Experimento de Michelson-Morley
 Por outro lado, na física do século XIX, acreditava-se que a luz, assim como outras ondas como ondas na água ou ondas sonoras, era transmitida por um meio hipotético chamado *éter (aether)*, e houve esforços para descobrir a existência deste éter.
 
-De acordo com a teoria do éter, mesmo que o espaço cósmico fosse um vácuo, ele estaria preenchido com éter, então pensava-se que o movimento orbital da Terra, que se move a uma velocidade de cerca de 30km/s em relação ao Sol, formaria um vento de éter atravessando a Terra.
+De acordo com a teoria do éter, mesmo que o espaço cósmico fosse um vácuo, ele estaria preenchido com éter, então pensava-se que o movimento orbital da Terra, que se move a uma velocidade de cerca de 30km/s em relação ao Sol, formaria um vento de éter atravessando a Terra.  
 ![Aether Wind](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *Fonte da imagem*
 > - Autor: Usuário do Wikimedia [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)
