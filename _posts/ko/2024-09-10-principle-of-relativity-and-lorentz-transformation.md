@@ -84,7 +84,7 @@ $$ t^{\prime} = t \tag{4} \label{eqn:galilean_transform_t}$$
 
 ## 로런츠 변환 (Lorentz transformation)
 ### 로런츠 변환의 유도
-앞서 살펴본 갈릴레이 변환(식 [$\ref{eqn:galilean_transform_x}$]~[$\ref{eqn:galilean_transform_t}$])에서와 같은 상황에서, 맥스웰 방정식과 모순되지 않는 $x$와 $x^{\prime}$ 사이의 올바른 변환 관계가 다음과 같다고 가정하자.
+앞서 살펴본 갈릴레이 변환(식 [$\ref{eqn:galilean_transform_x}$]-[$\ref{eqn:galilean_transform_t}$])에서와 같은 상황에서, 맥스웰 방정식과 모순되지 않는 $x$와 $x^{\prime}$ 사이의 올바른 변환 관계가 다음과 같다고 가정하자.
 
 $$ x^{\prime} = \gamma(x-\vec{v}t). \label{eqn:lorentz_transform_x}\tag{5}$$
 
@@ -151,10 +151,10 @@ $$ \gamma = \frac{1}{\sqrt{1-v^2/c^2}} \label{lorentz_factor}\tag{11} $$
 
 앞에서 최종적으로 얻은 변환식은 다음과 같다.
 
-- $$ x^\prime = \frac{x-\vec{v}t}{\sqrt{1-v^2/c^2}} $$
-- $$ y^\prime = y $$
-- $$ z^\prime = z $$
-- $$ t^\prime = \frac{t-\cfrac{\vec{v}x}{c^2}}{\sqrt{1-v^2/c^2}} $$
+- $$ x^\prime = \frac{x-\vec{v}t}{\sqrt{1-v^2/c^2}} \tag{12}$$
+- $$ y^\prime = y \tag{13}$$
+- $$ z^\prime = z \tag{14}$$
+- $$ t^\prime = \frac{t-\cfrac{\vec{v}x}{c^2}}{\sqrt{1-v^2/c^2}} \tag{15}$$
 
 이 식들이 **로런츠 변환(Lorentz transformation)**이다. $\vec{\beta}=\vec{v}/c$로 놓으면 행렬로는 아래와 같이 표현할 수 있다.
 
@@ -169,14 +169,14 @@ x_1^\prime \\ x_2^\prime \\ x_3^\prime \\ ct^\prime
 \end{pmatrix}
 \begin{pmatrix}
 x_1 \\ x_2 \\ x_3 \\ ct
-\end{pmatrix}.$$
+\end{pmatrix}. \tag{16}$$
 
 로런츠(Lorentz)는 이 변환식을 사용할 때 모든 관성기준계에서 전자기의 기본 공식들이 같은 형태로 성립함을 보였다. 또한 속력 $v$가 광속 $c$에 비해 매우 작을 때는 $\gamma \to 1$이므로 갈릴레이 변환으로 근사할 수 있다는 것도 확인할 수 있다.
 
 관성기준계 $S$에 대한 $S^\prime$의 상대속도 $\vec{v}=v_x\hat{i}+v_y\hat{j}+v_z\hat{k}$, $\vec{\beta}=\vec{v}/c$이고 두 기준계에서 측정한 위치벡터가 각각 $\vec{x}=x_1\hat{i}+x_2\hat{j}+x_3\hat{k}$, $\vec{x^\prime}=x_1^\prime\hat{i}+x_2^\prime\hat{j}+x_3^\prime\hat{k}$인 경우로 일반화하면 로런츠 변환은 다음과 같이 적을 수 있다.
 
-- $$ \vec{x^\prime} = \gamma\vec{x}-\gamma\vec{\beta}ct $$
-- $$ ct^\prime = \gamma ct - \gamma \vec{\beta}\cdot\vec{x} $$
+- $$ \vec{x^\prime} = \gamma\vec{x}-\gamma\vec{\beta}ct \label{eqn:lorentz_transform_x_vector}\tag{17}$$
+- $$ ct^\prime = \gamma ct - \gamma \vec{\beta}\cdot\vec{x} \label{eqn:lorentz_transform_ct}\tag{18}$$
 
 또는
 
@@ -189,5 +189,27 @@ $$ \begin{pmatrix}
 \end{pmatrix}
 \begin{pmatrix}
 \vec{x} \\ ct
-\end{pmatrix}.
+\end{pmatrix}. \tag{19}\label{lorentz_transform_matrix}
 $$
+
+### 역 로런츠 변환 (inverse Lorentz transformation)
+때로는 정지한 계 $S$에서의 측정을 움직이는 계 $S^\prime$에서의 측정으로 변환하는 것보다 역으로 움직이는 계 $S^\prime$에서의 측정을 $S$에서의 측정으로 변환시키는 것이 더 편리한 경우가 있다.
+이런 경우에는 **역 로런츠 변환(inverse Lorentz transformation)**을 사용할 수 있다.  
+($\ref{lorentz_transform_matrix}$)의 역행렬을 구하면 다음과 같은 역 로런츠 변환 행렬을 얻는다.
+
+$$ \begin{pmatrix}
+\vec{x} \\ ct
+\end{pmatrix}
+= \begin{pmatrix}
+\gamma & \gamma\vec{\beta} \\
+\gamma\vec{\beta} & \gamma
+\end{pmatrix}
+\begin{pmatrix}
+\vec{x^\prime} \\ ct^\prime
+\end{pmatrix}. \tag{20}
+$$
+
+이는 식 ($\ref{eqn:lorentz_transform_x_vector}$)-($\ref{eqn:lorentz_transform_ct}$)의 프라임이 붙은 물리량과 붙지 않은 물리량을 서로 바꾸고 $v$를 $-v$로(즉, $\beta$를 $-\beta$로) 대체한 것과 같다.
+
+- $$ \vec{x} = \gamma\vec{x^\prime}+\gamma\vec{\beta}ct^\prime \tag{21}$$
+- $$ ct = \gamma ct^\prime + \gamma \vec{\beta}\cdot\vec{x^\prime} \tag{22}$$
