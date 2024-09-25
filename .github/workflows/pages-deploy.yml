@@ -107,16 +107,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      - name: indexnow-action(Old Domain)
-        uses: bojieyang/indexnow-action@v2 # v2 is the latest major version following the action-versioning.
-        with:
-          # The location of your sitemap must start with http(s). 
-          # Currently, XML Sitemap, Sitemap index, RSS and Atom formats are supported.
-          sitemap-location: 'https://yunseo-kim.github.io/sitemap.xml' 
-          key: ${{ secrets.LEGACY_INDEXNOW_KEY }} # The key you get from IndexNow.
-          since: 2
-          since-unit: 'week'
       
       - name: indexnow-action
         uses: bojieyang/indexnow-action@v2 # v2 is the latest major version following the action-versioning.
