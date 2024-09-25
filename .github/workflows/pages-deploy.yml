@@ -51,11 +51,6 @@ jobs:
         env:
           JEKYLL_ENV: "production"
       
-      - name: Setup IndexNow(Old Domain)
-        # Generate files dynamically to prevent them from being leaked in public repositories.
-        # This example will put the file in the root directory of the site.You may change the location by yourself.
-        run: echo ${{ secrets.LEGACY_INDEXNOW_KEY }} > ./_site/${{ secrets.LEGACY_INDEXNOW_KEY }}.txt
-      
       - name: Setup IndexNow
         # Generate files dynamically to prevent them from being leaked in public repositories.
         # This example will put the file in the root directory of the site.You may change the location by yourself.
