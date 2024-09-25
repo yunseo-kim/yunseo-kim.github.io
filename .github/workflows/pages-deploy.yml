@@ -89,6 +89,8 @@ jobs:
       
       - name: Commit updated hash table
         run: |
+          git config user.name "김윤서(Yunseo Kim)"
+          git config user.email "git@yunseo.kim"
           git add ./tools/hash.csv
           git commit -m "Auto-update hash.csv"
       
