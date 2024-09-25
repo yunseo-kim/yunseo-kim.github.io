@@ -7,6 +7,49 @@ tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
 ---
 
+## TL;DR
+> **Principle of Relativity**: The principle that all physical laws should be the same in all inertial reference frames moving at constant velocities relative to each other
+{: .prompt-info }
+
+> **Lorentz factor $\gamma$**
+>
+> $$ \gamma = \frac{1}{\sqrt{1-v^2/c^2}} $$
+{: .prompt-info }
+
+> **Lorentz transformation**
+>
+> $$ \begin{pmatrix}
+> \vec{x}^\prime \\ ct^\prime
+> \end{pmatrix}
+> = \begin{pmatrix}
+> \gamma & -\gamma\vec{\beta} \\
+> -\gamma\vec{\beta} & \gamma
+> \end{pmatrix}
+> \begin{pmatrix}
+> \vec{x} \\ ct
+> \end{pmatrix}. $$
+>
+> - $ \vec{x^\prime} = \gamma\vec{x}-\gamma\vec{\beta}ct $
+> - $ ct^\prime = \gamma ct - \gamma \vec{\beta}\cdot\vec{x} $
+{: .prompt-info }
+
+> **Inverse Lorentz transformation**
+>
+> $$ \begin{pmatrix}
+> \vec{x} \\ ct
+> \end{pmatrix}
+> = \begin{pmatrix}
+> \gamma & \gamma\vec{\beta} \\
+> \gamma\vec{\beta} & \gamma
+> \end{pmatrix}
+> \begin{pmatrix}
+> \vec{x^\prime} \\ ct^\prime
+> \end{pmatrix}. $$
+>
+> - $ \vec{x} = \gamma\vec{x^\prime}+\gamma\vec{\beta}ct^\prime $
+> - $ ct = \gamma ct^\prime + \gamma \vec{\beta}\cdot\vec{x^\prime} $
+{: .prompt-info }
+
 ## Reference Frames and Principle of Relativity
 ### Frame of Reference
 - **Frame of reference**: The motion of an object means that its position changes relative to other objects. Since all motion is relative, to describe any motion, a reference frame must be established as its basis.

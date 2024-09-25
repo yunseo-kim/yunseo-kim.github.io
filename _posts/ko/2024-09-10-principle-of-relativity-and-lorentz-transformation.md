@@ -7,6 +7,49 @@ tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
 ---
 
+## TL;DR
+> **상대성 원리**: 등속도로 운동하는 서로 다른 기준계에 대해 모든 물리 법칙이 동일해야 한다는 원리
+{: .prompt-info }
+
+> **로런츠 인자 $\gamma$**
+>
+> $$ \gamma = \frac{1}{\sqrt{1-v^2/c^2}} $$
+{: .prompt-info }
+
+> **로런츠 변환**
+>
+> $$ \begin{pmatrix}
+> \vec{x}^\prime \\ ct^\prime
+> \end{pmatrix}
+> = \begin{pmatrix}
+> \gamma & -\gamma\vec{\beta} \\
+> -\gamma\vec{\beta} & \gamma
+> \end{pmatrix}
+> \begin{pmatrix}
+> \vec{x} \\ ct
+> \end{pmatrix}. $$
+>
+> - $ \vec{x^\prime} = \gamma\vec{x}-\gamma\vec{\beta}ct $
+> - $ ct^\prime = \gamma ct - \gamma \vec{\beta}\cdot\vec{x} $
+{: .prompt-info }
+
+> **역 로런츠 변환**
+>
+> $$ \begin{pmatrix}
+> \vec{x} \\ ct
+> \end{pmatrix}
+> = \begin{pmatrix}
+> \gamma & \gamma\vec{\beta} \\
+> \gamma\vec{\beta} & \gamma
+> \end{pmatrix}
+> \begin{pmatrix}
+> \vec{x^\prime} \\ ct^\prime
+> \end{pmatrix}. $$
+>
+> - $ \vec{x} = \gamma\vec{x^\prime}+\gamma\vec{\beta}ct^\prime $
+> - $ ct = \gamma ct^\prime + \gamma \vec{\beta}\cdot\vec{x^\prime} $
+{: .prompt-info }
+
 ## 기준계와 상대성 원리
 ### 기준계 (frame of reference)
 - **기준계(frame of reference)**: 어떤 물체가 움직인다는 것은 그 위치가 다른 물체에 대하여 상대적으로 변한다는 것으로, 모든 운동은 상대적이기 때문에 어떤 운동을 기술하기 위해서는 그 기준이 되는 기준계를 설정해야 한다.

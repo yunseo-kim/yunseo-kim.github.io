@@ -7,6 +7,49 @@ tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
 ---
 
+## TL;DR
+> **Principio de relatividad**: Principio según el cual todas las leyes físicas deben ser idénticas en diferentes sistemas de referencia que se mueven a velocidad constante entre sí
+{: .prompt-info }
+
+> **Factor de Lorentz $\gamma$**
+>
+> $$ \gamma = \frac{1}{\sqrt{1-v^2/c^2}} $$
+{: .prompt-info }
+
+> **Transformación de Lorentz**
+>
+> $$ \begin{pmatrix}
+> \vec{x}^\prime \\ ct^\prime
+> \end{pmatrix}
+> = \begin{pmatrix}
+> \gamma & -\gamma\vec{\beta} \\
+> -\gamma\vec{\beta} & \gamma
+> \end{pmatrix}
+> \begin{pmatrix}
+> \vec{x} \\ ct
+> \end{pmatrix}. $$
+>
+> - $ \vec{x^\prime} = \gamma\vec{x}-\gamma\vec{\beta}ct $
+> - $ ct^\prime = \gamma ct - \gamma \vec{\beta}\cdot\vec{x} $
+{: .prompt-info }
+
+> **Transformación de Lorentz inversa**
+>
+> $$ \begin{pmatrix}
+> \vec{x} \\ ct
+> \end{pmatrix}
+> = \begin{pmatrix}
+> \gamma & \gamma\vec{\beta} \\
+> \gamma\vec{\beta} & \gamma
+> \end{pmatrix}
+> \begin{pmatrix}
+> \vec{x^\prime} \\ ct^\prime
+> \end{pmatrix}. $$
+>
+> - $ \vec{x} = \gamma\vec{x^\prime}+\gamma\vec{\beta}ct^\prime $
+> - $ ct = \gamma ct^\prime + \gamma \vec{\beta}\cdot\vec{x^\prime} $
+{: .prompt-info }
+
 ## Sistemas de referencia y principio de relatividad
 ### Sistema de referencia (frame of reference)
 - **Sistema de referencia (frame of reference)**: El movimiento de un objeto significa que su posición cambia relativamente respecto a otros objetos. Como todo movimiento es relativo, para describir un movimiento es necesario establecer un sistema de referencia que sirva como base.
