@@ -48,13 +48,13 @@ def changed_files():
                 changed_files.append(relative_path)
 
     update_hash_csv(hash_csv_path, current_hashes)
-
-    if __name__ == "__main__":
-        if changed_files:
-            print("Changed files:")
-            for file in changed_files:
-                print(f"- {file}")
-        else:
-            print("No files have changed.")
-
     return changed_files
+
+if __name__ == "__main__":
+    changed_files = changed_files()
+    if changed_files:
+        print("Changed files:")
+        for file in changed_files:
+            print(f"- {file}")
+    else:
+        print("No files have changed.")
