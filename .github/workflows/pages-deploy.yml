@@ -86,6 +86,16 @@ jobs:
       - name: Update SHA256 hash table
         run: |
           python3 ./tools/compare_hash.py
+      
+      - name: Commit updated hash table
+        run: |
+          git config --global user.name
+          git add ./tools/hash.csv
+          git commit -m "Auto-update hash.csv"
+      
+      - name: Push updated hash table
+        run: |
+          git push
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
