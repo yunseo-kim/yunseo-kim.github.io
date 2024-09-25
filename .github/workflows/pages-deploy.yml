@@ -82,6 +82,15 @@ jobs:
           bundle exec htmlproofer _site \
             \-\-disable-external \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,/.*\/tags.*/"
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: Update SHA256 hash table
+        run: |
+          python3 ./tools/compare_hash.py
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
