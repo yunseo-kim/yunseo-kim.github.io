@@ -51,6 +51,9 @@ def changed_files():
     return changed_files
 
 if __name__ == "__main__":
+    initial_wd = os.getcwd()
+    os.chdir(os.path.abspath(os.path.dirname(__file__)))
+
     changed_files = changed_files()
     if changed_files:
         print("Changed files:")
@@ -58,3 +61,5 @@ if __name__ == "__main__":
             print(f"- {file}")
     else:
         print("No files have changed.")
+
+    os.chdir(initial_wd)
