@@ -5,4 +5,4 @@ It's a personal blog that organizes what I have studied. Mainly covers **mathema
 
 ## License
 
-The content of this blog itself is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International license](https://creativecommons.org/licenses/by-nc/4.0/), and the underlying source code used to format and display that content is licensed under the [MIT license](LICENSE).
+The content provided by this blog (markdown, txt, or html files under the `/_tabs` and `/_posts` directories) is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International license](https://creativecommons.org/licenses/by-nc/4.0/), and the underlying source code to serve that content (anything else in this repository except the `/_tabs` and `/_posts` directories) is licensed under the [MIT license](LICENSE).
