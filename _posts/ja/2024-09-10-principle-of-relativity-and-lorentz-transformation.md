@@ -52,11 +52,11 @@ math: true
 
 ## 基準系と相対性原理
 ### 基準系 (frame of reference)
-- **基準系(frame of reference)**: ある物体が動くということは、その位置が他の物体に対して相対的に変化するということで、すべての運動は相対的であるため、ある運動を記述するためにはその基準となる基準系を設定する必要がある。
-- **慣性基準系(inertial frames of reference)**: ニュートン(Newton)の運動第1法則（"物体に作用する正味の力が0である限り、物体の運動状態は不変である"）が成り立つ系。ある慣性系に対して等速度で動く任意の基準系は慣性基準系である。
+- **基準系(frame of reference)**: ある物体が動くということは、その位置が他の物体に対して相対的に変化するということであり、すべての運動は相対的であるため、ある運動を記述するためにはその基準となる基準系を設定する必要がある。
+- **慣性系(inertial frames of reference)**: ニュートン(Newton)の運動第1法則（"物体に作用する正味の力が0である限り、物体の運動状態は不変である"）が成り立つ系。ある慣性系に対して等速度で動く任意の基準系は慣性系である。
 
 ### 相対性原理 (Principle of Relativity)
-物理学の主要な概念の一つであり基本前提で、等速度で運動する異なる基準系に対してすべての物理法則が同一でなければならないという原理である。もし相対的に動く観測者たちに物理法則が互いに異なるならば、この差を利用して一つの絶対基準系を設定し、誰が静止していて誰が動いているかを知ることができるようになる。しかし、相対性原理によれば、このような区別はないため、全宇宙に対する絶対基準系または絶対運動は存在せず、すべての慣性基準系は同等である。
+物理学の主要な概念の一つであり基本前提として、等速度で運動する異なる基準系に対して、すべての物理法則が同一でなければならないという原理である。もし相対的に動く観測者たちに物理法則が互いに異なるならば、この差を利用して一つの絶対基準系を設定し、誰が静止していて誰が動いているかを知ることができるようになる。しかし、相対性原理によれば、このような区別はないため、全宇宙に対する絶対基準系または絶対運動は存在せず、すべての慣性系は同等である。
 
 ## ガリレイ変換の限界点
 ### ガリレイ変換 (Galilean transformation)
@@ -106,23 +106,23 @@ $$ t^{\prime} = t \tag{4} \label{eqn:galilean_transform_t}$$
 したがって、マクスウェル方程式とガリレイ変換は互いに合わず、少なくともどちらか一方を修正しなければならなかった。これは後述する**ローレンツ変換(Lorentz transformation)**の登場背景となる。
 
 ## エーテル(aether)理論とマイケルソン・モーリーの実験
-一方、19世紀の物理学では、光も水面波や音波のような他の波動と同様に*エーテル(aether)*という仮想の媒質によって伝達されると考えられており、このエーテルの存在を発見しようと努力した。
+一方、19世紀の物理学では、光も水面波や音波のような他の波動と同様に、*エーテル(aether)*という仮想の媒質によって伝達されると考えられており、このエーテルの存在を発見しようと努力した。
 
-エーテル理論によれば、宇宙空間は真空であっても、エーテルで満たされているため、太陽に対して約30km/sの速度で運動する地球の公転によって地球を横切るエーテル風が形成されると考えられた。  
+エーテル理論によれば、宇宙空間は真空であっても、エーテルで満たされているため、太陽に対して約30km/sの速度で運動する地球の公転によって、地球を横切るエーテル風が形成されるだろうと考えた。  
 ![Aether Wind](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
 > *画像出典*
 > - 作者: ウィキメディアユーザー [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)
 > - ライセンス: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
-このような仮説を検証するために、1887年にマイケルソン(Michelson)はモーリー(Morley)と協力して以下の干渉計を用いた*マイケルソン・モーリーの実験(Michelson-Morley Experiment)*を行った。  
+このような仮説を検証するために、1887年にマイケルソン(Michelson)はモーリー(Morley)と協力して、以下の干渉計を用いた*マイケルソン・モーリーの実験(Michelson-Morley Experiment)*を行った。  
 ![マイケルソン・モーリーの干渉計](https://upload.wikimedia.org/wikipedia/commons/f/fb/On_the_Relative_Motion_of_the_Earth_and_the_Luminiferous_Ether_-_Fig_4.png)
 > *画像出典*
 > - 作者: Albert Abraham Michelson with Edward Morley
 > - ライセンス: public domain
 
-この実験では、光線は半透明鏡を通過して2つに分かれた後、それぞれ干渉計の直交する二つの腕を往復しながら合計約11mほど進み、中間地点で出会い、このとき二つの光線の位相差に応じて強め合いまたは弱め合いの干渉縞が現れる。エーテル理論によれば、エーテルに対する相対速度によって光の速度に差が生じるため、この位相差も変化し、干渉縞の変化を観測できるはずだと期待されたが、実際には干渉縞の変化を観測することはできなかった。このような実験結果を説明しようとする様々な試みがあったが、その中でもフィッツジェラルド(FitzGerald)とローレンツ(Lorentz)は、ある物体が<u>エーテルに対して相対的に運動する場合</u>、長さが収縮するという*ローレンツ・フィッツジェラルド収縮(Lorentz–FitzGerald contraction)*または*長さの収縮(length contraction)*を提案し、これはローレンツ変換につながる。
+この実験では、光線は半透明鏡を通過して2つに分かれた後、それぞれ干渉計の直交する二つの腕を往復し、合計約11mほど進んで中間地点で出会い、このとき二つの光線の位相差に応じて強め合いまたは弱め合いの干渉縞が現れる。エーテル理論によれば、エーテルに対する相対速度によって光の速度に差が生じるため、この位相差も変化し、干渉縞の変化を観測できるはずだと期待されたが、実際には干渉縞の変化を観測することはできなかった。このような実験結果を説明しようとする様々な試みがあったが、その中でもフィッツジェラルド(FitzGerald)とローレンツ(Lorentz)は、ある物体が<u>エーテルに対して相対的に運動する場合</u>、長さが収縮するという*ローレンツ・フィッツジェラルド収縮(Lorentz–FitzGerald contraction)*または*長さの収縮(length contraction)*を提案し、これはローレンツ変換につながる。
 
-> ローレンツはこの当時、エーテルが存在すると信じており、長さの収縮がエーテルに対する相対的運動によって起こると考えていた。後にアインシュタイン(Einstein)が*特殊相対性理論(Theory of Special Relativity)*でローレンツ変換が持つ真の物理的意味を解釈することで、エーテルではなく時空間の概念で長さの収縮を説明し、エーテルは存在しないことも後に明らかになる。
+> ローレンツはこの当時、エーテルが存在すると信じており、長さの収縮がエーテルに対する相対的運動によって起こると考えていた。その後、アインシュタイン(Einstein)が*特殊相対性理論(Theory of Special Relativity)*でローレンツ変換が持つ真の物理的意味を解釈することで、エーテルではなく時空間の概念で長さの収縮を説明し、エーテルは存在しないことも後に明らかになる。
 {: .prompt-info }
 
 ## ローレンツ変換 (Lorentz transformation)
@@ -194,10 +194,10 @@ $$ \gamma = \frac{1}{\sqrt{1-v^2/c^2}} \label{lorentz_factor}\tag{11} $$
 
 前に最終的に得られた変換式は次の通りである。
 
-- $$ x^\prime = \frac{x-\vec{v}t}{\sqrt{1-v^2/c^2}} \tag{12}$$
-- $$ y^\prime = y \tag{13}$$
-- $$ z^\prime = z \tag{14}$$
-- $$ t^\prime = \frac{t-\cfrac{\vec{v}x}{c^2}}{\sqrt{1-v^2/c^2}} \tag{15}$$
+- $$ x^\prime = \frac{x-\vec{v}t}{\sqrt{1-v^2/c^2}} \label{eqn:lorentz_transform_x_fin}\tag{12}$$
+- $$ y^\prime = y \label{eqn:lorentz_transform_y_fin}\tag{13}$$
+- $$ z^\prime = z \label{eqn:lorentz_transform_z_fin}\tag{14}$$
+- $$ t^\prime = \frac{t-\cfrac{\vec{v}x}{c^2}}{\sqrt{1-v^2/c^2}} \label{eqn:lorentz_transform_t_fin}\tag{15}$$
 
 これらの式が**ローレンツ変換(Lorentz transformation)**である。$\vec{\beta}=\vec{v}/c$とおくと、行列では以下のように表現できる。
 
@@ -212,28 +212,9 @@ x_1^\prime \\ x_2^\prime \\ x_3^\prime \\ ct^\prime
 \end{pmatrix}
 \begin{pmatrix}
 x_1 \\ x_2 \\ x_3 \\ ct
-\end{pmatrix}. \tag{16}$$
+\end{pmatrix}. \label{lorentz_transform_matrix}\tag{16}$$
 
-ローレンツ(Lorentz)はこの変換式を使用するとき、すべての慣性基準系で電磁気の基本公式が同じ形で成り立つことを示した。また、速度$v$が光速$c$に比べて非常に小さいときは$\gamma \to 1$となるので、ガリレイ変換に近似できることも確認できる。
-
-慣性基準系$S$に対する$S^\prime$の相対速度$\vec{v}=v_x\hat{i}+v_y\hat{j}+v_z\hat{k}$、$\vec{\beta}=\vec{v}/c$であり、二つの基準系で測定した位置ベクトルがそれぞれ$\vec{x}=x_1\hat{i}+x_2\hat{j}+x_3\hat{k}$、$\vec{x^\prime}=x_1^\prime\hat{i}+x_2^\prime\hat{j}+x_3^\prime\hat{k}$である場合に一般化すると、ローレンツ変換は次のように書くことができる。
-
-- $$ \vec{x^\prime} = \gamma\vec{x}-\gamma\vec{\beta}ct \label{eqn:lorentz_transform_x_vector}\tag{17}$$
-- $$ ct^\prime = \gamma ct - \gamma \vec{\beta}\cdot\vec{x} \label{eqn:lorentz_transform_ct}\tag{18}$$
-
-または
-
-$$ \begin{pmatrix}
-\vec{x}^\prime \\ ct^\prime
-\end{pmatrix}
-= \begin{pmatrix}
-\gamma & -\gamma\vec{\beta} \\
--\gamma\vec{\beta} & \gamma
-\end{pmatrix}
-\begin{pmatrix}
-\vec{x} \\ ct
-\end{pmatrix}. \tag{19}\label{lorentz_transform_matrix}
-$$
+ローレンツ(Lorentz)は、この変換式を使用するとき、すべての慣性系で電磁気の基本公式が同じ形で成り立つことを示した。また、速度 $v$ が光速 $c$ に比べて非常に小さいときは $\gamma \to 1$ となるので、ガリレイ変換で近似できることも確認できる。
 
 ### 逆ローレンツ変換 (inverse Lorentz transformation)
 時には静止系$S$での測定を動く系$S^\prime$での測定に変換するよりも、逆に動く系$S^\prime$での測定を$S$での測定に変換する方が便利な場合がある。
@@ -241,18 +222,22 @@ $$
 ($\ref{lorentz_transform_matrix}$)の逆行列を求めると、次のような逆ローレンツ変換行列が得られる。
 
 $$ \begin{pmatrix}
-\vec{x} \\ ct
+x_1 \\ x_2 \\ x_3 \\ ct
 \end{pmatrix}
 = \begin{pmatrix}
-\gamma & \gamma\vec{\beta} \\
-\gamma\vec{\beta} & \gamma
+\gamma & 0 & 0 & \gamma\vec{\beta} \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+\gamma\vec{\beta} & 0 & 0 & \gamma
 \end{pmatrix}
 \begin{pmatrix}
-\vec{x^\prime} \\ ct^\prime
-\end{pmatrix}. \tag{20}
+x_1^\prime \\ x_2^\prime \\ x_3^\prime \\ ct^\prime
+\end{pmatrix}. \tag{17}
 $$
 
-これは式($\ref{eqn:lorentz_transform_x_vector}$)-($\ref{eqn:lorentz_transform_ct}$)のプライムが付いた物理量と付いていない物理量を互いに入れ替え、$v$を$-v$に（つまり、$\beta$を$-\beta$に）置き換えたものと同じである。
+これは式 ($\ref{eqn:lorentz_transform_x_fin}$)-($\ref{eqn:lorentz_transform_t_fin}$) のプライムが付いた物理量と付いていない物理量を互いに入れ替え、$v$ を $-v$ に（つまり、$\beta$ を $-\beta$ に）置き換えたものと同じである。
 
-- $$ \vec{x} = \gamma\vec{x^\prime}+\gamma\vec{\beta}ct^\prime \tag{21}$$
-- $$ ct = \gamma ct^\prime + \gamma \vec{\beta}\cdot\vec{x^\prime} \tag{22}$$
+- $$ x = \frac{x^\prime+\vec{v}t^\prime}{\sqrt{1-v^2/c^2}} \tag{18}$$
+- $$ y = y^\prime \tag{19}$$
+- $$ z = z^\prime \tag{20}$$
+- $$ t = \frac{t^\prime+\cfrac{\vec{v}x^\prime}{c^2}}{\sqrt{1-v^2/c^2}} \tag{21}$$
