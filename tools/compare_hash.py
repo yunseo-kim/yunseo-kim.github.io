@@ -20,9 +20,12 @@ def load_existing_hashes(csv_path):
     return existing_hashes
 
 def update_hash_csv(csv_path, file_hashes):
+    # Sort the file hashes by filename (the dictionary keys)
+    sorted_file_hashes = dict(sorted(file_hashes.items()))
+
     with open(csv_path, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        for file_path, hash_value in file_hashes.items():
+        for file_path, hash_value in sorted_file_hashes.items():
             writer.writerow([file_path, hash_value])
 
 def changed_files():
