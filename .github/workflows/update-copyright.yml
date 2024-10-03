@@ -1,0 +1,36 @@
+name: Update Copyright Year
+
+on:
+  schedule:
+    - cron: '0 0 1 1 *'  # This cron expression triggers the action at 00:00 on January 1 of each year (UTC)
+
+jobs:
+  update-year:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update copyright year in LICENSE
+        run: |
+          # Define the file to update
+          LICENSE_FILE="LICENSE"
+
+          # Get the current year
+          CURRENT_YEAR=$(date +'%Y')
+
+          # Define the regular expression for the copyright notice
+          REGEX="Copyright \\(c\\) ([0-9]{4})(-[0-9]{4})?"
+
+          # Find and update the year range in the LICENSE file
+          # Update the second year of the range
+          sed -i -E "s/$REGEX/Copyright (c) \\1-$(echo $CURRENT_YEAR)/" "$LICENSE_FILE"
+
+      - name: Commit changes
+        run: |
+          git config user.name "김윤서(Yunseo Kim)"
+          git config user.email "git@yunseo.kim"
+          git add ./LICENSE
+          git commit -m "Update copyright year to $CURRENT_YEAR"
+          git push
