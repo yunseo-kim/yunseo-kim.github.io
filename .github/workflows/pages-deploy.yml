@@ -92,11 +92,17 @@ jobs:
           git config user.name "김윤서(Yunseo Kim)"
           git config user.email "git@yunseo.kim"
           git add ./tools/hash.csv
-          git commit -m "Auto-update hash.csv"
-      
+          if ! git diff-index --quiet HEAD --; then
+            git commit -m "Auto-update hash.csv"
+          else
+            echo "No changes to commit."
+          fi
+        
       - name: Push updated hash table
+        if: ${{ steps.commit.outputs.changes == 'true' }}
         run: |
           git push
+        
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
