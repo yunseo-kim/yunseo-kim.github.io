@@ -55,7 +55,7 @@ def translate(filepath, source_lang, target_lang):
         Only if it doesn't, then as in the first case, leave that part untouched and leave both the {target_lang} expression and the parenthetical expression together. \n\
         ex) '패러데이(Faraday)', '맥스웰(Maxwell)', '아인슈타인(Einstein)' should be translated into Japanese as 'ファラデー(Faraday)', 'マクスウェル(Maxwell)', and 'アインシュタイン(Einstein)'. \
             However, in languages like Spanish or Portuguese, you should translate them as 'Faraday', 'Maxwell', and 'Einstein', \
-            not 'Faraday (Faraday)', 'Maxwell (Maxwell)', and 'Einstein (Einstein)'. \
+            not 'Faraday (Faraday)', 'Maxwell (Maxwell)', and 'Einstein (Einstein)'. \n\
         - If the provided text contains links in markdown format, \
         please translate the link text and the fragment part of the URL into {target_lang}, \
         but keep the path part of the URL intact. \n\
