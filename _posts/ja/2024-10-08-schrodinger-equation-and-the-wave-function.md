@@ -37,7 +37,7 @@ i\hbar\frac{\partial \Psi}{\partial t} = - \frac{\hbar^2}{2m}\frac{\partial^2 \P
 
 ```mermaid
 flowchart TD
-	conditions["与えられた条件、通常 Ψ(x,0)"] -- "Schrödinger's Equation" --> x["波動関数 Ψ(x,t)"]
+	conditions["与えられた条件 Ψ(x,0)"] -- "Schrödinger's Equation" --> x["波動関数 Ψ(x,t)"]
 	x --> quantities["求めたい物理量の確率分布"]
 ```
 
