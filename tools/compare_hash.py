@@ -38,6 +38,9 @@ def changed_files():
 
     for root, _, files in os.walk(posts_dir):
         for file in files:
+            if not file.endswith('.md'):  # Process only .md files
+                continue
+
             file_path = os.path.join(root, file)
             relative_path = os.path.relpath(file_path, start=posts_dir)
             
