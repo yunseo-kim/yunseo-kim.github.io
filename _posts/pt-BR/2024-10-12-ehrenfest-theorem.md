@@ -4,8 +4,8 @@ description: >-
   Aprenda como calcular os valores esperados de posição e momento a partir da função de onda na mecânica quântica,
   e estenda isso para uma fórmula de cálculo do valor esperado para qualquer variável mecânica Q(x,p).
   Em seguida, derive o teorema de Ehrenfest a partir disso.
-categories: [Física de Engenharia, Física Moderna]
-tags: [Mecânica Quântica, Equação de Schrödinger, Função de Onda]
+categories: [Engineering Physics, Modern Physics]
+tags: [Quantum Mechanics, Schrödinger's Equation, Wave Function]
 math: true
 ---
 
