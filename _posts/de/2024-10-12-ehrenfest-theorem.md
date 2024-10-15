@@ -43,7 +43,7 @@ $$ \begin{align*}
 &= -\frac{i\hbar}{m}\int_{-\infty}^{\infty} \Psi^*\frac{\partial\Psi}{\partial x}dx. \label{eqn:dx/dt_3}\tag{4}
 \end{align*} $$
 
-> Im Übergang von Gleichung ($\ref{eqn:dx/dt_1}$) zu ($\ref{eqn:dx/dt_2}$) und von ($\ref{eqn:dx/dt_2}$) zu ($\ref{eqn:dx/dt_3}$) wurde zweimal die unbestimmte Integration angewendet, und da $\lim_{x\rightarrow\pm\infty}\Psi=0$, wurden die Randterme vernachlässigt.
+> In den Schritten von Gleichung ($\ref{eqn:dx/dt_1}$) zu ($\ref{eqn:dx/dt_2}$) und von ($\ref{eqn:dx/dt_2}$) zu ($\ref{eqn:dx/dt_3}$) wurde zweimal partielle Integration angewendet, und da $\lim_{x\rightarrow\pm\infty}\Psi=0$, wurden die Randterme vernachlässigt.
 {: .prompt-tip }
 
 Daraus ergibt sich der Erwartungswert des **Impulses** wie folgt:
@@ -60,7 +60,7 @@ $$ \begin{gather*}
 
 Der Operator $\hat x \equiv x$ repräsentiert die Position, und der Operator $\hat p \equiv -i\hbar(\partial/\partial x)$ repräsentiert den Impuls. Für den Impulsoperator $\hat p$ kann man in drei Dimensionen $\hat p \equiv -i\hbar\nabla$ definieren.
 
-Da alle klassischen mechanischen Variablen durch Position und Impuls ausgedrückt werden können, kann dies auf den Erwartungswert einer beliebigen physikalischen Größe erweitert werden. Um den Erwartungswert einer beliebigen Größe $Q(x,p)$ zu berechnen, ersetzt man alle $p$ durch $-i\hbar\nabla$ und integriert den so erhaltenen Operator zwischen $\Psi^*$ und $\Psi$.
+Da alle klassischen mechanischen Variablen durch Position und Impuls ausgedrückt werden können, kann dies auf den Erwartungswert einer beliebigen physikalischen Größe erweitert werden. Um den Erwartungswert einer beliebigen Größe $Q(x,p)$ zu berechnen, ersetzt man alle $p$ durch $-i\hbar\nabla$ und integriert den so erhaltenen Operator zwischen $\Psi^\*$ und $\Psi$.
 
 $$ \langle Q(x,p) \rangle = \int \Psi^*[Q(x, -i\hbar\nabla)]\Psi dx. \label{eqn:Q_exp}\tag{8}$$
 
@@ -86,7 +86,7 @@ $$ \begin{align*}
 &= -\left\langle \frac{\partial V}{\partial x} \right\rangle.
 \end{align*} $$
 
-> Gleichung ($\ref{eqn:dp/dt_2}$) erhält man durch Einsetzen der Gleichungen (6) und (7) aus [Schrödinger-Gleichung und Wellenfunktion](/posts/schrodinger-equation-and-the-wave-function/) in Gleichung ($\ref{eqn:dp/dt_1}$). Im Übergang von Gleichung ($\ref{eqn:dp/dt_3}$) zu ($\ref{eqn:dp/dt_4}$) wurde die unbestimmte Integration angewendet, und wie zuvor wurden die Randterme aufgrund von $\lim_{x\rightarrow\pm\infty}\Psi=0$ vernachlässigt.
+> Gleichung ($\ref{eqn:dp/dt_2}$) erhält man durch Einsetzen der Gleichungen (6) und (7) aus [Schrödinger-Gleichung und Wellenfunktion](/posts/schrodinger-equation-and-the-wave-function/) in Gleichung ($\ref{eqn:dp/dt_1}$). Im Schritt von Gleichung ($\ref{eqn:dp/dt_3}$) zu ($\ref{eqn:dp/dt_4}$) wurde partielle Integration angewendet, und wie zuvor wurden die Randterme aufgrund von $\lim_{x\rightarrow\pm\infty}\Psi=0$ vernachlässigt.
 {: .prompt-tip }
 
 $$ \therefore \frac{d\langle p \rangle}{dt} = -\left\langle \frac{\partial V}{\partial x} \right\rangle. \label{eqn:ehrenfest_theorem_2nd}\tag{17}$$
@@ -113,4 +113,4 @@ Wenn $x-\langle x \rangle$ klein genug ist, können wir alle Terme höherer Ordn
 
 $$ \frac{\partial V(x)}{\partial x} \approx \frac{\partial V(\langle x \rangle)}{\partial \langle x \rangle} $$
 
-Das bedeutet, **wenn die Wellenfunktion eines Teilchens räumlich sehr eng um einen Punkt verteilt ist (d.h. wenn die Streuung von $\|\Psi\|^2$ in Bezug auf $x$ sehr klein ist), kann das Ehrenfest-Theorem durch Newtons zweites Bewegungsgesetz der klassischen Mechanik angenähert werden.** Auf makroskopischer Ebene können wir die räumliche Ausbreitung der Wellenfunktion vernachlässigen und die Position des Teilchens praktisch als einen Punkt betrachten, wodurch Newtons zweites Bewegungsgesetz gilt. Auf mikroskopischer Ebene können quantenmechanische Effekte jedoch nicht vernachlässigt werden, sodass Newtons zweites Bewegungsgesetz nicht mehr gilt und stattdessen das Ehrenfest-Theorem verwendet werden muss.
+Das bedeutet, **wenn die Wellenfunktion eines Teilchens räumlich sehr eng um einen Punkt verteilt ist (d.h. wenn die Streuung von $\|\Psi\|^2$ in Bezug auf $x$ sehr klein ist), kann das Ehrenfest-Theorem durch Newtons zweites Bewegungsgesetz der klassischen Mechanik angenähert werden.** Auf makroskopischer Ebene können wir die räumliche Ausbreitung der Wellenfunktion vernachlässigen und die Position des Teilchens praktisch als einen Punkt betrachten, sodass Newtons zweites Bewegungsgesetz gilt. Auf mikroskopischer Ebene können quantenmechanische Effekte jedoch nicht vernachlässigt werden, sodass Newtons zweites Bewegungsgesetz nicht mehr gilt und stattdessen das Ehrenfest-Theorem verwendet werden muss.

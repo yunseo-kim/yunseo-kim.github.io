@@ -28,11 +28,11 @@ $$ \langle x \rangle = \int_{-\infty}^{\infty}x|\Psi(x,t)|^2 dx \label{eqn:x_exp
 
 Si on mesure la position d'un grand nombre de particules dans le même état $\Psi$ et qu'on fait la moyenne des résultats, on obtient $\langle x \rangle$ calculé par l'équation ci-dessus.
 
-> Notez que la valeur attendue dont on parle ici n'est pas la moyenne obtenue en mesurant répétitivement une seule particule, mais plutôt la moyenne des résultats de mesure pour un **ensemble** de systèmes dans le même état. Si on mesure la même particule plusieurs fois à de courts intervalles, la fonction d'onde [s'effondre (collapse)](/posts/schrodinger-equation-and-the-wave-function/#mesure-et-effondrement-de-la-fonction-donde) lors de la première mesure, donc les mesures suivantes donneront toujours la même valeur.
+> Notez que la valeur attendue dont on parle ici n'est pas la moyenne obtenue en mesurant répétitivement une seule particule, mais la moyenne des résultats de mesure pour un **ensemble** de systèmes dans le même état. Si on mesure la même particule plusieurs fois à de courts intervalles, la fonction d'onde [s'effondre (collapse)](/posts/schrodinger-equation-and-the-wave-function/#mesure-et-effondrement-de-la-fonction-donde) lors de la première mesure, donc on obtiendrait continuellement la même valeur dans les mesures suivantes.
 {: .prompt-warning }
 
 ### Valeur attendue de l'impulsion $p$
-Comme $\Psi$ dépend du temps, $\langle x \rangle$ changera avec le temps. Selon l'équation (8) de [Équation de Schrödinger et fonction d'onde](/posts/schrodinger-equation-and-the-wave-function/) et l'équation ($\ref{eqn:x_exp}$) ci-dessus, nous avons :
+Comme $\Psi$ dépend du temps, $\langle x \rangle$ changera avec le temps. Selon l'équation (8) de [Équation de Schrödinger et fonction d'onde](/posts/schrodinger-equation-and-the-wave-function/) et l'équation ($\ref{eqn:x_exp}$) ci-dessus, on a :
 
 $$ \begin{align*}
 \frac{d\langle x \rangle}{dt} &= \int_{-\infty}^{\infty} x\frac{\partial}{\partial t}|\Psi|^2 dx \\
@@ -46,7 +46,7 @@ $$ \begin{align*}
 > Dans le processus de ($\ref{eqn:dx/dt_1}$) à ($\ref{eqn:dx/dt_2}$) et de ($\ref{eqn:dx/dt_2}$) à ($\ref{eqn:dx/dt_3}$), l'intégration par parties a été appliquée deux fois, et comme $\lim_{x\rightarrow\pm\infty}\Psi=0$, les termes de bord (boundary terms) ont été éliminés.
 {: .prompt-tip }
 
-Ainsi, nous obtenons la valeur attendue de l'**impulsion** comme suit :
+Ainsi, on obtient la valeur attendue de l'**impulsion** comme suit :
 
 $$ \langle p \rangle = m\frac{d\langle x \rangle}{dt} = -i\hbar\int\left(\Psi^*\frac{\partial\Psi}{\partial x}\right)dx. \label{eqn:p_exp}\tag{5} $$
 
@@ -60,19 +60,19 @@ $$ \begin{gather*}
 
 L'opérateur $\hat x \equiv x$ représente la position, et l'opérateur $\hat p \equiv -i\hbar(\partial/\partial x)$ représente l'impulsion. Pour l'opérateur d'impulsion $\hat p$, on peut le définir comme $\hat p \equiv -i\hbar\nabla$ lorsqu'on l'étend à l'espace tridimensionnel.
 
-Comme toutes les variables de la mécanique classique peuvent être exprimées en termes de position et d'impulsion, nous pouvons étendre cela à la valeur attendue de toute quantité physique. Pour calculer la valeur attendue d'une quantité arbitraire $Q(x,p)$, il faut remplacer tous les $p$ par $-i\hbar\nabla$, puis insérer l'opérateur ainsi obtenu entre $\Psi^*$ et $\Psi$ et intégrer.
+Comme toutes les variables de la mécanique classique peuvent être exprimées en termes de position et d'impulsion, on peut étendre cela à la valeur attendue d'une quantité physique arbitraire. Pour calculer la valeur attendue d'une quantité arbitraire $Q(x,p)$, il faut remplacer tous les $p$ par $-i\hbar\nabla$, puis insérer l'opérateur ainsi obtenu entre $\Psi^*$ et $\Psi$ et intégrer.
 
 $$ \langle Q(x,p) \rangle = \int \Psi^*[Q(x, -i\hbar\nabla)]\Psi dx. \label{eqn:Q_exp}\tag{8}$$
 
-Par exemple, comme l'énergie cinétique est $T=\cfrac{p^2}{2m}$, nous avons
+Par exemple, comme l'énergie cinétique est $T=\cfrac{p^2}{2m}$, on a
 
 $$ \langle T \rangle = \frac{\langle p^2 \rangle}{2m} = -\frac{\hbar^2}{2m}\int\Psi^*\frac{\partial^2\Psi}{\partial x^2}dx \label{eqn:T_exp}\tag{9}$$
 
-L'équation ($\ref{eqn:Q_exp}$) nous permet de calculer la valeur attendue de toute quantité physique pour une particule dans l'état $\Psi$.
+L'équation ($\ref{eqn:Q_exp}$) permet de calculer la valeur attendue de toute quantité physique pour une particule dans l'état $\Psi$.
 
 ## Théorème d'Ehrenfest
 ### Calcul de $d\langle p \rangle/dt$
-Différencions les deux côtés de l'équation ($\ref{eqn:p_op}$) par rapport au temps $t$ pour obtenir la dérivée temporelle de la valeur attendue de l'impulsion $\cfrac{d\langle p \rangle}{dt}$.
+Dérivons les deux côtés de l'équation ($\ref{eqn:p_op}$) par rapport au temps $t$ pour obtenir la dérivée temporelle de la valeur attendue de l'impulsion $\cfrac{d\langle p \rangle}{dt}$.
 
 $$ \begin{align*}
 \frac{d\langle p \rangle}{dt} &= -i\hbar\frac{d}{dt}\int_{-\infty}^{\infty}\Psi^*\frac{\partial}{\partial x}\Psi dx \tag{10}\\
@@ -105,12 +105,12 @@ Comparons les deux équations côte à côte :
 - $$ \frac{d\langle p \rangle}{dt} = -\left\langle \frac{\partial V(x)}{\partial x} \right\rangle \text{ [Théorème d'Ehrenfest]} $$
 - $$ \frac{d\langle p \rangle}{dt} = -\frac{\partial V(\langle x \rangle)}{\partial \langle x \rangle} \text{ [Deuxième loi du mouvement de Newton]}$$
 
-Si nous développons en série de Taylor le côté droit de la deuxième équation du théorème d'Ehrenfest $\cfrac{d\langle p \rangle}{dt} = -\left\langle \cfrac{\partial V(x)}{\partial x} \right\rangle$ (équation [$\ref{eqn:ehrenfest_theorem_2nd}$]) autour de $\langle x \rangle$, nous obtenons :
+Si on développe en série de Taylor le terme de droite de la deuxième équation du théorème d'Ehrenfest $\cfrac{d\langle p \rangle}{dt} = -\left\langle \cfrac{\partial V(x)}{\partial x} \right\rangle$ (équation [$\ref{eqn:ehrenfest_theorem_2nd}$]) autour de $\langle x \rangle$, on obtient :
 
 $$ \frac{\partial V(x)}{\partial x} = \frac{\partial V(\langle x \rangle)}{\partial \langle x \rangle} + \frac{\partial^2 V(\langle x \rangle)}{\partial \langle x \rangle^2}(x-\langle x \rangle) + \frac{\partial^3 V(\langle x \rangle)}{\partial \langle x \rangle^3}(x-\langle x \rangle)^2 + \cdots $$
 
-Si $x-\langle x \rangle$ est suffisamment petit, nous pouvons négliger tous les termes d'ordre supérieur sauf le premier terme et approximer :
+Si $x-\langle x \rangle$ est suffisamment petit, on peut négliger tous les termes d'ordre supérieur sauf le premier terme et approximer :
 
 $$ \frac{\partial V(x)}{\partial x} \approx \frac{\partial V(\langle x \rangle)}{\partial \langle x \rangle} $$
 
-En d'autres termes, **si la fonction d'onde d'une particule a une distribution spatiale très étroite et pointue (si la dispersion de $\|\Psi\|^2$ par rapport à $x$ est très petite), alors le théorème d'Ehrenfest peut être approximé par la deuxième loi du mouvement de Newton de la mécanique classique.** À l'échelle macroscopique, on peut négliger l'étendue spatiale de la fonction d'onde et considérer la position de la particule comme essentiellement un point, donc la deuxième loi du mouvement de Newton s'applique. Cependant, à l'échelle microscopique, les effets quantiques ne peuvent pas être négligés, donc la deuxième loi du mouvement de Newton ne s'applique plus et nous devons utiliser le théorème d'Ehrenfest.
+En d'autres termes, **si la fonction d'onde d'une particule a une distribution spatiale très étroite et pointue (si la dispersion de $\|\Psi\|^2$ par rapport à $x$ est très petite), le théorème d'Ehrenfest peut être approximé par la deuxième loi du mouvement de Newton de la mécanique classique.** À l'échelle macroscopique, on peut ignorer l'étendue spatiale de la fonction d'onde et considérer la position de la particule comme essentiellement un point, donc la deuxième loi du mouvement de Newton s'applique. Cependant, à l'échelle microscopique, les effets quantiques ne peuvent pas être ignorés, donc la deuxième loi du mouvement de Newton ne s'applique plus et il faut utiliser le théorème d'Ehrenfest.

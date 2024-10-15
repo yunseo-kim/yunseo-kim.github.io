@@ -26,9 +26,9 @@ $\Psi$ 状態にある粒子に対する位置 $x$ の期待値(expectation valu
 
 $$ \langle x \rangle = \int_{-\infty}^{\infty}x|\Psi(x,t)|^2 dx \label{eqn:x_exp}\tag{1}$$
 
-である。同じ状態 $\Psi$ にある十分多数の粒子に対してそれぞれ位置を測定した後、測定結果の平均を取ると、上の式を通じて計算した $\langle x \rangle$ が得られる。
+である。同じ状態 $\Psi$ にある十分多数の粒子に対してそれぞれ位置を測定した後、測定結果の平均を取ると、上の式を通じて計算した $\langle x \rangle$ を得る。
 
-> ここで言う期待値とは、1つの粒子を繰り返し測定して得られた平均値ではなく、同じ状態を持つ系の**アンサンブル(ensemble)**に対する測定結果の平均であることに注意する。もし同じ粒子を短い時間間隔で何度も繰り返し測定すると、最初の測定で[波動関数が崩壊(collapse)](/posts/schrodinger-equation-and-the-wave-function/#測定と波動関数の崩壊)するため、その後の測定では常に同じ値のみを得ることになる。
+> ここで言う期待値とは、1つの粒子を繰り返し測定して得た平均値ではなく、同じ状態を持つ系の**アンサンブル(ensemble)**に対する測定結果の平均であることに注意する。もし同じ粒子を短い時間間隔で何度も繰り返し測定すると、最初の測定で[波動関数が崩壊(collapse)](/posts/schrodinger-equation-and-the-wave-function/#測定と波動関数の崩壊)するため、その後の測定では常に同じ値のみを得ることになる。
 {: .prompt-warning }
 
 ### 運動量 $p$ の期待値
@@ -46,7 +46,7 @@ $$ \begin{align*}
 > 式($\ref{eqn:dx/dt_1}$)から($\ref{eqn:dx/dt_2}$)への過程と($\ref{eqn:dx/dt_2}$)から($\ref{eqn:dx/dt_3}$)への過程で2回部分積分を適用し、$\lim_{x\rightarrow\pm\infty}\Psi=0$であるため境界項(boundary term)を捨てた。
 {: .prompt-tip }
 
-したがって、**運動量**の期待値を次のように得る。
+したがって**運動量**の期待値を次のように得る。
 
 $$ \langle p \rangle = m\frac{d\langle x \rangle}{dt} = -i\hbar\int\left(\Psi^*\frac{\partial\Psi}{\partial x}\right)dx. \label{eqn:p_exp}\tag{5} $$
 
@@ -111,10 +111,10 @@ $$ \begin{gather*}
 
 $$ \frac{\partial V(x)}{\partial x} = \frac{\partial V(\langle x \rangle)}{\partial \langle x \rangle} + \frac{\partial^2 V(\langle x \rangle)}{\partial \langle x \rangle^2}(x-\langle x \rangle) + \frac{\partial^3 V(\langle x \rangle)}{\partial \langle x \rangle^3}(x-\langle x \rangle)^2 + \cdots $$
 
-である。ここで、もし $x-\langle x \rangle$ が十分に小さければ、最初の項以外のすべての高次項を無視して
+である。ここでもし $x-\langle x \rangle$ が十分に小さければ、最初の項以外のすべての高次項を無視して
 
 $$ \frac{\partial V(x)}{\partial x} \approx \frac{\partial V(\langle x \rangle)}{\partial \langle x \rangle} $$
 
 と近似できる。
 
-つまり、**ある粒子の波動関数が空間的にある一点に非常に近く分布する鋭い形状を持つ場合($\|\Psi\|^2$ の $x$ に対する散布度が非常に小さい場合)、エーレンフェストの定理を古典力学のニュートンの運動第2法則で近似できる。** マクロスケールでは波動関数が空間的に広がっている程度を無視し、粒子の位置を事実上一点とみなすことができるためニュートンの運動第2法則が成り立つが、ミクロスケールでは量子力学的効果を無視できないためニュートンの運動第2法則はもはや成り立たず、エーレンフェストの定理を活用しなければならない。
+つまり、**ある粒子の波動関数が空間的にある一点に非常に近く分布する鋭い形状を持つ場合($\|\Psi\|^2$ の $x$ に対する散布度が非常に小さい場合)、エーレンフェストの定理を古典力学のニュートンの運動第2法則で近似できる。** 巨視的なスケールでは波動関数が空間的に広がった程度を無視し、粒子の位置を事実上1点とみなすことができるためニュートンの運動第2法則が成り立つが、微視的なスケールでは量子力学的効果を無視できないためニュートンの運動第2法則はもはや成り立たず、エーレンフェストの定理を活用しなければならない。

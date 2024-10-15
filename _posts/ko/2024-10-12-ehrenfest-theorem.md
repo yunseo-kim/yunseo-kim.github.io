@@ -43,7 +43,7 @@ $$ \begin{align*}
 &= -\frac{i\hbar}{m}\int_{-\infty}^{\infty} \Psi^*\frac{\partial\Psi}{\partial x}dx. \label{eqn:dx/dt_3}\tag{4}
 \end{align*} $$
 
-> 식 ($\ref{eqn:dx/dt_1}$)에서 ($\ref{eqn:dx/dt_2}$)으로의 과정과 ($\ref{eqn:dx/dt_2}$)에서 ($\ref{eqn:dx/dt_3}$)로의 과정에서 두 차례 부정적분을 적용하였으며, $\lim_{x\rightarrow\pm\infty}\Psi=0$이므로 경계값(boundary term)을 버렸다.
+> 식 ($\ref{eqn:dx/dt_1}$)에서 ($\ref{eqn:dx/dt_2}$)으로의 과정과 ($\ref{eqn:dx/dt_2}$)에서 ($\ref{eqn:dx/dt_3}$)로의 과정에서 두 차례 부분적분을 적용하였으며, $\lim_{x\rightarrow\pm\infty}\Psi=0$이므로 경계값(boundary term)을 버렸다.
 {: .prompt-tip }
 
 따라서 **운동량**의 기댓값을 다음과 같이 얻는다.
@@ -88,7 +88,7 @@ $$ \begin{align*}
 &= -\left\langle \frac{\partial V}{\partial x} \right\rangle.
 \end{align*} $$
 
-> 식 ($\ref{eqn:dp/dt_1}$)에 [슈뢰딩거 방정식과 파동함수](/posts/schrodinger-equation-and-the-wave-function/)의 식 (6)과 (7)을 대입하여 식 ($\ref{eqn:dp/dt_2}$)를 얻을 수 있다. 식 ($\ref{eqn:dp/dt_3}$)에서 ($\ref{eqn:dp/dt_4}$)으로의 과정에서는 부정적분을 적용하였고, 앞에서와 마찬가지로 $\lim_{x\rightarrow\pm\infty}\Psi=0$이므로 경계값(boundary term)을 버렸다.
+> 식 ($\ref{eqn:dp/dt_1}$)에 [슈뢰딩거 방정식과 파동함수](/posts/schrodinger-equation-and-the-wave-function/)의 식 (6)과 (7)을 대입하여 식 ($\ref{eqn:dp/dt_2}$)를 얻을 수 있다. 식 ($\ref{eqn:dp/dt_3}$)에서 ($\ref{eqn:dp/dt_4}$)으로의 과정에서는 부분적분을 적용하였고, 앞에서와 마찬가지로 $\lim_{x\rightarrow\pm\infty}\Psi=0$이므로 경계값(boundary term)을 버렸다.
 {: .prompt-tip }
 
 $$ \therefore \frac{d\langle p \rangle}{dt} = -\left\langle \frac{\partial V}{\partial x} \right\rangle. \label{eqn:ehrenfest_theorem_2nd}\tag{17}$$

@@ -43,7 +43,7 @@ $$ \begin{align*}
 &= -\frac{i\hbar}{m}\int_{-\infty}^{\infty} \Psi^*\frac{\partial\Psi}{\partial x}dx. \label{eqn:dx/dt_3}\tag{4}
 \end{align*} $$
 
-> In the process from equation ($\ref{eqn:dx/dt_1}$) to ($\ref{eqn:dx/dt_2}$) and from ($\ref{eqn:dx/dt_2}$) to ($\ref{eqn:dx/dt_3}$), indefinite integration was applied twice, and since $\lim_{x\rightarrow\pm\infty}\Psi=0$, the boundary terms were discarded.
+> In the process from equation ($\ref{eqn:dx/dt_1}$) to ($\ref{eqn:dx/dt_2}$) and from ($\ref{eqn:dx/dt_2}$) to ($\ref{eqn:dx/dt_3}$), integration by parts was applied twice, and since $\lim_{x\rightarrow\pm\infty}\Psi=0$, the boundary terms were discarded.
 {: .prompt-tip }
 
 Therefore, we obtain the expectation value of **momentum** as follows:
@@ -86,7 +86,7 @@ $$ \begin{align*}
 &= -\left\langle \frac{\partial V}{\partial x} \right\rangle.
 \end{align*} $$
 
-> Equation ($\ref{eqn:dp/dt_2}$) can be obtained by substituting equations (6) and (7) from [Schrödinger equation and wave function](/posts/schrodinger-equation-and-the-wave-function/) into equation ($\ref{eqn:dp/dt_1}$). In the process from equation ($\ref{eqn:dp/dt_3}$) to ($\ref{eqn:dp/dt_4}$), indefinite integration was applied, and as before, since $\lim_{x\rightarrow\pm\infty}\Psi=0$, the boundary terms were discarded.
+> Equation ($\ref{eqn:dp/dt_2}$) can be obtained by substituting equations (6) and (7) from [Schrödinger equation and wave function](/posts/schrodinger-equation-and-the-wave-function/) into equation ($\ref{eqn:dp/dt_1}$). In the process from equation ($\ref{eqn:dp/dt_3}$) to ($\ref{eqn:dp/dt_4}$), integration by parts was applied, and as before, since $\lim_{x\rightarrow\pm\infty}\Psi=0$, the boundary terms were discarded.
 {: .prompt-tip }
 
 $$ \therefore \frac{d\langle p \rangle}{dt} = -\left\langle \frac{\partial V}{\partial x} \right\rangle. \label{eqn:ehrenfest_theorem_2nd}\tag{17}$$
@@ -113,4 +113,4 @@ If $x-\langle x \rangle$ is sufficiently small, we can ignore all higher-order t
 
 $$ \frac{\partial V(x)}{\partial x} \approx \frac{\partial V(\langle x \rangle)}{\partial \langle x \rangle} $$
 
-In other words, **if a particle's wave function is spatially distributed very close to a single point (if the dispersion of $\|\Psi\|^2$ with respect to $x$ is very small), the Ehrenfest theorem can be approximated to Newton's Second Law of Motion in classical mechanics.** On a macroscopic scale, we can ignore the spatial spread of the wave function and essentially consider the particle's position as a single point, so Newton's Second Law of Motion holds. However, on a microscopic scale, quantum mechanical effects cannot be ignored, so Newton's Second Law of Motion no longer holds, and the Ehrenfest theorem must be used.
+In other words, **if a particle's wave function is spatially distributed very close to a single point (if the dispersion of $\|\Psi\|^2$ with respect to $x$ is very small), the Ehrenfest theorem can be approximated to Newton's Second Law of Motion in classical mechanics.** On a macroscopic scale, we can essentially regard the particle's position as a single point, ignoring the spatial spread of the wave function, so Newton's Second Law of Motion holds. However, on a microscopic scale, quantum mechanical effects cannot be ignored, so Newton's Second Law of Motion no longer holds, and the Ehrenfest theorem must be used.

@@ -60,7 +60,7 @@ $$ \begin{gather*}
 
 El operador $\hat x \equiv x$ representa la posición, y el operador $\hat p \equiv -i\hbar(\partial/\partial x)$ representa el momento. En el caso del operador de momento $\hat p$, al extenderlo al espacio tridimensional, se puede definir como $\hat p \equiv -i\hbar\nabla$.
 
-Como todas las variables de la mecánica clásica se pueden expresar en términos de posición y momento, esto se puede extender al valor esperado de cualquier cantidad física. Para calcular el valor esperado de una cantidad arbitraria $Q(x,p)$, reemplazamos todas las $p$ por $-i\hbar\nabla$ y luego integramos el operador resultante entre $\Psi^*$ y $\Psi$.
+Como todas las variables de la mecánica clásica se pueden expresar en términos de posición y momento, esto se puede extender al valor esperado de cualquier cantidad física. Para calcular el valor esperado de una cantidad arbitraria $Q(x,p)$, se reemplaza toda $p$ por $-i\hbar\nabla$, y se integra el operador resultante entre $\Psi^*$ y $\Psi$.
 
 $$ \langle Q(x,p) \rangle = \int \Psi^*[Q(x, -i\hbar\nabla)]\Psi dx. \label{eqn:Q_exp}\tag{8}$$
 
@@ -109,7 +109,7 @@ Si expandimos en serie de Taylor el lado derecho de la segunda ecuación del teo
 
 $$ \frac{\partial V(x)}{\partial x} = \frac{\partial V(\langle x \rangle)}{\partial \langle x \rangle} + \frac{\partial^2 V(\langle x \rangle)}{\partial \langle x \rangle^2}(x-\langle x \rangle) + \frac{\partial^3 V(\langle x \rangle)}{\partial \langle x \rangle^3}(x-\langle x \rangle)^2 + \cdots $$
 
-Si $x-\langle x \rangle$ es suficientemente pequeño, podemos ignorar todos los términos de orden superior excepto el primero y aproximar:
+Si $x-\langle x \rangle$ es lo suficientemente pequeño, podemos ignorar todos los términos de orden superior excepto el primero y aproximar:
 
 $$ \frac{\partial V(x)}{\partial x} \approx \frac{\partial V(\langle x \rangle)}{\partial \langle x \rangle} $$
 
