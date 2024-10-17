@@ -26,7 +26,7 @@ math: true
 - 연속확률분포와 확률밀도
 - [슈뢰딩거 방정식과 파동함수](/posts/schrodinger-equation-and-the-wave-function/)
 - [에렌페스트 정리](/posts/ehrenfest-theorem/)
-- [변수분리법](/posts/separation-of-variables/)
+- [변수분리법](/posts/Separation-of-Variables/)
 
 ## 변수분리법을 이용한 유도
 [에렌페스트 정리에 관한 포스트](/posts/ehrenfest-theorem/)에서 파동함수 $\Psi$를 이용하여 알고자 하는 여러 물리량을 어떻게 계산하는지 살펴보았다. 그렇다면 중요한 것은 그 파동함수 $\Psi(x,t)$를 어떻게 얻냐는 것인데, 보통은 주어진 퍼텐셜 $V(x,t)$에 대하여 위치 $x$와 시간 $t$에 대한 편미분방정식인 [슈뢰딩거 방정식](/posts/schrodinger-equation-and-the-wave-function/)을 풀어야 한다.

@@ -27,7 +27,7 @@ math: true
 - Continuous probability distribution and probability density
 - [Schrödinger Equation and Wave Function](/posts/schrodinger-equation-and-the-wave-function/)
 - [Ehrenfest Theorem](/posts/ehrenfest-theorem/)
-- [Separation of Variables](/posts/separation-of-variables/)
+- [Separation of Variables](/posts/Separation-of-Variables/)
 
 ## Derivation Using Separation of Variables
 In the [post about Ehrenfest's theorem](/posts/ehrenfest-theorem/), we looked at how to calculate various physical quantities using the wave function $\Psi$. The important question then is how to obtain this wave function $\Psi(x,t)$. Usually, for a given potential $V(x,t)$, we need to solve the [Schrödinger equation](/posts/schrodinger-equation-and-the-wave-function/), which is a partial differential equation in position $x$ and time $t$.

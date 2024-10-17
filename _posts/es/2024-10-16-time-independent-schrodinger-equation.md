@@ -27,7 +27,7 @@ math: true
 - Distribuciones de probabilidad continua y densidad de probabilidad
 - [Ecuación de Schrödinger y función de onda](/posts/schrodinger-equation-and-the-wave-function/)
 - [Teorema de Ehrenfest](/posts/ehrenfest-theorem/)
-- [Método de separación de variables](/posts/separation-of-variables/)
+- [Método de separación de variables](/posts/Separation-of-Variables/)
 
 ## Derivación utilizando el método de separación de variables
 En la publicación sobre [el teorema de Ehrenfest](/posts/ehrenfest-theorem/), vimos cómo calcular varias cantidades físicas utilizando la función de onda $\Psi$. Entonces, lo importante es cómo obtener esa función de onda $\Psi(x,t)$, y generalmente se debe resolver la [ecuación de Schrödinger](/posts/schrodinger-equation-and-the-wave-function/), que es una ecuación diferencial parcial en términos de la posición $x$ y el tiempo $t$ para un potencial dado $V(x,t)$.

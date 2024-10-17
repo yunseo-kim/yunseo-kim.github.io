@@ -25,7 +25,7 @@ math: true
 - Kontinuierliche Wahrscheinlichkeitsverteilung und Wahrscheinlichkeitsdichte
 - [Schrödinger-Gleichung und Wellenfunktion](/posts/schrodinger-equation-and-the-wave-function/)
 - [Ehrenfest-Theorem](/posts/ehrenfest-theorem/)
-- [Methode der Variablentrennung](/posts/separation-of-variables/)
+- [Methode der Variablentrennung](/posts/Separation-of-Variables/)
 
 ## Herleitung mit der Methode der Variablentrennung
 Im Beitrag über das [Ehrenfest-Theorem](/posts/ehrenfest-theorem/) haben wir untersucht, wie verschiedene physikalische Größen mit Hilfe der Wellenfunktion $\Psi$ berechnet werden können. Die wichtige Frage ist nun, wie man diese Wellenfunktion $\Psi(x,t)$ erhält. Normalerweise muss man die [Schrödinger-Gleichung](/posts/schrodinger-equation-and-the-wave-function/), eine partielle Differentialgleichung in Bezug auf Position $x$ und Zeit $t$, für ein gegebenes Potential $V(x,t)$ lösen.

@@ -26,7 +26,7 @@ math: true
 - 連続確率分布と確率密度
 - [シュレーディンガー方程式と波動関数](/posts/schrodinger-equation-and-the-wave-function/)
 - [エーレンフェストの定理](/posts/ehrenfest-theorem/)
-- [変数分離法](/posts/separation-of-variables/)
+- [変数分離法](/posts/Separation-of-Variables/)
 
 ## 変数分離法を用いた導出
 [エーレンフェストの定理に関する投稿](/posts/ehrenfest-theorem/)で波動関数$\Psi$を用いて知りたい様々な物理量をどのように計算するかを見てきました。そうすると重要なのはその波動関数$\Psi(x,t)$をどのように得るかということですが、通常は与えられたポテンシャル$V(x,t)$に対して位置$x$と時間$t$に関する偏微分方程式である[シュレーディンガー方程式](/posts/schrodinger-equation-and-the-wave-function/)を解く必要があります。
