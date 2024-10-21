@@ -87,22 +87,17 @@ jobs:
         run: |
           python3 ./tools/compare_hash.py
       
-      - name: Commit updated hash table
+      - name: Commit and Push updated hash table
         run: |
           git config user.name "김윤서(Yunseo Kim)"
           git config user.email "git@yunseo.kim"
           git add ./tools/hash.csv
           if ! git diff-index --quiet HEAD --; then
             git commit -m "Auto-update hash.csv"
+            git push
           else
             echo "No changes to commit."
           fi
-        
-      - name: Push updated hash table
-        if: ${{ steps.commit.outputs.changes == 'true' }}
-        run: |
-          git push
-        
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
