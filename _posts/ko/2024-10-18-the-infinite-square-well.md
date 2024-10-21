@@ -207,7 +207,7 @@ $$ \int \psi_m(x)^*f(x)dx = \sum_{n=1}^{\infty} c_n\int\psi_m(x)^*\psi_n(x)dx = 
 을 얻는다.
 
 > 크로네커 델타로 인해 합에서 $n=m$인 항을 제외한 다른 모든 항이 없어지는 것을 주목한다.
-{: .prompt_info }
+{: .prompt-info }
 
 따라서 $f(x)$를 전개할 때 $n$차 계수는
 

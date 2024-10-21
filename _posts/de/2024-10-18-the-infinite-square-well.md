@@ -201,7 +201,7 @@ Wenn $f(x)$ gegeben ist, können wir die Koeffizienten $c_n$ mit der als **Fouri
 $$ \int \psi_m(x)^*f(x)dx = \sum_{n=1}^{\infty} c_n\int\psi_m(x)^*\psi_n(x)dx = \sum_{n=1}^{\infty} c_n\delta_{mn} = c_m \tag{15}$$
 
 > Beachten Sie, dass aufgrund des Kronecker-Deltas alle Terme in der Summe außer dem Term mit $n=m$ verschwinden.
-{: .prompt_info }
+{: .prompt-info }
 
 Daher ist der Koeffizient n-ter Ordnung bei der Entwicklung von $f(x)$
 

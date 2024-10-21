@@ -199,7 +199,7 @@ Lorsque $f(x)$ est donné, en utilisant la complétude (completeness) et l'ortho
 $$ \int \psi_m(x)^*f(x)dx = \sum_{n=1}^{\infty} c_n\int\psi_m(x)^*\psi_n(x)dx = \sum_{n=1}^{\infty} c_n\delta_{mn} = c_m \tag{15}$$
 
 > Notez que tous les termes de la somme disparaissent sauf celui où $n=m$ à cause du delta de Kronecker.
-{: .prompt_info }
+{: .prompt-info }
 
 Par conséquent, le coefficient de n-ième ordre lors du développement de $f(x)$ est
 

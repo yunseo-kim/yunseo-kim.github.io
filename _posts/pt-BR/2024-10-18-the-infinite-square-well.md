@@ -199,7 +199,7 @@ Quando $f(x)$ é dado, podemos usar a completude (completeness) e a ortonormalid
 $$ \int \psi_m(x)^*f(x)dx = \sum_{n=1}^{\infty} c_n\int\psi_m(x)^*\psi_n(x)dx = \sum_{n=1}^{\infty} c_n\delta_{mn} = c_m \tag{15}$$
 
 > Note que o delta de Kronecker faz com que todos os termos da soma desapareçam, exceto o termo onde $n=m$.
-{: .prompt_info }
+{: .prompt-info }
 
 Portanto, o coeficiente de n-ésima ordem ao expandir $f(x)$ é
 

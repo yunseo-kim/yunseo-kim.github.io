@@ -199,7 +199,7 @@ Cuando se da $f(x)$, se pueden encontrar los coeficientes $c_n$ usando el siguie
 $$ \int \psi_m(x)^*f(x)dx = \sum_{n=1}^{\infty} c_n\int\psi_m(x)^*\psi_n(x)dx = \sum_{n=1}^{\infty} c_n\delta_{mn} = c_m \tag{15}$$
 
 > Nótese que debido a la delta de Kronecker, todos los términos en la suma excepto el término $n=m$ desaparecen.
-{: .prompt_info }
+{: .prompt-info }
 
 Por lo tanto, el coeficiente n-ésimo al expandir $f(x)$ es
 

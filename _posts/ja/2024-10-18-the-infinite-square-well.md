@@ -207,7 +207,7 @@ $$ \int \psi_m(x)^*f(x)dx = \sum_{n=1}^{\infty} c_n\int\psi_m(x)^*\psi_n(x)dx = 
 を得る。
 
 > クロネッカーのデルタにより和の中で$n=m$の項以外のすべての項が消えることに注目する。
-{: .prompt_info }
+{: .prompt-info }
 
 したがって$f(x)$を展開する際の$n$次の係数は
 

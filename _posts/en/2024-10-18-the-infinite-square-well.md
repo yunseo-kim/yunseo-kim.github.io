@@ -199,7 +199,7 @@ When $f(x)$ is given, we can find the coefficients $c_n$ using the following met
 $$ \int \psi_m(x)^*f(x)dx = \sum_{n=1}^{\infty} c_n\int\psi_m(x)^*\psi_n(x)dx = \sum_{n=1}^{\infty} c_n\delta_{mn} = c_m \tag{15}$$
 
 > Note that all terms in the sum except for $n=m$ disappear due to the Kronecker delta.
-{: .prompt_info }
+{: .prompt-info }
 
 Therefore, the $n$-th coefficient when expanding $f(x)$ is
 
