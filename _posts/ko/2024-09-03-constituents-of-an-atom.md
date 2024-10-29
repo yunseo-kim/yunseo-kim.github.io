@@ -3,7 +3,7 @@ title: "아원자 입자와 원자의 구성 요소"
 description: >-
   전자, 양성자, 중성자, 광자, 중성미자 등 원자핵공학에서 중요하게 다루는 소립자들을 간략히 살펴보고, 원자 및 원자핵의 구조를 알아본다.
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics]
+tags: [Nuclear Physics, Atomic Structure]
 math: true
 ---
 

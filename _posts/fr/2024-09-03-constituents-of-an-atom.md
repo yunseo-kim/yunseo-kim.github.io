@@ -3,7 +3,7 @@ title: "Particules subatomiques et composants de l'atome"
 description: >-
   Examinons brièvement les particules élémentaires importantes en génie nucléaire, telles que les électrons, les protons, les neutrons, les photons et les neutrinos, et explorons la structure des atomes et des noyaux atomiques.
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics]
+tags: [Nuclear Physics, Atomic Structure]
 math: true
 ---
 

@@ -3,7 +3,7 @@ title: "サブアトミック粒子と原子の構成要素"
 description: >-
   電子、陽子、中性子、光子、ニュートリノなど、原子核工学で重要に扱われる素粒子を簡単に概観し、原子および原子核の構造を理解する。
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics]
+tags: [Nuclear Physics, Atomic Structure]
 math: true
 ---
 
