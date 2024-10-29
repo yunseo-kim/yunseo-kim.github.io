@@ -3,7 +3,7 @@ title: "Nuclear Reactions and Binding Energy"
 description: >-
   Learn about the expression of nuclear reactions, the definition of Q-value, and the concepts of mass defect and binding energy.
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Nuclear Reaction]
+tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
 ---
 
@@ -43,7 +43,7 @@ $$ Q = [(M_a + M_b) - (M_c + M_d)]\cdot 931 \ \text{MeV}.\tag{3} $$
 - *Exothermic reaction*: Nuclear reaction where $Q>0$, part of the mass is converted to kinetic energy, increasing kinetic energy after the reaction
 - *Endothermic reaction*: Nuclear reaction where $Q<0$, part of the kinetic energy is converted to mass, decreasing kinetic energy after the reaction
 
-| Type of Nuclear Reaction | Q-value | Mass Change Before and After Reaction | Kinetic Energy Change Before and After Reaction |
+| Type of Nuclear <br>Reaction | Q-value | Mass Change Before <br>and After Reaction | Kinetic Energy Change <br>Before and After Reaction |
 | :---: | :---: | :---: | :---: |
 | Exothermic reaction | $Q>0$ | $\Delta m<0$ (decrease) | $\Delta E>0$ (increase) |
 | Endothermic reaction | $Q<0$ | $\Delta m>0$ (increase) | $\Delta E<0$ (decrease) |

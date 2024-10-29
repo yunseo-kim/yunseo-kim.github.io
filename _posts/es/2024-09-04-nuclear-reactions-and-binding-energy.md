@@ -3,7 +3,7 @@ title: "Reacciones nucleares y energía de enlace"
 description: >-
   Exploramos las expresiones de las reacciones nucleares, la definición del valor Q (Q-value), y los conceptos de defecto de masa (mass defect) y energía de enlace (binding energy).
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Nuclear Reaction]
+tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
 ---
 
@@ -43,7 +43,7 @@ $$ Q = [(M_a + M_b) - (M_c + M_d)]\cdot 931 \ \text{MeV}.\tag{3} $$
 - *Reacción exotérmica (exothermic reaction)*: Reacción nuclear con $Q>0$, parte de la masa se convierte en energía cinética, aumentando la energía cinética después de la reacción
 - *Reacción endotérmica (endothermic reaction)*: Reacción nuclear con $Q<0$, parte de la energía cinética se convierte en masa, disminuyendo la energía cinética después de la reacción
 
-| Tipo de reacción nuclear | Valor Q | Cambio de masa antes y después de la reacción | Cambio de energía cinética antes y después de la reacción |
+| Tipo de reacción <br>nuclear | Valor Q | Cambio de masa <br>antes y después <br>de la reacción | Cambio de energía cinética <br>antes y después de la reacción |
 | :---: | :---: | :---: | :---: |
 | Reacción exotérmica | $Q>0$ | $\Delta m<0$ (disminución) | $\Delta E>0$ (aumento) |
 | Reacción endotérmica | $Q<0$ | $\Delta m>0$ (aumento) | $\Delta E<0$ (disminución) |

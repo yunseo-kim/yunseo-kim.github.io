@@ -3,7 +3,7 @@ title: "核反応と結合エネルギー"
 description: >-
   核反応の表現式とQ値（Q-value）の定義、質量欠損（mass defect）と結合エネルギー（binding energy）の概念を学ぶ。
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Nuclear Reaction]
+tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
 ---
 

@@ -3,7 +3,7 @@ title: "핵반응과 결합에너지"
 description: >-
   핵반응의 표현식과 Q값(Q-value)의 정의, 질량 결손(mass defect)와 결합에너지(binding energy)의 개념을 알아본다.
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Nuclear Reaction]
+tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
 ---
 

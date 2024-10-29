@@ -3,7 +3,7 @@ title: "Kernreaktionen und Bindungsenergie"
 description: >-
   Wir betrachten die Ausdrücke für Kernreaktionen, die Definition des Q-Werts (Q-value), sowie die Konzepte des Massendefekts (mass defect) und der Bindungsenergie (binding energy).
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Nuclear Reaction]
+tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
 ---
 
@@ -43,10 +43,10 @@ $$ Q = [(M_a + M_b) - (M_c + M_d)]\cdot 931 \ \text{MeV}.\tag{3} $$
 - *Exotherme Reaktion (exothermic reaction)*: Kernreaktion mit $Q>0$, ein Teil der Masse wird in kinetische Energie umgewandelt, was zu einer Zunahme der kinetischen Energie nach der Reaktion führt
 - *Endotherme Reaktion (endothermic reaction)*: Kernreaktion mit $Q<0$, ein Teil der kinetischen Energie wird in Masse umgewandelt, was zu einer Abnahme der kinetischen Energie nach der Reaktion führt
 
-| Art der Kernreaktion | Q-Wert | Massenänderung vor und nach der Reaktion | Änderung der kinetischen Energie vor und nach der Reaktion |
+| Art der <br>Kernreaktion | Q-Wert | Massenänderung vor <br>und nach der Reaktion | Änderung der kinetischen <br>Energie vor und nach <br>der Reaktion |
 | :---: | :---: | :---: | :---: |
-| Exotherme Reaktion | $Q>0$ | $\Delta m<0$ (Abnahme) | $\Delta E>0$ (Zunahme) |
-| Endotherme Reaktion | $Q<0$ | $\Delta m>0$ (Zunahme) | $\Delta E<0$ (Abnahme) |
+| Exotherme <br>Reaktion | $Q>0$ | $\Delta m<0$ (Abnahme) | $\Delta E>0$ (Zunahme) |
+| Endotherme <br>Reaktion | $Q<0$ | $\Delta m>0$ (Zunahme) | $\Delta E<0$ (Abnahme) |
 
 ### Kurzschreibweise für Kernreaktionen
 Die Kernreaktion in Gleichung ($\ref{nuclear_reaction}$) kann wie folgt kurz dargestellt werden:

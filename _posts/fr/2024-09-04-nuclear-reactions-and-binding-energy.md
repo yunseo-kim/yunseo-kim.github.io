@@ -3,7 +3,7 @@ title: "Réactions nucléaires et énergie de liaison"
 description: >-
   Découvrez les expressions des réactions nucléaires, la définition de la valeur Q (Q-value), et les concepts de défaut de masse (mass defect) et d'énergie de liaison (binding energy).
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Nuclear Reaction]
+tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
 ---
 
@@ -43,10 +43,10 @@ $$ Q = [(M_a + M_b) - (M_c + M_d)]\cdot 931 \ \text{MeV}.\tag{3} $$
 - *Réaction exothermique (exothermic reaction)* : Réaction nucléaire où $Q>0$, une partie de la masse est convertie en énergie cinétique, augmentant l'énergie cinétique après la réaction
 - *Réaction endothermique (endothermic reaction)* : Réaction nucléaire où $Q<0$, une partie de l'énergie cinétique est convertie en masse, diminuant l'énergie cinétique après la réaction
 
-| Type de réaction nucléaire | Valeur Q | Changement de masse avant et après la réaction | Changement d'énergie cinétique avant et après la réaction |
+| Type de réaction <br>nucléaire | Valeur Q | Changement de <br>masse avant et <br>après la réaction | Changement d'énergie <br>cinétique avant et <br>après la réaction |
 | :---: | :---: | :---: | :---: |
-| Réaction exothermique | $Q>0$ | $\Delta m<0$ (diminution) | $\Delta E>0$ (augmentation) |
-| Réaction endothermique | $Q<0$ | $\Delta m>0$ (augmentation) | $\Delta E<0$ (diminution) |
+| Réaction <br>exothermique | $Q>0$ | $\Delta m<0$ <br>(diminution) | $\Delta E>0$ (augmentation) |
+| Réaction <br>endothermique | $Q<0$ | $\Delta m>0$ <br>(augmentation) | $\Delta E<0$ (diminution) |
 
 ### Expression simplifiée des réactions nucléaires
 La réaction nucléaire de l'équation ($\ref{nuclear_reaction}$) peut être exprimée de manière simplifiée comme suit :
