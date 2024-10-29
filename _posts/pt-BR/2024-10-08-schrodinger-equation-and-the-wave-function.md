@@ -4,7 +4,7 @@ description: >-
   Examinamos a forma básica da equação de Schrödinger, que tem um status semelhante às leis de movimento de Newton na mecânica clássica da mecânica quântica.
   Também exploramos a interpretação estatística do significado físico da função de onda obtida como solução da equação de Schrödinger, as perspectivas sobre a indeterminação quântica e o significado físico do ato de medição na interpretação de Copenhague (colapso da função de onda).
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger's Equation, Wave Function]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true
 ---

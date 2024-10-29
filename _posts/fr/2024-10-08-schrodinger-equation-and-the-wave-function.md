@@ -4,7 +4,7 @@ description: >-
   Nous examinons la forme fondamentale de l'équation de Schrödinger, qui a un statut similaire aux lois du mouvement de Newton en mécanique classique dans la mécanique quantique.
   Nous explorons également l'interprétation statistique de la signification physique de la fonction d'onde obtenue comme solution de l'équation de Schrödinger, les perspectives sur l'indétermination quantique, et la signification physique de l'acte de mesure dans l'interprétation de Copenhague (l'effondrement de la fonction d'onde).
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger's Equation, Wave Function]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true
 ---

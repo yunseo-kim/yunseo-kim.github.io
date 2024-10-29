@@ -5,7 +5,7 @@ description: >-
   und erweitern dies auf eine Formel für den Erwartungswert einer beliebigen mechanischen Variable Q(x,p).
   Daraus leiten wir dann das Ehrenfest-Theorem ab.
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger's Equation, Wave Function]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 ---
 

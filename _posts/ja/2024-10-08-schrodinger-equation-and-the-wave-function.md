@@ -4,7 +4,7 @@ description: >-
   量子力学において古典力学のニュートンの運動法則に相当するシュレーディンガー方程式の基本形を見ていきます。
   また、シュレーディンガー方程式の解として得られる波動関数の物理的意味に関する統計的解釈と量子力学的不確定性に関する視点、そしてコペンハーゲン解釈における測定行為の物理的意味（波動関数の崩壊）について学びます。
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger's Equation, Wave Function]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true
 ---

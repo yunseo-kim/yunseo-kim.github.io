@@ -5,7 +5,7 @@ description: >-
   이를 임의의 역학적 변수 Q(x,p)에 대한 기댓값의 계산식으로 확장한다.
   그리고 이로부터 에렌페스트 정리(Ehrenfest theorem)를 유도한다.
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger's Equation, Wave Function]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 ---
 

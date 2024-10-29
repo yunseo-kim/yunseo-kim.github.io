@@ -5,7 +5,7 @@ description: >-
   e estenda isso para uma fórmula de cálculo do valor esperado para qualquer variável mecânica Q(x,p).
   Em seguida, derive o teorema de Ehrenfest a partir disso.
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger's Equation, Wave Function]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 ---
 

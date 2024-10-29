@@ -5,7 +5,7 @@ description: >-
   これを任意の力学的変数Q(x,p)に対する期待値の計算式に拡張する。
   そしてこれからエーレンフェストの定理(Ehrenfest theorem)を導出する。
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger's Equation, Wave Function]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 ---
 

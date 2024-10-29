@@ -4,7 +4,7 @@ description: >-
   We examine the basic form of the Schrödinger equation, which holds a similar status in quantum mechanics as Newton's laws of motion in classical mechanics.
   We also explore the statistical interpretation of the physical meaning of the wave function obtained as a solution to the Schrödinger equation, perspectives on quantum indeterminacy, and the physical significance of measurement in the Copenhagen interpretation (collapse of the wave function).
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger's Equation, Wave Function]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true
 ---
