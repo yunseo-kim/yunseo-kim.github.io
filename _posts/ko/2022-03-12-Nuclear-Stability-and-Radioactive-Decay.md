@@ -3,7 +3,7 @@ title: "핵안정성 및 방사성 붕괴"
 description: >-
   세그레표와 방사성 붕괴 유형, 그리고 이성체 천이에 대해 알아본다.
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Radioactive Decay]
+tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
 ---
 

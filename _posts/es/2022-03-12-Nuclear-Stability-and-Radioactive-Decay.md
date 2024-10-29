@@ -3,7 +3,7 @@ title: "Estabilidad nuclear y desintegración radiactiva"
 description: >-
   Exploramos la tabla de Segré, los tipos de desintegración radiactiva y las transiciones isoméricas.
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Radioactive Decay]
+tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
 ---
 

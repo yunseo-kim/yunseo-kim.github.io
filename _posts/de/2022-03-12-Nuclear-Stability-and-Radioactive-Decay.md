@@ -3,7 +3,7 @@ title: "Kernstabilität und radioaktiver Zerfall"
 description: >-
   Wir betrachten das Segré-Diagramm, Arten des radioaktiven Zerfalls und isomere Übergänge.
 categories: [Engineering Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Radioactive Decay]
+tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
 ---
 
