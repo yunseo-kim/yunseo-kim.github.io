@@ -126,7 +126,7 @@ Im starken Gegensatz zum klassischen Fall kann ein Quantenteilchen in einem unen
 
 Jetzt können wir $\psi$ normieren, um $A$ zu bestimmen.
 
-> Eigentlich normieren wir $\Psi(x,t)$, aber aufgrund von Gleichung (11) in [Zeitunabhängige Schrödinger-Gleichung](/posts/time-independent-schrodinger-equation/#1-sie-sind-stationäre-zustände) entspricht dies der Normierung von $\psi(x)$.
+> Eigentlich normieren wir $\Psi(x,t)$, aber aufgrund von Gleichung (11) in [Zeitunabhängige Schrödinger-Gleichung](/posts/time-independent-schrodinger-equation/#1-es-sind-stationäre-zustände) entspricht dies der Normierung von $\psi(x)$.
 {: .prompt-tip }
 
 $$ \int_0^a |A|^2 \sin^2(kx)dx = |A|^2\frac{a}{2} = 1 $$
@@ -208,7 +208,7 @@ Daher ist der Koeffizient n-ter Ordnung bei der Entwicklung von $f(x)$
 $$ c_n = \int \psi_n(x)^*f(x)dx \label{eqn:coefficients_n}\tag{16}$$
 
 ## Berechnung der allgemeinen Lösung $\Psi(x,t)$ der zeitabhängigen Schrödinger-Gleichung
-Jeder stationäre Zustand des unendlichen Potentialtopfs ist gemäß Gleichung (10) im Beitrag ['Zeitunabhängige Schrödinger-Gleichung'](/posts/time-independent-schrodinger-equation/#1-sie-sind-stationäre-zustände) und der zuvor gefundenen Gleichung ($\ref{eqn:psi_n}$)
+Jeder stationäre Zustand des unendlichen Potentialtopfs ist gemäß Gleichung (10) im Beitrag ['Zeitunabhängige Schrödinger-Gleichung'](/posts/time-independent-schrodinger-equation/#1-es-sind-stationäre-zustände) und der zuvor gefundenen Gleichung ($\ref{eqn:psi_n}$)
 
 $$ \Psi_n(x,t) = \sqrt{\frac{2}{a}}\sin{\left(\frac{n\pi}{a}x \right)}e^{-i(n^2\pi^2\hbar/2ma^2)t} \tag{17}$$
 
