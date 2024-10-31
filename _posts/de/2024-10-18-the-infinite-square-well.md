@@ -71,7 +71,7 @@ ist, verhält sich das Teilchen in diesem Potential im Bereich $0<x<a$ wie ein f
 > - Autor: Wikimedia-Benutzer [Benjamin ESHAM](https://commons.wikimedia.org/wiki/User:Bdesham)
 > - Lizenz: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
-## Modell- und Randbedingungen
+## Modell und Randbedingungen Aufstellen
 Außerhalb des Topfes ist die Wahrscheinlichkeit, das Teilchen zu finden, $0$, also $\psi(x)=0$. Innerhalb des Topfes ist $V(x)=0$, sodass die [zeitunabhängige Schrödinger-Gleichung](/posts/time-independent-schrodinger-equation/)
 
 $$ -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} = E\psi \label{eqn:t_independent_schrodinger_eqn}\tag{2}$$

@@ -113,7 +113,7 @@ $$ \langle Q(x,p) \rangle = \int \psi^*[Q(x, -i\hbar\nabla)]\psi dx \tag{12}$$
 
 Ainsi, toutes les valeurs attendues sont constantes par rapport au temps. En particulier, comme $\langle x \rangle$ est constant, $\langle p \rangle=0$.
 
-### 2. C'est un état avec une valeur d'énergie totale $E$ bien définie, plutôt qu'une distribution de probabilité sur une plage.
+### 2. Ils ont une valeur d'énergie totale définie e pas une distribution de probabilité sur une plage
 En mécanique classique, l'énergie totale (énergie cinétique plus énergie potentielle) est appelée **hamiltonien** et est définie comme
 
 $$ H(x,p)=\frac{p^2}{2m}+V(x) \tag{13}$$

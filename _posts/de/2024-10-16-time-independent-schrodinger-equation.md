@@ -71,7 +71,7 @@ Die gewöhnliche Differentialgleichung ($\ref{eqn:t_independent_schrodinger_eqn}
 ## Physikalische und mathematische Bedeutung
 Mit der Methode der Variablentrennung haben wir die Funktion $\phi(t)$, die nur von der Zeit $t$ abhängt, und die zeitunabhängige Schrödinger-Gleichung ($\ref{eqn:t_independent_schrodinger_eqn}$) erhalten. Obwohl die meisten Lösungen der ursprünglichen **zeitabhängigen Schrödinger-Gleichung** ($\ref{eqn:schrodinger_eqn}$) nicht in der Form $\psi(x)\phi(t)$ dargestellt werden können, ist die Form der zeitunabhängigen Schrödinger-Gleichung dennoch wichtig, weil ihre Lösungen die folgenden drei Eigenschaften besitzen:
 
-### 1. Sie sind stationäre Zustände.
+### 1. Es sind stationäre Zustände
 Obwohl die Wellenfunktion selbst
 
 $$ \Psi(x,t)=\psi(x)e^{-iEt/\hbar} \label{eqn:separation_of_variables}\tag{10}$$
