@@ -122,7 +122,7 @@ In other words, physical processes can be divided into two distinct types:
 > A wave function that has collapsed due to measurement will spread out spatially again over time according to the Schrödinger equation. Therefore, to reproduce the same measurement result, the second measurement must be carried out immediately.
 {: .prompt-tip }
 
-## Normalization of Wave Function
+## Normalization of the Wave Function
 Since the square of the absolute value of the wave function $\|\Psi(x,t)\|^2$ is the probability density of finding the particle at position $x$ at time $t$, integrating $\|\Psi\|^2$ over all $x$ should equal 1.
 
 $$ \int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 1. \label{eqn:wavefunction_norm}\tag{3} $$

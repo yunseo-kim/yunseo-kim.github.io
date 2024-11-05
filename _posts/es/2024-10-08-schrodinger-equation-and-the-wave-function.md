@@ -122,7 +122,7 @@ Es decir, los procesos físicos se pueden dividir en dos tipos distintos:
 > La función de onda que ha colapsado debido a la medición se vuelve a extender espacialmente con el tiempo según la ecuación de Schrödinger. Por lo tanto, para reproducir el mismo resultado de medición, la segunda medición debe realizarse inmediatamente.
 {: .prompt-tip }
 
-## Normalización de la función de onda (Normalization)
+## Normalización de la función de onda
 Como el cuadrado del valor absoluto de la función de onda $\|\Psi(x,t)\|^2$ es la densidad de probabilidad de encontrar la partícula en la posición $x$ en el tiempo $t$, la integral de $\|\Psi\|^2$ sobre todos los $x$ debe ser igual a 1.
 
 $$ \int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 1. \label{eqn:wavefunction_norm}\tag{3} $$
