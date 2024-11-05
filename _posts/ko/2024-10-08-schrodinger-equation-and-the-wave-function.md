@@ -9,6 +9,23 @@ math: true
 mermaid: true
 ---
 
+## TL;DR
+> - (시간에 의존하는 )슈뢰딩거 방정식: 
+>
+> $$ i\hbar\frac{\partial \Psi}{\partial t} = - \frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2} + V\Psi $$
+>
+> - 파동함수 $\Psi(x,t)$의 통계적 해석(Born 해석): 파동함수의 절댓값의 제곱 $\|\Psi(x,t)\|^2$는 시간 $t$, 위치 $x$에서 입자를 발견할 **확률밀도함수**이다.
+> - 파동함수의 규격화:
+>   - $\int_{-\infty}^{\infty} \|\Psi(x,t)\|^2 dx = 1$
+>   - $\Psi(x,t)$가 슈뢰딩거 방정식의 해이면 임의의 복소수 상수 $A$에 대해 $A\Psi(x,t)$도 마찬가지로 해이며, 이때 위 식을 만족하도록 상수 $A$를 결정하는 것을 규격화(normalization)라고 함
+>   - **규격화할 수 없는 해(non-normalizable solutions)**는 입자를 나타낼 수 없으므로 유효한 파동함수가 아니며, **제곱적분 가능한(square-integrable)** 해만이 물리적으로 가능한 상태임
+>   - 어느 한 시점에서 규격화한 파동함수는 시간이 지남에 따라 $\Psi$가 변화해도 계속해서 규격화된 상태로 유지됨
+> - 확률흐름:
+>   - $J(x,t) \equiv \cfrac{i\hbar}{2m}\left(\Psi\cfrac{\partial \Psi^\*}{\partial x}-\Psi^\*\cfrac{\partial \Psi}{\partial x}\right)$
+>   - 입자를 발견할 확률이 점 $x$를 지나 흐르는 유량(단위시간당 확률)
+>   - 시간 $t$, 영역 $a<x<b$에서 입자를 발견할 확률을 $P_{ab}(t)$라고 하면 $\cfrac{dP_{ab}}{dt} = J(a,t) - J(b,t)$
+{: .prompt-info }
+
 ## Prerequisites
 - 연속확률분포와 확률밀도
 
@@ -151,3 +168,35 @@ $$ \frac{d}{dt}\int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 0 \label{eqn:norm_proo
 이므로, $\int_{-\infty}^{\infty} \|\Psi(x,t)\|^2 dx$는 시간에 무관한 상수이다.
 
 $$ \therefore \Psi \text{가 어느 한 시점 }t\text{에서 규격화되어 있으면 다른 모든 시점 }t\text{에 대해서도 규격화되어 있다. } \blacksquare $$
+
+## 확률흐름 (probability current)
+이번에는 시간 $t$, 영역 $a<x<b$에서 입자를 발견할 확률을 $P_{ab}(t)$라고 하자. 그러면
+
+$$ P_{ab}(t) = \int_a^b |\Psi(x,t)|^2 dx \tag{11}$$
+
+이고,
+
+$$ \begin{align*}
+\frac{dP_{ab}}{dt} &= \frac{d}{dt}\int_a^b |\Psi(x,t)|^2 dx \\
+&= \int_a^b \frac{\partial}{\partial t}|\Psi(x,t)|^2 dx \quad \text{(}\because\text{식 }\ref{eqn:norm_proof_1}\text{ 참고)}\\
+&= \int_a^b \left(\frac{\partial \Psi^*}{\partial t}\Psi + \Psi^*\frac{\partial \Psi}{\partial t} \right)dx \quad \text{(}\because\text{식 }\ref{eqn:norm_proof_2}\text{ 참고)} \\
+&= \frac{i\hbar}{2m}\int_a^b \left(\Psi^*\frac{\partial^2\Psi}{\partial x^2}-\frac{\partial^2\Psi^*}{\partial x^2}\Psi\right)dx \\
+&= \frac{i\hbar}{2m}\int_a^b\frac{\partial}{\partial x}\left(\Psi^*\frac{\partial\Psi}{\partial x}-\frac{\partial\Psi^*}{\partial x}\Psi \right)dx \quad \text{(}\because\text{식 }\ref{eqn:norm_proof_3},\ref{eqn:norm_proof_4},\ref{eqn:norm_proof_5}\text{ 참고)}\\
+&= \frac{i\hbar}{2m}\left(\Psi^*\frac{\partial \Psi}{\partial x}-\frac{\partial \Psi^*}{\partial x}\Psi \right)\Bigg|^b_a \\
+&= \frac{i\hbar}{2m}\left(\Psi\frac{\partial \Psi^*}{\partial x}-\Psi^*\frac{\partial \Psi}{\partial x} \right)\Bigg|^a_b
+\end{align*} $$
+
+이다. 여기서
+
+$$ J(x,t) \equiv \frac{i\hbar}{2m}\left(\Psi\frac{\partial \Psi^*}{\partial x}-\Psi^*\frac{\partial \Psi}{\partial x}\right) \label{eqn:probability_current}\tag{12}$$
+
+로 놓으면,
+
+$$ \frac{dP_{ab}}{dt} = J(a,t) - J(b,t) \label{eqn:probability_over_time}\tag{13}$$
+
+이다.
+
+식 ($\ref{eqn:probability_current}$)와 같이 정의한 $J(x,t)$를 **확률흐름(probability current)**이라고 하며, 입자를 발견할 확률이 점 $x$를 지나 흐르는 유량\*(즉, 단위시간당 확률)을 의미한다. 식 ($\ref{eqn:probability_over_time}$)에서 특정 시점 $t$에 한쪽 끝으로 흘러 들어오는 확률흐름 $J(a,t)$가 다른 쪽으로 흘러 나가는 확률흐름 $J(b,t)$보다 크면 $P_{ab}$는 증가하며, 반대의 경우에는 감소한다.
+
+> *유체역학의 유량(flow rate)에서 유체의 질량 혹은 부피가 여기서는 확률로 바뀌었다고 생각하면 된다.
+{: .prompt-info }
