@@ -1,3 +1,6 @@
+# ignore _drafts/
+_drafts
+
 # Bundler cache
 .bundle
 vendor
