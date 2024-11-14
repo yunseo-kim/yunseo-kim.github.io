@@ -1,0 +1,105 @@
+---
+---
+
+@import 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+:root {
+  --bs-success:#198754;
+  --bs-danger:#dc3545;
+  // --bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --bs-font-sans-serif:"Pretendard Std Variable","Pretendard JP Variable","Pretendard Variable",-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue","Segoe UI","Noto Sans","Liberation Sans",Arial,"Hiragino Sans","Apple SD Gothic Neo",Meiryo,"Noto Sans JP","Noto Sans KR","Malgun Gothic",Osaka,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  // 맑은 고딕/Segoe UI의 경우, 국/영문을 한 줄에 혼용 시 영문에 비해 국문 폰트의 크기가 약간 더 크기 때문에 상단 정렬이 맞지 않아 심미성이 저해됨 (https://www.samsungsds.com/kr/insights/enterprise_ux_fonts.html 참고)
+  // 본고딕/Roboto의 경우에도 비슷한 문제 발생
+  // 맑은 고딕이나 YaHei(간체자 한자)/JhengHei(번체자 한자)의 경우 가나 문자의 자형이 좋지 못하므로, 'Segoe UI - Meiryo/Yu Gothic(일본 가나 문자) - YaHei/JhengHei - 맑은 고딕' 순으로 배치
+
+  --bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --bs-body-font-family:var(--bs-font-sans-serif);
+  --bs-body-font-size:1rem;
+  --bs-body-font-weight:400;
+  --bs-body-line-height:1.5;
+  --bs-body-color:#212529;
+  --bs-body-color-rgb:33,37,41;
+  --bs-body-bg:#fff;
+  --bs-body-bg-rgb:255,255,255;
+  --bs-emphasis-color:#000;
+  --bs-secondary-color:rgba(33, 37, 41, 0.75);
+  --bs-secondary-bg:#e9ecef;
+  --bs-tertiary-bg:#f8f9fa;
+  --bs-heading-color:inherit;
+  --bs-link-color:#0d6efd;
+  --bs-link-color-rgb:13,110,253;
+  --bs-link-hover-color:#0a58ca;
+  --bs-link-hover-color-rgb:10,88,202;
+  --bs-code-color:#d63384;
+  --bs-border-width:1px;
+  --bs-border-style:solid;
+  --bs-border-color:#dee2e6;
+   --bs-border-color-translucent:rgba(0, 0, 0, 0.175);
+  --bs-border-radius:0.375rem;
+  --bs-border-radius-lg:0.5rem;
+  --bs-box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15)
+  }
+
+header .post-desc,
+#search-results a,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  color:var(--heading-color);
+  -weight:400;
+  // font-family:Lato,"Microsoft Yahei",sans-serif
+  font-family:Lato,"Pretendard JP Variable","Pretendard Variable","Microsoft Jhenghei","Microsoft Yahei",sans-serif
+}
+
+body {
+  background:var(--main-bg);
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  color:var(--text-color);
+  -webkit-font-smoothing:antialiased;
+  // font-family:"Source Sans Pro","Microsoft Yahei",sans-serif
+  font-family: "Source Sans Pro","Pretendard JP Variable","Pretendard JP","Pretendard Variable",Pretendard,sans-serif
+}
+
+kbd {
+  // font-family:Lato,sans-serif;
+  font-family:Lato,"Pretendard JP Variable","Pretendard JP","Pretendard Variable",Pretendard,sans-serif;
+  display:inline-block;
+  vertical-align:middle;
+  line-height:1.3rem;
+  min-width:1.75rem;
+  text-align:center;
+  margin:0 .3rem;
+  padding-top:.1rem;
+  color:var(--kbd-text-color);
+  background-color:var(--kbd-bg-color);
+  border-radius:6px;
+  border:solid 1px var(--kbd-wrap-color);
+  box-shadow:inset 0 -2px 0 var(--kbd-wrap-color)
+}
+
+#notification .toast-body {
+  // font-family:Lato,sans-serif;
+  font-family:Lato,"Pretendard JP Variable","Pretendard JP","Pretendard Variable",Pretendard,sans-serif;
+  line-height:1.25rem
+}
+
+.pagination {
+  color:var(--text-color);
+  // font-family:Lato,sans-serif;
+  font-family:Lato,"Pretendard JP Variable","Pretendard JP","Pretendard Variable",Pretendard,sans-serif;
+  justify-content:space-evenly
+}
+
+#archives .date.day {
+  font-size:85%;
+  // font-family:Lato,sans-serif
+  font-family:Lato,"Pretendard JP Variable","Pretendard JP","Pretendard Variable",Pretendard,sans-serif
+}
