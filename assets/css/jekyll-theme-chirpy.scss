@@ -65,12 +65,12 @@ body {
   color:var(--text-color);
   -webkit-font-smoothing:antialiased;
   // font-family:"Source Sans Pro","Microsoft Yahei",sans-serif
-  font-family: "Source Sans Pro","Pretendard JP Variable","Pretendard JP","Pretendard Variable",Pretendard,sans-serif
+  font-family: "Source Sans Pro","Pretendard JP Variable","Pretendard Variable","Microsoft Jhenghei","Microsoft Yahei",sans-serif
 }
 
 kbd {
   // font-family:Lato,sans-serif;
-  font-family:Lato,"Pretendard JP Variable","Pretendard JP","Pretendard Variable",Pretendard,sans-serif;
+  font-family:Lato,"Pretendard JP Variable","Pretendard Variable",sans-serif;
   display:inline-block;
   vertical-align:middle;
   line-height:1.3rem;
@@ -87,19 +87,19 @@ kbd {
 
 #notification .toast-body {
   // font-family:Lato,sans-serif;
-  font-family:Lato,"Pretendard JP Variable","Pretendard JP","Pretendard Variable",Pretendard,sans-serif;
+  font-family:Lato,"Pretendard JP Variable","Pretendard Variable",sans-serif;
   line-height:1.25rem
 }
 
 .pagination {
   color:var(--text-color);
   // font-family:Lato,sans-serif;
-  font-family:Lato,"Pretendard JP Variable","Pretendard JP","Pretendard Variable",Pretendard,sans-serif;
+  font-family:Lato,"Pretendard JP Variable","Pretendard Variable",sans-serif;
   justify-content:space-evenly
 }
 
 #archives .date.day {
   font-size:85%;
   // font-family:Lato,sans-serif
-  font-family:Lato,"Pretendard JP Variable","Pretendard JP","Pretendard Variable",Pretendard,sans-serif
+  font-family:Lato,"Pretendard JP Variable","Pretendard Variable",sans-serif
 }
