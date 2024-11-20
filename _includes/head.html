@@ -11,13 +11,9 @@
 
   <meta http-equiv="Content-Language" content="{{site.active_lang}}">
 
-  {% if page.layout == 'tag' %}<link rel="alternate" hreflang="{{lang}}" href="{{site.url}}/tags/{{page.title | replace: ' ', '-'}}/" />
-  {% elsif page.layout == 'category' %}<link rel="alternate" hreflang="{{lang}}" href="{{site.url}}/categories/{{page.title | replace: ' ', '-'}}/" />
-  {% else %}<link rel="alternate" hreflang="{{lang}}" href="{{site.url}}{{page.id}}/" />{% endif %}
+  <link rel="alternate" hreflang="{{site.default_lang}}" href="{{site.url}}{{page.url}}" />
   {% for lang in site.languages %}{% if lang == site.default_lang %}{% continue %}{% endif %}
-  {% if page.layout == 'tag' %}<link rel="alternate" hreflang="{{lang}}" href="{{site.url}}/{{lang}}/tags/{{page.title | replace: ' ', '-'}}/" />
-  {% elsif page.layout == 'category' %}<link rel="alternate" hreflang="{{lang}}" href="{{site.url}}/{{lang}}/categories/{{page.title | replace: ' ', '-'}}/" />
-  {% else %}<link rel="alternate" hreflang="{{lang}}" href="{{site.url}}/{{lang}}{{page.id}}/" />{% endif %}
+  <link rel="alternate" hreflang="{{lang}}" href="{{site.url}}/{{lang}}{{page.url}}" />
   {% endfor %}
 
   {%- capture seo_tags -%}
