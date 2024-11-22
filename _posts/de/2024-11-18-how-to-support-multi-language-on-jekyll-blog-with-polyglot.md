@@ -350,7 +350,7 @@ Anschließend habe ich die folgenden drei Zeilen zum "sidebar-bottom"-Klassenabs
 
 {% raw %}
 ```liquid
-<div class="lang-selector">
+    <div class="lang-selector">
       {%- include lang-selector.html -%}
     </div>
 ```

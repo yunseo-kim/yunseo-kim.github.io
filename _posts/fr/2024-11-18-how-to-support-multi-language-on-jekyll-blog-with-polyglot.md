@@ -350,7 +350,7 @@ Ensuite, j'ai ajouté les trois lignes suivantes à la partie de classe "sidebar
 
 {% raw %}
 ```liquid
-<div class="lang-selector">
+    <div class="lang-selector">
       {%- include lang-selector.html -%}
     </div>
 ```

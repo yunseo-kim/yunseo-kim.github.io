@@ -350,7 +350,7 @@ Luego, agregué las siguientes tres líneas a la parte de la clase "sidebar-bott
 
 {% raw %}
 ```liquid
-<div class="lang-selector">
+    <div class="lang-selector">
       {%- include lang-selector.html -%}
     </div>
 ```

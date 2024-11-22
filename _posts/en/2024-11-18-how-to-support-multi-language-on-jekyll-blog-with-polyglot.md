@@ -349,7 +349,7 @@ Then, add the following three lines to the "sidebar-bottom" class part of [Chirp
 
 {% raw %}
 ```liquid
-<div class="lang-selector">
+    <div class="lang-selector">
       {%- include lang-selector.html -%}
     </div>
 ```
