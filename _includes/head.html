@@ -11,7 +11,7 @@
 
   <meta http-equiv="Content-Language" content="{{site.active_lang}}">
 
-  <link rel="alternate" hreflang="{{site.default_lang}}" href="{{site.url}}{{page.url}}" />
+  {% if site.default_lang %}<link rel="alternate" hreflang="x-default" href="{{site.url}}{{page.url}}" />{% endif %}
   {% for lang in site.languages %}{% if lang == site.default_lang %}{% continue %}{% endif %}
   <link rel="alternate" hreflang="{{lang}}" href="{{site.url}}/{{lang}}{{page.url}}" />
   {% endfor %}
