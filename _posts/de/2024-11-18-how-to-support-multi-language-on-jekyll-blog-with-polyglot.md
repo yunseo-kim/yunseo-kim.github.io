@@ -11,14 +11,17 @@ tags:
 ---
 ## Einleitung
 Vor etwa 4 Monaten, Anfang Juli 2024, habe ich das [Polyglot](https://github.com/untra/polyglot)-Plugin implementiert, um mehrsprachige Unterstützung für diesen Jekyll-basierten Blog hinzuzufügen, der über Github Pages gehostet wird.
-In diesem Beitrag teile ich die Bugs, die während der Implementierung des Polyglot-Plugins auftraten, deren Lösungsprozess und wie man HTML-Header und sitemap.xml unter Berücksichtigung von SEO erstellt.
+In diesem Beitrag teile ich die Bugs, die während der Anwendung des Polyglot-Plugins auf das Chirpy-Theme auftraten, deren Lösungsprozesse, sowie Methoden zum Schreiben von HTML-Headern und sitemap.xml unter Berücksichtigung der SEO.
 
 ## Anforderungen
-- [x] Die gebauten Ergebnisse (Webseiten) sollten in sprachspezifischen Pfaden (z.B. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}) bereitgestellt werden.
-- [x] Um den zusätzlichen Zeit- und Arbeitsaufwand für die mehrsprachige Unterstützung zu minimieren, sollte die Sprache beim Bauen automatisch anhand des lokalen Pfads der originalen Markdown-Datei (z.B. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) erkannt werden, ohne dass 'lang' und 'permalink' Tags im YAML-Frontmatter der Markdown-Datei manuell angegeben werden müssen.
-- [x] Der Header-Bereich jeder Seite der Website sollte angemessene Content-Language Meta-Tags und hreflang Alternate-Tags enthalten, um die SEO-Richtlinien für die Google-Mehrsprachensuche zu erfüllen.
-- [x] Die `sitemap.xml` sollte Links zu allen mehrsprachigen Seiten der Website ohne Auslassungen bereitstellen, und die `sitemap.xml` selbst sollte nur einmal im Root-Verzeichnis existieren, ohne Duplikate.
-- [ ] Alle Funktionen, die vom [Chirpy-Theme](https://github.com/cotes2020/jekyll-theme-chirpy) bereitgestellt werden, sollten auf jeder Sprachseite normal funktionieren. Falls nicht, müssen sie entsprechend angepasst werden.
+- [x] Die gebauten Ergebnisse (Webseiten) sollten unter sprachspezifischen Pfaden (z.B. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}) bereitgestellt werden können.
+- [x] Um den zusätzlichen Zeit- und Arbeitsaufwand für die mehrsprachige Unterstützung zu minimieren, sollte es möglich sein, die Sprache automatisch anhand des lokalen Pfads (z.B. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) zu erkennen, ohne dass 'lang' und 'permalink' Tags im YAML-Frontmatter der originalen Markdown-Dateien manuell spezifiziert werden müssen.
+- [x] Der Header-Bereich jeder Seite der Website sollte angemessene Content-Language Meta-Tags und hreflang Alternate-Tags enthalten, um die SEO-Richtlinien für die mehrsprachige Google-Suche zu erfüllen.
+- [x] Es sollte möglich sein, Links zu allen Seiten, die jede Sprache unterstützen, ohne Auslassungen in der `sitemap.xml` bereitzustellen, und die `sitemap.xml` selbst sollte nur einmal im Root-Verzeichnis ohne Duplikate existieren.
+- [ ] Alle vom [Chirpy-Theme](https://github.com/cotes2020/jekyll-theme-chirpy) bereitgestellten Funktionen sollten auf jeder Sprachseite normal funktionieren, andernfalls sollten sie entsprechend angepasst werden.
+  - [x] Normale Funktion von Features wie 'Recently Updated', 'Trending Tags' usw.
+  - [x] Keine falsch positiven (False Positive) Warnungen bei der Überprüfung interner Links während des Build-Prozesses mit GitHub Actions
+  - [ ] Normale Funktion der Beitragssuche in der oberen rechten Ecke des Blogs
 
 ## Anwendung des Polyglot-Plugins
 Da Jekyll standardmäßig keine mehrsprachigen Blogs unterstützt, ist ein externes Plugin erforderlich, um einen mehrsprachigen Blog zu implementieren, der die obigen Anforderungen erfüllt. Nach einiger Recherche stellte sich heraus, dass [Polyglot](https://github.com/untra/polyglot) häufig für die Implementierung mehrsprachiger Websites verwendet wird und die meisten der obigen Anforderungen erfüllen kann, daher wurde dieses Plugin ausgewählt.

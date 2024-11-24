@@ -10,15 +10,18 @@ tags:
 - RegExp
 ---
 ## Introdução
-Há cerca de 4 meses, no início de julho de 2024, adicionei suporte multilíngue ao meu blog hospedado no GitHub Pages baseado em Jekyll, aplicando o plugin [Polyglot](https://github.com/untra/polyglot).
-Neste post, compartilho os bugs encontrados durante a aplicação do plugin Polyglot, o processo de resolução, e como escrever cabeçalhos HTML e sitemap.xml considerando SEO.
+Há cerca de 4 meses, no início de julho de 2024, implementei o suporte multilíngue neste blog, que é hospedado via Github Pages com base em Jekyll, aplicando o plugin [Polyglot](https://github.com/untra/polyglot).
+Neste post, compartilho os bugs encontrados durante o processo de aplicação do plugin Polyglot ao tema Chirpy, como eles foram resolvidos, e como escrever cabeçalhos html e sitemap.xml considerando SEO.
 
 ## Requisitos
 - [x] Deve ser possível fornecer o resultado da compilação (páginas web) separado por caminhos de idioma (ex. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
-- [x] Para minimizar o tempo e esforço adicionais necessários para o suporte multilíngue, deve ser possível reconhecer automaticamente o idioma com base no caminho local onde o arquivo está localizado (ex. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) durante a compilação, sem ter que especificar manualmente as tags 'lang' e 'permalink' no YAML front matter do arquivo markdown original.
+- [x] Para minimizar o tempo e esforço adicionais necessários para o suporte multilíngue, deve ser possível reconhecer automaticamente o idioma com base no caminho local onde o arquivo está localizado (ex. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) durante a compilação, sem ter que especificar manualmente as tags 'lang' e 'permalink' no YAML front matter de cada arquivo markdown original.
 - [x] O cabeçalho de cada página do site deve incluir meta tags Content-Language apropriadas e tags alternativas hreflang para atender às diretrizes de SEO para pesquisa multilíngue do Google.
 - [x] Deve ser possível fornecer links para todas as páginas que suportam cada idioma no site sem omissões no `sitemap.xml`, e o próprio `sitemap.xml` deve existir apenas uma vez no caminho raiz, sem duplicações.
-- [ ] Todas as funcionalidades fornecidas pelo [tema Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) devem funcionar normalmente em cada página de idioma, e caso contrário, devem ser modificadas para funcionar corretamente.
+- [ ] Todas as funcionalidades fornecidas pelo [tema Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) devem funcionar normalmente em cada página de idioma, e se não funcionarem, devem ser modificadas para funcionar corretamente.
+  - [x] Funcionamento normal de recursos como 'Recently Updated', 'Trending Tags', etc.
+  - [x] Não ocorrência de alertas falso-positivos durante a verificação de erros de links internos no processo de compilação usando GitHub Actions
+  - [ ] Funcionamento normal da função de pesquisa de posts no canto superior direito do blog
 
 ## Aplicando o plugin Polyglot
 Como o Jekyll não suporta nativamente blogs multilíngues, é necessário usar um plugin externo para implementar um blog multilíngue que atenda aos requisitos acima. Após pesquisar, descobri que o [Polyglot](https://github.com/untra/polyglot) é amplamente usado para implementação de sites multilíngues e pode atender à maioria dos requisitos acima, então adotei esse plugin.

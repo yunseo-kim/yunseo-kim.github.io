@@ -1,7 +1,7 @@
 ---
 title: Cómo implementar soporte multilingüe en un blog Jekyll con Polyglot
 description: >-
-  Se presenta el proceso de implementación de soporte multilingüe utilizando el plugin Polyglot en un blog Jekyll basado en 'jekyll-theme-chirpy'.
+  Se presenta el proceso de implementación del soporte multilingüe utilizando el plugin Polyglot en un blog Jekyll basado en 'jekyll-theme-chirpy'.
 categories:
 - Blogging
 tags:
@@ -10,15 +10,18 @@ tags:
 - RegExp
 ---
 ## Introducción
-Hace aproximadamente 4 meses, a principios de julio de 2024, implementé el soporte multilingüe en este blog basado en Jekyll y alojado a través de Github Pages aplicando el plugin [Polyglot](https://github.com/untra/polyglot).
-En este artículo, compartiré los errores que surgieron durante el proceso de aplicación del plugin Polyglot, cómo los resolví, y cómo escribir el encabezado html y sitemap.xml considerando el SEO.
+Hace aproximadamente 4 meses, a principios de julio de 2024, implementé el soporte multilingüe en este blog basado en Jekyll y alojado a través de Github Pages, aplicando el plugin [Polyglot](https://github.com/untra/polyglot).
+En este artículo, compartiré los errores que surgieron durante el proceso de aplicación del plugin Polyglot al tema Chirpy, cómo los resolví, y cómo escribir el encabezado html y el sitemap.xml considerando el SEO.
 
 ## Requisitos
 - [x] Debe ser posible proporcionar el resultado de la compilación (páginas web) separado por rutas de idioma (ej. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
-- [x] Para minimizar el tiempo y esfuerzo adicionales requeridos para el soporte multilingüe, debe ser posible reconocer automáticamente el idioma según la ruta local donde se encuentra el archivo (ej. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) durante la compilación, sin tener que especificar manualmente las etiquetas 'lang' y 'permalink' en el YAML front matter del archivo markdown original.
+- [x] Para minimizar el tiempo y esfuerzo adicionales necesarios para el soporte multilingüe, debe ser posible reconocer automáticamente el idioma según la ruta local donde se encuentra el archivo markdown original (ej. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) durante la compilación, sin tener que especificar manualmente las etiquetas 'lang' y 'permalink' en el YAML front matter de cada archivo.
 - [x] El encabezado de cada página del sitio debe incluir las etiquetas meta Content-Language y hreflang alternativas apropiadas para cumplir con las pautas de SEO para la búsqueda multilingüe de Google.
-- [x] Debe ser posible proporcionar enlaces a todas las páginas que admiten cada idioma en el sitio sin omisiones en `sitemap.xml`, y el propio `sitemap.xml` debe existir solo uno en la ruta raíz sin duplicados.
-- [ ] Todas las funciones proporcionadas por el [tema Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) deben funcionar normalmente en cada página de idioma, y si no es así, deben modificarse para que funcionen correctamente.
+- [x] Debe ser posible proporcionar todos los enlaces de las páginas que soportan cada idioma en el sitio sin omisiones en `sitemap.xml`, y el propio `sitemap.xml` debe existir solo uno en la ruta raíz sin duplicados.
+- [ ] Todas las funciones proporcionadas por el [tema Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) deben funcionar correctamente en cada página de idioma, y si no es así, deben modificarse para que funcionen correctamente.
+  - [x] Funcionamiento correcto de características como 'Recently Updated', 'Trending Tags', etc.
+  - [x] No se producirán advertencias de falsos positivos durante la verificación de errores de enlaces internos en el proceso de compilación utilizando GitHub Actions
+  - [ ] Funcionamiento correcto de la función de búsqueda de publicaciones en la esquina superior derecha del blog
 
 ## Aplicación del plugin Polyglot
 Como Jekyll no admite blogs multilingües de forma nativa, se debe utilizar un plugin externo para implementar un blog multilingüe que cumpla con los requisitos anteriores. Después de buscar, encontré que [Polyglot](https://github.com/untra/polyglot) se usa ampliamente para implementar sitios web multilingües y puede satisfacer la mayoría de los requisitos anteriores, por lo que adopté este plugin.

@@ -11,14 +11,17 @@ tags:
 ---
 ## はじめに
 約4ヶ月前の2024年7月初め、JekyllベースでGithub Pagesを通じてホスティング中の本ブログに[Polyglot](https://github.com/untra/polyglot)プラグインを適用して多言語サポートの実装を追加しました。
-この記事では、Polyglotプラグインを適用する過程で発生したバグとその解決過程、そしてSEOを考慮したhtmlヘッダーとsitemap.xmlの作成方法を共有します。
+この記事では、ChirpyテーマにPolyglotプラグインを適用する過程で発生したバグとその解決過程、そしてSEOを考慮したhtmlヘッダーとsitemap.xmlの作成方法を共有します。
 
 ## 要件
 - [x] ビルドした結果物（ウェブページ）を言語別のパス（例：`/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）で区別して提供できること。
-- [x] 多言語サポートに追加的に必要な時間と労力を可能な限り最小化するために、作成した原本のマークダウンファイルのYAML front matterに'lang'および'permalink'タグを一々指定しなくても、ビルド時に該当ファイルが位置するローカルパス（例：`/_posts/ko/`{: .filepath}、`/_posts/ja/`{: .filepath}）に応じて自動的に言語を認識できること。
-- [x] サイト内の各ページのヘッダー部分は適切なContent-Languageメタタグとhreflang代替タグを含み、Googleの多言語検索のためのSEOガイドラインを満たすこと。
+- [x] 多言語サポートに追加的に必要な時間と労力を可能な限り最小化するため、作成したオリジナルのマークダウンファイルのYAML front matterに'lang'および'permalink'タグを一つ一つ指定しなくても、ビルド時にそのファイルが位置するローカルパス（例：`/_posts/ko/`{: .filepath}、`/_posts/ja/`{: .filepath}）に応じて自動的に言語を認識できること。
+- [x] サイト内の各ページのヘッダー部分は、適切なContent-Languageメタタグとhreflang代替タグを含め、Googleの多言語検索のためのSEOガイドラインを満たすこと。
 - [x] サイト内で各言語をサポートするすべてのページリンクを漏れなく`sitemap.xml`で提供できること、また`sitemap.xml`自体は重複なくルートパスに1つだけ存在すること。
 - [ ] [Chirpyテーマ](https://github.com/cotes2020/jekyll-theme-chirpy)で提供されるすべての機能が各言語ページで正常に動作すること。そうでない場合は正常に動作するように修正すること。
+  - [x] 'Recently Updated'、'Trending Tags'などの機能が正常に動作すること
+  - [x] GitHub Actionsを利用したビルド過程でサイト内部リンクのエラー検証時、偽陽性（False Positive）警告が発生しないこと
+  - [ ] ブログ右上の投稿検索機能が正常に動作すること
 
 ## Polyglotプラグインの適用
 Jekyllは多言語ブログを基本サポートしていないため、上記の要件を満たす多言語ブログの実装には外部プラグインを活用する必要があります。検索してみると[Polyglot](https://github.com/untra/polyglot)が多言語ウェブサイト実装用途でよく使われており、上記の要件のほとんどを満たすことができるため、このプラグインを採用しました。
