@@ -2,7 +2,7 @@
 title: How to Support Multiple Languages on a Jekyll Blog with Polyglot (1) - Applying Polyglot Plugin & Implementing hreflang alt Tags, Sitemap, and Language Selection Button
 description: >-
   This post introduces the process of implementing multilingual support on a Jekyll blog based on 'jekyll-theme-chirpy' using the Polyglot plugin.
-  As the first in the series, it covers applying the Polyglot plugin and modifying the HTML header and sitemap.
+  As the first in the series, this post covers applying the Polyglot plugin and modifying the HTML header and sitemap.
 categories:
 - Blogging
 tags:
@@ -18,11 +18,11 @@ The series consists of two posts, and this is the first post of the series.
 
 ## Requirements
 - [x] The built result (web pages) should be provided in language-specific paths (e.g., `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
-- [x] To minimize additional time and effort required for multilingual support, the language should be automatically recognized during build based on the local path (e.g., `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) of the original markdown file, without having to specify 'lang' and 'permalink' tags in the YAML front matter of each file.
-- [x] The header part of each page on the site should include appropriate Content-Language meta tags and hreflang alternate tags to meet Google's SEO guidelines for multilingual search.
-- [x] The `sitemap.xml` should provide links to all pages supporting each language on the site without omission, and there should be only one `sitemap.xml` in the root path without duplication.
-- [x] All features provided by the [Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy) should function normally on each language page, and if not, they should be modified to work properly.
-  - [x] 'Recently Updated', 'Trending Tags' features working normally
+- [x] To minimize additional time and effort required for multilingual support, the language should be automatically recognized based on the local path (e.g., `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) of the original markdown file during build, without having to specify 'lang' and 'permalink' tags in the YAML front matter of each file.
+- [x] The header part of each page on the site should include appropriate Content-Language meta tags and hreflang alternate tags to meet Google's multilingual search SEO guidelines.
+- [x] The `sitemap.xml`{: .filepath} should provide links to all pages supporting each language on the site without omission, and the `sitemap.xml`{: .filepath} itself should exist only once in the root path without duplication.
+- [x] All functions provided by the [Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy) should work normally on each language page, and if not, they should be modified to work properly.
+  - [x] 'Recently Updated', 'Trending Tags' functions working normally
   - [x] No errors occurring during the build process using GitHub Actions
   - [x] Post search function in the upper right corner of the blog working normally
 
@@ -41,7 +41,7 @@ end
 
 Then, running `bundle update` in the terminal will automatically complete the installation.
 
-If you're not using Bundler, you can directly install the gem by running `gem install jekyll-polyglot` in the terminal, and then add the plugin to `_config.yml` as follows:
+If you're not using Bundler, you can directly install the gem by running `gem install jekyll-polyglot` in the terminal, and then add the plugin to `_config.yml`{: .filepath} as follows:
 
 ```yml
 plugins:
@@ -50,7 +50,7 @@ plugins:
 {: file='_config.yml'}
 
 ### Configuration
-Next, open the `_config.yml` file and add the following content:
+Next, open the `_config.yml`{: .filepath} file and add the following content:
 
 ```yml
 # Polyglot Settings
@@ -65,8 +65,8 @@ lang_from_path: true
 - languages: List of languages you want to support
 - default_lang: Default fallback language
 - exclude_from_localization: Specify regular expressions for root file/folder paths to exclude from localization
-- parallel_localization: Boolean value specifying whether to parallelize multilingual processing during build
-- lang_from_path: Boolean value, if set to 'true', it automatically recognizes and uses the language code included in the markdown file's path string, even if the 'lang' attribute is not explicitly specified in the YAML front matter of the post markdown file
+- parallel_localization: Boolean value specifying whether to parallelize multilingual processing during the build process
+- lang_from_path: Boolean value, if set to 'true', it automatically recognizes and uses the language code if the path string of the markdown file includes it, without needing to explicitly specify the 'lang' attribute in the YAML front matter of the post markdown file
 
 > The [official Sitemap protocol documentation](https://www.sitemaps.org/protocol.html#location) states:
 >
@@ -74,22 +74,22 @@ lang_from_path: true
 >
 >> "It is strongly recommended that you place your Sitemap at the root directory of your web server."
 >
-> To comply with this, 'sitemap' should be added to the 'exclude_from_localization' list to ensure that only one `sitemap.xml` file exists in the root directory, rather than creating separate `sitemap.xml` files for each language, as shown in the incorrect example below.
+> To comply with this, you should add 'sitemap.xml' to the 'exclude_from_localization' list to ensure that only one `sitemap.xml`{: .filepath} file exists in the root directory, rather than creating separate ones for each language, as shown in the incorrect example below.
 >
 > Incorrect example (the content of each file is identical, not different for each language):
-> - /sitemap.xml
-> - /ko/sitemap.xml
-> - /es/sitemap.xml
-> - /pt-BR/sitemap.xml
-> - /ja/sitemap.xml
-> - /fr/sitemap.xml
-> - /de/sitemap.xml
+> - `/sitemap.xml`{: .filepath}
+> - `/ko/sitemap.xml`{: .filepath}
+> - `/es/sitemap.xml`{: .filepath}
+> - `/pt-BR/sitemap.xml`{: .filepath}
+> - `/ja/sitemap.xml`{: .filepath}
+> - `/fr/sitemap.xml`{: .filepath}
+> - `/de/sitemap.xml`{: .filepath}
 {: .prompt-tip }
 
-> Setting 'parallel_localization' to 'true' can significantly reduce build time, but as of July 2024, when this feature was activated for this blog, there was a bug where the link titles in the 'Recently Updated' and 'Trending Tags' sections of the right sidebar were not processed correctly and mixed with other languages. It seems not fully stabilized yet, so it's necessary to test if it works properly before applying it to your site. Also, [this feature is not supported on Windows, so it should be disabled](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
+> Setting 'parallel_localization' to 'true' can significantly reduce build time, but as of July 2024, when this feature was activated for this blog, there was a bug where the link titles in the 'Recently Updated' and 'Trending Tags' sections of the right sidebar were not processed correctly and mixed with other languages. It seems not fully stabilized yet, so it's necessary to test if it works properly before applying it to your site. Also, [this feature is not supported on Windows, so it should be deactivated](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
 {: .prompt-warning }
 
-Also, [in Jekyll 4.0, CSS sourcemap generation should be disabled as follows](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility):
+Also, [in Jekyll 4.0, you need to disable CSS sourcemap generation as follows](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility):
 
 ```yml
 sass:
@@ -98,10 +98,10 @@ sass:
 {: file='_config.yml'}
 
 ### Points to Note When Writing Posts
-When writing multilingual posts, the following points should be noted:
-- Proper language code designation: Appropriate ISO language codes should be specified using either the file path (e.g., `/_posts/ko/example-post.md`{: .filepath}) or the 'lang' attribute in the YAML front matter (e.g., `lang: ko`). Refer to the examples in the [Chrome developer documentation](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales).
+When writing multilingual posts, keep the following in mind:
+- Proper language code designation: You should specify the appropriate ISO language code using either the file path (e.g., `/_posts/ko/example-post.md`{: .filepath}) or the 'lang' attribute in the YAML front matter (e.g., `lang: ko`). Refer to the examples in the [Chrome developer documentation](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales).
 
-> However, while the [Chrome developer documentation](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales) uses formats like 'pt_BR' for region codes, you should actually use '-' instead of '_', like 'pt-BR', for it to work correctly when adding hreflang alternate tags to the HTML header later.
+> However, while the [Chrome developer documentation](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales) uses the format 'pt_BR' for region codes, you should actually use 'pt-BR' with a hyphen instead of an underscore for it to work properly when adding hreflang alternate tags to the HTML header later.
 
 - File paths and names should be consistent.
 
@@ -114,7 +114,7 @@ Now, for SEO purposes, we need to insert Content-Language meta tags and hreflang
 As of the latest version 1.8.1 release in November 2024, Polyglot has a feature that automatically performs the above task when the {% raw %}`{% I18n_Headers %}`{% endraw %} Liquid tag is called in the page header section.
 However, this assumes that the 'permalink' attribute tag has been explicitly specified for that page, and it does not work properly otherwise.
 
-Therefore, I brought in [Chirpy theme's head.html](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/head.html) and directly added the following content.
+Therefore, I imported [Chirpy theme's head.html](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/head.html) and directly added the following content.
 I referred to the [SEO Recipes page of the official Polyglot blog](https://polyglot.untra.io/seo/) but modified it to use the `page.url` attribute instead if `page.permalink` is not available.
 Also, referring to the [Google Search Central official documentation](https://developers.google.com/search/docs/specialty/international/localized-versions#xdefault), I specified `x-default` instead of `site.default_lang` as the hreflang attribute value for the site's default language page, so that the link to that page is recognized as a fallback when the visitor's preferred language is not in the list of languages supported by the site or when the visitor's preferred language cannot be recognized.
 
@@ -131,7 +131,7 @@ Also, referring to the [Google Search Central official documentation](https://de
 {% endraw %}
 
 ### Sitemap
-Since the sitemap automatically generated by Jekyll during build does not properly support multilingual pages, create a `sitemap.xml` file in the root directory and enter the following content:
+Since the sitemap automatically generated by Jekyll during build does not properly support multilingual pages, create a `sitemap.xml`{: .filepath} file in the root directory and enter the following content:
 
 {% raw %}
 ```liquid
@@ -172,7 +172,7 @@ layout: content
 {% endraw %}
 
 ## Adding Language Selection Button to Sidebar
-Create a `_includes/lang-selector.html` file and enter the following content:
+Create a `_includes/lang-selector.html`{: .filepath} file and enter the following content:
 
 {% raw %}
 ```liquid
@@ -201,7 +201,7 @@ Create a `_includes/lang-selector.html` file and enter the following content:
 {: file='_includes/lang-selector.html'}
 {% endraw %}
 
-Then, add the following three lines to the "sidebar-bottom" class section of [Chirpy theme's `_includes/sidebar.html`](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html) to make Jekyll load the content of `_includes/lang-selector.html` when building the page:
+Then, add the following three lines to the "sidebar-bottom" class section of [Chirpy theme's `_includes/sidebar.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html) to make Jekyll load the content of `_includes/lang-selector.html`{: .filepath} during page build:
 
 {% raw %}
 ```liquid

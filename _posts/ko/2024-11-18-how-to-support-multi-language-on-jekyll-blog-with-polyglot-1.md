@@ -20,7 +20,7 @@ tags:
 - [x] 빌드한 결과물(웹페이지)을 언어별 경로(ex. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath})로 구분하여 제공할 수 있어야 한다.
 - [x] 다국어 지원에 추가적으로 소요되는 시간과 노력을 가능한 최소화하기 위해, 작성한 원본 마크다운 파일의 YAML front matter에 'lang' 및 'permalink' 태그를 일일이 지정해 주지 않아도 빌드 시 해당 파일이 위치한 로컬 경로(ex. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath})에 따라 자동으로 언어를 인식할 수 있어야 한다.
 - [x] 사이트 내 각 페이지의 헤더 부분은 적절한 Content-Language 메타 태그와 hreflang 대체 태그를 포함하여 구글 다국어 검색을 위한 SEO 가이드라인을 충족해야 한다.
-- [x] 사이트 내에서 각 언어를 지원하는 모든 페이지 링크를 누락 없이 `sitemap.xml`에서 제공할 수 있어야 하며, `sitemap.xml` 자체는 중복 없이 루트 경로에 하나만 존재하여야 한다.
+- [x] 사이트 내에서 각 언어를 지원하는 모든 페이지 링크를 누락 없이 `sitemap.xml`{: .filepath}에서 제공할 수 있어야 하며, `sitemap.xml`{: .filepath} 자체는 중복 없이 루트 경로에 하나만 존재하여야 한다.
 - [x] [Chirpy 테마](https://github.com/cotes2020/jekyll-theme-chirpy)에서 제공하는 모든 기능은 각 언어 페이지에서 정상 작동해야 하며, 그렇지 않다면 정상 작동하게끔 수정해야 한다.
   - [x] 'Recently Updated', 'Trending Tags' 기능 정상 작동
   - [x] GitHub Actions를 이용한 빌드 과정에서 에러가 발생하지 않을 것
@@ -41,7 +41,7 @@ end
 
 이후 터미널에서 `bundle update`를 실행하면 자동으로 설치가 완료된다.
 
-만약 Bundler를 사용하지 않을 경우, 터미널에서 `gem install jekyll-polyglot` 명령으로 gem을 직접 설치한 후 `_config.yml`에 다음과 같이 플러그인을 추가할 수도 있다.
+만약 Bundler를 사용하지 않을 경우, 터미널에서 `gem install jekyll-polyglot` 명령으로 gem을 직접 설치한 후 `_config.yml`{: .filepath}에 다음과 같이 플러그인을 추가할 수도 있다.
 
 ```yml
 plugins:
@@ -50,7 +50,7 @@ plugins:
 {: file='_config.yml'}
 
 ### 설정 구성
-다음으로 `_config.yml` 파일을 열고 아래 내용을 추가한다.
+다음으로 `_config.yml`{: .filepath} 파일을 열고 아래 내용을 추가한다.
 
 ```yml
 # Polyglot Settings
@@ -74,16 +74,16 @@ lang_from_path: true
 >
 >> "It is strongly recommended that you place your Sitemap at the root directory of your web server."
 >
-> 이를 준수하기 위해서는 동일한 내용의 `sitemap.xml` 파일이 언어별로 만들어지지 않고 루트 디렉터리에 단 하나만 존재하도록 'exclude_from_localization' 리스트에 추가하여, 아래의 잘못된 예시처럼 되지 않도록 해야 한다.
+> 이를 준수하기 위해서는 동일한 내용의 `sitemap.xml`{: .filepath} 파일이 언어별로 만들어지지 않고 루트 디렉터리에 단 하나만 존재하도록 'exclude_from_localization' 리스트에 추가하여, 아래의 잘못된 예시처럼 되지 않도록 해야 한다.
 >
 > 잘못된 예시(각 파일의 내용은 언어별로 다르지 않고 모두 동일):
-> - /sitemap.xml
-> - /ko/sitemap.xml
-> - /es/sitemap.xml
-> - /pt-BR/sitemap.xml
-> - /ja/sitemap.xml
-> - /fr/sitemap.xml
-> - /de/sitemap.xml
+> - `/sitemap.xml`{: .filepath}
+> - `/ko/sitemap.xml`{: .filepath}
+> - `/es/sitemap.xml`{: .filepath}
+> - `/pt-BR/sitemap.xml`{: .filepath}
+> - `/ja/sitemap.xml`{: .filepath}
+> - `/fr/sitemap.xml`{: .filepath}
+> - `/de/sitemap.xml`{: .filepath}
 {: .prompt-tip }
 
 > 'parallel_localization'을 'true'로 지정하면 빌드 시간이 상당히 단축되는 장점이 있으나, 2024년 7월 시점 기준으로 본 블로그에 대해 해당 기능을 활성화했을 때 페이지 오른쪽 사이드바의 'Recently Updated'와 'Trending Tags' 부분 링크 제목이 정상적으로 처리되지 않고 다른 언어와 뒤섞이는 버그가 있었다. 아직 안정화가 덜 된 것 같으니 사이트에 적용하려면 미리 정상 작동하는지 테스트를 거칠 필요가 있다. 또한 [Windows를 사용하는 경우에도 해당 기능이 지원되지 않으므로 비활성화해야 한다](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
@@ -131,7 +131,7 @@ sass:
 {% endraw %}
 
 ### sitemap
-Jekyll에서 빌드 시 자동 생성하는 sitemap은 다국어 페이지를 정상 지원하지 않으므로, 루트 디렉터리에 `sitemap.xml` 파일을 생성하고 다음과 같이 내용을 입력한다.
+Jekyll에서 빌드 시 자동 생성하는 sitemap은 다국어 페이지를 정상 지원하지 않으므로, 루트 디렉터리에 `sitemap.xml`{: .filepath} 파일을 생성하고 다음과 같이 내용을 입력한다.
 
 {% raw %}
 ```liquid
@@ -172,7 +172,7 @@ layout: content
 {% endraw %}
 
 ## 사이드바에 언어 선택 버튼 추가
-`_includes/lang-selector.html` 파일을 생성하고 다음과 같이 내용을 입력하였다.
+`_includes/lang-selector.html`{: .filepath} 파일을 생성하고 다음과 같이 내용을 입력하였다.
 
 {% raw %}
 ```liquid
@@ -201,7 +201,7 @@ layout: content
 {: file='_includes/lang-selector.html'}
 {% endraw %}
 
-그 다음, [Chirpy 테마의 `_includes/sidebar.html`](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html) 중 "sidebar-bottom" 클래스 부분에 다음 세 줄을 추가하여 앞서 작성한 `_includes/lang-selector.html`의 내용을 Jekyll이 페이지 빌드 시에 불러오도록 하였다.
+그 다음, [Chirpy 테마의 `_includes/sidebar.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html) 중 "sidebar-bottom" 클래스 부분에 다음 세 줄을 추가하여 앞서 작성한 `_includes/lang-selector.html`{: .filepath}의 내용을 Jekyll이 페이지 빌드 시에 불러오도록 하였다.
 
 {% raw %}
 ```liquid
