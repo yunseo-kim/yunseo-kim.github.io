@@ -6,7 +6,11 @@
 {% capture result_elem %}
   <article class="px-1 px-sm-2 px-lg-4 px-xl-0">
     <header>
+      {% if site.active_lang != site.default_lang %}
+      <h2><a {% static_href %}href="/{{ site.active_lang }}{url}"{% endstatic_href %}>{title}</a></h2>
+      {% else %}
       <h2><a href="{url}">{title}</a></h2>
+      {% endif %}
       <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">
         {categories}
         {tags}
@@ -21,36 +25,29 @@
 <script>
   {% comment %} Note: dependent library will be loaded in `js-selector.html` {% endcomment %}
   document.addEventListener('DOMContentLoaded', () => {
-    // Get the current language
-    const lang = "{{site.active_lang}}";
-
-    // Construct the appropriate search JSON path
-    const searchJsonPath = lang === "{{site.default_lang}}"
-      ? '{{ "/assets/js/data/search.json" | relative_url }}'
-      : `{{ "/" | relative_url }}${lang}/assets/js/data/search.json`;
-
-    // Initialize Simple Jekyll Search
+    {% assign search_path = '/assets/js/data/search.json' %}
+    {% if site.active_lang != site.default_lang %}
+      {% assign search_path = '/' | append: site.active_lang | append: search_path %}
+    {% endif %}
+    
     SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('search-results'),
-      json: searchJsonPath, // Use the dynamic path based on language
+      json: '{{ search_path | relative_url }}',
       searchResultTemplate: '{{ result_elem | strip_newlines }}',
       noResultsText: '{{ not_found }}',
       templateMiddleware: function(prop, value, template) {
         if (prop === 'categories') {
           if (value === '') {
-            return `${value}`;
-          } else {
-            return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+            return '';
           }
+          return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
         }
-
         if (prop === 'tags') {
           if (value === '') {
-            return `${value}`;
-          } else {
-            return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+            return '';
           }
+          return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
         }
       }
     });
