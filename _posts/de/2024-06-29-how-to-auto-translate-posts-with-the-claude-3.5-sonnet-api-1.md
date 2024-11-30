@@ -1,7 +1,7 @@
 ---
-title: Wie man Posts mit der Claude 3.5 Sonnet API automatisch übersetzt (1) - Prompt-Design
+title: Wie man Posts automatisch mit der Claude 3.5 Sonnet API übersetzt (1) - Prompt-Design
 description: >-
-  Dieser Beitrag behandelt den Prozess des Prompt-Designs und der Python-Automatisierung für die mehrsprachige Übersetzung von Blog-Posts unter Verwendung des API-Schlüssels von Anthropic und des erstellten Prompts. Dies ist der erste Teil der Serie und stellt die Methoden und den Prozess des Prompt-Designs vor.
+  Dieser Beitrag behandelt den Prozess des Designs von Prompts für die mehrsprachige Übersetzung von Markdown-Textdateien und die Automatisierung der Arbeit mit Python unter Verwendung eines von Anthropic ausgestellten API-Schlüssels und des erstellten Prompts. Dies ist der erste Beitrag in der Serie und stellt die Methoden und Prozesse des Prompt-Designs vor.
 categories:
 - Blogging
 tags:

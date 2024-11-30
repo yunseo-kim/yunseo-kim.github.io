@@ -1,7 +1,7 @@
 ---
-title: Cómo traducir automáticamente publicaciones con la API de Claude 3.5 Sonnet (1) - Diseño del prompt
+title: Cómo traducir automáticamente publicaciones con la API de Claude 3.5 Sonnet (1) - Diseño de prompts
 description: >-
-  Cubrimos el proceso de diseñar prompts y automatizar el trabajo con Python utilizando una clave API de Anthropic y los prompts creados para traducir las publicaciones de este blog a varios idiomas. Este es el primer artículo de la serie que introduce el método y proceso de diseño de prompts.
+  Se aborda el proceso de diseñar prompts para la traducción multilingüe de archivos de texto en markdown, y automatizar el trabajo en Python utilizando la clave API emitida por Anthropic y los prompts creados. Este post es el primero de la serie y presenta el método y proceso de diseño de prompts.
 categories:
 - Blogging
 tags:

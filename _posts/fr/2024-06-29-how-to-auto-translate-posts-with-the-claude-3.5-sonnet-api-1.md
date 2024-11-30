@@ -1,7 +1,7 @@
 ---
 title: Comment traduire automatiquement des articles avec l'API Claude 3.5 Sonnet (1) - Conception du prompt
 description: >-
-  Nous abordons la conception du prompt pour l'application à la traduction multilingue des articles de ce blog, ainsi que l'automatisation du processus en Python en utilisant la clé API obtenue d'Anthropic et le prompt créé. Cet article est le premier de la série et présente la méthode et le processus de conception du prompt.
+  Cet article traite de la conception d'un prompt pour la traduction multilingue de fichiers texte en markdown, et du processus d'automatisation en Python en utilisant la clé API fournie par Anthropic et le prompt créé. Ce post est le premier d'une série et présente la méthode et le processus de conception du prompt.
 categories:
 - Blogging
 tags:

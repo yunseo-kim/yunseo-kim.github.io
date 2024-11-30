@@ -1,7 +1,7 @@
 ---
 title: How to Auto-translate Posts with Claude 3.5 Sonnet API (1) - Prompt Design
 description: >-
-  This post covers the process of designing prompts for multilingual translation of blog posts, and automating the work using Python with API keys issued by Anthropic and the designed prompts. This is the first post in the series, introducing prompt design methods and processes.
+  This post covers the process of designing prompts for multilingual translation of markdown text files, and automating the task using Python with the API key obtained from Anthropic and the created prompts. This is the first post in the series, introducing the method and process of prompt design.
 categories:
 - Blogging
 tags:
