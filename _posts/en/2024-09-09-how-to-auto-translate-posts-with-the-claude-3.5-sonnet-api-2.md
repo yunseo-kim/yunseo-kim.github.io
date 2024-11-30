@@ -1,7 +1,7 @@
 ---
 title: How to Auto-translate Posts with Claude 3.5 Sonnet API (2) - Writing and Applying Automation Scripts
 description: >-
-  This post covers the process of designing prompts for multilingual translation of blog posts, and automating the work using Python with API keys issued by Anthropic and created prompts. This is the second post in the series, introducing API setup, integration, and Python script writing methods.
+  This post covers designing prompts for multilingual translation of markdown text files, and the process of automating the task using Python by applying the API key obtained from Anthropic and the created prompts. As the second article in the series, it introduces the methods for API issuance, integration, and Python script writing.
 categories:
 - Blogging
 tags:

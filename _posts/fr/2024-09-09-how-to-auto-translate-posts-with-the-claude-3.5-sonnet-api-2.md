@@ -1,7 +1,7 @@
 ---
-title: Comment traduire automatiquement des articles avec l'API Claude 3.5 Sonnet (2) - Création et application du script d'automatisation
+title: Comment traduire automatiquement des articles avec l'API Claude 3.5 Sonnet (2) - Rédaction et application d'un script d'automatisation
 description: >-
-  Cet article traite de la conception de prompts et de l'automatisation du processus de traduction multilingue des articles de blog en utilisant Python avec une clé API obtenue d'Anthropic. C'est le deuxième article de la série, qui présente l'obtention de l'API, l'intégration et la méthode de création de scripts Python.
+  Cet article traite de la conception d'un prompt pour la traduction multilingue de fichiers texte en markdown, et du processus d'automatisation en Python en utilisant la clé API fournie par Anthropic et le prompt rédigé. Ce post est le deuxième de la série, présentant la méthode d'obtention et d'intégration de l'API ainsi que la rédaction du script Python.
 categories:
 - Blogging
 tags:
