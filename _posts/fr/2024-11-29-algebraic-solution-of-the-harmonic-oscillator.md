@@ -3,8 +3,8 @@ title: "Solution algébrique de l'oscillateur harmonique"
 description: >-
   On établit l'équation de Schrödinger pour l'oscillateur harmonique en mécanique quantique et on examine sa résolution algébrique.
   On détermine les fonctions d'onde et les niveaux d'énergie de tout état stationnaire à partir des commutateurs, des relations de commutation canoniques et des opérateurs d'échelle.
-categories: [Physique de l'ingénieur, Physique moderne]
-tags: [Mécanique quantique, Équation de Schrödinger, Fonction d'onde, Commutateur, Opérateurs d'échelle]
+categories: [Engineering Physics, Modern Physics]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder Operators]
 math: true
 ---
 
