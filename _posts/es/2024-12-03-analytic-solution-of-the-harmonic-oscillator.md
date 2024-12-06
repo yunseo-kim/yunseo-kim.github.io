@@ -218,7 +218,7 @@ A medida que $n$ aumenta, el oscilador cuántico se asemeja más al oscilador cl
 ### Visualización interactiva de las distribuciones de probabilidad del oscilador cuántico
 La siguiente es una visualización reactiva basada en Plotly.js que he creado personalmente. Puedes ajustar el valor de $n$ con el deslizador para ver la forma de la distribución de probabilidad clásica y $\|\psi_n\|^2$ en función de la posición $x$.
 
-{% include_cached quantum-harmonic-oscillator.html %}
+{% include quantum-harmonic-oscillator.html %}
 
 > - Visualización original: [Repositorio yunseo-kim/physics-visualization](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
 > - Licencia: [Ver aquí](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)

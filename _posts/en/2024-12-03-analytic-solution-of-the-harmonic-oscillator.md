@@ -218,7 +218,7 @@ As $n$ increases, the quantum oscillator becomes more similar to a classical osc
 ### Interactive Visualization of Quantum Oscillator Probability Distributions
 The following is a responsive visualization based on Plotly.js that I created myself. You can adjust the $n$ value using the slider to check the classical probability distribution and the shape of $\|\psi_n\|^2$ with respect to position $x$.
 
-{% include_cached quantum-harmonic-oscillator.html %}
+{% include quantum-harmonic-oscillator.html %}
 
 > - Original visualization: [yunseo-kim/physics-visualization repository](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
 > - License: [See here](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)

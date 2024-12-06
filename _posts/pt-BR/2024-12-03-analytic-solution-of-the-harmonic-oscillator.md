@@ -218,7 +218,7 @@ Quanto maior o $n$, mais o oscilador quântico se assemelha ao oscilador clássi
 ### Visualização Interativa das Distribuições de Probabilidade do Oscilador Quântico
 A seguir está uma visualização responsiva baseada em Plotly.js que eu mesmo criei. Você pode ajustar o valor de $n$ usando o controle deslizante para verificar a forma da distribuição de probabilidade clássica e $\|\psi_n\|^2$ em relação à posição $x$.
 
-{% include_cached quantum-harmonic-oscillator.html %}
+{% include quantum-harmonic-oscillator.html %}
 
 > - Visualização original: [Repositório yunseo-kim/physics-visualization](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
 > - Licença: [Veja aqui](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)

@@ -224,7 +224,7 @@ $n$が大きくなるほど、量子振動子は古典的振動子に類似し�
 ### 量子振動子の確率分布のインタラクティブな可視化
 以下は私が直接作成したPlotly.jsベースのレスポンシブな可視化です。スライダーで$n$値を調整しながら、位置$x$に対する古典的な確率分布および$\|\psi_n\|^2$の概形を確認できます。
 
-{% include_cached quantum-harmonic-oscillator.html %}
+{% include quantum-harmonic-oscillator.html %}
 
 > - オリジナルの可視化：[yunseo-kim/physics-visualization リポジトリ](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
 > - ライセンス：[こちらを参照](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)
