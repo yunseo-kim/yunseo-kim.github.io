@@ -218,9 +218,25 @@ As $n$ increases, the quantum oscillator becomes more similar to a classical osc
 ### Interactive Visualization of Quantum Oscillator Probability Distributions
 The following is a responsive visualization based on Plotly.js that I created myself. You can adjust the $n$ value using the slider to check the classical probability distribution and the shape of $\|\psi_n\|^2$ with respect to position $x$.
 
-{% include quantum-harmonic-oscillator.html %}
+<div class="responsive-iframe-container" style="position: relative; padding-bottom: 100%; overflow: hidden;">
+    <iframe id="responsive-iframe"
+            src="/physics-visualization/quantum-harmonic-oscillator.html" 
+            style="position: absolute; top: 0; left: 0; width: 100%; border: none;" 
+            allow="fullscreen">
+    </iframe>
+</div>
+<script>
+  document.getElementById('responsive-iframe').addEventListener('load', function() {
+    var iframe = this;
+    var iframeDocument = iframe.contentWindow.document;
+    // Get the scrollHeight of the iframe's document
+    var height = iframeDocument.documentElement.scrollHeight || iframeDocument.body.scrollHeight;
+    iframe.style.height = height + 'px';
+  });
+</script>
 
-> - Original visualization: [yunseo-kim/physics-visualization repository](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
+> - Original visualization page: <{{site.url}}/physics-visualization/quantum-harmonic-oscillator>
+> - Source code: [yunseo-kim/physics-visualization repository](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
 > - License: [See here](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)
 
 Also, if you can use Python on your computer and have the Numpy, Plotly, and Dash libraries installed, you can run the [`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum_oscillator.py) Python script in the same repository to see the results.

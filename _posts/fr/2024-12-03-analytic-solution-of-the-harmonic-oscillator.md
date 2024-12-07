@@ -218,9 +218,25 @@ Plus $n$ est grand, plus l'oscillateur quantique ressemble à un oscillateur cla
 ### Visualisation interactive des distributions de probabilité de l'oscillateur quantique
 Voici une visualisation réactive basée sur Plotly.js que j'ai créée moi-même. Vous pouvez ajuster la valeur de $n$ avec le curseur pour voir la forme de la distribution de probabilité classique et de $\|\psi_n\|^2$ en fonction de la position $x$.
 
-{% include quantum-harmonic-oscillator.html %}
+<div class="responsive-iframe-container" style="position: relative; padding-bottom: 100%; overflow: hidden;">
+    <iframe id="responsive-iframe"
+            src="/physics-visualization/quantum-harmonic-oscillator.html" 
+            style="position: absolute; top: 0; left: 0; width: 100%; border: none;" 
+            allow="fullscreen">
+    </iframe>
+</div>
+<script>
+  document.getElementById('responsive-iframe').addEventListener('load', function() {
+    var iframe = this;
+    var iframeDocument = iframe.contentWindow.document;
+    // Get the scrollHeight of the iframe's document
+    var height = iframeDocument.documentElement.scrollHeight || iframeDocument.body.scrollHeight;
+    iframe.style.height = height + 'px';
+  });
+</script>
 
-> - Visualisation originale : [Dépôt yunseo-kim/physics-visualization](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
+> - Page de visualisation originale : <{{site.url}}/physics-visualization/quantum-harmonic-oscillator>
+> - Code source : [Dépôt yunseo-kim/physics-visualization](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
 > - Licence : [Voir ici](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)
 
 De plus, si vous pouvez utiliser Python sur votre propre ordinateur et que vous avez un environnement avec les bibliothèques Numpy, Plotly et Dash installées, vous pouvez également exécuter le script Python [`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum_oscillator.py) dans le même dépôt pour voir les résultats.

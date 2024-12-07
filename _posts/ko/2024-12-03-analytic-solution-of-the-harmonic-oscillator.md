@@ -224,9 +224,25 @@ $n$이 클수록 양자진동자는 고전적 진동자와 유사한 양상을 �
 ### Interactive Visualization of Quantum Oscillator Probability Distributions
 다음은 내가 직접 작성한 Plotly.js 기반의 반응형 시각화이다. 슬라이더로 $n$값을 조절해 가며 위치 $x$에 대한 고전적인 확률분포 및 $\|\psi_n\|^2$의 개형을 확인할 수 있다.
 
-{% include quantum-harmonic-oscillator.html %}
+<div class="responsive-iframe-container" style="position: relative; padding-bottom: 100%; overflow: hidden;">
+    <iframe id="responsive-iframe"
+            src="/physics-visualization/quantum-harmonic-oscillator.html" 
+            style="position: absolute; top: 0; left: 0; width: 100%; border: none;" 
+            allow="fullscreen">
+    </iframe>
+</div>
+<script>
+  document.getElementById('responsive-iframe').addEventListener('load', function() {
+    var iframe = this;
+    var iframeDocument = iframe.contentWindow.document;
+    // Get the scrollHeight of the iframe's document
+    var height = iframeDocument.documentElement.scrollHeight || iframeDocument.body.scrollHeight;
+    iframe.style.height = height + 'px';
+  });
+</script>
 
-> - 원본 시각화: [yunseo-kim/physics-visualization 리포지터리](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
+> - 원본 시각화 페이지: <{{site.url}}/physics-visualization/quantum-harmonic-oscillator>
+> - 소스코드: [yunseo-kim/physics-visualization 리포지터리](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
 > - 라이선스: [See here](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)
 
 또한, 만약 본인 컴퓨터에서 Python을 사용할 수 있고 Numpy, Plotly, Dash 라이브러리가 설치된 환경이라면 동일한 리포지터리 내 [`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum_oscillator.py) Python 스크립트를 실행하여 결과를 볼 수도 있다.
