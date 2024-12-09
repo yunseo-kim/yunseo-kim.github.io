@@ -2,12 +2,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-
-    {%- capture seo_tags -%}
-      {% seo title=false %}
-    {%- endcapture -%}
-    {{ seo_tags }}
-
     <title>Quantum Harmonic Oscillator: Probability Density | by Yunseo Kim</title>
     <!-- Include Plotly.js from CDN -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -39,19 +33,6 @@
             font-weight: bold;
         }
     </style>
-
-    {% if jekyll.environment == 'production' %}
-        <!-- Web Analytics -->
-        {% for analytics in site.analytics %}
-          {% capture str %}{{ analytics }}{% endcapture %}
-          {% assign platform = str | split: '{' | first %}
-          {% if site.analytics[platform].id and site.analytics[platform].id != empty %}
-            {% include analytics/{{ platform }}.html %}
-          {% endif %}
-        {% endfor %}
-    {% endif %}
-
-    {% include metadata-hook.html %}
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBSWTJ27CE"></script>
