@@ -2,7 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Quantum Harmonic Oscillator: Probability Density</title>
+
+    {%- capture seo_tags -%}
+      {% seo title=false %}
+    {%- endcapture -%}
+    {{ seo_tags }}
+
+    <title>Quantum Harmonic Oscillator: Probability Density | by Yunseo Kim</title>
     <!-- Include Plotly.js from CDN -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- Include Math.js library for mathematical computations -->
@@ -33,6 +39,52 @@
             font-weight: bold;
         }
     </style>
+
+    {% if jekyll.environment == 'production' %}
+        <!-- PWA -->
+        {% if site.pwa.enabled %}
+          <script
+            defer
+            src="{{ '/app.min.js' | relative_url }}?baseurl={{ site.baseurl | default: '' }}&register={{ site.pwa.cache.enabled }}"
+          ></script>
+        {% endif %}
+
+        <!-- Web Analytics -->
+        {% for analytics in site.analytics %}
+          {% capture str %}{{ analytics }}{% endcapture %}
+          {% assign platform = str | split: '{' | first %}
+          {% if site.analytics[platform].id and site.analytics[platform].id != empty %}
+            {% include analytics/{{ platform }}.html %}
+          {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {% include metadata-hook.html %}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBSWTJ27CE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FBSWTJ27CE');
+    </script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8691553075583022"
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Clarity tracking code for https://www.yunseo.kim/ -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "nbxyh17xog");
+    </script>
+    
 </head>
 <body>
 
