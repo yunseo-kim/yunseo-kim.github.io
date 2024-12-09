@@ -220,7 +220,7 @@ Je größer $n$ wird, desto ähnlicher wird der Quantenoszillator dem klassische
 ### Interaktive Visualisierung der Wahrscheinlichkeitsverteilungen des Quantenoszillators
 Das Folgende ist eine reaktive Visualisierung basierend auf Plotly.js, die ich selbst erstellt habe. Sie können den $n$-Wert mit dem Schieberegler anpassen und die klassische Wahrscheinlichkeitsverteilung sowie die Form von $\|\psi_n\|^2$ für die Position $x$ überprüfen.
 
-<div class="plotly-iframe-container" style="position: relative; padding-bottom: 100%; overflow: hidden;">
+<div class="plotly-iframe-container" style="position: relative; padding-bottom: 110%; overflow: hidden;">
     <iframe id="plotly-iframe"
             src="/physics-visualization/quantum-harmonic-oscillator.html" 
             style="position: absolute; top: 0; left: 0; width: 100%; height: 120%; border: none;" 
