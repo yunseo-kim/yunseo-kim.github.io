@@ -19,7 +19,7 @@ title: Yunseo Kim's Insights           # the main title
 tagline: Mathematics, Physics, and DS. # it will display as the subtitle
 
 description: >-                        # used by seo meta and the atom feed
-  Yunseo Kim's personal blog, which mainly covers mathematics, physics, and DS.
+  Yunseo Kim's personal blog mainly covering mathematics, physics, and DS.
 
 # fill in the protocol & hostname for your site
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -101,7 +101,7 @@ cdn:
 
 # the avatar on sidebar, support local or CORS resources
 avatar: 'https://avatars.githubusercontent.com/u/65203374' # '/assets/img/profile.tiff'
-social_preview_image: '/assets/img/default-social-preview.tiff'
+social_preview_image: '/assets/img/default-social-preview.png'
 
 # boolean type, the global switch for TOC in posts.
 toc: true
