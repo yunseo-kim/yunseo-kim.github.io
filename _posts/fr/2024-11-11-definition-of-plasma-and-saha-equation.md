@@ -136,7 +136,7 @@ L'énergie cinétique moyenne par particule à la température $T$ est $\cfrac{1
 La température $T$ correspondant à $kT=1\mathrm{eV}$ est :
 
 $$ \begin{align*}
-T\mathrm[K] &= \frac{1,6 \times 10^{-19}\mathrm{[J]}}{1,38 \times 10^{-23}\mathrm{[J/K]}} \\
+T\mathrm{[K]} &= \frac{1,6 \times 10^{-19}\mathrm{[J]}}{1,38 \times 10^{-23}\mathrm{[J/K]}} \\
 &= 11600\mathrm{[K]}
 \end{align*} \label{eqn:temp_conv_factor}\tag{7}$$
 

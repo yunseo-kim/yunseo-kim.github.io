@@ -136,7 +136,7 @@ Die durchschnittliche kinetische Energie pro Teilchen bei der Temperatur T betr√
 Die Temperatur T, bei der kT = 1 eV ist, betr√§gt:
 
 $$ \begin{align*}
-T\mathrm[K] &= \frac{1,6 \times 10^{-19}\mathrm{[J]}}{1,38 \times 10^{-23}\mathrm{[J/K]}} \\
+T\mathrm{[K]} &= \frac{1,6 \times 10^{-19}\mathrm{[J]}}{1,38 \times 10^{-23}\mathrm{[J/K]}} \\
 &= 11600\mathrm{[K]}
 \end{align*} \label{eqn:temp_conv_factor}\tag{7}$$
 

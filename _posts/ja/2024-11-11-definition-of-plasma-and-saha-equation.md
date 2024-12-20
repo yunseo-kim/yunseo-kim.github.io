@@ -136,7 +136,7 @@ $$ f(v) = \left(\frac{m}{2\pi k_B T} \right)^{3/2} 4\pi v^2 \exp{\left(-\frac{mv
 $kT=1\mathrm{eV}$のときの温度$T$は
 
 $$ \begin{align*}
-T\mathrm[K] &= \frac{1.6 \times 10^{-19}\mathrm{[J]}}{1.38 \times 10^{-23}\mathrm{[J/K]}} \\
+T\mathrm{[K]} &= \frac{1.6 \times 10^{-19}\mathrm{[J]}}{1.38 \times 10^{-23}\mathrm{[J/K]}} \\
 &= 11600\mathrm{[K]}
 \end{align*} \label{eqn:temp_conv_factor}\tag{7}$$
 
