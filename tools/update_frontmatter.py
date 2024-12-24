@@ -122,7 +122,7 @@ def overwrite_frontmatter(target_file_path, new_frontmatter):
         )
 
         # Construct the final Markdown content
-        updated_post_str = f"---\n{yaml_part}---\n{post.content}"
+        updated_post_str = f"---\n{yaml_part}---\n{post.content}\n"
 
         with open(target_file_path, 'w', encoding='utf-8') as f:
             f.write(updated_post_str)
