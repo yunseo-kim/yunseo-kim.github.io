@@ -2,6 +2,8 @@ import os
 import hashlib
 import csv
 
+default_source_lang_code = "ko"
+
 def compute_file_hash(file_path):
     sha256_hash = hashlib.sha256()
     with open(file_path, "rb") as f:
@@ -28,8 +30,8 @@ def update_hash_csv(csv_path, file_hashes):
         for file_path, hash_value in sorted_file_hashes.items():
             writer.writerow([file_path, hash_value])
 
-def changed_files():
-    posts_dir = '../_posts/ko/'
+def changed_files(source_lang_code):
+    posts_dir = '../_posts/' + source_lang_code + '/'
     hash_csv_path = './hash.csv'
     
     existing_hashes = load_existing_hashes(hash_csv_path)
@@ -60,7 +62,7 @@ if __name__ == "__main__":
     initial_wd = os.getcwd()
     os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
-    changed_files = changed_files()
+    changed_files = changed_files(default_source_lang_code)
     if changed_files:
         print("Changed files:")
         for file in changed_files:

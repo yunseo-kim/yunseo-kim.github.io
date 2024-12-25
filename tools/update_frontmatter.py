@@ -7,7 +7,7 @@ import yaml
 
 posts_dir = '../_posts/'
 source_lang_code = "ko"
-list_lang_codes = ["en", "es", "pt-BR", "ja", "fr", "de"]
+target_lang_codes = ["en", "es", "pt-BR", "ja", "fr", "de"]
 exclude_keys = ["title", "description"]
 
 ###############################################################################
@@ -127,7 +127,7 @@ def overwrite_frontmatter(target_file_path, new_frontmatter):
         with open(target_file_path, 'w', encoding='utf-8') as f:
             f.write(updated_post_str)
 
-        print(f"Successfully updated frontmatter for {target_file_path}")
+        # print(f"Successfully updated frontmatter for {target_file_path}")
 
     except FileNotFoundError:
         print(f"Warning: The file {target_file_path} does not exist. Skipping.")
@@ -156,7 +156,7 @@ def update_frontmatter_bulk(filename):
     }
 
     # Overwrite for each language
-    for lang_code in list_lang_codes:
+    for lang_code in target_lang_codes:
         target_path = os.path.join(posts_dir, lang_code, filename)
         overwrite_frontmatter(target_path, filtered_frontmatter)
 
@@ -168,7 +168,7 @@ if __name__ == "__main__":
     initial_wd = os.getcwd()
     os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
-    changed_files = compare_hash.changed_files()
+    changed_files = compare_hash.changed_files(source_lang_code)
     if not changed_files:
         sys.exit("No files have changed.")
     print("Changed files:")
