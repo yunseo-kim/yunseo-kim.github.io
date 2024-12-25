@@ -1,17 +1,14 @@
 ---
 title: "GitHub Markdown Syntax Summary"
 description: >-
-  Learn what Markdown is and summarize the main Markdown syntax based on GitHub Flavored Markdown for GitHub Pages blog hosting.
-categories:
-  - Blogging
-tags:
-  - Jekyll
-toc: true
-toc_sticky: true
+  Learn what Markdown is and summarize key Markdown syntax based on GitHub Flavored Markdown for GitHub Pages blog hosting.
+categories: [AI & Data, Blogging]
+tags: [Jekyll, Markdown]
+image: /assets/img/technology.jpg
 ---
 
 To utilize GitHub Pages, it's necessary to understand **markdown** syntax.
-This summary is based on GitHub's official documents [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) and [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+This summary is based on GitHub's official documents: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) and [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ## 1. What is Markdown
 > **Markdown** is a lightweight markup language based on plain text. It is used to write formatted documents in plain text and is characterized by its easy and simple syntax compared to general markup languages. It is widely used in README files distributed with application software or online posts because it can be easily converted to formatted documents such as HTML and Rich Text Format (RTF).
@@ -20,10 +17,10 @@ This summary is based on GitHub's official documents [Mastering Markdown](https:
 -[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. Markdown Syntax
-Since Markdown doesn't have a set standard, detailed syntax may vary slightly depending on where it's used. The Markdown syntax summarized here is based on [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+As there is no set standard for Markdown, the detailed syntax may vary slightly depending on where it's used. The Markdown syntax summarized here is based on [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ### 2.1. Line Breaks, Paragraph Separation
-In Markdown, a single press of the enter key is not recognized as a line break.
+In Markdown, a single press of the Enter key is not recognized as a line break.
 ~~~
 First sentence.
 Second sentence.
@@ -43,7 +40,7 @@ First sentence.
 Second sentence.  
 Third sentence.
 
-Paragraphs are separated by a blank line (pressing enter twice).
+Paragraphs are separated by a blank line (pressing Enter twice).
 ~~~
 One paragraph.
 
@@ -63,12 +60,7 @@ There are six levels in total.
 ##### This is an H5
 ###### This is an H6
 ```
-# This is an H1
-## This is an H2
-### This is an H3
-#### This is an H4
-##### This is an H5
-###### This is an H6
+In principle, there should only be one H1 tag per page, so you usually won't directly write it when creating posts or documents.
 
 ### 2.3. Emphasis
 ```
@@ -96,7 +88,7 @@ _You **can** combine them_
 
 ***All this text is important***
 
-### 2.4. Text Quoting
+### 2.4. Text Quotation
 Use \>.
 ```
 > This is a first blockquote.
@@ -107,7 +99,7 @@ Use \>.
 >> This is a second blockquote.
 >>> This is a third blockquote.
 
-### 2.5. Code Quoting
+### 2.5. Code Quotation
 Use \``` or \~~~.
 ~~~
 ```
@@ -122,7 +114,7 @@ git add
 git commit
 ```
 
-You can also activate syntax highlighting by specifying the programming language.
+You can also specify a programming language to activate syntax highlighting.
 ~~~
 ```ruby
 require 'redcarpet'
@@ -144,7 +136,7 @@ puts markdown.to_html
 [GitHub Pages](https://pages.github.com/)  
 <https://pages.github.com/>
 
-You can also use relative path links pointing to other files within the repository. The usage is the same as in the terminal.
+You can also use relative path links to other files within the repository. The usage is the same as in the terminal.
 ```
 [README](../README.md)
 ```

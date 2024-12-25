@@ -1,13 +1,10 @@
 ---
-title: "Resumen de la sintaxis de Markdown de GitHub"
+title: "Resumen de la sintaxis de Markdown en GitHub"
 description: >-
   Exploramos qué es Markdown y resumimos la sintaxis principal de Markdown según GitHub Flavored Markdown para el alojamiento de blogs en GitHub Pages.
-categories:
-  - Blogging
-tags:
-  - Jekyll
-toc: true
-toc_sticky: true
+categories: [AI & Data, Blogging]
+tags: [Jekyll, Markdown]
+image: /assets/img/technology.jpg
 ---
 
 Para utilizar GitHub Pages, es necesario conocer la sintaxis de **markdown**.
@@ -15,14 +12,14 @@ Este artículo se basa en los documentos oficiales de GitHub [Mastering Markdown
 
 ## 1. ¿Qué es Markdown?
 > **Markdown** es un lenguaje de marcado ligero basado en texto plano. Se utiliza para crear documentos con formato utilizando texto plano y se caracteriza por tener una sintaxis más sencilla y simple que los lenguajes de marcado comunes. Se convierte fácilmente a HTML y texto enriquecido (RTF), por lo que se usa ampliamente en archivos README distribuidos con software y en publicaciones en línea.
->> John Gruber creó el lenguaje Markdown en 2004, con una importante colaboración de Aaron Swartz en la sintaxis, con el objetivo de permitir a las personas escribir usando un formato de texto plano fácil de leer y escribir, y opcionalmente convertirlo a XHTML (o HTML) estructuralmente válido.
+>> John Gruber creó el lenguaje Markdown en 2004, con una importante colaboración de Aaron Swartz en la sintaxis, con el objetivo de permitir que las personas puedan escribir usando un formato de texto plano fácil de leer y escribir, y opcionalmente convertirlo a XHTML (o HTML) estructuralmente válido.
 
 -[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. Sintaxis de Markdown
 Como no hay un estándar establecido para Markdown, la sintaxis detallada puede variar ligeramente según dónde se use. La sintaxis de Markdown resumida aquí se basa en [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
-### 2.1. Saltos de línea, separación de párrafos
+### 2.1. Saltos de línea y separación de párrafos
 En Markdown, presionar la tecla Enter una vez no se reconoce como un salto de línea.
 ~~~
 Primera oración.
@@ -63,12 +60,7 @@ Hay un total de 6 niveles.
 ##### This is an H5
 ###### This is an H6
 ```
-# This is an H1
-## This is an H2
-### This is an H3
-#### This is an H4
-##### This is an H5
-###### This is an H6
+En principio, la etiqueta H1 solo debe aparecer una vez por página, por lo que normalmente no se usa directamente al escribir publicaciones o documentos.
 
 ### 2.3. Énfasis
 ```
@@ -108,7 +100,7 @@ Se utiliza \>.
 >>> This is a third blockquote.
 
 ### 2.5. Citas de código
-Se utiliza \``` o \~~~.
+Se utilizan \``` o \~~~.
 ~~~
 ```
 git status
@@ -150,7 +142,7 @@ También se pueden usar enlaces de ruta relativa que apunten a otros archivos de
 ```
 
 ### 2.7. Listas no ordenadas
-Se utiliza \- o \*.
+Se utilizan \- o \*.
 ```
 - George Washington
 - John Adams
@@ -202,7 +194,7 @@ Método: ![(Opcional)Descripción de la imagen](url){(Opcional)Opciones adiciona
 ```
 
 ### 2.12. Creación de tablas
-Se pueden crear tablas usando | y -.
+Se pueden crear tablas utilizando | y -.
 Debe dejarse una línea en blanco antes de la tabla para que se muestre correctamente.
 Se deben usar al menos tres - para que se reconozca correctamente.
 ```
