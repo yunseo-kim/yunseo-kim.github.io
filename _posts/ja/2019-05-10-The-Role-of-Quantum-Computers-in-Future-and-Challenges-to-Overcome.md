@@ -36,6 +36,6 @@ AIが本格的に注目を集め始めたのは2010年代に入ってからだ�
 - [基礎科学研究院科学知識百科、"話題の多い量子コンピューター、誤解と事実"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14100)
 - [基礎科学研究院科学知識百科、"量子コンピューティングの世界、基礎科学が土台を築く"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14274)
 - [サムスン電子ニュースルーム、"'瞬間の魔法'量子コンピューターの世界が来る"](https://news.samsung.com/kr/찰나의-마법-양자컴퓨터-세계가-온다)
-- [CIO Korea、"イ・ジェヨンコラム | 量子コンピューターと人工知能の大衆化"](https://www.ciokorea.com/news/38257)
+- [CIO Korea、"イ・ジェヨンコラム \| 量子コンピューターと人工知能の大衆化"](https://www.ciokorea.com/news/38257)
 - サイエンスオン、"量子コンピューター'キュービット競争'激しくなる"、http://scienceon.hani.co.kr/?document_srl=474039&mid=media&m=0、(2019)
-- [毎日経済、"5年
+- [毎日経済、「5年後、量子コンピュータが世界を覆す」](https://www.mk.co.kr/news/business/view/2018/08/515351/)

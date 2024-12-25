@@ -41,6 +41,6 @@ Segundo o Professor Lee Jun-koo da Escola de Engenharia Elétrica e Eletrônica 
 - [Enciclopédia de Conhecimento Científico do Instituto de Ciências Básicas, "O muito falado computador quântico, mal-entendidos e fatos"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14100)
 - [Enciclopédia de Conhecimento Científico do Instituto de Ciências Básicas, "O mundo da computação quântica, a ciência básica estabelece as bases"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14274)
 - [Sala de Notícias da Samsung Electronics, "O mundo do computador quântico, 'magia momentânea', está chegando"](https://news.samsung.com/kr/찰나의-마법-양자컴퓨터-세계가-온다)
-- [CIO Korea, "Coluna de Lee Jae-yong | Popularização do computador quântico e inteligência artificial"](https://www.ciokorea.com/news/38257)
+- [CIO Korea, "Coluna de Lee Jae-yong \| Popularização do computador quântico e inteligência artificial"](https://www.ciokorea.com/news/38257)
 - Science On, "A competição de qubits em computadores quânticos se intensifica", http://scienceon.hani.co.kr/?document_srl=474039&mid=media&m=0, (2019)
 - [Maeil Business Newspaper, "Em 5 anos, o computador quântico vai virar o mundo de cabeça para baixo"](https://www.mk.co.kr/news/business/view/2018/08/515351/)

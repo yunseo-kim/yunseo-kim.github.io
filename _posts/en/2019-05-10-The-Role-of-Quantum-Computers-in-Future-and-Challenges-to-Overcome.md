@@ -40,6 +40,6 @@ According to Professor Lee Jun-koo of the School of Electrical and Electronic En
 - [IBS Science Knowledge Encyclopedia, "The Much-Talked-About Quantum Computer, Misconceptions and Facts"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14100)
 - [IBS Science Knowledge Encyclopedia, "The World of Quantum Computing, Basic Science Lays the Foundation"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14274)
 - [Samsung Electronics Newsroom, "The World of 'Momentary Magic' Quantum Computers is Coming"](https://news.samsung.com/kr/찰나의-마법-양자컴퓨터-세계가-온다)
-- [CIO Korea, "Lee Jae-yong Column | Popularization of Quantum Computers and Artificial Intelligence"](https://www.ciokorea.com/news/38257)
+- [CIO Korea, "Lee Jae-yong Column \| Popularization of Quantum Computers and Artificial Intelligence"](https://www.ciokorea.com/news/38257)
 - ScienceOn, "Quantum Computer 'Qubit Competition' Intensifies", http://scienceon.hani.co.kr/?document_srl=474039&mid=media&m=0, (2019)
 - [Maeil Business Newspaper, "Quantum Computers Will Flip the World in 5 Years"](https://www.mk.co.kr/news/business/view/2018/08/515351/)
