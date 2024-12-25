@@ -1,13 +1,13 @@
 ---
-title: "Équation différentielle exacte et facteur intégrant"
-description: >-
-  Nous examinons les méthodes pour déterminer et résoudre les équations différentielles exactes, ainsi que le concept de facteur intégrant.
+title: Équation différentielle exacte et facteur intégrant
+description: Nous examinons les méthodes pour déterminer et résoudre les équations
+  différentielles exactes, ainsi que le concept de facteur intégrant.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 ```mermaid
 flowchart TD

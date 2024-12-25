@@ -1,12 +1,13 @@
 ---
-title: "Masse et énergie, particules et ondes"
-description: >-
-  Explorons le principe d'équivalence masse-énergie de la théorie de la relativité et calculons l'énergie d'un électron en mouvement en tenant compte des effets relativistes.
+title: Masse et énergie, particules et ondes
+description: Explorons le principe d'équivalence masse-énergie de la théorie de la
+  relativité et calculons l'énergie d'un électron en mouvement en tenant compte des
+  effets relativistes.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Principe d'équivalence masse-énergie
 La masse et l'énergie sont identiques et peuvent être mutuellement converties.
 

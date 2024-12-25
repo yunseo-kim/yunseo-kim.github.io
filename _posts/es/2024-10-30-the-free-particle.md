@@ -1,14 +1,14 @@
 ---
-title: "La partícula libre"
-description: >-
-  Exploramos el hecho de que la solución separable para una partícula libre con V(x)=0 no se puede normalizar y lo que esto significa,
-  demostramos cualitativamente la relación de incertidumbre posición-momento para la solución general,
-  y calculamos e interpretamos físicamente la velocidad de fase y de grupo de Ψ(x,t).
+title: La partícula libre
+description: Exploramos el hecho de que la solución separable para una partícula libre
+  con V(x)=0 no se puede normalizar y lo que esto significa, demostramos cualitativamente
+  la relación de incertidumbre posición-momento para la solución general, y calculamos
+  e interpretamos físicamente la velocidad de fase y de grupo de Ψ(x,t).
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Partícula libre: $V(x)=0$, sin condiciones de contorno (energía arbitraria)
 > - La solución separable $\Psi_k(x,t) = Ae^{i\left(kx-\frac{\hbar k^2}{2m}t \right)}$ diverge al infinito cuando se integra el cuadrado, por lo que no se puede normalizar, lo que implica:

@@ -1,13 +1,15 @@
 ---
-title: "Neutronenwechselwirkungen und Wirkungsquerschnitte"
-description: >-
-  Neutronen sind elektrisch neutral und können daher ohne elektrische Beeinflussung durch die Elektronenwolke des Atoms direkt mit dem Atomkern reagieren. Wir betrachten die Arten der Neutronenwechselwirkungen und das Konzept des Wirkungsquerschnitts des Atomkerns.
+title: Neutronenwechselwirkungen und Wirkungsquerschnitte
+description: Neutronen sind elektrisch neutral und können daher ohne elektrische Beeinflussung
+  durch die Elektronenwolke des Atoms direkt mit dem Atomkern reagieren. Wir betrachten
+  die Arten der Neutronenwechselwirkungen und das Konzept des Wirkungsquerschnitts
+  des Atomkerns.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
+image: /assets/img/atoms.png
 ---
-
 ## Neutronenwechselwirkungen
 Neutronen sind elektrisch neutral und werden daher nicht von der elektrischen Wirkung der Elektronen oder der positiven Ladung des Atomkerns im Atom beeinflusst. Folglich können Neutronen durch die Elektronenwolke des Atoms hindurchgehen und direkt mit dem Atomkern reagieren.
 

@@ -1,13 +1,17 @@
 ---
-title: "Kernfusion: Von der toroidalen Einschnürung bis zum Tokamak"
-description: >-
-  Dieser Beitrag behandelt das Konzept der Kernfusion, die Gründe für ihr Interesse als zukünftige Energiequelle, die technischen Ziele für die kommerzielle Nutzung der Kernfusion und die Geschichte der Fusionsreaktortechnologie von der toroidalen Einschnürung bis zum ITER-Projekt.
-  Der Autor weist darauf hin, dass dieser Essay ursprünglich für eine Schulaktivität in der 11. Klasse geschrieben wurde und daher in einem eher umgangssprachlichen Stil verfasst ist, der sich von anderen Beiträgen unterscheidet. Er wurde zu Archivierungszwecken unverändert hochgeladen.
+title: 'Kernfusion: Von der toroidalen Einschnürung bis zum Tokamak'
+description: Dieser Beitrag behandelt das Konzept der Kernfusion, die Gründe für ihr
+  Interesse als zukünftige Energiequelle, die technischen Ziele für die kommerzielle
+  Nutzung der Kernfusion und die Geschichte der Fusionsreaktortechnologie von der
+  toroidalen Einschnürung bis zum ITER-Projekt. Der Autor weist darauf hin, dass dieser
+  Essay ursprünglich für eine Schulaktivität in der 11. Klasse geschrieben wurde und
+  daher in einem eher umgangssprachlichen Stil verfasst ist, der sich von anderen
+  Beiträgen unterscheidet. Er wurde zu Archivierungszwecken unverändert hochgeladen.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
+image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## Was ist Kernfusion?
 
 Kernfusion bezeichnet die Reaktion, bei der zwei Atomkerne zusammenstoßen und zu einem schwereren Atomkern verschmelzen. Grundsätzlich tragen Atomkerne aufgrund der Protonen in ihrem Inneren eine positive Ladung, sodass sich zwei Atomkerne bei Annäherung durch die elektrische Abstoßung gegenseitig abstoßen. Wenn die Atomkerne jedoch auf extrem hohe Temperaturen erhitzt werden, kann ihre kinetische Energie die elektrische Abstoßung überwinden, sodass die beiden Atomkerne kollidieren können. Sobald sich zwei Atomkerne ausreichend angenähert haben, wirkt die starke Kernkraft und verbindet sie zu einem einzigen Atomkern.

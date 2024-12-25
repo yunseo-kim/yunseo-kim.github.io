@@ -1,12 +1,12 @@
 ---
-title: "Crear y gestionar un blog en GitHub Pages"
-description: >-
-  Exploremos las características y diferencias entre páginas web estáticas y dinámicas, los generadores de sitios estáticos (Static Site Generators) y alojemos un blog Jekyll en GitHub Pages.
+title: Crear y gestionar un blog en GitHub Pages
+description: Exploremos las características y diferencias entre páginas web estáticas
+  y dinámicas, los generadores de sitios estáticos (Static Site Generators) y alojemos
+  un blog Jekyll en GitHub Pages.
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.jpg
 ---
-
 Comencé a alojar un blog en GitHub Pages usando Jekyll a principios de 2021. Sin embargo, como no documenté adecuadamente el proceso de instalación en ese momento, tuve algunas dificultades con el mantenimiento posterior, así que decidí hacer un breve resumen del proceso de instalación y los métodos de mantenimiento.
 
 (+ Actualización de contenido en diciembre de 2024)

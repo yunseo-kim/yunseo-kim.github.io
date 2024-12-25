@@ -1,13 +1,13 @@
 ---
-title: "Concepts de base de la modélisation"
-description: >-
-  Découvrez les concepts de modélisation mathématique, d'équations différentielles ordinaires, d'équations aux dérivées partielles et de problèmes à valeur initiale.
+title: Concepts de base de la modélisation
+description: Découvrez les concepts de modélisation mathématique, d'équations différentielles
+  ordinaires, d'équations aux dérivées partielles et de problèmes à valeur initiale.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Modélisation
 - **Modèle** : Formalisation mathématique d'un problème d'ingénierie à l'aide de variables, de fonctions et d'équations
 - **Modélisation mathématique** ou **modélisation** : Processus d'établissement d'un modèle, de sa résolution mathématique et d'interprétation des résultats

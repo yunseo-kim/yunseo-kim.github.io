@@ -1,12 +1,11 @@
 ---
-title: "質量とエネルギー、粒子と波動"
-description: >-
-  相対性理論の質量-エネルギー等価原理を探求し、運動する電子のエネルギーを相対論的効果を考慮して計算してみよう。
+title: 質量とエネルギー、粒子と波動
+description: 相対性理論の質量-エネルギー等価原理を探求し、運動する電子のエネルギーを相対論的効果を考慮して計算してみよう。
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## 質量-エネルギー等価原理
 質量とエネルギーは互いに同一であり、相互に変換することができる。
 

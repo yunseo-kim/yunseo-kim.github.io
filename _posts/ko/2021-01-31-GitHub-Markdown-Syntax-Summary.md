@@ -1,12 +1,11 @@
 ---
-title: "GitHub 마크다운 문법 정리"
-description: >-
-  Markdown이 무엇인지 알아보고, GitHub Pages 블로그 호스팅을 위해 GitHub Flavored Markdown 기준으로 주요 Markdown 문법을 정리하였다.
+title: GitHub 마크다운 문법 정리
+description: Markdown이 무엇인지 알아보고, GitHub Pages 블로그 호스팅을 위해 GitHub Flavored Markdown
+  기준으로 주요 Markdown 문법을 정리하였다.
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.jpg
 ---
-
 GitHub Pages 활용을 위해서는 **markdown** 문법에 대해 알 필요가 있다.
 GitHub 공식 문서의 [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)과 [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)를 참고하여 작성하였다.
 
@@ -209,4 +208,3 @@ puts markdown.to_html
 | :---         |     :---:      |          ---: |
 | git status   | git status     | git status    |
 | git diff     | git diff       | git diff      |
-

@@ -1,12 +1,16 @@
 ---
-title: "Formules de produit en somme et de somme en produit (Product-to-Sum and Sum-to-Product Identities)"
-description: >-
-  Découvrez les formules pour transformer le produit de fonctions trigonométriques en somme ou différence, dérivez ces formules à partir des théorèmes d'addition trigonométrique, et utilisez-les pour déduire les formules transformant les sommes ou différences de fonctions trigonométriques en produits.
+title: Formules de produit en somme et de somme en produit (Product-to-Sum and Sum-to-Product
+  Identities)
+description: Découvrez les formules pour transformer le produit de fonctions trigonométriques
+  en somme ou différence, dérivez ces formules à partir des théorèmes d'addition trigonométrique,
+  et utilisez-les pour déduire les formules transformant les sommes ou différences
+  de fonctions trigonométriques en produits.
 categories: [Mathematics, Trigonometry]
-tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product
+    Identities]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Formules de produit en somme (Product-to-Sum Identities)**
 >

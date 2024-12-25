@@ -1,12 +1,13 @@
 ---
-title: "Formules d'addition des fonctions trigonométriques"
-description: >-
-  Examinons les définitions des fonctions trigonométriques et les relations entre elles, puis dérivons les formules d'addition trigonométriques et les formules dérivées.
+title: Formules d'addition des fonctions trigonométriques
+description: Examinons les définitions des fonctions trigonométriques et les relations
+  entre elles, puis dérivons les formules d'addition trigonométriques et les formules
+  dérivées.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Définition des fonctions trigonométriques
 ![Cercle unitaire et vecteur rayon](/assets/img/trigonometry/definition.png)
 Comme illustré sur la figure, lorsque la taille de l'angle formé par le rayon vecteur $\overline{OP}$ et la direction positive de l'axe $x$ est $\theta$,

@@ -1,13 +1,13 @@
 ---
-title: "Equação Diferencial Exata e Fator Integrante"
-description: >-
-  Aprenda sobre os métodos de identificação e resolução de equações diferenciais exatas, bem como sobre fatores integrantes.
+title: Equação Diferencial Exata e Fator Integrante
+description: Aprenda sobre os métodos de identificação e resolução de equações diferenciais
+  exatas, bem como sobre fatores integrantes.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 ```mermaid
 flowchart TD

@@ -1,12 +1,15 @@
 ---
-title: Même l'IA veut s'amuser à Halloween (?) (L'IA déteste-t-elle travailler à Halloween ?)
-description: >-
-  Le 31 octobre 2024, le système de traduction automatique des articles, qui fonctionnait sans problème sur le blog depuis plusieurs mois, a soudainement rencontré un dysfonctionnement dû à un comportement anormal du modèle Claude 3.5 Sonnet, qui traitait les tâches données avec un manque flagrant de sérieux. Cet article présente des hypothèses sur les causes de ce phénomène et les solutions proposées.
-categories:
-- Blogging
-tags:
-- Jekyll
-- LLM
+title: Même l'IA veut s'amuser à Halloween (?) (L'IA déteste-t-elle travailler à Halloween
+  ?)
+description: Le 31 octobre 2024, le système de traduction automatique des articles,
+  qui fonctionnait sans problème sur le blog depuis plusieurs mois, a soudainement
+  rencontré un dysfonctionnement dû à un comportement anormal du modèle Claude 3.5
+  Sonnet, qui traitait les tâches données avec un manque flagrant de sérieux. Cet
+  article présente des hypothèses sur les causes de ce phénomène et les solutions
+  proposées.
+categories: [AI & Data, GenAI]
+tags: [LLM]
+image: /assets/img/technology.jpg
 ---
 ## Situation problématique
 Comme expliqué dans la série ['Comment traduire automatiquement des articles avec l'API Claude 3.5 Sonnet'](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1), ce blog utilise depuis fin juin 2024 un système de traduction multilingue des articles basé sur le modèle Claude 3.5 Sonnet, et cette automatisation a bien fonctionné sans problèmes majeurs au cours des 4 derniers mois.

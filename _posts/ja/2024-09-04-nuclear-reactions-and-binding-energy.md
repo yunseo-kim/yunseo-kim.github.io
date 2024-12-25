@@ -1,12 +1,11 @@
 ---
-title: "核反応と結合エネルギー"
-description: >-
-  核反応の表現式とQ値（Q-value）の定義、質量欠損（mass defect）と結合エネルギー（binding energy）の概念を学ぶ。
+title: 核反応と結合エネルギー
+description: 核反応の表現式とQ値（Q-value）の定義、質量欠損（mass defect）と結合エネルギー（binding energy）の概念を学ぶ。
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## 核反応（Nuclear Reaction）
 ### 核反応における基本法則
 *核反応（nuclear reaction）*：2つの異なる原子核同士、または原子核と核子が衝突して2つ以上の新しい核粒子またはガンマ線を生成する反応

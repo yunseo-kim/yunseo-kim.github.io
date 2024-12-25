@@ -1,12 +1,12 @@
 ---
-title: "Estabilidade Nuclear e Decaimento Radioativo"
-description: >-
-  Aprenda sobre o gráfico de Segré, tipos de decaimento radioativo e transição isomérica.
+title: Estabilidade Nuclear e Decaimento Radioativo
+description: Aprenda sobre o gráfico de Segré, tipos de decaimento radioativo e transição
+  isomérica.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Gráfico de Segré ou Tabela de Nuclídeos
 ![Gráfico de Segré](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *Fonte da imagem*

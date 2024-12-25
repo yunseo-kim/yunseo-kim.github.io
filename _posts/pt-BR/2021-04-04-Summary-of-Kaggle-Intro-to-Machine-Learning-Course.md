@@ -1,13 +1,11 @@
 ---
-title: "Resumo do curso Kaggle - Introdução ao Aprendizado de Máquina"
-description: >-
-  Resumo do conteúdo do curso público do Kaggle 'Introdução ao Aprendizado de Máquina'.
-categories: [Data Science, Machine Learning]
+title: Resumo do curso Kaggle - Introdução ao Aprendizado de Máquina
+description: Resumo do conteúdo do curso público do Kaggle 'Introdução ao Aprendizado
+  de Máquina'.
+categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas, scikit-learn]
-toc: true
-toc_sticky: true
+image: /assets/img/technology.jpg
 ---
-
 Decidi estudar os [cursos públicos do Kaggle](https://www.kaggle.com/learn/overview).
 Planejo resumir brevemente o conteúdo de cada curso à medida que os concluir. O primeiro artigo é um resumo do curso **Introdução ao Aprendizado de Máquina**.
 

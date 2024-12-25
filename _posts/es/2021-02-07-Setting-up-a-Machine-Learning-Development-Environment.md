@@ -1,17 +1,12 @@
 ---
-title: "Configuración del entorno de desarrollo para aprendizaje automático"
-description: >-
-  Este artículo trata sobre cómo configurar un entorno de desarrollo para estudiar aprendizaje automático en una máquina local. Todo el contenido está escrito basado en Ubuntu 20.04 LTS con una tarjeta gráfica NVIDIA Geforce RTX 3070.
-categories:
-  - Data Science
-  - Machine Learning
-  - Deep Learning
-tags:
-  - Development Environment
-toc: true
-toc_sticky: true
+title: Configuración del entorno de desarrollo para aprendizaje automático
+description: Este artículo trata sobre cómo configurar un entorno de desarrollo para
+  estudiar aprendizaje automático en una máquina local. Todo el contenido está escrito
+  basado en Ubuntu 20.04 LTS con una tarjeta gráfica NVIDIA Geforce RTX 3070.
+categories: [AI & Data, Machine Learning]
+tags: [Development Environment, CUDA, PyTorch, TensorFlow]
+image: /assets/img/technology.jpg
 ---
-
 ## Resumen
 Este artículo trata sobre cómo configurar un entorno de desarrollo para estudiar aprendizaje automático en una máquina local. Todo el contenido está escrito basado en Ubuntu 20.04 LTS con una tarjeta gráfica NVIDIA Geforce RTX 3070.
 

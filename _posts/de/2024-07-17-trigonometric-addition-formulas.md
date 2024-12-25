@@ -1,12 +1,13 @@
 ---
-title: "Additionstheoreme der trigonometrischen Funktionen"
-description: >-
-  Wir betrachten die Definition der trigonometrischen Funktionen und die Beziehungen zwischen ihnen, um daraus die Additionstheoreme der trigonometrischen Funktionen und abgeleitete Formeln herzuleiten.
+title: Additionstheoreme der trigonometrischen Funktionen
+description: Wir betrachten die Definition der trigonometrischen Funktionen und die
+  Beziehungen zwischen ihnen, um daraus die Additionstheoreme der trigonometrischen
+  Funktionen und abgeleitete Formeln herzuleiten.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Definition der trigonometrischen Funktionen
 ![Unit Circle and Radius Vector](/assets/img/trigonometry/definition.png)
 Wie in der Abbildung gezeigt, sei $\theta$ die Größe des Winkels, den der Radiusvektor $\overline{OP}$ mit der positiven x-Achse bildet. Dann definieren wir:

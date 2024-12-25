@@ -1,13 +1,14 @@
 ---
-title: "Solution analytique de l'oscillateur harmonique (The Harmonic Oscillator)"
-description: >-
-  Nous établissons l'équation de Schrödinger pour l'oscillateur harmonique en mécanique quantique et examinons sa solution analytique.
-  Nous résolvons l'équation en introduisant la variable sans dimension 𝜉 et exprimons tout état stationnaire normalisé à l'aide des polynômes d'Hermite.
+title: Solution analytique de l'oscillateur harmonique (The Harmonic Oscillator)
+description: Nous établissons l'équation de Schrödinger pour l'oscillateur harmonique
+  en mécanique quantique et examinons sa solution analytique. Nous résolvons l'équation
+  en introduisant la variable sans dimension 𝜉 et exprimons tout état stationnaire
+  normalisé à l'aide des polynômes d'Hermite.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Toute oscillation peut être approximée par une oscillation harmonique simple si l'amplitude est suffisamment petite, ce qui donne à l'oscillation harmonique simple une importance significative en physique
 > - Oscillateur harmonique : $V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

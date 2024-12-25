@@ -1,14 +1,14 @@
 ---
-title: "Théorème d'Ehrenfest"
-description: >-
-  Nous explorons comment calculer les valeurs attendues de la position et de l'impulsion à partir de la fonction d'onde en mécanique quantique,
-  puis nous étendons cela à une formule de calcul de la valeur attendue pour toute variable mécanique Q(x,p).
-  Enfin, nous dérivons le théorème d'Ehrenfest à partir de ces résultats.
+title: Théorème d'Ehrenfest
+description: Nous explorons comment calculer les valeurs attendues de la position
+  et de l'impulsion à partir de la fonction d'onde en mécanique quantique, puis nous
+  étendons cela à une formule de calcul de la valeur attendue pour toute variable
+  mécanique Q(x,p). Enfin, nous dérivons le théorème d'Ehrenfest à partir de ces résultats.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - $$ \hat x \equiv x,\ \hat p \equiv -i\hbar\nabla$$
 > - $$ \langle Q(x,p) \rangle = \int \Psi^*[Q(x, -i\hbar\nabla)]\Psi dx $$

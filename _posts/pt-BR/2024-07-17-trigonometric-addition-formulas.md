@@ -1,12 +1,13 @@
 ---
-title: "Fórmulas de Adição Trigonométricas"
-description: >-
-  Examinamos as definições das funções trigonométricas e as relações entre elas, e a partir disso derivamos as fórmulas de adição trigonométricas e fórmulas relacionadas.
+title: Fórmulas de Adição Trigonométricas
+description: Examinamos as definições das funções trigonométricas e as relações entre
+  elas, e a partir disso derivamos as fórmulas de adição trigonométricas e fórmulas
+  relacionadas.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Definição das Funções Trigonométricas
 ![Unit Circle and Radius Vector](/assets/img/trigonometry/definition.png)
 Como mostrado na figura, quando o ângulo formado pelo raio vetor $\overline{OP}$ e a direção positiva do eixo $x$ é $\theta$,

@@ -1,13 +1,13 @@
 ---
-title: "Conceptos básicos de modelado (Modeling)"
-description: >-
-  Exploramos los conceptos de modelado matemático, ecuaciones diferenciales ordinarias, ecuaciones diferenciales parciales y problemas de valor inicial.
+title: Conceptos básicos de modelado (Modeling)
+description: Exploramos los conceptos de modelado matemático, ecuaciones diferenciales
+  ordinarias, ecuaciones diferenciales parciales y problemas de valor inicial.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Modelado (Modeling)
 - **Modelo (model)**: Formalización matemática de un problema de ingeniería mediante variables, funciones, ecuaciones, etc.
 - **Modelado matemático (mathematical modeling)** o **modelado (modeling)**: Proceso de establecer un modelo, resolverlo matemáticamente e interpretar los resultados

@@ -1,15 +1,12 @@
 ---
-title: "NVIDIA Container ToolkitとDockerでディープラーニング開発環境を構築する (1) - NVIDIA Container Toolkit & Docker Engineのインストール"
-description: >-
-  このシリーズでは、ローカルにNVIDIA Container ToolkitとDockerベースのディープラーニング開発環境を構築し、リモートサーバーとして活用できるようにSSHとJupyter Labを設定する方法を扱います。この投稿はシリーズの最初の記事で、NVIDIA Container Toolkitのインストール方法を紹介します。
-categories:
-  - Data Science
-  - Machine Learning
-  - Deep Learning
-tags:
-  - Development Environment
+title: NVIDIA Container ToolkitとDockerでディープラーニング開発環境を構築する (1) - NVIDIA Container Toolkit
+  & Docker Engineのインストール
+description: このシリーズでは、ローカルにNVIDIA Container ToolkitとDockerベースのディープラーニング開発環境を構築し、リモートサーバーとして活用できるようにSSHとJupyter
+  Labを設定する方法を扱います。この投稿はシリーズの最初の記事で、NVIDIA Container Toolkitのインストール方法を紹介します。
+categories: [AI & Data, Machine Learning]
+tags: [Development Environment, Docker, CUDA, PyTorch]
+image: /assets/img/technology.jpg
 ---
-
 ## 概要
 このシリーズでは、NVIDIA Container ToolkitとDockerをインストールし、Docker Hubの[nvidia/cudaリポジトリ](https://hub.docker.com/r/nvidia/cuda)が提供するCUDAおよびcuDNNイメージをベースにDockerfileを作成してディープラーニング開発環境を構築するプロセスを扱います。必要な方が自由に使用できるように、このプロセスを経て完成した[Dockerfile](https://github.com/yunseo-kim/dl-env-docker)と[イメージ](https://hub.docker.com/r/yunseokim/dl-env/tags)をGitHubとDocker Hubを通じて共有し、さらにリモートサーバーとして活用するためのSSHおよびJupyter Lab設定ガイドを提供します。  
 シリーズは3つの記事で構成される予定で、この記事はそのシリーズの最初の記事です。

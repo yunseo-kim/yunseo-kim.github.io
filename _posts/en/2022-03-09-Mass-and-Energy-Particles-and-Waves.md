@@ -1,12 +1,12 @@
 ---
-title: "Mass and Energy, Particles and Waves"
-description: >-
-  Explore the mass-energy equivalence principle of relativity theory and calculate the energy of moving electrons considering relativistic effects.
+title: Mass and Energy, Particles and Waves
+description: Explore the mass-energy equivalence principle of relativity theory and
+  calculate the energy of moving electrons considering relativistic effects.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Mass-Energy Equivalence Principle
 Mass and energy are identical and can be converted into each other.
 

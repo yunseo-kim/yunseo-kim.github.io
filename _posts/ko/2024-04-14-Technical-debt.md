@@ -1,11 +1,10 @@
 ---
-title: "기술 부채(Technical debt)"
-description: >-
-  기술 부채의 개념과 기술 부채가 발생하는 이유, 그리고 기술 부채를 최소화하는 방법을 알아보자.
+title: 기술 부채(Technical debt)
+description: 기술 부채의 개념과 기술 부채가 발생하는 이유, 그리고 기술 부채를 최소화하는 방법을 알아보자.
 categories: [Programming]
 tags: [Coding]
+image: /assets/img/technology.jpg
 ---
-
 ## 기술 부채(Technical debt)
 기술 부채: 개발 과정에서 즉각적인 요구 사항을 충족하기 위해 눈앞의 프로젝트를 더 빨리 완료할 수 있는 지름길을 택함으로써 추후 치루어야 하는 대가
 

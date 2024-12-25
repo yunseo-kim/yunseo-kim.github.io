@@ -1,12 +1,15 @@
 ---
-title: "The 1D Infinite Square Well"
-description: >-
-  We examine the simple yet important representative problem of the 1D infinite square well, which well illustrates the basic concepts of quantum mechanics. We find the nth stationary state ψ(x) and energy E of a particle in this ideal situation, and learn four important mathematical properties of ψ(x). From this, we derive the general solution Ψ(x,t).
+title: The 1D Infinite Square Well
+description: We examine the simple yet important representative problem of the 1D
+  infinite square well, which well illustrates the basic concepts of quantum mechanics.
+  We find the nth stationary state ψ(x) and energy E of a particle in this ideal situation,
+  and learn four important mathematical properties of ψ(x). From this, we derive the
+  general solution Ψ(x,t).
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - 1D Infinite Square Well Problem: 
 >   $$V(x) = \begin{cases}

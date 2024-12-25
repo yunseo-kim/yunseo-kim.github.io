@@ -1,10 +1,11 @@
 ---
-title: "Homogeneous Mixtures and Molecular Cross-sections"
-description: >-
-  Let's calculate the macroscopic cross-section of a homogeneous mixture containing two or more nuclides.
+title: Homogeneous Mixtures and Molecular Cross-sections
+description: Let's calculate the macroscopic cross-section of a homogeneous mixture
+  containing two or more nuclides.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
+image: /assets/img/atoms.png
 ---
 ## Macroscopic Cross-section of a Homogeneous Mixture
 Let's consider a homogeneous mixture of two nuclides $X$ and $Y$. The atomic densities of each nuclide are $N_X$ and $N_Y$ $\text{atom/cm}^3$ respectively, and the cross-sections for a specific reaction between neutrons and these nuclei are $\sigma_X$ and $\sigma_Y$ respectively.

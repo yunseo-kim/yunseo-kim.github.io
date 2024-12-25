@@ -1,14 +1,14 @@
 ---
-title: "Teorema de Ehrenfest"
-description: >-
-  Aprenda como calcular os valores esperados de posição e momento a partir da função de onda na mecânica quântica,
-  e estenda isso para uma fórmula de cálculo do valor esperado para qualquer variável mecânica Q(x,p).
-  Em seguida, derive o teorema de Ehrenfest a partir disso.
+title: Teorema de Ehrenfest
+description: Aprenda como calcular os valores esperados de posição e momento a partir
+  da função de onda na mecânica quântica, e estenda isso para uma fórmula de cálculo
+  do valor esperado para qualquer variável mecânica Q(x,p). Em seguida, derive o teorema
+  de Ehrenfest a partir disso.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - $$ \hat x \equiv x,\ \hat p \equiv -i\hbar\nabla$$
 > - $$ \langle Q(x,p) \rangle = \int \Psi^*[Q(x, -i\hbar\nabla)]\Psi dx $$

@@ -1,12 +1,12 @@
 ---
-title: "Solution des équations différentielles linéaires du premier ordre"
-description: >-
-  Examinons la méthode de résolution des équations différentielles linéaires du premier ordre.
+title: Solution des équations différentielles linéaires du premier ordre
+description: Examinons la méthode de résolution des équations différentielles linéaires
+  du premier ordre.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Équation différentielle linéaire du premier ordre
 Si une équation différentielle du premier ordre peut être mise sous la forme algébrique
 

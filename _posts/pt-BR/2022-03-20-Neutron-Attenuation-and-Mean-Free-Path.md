@@ -1,12 +1,13 @@
 ---
-title: "Atenuação de Nêutrons e Livre Caminho Médio (Mean Free Path)"
-description: >-
-  Calcula-se a intensidade de um feixe de nêutrons de energia única quando irradiado em um alvo em função da distância de penetração no alvo, e a partir disso, deriva-se o livre caminho médio dos nêutrons.
+title: Atenuação de Nêutrons e Livre Caminho Médio (Mean Free Path)
+description: Calcula-se a intensidade de um feixe de nêutrons de energia única quando
+  irradiado em um alvo em função da distância de penetração no alvo, e a partir disso,
+  deriva-se o livre caminho médio dos nêutrons.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Atenuação de Nêutrons (Neutron Attenuation)
 Um feixe de nêutrons de energia única com intensidade $I_0$ está sendo irradiado em um alvo de espessura $X$, e um detector de nêutrons está posicionado a uma certa distância atrás do alvo. Vamos assumir que tanto o alvo quanto o detector são muito pequenos, e que o detector tem um ângulo sólido pequeno que pode detectar apenas uma parte dos nêutrons que passam pelo alvo. Então, todos os nêutrons que colidem com o alvo serão absorvidos ou espalhados em outras direções, e apenas os nêutrons que não interagiram com o alvo incidirão no detector.
 

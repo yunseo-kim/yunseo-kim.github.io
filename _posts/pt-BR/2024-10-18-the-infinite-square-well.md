@@ -1,12 +1,15 @@
 ---
-title: "O Poço Quadrado Infinito Unidimensional"
-description: >-
-  Examinamos o problema do poço quadrado infinito unidimensional, um exemplo simples mas importante que ilustra bem os conceitos básicos da mecânica quântica. Nesta situação ideal, determinamos o n-ésimo estado estacionário ψ(x) e a energia E da partícula, e exploramos quatro importantes propriedades matemáticas de ψ(x). A partir disso, obtemos a solução geral Ψ(x,t).
+title: O Poço Quadrado Infinito Unidimensional
+description: Examinamos o problema do poço quadrado infinito unidimensional, um exemplo
+  simples mas importante que ilustra bem os conceitos básicos da mecânica quântica.
+  Nesta situação ideal, determinamos o n-ésimo estado estacionário ψ(x) e a energia
+  E da partícula, e exploramos quatro importantes propriedades matemáticas de ψ(x).
+  A partir disso, obtemos a solução geral Ψ(x,t).
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Problema do poço quadrado infinito unidimensional: 
 >   $$V(x) = \begin{cases}

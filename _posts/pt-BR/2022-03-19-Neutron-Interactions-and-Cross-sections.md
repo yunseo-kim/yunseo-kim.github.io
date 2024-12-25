@@ -1,13 +1,15 @@
 ---
-title: "Interações de Nêutrons e Seções de Choque"
-description: >-
-  Os nêutrons são eletricamente neutros, portanto podem passar pela nuvem de elétrons do átomo sem serem afetados eletricamente e reagir diretamente com o núcleo atômico. Vamos examinar os tipos de interações de nêutrons e o conceito de seção de choque nuclear.
+title: Interações de Nêutrons e Seções de Choque
+description: Os nêutrons são eletricamente neutros, portanto podem passar pela nuvem
+  de elétrons do átomo sem serem afetados eletricamente e reagir diretamente com o
+  núcleo atômico. Vamos examinar os tipos de interações de nêutrons e o conceito de
+  seção de choque nuclear.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
+image: /assets/img/atoms.png
 ---
-
 ## Interações de Nêutrons
 Os nêutrons são eletricamente neutros, portanto não são afetados eletricamente pelos elétrons do átomo ou pela carga positiva do núcleo. Assim, os nêutrons podem passar pela nuvem de elétrons do átomo e reagir diretamente com o núcleo.
 

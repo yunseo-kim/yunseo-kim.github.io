@@ -1,13 +1,10 @@
 ---
-title: "Kaggle-Pandasコース内容のまとめ"
-description: >-
-  KaggleのオープンコースのうちPandasミニコースの内容をまとめました。
+title: Kaggle-Pandasコース内容のまとめ
+description: KaggleのオープンコースのうちPandasミニコースの内容をまとめました。
 categories: [Data Science, Machine Learning]
 tags: [Kaggle Courses, Pandas]
-toc: true
-toc_sticky: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 # Pandas
 データ操作スキルを完璧にするための短い実践的な課題を解決します。
 

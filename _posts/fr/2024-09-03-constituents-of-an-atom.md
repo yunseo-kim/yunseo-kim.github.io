@@ -1,12 +1,13 @@
 ---
-title: "Particules subatomiques et composants de l'atome"
-description: >-
-  Examinons brièvement les particules élémentaires importantes en génie nucléaire, telles que les électrons, les protons, les neutrons, les photons et les neutrinos, et explorons la structure des atomes et des noyaux atomiques.
+title: Particules subatomiques et composants de l'atome
+description: Examinons brièvement les particules élémentaires importantes en génie
+  nucléaire, telles que les électrons, les protons, les neutrons, les photons et les
+  neutrinos, et explorons la structure des atomes et des noyaux atomiques.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Particule subatomique (subatomic particle)
 Une **particule subatomique** désigne une particule plus petite qu'un atome. Parmi les particules subatomiques, on trouve des particules composites constituées de particules plus petites, ainsi que des particules élémentaires considérées comme indivisibles.
 En génie nucléaire, les particules suivantes sont particulièrement importantes :

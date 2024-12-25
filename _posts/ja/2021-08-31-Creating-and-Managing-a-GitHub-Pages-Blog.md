@@ -1,12 +1,11 @@
 ---
-title: "GitHub Pagesブログの作成と管理"
-description: >-
-  静的ウェブページと動的ウェブページの特徴と違い、静的サイトジェネレーター（Static Site Generator）について学び、JekyllブログをGitHub Pagesでホスティングしてみましょう。
+title: GitHub Pagesブログの作成と管理
+description: 静的ウェブページと動的ウェブページの特徴と違い、静的サイトジェネレーター（Static Site Generator）について学び、JekyllブログをGitHub
+  Pagesでホスティングしてみましょう。
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.jpg
 ---
-
 2021年初頭からJekyllを使ってGitHub Pagesにブログをホスティングし始めました。しかし、ブログ構築時にインストール過程を適切に整理しておかなかったため、後の維持管理に少し困難がありました。そこで、簡単にでもインストール過程と維持管理方法を整理しておくことにしました。
 
 （+ 2024.12 内容更新）

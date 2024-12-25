@@ -1,17 +1,13 @@
 ---
-title: "Aufbau einer Entwicklungsumgebung für maschinelles Lernen"
-description: >-
-  Dieser Artikel behandelt die Methode zum Aufbau einer Entwicklungsumgebung, die als erster Schritt zum Studium des maschinellen Lernens auf einem lokalen Rechner betrachtet werden kann. Der gesamte Inhalt wurde basierend auf Ubuntu 20.04 LTS mit einer NVIDIA GeForce RTX 3070 Grafikkarte geschrieben.
-categories:
-  - Data Science
-  - Machine Learning
-  - Deep Learning
-tags:
-  - Development Environment
-toc: true
-toc_sticky: true
+title: Aufbau einer Entwicklungsumgebung für maschinelles Lernen
+description: Dieser Artikel behandelt die Methode zum Aufbau einer Entwicklungsumgebung,
+  die als erster Schritt zum Studium des maschinellen Lernens auf einem lokalen Rechner
+  betrachtet werden kann. Der gesamte Inhalt wurde basierend auf Ubuntu 20.04 LTS
+  mit einer NVIDIA GeForce RTX 3070 Grafikkarte geschrieben.
+categories: [AI & Data, Machine Learning]
+tags: [Development Environment, CUDA, PyTorch, TensorFlow]
+image: /assets/img/technology.jpg
 ---
-
 ## Überblick
 Dieser Artikel behandelt die Methode zum Aufbau einer Entwicklungsumgebung, die als erster Schritt zum Studium des maschinellen Lernens auf einem lokalen Rechner betrachtet werden kann. Der gesamte Inhalt wurde basierend auf Ubuntu 20.04 LTS mit einer NVIDIA GeForce RTX 3070 Grafikkarte geschrieben.
 

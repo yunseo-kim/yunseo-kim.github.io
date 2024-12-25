@@ -1,12 +1,13 @@
 ---
 title: ¿Incluso la IA quiere divertirse en Halloween? (Does AI Hate to Work on Halloween?)
-description: >-
-  El 31 de octubre de 2024, se produjo una interrupción repentina en el sistema de traducción automática de posts que se había estado aplicando sin problemas en el blog durante los últimos meses, debido a un fenómeno anormal en el que el modelo Claude 3.5 Sonnet procesaba las tareas asignadas con muy poca dedicación. Se presentan conjeturas sobre la causa de este fenómeno y las soluciones correspondientes.
-categories:
-- Blogging
-tags:
-- Jekyll
-- LLM
+description: El 31 de octubre de 2024, se produjo una interrupción repentina en el
+  sistema de traducción automática de posts que se había estado aplicando sin problemas
+  en el blog durante los últimos meses, debido a un fenómeno anormal en el que el
+  modelo Claude 3.5 Sonnet procesaba las tareas asignadas con muy poca dedicación.
+  Se presentan conjeturas sobre la causa de este fenómeno y las soluciones correspondientes.
+categories: [AI & Data, GenAI]
+tags: [LLM]
+image: /assets/img/technology.jpg
 ---
 ## Situación problemática
 Como se trató en la serie ['Cómo traducir automáticamente posts con la API de Claude 3.5 Sonnet'](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1), este blog ha estado utilizando un sistema de traducción multilingüe de posts basado en el modelo Claude 3.5 Sonnet desde finales de junio de 2024, y esta automatización ha funcionado bien sin mayores problemas durante los últimos 4 meses.

@@ -1,12 +1,13 @@
 ---
-title: "Kernreaktionen und Bindungsenergie"
-description: >-
-  Wir betrachten die Ausdrücke für Kernreaktionen, die Definition des Q-Werts (Q-value), sowie die Konzepte des Massendefekts (mass defect) und der Bindungsenergie (binding energy).
+title: Kernreaktionen und Bindungsenergie
+description: Wir betrachten die Ausdrücke für Kernreaktionen, die Definition des Q-Werts
+  (Q-value), sowie die Konzepte des Massendefekts (mass defect) und der Bindungsenergie
+  (binding energy).
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Kernreaktion (Nuclear Reaction)
 ### Grundlegende Gesetze in Kernreaktionen
 *Kernreaktion (nuclear reaction)*: Eine Reaktion, bei der zwei verschiedene Atomkerne oder ein Atomkern und ein Nukleon kollidieren und zwei oder mehr neue Kernpartikel oder Gammastrahlen erzeugen.

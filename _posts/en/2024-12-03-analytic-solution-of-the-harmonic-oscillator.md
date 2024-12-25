@@ -1,13 +1,14 @@
 ---
-title: "Analytical Solution of the Harmonic Oscillator"
-description: >-
-  We set up the Schrödinger equation for the harmonic oscillator in quantum mechanics and explore its analytical solution method.
-  We solve the equation by introducing the dimensionless variable 𝜉, and express any normalized stationary state using Hermite polynomials.
+title: Analytical Solution of the Harmonic Oscillator
+description: We set up the Schrödinger equation for the harmonic oscillator in quantum
+  mechanics and explore its analytical solution method. We solve the equation by introducing
+  the dimensionless variable 𝜉, and express any normalized stationary state using
+  Hermite polynomials.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Any oscillation can be approximated as simple harmonic oscillation if the amplitude is sufficiently small, making simple harmonic oscillation significant in physics
 > - Harmonic oscillator: $V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

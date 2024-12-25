@@ -1,13 +1,16 @@
 ---
-title: "Fusion Power: From Toroidal Pinch to Tokamak"
-description: >-
-  This post covers the concept of nuclear fusion, its background as a promising next-generation power source, the technical goals for commercializing fusion power, and the evolution of fusion power technology from toroidal pinch to ITER.
-  The author notes that this essay was originally written for a high school science club activity when they were in their second year of high school. Unlike other posts, it is written in a colloquial style, but has been uploaded in its original form for archival purposes.
+title: 'Fusion Power: From Toroidal Pinch to Tokamak'
+description: This post covers the concept of nuclear fusion, its background as a promising
+  next-generation power source, the technical goals for commercializing fusion power,
+  and the evolution of fusion power technology from toroidal pinch to ITER. The author
+  notes that this essay was originally written for a high school science club activity
+  when they were in their second year of high school. Unlike other posts, it is written
+  in a colloquial style, but has been uploaded in its original form for archival purposes.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
+image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## What is Nuclear Fusion?
 Nuclear fusion refers to the reaction where two atomic nuclei collide and merge to form a single heavier nucleus. Fundamentally, atomic nuclei have a positive charge due to the protons inside, so when two nuclei approach each other, they repel due to electrostatic repulsion. However, if the nuclei are heated to extremely high temperatures, their kinetic energy can overcome the electrical repulsion, allowing the nuclei to collide. Once the nuclei are close enough, the strong nuclear force takes over, binding them into a single nucleus.
 

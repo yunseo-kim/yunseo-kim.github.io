@@ -1,13 +1,12 @@
 ---
-title: "モデリング(Modeling)の基本概念"
-description: >-
-  数学的モデリングと常微分方程式、偏微分方程式、初期値問題の概念を学ぶ。
+title: モデリング(Modeling)の基本概念
+description: 数学的モデリングと常微分方程式、偏微分方程式、初期値問題の概念を学ぶ。
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## モデリング(Modeling)
 - **モデル(model)**: 解決したい工学問題を変数、関数、方程式などを通じて数学的な式として公式化したもの
 - **数学的モデリング(mathematical modeling)** または **モデリング(modeling)**: モデルを立て、それを数学的に解き、その結果を解釈するプロセス

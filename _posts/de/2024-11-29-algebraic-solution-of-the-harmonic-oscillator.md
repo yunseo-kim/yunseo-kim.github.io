@@ -1,13 +1,15 @@
 ---
-title: "Algebraische Lösung des harmonischen Oszillators"
-description: >-
-  Wir stellen die Schrödinger-Gleichung für den harmonischen Oszillator in der Quantenmechanik auf und untersuchen ihre algebraische Lösungsmethode.
-  Aus Kommutatoren, kanonischen Vertauschungsrelationen und Leiteroperatoren leiten wir die Wellenfunktion und Energieniveaus für beliebige stationäre Zustände ab.
+title: Algebraische Lösung des harmonischen Oszillators
+description: Wir stellen die Schrödinger-Gleichung für den harmonischen Oszillator
+  in der Quantenmechanik auf und untersuchen ihre algebraische Lösungsmethode. Aus
+  Kommutatoren, kanonischen Vertauschungsrelationen und Leiteroperatoren leiten wir
+  die Wellenfunktion und Energieniveaus für beliebige stationäre Zustände ab.
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder Operators]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
+    Operators]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Jede Schwingung kann für kleine Amplituden als einfache harmonische Schwingung angenähert werden, was die große Bedeutung des harmonischen Oszillators in der Physik erklärt
 > - Harmonischer Oszillator: $V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

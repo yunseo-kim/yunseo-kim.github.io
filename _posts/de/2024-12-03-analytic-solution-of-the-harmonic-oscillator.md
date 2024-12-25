@@ -1,13 +1,14 @@
 ---
-title: "Analytische Lösung des harmonischen Oszillators (The Harmonic Oscillator)"
-description: >-
-  Wir stellen die Schrödinger-Gleichung für den harmonischen Oszillator in der Quantenmechanik auf und untersuchen ihre analytische Lösungsmethode.
-  Wir lösen die Gleichung durch Einführung der dimensionslosen Variable 𝜉 und stellen beliebige normierte stationäre Zustände mithilfe von Hermite-Polynomen dar.
+title: Analytische Lösung des harmonischen Oszillators (The Harmonic Oscillator)
+description: Wir stellen die Schrödinger-Gleichung für den harmonischen Oszillator
+  in der Quantenmechanik auf und untersuchen ihre analytische Lösungsmethode. Wir
+  lösen die Gleichung durch Einführung der dimensionslosen Variable 𝜉 und stellen
+  beliebige normierte stationäre Zustände mithilfe von Hermite-Polynomen dar.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Jede Schwingung mit ausreichend kleiner Amplitude kann als einfache harmonische Schwingung (simple harmonic oscillation) angenähert werden, was dem harmonischen Oszillator eine wichtige Bedeutung in der Physik verleiht
 > - Harmonischer Oszillator: $V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

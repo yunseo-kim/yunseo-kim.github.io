@@ -1,12 +1,11 @@
 ---
-title: "核安定性と放射性崩壊"
-description: >-
-  セグレ図と放射性崩壊の種類、そして異性体遷移について学ぶ。
+title: 核安定性と放射性崩壊
+description: セグレ図と放射性崩壊の種類、そして異性体遷移について学ぶ。
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## セグレ図（Segre Chart）または核種図表
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *画像出典*

@@ -1,12 +1,13 @@
 ---
-title: "Formules d'angles multiples et de demi-angles"
-description: >-
-  Nous examinons les formules pour les angles doubles et triples, et les dérivons à partir des formules d'addition trigonométriques. Nous dérivons également les formules de demi-angle à partir des formules d'angle double.
+title: Formules d'angles multiples et de demi-angles
+description: Nous examinons les formules pour les angles doubles et triples, et les
+  dérivons à partir des formules d'addition trigonométriques. Nous dérivons également
+  les formules de demi-angle à partir des formules d'angle double.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Formules d'angle double (Double-Angle Formulas)**
 >

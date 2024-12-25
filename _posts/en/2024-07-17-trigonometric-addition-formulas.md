@@ -1,12 +1,13 @@
 ---
-title: "Addition Formulas for Trigonometric Functions"
-description: >-
-  Examine the definitions of trigonometric functions and the relationships between them, and derive the addition formulas for trigonometric functions and their derivative formulas.
+title: Addition Formulas for Trigonometric Functions
+description: Examine the definitions of trigonometric functions and the relationships
+  between them, and derive the addition formulas for trigonometric functions and their
+  derivative formulas.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Definition of Trigonometric Functions
 ![Unit Circle and Radius Vector](/assets/img/trigonometry/definition.png)
 As shown in the figure, when the angle between the radius vector $\overline{OP}$ and the positive direction of the $x$-axis is $\theta$,

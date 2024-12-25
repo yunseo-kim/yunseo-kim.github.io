@@ -1,13 +1,11 @@
 ---
-title: "自由粒子（The Free Particle）"
-description: >-
-  ポテンシャルV(x)=0の自由粒子の場合、変数分離した解を規格化できないという事実とその意味を探り、
-  一般解に対する位置-運動量の不確定性関係を定性的に示し、Ψ(x,t)の位相速度と群速度を求めて物理的に解釈する。
+title: 自由粒子（The Free Particle）
+description: ポテンシャルV(x)=0の自由粒子の場合、変数分離した解を規格化できないという事実とその意味を探り、 一般解に対する位置-運動量の不確定性関係を定性的に示し、Ψ(x,t)の位相速度と群速度を求めて物理的に解釈する。
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - 自由粒子：$V(x)=0$、境界条件なし（任意のエネルギー）
 > - 変数分離した解 $\Psi_k(x,t) = Ae^{i\left(kx-\frac{\hbar k^2}{2m}t \right)}$は二乗積分すると無限大に発散するため規格化できず、これは以下を示唆する

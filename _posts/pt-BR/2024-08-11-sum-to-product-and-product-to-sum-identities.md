@@ -1,12 +1,16 @@
 ---
-title: "Fórmulas de Produto para Soma e Soma para Produto (Product-to-Sum and Sum-to-Product Identities)"
-description: >-
-  Explore as fórmulas para transformar produtos de funções trigonométricas em somas ou diferenças, derivando essas fórmulas a partir dos teoremas de adição trigonométrica. Além disso, derive fórmulas para transformar somas ou diferenças de funções trigonométricas em produtos.
+title: Fórmulas de Produto para Soma e Soma para Produto (Product-to-Sum and Sum-to-Product
+  Identities)
+description: Explore as fórmulas para transformar produtos de funções trigonométricas
+  em somas ou diferenças, derivando essas fórmulas a partir dos teoremas de adição
+  trigonométrica. Além disso, derive fórmulas para transformar somas ou diferenças
+  de funções trigonométricas em produtos.
 categories: [Mathematics, Trigonometry]
-tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product
+    Identities]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Fórmulas de Produto para Soma (Product-to-Sum Identities)**
 >

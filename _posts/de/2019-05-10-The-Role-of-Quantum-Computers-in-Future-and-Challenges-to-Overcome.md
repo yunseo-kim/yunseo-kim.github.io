@@ -1,11 +1,15 @@
 ---
-title: "Die Rolle von Quantencomputern in der Gesellschaft der Zukunft und die zu lösenden Herausforderungen"
-description: >-
-  Wir untersuchen die grundlegenden Konzepte von Quantencomputern, ihre Vorteile gegenüber klassischen Computern und ihre erwartete Rolle in der Zukunft. Außerdem betrachten wir die Notwendigkeit für Korea, sich auf das Zeitalter der Quantencomputer vorzubereiten. Dieser Aufsatz wurde vom Autor als Schüler der 11. Klasse verfasst.
+title: Die Rolle von Quantencomputern in der Gesellschaft der Zukunft und die zu lösenden
+  Herausforderungen
+description: Wir untersuchen die grundlegenden Konzepte von Quantencomputern, ihre
+  Vorteile gegenüber klassischen Computern und ihre erwartete Rolle in der Zukunft.
+  Außerdem betrachten wir die Notwendigkeit für Korea, sich auf das Zeitalter der
+  Quantencomputer vorzubereiten. Dieser Aufsatz wurde vom Autor als Schüler der 11.
+  Klasse verfasst.
 categories: [Engineering Physics, Quantum Computing]
 tags: [Quantum Computing]
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 Seit den 1960er Jahren hat sich die Rechenleistung von Computern über Jahrzehnte hinweg exponentiell gesteigert. Diese Entwicklung wurde durch die Miniaturisierung der Transistoren in den Prozessoren erreicht, wodurch mehr Komponenten auf der gleichen Fläche untergebracht werden konnten. Ein anschauliches Beispiel für die Geschwindigkeit dieser Leistungssteigerung ist, dass moderne Smartphones die leistungsfähigsten Supercomputer der 1990er Jahre übertreffen. Da es heute praktisch keinen Bereich gibt, in dem Computer nicht eingesetzt werden, ist ihre Leistungsfähigkeit ein entscheidender Faktor für die allgemeine technologische Entwicklungsgeschwindigkeit der modernen Gesellschaft. Das Problem ist jedoch, dass diese Art der Leistungssteigerung durch die extreme Verkleinerung der einzelnen Transistoren nun an ihre physikalischen Grenzen stößt. Dies ist der Grund, warum Wissenschaftler ihre Aufmerksamkeit auf Quantencomputer richten. In diesem Artikel werden wir die Eigenschaften von Quantencomputern, ihre Vorteile gegenüber herkömmlichen Computern sowie ihre erwartete Rolle in der Gesellschaft der Zukunft und die dafür zu lösenden Herausforderungen diskutieren.
 
 Quantencomputer sind Computer, die quantenmechanische Phänomene wie Verschränkung (entanglement) und Überlagerung (superposition) zur Datenverarbeitung nutzen. Das Konzept wurde 1982 erstmals vom amerikanischen theoretischen Physiker Richard Feynman vorgeschlagen. 

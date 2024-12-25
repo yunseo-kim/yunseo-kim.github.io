@@ -1,12 +1,12 @@
 ---
-title: "Continuous and Characteristic X Rays"
-description: >-
-  Exploring the two generation principles of X-rays as atomic radiation, and the respective characteristics of bremsstrahlung and characteristic X-rays.
+title: Continuous and Characteristic X Rays
+description: Exploring the two generation principles of X-rays as atomic radiation,
+  and the respective characteristics of bremsstrahlung and characteristic X-rays.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Radiation, Atomic Radiation, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## TL;DR
 > - **bremsstrahlung (breaking radiation)**: Continuous spectrum X-rays emitted when charged particles like electrons are accelerated by electrical forces while passing near atomic nuclei
 > - Minimum wavelength: $\lambda_\text{min} = \cfrac{hc}{E_\text{max}} = \cfrac{12400 \text{[Å}\cdot\text{eV]}}{V\text{[eV]}}$

@@ -1,12 +1,11 @@
 ---
-title: "相対性原理とローレンツ変換"
-description: >-
-  基準系の概念と古典力学で広く使われてきたガリレイ変換について学びます。また、ローレンツ変換の登場背景となったマクスウェル方程式とマイケルソン・モーリーの実験を簡単に見て、ローレンツ変換の変換行列を導出します。
+title: 相対性原理とローレンツ変換
+description: 基準系の概念と古典力学で広く使われてきたガリレイ変換について学びます。また、ローレンツ変換の登場背景となったマクスウェル方程式とマイケルソン・モーリーの実験を簡単に見て、ローレンツ変換の変換行列を導出します。
 categories: [Engineering Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **相対性原理**: 等速度で運動する異なる基準系に対して、すべての物理法則が同一でなければならないという原理
 {: .prompt-info }

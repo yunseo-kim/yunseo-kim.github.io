@@ -1,13 +1,12 @@
 ---
-title: "完全微分方程式(Exact Differential Equation)と積分因子"
-description: >-
-  完全微分方程式の判別法と解法、そして積分因子について学ぶ。
+title: 完全微分方程式(Exact Differential Equation)と積分因子
+description: 完全微分方程式の判別法と解法、そして積分因子について学ぶ。
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 ```mermaid
 flowchart TD

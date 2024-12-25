@@ -1,13 +1,14 @@
 ---
-title: "Das freie Teilchen"
-description: >-
-  Wir untersuchen die Tatsache, dass die separierte Lösung für ein freies Teilchen mit V(x)=0 nicht normierbar ist und was das bedeutet,
-  zeigen qualitativ die Orts-Impuls-Unschärferelation für die allgemeine Lösung und berechnen die Phasen- und Gruppengeschwindigkeit von Ψ(x,t) mit physikalischer Interpretation.
+title: Das freie Teilchen
+description: Wir untersuchen die Tatsache, dass die separierte Lösung für ein freies
+  Teilchen mit V(x)=0 nicht normierbar ist und was das bedeutet, zeigen qualitativ
+  die Orts-Impuls-Unschärferelation für die allgemeine Lösung und berechnen die Phasen-
+  und Gruppengeschwindigkeit von Ψ(x,t) mit physikalischer Interpretation.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Freies Teilchen: $V(x)=0$, keine Randbedingungen (beliebige Energie)
 > - Die separierte Lösung $\Psi_k(x,t) = Ae^{i\left(kx-\frac{\hbar k^2}{2m}t \right)}$ ist bei quadratischer Integration unendlich und daher nicht normierbar, was Folgendes impliziert:

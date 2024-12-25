@@ -1,12 +1,13 @@
 ---
-title: "Réactions nucléaires et énergie de liaison"
-description: >-
-  Découvrez les expressions des réactions nucléaires, la définition de la valeur Q (Q-value), et les concepts de défaut de masse (mass defect) et d'énergie de liaison (binding energy).
+title: Réactions nucléaires et énergie de liaison
+description: Découvrez les expressions des réactions nucléaires, la définition de
+  la valeur Q (Q-value), et les concepts de défaut de masse (mass defect) et d'énergie
+  de liaison (binding energy).
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Réaction nucléaire (Nuclear Reaction)
 ### Lois fondamentales dans les réactions nucléaires
 *Réaction nucléaire (nuclear reaction)* : Une réaction où deux noyaux atomiques différents ou un noyau atomique et un nucléon entrent en collision pour produire deux ou plusieurs nouvelles particules nucléaires ou des rayons gamma.

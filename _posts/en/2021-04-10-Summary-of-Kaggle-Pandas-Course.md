@@ -1,13 +1,11 @@
 ---
-title: "Summary of Kaggle-Pandas Course Content"
-description: >-
-  I have summarized the content of the Pandas mini-course from Kaggle's public courses.
+title: Summary of Kaggle-Pandas Course Content
+description: I have summarized the content of the Pandas mini-course from Kaggle's
+  public courses.
 categories: [Data Science, Machine Learning]
 tags: [Kaggle Courses, Pandas]
-toc: true
-toc_sticky: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 # Pandas
 Solve short hands-on challenges to perfect your data manipulation skills.
 

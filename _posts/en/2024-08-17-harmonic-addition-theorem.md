@@ -1,12 +1,13 @@
 ---
-title: "Harmonic Addition Theorem"
-description: >-
-  We explore the method of finding a corresponding single trigonometric function r sin(θ+α) or r cos(θ-β) for a sum of trigonometric functions in the form of f(θ) = a cos θ + b sin θ.
+title: Harmonic Addition Theorem
+description: We explore the method of finding a corresponding single trigonometric
+  function r sin(θ+α) or r cos(θ-β) for a sum of trigonometric functions in the form
+  of f(θ) = a cos θ + b sin θ.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Harmonic Addition Theorem**
 >

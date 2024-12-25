@@ -1,13 +1,15 @@
 ---
-title: "Algebraic Solution of the Harmonic Oscillator"
-description: >-
-  We set up the Schrödinger equation for the harmonic oscillator in quantum mechanics and explore its algebraic solution method.
-  We derive the wave function and energy levels of any stationary state from commutators, canonical commutation relations, and ladder operators.
+title: Algebraic Solution of the Harmonic Oscillator
+description: We set up the Schrödinger equation for the harmonic oscillator in quantum
+  mechanics and explore its algebraic solution method. We derive the wave function
+  and energy levels of any stationary state from commutators, canonical commutation
+  relations, and ladder operators.
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder Operators]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
+    Operators]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Any oscillation can be approximated as simple harmonic oscillation if the amplitude is small enough, which makes simple harmonic oscillation significant in physics
 > - Harmonic oscillator: $V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

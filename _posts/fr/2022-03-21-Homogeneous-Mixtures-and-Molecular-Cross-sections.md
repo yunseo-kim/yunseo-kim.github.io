@@ -1,10 +1,11 @@
 ---
-title: "Mélanges homogènes et sections efficaces moléculaires"
-description: >-
-  Calculons la section efficace macroscopique d'un mélange homogène contenant deux types de noyaux ou plus.
+title: Mélanges homogènes et sections efficaces moléculaires
+description: Calculons la section efficace macroscopique d'un mélange homogène contenant
+  deux types de noyaux ou plus.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
+image: /assets/img/atoms.png
 ---
 ## Section efficace macroscopique d'un mélange homogène (Homogeneous Mixture)
 Considérons un mélange homogène de deux types de noyaux $X$ et $Y$. Les densités atomiques de chaque noyau sont respectivement $N_X$ et $N_Y$ $\text{atome/cm}^3$, et les sections efficaces pour une réaction spécifique avec les neutrons sont respectivement $\sigma_X$ et $\sigma_Y$. 

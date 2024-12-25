@@ -1,7 +1,7 @@
 ---
-title: "Principles for Writing Good Code"
-description: >-
-  Explore the necessity of writing good code and the key principles generally followed to create high-quality code.
+title: Principles for Writing Good Code
+description: Explore the necessity of writing good code and the key principles generally
+  followed to create high-quality code.
 categories: [Programming]
 tags: [Coding, PS/CP]
 image: /assets/img/technology.jpg

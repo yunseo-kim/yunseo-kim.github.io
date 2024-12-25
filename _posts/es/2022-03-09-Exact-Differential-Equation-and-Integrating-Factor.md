@@ -1,13 +1,13 @@
 ---
-title: "Ecuación Diferencial Exacta y Factor Integrante"
-description: >-
-  Exploramos los métodos para determinar y resolver ecuaciones diferenciales exactas, así como el concepto de factor integrante.
+title: Ecuación Diferencial Exacta y Factor Integrante
+description: Exploramos los métodos para determinar y resolver ecuaciones diferenciales
+  exactas, así como el concepto de factor integrante.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 ```mermaid
 flowchart TD

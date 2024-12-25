@@ -1,12 +1,15 @@
 ---
-title: "Relativitätsprinzip und Lorentz-Transformation"
-description: >-
-  Wir betrachten das Konzept des Bezugssystems und die Galilei-Transformation, die in der klassischen Mechanik weit verbreitet war. Außerdem werfen wir einen kurzen Blick auf die Maxwell-Gleichungen und das Michelson-Morley-Experiment, die den Hintergrund für die Entstehung der Lorentz-Transformation bildeten, und leiten die Transformationsmatrix der Lorentz-Transformation her.
+title: Relativitätsprinzip und Lorentz-Transformation
+description: Wir betrachten das Konzept des Bezugssystems und die Galilei-Transformation,
+  die in der klassischen Mechanik weit verbreitet war. Außerdem werfen wir einen kurzen
+  Blick auf die Maxwell-Gleichungen und das Michelson-Morley-Experiment, die den Hintergrund
+  für die Entstehung der Lorentz-Transformation bildeten, und leiten die Transformationsmatrix
+  der Lorentz-Transformation her.
 categories: [Engineering Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Relativitätsprinzip**: Das Prinzip, dass alle physikalischen Gesetze in allen Inertialsystemen, die sich mit konstanter Geschwindigkeit zueinander bewegen, gleich sein müssen
 {: .prompt-info }

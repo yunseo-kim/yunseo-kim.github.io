@@ -1,12 +1,11 @@
 ---
-title: "中性子減衰と平均自由行程（Mean Free Path）"
-description: >-
-  単一エネルギーの中性子ビームを標的に照射した際の、標的透過距離に応じた中性子ビームの強度を計算し、これから中性子の平均自由行程を導出する。
+title: 中性子減衰と平均自由行程（Mean Free Path）
+description: 単一エネルギーの中性子ビームを標的に照射した際の、標的透過距離に応じた中性子ビームの強度を計算し、これから中性子の平均自由行程を導出する。
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## 中性子減衰（Neutron Attenuation）
 強度 $I_0$ の単一エネルギー中性子ビームを厚さ $X$ の標的に照射しており、標的の後方にある程度離れた距離に中性子検出器が置かれている。標的と検出器は両方とも非常に小さく、検出器は標的を通過して出てくる中性子の一部のみを検出できる小さな立体角を持つと仮定しよう。そうすると、標的に衝突するすべての中性子は吸収されるか散乱されて別の方向に逸脱するため、標的と反応しなかった中性子のみが検出器に入射する。
 

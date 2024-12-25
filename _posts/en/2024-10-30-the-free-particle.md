@@ -1,13 +1,14 @@
 ---
-title: "The Free Particle"
-description: >-
-  We explore the fact that the separated variable solution for a free particle with V(x)=0 cannot be normalized and what this implies,
-  qualitatively show the position-momentum uncertainty relation for the general solution, and calculate and physically interpret the phase velocity and group velocity of Ψ(x,t).
+title: The Free Particle
+description: We explore the fact that the separated variable solution for a free particle
+  with V(x)=0 cannot be normalized and what this implies, qualitatively show the position-momentum
+  uncertainty relation for the general solution, and calculate and physically interpret
+  the phase velocity and group velocity of Ψ(x,t).
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Free particle: $V(x)=0$, no boundary conditions (arbitrary energy)
 > - The separated variable solution $\Psi_k(x,t) = Ae^{i\left(kx-\frac{\hbar k^2}{2m}t \right)}$ diverges to infinity when squared and integrated, so it cannot be normalized, implying:

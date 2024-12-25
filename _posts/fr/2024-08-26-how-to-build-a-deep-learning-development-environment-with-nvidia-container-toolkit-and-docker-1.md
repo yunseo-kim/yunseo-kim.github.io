@@ -1,15 +1,16 @@
 ---
-title: "Construire un environnement de développement pour l'apprentissage profond avec NVIDIA Container Toolkit et Docker (1) - Installation de NVIDIA Container Toolkit & Docker Engine"
-description: >-
-  Cette série couvre la mise en place d'un environnement de développement pour l'apprentissage profond basé sur NVIDIA Container Toolkit et Docker en local, ainsi que la configuration de SSH et Jupyter Lab pour une utilisation comme serveur distant. Ce billet est le premier de la série et présente la méthode d'installation de NVIDIA Container Toolkit.
-categories:
-  - Data Science
-  - Machine Learning
-  - Deep Learning
-tags:
-  - Development Environment
+title: Construire un environnement de développement pour l'apprentissage profond avec
+  NVIDIA Container Toolkit et Docker (1) - Installation de NVIDIA Container Toolkit
+  & Docker Engine
+description: Cette série couvre la mise en place d'un environnement de développement
+  pour l'apprentissage profond basé sur NVIDIA Container Toolkit et Docker en local,
+  ainsi que la configuration de SSH et Jupyter Lab pour une utilisation comme serveur
+  distant. Ce billet est le premier de la série et présente la méthode d'installation
+  de NVIDIA Container Toolkit.
+categories: [AI & Data, Machine Learning]
+tags: [Development Environment, Docker, CUDA, PyTorch]
+image: /assets/img/technology.jpg
 ---
-
 ## Aperçu
 Cette série traite de l'installation de NVIDIA Container Toolkit et Docker, de la création d'un Dockerfile basé sur les images CUDA et cuDNN fournies par le [référentiel nvidia/cuda](https://hub.docker.com/r/nvidia/cuda) sur Docker Hub pour construire un environnement de développement pour l'apprentissage profond. Le [Dockerfile](https://github.com/yunseo-kim/dl-env-docker) et [l'image](https://hub.docker.com/r/yunseokim/dl-env/tags) complétés à travers ce processus sont partagés via GitHub et Docker Hub pour que ceux qui en ont besoin puissent les utiliser librement. De plus, un guide de configuration SSH et Jupyter Lab est fourni pour une utilisation comme serveur distant.  
 La série sera composée de 3 articles, et celui-ci est le premier de la série.

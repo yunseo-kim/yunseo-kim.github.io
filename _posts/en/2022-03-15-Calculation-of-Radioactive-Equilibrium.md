@@ -1,13 +1,14 @@
 ---
-title: "Calculation of Radioactive Equilibrium"
-description: >-
-  We explore the relationship between decay constants, half-lives, and mean lifetimes of radioactive nuclides, and calculate the radioactivity of radioactive nuclides at any given time t in a given decay chain.
+title: Calculation of Radioactive Equilibrium
+description: We explore the relationship between decay constants, half-lives, and
+  mean lifetimes of radioactive nuclides, and calculate the radioactivity of radioactive
+  nuclides at any given time t in a given decay chain.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true
+image: /assets/img/atoms.png
 ---
-
 ## TL;DR
 > **Radioactivity at any time t**
 >

@@ -1,13 +1,10 @@
 ---
-title: "Kaggle-機械学習入門コースの内容まとめ"
-description: >-
-  Kaggleの公開コース「Intro to Machine Learning」の内容を要約しました。
-categories: [Data Science, Machine Learning]
+title: Kaggle-機械学習入門コースの内容まとめ
+description: Kaggleの公開コース「Intro to Machine Learning」の内容を要約しました。
+categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas, scikit-learn]
-toc: true
-toc_sticky: true
+image: /assets/img/technology.jpg
 ---
-
 [Kaggleの公開コース](https://www.kaggle.com/learn/overview)を勉強することにしました。
 各コースを修了するたびに、そのコースの内容を簡単にまとめる予定です。最初の記事は**Intro to Machine Learning**コースの要約です。
 

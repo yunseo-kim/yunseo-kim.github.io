@@ -1,12 +1,12 @@
 ---
-title: "Bernoulli Equation"
-description: >-
-  We explore the Bernoulli equation and its solution method, as well as the logistic equation, which is a special form of the Bernoulli equation.
+title: Bernoulli Equation
+description: We explore the Bernoulli equation and its solution method, as well as
+  the logistic equation, which is a special form of the Bernoulli equation.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Bernoulli Equation
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{ is any real number)}  \tag{1} $$

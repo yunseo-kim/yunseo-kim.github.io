@@ -1,14 +1,14 @@
 ---
-title: Comment supporter le multilinguisme sur un blog Jekyll avec Polyglot (2) - Résolution des problèmes de compilation du thème Chirpy et des erreurs de recherche
-description: >-
-  Présentation du processus d'implémentation du support multilingue en appliquant le plugin Polyglot à un blog Jekyll basé sur 'jekyll-theme-chirpy'.
-  Ce billet est le deuxième de la série et traite de l'identification et de la résolution des erreurs survenues lors de l'application de Polyglot au thème Chirpy.
-categories:
-- Blogging
-tags:
-- Jekyll
-- Polyglot
+title: Comment supporter le multilinguisme sur un blog Jekyll avec Polyglot (2) -
+  Résolution des problèmes de compilation du thème Chirpy et des erreurs de recherche
+description: Présentation du processus d'implémentation du support multilingue en
+  appliquant le plugin Polyglot à un blog Jekyll basé sur 'jekyll-theme-chirpy'. Ce
+  billet est le deuxième de la série et traite de l'identification et de la résolution
+  des erreurs survenues lors de l'application de Polyglot au thème Chirpy.
+categories: [AI & Data, Blogging]
+tags: [Jekyll, Polyglot, Markdown]
 mermaid: true
+image: /assets/img/technology.jpg
 ---
 ## Aperçu
 Il y a environ 4 mois, début juillet 2024, j'ai ajouté le support multilingue à ce blog hébergé sur GitHub Pages en utilisant Jekyll en appliquant le plugin [Polyglot](https://github.com/untra/polyglot).

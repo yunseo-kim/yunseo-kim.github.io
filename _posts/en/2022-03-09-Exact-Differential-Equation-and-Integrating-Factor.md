@@ -1,13 +1,13 @@
 ---
-title: "Exact Differential Equations and Integrating Factors"
-description: >-
-  Learn about the identification and solution methods for exact differential equations, as well as integrating factors.
+title: Exact Differential Equations and Integrating Factors
+description: Learn about the identification and solution methods for exact differential
+  equations, as well as integrating factors.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 ```mermaid
 flowchart TD

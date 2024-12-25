@@ -1,15 +1,17 @@
 ---
-title: "Construire un environnement de développement pour l'apprentissage profond avec NVIDIA Container Toolkit et Docker (2) - Configuration du runtime de conteneur pour l'utilisation du GPU, rédaction du Dockerfile et construction de l'image Docker"
-description: >-
-  Cette série traite de la mise en place d'un environnement de développement pour l'apprentissage profond basé sur NVIDIA Container Toolkit et Docker en local, et de la configuration de SSH et Jupyter Lab pour l'utiliser comme serveur distant. Ce post est le deuxième article de la série, qui présente la méthode de configuration du runtime de conteneur pour l'utilisation du GPU, la rédaction du Dockerfile et la construction de l'image Docker.
-categories:
-  - Data Science
-  - Machine Learning
-  - Deep Learning
-tags:
-  - Development Environment
+title: Construire un environnement de développement pour l'apprentissage profond avec
+  NVIDIA Container Toolkit et Docker (2) - Configuration du runtime de conteneur pour
+  l'utilisation du GPU, rédaction du Dockerfile et construction de l'image Docker
+description: Cette série traite de la mise en place d'un environnement de développement
+  pour l'apprentissage profond basé sur NVIDIA Container Toolkit et Docker en local,
+  et de la configuration de SSH et Jupyter Lab pour l'utiliser comme serveur distant.
+  Ce post est le deuxième article de la série, qui présente la méthode de configuration
+  du runtime de conteneur pour l'utilisation du GPU, la rédaction du Dockerfile et
+  la construction de l'image Docker.
+categories: [AI & Data, Machine Learning]
+tags: [Development Environment, Docker, CUDA, PyTorch]
+image: /assets/img/technology.jpg
 ---
-
 ## Aperçu
 Dans cette série, nous abordons le processus d'installation de NVIDIA Container Toolkit et Docker, et de construction d'un environnement de développement pour l'apprentissage profond en écrivant un Dockerfile basé sur les images CUDA et cuDNN fournies par le [dépôt nvidia/cuda](https://hub.docker.com/r/nvidia/cuda) sur Docker Hub. Pour ceux qui en ont besoin, nous partageons le [Dockerfile](https://github.com/yunseo-kim/dl-env-docker) et l'[image](https://hub.docker.com/r/yunseokim/dl-env/tags) complétés à travers ce processus via GitHub et Docker Hub pour une utilisation libre, et fournissons en plus un guide de configuration SSH et Jupyter Lab pour une utilisation comme serveur distant.  
 La série se composera de 3 articles, et cet article que vous lisez est le deuxième de la série.

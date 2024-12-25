@@ -1,12 +1,12 @@
 ---
-title: "핵반응과 결합에너지"
-description: >-
-  핵반응의 표현식과 Q값(Q-value)의 정의, 질량 결손(mass defect)와 결합에너지(binding energy)의 개념을 알아본다.
+title: 핵반응과 결합에너지
+description: 핵반응의 표현식과 Q값(Q-value)의 정의, 질량 결손(mass defect)와 결합에너지(binding energy)의
+  개념을 알아본다.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## 핵반응 (Nuclear Reaction)
 ### 핵반응에서의 기본 법칙
 *핵반응(nuclear reaction)*: 2개의 서로 다른 원자핵끼리 혹은 원자핵과 핵자가 충돌하여 2개 이상의 새로운 핵 입자들이나 또는 감마선을 생성하는 반응

@@ -1,13 +1,15 @@
 ---
-title: "Solução algébrica do Oscilador Harmônico (The Harmonic Oscillator)"
-description: >-
-  Estabelecemos a equação de Schrödinger para o oscilador harmônico na mecânica quântica e examinamos o método de solução algébrica para essa equação.
-  Obtemos a função de onda e os níveis de energia para qualquer estado estacionário a partir dos comutadores, relações de comutação canônicas e operadores escada.
+title: Solução algébrica do Oscilador Harmônico (The Harmonic Oscillator)
+description: Estabelecemos a equação de Schrödinger para o oscilador harmônico na
+  mecânica quântica e examinamos o método de solução algébrica para essa equação.
+  Obtemos a função de onda e os níveis de energia para qualquer estado estacionário
+  a partir dos comutadores, relações de comutação canônicas e operadores escada.
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder Operators]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
+    Operators]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Qualquer oscilação pode ser aproximada como uma oscilação harmônica simples se a amplitude for suficientemente pequena, o que torna a oscilação harmônica simples importante na física
 > - Oscilador harmônico: $V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

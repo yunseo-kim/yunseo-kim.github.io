@@ -1,10 +1,11 @@
 ---
-title: "Mezclas homogéneas y sección transversal de moléculas"
-description: >-
-  Calculemos la sección transversal macroscópica de una mezcla homogénea que contiene dos o más nucleidos.
+title: Mezclas homogéneas y sección transversal de moléculas
+description: Calculemos la sección transversal macroscópica de una mezcla homogénea
+  que contiene dos o más nucleidos.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
+image: /assets/img/atoms.png
 ---
 ## Sección transversal macroscópica de una mezcla homogénea (Homogeneous Mixture)
 Consideremos una mezcla homogénea de dos nucleidos $X$ e $Y$. Las densidades atómicas de cada nucleido son $N_X$ y $N_Y$ $\text{átomo/cm}^3$ respectivamente, y las secciones transversales para una reacción específica de neutrones con estos núcleos son $\sigma_X$ y $\sigma_Y$. 

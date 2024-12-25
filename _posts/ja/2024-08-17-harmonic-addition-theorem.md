@@ -1,12 +1,12 @@
 ---
-title: "三角関数の合成（調和加法定理）"
-description: >-
-  f(θ) = a cos θ + b sin θ の形の三角関数の和に対して、対応する単一の三角関数 r sin(θ+α) または r cos(θ-β) を求める方法を学びます。
+title: 三角関数の合成（調和加法定理）
+description: f(θ) = a cos θ + b sin θ の形の三角関数の和に対して、対応する単一の三角関数 r sin(θ+α) または r cos(θ-β)
+  を求める方法を学びます。
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **三角関数の合成（調和加法定理）**
 >

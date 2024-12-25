@@ -1,13 +1,13 @@
 ---
-title: "Definition of Plasma, Concept of Temperature, and the Saha Equation"
-description: >-
-  Exploring the meaning of 'collective behavior' in the definition of plasma, examining the Saha equation,
-  and clarifying the concept of temperature in plasma physics.
+title: Definition of Plasma, Concept of Temperature, and the Saha Equation
+description: Exploring the meaning of 'collective behavior' in the definition of plasma,
+  examining the Saha equation, and clarifying the concept of temperature in plasma
+  physics.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Plasma Physics]
 math: true
+image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## TL;DR
 > - **Plasma**: A quasineutral gas of charged and neutral particles which exhibits collective behavior
 > - **'Collective behavior' in plasma**: 

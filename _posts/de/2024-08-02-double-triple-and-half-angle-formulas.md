@@ -1,12 +1,14 @@
 ---
-title: "Mehrfach- und Halbwinkelformeln (Multiple-Angle and Half-Angle Formulas)"
-description: >-
-  Wir betrachten die Formeln für den doppelten und dreifachen Winkel und leiten diese aus den trigonometrischen Additionstheoreme (Trigonometric Addition Formulas) ab. Außerdem leiten wir die Halbwinkelformeln aus den Formeln für den doppelten Winkel ab.
+title: Mehrfach- und Halbwinkelformeln (Multiple-Angle and Half-Angle Formulas)
+description: Wir betrachten die Formeln für den doppelten und dreifachen Winkel und
+  leiten diese aus den trigonometrischen Additionstheoreme (Trigonometric Addition
+  Formulas) ab. Außerdem leiten wir die Halbwinkelformeln aus den Formeln für den
+  doppelten Winkel ab.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Formeln für den doppelten Winkel (Double-Angle Formulas)**
 >

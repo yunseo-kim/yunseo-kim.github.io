@@ -1,13 +1,16 @@
 ---
-title: "Fusão Nuclear: Do Pinch Toroidal ao Tokamak"
-description: >-
-  Aborda o conceito de fusão nuclear, o contexto que a tornou uma fonte de energia promissora, os objetivos técnicos para a comercialização da energia de fusão e a evolução da tecnologia de fusão desde o pinch toroidal até o ITER.
-  O autor esclarece que este é um ensaio escrito para uma atividade de clube de ciências quando estava no segundo ano do ensino médio, e está em um estilo mais coloquial do que outros posts, mas foi carregado na forma original para fins de arquivamento.
+title: 'Fusão Nuclear: Do Pinch Toroidal ao Tokamak'
+description: Aborda o conceito de fusão nuclear, o contexto que a tornou uma fonte
+  de energia promissora, os objetivos técnicos para a comercialização da energia de
+  fusão e a evolução da tecnologia de fusão desde o pinch toroidal até o ITER. O autor
+  esclarece que este é um ensaio escrito para uma atividade de clube de ciências quando
+  estava no segundo ano do ensino médio, e está em um estilo mais coloquial do que
+  outros posts, mas foi carregado na forma original para fins de arquivamento.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
+image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## O que é fusão nuclear?
 Fusão nuclear é a reação em que dois núcleos atômicos colidem e se transformam em um único núcleo mais pesado. Basicamente, como os núcleos atômicos têm carga positiva devido aos prótons em seu interior, quando dois núcleos se aproximam, eles se repelem devido à força eletrostática. No entanto, se os núcleos forem aquecidos a temperaturas extremamente altas, sua energia cinética pode superar a repulsão elétrica, permitindo que colidam. Uma vez que os núcleos se aproximam o suficiente, a força nuclear forte atua, fazendo com que se combinem em um único núcleo.
 

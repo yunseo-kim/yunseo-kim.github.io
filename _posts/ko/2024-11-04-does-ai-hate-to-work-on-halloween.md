@@ -1,9 +1,11 @@
 ---
 title: AI라도 할로윈엔 놀고 싶어(?) (Does AI Hate to Work on Halloween?)
-description: >-
-  2024년 10월 31일, 갑작스럽게 Claude 3.5 Sonnet 모델이 주어진 작업을 대단히 성의 없이 처리하는 이상현상으로 인해 지난 몇 달간 문제 없이 블로그에 적용해 왔던 포스트 자동 번역 시스템에 장애가 발생한 일이 있었다. 해당 현상이 일어난 원인에 대한 추측과, 그에 따른 해결 방법을 소개한다.
+description: 2024년 10월 31일, 갑작스럽게 Claude 3.5 Sonnet 모델이 주어진 작업을 대단히 성의 없이 처리하는 이상현상으로
+  인해 지난 몇 달간 문제 없이 블로그에 적용해 왔던 포스트 자동 번역 시스템에 장애가 발생한 일이 있었다. 해당 현상이 일어난 원인에 대한 추측과,
+  그에 따른 해결 방법을 소개한다.
 categories: [AI & Data, GenAI]
 tags: [LLM]
+image: /assets/img/technology.jpg
 ---
 ## 문제 상황
 ['Claude 3.5 Sonnet API로 포스트 자동 번역하는 법' 시리즈](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1)에서 다룬 것처럼, 본 블로그는 2024년 6월 말부터 Claude 3.5 Sonnet 모델을 활용한 포스트 다국어 번역 시스템을 도입하여 활용하고 있으며 해당 자동화는 지난 4달간 별다른 큰 문제 없이 잘 동작하였다. 

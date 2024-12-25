@@ -1,13 +1,11 @@
 ---
-title: "Résumé du cours Kaggle-Pandas"
-description: >-
-  J'ai résumé le contenu du mini-cours Pandas parmi les cours publics de Kaggle.
+title: Résumé du cours Kaggle-Pandas
+description: J'ai résumé le contenu du mini-cours Pandas parmi les cours publics de
+  Kaggle.
 categories: [Data Science, Machine Learning]
 tags: [Kaggle Courses, Pandas]
-toc: true
-toc_sticky: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 # Pandas
 Résolvez de courts défis pratiques pour perfectionner vos compétences en manipulation de données.
 

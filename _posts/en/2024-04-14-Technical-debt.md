@@ -1,11 +1,11 @@
 ---
-title: "Technical Debt"
-description: >-
-  Let's explore the concept of technical debt, why it occurs, and how to minimize it.
+title: Technical Debt
+description: Let's explore the concept of technical debt, why it occurs, and how to
+  minimize it.
 categories: [Programming]
 tags: [Coding]
+image: /assets/img/technology.jpg
 ---
-
 ## Technical Debt
 Technical debt: The cost that must be paid later by choosing shortcuts that can complete the project at hand faster to meet immediate requirements during the development process.
 

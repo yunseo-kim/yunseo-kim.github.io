@@ -1,12 +1,13 @@
 ---
-title: "Teorema de la adición armónica"
-description: >-
-  Exploramos cómo encontrar una función trigonométrica única correspondiente r sin(θ+α) o r cos(θ-β) para una suma de funciones trigonométricas de la forma f(θ) = a cos θ + b sin θ.
+title: Teorema de la adición armónica
+description: Exploramos cómo encontrar una función trigonométrica única correspondiente
+  r sin(θ+α) o r cos(θ-β) para una suma de funciones trigonométricas de la forma f(θ)
+  = a cos θ + b sin θ.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Teorema de la adición armónica**
 >

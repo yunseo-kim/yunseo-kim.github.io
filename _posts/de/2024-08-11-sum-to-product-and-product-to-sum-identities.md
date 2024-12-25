@@ -1,12 +1,15 @@
 ---
-title: "Produkt-zu-Summe und Summe-zu-Produkt Identitäten"
-description: >-
-  Wir untersuchen Formeln zur Umwandlung von Produkten trigonometrischer Funktionen in Summen oder Differenzen und leiten diese aus den trigonometrischen Additionstheoreme ab. Daraus leiten wir auch Formeln ab, um Summen oder Differenzen trigonometrischer Funktionen in Produkte umzuwandeln.
+title: Produkt-zu-Summe und Summe-zu-Produkt Identitäten
+description: Wir untersuchen Formeln zur Umwandlung von Produkten trigonometrischer
+  Funktionen in Summen oder Differenzen und leiten diese aus den trigonometrischen
+  Additionstheoreme ab. Daraus leiten wir auch Formeln ab, um Summen oder Differenzen
+  trigonometrischer Funktionen in Produkte umzuwandeln.
 categories: [Mathematics, Trigonometry]
-tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product
+    Identities]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Produkt-zu-Summe Identitäten**
 >

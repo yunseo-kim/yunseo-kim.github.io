@@ -1,15 +1,16 @@
 ---
-title: "Construindo um ambiente de desenvolvimento de Deep Learning com NVIDIA Container Toolkit e Docker (2) - Configuração do runtime do contêiner para utilização da GPU, escrita do Dockerfile e construção da imagem Docker"
-description: >-
-  Esta série aborda como configurar um ambiente de desenvolvimento de Deep Learning baseado em NVIDIA Container Toolkit e Docker localmente, e como configurar SSH e Jupyter Lab para utilizá-lo como um servidor remoto. Este post é o segundo da série e apresenta como configurar o runtime do contêiner para utilização da GPU, escrever o Dockerfile e construir a imagem Docker.
-categories:
-  - Data Science
-  - Machine Learning
-  - Deep Learning
-tags:
-  - Development Environment
+title: Construindo um ambiente de desenvolvimento de Deep Learning com NVIDIA Container
+  Toolkit e Docker (2) - Configuração do runtime do contêiner para utilização da GPU,
+  escrita do Dockerfile e construção da imagem Docker
+description: Esta série aborda como configurar um ambiente de desenvolvimento de Deep
+  Learning baseado em NVIDIA Container Toolkit e Docker localmente, e como configurar
+  SSH e Jupyter Lab para utilizá-lo como um servidor remoto. Este post é o segundo
+  da série e apresenta como configurar o runtime do contêiner para utilização da GPU,
+  escrever o Dockerfile e construir a imagem Docker.
+categories: [AI & Data, Machine Learning]
+tags: [Development Environment, Docker, CUDA, PyTorch]
+image: /assets/img/technology.jpg
 ---
-
 ## Visão geral
 Nesta série, abordamos o processo de instalação do NVIDIA Container Toolkit e Docker, e a construção de um ambiente de desenvolvimento de Deep Learning escrevendo um Dockerfile baseado nas imagens CUDA e cuDNN fornecidas pelo [repositório nvidia/cuda](https://hub.docker.com/r/nvidia/cuda) no Docker Hub. Para aqueles que precisam, compartilhamos o [Dockerfile](https://github.com/yunseo-kim/dl-env-docker) e a [imagem](https://hub.docker.com/r/yunseokim/dl-env/tags) concluídos através deste processo no GitHub e Docker Hub para uso livre, e fornecemos adicionalmente um guia de configuração de SSH e Jupyter Lab para utilização como servidor remoto.  
 A série consistirá em 3 posts, e este é o segundo post da série.

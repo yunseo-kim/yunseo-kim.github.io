@@ -1,12 +1,11 @@
 ---
-title: "ベルヌーイ方程式（Bernoulli Equation）"
-description: >-
-  ベルヌーイ方程式と、ベルヌーイ方程式の特殊な形であるロジスティック方程式の解法を学ぶ。
+title: ベルヌーイ方程式（Bernoulli Equation）
+description: ベルヌーイ方程式と、ベルヌーイ方程式の特殊な形であるロジスティック方程式の解法を学ぶ。
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## ベルヌーイ方程式（Bernoulli Equation）
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{は任意の実数)}  \tag{1} $$

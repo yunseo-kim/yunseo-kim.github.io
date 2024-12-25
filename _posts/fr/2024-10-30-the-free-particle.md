@@ -1,14 +1,15 @@
 ---
-title: "La particule libre"
-description: >-
-  Nous examinons le fait que la solution à variables séparées pour une particule libre avec V(x)=0 ne peut pas être normalisée et ce que cela signifie,
-  nous démontrons qualitativement la relation d'incertitude position-impulsion pour la solution générale,
-  et nous calculons et interprétons physiquement la vitesse de phase et la vitesse de groupe de Ψ(x,t).
+title: La particule libre
+description: Nous examinons le fait que la solution à variables séparées pour une
+  particule libre avec V(x)=0 ne peut pas être normalisée et ce que cela signifie,
+  nous démontrons qualitativement la relation d'incertitude position-impulsion pour
+  la solution générale, et nous calculons et interprétons physiquement la vitesse
+  de phase et la vitesse de groupe de Ψ(x,t).
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Particule libre : $V(x)=0$, pas de conditions aux limites (énergie arbitraire)
 > - La solution à variables séparées $\Psi_k(x,t) = Ae^{i\left(kx-\frac{\hbar k^2}{2m}t \right)}$ diverge à l'infini lorsqu'on l'intègre au carré, donc elle ne peut pas être normalisée, ce qui implique que :

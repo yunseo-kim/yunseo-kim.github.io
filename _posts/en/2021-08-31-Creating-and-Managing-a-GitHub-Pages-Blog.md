@@ -1,12 +1,11 @@
 ---
-title: "Creating and Managing a GitHub Pages Blog"
-description: >-
-  Learn about the characteristics and differences between static and dynamic web pages, explore static site generators, and host a Jekyll blog on GitHub Pages.
+title: Creating and Managing a GitHub Pages Blog
+description: Learn about the characteristics and differences between static and dynamic
+  web pages, explore static site generators, and host a Jekyll blog on GitHub Pages.
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.jpg
 ---
-
 I started hosting a blog on GitHub Pages using Jekyll in early 2021. However, since I didn't properly document the installation process at the time of setting up the blog, I encountered some difficulties with maintenance later on. So I decided to briefly outline the installation process and maintenance methods.
 
 (+ Content updated December 2024)

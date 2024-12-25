@@ -1,13 +1,12 @@
 ---
-title: "Séparation des variables (Separation of Variables)"
-description: >-
-  Nous explorons la méthode de séparation des variables et présentons quelques exemples connexes.
+title: Séparation des variables (Separation of Variables)
+description: Nous explorons la méthode de séparation des variables et présentons quelques
+  exemples connexes.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Séparation des variables (Separation of Variables)
 **Équation séparable (separable equation)** : Une équation qui peut être mise sous la forme $g(y)y'=f(x)$ par manipulation algébrique.
 

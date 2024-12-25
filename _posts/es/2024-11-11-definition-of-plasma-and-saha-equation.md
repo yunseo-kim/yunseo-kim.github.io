@@ -1,12 +1,13 @@
 ---
-title: "Definición de plasma, concepto de temperatura y la ecuación de Saha"
-description: >-
-  Exploramos el significado del 'comportamiento colectivo' en la definición de plasma, examinamos la ecuación de Saha y clarificamos el concepto de temperatura en la física del plasma.
+title: Definición de plasma, concepto de temperatura y la ecuación de Saha
+description: Exploramos el significado del 'comportamiento colectivo' en la definición
+  de plasma, examinamos la ecuación de Saha y clarificamos el concepto de temperatura
+  en la física del plasma.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Plasma Physics]
 math: true
+image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## TL;DR
 > - **Plasma**: Gas cuasineutro de partículas cargadas y neutras que exhibe comportamiento colectivo
 > - **'Comportamiento colectivo' del plasma**: 

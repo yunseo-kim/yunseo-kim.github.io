@@ -1,12 +1,11 @@
 ---
-title: "サブアトミック粒子と原子の構成要素"
-description: >-
-  電子、陽子、中性子、光子、ニュートリノなど、原子核工学で重要に扱われる素粒子を簡単に概観し、原子および原子核の構造を理解する。
+title: サブアトミック粒子と原子の構成要素
+description: 電子、陽子、中性子、光子、ニュートリノなど、原子核工学で重要に扱われる素粒子を簡単に概観し、原子および原子核の構造を理解する。
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## サブアトミック粒子 (subatomic particle)
 **サブアトミック粒子（subatomic particle）**とは、原子よりも小さいサイズの粒子を指す。サブアトミック粒子には、より小さな単位の構成粒子からなる複合粒子もあれば、これ以上分解されないと考えられる基本粒子もある。
 原子核工学では、特に以下の素粒子が重要に扱われる。

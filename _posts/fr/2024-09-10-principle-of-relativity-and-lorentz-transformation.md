@@ -1,12 +1,15 @@
 ---
-title: "Principe de relativité et transformation de Lorentz"
-description: >-
-  Nous explorons le concept de référentiel et la transformation de Galilée largement utilisée en mécanique classique. Nous examinons également brièvement les équations de Maxwell et l'expérience de Michelson-Morley qui ont conduit à l'émergence de la transformation de Lorentz, et nous dérivons la matrice de transformation de Lorentz.
+title: Principe de relativité et transformation de Lorentz
+description: Nous explorons le concept de référentiel et la transformation de Galilée
+  largement utilisée en mécanique classique. Nous examinons également brièvement les
+  équations de Maxwell et l'expérience de Michelson-Morley qui ont conduit à l'émergence
+  de la transformation de Lorentz, et nous dérivons la matrice de transformation de
+  Lorentz.
 categories: [Engineering Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Principe de relativité** : Principe selon lequel toutes les lois physiques doivent être identiques dans tous les référentiels en mouvement uniforme les uns par rapport aux autres.
 {: .prompt-info }

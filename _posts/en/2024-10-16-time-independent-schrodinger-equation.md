@@ -1,16 +1,16 @@
 ---
-title: "Time-independent Schrödinger Equation"
-description: >-
-  We derive the time-independent Schrödinger equation ψ(x) by applying the separation of variables method
-  to the original form of the Schrödinger equation (time-dependent Schrödinger equation) Ψ(x,t).
-  We explore the mathematical and physical significance and importance of the separated solution obtained this way.
-  We also examine the method of obtaining the general solution of the Schrödinger equation
+title: Time-independent Schrödinger Equation
+description: We derive the time-independent Schrödinger equation ψ(x) by applying
+  the separation of variables method to the original form of the Schrödinger equation
+  (time-dependent Schrödinger equation) Ψ(x,t). We explore the mathematical and physical
+  significance and importance of the separated solution obtained this way. We also
+  examine the method of obtaining the general solution of the Schrödinger equation
   as a linear combination of separated solutions.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Separated solution: $ \Psi(x,t) = \psi(x)\phi(t)$
 > - Time dependence ("wiggle factor"): $ \phi(t) = e^{-iEt/\hbar} $

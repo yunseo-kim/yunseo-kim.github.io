@@ -1,15 +1,15 @@
 ---
-title: "Aufbau einer Deep-Learning-Entwicklungsumgebung mit NVIDIA Container Toolkit und Docker (2) - Konfiguration der Container-Laufzeit für GPU-Nutzung, Erstellung von Dockerfile und Docker Image Build"
-description: >-
-  Diese Serie behandelt den Aufbau einer lokalen Deep-Learning-Entwicklungsumgebung basierend auf NVIDIA Container Toolkit und Docker sowie die Einrichtung von SSH und Jupyter Lab zur Nutzung als Remote-Server. Dieser Beitrag ist der zweite Teil der Serie und stellt die Methode zur Installation des NVIDIA Container Toolkit vor.
-categories:
-  - Data Science
-  - Machine Learning
-  - Deep Learning
-tags:
-  - Development Environment
+title: Aufbau einer Deep-Learning-Entwicklungsumgebung mit NVIDIA Container Toolkit
+  und Docker (2) - Konfiguration der Container-Laufzeit für GPU-Nutzung, Erstellung
+  von Dockerfile und Docker Image Build
+description: Diese Serie behandelt den Aufbau einer lokalen Deep-Learning-Entwicklungsumgebung
+  basierend auf NVIDIA Container Toolkit und Docker sowie die Einrichtung von SSH
+  und Jupyter Lab zur Nutzung als Remote-Server. Dieser Beitrag ist der zweite Teil
+  der Serie und stellt die Methode zur Installation des NVIDIA Container Toolkit vor.
+categories: [AI & Data, Machine Learning]
+tags: [Development Environment, Docker, CUDA, PyTorch]
+image: /assets/img/technology.jpg
 ---
-
 ## Überblick
 In dieser Serie behandeln wir die Installation von NVIDIA Container Toolkit und Docker sowie die Erstellung eines Dockerfiles basierend auf CUDA- und cuDNN-Images aus dem [nvidia/cuda Repository](https://hub.docker.com/r/nvidia/cuda) auf Docker Hub, um eine Deep-Learning-Entwicklungsumgebung aufzubauen. Für diejenigen, die es benötigen, teile ich das [Dockerfile](https://github.com/yunseo-kim/dl-env-docker) und das [Image](https://hub.docker.com/r/yunseokim/dl-env/tags), die durch diesen Prozess erstellt wurden, über GitHub und Docker Hub, damit sie frei verwendet werden können. Zusätzlich biete ich eine Anleitung zur Einrichtung von SSH und Jupyter Lab für die Nutzung als Remote-Server.  
 Die Serie wird aus drei Beiträgen bestehen, und dieser Beitrag, den Sie gerade lesen, ist der zweite Teil der Serie.

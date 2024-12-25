@@ -1,12 +1,12 @@
 ---
 title: Does AI Hate to Work on Halloween?
-description: >-
-  On October 31, 2024, the Claude 3.5 Sonnet model suddenly started processing given tasks with extremely low effort, causing issues with the post auto-translation system that had been working fine for the blog for the past few months. This post introduces speculations about the cause of this phenomenon and potential solutions.
-categories:
-- Blogging
-tags:
-- Jekyll
-- LLM
+description: On October 31, 2024, the Claude 3.5 Sonnet model suddenly started processing
+  given tasks with extremely low effort, causing issues with the post auto-translation
+  system that had been working fine for the blog for the past few months. This post
+  introduces speculations about the cause of this phenomenon and potential solutions.
+categories: [AI & Data, GenAI]
+tags: [LLM]
+image: /assets/img/technology.jpg
 ---
 ## Problem Situation
 As covered in the ['How to Auto-Translate Posts with Claude 3.5 Sonnet API' series](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1), this blog has been using a multi-language post translation system utilizing the Claude 3.5 Sonnet model since late June 2024, and this automation has been working well without any major issues for the past 4 months.

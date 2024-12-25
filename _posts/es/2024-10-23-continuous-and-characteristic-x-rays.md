@@ -1,12 +1,13 @@
 ---
-title: "Rayos X Continuos y Característicos"
-description: >-
-  Exploramos los dos principios de generación de rayos X como radiación atómica, y las características respectivas de la radiación de frenado y los rayos X característicos.
+title: Rayos X Continuos y Característicos
+description: Exploramos los dos principios de generación de rayos X como radiación
+  atómica, y las características respectivas de la radiación de frenado y los rayos
+  X característicos.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Radiation, Atomic Radiation, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## TL;DR
 > - **bremsstrahlung (radiación de frenado)**: rayos X de espectro continuo emitidos cuando partículas cargadas como electrones pasan cerca de núcleos atómicos y son aceleradas por fuerzas eléctricas
 > - Longitud de onda mínima: $\lambda_\text{min} = \cfrac{hc}{E_\text{max}} = \cfrac{12400 \text{[Å}\cdot\text{eV]}}{V\text{[eV]}}$

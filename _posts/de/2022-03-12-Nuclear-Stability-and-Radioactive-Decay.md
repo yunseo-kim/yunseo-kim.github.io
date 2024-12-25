@@ -1,12 +1,12 @@
 ---
-title: "Kernstabilität und radioaktiver Zerfall"
-description: >-
-  Wir betrachten das Segré-Diagramm, Arten des radioaktiven Zerfalls und isomere Übergänge.
+title: Kernstabilität und radioaktiver Zerfall
+description: Wir betrachten das Segré-Diagramm, Arten des radioaktiven Zerfalls und
+  isomere Übergänge.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Segré-Diagramm oder Nuklidkarte
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *Bildquelle*

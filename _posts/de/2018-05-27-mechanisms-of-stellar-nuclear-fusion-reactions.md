@@ -1,13 +1,16 @@
 ---
-title: "Kernfusionsmechanismen in Sternen"
-description: >-
-  Dieser Artikel stellt die Proton-Proton-Kettenreaktion und den CNO-Zyklus vor, zwei Kernfusionsreaktionen, die im Kern von Sternen stattfinden.
-  Es handelt sich um einen Essay, den der Autor als Erstklässler an der High School für eine Aktivität des schulischen Wissenschaftsclubs geschrieben hat. Im Gegensatz zu anderen Beiträgen ist er in umgangssprachlichem Stil verfasst, wurde aber zu Archivierungszwecken im Originaltext hochgeladen.
+title: Kernfusionsmechanismen in Sternen
+description: Dieser Artikel stellt die Proton-Proton-Kettenreaktion und den CNO-Zyklus
+  vor, zwei Kernfusionsreaktionen, die im Kern von Sternen stattfinden. Es handelt
+  sich um einen Essay, den der Autor als Erstklässler an der High School für eine
+  Aktivität des schulischen Wissenschaftsclubs geschrieben hat. Im Gegensatz zu anderen
+  Beiträgen ist er in umgangssprachlichem Stil verfasst, wurde aber zu Archivierungszwecken
+  im Originaltext hochgeladen.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
+image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## Proton-Proton-Kettenreaktion (proton-proton chain reaction)
 Dies ist die bekannteste Kernfusionsreaktion in Sternen. Der Kern des schweren Wasserstoffs, das Deuteron, besteht aus einem Proton (p) und einem Neutron (n). Damit zwei Protonen zu einem Deuteriumkern fusionieren können, muss sich eines der Protonen in ein Neutron umwandeln. Wie kann sich also ein Proton in ein Neutron umwandeln?
 

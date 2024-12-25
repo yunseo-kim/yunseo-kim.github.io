@@ -1,12 +1,13 @@
 ---
-title: "Teoremas de adición de funciones trigonométricas"
-description: >-
-  Examinamos las definiciones de las funciones trigonométricas y las relaciones entre ellas, y de ahí derivamos los teoremas de adición de funciones trigonométricas y fórmulas relacionadas.
+title: Teoremas de adición de funciones trigonométricas
+description: Examinamos las definiciones de las funciones trigonométricas y las relaciones
+  entre ellas, y de ahí derivamos los teoremas de adición de funciones trigonométricas
+  y fórmulas relacionadas.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Definición de funciones trigonométricas
 ![Unit Circle and Radius Vector](/assets/img/trigonometry/definition.png)
 Como se muestra en la figura, cuando el tamaño del ángulo formado por el radio vector $\overline{OP}$ y la dirección positiva del eje $x$ es $\theta$,

@@ -1,12 +1,15 @@
 ---
-title: "Le puits carré infini unidimensionnel (The 1D Infinite Square Well)"
-description: >-
-  Examinons le problème du puits carré infini unidimensionnel, un exemple simple mais important qui illustre bien les concepts fondamentaux de la mécanique quantique. Dans cette situation idéale, nous déterminons le n-ième état stationnaire ψ(x) et l'énergie E d'une particule, et nous étudions quatre propriétés mathématiques importantes de ψ(x). À partir de là, nous obtenons la solution générale Ψ(x,t).
+title: Le puits carré infini unidimensionnel (The 1D Infinite Square Well)
+description: Examinons le problème du puits carré infini unidimensionnel, un exemple
+  simple mais important qui illustre bien les concepts fondamentaux de la mécanique
+  quantique. Dans cette situation idéale, nous déterminons le n-ième état stationnaire
+  ψ(x) et l'énergie E d'une particule, et nous étudions quatre propriétés mathématiques
+  importantes de ψ(x). À partir de là, nous obtenons la solution générale Ψ(x,t).
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Problème du puits carré infini unidimensionnel : 
 >   $$V(x) = \begin{cases}

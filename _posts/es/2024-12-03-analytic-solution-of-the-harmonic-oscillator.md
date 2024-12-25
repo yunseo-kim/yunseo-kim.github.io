@@ -1,13 +1,14 @@
 ---
-title: "Solución analítica del oscilador armónico (The Harmonic Oscillator)"
-description: >-
-  Establecemos la ecuación de Schrödinger para el oscilador armónico en mecánica cuántica y examinamos su solución analítica.
-  Resolvemos la ecuación introduciendo la variable adimensional 𝜉 y expresamos cualquier estado estacionario normalizado utilizando polinomios de Hermite.
+title: Solución analítica del oscilador armónico (The Harmonic Oscillator)
+description: Establecemos la ecuación de Schrödinger para el oscilador armónico en
+  mecánica cuántica y examinamos su solución analítica. Resolvemos la ecuación introduciendo
+  la variable adimensional 𝜉 y expresamos cualquier estado estacionario normalizado
+  utilizando polinomios de Hermite.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Cualquier oscilación puede aproximarse a una oscilación armónica simple si la amplitud es lo suficientemente pequeña, lo que hace que la oscilación armónica simple sea importante en física
 > - Oscilador armónico: $V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

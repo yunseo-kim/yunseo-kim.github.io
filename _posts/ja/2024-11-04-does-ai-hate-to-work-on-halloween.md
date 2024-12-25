@@ -1,12 +1,9 @@
 ---
 title: AIでもハロウィンには遊びたい(?)（Does AI Hate to Work on Halloween?）
-description: >-
-  2024年10月31日、突然Claude 3.5 Sonnetモデルが与えられたタスクを非常に不誠実に処理するという異常現象により、ここ数ヶ月問題なくブログに適用してきた投稿自動翻訳システムに障害が発生した。この現象が起きた原因についての推測と、それに伴う解決方法を紹介する。
-categories:
-- Blogging
-tags:
-- Jekyll
-- LLM
+description: 2024年10月31日、突然Claude 3.5 Sonnetモデルが与えられたタスクを非常に不誠実に処理するという異常現象により、ここ数ヶ月問題なくブログに適用してきた投稿自動翻訳システムに障害が発生した。この現象が起きた原因についての推測と、それに伴う解決方法を紹介する。
+categories: [AI & Data, GenAI]
+tags: [LLM]
+image: /assets/img/technology.jpg
 ---
 ## 問題状況
 ['Claude 3.5 Sonnet APIで投稿を自動翻訳する方法'シリーズ](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1)で扱ったように、本ブログは2024年6月末からClaude 3.5 Sonnetモデルを活用した投稿の多言語翻訳システムを導入して活用しており、この自動化は過去4ヶ月間大きな問題なく正常に動作していた。

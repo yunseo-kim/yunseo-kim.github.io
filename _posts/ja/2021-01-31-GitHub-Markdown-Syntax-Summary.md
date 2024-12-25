@@ -1,12 +1,10 @@
 ---
-title: "GitHub マークダウン文法のまとめ"
-description: >-
-  Markdownとは何かを理解し、GitHub Pagesブログホスティングのために、GitHub Flavored Markdownを基準に主要なMarkdown文法をまとめました。
+title: GitHub マークダウン文法のまとめ
+description: Markdownとは何かを理解し、GitHub Pagesブログホスティングのために、GitHub Flavored Markdownを基準に主要なMarkdown文法をまとめました。
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.jpg
 ---
-
 GitHub Pagesを活用するには、**markdown**文法について知る必要があります。
 GitHub公式ドキュメントの[Mastering Markdown](https://guides.github.com/features/mastering-markdown/)と[Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)を参考に作成しました。
 

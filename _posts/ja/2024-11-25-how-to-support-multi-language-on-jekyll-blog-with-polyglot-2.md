@@ -1,14 +1,11 @@
 ---
 title: Polyglotを使用してJekyllブログで多言語サポートを実装する方法 (2) - Chirpyテーマのビルド失敗と検索機能エラーのトラブルシューティング
-description: >-
-  'jekyll-theme-chirpy'ベースのJekyllブログにPolyglotプラグインを適用して多言語サポートを実装するプロセスを紹介します。
-  この投稿はシリーズの2番目の記事で、ChirpyテーマにPolyglotを適用する際に発生したエラーの原因を特定し解決する部分を扱います。
-categories:
-- Blogging
-tags:
-- Jekyll
-- Polyglot
+description: '''jekyll-theme-chirpy''ベースのJekyllブログにPolyglotプラグインを適用して多言語サポートを実装するプロセスを紹介します。
+  この投稿はシリーズの2番目の記事で、ChirpyテーマにPolyglotを適用する際に発生したエラーの原因を特定し解決する部分を扱います。'
+categories: [AI & Data, Blogging]
+tags: [Jekyll, Polyglot, Markdown]
 mermaid: true
+image: /assets/img/technology.jpg
 ---
 ## 概要
 約4ヶ月前の2024年7月初め、Jekyll基盤でGitHub Pagesを通じてホスティングしているこのブログに[Polyglot](https://github.com/untra/polyglot)プラグインを適用して多言語サポートの実装を追加しました。

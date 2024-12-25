@@ -1,12 +1,12 @@
 ---
-title: "Método de Separação de Variáveis"
-description: >-
-  Vamos explorar o método de separação de variáveis e apresentar alguns exemplos relacionados.
+title: Método de Separação de Variáveis
+description: Vamos explorar o método de separação de variáveis e apresentar alguns
+  exemplos relacionados.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Método de Separação de Variáveis
 **Equação separável**: Uma equação que pode ser expressa na forma $g(y)y'=f(x)$ através de manipulação algébrica.
 

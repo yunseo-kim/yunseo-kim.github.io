@@ -1,13 +1,16 @@
 ---
-title: "Mecanismos de reação de fusão nuclear nas estrelas"
-description: >-
-  Este artigo introduz a reação em cadeia próton-próton e o ciclo CNO, que são reações de fusão nuclear que ocorrem no núcleo das estrelas.
-  Este é um ensaio que o autor escreveu para uma atividade do clube de ciências da escola quando estava no primeiro ano do ensino médio. Diferentemente de outros posts, está escrito em um estilo coloquial, mas foi carregado exatamente como o texto original na época para fins de arquivamento.
+title: Mecanismos de reação de fusão nuclear nas estrelas
+description: Este artigo introduz a reação em cadeia próton-próton e o ciclo CNO,
+  que são reações de fusão nuclear que ocorrem no núcleo das estrelas. Este é um ensaio
+  que o autor escreveu para uma atividade do clube de ciências da escola quando estava
+  no primeiro ano do ensino médio. Diferentemente de outros posts, está escrito em
+  um estilo coloquial, mas foi carregado exatamente como o texto original na época
+  para fins de arquivamento.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
+image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## Reação em cadeia próton-próton (proton-proton chain reaction)
 Esta é a reação de fusão estelar mais conhecida pelas pessoas. O núcleo do deutério, o deuteron, é formado pela combinação de um próton (p) e um nêutron (n). Portanto, para que dois prótons se combinem para formar o núcleo de deutério, um dos prótons deve se transformar em um nêutron. Então, como um próton pode se transformar em um nêutron?
 

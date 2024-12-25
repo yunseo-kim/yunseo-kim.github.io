@@ -1,13 +1,12 @@
 ---
-title: "완전미분방정식(Exact Differential Equation)과 적분인자"
-description: >-
-  완전미분방정식의 판별법과 풀이법, 그리고 적분인자에 대해 알아본다.
+title: 완전미분방정식(Exact Differential Equation)과 적분인자
+description: 완전미분방정식의 판별법과 풀이법, 그리고 적분인자에 대해 알아본다.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 ```mermaid
 flowchart TD
@@ -146,4 +145,3 @@ $$ \frac{1}{F^*} \frac{dF^*}{dy} = \frac{1}{P}\left(\frac{\partial Q}{\partial x
 >
 > $$ F^*(y)=e^{\int R^*(y)dy}, \quad \text{단 }R^*=\frac{1}{P}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} \right) \tag{13} $$
 {: .prompt-info }
-

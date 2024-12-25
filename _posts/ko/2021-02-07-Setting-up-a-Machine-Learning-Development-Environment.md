@@ -1,11 +1,11 @@
 ---
-title: "머신러닝 개발환경 구축하기"
-description: >-
-  이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.
+title: 머신러닝 개발환경 구축하기
+description: 이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은
+  우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, CUDA, PyTorch, TensorFlow]
+image: /assets/img/technology.jpg
 ---
-
 ## 개요
 이 글에서는 로컬 머신에서 머신러닝을 공부하기 위한 첫 단계라고 할 수 있는 개발환경 구축 방법에 대해 다룬다. 모든 내용은 우분투 20.04 LTS상에서 NVIDIA Geforce RTX 3070 그래픽카드를 기준으로 작성하였다.
 

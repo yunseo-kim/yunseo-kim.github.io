@@ -1,7 +1,7 @@
 ---
-title: "Principios para escribir buen código"
-description: >-
-  Exploramos la necesidad de escribir buen código y los principios generales para hacerlo.
+title: Principios para escribir buen código
+description: Exploramos la necesidad de escribir buen código y los principios generales
+  para hacerlo.
 categories: [Programming]
 tags: [Coding, PS/CP]
 image: /assets/img/technology.jpg

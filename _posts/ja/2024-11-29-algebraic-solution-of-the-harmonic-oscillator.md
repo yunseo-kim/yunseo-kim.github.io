@@ -1,13 +1,12 @@
 ---
-title: "調和振動子（The Harmonic Oscillator）の代数的解法"
-description: >-
-  量子力学における調和振動子のシュレーディンガー方程式を立て、その方程式の代数的な解法を学ぶ。
-  交換子と正準交換関係および梯子演算子から任意の定常状態の波動関数とエネルギー準位を求める。
+title: 調和振動子（The Harmonic Oscillator）の代数的解法
+description: 量子力学における調和振動子のシュレーディンガー方程式を立て、その方程式の代数的な解法を学ぶ。 交換子と正準交換関係および梯子演算子から任意の定常状態の波動関数とエネルギー準位を求める。
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder Operators]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
+    Operators]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - 振幅が十分に小さければ、どのような振動も単純調和振動（simple harmonic oscillation）で近似できるため、単純調和振動は物理学で重要な意味を持つ
 > - 調和振動子: $V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

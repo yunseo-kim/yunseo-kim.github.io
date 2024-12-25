@@ -1,11 +1,14 @@
 ---
-title: "The Role of Quantum Computers in Future Society and Challenges to Overcome"
-description: >-
-  This article explores the basic concepts of quantum computers, their advantages over classical computers, and their expected roles in the future. It also considers the necessity for Korea to prepare in advance for the era of quantum computing. This essay was written by the author when they were in their second year of high school.
+title: The Role of Quantum Computers in Future Society and Challenges to Overcome
+description: This article explores the basic concepts of quantum computers, their
+  advantages over classical computers, and their expected roles in the future. It
+  also considers the necessity for Korea to prepare in advance for the era of quantum
+  computing. This essay was written by the author when they were in their second year
+  of high school.
 categories: [Engineering Physics, Quantum Computing]
 tags: [Quantum Computing]
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 For decades since the 1960s, the computational power of computers has increased exponentially. This development has been achieved by miniaturizing transistors, components inside computer processors, to integrate more of them into the same area. As a striking example of the rapid progress in computer performance, the latest smartphones we use today outperform the most powerful supercomputers of the 1990s. Given that it's virtually impossible to find a field that doesn't use computers today, computer performance is a crucial factor determining the overall pace of technological advancement in modern society. However, the problem is that as individual transistors become extremely small, this method of improving computer processing power is now reaching its physical limits. This is why scientists are focusing on quantum computers. In this article, we will discuss the characteristics of quantum computers, their advantages over existing computers, their expected roles in future society, and the challenges that need to be addressed to realize these roles.
 
 A quantum computer is a computer that processes data using quantum mechanical phenomena such as entanglement and superposition, a concept first proposed by American theoretical physicist Richard Feynman in 1982. 

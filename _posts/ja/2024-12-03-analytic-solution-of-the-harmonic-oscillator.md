@@ -1,13 +1,11 @@
 ---
-title: "調和振動子（The Harmonic Oscillator）の解析的解法"
-description: >-
-  量子力学における調和振動子のシュレーディンガー方程式を立て、その方程式の解析的な解法を学ぶ。
-  無次元変数ξを導入して方程式を解き、任意の規格化された定常状態をエルミート多項式を用いて表す。
+title: 調和振動子（The Harmonic Oscillator）の解析的解法
+description: 量子力学における調和振動子のシュレーディンガー方程式を立て、その方程式の解析的な解法を学ぶ。 無次元変数ξを導入して方程式を解き、任意の規格化された定常状態をエルミート多項式を用いて表す。
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - 振幅が十分に小さければ、どのような振動も単純調和振動（simple harmonic oscillation）で近似でき、これにより単純調和振動は物理学で重要な意味を持つ
 > - 調和振動子：$V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

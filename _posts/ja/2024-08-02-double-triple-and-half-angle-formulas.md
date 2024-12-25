@@ -1,12 +1,11 @@
 ---
-title: "倍角・半角の公式（Multiple-Angle and Half-Angle Formulas）"
-description: >-
-  2倍角、3倍角の公式を見て、三角関数の加法定理（Trigonometric Addition Formulas）からこれらを導出します。そして2倍角の公式から半角の公式も導出します。
+title: 倍角・半角の公式（Multiple-Angle and Half-Angle Formulas）
+description: 2倍角、3倍角の公式を見て、三角関数の加法定理（Trigonometric Addition Formulas）からこれらを導出します。そして2倍角の公式から半角の公式も導出します。
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **2倍角の公式 (Double-Angle Formulas)**
 >

@@ -1,12 +1,13 @@
 ---
-title: "Fórmulas de ángulo múltiple y medio ángulo"
-description: >-
-  Examinamos las fórmulas de ángulo doble y triple, y las derivamos de las fórmulas de adición trigonométrica. También derivamos las fórmulas de medio ángulo a partir de las fórmulas de ángulo doble.
+title: Fórmulas de ángulo múltiple y medio ángulo
+description: Examinamos las fórmulas de ángulo doble y triple, y las derivamos de
+  las fórmulas de adición trigonométrica. También derivamos las fórmulas de medio
+  ángulo a partir de las fórmulas de ángulo doble.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Fórmulas de ángulo doble (Double-Angle Formulas)**
 >

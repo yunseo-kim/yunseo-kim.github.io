@@ -1,12 +1,11 @@
 ---
-title: "삼각함수의 덧셈정리"
-description: >-
-  삼각함수의 정의와 삼각함수 사이의 관계식을 살펴보고, 이로부터 삼각함수의 덧셈정리 및 파생 공식을 유도한다.
+title: 삼각함수의 덧셈정리
+description: 삼각함수의 정의와 삼각함수 사이의 관계식을 살펴보고, 이로부터 삼각함수의 덧셈정리 및 파생 공식을 유도한다.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## 삼각함수의 정의
 ![Unit Circle and Radius Vector](/assets/img/trigonometry/definition.png)
 그림과 같이 동경 $\overline{OP}$가 $x$축의 양의 방향과 이루는 각의 크기를 $\theta$라 할 때,

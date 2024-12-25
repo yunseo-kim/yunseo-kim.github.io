@@ -1,13 +1,13 @@
 ---
-title: "Basic Concepts of Modeling"
-description: >-
-  Explore the concepts of mathematical modeling, ordinary differential equations, partial differential equations, and initial value problems.
+title: Basic Concepts of Modeling
+description: Explore the concepts of mathematical modeling, ordinary differential
+  equations, partial differential equations, and initial value problems.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Modeling
 - **Model**: A mathematical formulation of an engineering problem using variables, functions, equations, etc.
 - **Mathematical modeling** or **Modeling**: The process of creating a model, solving it mathematically, and interpreting the results

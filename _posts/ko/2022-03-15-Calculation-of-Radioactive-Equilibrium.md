@@ -1,13 +1,13 @@
 ---
-title: "방사 평형 계산"
-description: >-
-  방사성 핵종의 붕괴상수와 반감기, 평균수명의 상관관계에 대해 알아보고, 주어진 붕괴 사슬에서 임의의 시간 t에서의 방사성 핵종의 방사능을 계산해 본다.
+title: 방사 평형 계산
+description: 방사성 핵종의 붕괴상수와 반감기, 평균수명의 상관관계에 대해 알아보고, 주어진 붕괴 사슬에서 임의의 시간 t에서의 방사성 핵종의
+  방사능을 계산해 본다.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true
+image: /assets/img/atoms.png
 ---
-
 ## TL;DR
 > **임의의 시간 t에서의 방사능**
 >

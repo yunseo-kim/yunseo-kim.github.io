@@ -1,12 +1,12 @@
 ---
-title: "중성자 감쇠와 평균 자유행정(Mean Free Path)"
-description: >-
-  단일 에너지 중성자 빔을 목표물에 조사했을 때 목표물 투과 거리에 따른 중성자 빔의 강도를 계산하고, 이로부터 중성자의 평균 자유행정을 유도한다.
+title: 중성자 감쇠와 평균 자유행정(Mean Free Path)
+description: 단일 에너지 중성자 빔을 목표물에 조사했을 때 목표물 투과 거리에 따른 중성자 빔의 강도를 계산하고, 이로부터 중성자의 평균
+  자유행정을 유도한다.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## 중성자 감쇠(Neutron Attenuation)
 강도 $I_0$의 단일 에너지 중성자 빔을 두께 $X$인 목표물에 조사하고 있으며, 목표물 뒤 얼마 떨어진 거리에 중성자 감지기가 놓여 있다. 목표물과 감지기는 둘 다 매우 작고, 감지기는 목표물을 통과하여 나오는 중성자의 일부만 감지할 수 있는 작은 입체각을 가진다고 가정하자. 그러면 목표물에 충돌하는 모든 중성자는 흡수되거나 산란되어 다른 방향으로 이탈할 것이므로, 목표물과 반응하지 않은 중성자들만 감지기로 입사한다.
 

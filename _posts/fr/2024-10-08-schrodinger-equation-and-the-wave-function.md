@@ -1,14 +1,18 @@
 ---
-title: "L'équation de Schrödinger et la fonction d'onde"
-description: >-
-  Nous examinons la forme fondamentale de l'équation de Schrödinger, qui occupe une position similaire à celle des lois du mouvement de Newton en mécanique classique dans le domaine de la mécanique quantique.
-  Nous explorons également l'interprétation statistique et les perspectives sur l'indétermination quantique de la signification physique de la fonction d'onde obtenue comme solution de l'équation de Schrödinger, ainsi que la signification physique de l'acte de mesure dans l'interprétation de Copenhague (effondrement de la fonction d'onde).
+title: L'équation de Schrödinger et la fonction d'onde
+description: Nous examinons la forme fondamentale de l'équation de Schrödinger, qui
+  occupe une position similaire à celle des lois du mouvement de Newton en mécanique
+  classique dans le domaine de la mécanique quantique. Nous explorons également l'interprétation
+  statistique et les perspectives sur l'indétermination quantique de la signification
+  physique de la fonction d'onde obtenue comme solution de l'équation de Schrödinger,
+  ainsi que la signification physique de l'acte de mesure dans l'interprétation de
+  Copenhague (effondrement de la fonction d'onde).
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Équation de Schrödinger (dépendante du temps) : 
 >

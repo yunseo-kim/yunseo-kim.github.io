@@ -1,13 +1,12 @@
 ---
-title: "모델링(Modeling) 기본 개념"
-description: >-
-  수학적 모델링과 상미분방정식, 편미분방정식, 초기값 문제의 개념을 알아본다. 
+title: 모델링(Modeling) 기본 개념
+description: '수학적 모델링과 상미분방정식, 편미분방정식, 초기값 문제의 개념을 알아본다. '
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## 모델링(Modeling)
 - **모델(model)**: 풀고자 하는 공학문제를 변수, 함수, 방정식 등을 통하여 수학적 식으로 공식화한 것
 - **수학적 모델링(mathematical modeling)** 또는 **모델링(modeling)**: 모델을 세우고, 그것을 수학적으로 풀고, 그 결과를 해석하는 과정

@@ -1,13 +1,13 @@
 ---
-title: "Exakte Differentialgleichung und Integrierende Faktoren"
-description: >-
-  Wir untersuchen die Methoden zur Bestimmung und Lösung exakter Differentialgleichungen sowie integrierende Faktoren.
+title: Exakte Differentialgleichung und Integrierende Faktoren
+description: Wir untersuchen die Methoden zur Bestimmung und Lösung exakter Differentialgleichungen
+  sowie integrierende Faktoren.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 ```mermaid
 flowchart TD

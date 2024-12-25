@@ -1,12 +1,12 @@
 ---
-title: "연속 X선과 특성 X선(Continuous and Characteristic X Rays)"
-description: >-
-  원자 방사선에 해당하는 X선의 2가지 발생 원리와, 그에 따른 bremsstrahlung 및 특성 X선의 각각의 특징에 대해 알아본다.
+title: 연속 X선과 특성 X선(Continuous and Characteristic X Rays)
+description: 원자 방사선에 해당하는 X선의 2가지 발생 원리와, 그에 따른 bremsstrahlung 및 특성 X선의 각각의 특징에 대해
+  알아본다.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Radiation, Atomic Radiation, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## TL;DR
 > - **bremsstrahlung(제동 복사, breaking radiation)**: 전자와 같은 하전 입자가 원자핵 근처를 지날 때, 전기적 인력에 의해 가속되면서 방출하는 연속 스펙트럼의 X선
 > - 최소 파장: $\lambda_\text{min} = \cfrac{hc}{E_\text{max}} = \cfrac{12400 \text{[Å}\cdot\text{eV]}}{V\text{[eV]}}$

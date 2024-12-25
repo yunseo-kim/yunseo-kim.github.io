@@ -1,12 +1,13 @@
 ---
-title: "Subatomic Particles and Atomic Components"
-description: >-
-  A brief overview of elementary particles important in nuclear engineering, such as electrons, protons, neutrons, photons, and neutrinos, and an examination of the structure of atoms and atomic nuclei.
+title: Subatomic Particles and Atomic Components
+description: A brief overview of elementary particles important in nuclear engineering,
+  such as electrons, protons, neutrons, photons, and neutrinos, and an examination
+  of the structure of atoms and atomic nuclei.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Subatomic Particles
 **Subatomic particles** refer to particles smaller than atoms. Subatomic particles include composite particles made up of smaller constituent particles, as well as elementary particles that are believed to be indivisible.
 In nuclear engineering, the following particles are particularly important:

@@ -1,13 +1,11 @@
 ---
-title: "Zusammenfassung des Kaggle-Kurses 'Einführung in maschinelles Lernen'"
-description: >-
-  Ich habe den Inhalt des öffentlichen Kaggle-Kurses 'Intro to Machine Learning' zusammengefasst.
-categories: [Data Science, Machine Learning]
+title: Zusammenfassung des Kaggle-Kurses 'Einführung in maschinelles Lernen'
+description: Ich habe den Inhalt des öffentlichen Kaggle-Kurses 'Intro to Machine
+  Learning' zusammengefasst.
+categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas, scikit-learn]
-toc: true
-toc_sticky: true
+image: /assets/img/technology.jpg
 ---
-
 Ich habe beschlossen, die [öffentlichen Kurse von Kaggle](https://www.kaggle.com/learn/overview) zu studieren.
 Ich plane, den Inhalt jedes Kurses kurz zusammenzufassen, sobald ich ihn abgeschlossen habe. Der erste Artikel ist eine Zusammenfassung des Kurses **Intro to Machine Learning**.
 

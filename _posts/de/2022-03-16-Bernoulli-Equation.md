@@ -1,12 +1,12 @@
 ---
-title: "Bernoulli-Gleichung (Bernoulli Equation)"
-description: >-
-  Wir untersuchen die Bernoulli-Gleichung und die Lösungsmethode für die logistische Gleichung, eine spezielle Form der Bernoulli-Gleichung.
+title: Bernoulli-Gleichung (Bernoulli Equation)
+description: Wir untersuchen die Bernoulli-Gleichung und die Lösungsmethode für die
+  logistische Gleichung, eine spezielle Form der Bernoulli-Gleichung.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Bernoulli-Gleichung (Bernoulli Equation)
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{ ist eine beliebige reelle Zahl)}  \tag{1} $$

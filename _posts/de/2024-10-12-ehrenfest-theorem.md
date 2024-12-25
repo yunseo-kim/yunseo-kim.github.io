@@ -1,14 +1,14 @@
 ---
-title: "Ehrenfest-Theorem"
-description: >-
-  Wir untersuchen, wie man in der Quantenmechanik Erwartungswerte für Position und Impuls aus der Wellenfunktion berechnet,
-  und erweitern dies auf eine Formel für den Erwartungswert einer beliebigen mechanischen Variable Q(x,p).
-  Daraus leiten wir dann das Ehrenfest-Theorem ab.
+title: Ehrenfest-Theorem
+description: Wir untersuchen, wie man in der Quantenmechanik Erwartungswerte für Position
+  und Impuls aus der Wellenfunktion berechnet, und erweitern dies auf eine Formel
+  für den Erwartungswert einer beliebigen mechanischen Variable Q(x,p). Daraus leiten
+  wir dann das Ehrenfest-Theorem ab.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - $$ \hat x \equiv x,\ \hat p \equiv -i\hbar\nabla$$
 > - $$ \langle Q(x,p) \rangle = \int \Psi^*[Q(x, -i\hbar\nabla)]\Psi dx $$

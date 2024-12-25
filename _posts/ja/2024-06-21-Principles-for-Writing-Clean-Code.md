@@ -1,7 +1,6 @@
 ---
-title: "良いコードを書くための原則"
-description: >-
-  良いコードを書くことの必要性と、一般的に良いコードを書くための主要な原則について学ぶ。
+title: 良いコードを書くための原則
+description: 良いコードを書くことの必要性と、一般的に良いコードを書くための主要な原則について学ぶ。
 categories: [Programming]
 tags: [Coding, PS/CP]
 image: /assets/img/technology.jpg

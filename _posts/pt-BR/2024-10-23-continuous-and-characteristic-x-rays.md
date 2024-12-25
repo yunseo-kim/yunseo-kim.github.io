@@ -1,12 +1,12 @@
 ---
-title: "Raios X Contínuos e Característicos"
-description: >-
-  Exploramos os dois princípios de geração de raios X como radiação atômica e as características respectivas do bremsstrahlung e dos raios X característicos.
+title: Raios X Contínuos e Característicos
+description: Exploramos os dois princípios de geração de raios X como radiação atômica
+  e as características respectivas do bremsstrahlung e dos raios X característicos.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Radiation, Atomic Radiation, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## TL;DR
 > - **bremsstrahlung (radiação de frenagem)**: raios X de espectro contínuo emitidos quando partículas carregadas, como elétrons, passam perto de núcleos atômicos e são aceleradas devido à força elétrica
 > - Comprimento de onda mínimo: $\lambda_\text{min} = \cfrac{hc}{E_\text{max}} = \cfrac{12400 \text{[Å}\cdot\text{eV]}}{V\text{[eV]}}$

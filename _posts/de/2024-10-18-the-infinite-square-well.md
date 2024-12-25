@@ -1,12 +1,15 @@
 ---
-title: "Der eindimensionale unendliche Potentialtopf"
-description: >-
-  Wir betrachten das einfache, aber wichtige Modellproblem des eindimensionalen unendlichen Potentialtopfs, das grundlegende Konzepte der Quantenmechanik gut veranschaulicht. Wir bestimmen die n-te stationäre Zustandsfunktion ψ(x) und Energie E des Teilchens in dieser idealen Situation, untersuchen vier wichtige mathematische Eigenschaften von ψ(x) und leiten daraus die allgemeine Lösung Ψ(x,t) ab.
+title: Der eindimensionale unendliche Potentialtopf
+description: Wir betrachten das einfache, aber wichtige Modellproblem des eindimensionalen
+  unendlichen Potentialtopfs, das grundlegende Konzepte der Quantenmechanik gut veranschaulicht.
+  Wir bestimmen die n-te stationäre Zustandsfunktion ψ(x) und Energie E des Teilchens
+  in dieser idealen Situation, untersuchen vier wichtige mathematische Eigenschaften
+  von ψ(x) und leiten daraus die allgemeine Lösung Ψ(x,t) ab.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Eindimensionaler unendlicher Potentialtopf: 
 >   $$V(x) = \begin{cases}

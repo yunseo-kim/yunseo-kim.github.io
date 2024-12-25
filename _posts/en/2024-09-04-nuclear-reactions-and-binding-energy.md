@@ -1,12 +1,12 @@
 ---
-title: "Nuclear Reactions and Binding Energy"
-description: >-
-  Learn about the expression of nuclear reactions, the definition of Q-value, and the concepts of mass defect and binding energy.
+title: Nuclear Reactions and Binding Energy
+description: Learn about the expression of nuclear reactions, the definition of Q-value,
+  and the concepts of mass defect and binding energy.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Nuclear Reaction
 ### Basic Laws in Nuclear Reactions
 *Nuclear reaction*: A reaction where two different atomic nuclei or an atomic nucleus and a nucleon collide to produce two or more new nuclear particles or gamma rays.

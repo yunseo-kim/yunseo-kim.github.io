@@ -1,13 +1,18 @@
 ---
-title: "La fusion nucléaire : des pincements toroïdaux aux tokamaks"
-description: >-
-  Ce texte aborde le concept de fusion nucléaire, les raisons pour lesquelles elle est considérée comme une source d'énergie prometteuse pour l'avenir, les objectifs techniques à atteindre pour commercialiser l'énergie de fusion, ainsi que l'évolution des technologies de fusion, des pincements toroïdaux (toroidal pinch) à ITER. 
-  L'auteur précise que cet essai a été rédigé pour une activité de club scientifique lorsqu'il était en deuxième année de lycée. Contrairement à ses autres articles, celui-ci est écrit dans un style plus familier, mais il a été téléchargé tel quel à des fins d'archivage.
+title: 'La fusion nucléaire : des pincements toroïdaux aux tokamaks'
+description: Ce texte aborde le concept de fusion nucléaire, les raisons pour lesquelles
+  elle est considérée comme une source d'énergie prometteuse pour l'avenir, les objectifs
+  techniques à atteindre pour commercialiser l'énergie de fusion, ainsi que l'évolution
+  des technologies de fusion, des pincements toroïdaux (toroidal pinch) à ITER.  L'auteur
+  précise que cet essai a été rédigé pour une activité de club scientifique lorsqu'il
+  était en deuxième année de lycée. Contrairement à ses autres articles, celui-ci
+  est écrit dans un style plus familier, mais il a été téléchargé tel quel à des fins
+  d'archivage.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
+image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## Qu'est-ce que la fusion nucléaire ?
 La fusion nucléaire est une réaction dans laquelle deux noyaux atomiques entrent en collision pour former un noyau plus lourd. Fondamentalement, les noyaux atomiques ont une charge positive en raison des protons qu'ils contiennent, donc lorsque deux noyaux s'approchent l'un de l'autre, ils se repoussent en raison de la force électrostatique répulsive. Cependant, si les noyaux sont chauffés à des températures extrêmement élevées, leur énergie cinétique peut surmonter la répulsion électrique, permettant aux deux noyaux d'entrer en collision. Une fois que les deux noyaux sont suffisamment proches, l'interaction nucléaire forte entre en jeu et les fusionne en un seul noyau.
 

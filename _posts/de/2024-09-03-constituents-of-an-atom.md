@@ -1,12 +1,13 @@
 ---
-title: "Subatomare Teilchen und Bestandteile des Atoms"
-description: >-
-  Ein kurzer Überblick über die in der Kerntechnik wichtigen Elementarteilchen wie Elektronen, Protonen, Neutronen, Photonen und Neutrinos, sowie die Struktur von Atomen und Atomkernen.
+title: Subatomare Teilchen und Bestandteile des Atoms
+description: Ein kurzer Überblick über die in der Kerntechnik wichtigen Elementarteilchen
+  wie Elektronen, Protonen, Neutronen, Photonen und Neutrinos, sowie die Struktur
+  von Atomen und Atomkernen.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Subatomare Teilchen
 **Subatomare Teilchen** sind Teilchen, die kleiner als Atome sind. Zu den subatomaren Teilchen gehören sowohl zusammengesetzte Teilchen, die aus kleineren Einheiten bestehen, als auch Elementarteilchen, von denen man annimmt, dass sie nicht weiter zerlegt werden können.
 In der Kerntechnik sind insbesondere die folgenden Elementarteilchen von Bedeutung:

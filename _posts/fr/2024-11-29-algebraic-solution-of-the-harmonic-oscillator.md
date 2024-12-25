@@ -1,13 +1,15 @@
 ---
-title: "Solution algébrique de l'oscillateur harmonique"
-description: >-
-  On établit l'équation de Schrödinger pour l'oscillateur harmonique en mécanique quantique et on examine sa résolution algébrique.
-  On détermine les fonctions d'onde et les niveaux d'énergie de tout état stationnaire à partir des commutateurs, des relations de commutation canoniques et des opérateurs d'échelle.
+title: Solution algébrique de l'oscillateur harmonique
+description: On établit l'équation de Schrödinger pour l'oscillateur harmonique en
+  mécanique quantique et on examine sa résolution algébrique. On détermine les fonctions
+  d'onde et les niveaux d'énergie de tout état stationnaire à partir des commutateurs,
+  des relations de commutation canoniques et des opérateurs d'échelle.
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder Operators]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
+    Operators]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Toute oscillation peut être approximée par une oscillation harmonique simple si l'amplitude est suffisamment petite, ce qui donne à l'oscillation harmonique simple une signification importante en physique
 > - Oscillateur harmonique : $V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

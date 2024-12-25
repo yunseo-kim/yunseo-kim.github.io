@@ -1,12 +1,13 @@
 ---
-title: "Reações Nucleares e Energia de Ligação"
-description: >-
-  Aprenda sobre a expressão de reações nucleares, a definição do valor Q (Q-value), e os conceitos de defeito de massa (mass defect) e energia de ligação (binding energy).
+title: Reações Nucleares e Energia de Ligação
+description: Aprenda sobre a expressão de reações nucleares, a definição do valor
+  Q (Q-value), e os conceitos de defeito de massa (mass defect) e energia de ligação
+  (binding energy).
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Reação Nuclear (Nuclear Reaction)
 ### Leis Fundamentais nas Reações Nucleares
 *Reação nuclear (nuclear reaction)*: Uma reação onde dois núcleos atômicos diferentes ou um núcleo atômico e um nucleon colidem para produzir duas ou mais novas partículas nucleares ou raios gama.

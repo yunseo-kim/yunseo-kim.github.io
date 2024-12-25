@@ -1,12 +1,12 @@
 ---
-title: "Solução de Equações Diferenciais Ordinárias Lineares de Primeira Ordem"
-description: >-
-  Vamos aprender como resolver equações diferenciais ordinárias lineares de primeira ordem.
+title: Solução de Equações Diferenciais Ordinárias Lineares de Primeira Ordem
+description: Vamos aprender como resolver equações diferenciais ordinárias lineares
+  de primeira ordem.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Equação Diferencial Ordinária Linear de Primeira Ordem
 Se uma equação diferencial ordinária de primeira ordem pode ser algebricamente colocada na forma
 

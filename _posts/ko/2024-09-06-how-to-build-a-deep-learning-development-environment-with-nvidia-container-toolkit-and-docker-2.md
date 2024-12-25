@@ -1,11 +1,13 @@
 ---
-title: "NVIDIA Container Toolkit과 Docker로 딥러닝 개발환경 구축하기 (2) - GPU 활용을 위한 컨테이너 런타임 구성, Dockerfile 작성 및 Docker 이미지 빌드"
-description: >-
-  이 시리즈는 로컬에 NVIDIA Container Toolkit과 Docker 기반의 딥러닝 개발환경을 구축하고, 원격 서버로 활용할 수 있도록 SSH 및 Jupyter Lab을 설정하는 방법을 다룬다. 이 포스트는 해당 시리즈의 첫 번째 글로, NVIDIA Container Toolkit의 설치 방법을 소개한다.
+title: NVIDIA Container Toolkit과 Docker로 딥러닝 개발환경 구축하기 (2) - GPU 활용을 위한 컨테이너 런타임 구성,
+  Dockerfile 작성 및 Docker 이미지 빌드
+description: 이 시리즈는 로컬에 NVIDIA Container Toolkit과 Docker 기반의 딥러닝 개발환경을 구축하고, 원격 서버로
+  활용할 수 있도록 SSH 및 Jupyter Lab을 설정하는 방법을 다룬다. 이 포스트는 해당 시리즈의 첫 번째 글로, NVIDIA Container
+  Toolkit의 설치 방법을 소개한다.
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, Docker, CUDA, PyTorch]
+image: /assets/img/technology.jpg
 ---
-
 ## 개요
 이 시리즈에서는 NVIDIA Container Toolkit과 Docker를 설치하고, Docker Hub의 [nvidia/cuda 리포지터리](https://hub.docker.com/r/nvidia/cuda)에서 제공하는 CUDA 및 cuDNN 이미지를 기반으로 Dockerfile을 작성하여 딥러닝 개발환경을 구축하는 과정을 다룬다. 필요한 분들은 자유롭게 가져다 사용할 수 있도록 이 과정을 거쳐 완성한 [Dockerfile](https://github.com/yunseo-kim/dl-env-docker)과 [이미지](https://hub.docker.com/r/yunseokim/dl-env/tags)를 GitHub와 Docker Hub를 통해 공유하며, 추가적으로 원격 서버로 활용하기 위한 SSH 및 Jupyter Lab 설정 가이드를 제공한다.  
 시리즈는 3개의 글로 이루어질 예정이며, 읽고 있는 이 글은 해당 시리즈의 두 번째 글이다.

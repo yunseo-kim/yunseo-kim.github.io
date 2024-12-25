@@ -1,10 +1,11 @@
 ---
-title: "Homogene Mischungen und molekulare Wirkungsquerschnitte"
-description: >-
-  Berechnen wir den makroskopischen Wirkungsquerschnitt einer homogenen Mischung aus zwei oder mehr Nukliden.
+title: Homogene Mischungen und molekulare Wirkungsquerschnitte
+description: Berechnen wir den makroskopischen Wirkungsquerschnitt einer homogenen
+  Mischung aus zwei oder mehr Nukliden.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
+image: /assets/img/atoms.png
 ---
 ## Makroskopischer Wirkungsquerschnitt einer homogenen Mischung
 Betrachten wir eine homogene Mischung aus zwei Nukliden $X$ und $Y$. Die Atomdichten der jeweiligen Nuklide seien $N_X$ und $N_Y$ $\text{Atom/cm}^3$, und die Wirkungsquerschnitte für eine bestimmte Reaktion mit Neutronen seien jeweils $\sigma_X$ und $\sigma_Y$. 

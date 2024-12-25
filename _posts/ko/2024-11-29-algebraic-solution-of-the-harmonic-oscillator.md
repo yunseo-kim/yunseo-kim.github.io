@@ -1,13 +1,13 @@
 ---
-title: "조화진동자(The Harmonic Oscillator)의 대수적 풀이"
-description: >-
-  양자역학에서의 조화진동자에 대한 슈뢰딩거 방정식을 세우고, 해당 방정식의 대수적인 풀이법을 알아본다.
-  교환자와 정준교환관계 및 사다리연산자로부터 임의의 정상상태의 파동함수와 에너지 준위를 구한다.
+title: 조화진동자(The Harmonic Oscillator)의 대수적 풀이
+description: 양자역학에서의 조화진동자에 대한 슈뢰딩거 방정식을 세우고, 해당 방정식의 대수적인 풀이법을 알아본다. 교환자와 정준교환관계
+  및 사다리연산자로부터 임의의 정상상태의 파동함수와 에너지 준위를 구한다.
 categories: [Engineering Physics, Modern Physics]
-tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder Operators]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
+    Operators]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - 진폭이 충분히 작다면 어떠한 진동도 단순조화진동(simple harmonic oscillation)으로 근사할 수 있으며, 이 덕에 단순조화진동은 물리학에서 중요한 의미 가짐
 > - 조화진동자: $V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

@@ -1,12 +1,13 @@
 ---
-title: "Neutronenabschwächung und mittlere freie Weglänge (Mean Free Path)"
-description: >-
-  Berechnung der Intensität eines monoenergetischen Neutronenstrahls bei Bestrahlung eines Targets in Abhängigkeit von der Durchdringungstiefe und Ableitung der mittleren freien Weglänge der Neutronen daraus.
+title: Neutronenabschwächung und mittlere freie Weglänge (Mean Free Path)
+description: Berechnung der Intensität eines monoenergetischen Neutronenstrahls bei
+  Bestrahlung eines Targets in Abhängigkeit von der Durchdringungstiefe und Ableitung
+  der mittleren freien Weglänge der Neutronen daraus.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Neutronenabschwächung (Neutron Attenuation)
 Ein monoenergetischer Neutronenstrahl mit der Intensität $I_0$ bestrahlt ein Target der Dicke $X$, und in einiger Entfernung hinter dem Target befindet sich ein Neutronendetektor. Wir nehmen an, dass sowohl das Target als auch der Detektor sehr klein sind und der Detektor nur einen kleinen Raumwinkel hat, sodass er nur einen Teil der durch das Target austretenden Neutronen erfassen kann. Folglich werden alle Neutronen, die mit dem Target kollidieren, entweder absorbiert oder in andere Richtungen gestreut, sodass nur die Neutronen, die nicht mit dem Target reagiert haben, den Detektor erreichen.
 

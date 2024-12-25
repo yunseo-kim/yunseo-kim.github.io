@@ -1,12 +1,12 @@
 ---
-title: "Ecuación de Bernoulli (Bernoulli Equation)"
-description: >-
-  Exploramos la ecuación de Bernoulli y cómo resolver la ecuación logística, una forma especial de la ecuación de Bernoulli.
+title: Ecuación de Bernoulli (Bernoulli Equation)
+description: Exploramos la ecuación de Bernoulli y cómo resolver la ecuación logística,
+  una forma especial de la ecuación de Bernoulli.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Ecuación de Bernoulli (Bernoulli Equation)
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{ es un número real arbitrario)}  \tag{1} $$

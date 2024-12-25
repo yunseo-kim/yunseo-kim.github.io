@@ -1,13 +1,15 @@
 ---
-title: "Nuclear Fusion Reaction Mechanisms in Stars"
-description: >-
-  This article introduces the proton-proton chain reaction and the carbon-nitrogen-oxygen cycle, which are nuclear fusion reactions occurring in the cores of stars.
-  This essay was written by the author for a high school science club activity when they were in the first year of high school. Unlike other posts, it is written in a colloquial style, but it has been uploaded as it was originally written for archiving purposes.
+title: Nuclear Fusion Reaction Mechanisms in Stars
+description: This article introduces the proton-proton chain reaction and the carbon-nitrogen-oxygen
+  cycle, which are nuclear fusion reactions occurring in the cores of stars. This
+  essay was written by the author for a high school science club activity when they
+  were in the first year of high school. Unlike other posts, it is written in a colloquial
+  style, but it has been uploaded as it was originally written for archiving purposes.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
+image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## Proton-Proton Chain Reaction
 This is the most commonly known nuclear fusion reaction in stars. The nucleus of deuterium, called a deuteron, is formed by the combination of one proton (p) and one neutron (n). Therefore, for two protons to combine and form a deuterium nucleus, one of the protons must change into a neutron. So how can a proton change into a neutron?
 

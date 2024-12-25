@@ -1,14 +1,16 @@
 ---
-title: "Zeitunabhängige Schrödinger-Gleichung"
-description: >-
-  Wir leiten die zeitunabhängige Schrödinger-Gleichung ψ(x) her, indem wir die Methode der Variablentrennung auf die ursprüngliche Form der Schrödinger-Gleichung (zeitabhängige Schrödinger-Gleichung) Ψ(x,t) anwenden.
-  Wir untersuchen die mathematische und physikalische Bedeutung und Wichtigkeit der so erhaltenen separierten Lösung.
-  Schließlich betrachten wir die Methode zur Bestimmung der allgemeinen Lösung der Schrödinger-Gleichung durch Linearkombination der separierten Lösungen.
+title: Zeitunabhängige Schrödinger-Gleichung
+description: Wir leiten die zeitunabhängige Schrödinger-Gleichung ψ(x) her, indem
+  wir die Methode der Variablentrennung auf die ursprüngliche Form der Schrödinger-Gleichung
+  (zeitabhängige Schrödinger-Gleichung) Ψ(x,t) anwenden. Wir untersuchen die mathematische
+  und physikalische Bedeutung und Wichtigkeit der so erhaltenen separierten Lösung.
+  Schließlich betrachten wir die Methode zur Bestimmung der allgemeinen Lösung der
+  Schrödinger-Gleichung durch Linearkombination der separierten Lösungen.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Separierte Lösung: $ \Psi(x,t) = \psi(x)\phi(t)$
 > - Zeitabhängigkeit ("Wiggle-Faktor"): $ \phi(t) = e^{-iEt/\hbar} $

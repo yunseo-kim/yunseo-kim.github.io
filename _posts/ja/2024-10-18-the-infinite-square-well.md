@@ -1,12 +1,11 @@
 ---
-title: "1次元無限井戸(The 1D Infinite Square Well)"
-description: >-
-  量子力学の基本概念をよく示す簡単かつ重要な代表的問題、1次元無限井戸問題を考察する。この理想的な状況で粒子のn番目の定常状態ψ(x)とエネルギーEを求め、ψ(x)が持つ重要な4つの数学的性質を学ぶ。そしてこれらから一般解Ψ(x,t)を導出する。
+title: 1次元無限井戸(The 1D Infinite Square Well)
+description: 量子力学の基本概念をよく示す簡単かつ重要な代表的問題、1次元無限井戸問題を考察する。この理想的な状況で粒子のn番目の定常状態ψ(x)とエネルギーEを求め、ψ(x)が持つ重要な4つの数学的性質を学ぶ。そしてこれらから一般解Ψ(x,t)を導出する。
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - 1次元無限井戸問題: 
 >   $$V(x) = \begin{cases}

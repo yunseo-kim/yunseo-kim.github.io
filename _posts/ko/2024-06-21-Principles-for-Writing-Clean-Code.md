@@ -1,7 +1,6 @@
 ---
-title: "좋은 코드를 작성하기 위한 원칙"
-description: >-
-  좋은 코드를 작성하는 것의 필요성과, 일반적으로 좋은 코드를 작성하기 위한 주요 원칙들을 알아본다.
+title: 좋은 코드를 작성하기 위한 원칙
+description: 좋은 코드를 작성하는 것의 필요성과, 일반적으로 좋은 코드를 작성하기 위한 주요 원칙들을 알아본다.
 categories: [Programming]
 tags: [Coding, PS/CP]
 image: /assets/img/technology.jpg
@@ -114,4 +113,3 @@ PS/CP를 단순히 취미로만 즐기는 경우도 물론 있을 수 있지만,
     return monthName[month-1];
   }
   ~~~
-  

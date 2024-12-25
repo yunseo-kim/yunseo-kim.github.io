@@ -1,11 +1,11 @@
 ---
-title: "Dívida Técnica (Technical debt)"
-description: >-
-  Vamos explorar o conceito de dívida técnica, as razões pelas quais ela ocorre e como minimizá-la.
+title: Dívida Técnica (Technical debt)
+description: Vamos explorar o conceito de dívida técnica, as razões pelas quais ela
+  ocorre e como minimizá-la.
 categories: [Programming]
 tags: [Coding]
+image: /assets/img/technology.jpg
 ---
-
 ## Dívida Técnica (Technical debt)
 Dívida Técnica: O preço a ser pago posteriormente por escolher atalhos que permitem concluir o projeto mais rapidamente para atender às necessidades imediatas durante o processo de desenvolvimento.
 

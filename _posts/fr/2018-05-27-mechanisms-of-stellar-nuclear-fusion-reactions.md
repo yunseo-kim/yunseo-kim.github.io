@@ -1,13 +1,16 @@
 ---
-title: "Mécanismes de réaction de fusion nucléaire dans les étoiles"
-description: >-
-  Cet article présente la réaction en chaîne proton-proton et le cycle carbone-azote-oxygène (CNO), deux réactions de fusion nucléaire qui se produisent dans le cœur des étoiles.
-  Il s'agit d'un essai que l'auteur a écrit pour une activité de club scientifique au lycée en première année. Contrairement aux autres articles, il est rédigé dans un style informel, mais a été téléchargé tel quel à des fins d'archivage.
+title: Mécanismes de réaction de fusion nucléaire dans les étoiles
+description: Cet article présente la réaction en chaîne proton-proton et le cycle
+  carbone-azote-oxygène (CNO), deux réactions de fusion nucléaire qui se produisent
+  dans le cœur des étoiles. Il s'agit d'un essai que l'auteur a écrit pour une activité
+  de club scientifique au lycée en première année. Contrairement aux autres articles,
+  il est rédigé dans un style informel, mais a été téléchargé tel quel à des fins
+  d'archivage.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
+image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## La réaction en chaîne proton-proton (proton-proton chain reaction)
 C'est la réaction de fusion nucléaire stellaire la plus connue du grand public. Le noyau du deutérium, appelé deutéron, est formé par la combinaison d'un proton (p) et d'un neutron (n). Par conséquent, pour que deux protons se combinent pour former un noyau de deutérium, l'un des deux protons doit se transformer en neutron. Comment un proton peut-il alors se transformer en neutron ?
 

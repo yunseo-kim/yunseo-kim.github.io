@@ -1,12 +1,11 @@
 ---
-title: "変数分離法（Separation of Variables）"
-description: >-
-  変数分離法について学び、関連する例をいくつか紹介する。
+title: 変数分離法（Separation of Variables）
+description: 変数分離法について学び、関連する例をいくつか紹介する。
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## 変数分離法（Separation of Variables）
 **分離可能な方程式（separable equation）**：代数的操作を通じて $g(y)y'=f(x)$ の形で表すことができる方程式。
 

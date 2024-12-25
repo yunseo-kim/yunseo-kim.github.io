@@ -1,13 +1,14 @@
 ---
-title: Cómo implementar soporte multilingüe en un blog Jekyll con Polyglot (1) - Aplicación del plugin Polyglot e implementación de etiquetas hreflang alt, sitemap y botón de selección de idioma
-description: >-
-  Se presenta el proceso de implementación de soporte multilingüe utilizando el plugin Polyglot en un blog Jekyll basado en 'jekyll-theme-chirpy'.
-  Este post es el primero de la serie y cubre la aplicación del plugin Polyglot y la modificación del encabezado HTML y el sitemap.
-categories:
-- Blogging
-tags:
-- Jekyll
-- Polyglot
+title: Cómo implementar soporte multilingüe en un blog Jekyll con Polyglot (1) - Aplicación
+  del plugin Polyglot e implementación de etiquetas hreflang alt, sitemap y botón
+  de selección de idioma
+description: Se presenta el proceso de implementación de soporte multilingüe utilizando
+  el plugin Polyglot en un blog Jekyll basado en 'jekyll-theme-chirpy'. Este post
+  es el primero de la serie y cubre la aplicación del plugin Polyglot y la modificación
+  del encabezado HTML y el sitemap.
+categories: [AI & Data, Blogging]
+tags: [Jekyll, Polyglot, Markdown]
+image: /assets/img/technology.jpg
 ---
 ## Resumen
 Hace aproximadamente 4 meses, a principios de julio de 2024, implementé soporte multilingüe en este blog basado en Jekyll y alojado a través de Github Pages aplicando el plugin [Polyglot](https://github.com/untra/polyglot).

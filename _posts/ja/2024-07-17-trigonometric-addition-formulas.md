@@ -1,12 +1,11 @@
 ---
-title: "三角関数の加法定理"
-description: >-
-  三角関数の定義と三角関数間の関係式を確認し、これらから三角関数の加法定理および派生公式を導出する。
+title: 三角関数の加法定理
+description: 三角関数の定義と三角関数間の関係式を確認し、これらから三角関数の加法定理および派生公式を導出する。
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## 三角関数の定義
 ![Unit Circle and Radius Vector](/assets/img/trigonometry/definition.png)
 図のように、動径 $\overline{OP}$ が $x$ 軸の正の方向となす角の大きさを $\theta$ とするとき、

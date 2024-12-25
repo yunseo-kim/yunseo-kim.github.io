@@ -1,12 +1,11 @@
 ---
-title: "핵안정성 및 방사성 붕괴"
-description: >-
-  세그레표와 방사성 붕괴 유형, 그리고 이성체 천이에 대해 알아본다.
+title: 핵안정성 및 방사성 붕괴
+description: 세그레표와 방사성 붕괴 유형, 그리고 이성체 천이에 대해 알아본다.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## 세그레표(Segre Chart) 또는 핵종 도표 
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *이미지 출처*

@@ -1,12 +1,11 @@
 ---
-title: "連続X線と特性X線(Continuous and Characteristic X Rays)"
-description: >-
-  原子放射線に該当するX線の2つの発生原理と、それに伴うブレムスシュトラールング及び特性X線のそれぞれの特徴について学ぶ。
+title: 連続X線と特性X線(Continuous and Characteristic X Rays)
+description: 原子放射線に該当するX線の2つの発生原理と、それに伴うブレムスシュトラールング及び特性X線のそれぞれの特徴について学ぶ。
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Radiation, Atomic Radiation, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## TL;DR
 > - **bremsstrahlung(制動放射、breaking radiation)**: 電子などの荷電粒子が原子核付近を通過する際、電気的引力により加速されながら放出する連続スペクトルのX線
 > - 最小波長: $\lambda_\text{min} = \cfrac{hc}{E_\text{max}} = \cfrac{12400 \text{[Å}\cdot\text{eV]}}{V\text{[eV]}}$

@@ -1,13 +1,11 @@
 ---
-title: "Resumen del curso Kaggle-Pandas"
-description: >-
-  He resumido el contenido del mini curso de Pandas de los cursos públicos de Kaggle.
+title: Resumen del curso Kaggle-Pandas
+description: He resumido el contenido del mini curso de Pandas de los cursos públicos
+  de Kaggle.
 categories: [Data Science, Machine Learning]
 tags: [Kaggle Courses, Pandas]
-toc: true
-toc_sticky: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 # Pandas
 Resuelve breves desafíos prácticos para perfeccionar tus habilidades de manipulación de datos.
 

@@ -1,17 +1,12 @@
 ---
-title: "Setting up a Machine Learning Development Environment"
-description: >-
-  This article covers how to set up a development environment, which can be considered the first step in studying machine learning on a local machine. All content is based on Ubuntu 20.04 LTS with an NVIDIA GeForce RTX 3070 graphics card.
-categories:
-  - Data Science
-  - Machine Learning
-  - Deep Learning
-tags:
-  - Development Environment
-toc: true
-toc_sticky: true
+title: Setting up a Machine Learning Development Environment
+description: This article covers how to set up a development environment, which can
+  be considered the first step in studying machine learning on a local machine. All
+  content is based on Ubuntu 20.04 LTS with an NVIDIA GeForce RTX 3070 graphics card.
+categories: [AI & Data, Machine Learning]
+tags: [Development Environment, CUDA, PyTorch, TensorFlow]
+image: /assets/img/technology.jpg
 ---
-
 ## Overview
 This article covers how to set up a development environment, which can be considered the first step in studying machine learning on a local machine. All content is based on Ubuntu 20.04 LTS with an NVIDIA GeForce RTX 3070 graphics card.
 

@@ -1,12 +1,13 @@
 ---
-title: "Neutron Attenuation and Mean Free Path"
-description: >-
-  Calculate the intensity of a neutron beam as it passes through a target material based on penetration distance, and derive the mean free path of neutrons from this calculation.
+title: Neutron Attenuation and Mean Free Path
+description: Calculate the intensity of a neutron beam as it passes through a target
+  material based on penetration distance, and derive the mean free path of neutrons
+  from this calculation.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Neutron Attenuation
 Consider a monoenergetic neutron beam with intensity $I_0$ incident on a target of thickness $X$, with a neutron detector placed at some distance behind the target. Assume both the target and detector are very small, and the detector has a small solid angle that can only detect a portion of the neutrons passing through the target. In this scenario, all neutrons colliding with the target will either be absorbed or scattered in different directions, so only neutrons that do not interact with the target will reach the detector.
 

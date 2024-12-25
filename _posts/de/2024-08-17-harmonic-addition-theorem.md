@@ -1,12 +1,13 @@
 ---
-title: "Harmonische Additionstheoreme"
-description: >-
-  Wir untersuchen Methoden zur Umwandlung einer Summe trigonometrischer Funktionen der Form f(θ) = a cos θ + b sin θ in eine einzelne trigonometrische Funktion r sin(θ+α) oder r cos(θ-β).
+title: Harmonische Additionstheoreme
+description: Wir untersuchen Methoden zur Umwandlung einer Summe trigonometrischer
+  Funktionen der Form f(θ) = a cos θ + b sin θ in eine einzelne trigonometrische Funktion
+  r sin(θ+α) oder r cos(θ-β).
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Harmonische Additionstheoreme**
 >

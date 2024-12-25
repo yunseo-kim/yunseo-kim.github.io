@@ -1,13 +1,12 @@
 ---
-title: "자유입자(The Free Particle)"
-description: >-
-  V(x)=0인 자유 입자의 경우 변수분리한 해를 규격화할 수 없다는 사실과 이것이 의미하는 바를 알아보며,
-  일반해에 대한 위치-운동량 불확정성 관계를 정성적으로 보이고 Ψ(x,t)의 위상속도와 무리속도를 구하여 물리적으로 해석한다.
+title: 자유입자(The Free Particle)
+description: V(x)=0인 자유 입자의 경우 변수분리한 해를 규격화할 수 없다는 사실과 이것이 의미하는 바를 알아보며, 일반해에 대한 위치-운동량
+  불확정성 관계를 정성적으로 보이고 Ψ(x,t)의 위상속도와 무리속도를 구하여 물리적으로 해석한다.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - 자유 입자: $V(x)=0$, 경계조건 없음(임의의 에너지)
 > - 변수분리한 해 $\Psi_k(x,t) = Ae^{i\left(kx-\frac{\hbar k^2}{2m}t \right)}$는 제곱적분했을 때 무한대로 발산하므로 규격화할 수 없으며, 이는 다음을 시사함

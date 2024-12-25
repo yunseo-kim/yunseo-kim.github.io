@@ -1,14 +1,17 @@
 ---
-title: "La ecuación de Schrödinger y la función de onda"
-description: >-
-  Examinamos la forma básica de la ecuación de Schrödinger, que tiene una posición similar a las leyes del movimiento de Newton en la mecánica clásica dentro de la mecánica cuántica.
-  También exploramos la interpretación estadística del significado físico de la función de onda obtenida como solución de la ecuación de Schrödinger, las perspectivas sobre la indeterminación cuántica y el significado físico del acto de medición en la interpretación de Copenhague (colapso de la función de onda).
+title: La ecuación de Schrödinger y la función de onda
+description: Examinamos la forma básica de la ecuación de Schrödinger, que tiene una
+  posición similar a las leyes del movimiento de Newton en la mecánica clásica dentro
+  de la mecánica cuántica. También exploramos la interpretación estadística del significado
+  físico de la función de onda obtenida como solución de la ecuación de Schrödinger,
+  las perspectivas sobre la indeterminación cuántica y el significado físico del acto
+  de medición en la interpretación de Copenhague (colapso de la función de onda).
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - Ecuación de Schrödinger (dependiente del tiempo): 
 >

@@ -1,12 +1,13 @@
 ---
-title: "Multiple-Angle and Half-Angle Formulas"
-description: >-
-  We examine the double-angle and triple-angle formulas and derive them from the Trigonometric Addition Formulas. We also derive the half-angle formulas from the double-angle formulas.
+title: Multiple-Angle and Half-Angle Formulas
+description: We examine the double-angle and triple-angle formulas and derive them
+  from the Trigonometric Addition Formulas. We also derive the half-angle formulas
+  from the double-angle formulas.
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Double-Angle Formulas**
 >

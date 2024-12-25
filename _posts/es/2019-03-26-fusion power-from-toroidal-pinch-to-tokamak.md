@@ -1,13 +1,19 @@
 ---
-title: "Fusión nuclear: desde el pinzamiento toroidal hasta el tokamak"
-description: >-
-  Este artículo aborda el concepto de fusión nuclear, los antecedentes que la llevaron a ser considerada como una fuente de energía de próxima generación, los objetivos técnicos que deben alcanzarse para la comercialización de la energía de fusión, y la historia de la evolución tecnológica de la energía de fusión desde el pinzamiento toroidal (toroidal pinch) hasta el ITER.
-  El autor aclara que este es un ensayo que escribió para una actividad del club de ciencias de la escuela cuando estaba en segundo año de secundaria. A diferencia de otras publicaciones, está escrito en un estilo coloquial, pero se ha subido tal como estaba originalmente con fines de archivo.
+title: 'Fusión nuclear: desde el pinzamiento toroidal hasta el tokamak'
+description: Este artículo aborda el concepto de fusión nuclear, los antecedentes
+  que la llevaron a ser considerada como una fuente de energía de próxima generación,
+  los objetivos técnicos que deben alcanzarse para la comercialización de la energía
+  de fusión, y la historia de la evolución tecnológica de la energía de fusión desde
+  el pinzamiento toroidal (toroidal pinch) hasta el ITER. El autor aclara que este
+  es un ensayo que escribió para una actividad del club de ciencias de la escuela
+  cuando estaba en segundo año de secundaria. A diferencia de otras publicaciones,
+  está escrito en un estilo coloquial, pero se ha subido tal como estaba originalmente
+  con fines de archivo.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
+image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## ¿Qué es la fusión nuclear?
 
 La fusión nuclear se refiere a la reacción en la que dos núcleos atómicos chocan y se transforman en un núcleo más pesado. Básicamente, debido a los protones en su interior, los núcleos atómicos tienen carga positiva, por lo que cuando dos núcleos se acercan, se repelen entre sí debido a la fuerza electrostática. Sin embargo, si los núcleos se calientan a temperaturas extremadamente altas, la energía cinética de los núcleos puede superar la repulsión eléctrica, permitiendo que los dos núcleos colisionen. Una vez que los dos núcleos se acercan lo suficiente, la fuerza nuclear fuerte actúa y los une en un solo núcleo.

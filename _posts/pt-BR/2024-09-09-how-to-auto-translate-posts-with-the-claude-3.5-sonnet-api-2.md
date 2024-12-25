@@ -1,12 +1,13 @@
 ---
-title: Como traduzir posts automaticamente com a API Claude 3.5 Sonnet (2) - Escrevendo e aplicando um script de automação
-description: >-
-  Aborda o processo de projetar prompts para tradução multilíngue de arquivos de texto markdown, e automatizar o trabalho em Python aplicando a chave API emitida pela Anthropic e os prompts escritos. Este post é o segundo da série, introduzindo a emissão e integração da API e métodos de escrita de scripts Python.
-categories:
-- Blogging
-tags:
-- Jekyll
-- LLM
+title: Como traduzir posts automaticamente com a API Claude 3.5 Sonnet (2) - Escrevendo
+  e aplicando um script de automação
+description: Aborda o processo de projetar prompts para tradução multilíngue de arquivos
+  de texto markdown, e automatizar o trabalho em Python aplicando a chave API emitida
+  pela Anthropic e os prompts escritos. Este post é o segundo da série, introduzindo
+  a emissão e integração da API e métodos de escrita de scripts Python.
+categories: [AI & Data, GenAI]
+tags: [Jekyll, Markdown, LLM]
+image: /assets/img/technology.jpg
 ---
 ## Introdução
 Recentemente, implementei a API do Claude 3.5 Sonnet da Anthropic para tradução multilíngue dos posts do blog. Nesta série, abordaremos os motivos para escolher a API do Claude 3.5 Sonnet, os métodos de design de prompts e como implementar a integração e automação da API através de scripts Python.  

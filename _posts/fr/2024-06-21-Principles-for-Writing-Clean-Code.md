@@ -1,7 +1,7 @@
 ---
-title: "Principes pour écrire du bon code"
-description: >-
-  Découvrez la nécessité d'écrire du bon code et les principaux principes généralement appliqués pour y parvenir.
+title: Principes pour écrire du bon code
+description: Découvrez la nécessité d'écrire du bon code et les principaux principes
+  généralement appliqués pour y parvenir.
 categories: [Programming]
 tags: [Coding, PS/CP]
 image: /assets/img/technology.jpg

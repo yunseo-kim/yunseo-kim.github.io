@@ -1,12 +1,11 @@
 ---
-title: "GitHub Markdown Syntax Summary"
-description: >-
-  Learn what Markdown is and summarize key Markdown syntax based on GitHub Flavored Markdown for GitHub Pages blog hosting.
+title: GitHub Markdown Syntax Summary
+description: Learn what Markdown is and summarize key Markdown syntax based on GitHub
+  Flavored Markdown for GitHub Pages blog hosting.
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.jpg
 ---
-
 To utilize GitHub Pages, it's necessary to understand **markdown** syntax.
 This summary is based on GitHub's official documents: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) and [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 

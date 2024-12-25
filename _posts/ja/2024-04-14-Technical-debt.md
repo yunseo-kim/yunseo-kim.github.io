@@ -1,11 +1,10 @@
 ---
-title: "技術負債（Technical debt）"
-description: >-
-  技術負債の概念と技術負債が発生する理由、そして技術負債を最小限に抑える方法を見てみましょう。
+title: 技術負債（Technical debt）
+description: 技術負債の概念と技術負債が発生する理由、そして技術負債を最小限に抑える方法を見てみましょう。
 categories: [Programming]
 tags: [Coding]
+image: /assets/img/technology.jpg
 ---
-
 ## 技術負債（Technical debt）
 技術負債：開発過程で即時的な要求事項を満たすために目の前のプロジェクトをより早く完了できる近道を選ぶことで、後に支払わなければならない代価
 

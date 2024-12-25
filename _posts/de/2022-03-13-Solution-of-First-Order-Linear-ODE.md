@@ -1,12 +1,12 @@
 ---
-title: "Lösung von linearen Differentialgleichungen erster Ordnung"
-description: >-
-  Lasst uns die Lösungsmethode für lineare Differentialgleichungen erster Ordnung betrachten.
+title: Lösung von linearen Differentialgleichungen erster Ordnung
+description: Lasst uns die Lösungsmethode für lineare Differentialgleichungen erster
+  Ordnung betrachten.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Lineare Differentialgleichung erster Ordnung
 Wenn eine Differentialgleichung erster Ordnung algebraisch in die Form
 

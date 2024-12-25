@@ -1,12 +1,12 @@
 ---
-title: "Nuclear Stability and Radioactive Decay"
-description: >-
-  Learn about the Segre Chart, types of radioactive decay, and isomeric transitions.
+title: Nuclear Stability and Radioactive Decay
+description: Learn about the Segre Chart, types of radioactive decay, and isomeric
+  transitions.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Segre Chart or Nuclide Chart
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *Image source*

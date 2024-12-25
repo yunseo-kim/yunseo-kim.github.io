@@ -1,13 +1,15 @@
 ---
-title: "Interacciones de neutrones y secciones eficaces"
-description: >-
-  Los neutrones son eléctricamente neutros, por lo que pueden atravesar la nube de electrones del átomo sin ser afectados por fuerzas eléctricas y reaccionar directamente con el núcleo atómico. Exploramos los tipos de interacciones de neutrones y el concepto de sección eficaz nuclear.
+title: Interacciones de neutrones y secciones eficaces
+description: Los neutrones son eléctricamente neutros, por lo que pueden atravesar
+  la nube de electrones del átomo sin ser afectados por fuerzas eléctricas y reaccionar
+  directamente con el núcleo atómico. Exploramos los tipos de interacciones de neutrones
+  y el concepto de sección eficaz nuclear.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
+image: /assets/img/atoms.png
 ---
-
 ## Interacciones de neutrones
 Los neutrones son eléctricamente neutros, por lo que no se ven afectados por las fuerzas eléctricas de los electrones o la carga positiva del núcleo atómico. Por lo tanto, los neutrones pueden atravesar la nube de electrones del átomo y reaccionar directamente con el núcleo.
 

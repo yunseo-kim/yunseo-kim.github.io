@@ -1,12 +1,12 @@
 ---
-title: "Solución de ecuaciones diferenciales lineales de primer orden"
-description: >-
-  Aprendamos cómo resolver ecuaciones diferenciales lineales de primer orden.
+title: Solución de ecuaciones diferenciales lineales de primer orden
+description: Aprendamos cómo resolver ecuaciones diferenciales lineales de primer
+  orden.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Ecuación diferencial lineal de primer orden
 Si una ecuación diferencial de primer orden puede ser llevada algebraicamente a la forma
 

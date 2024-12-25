@@ -1,13 +1,13 @@
 ---
-title: "Conceitos Básicos de Modelagem"
-description: >-
-  Exploramos os conceitos de modelagem matemática, equações diferenciais ordinárias, equações diferenciais parciais e problemas de valor inicial.
+title: Conceitos Básicos de Modelagem
+description: Exploramos os conceitos de modelagem matemática, equações diferenciais
+  ordinárias, equações diferenciais parciais e problemas de valor inicial.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Modelagem
 - **Modelo**: A formalização de um problema de engenharia em uma expressão matemática usando variáveis, funções, equações, etc.
 - **Modelagem matemática** ou **Modelagem**: O processo de criar um modelo, resolvê-lo matematicamente e interpretar os resultados

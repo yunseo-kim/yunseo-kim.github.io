@@ -1,9 +1,11 @@
 ---
 title: Claude 3.5 Sonnet API로 포스트 자동 번역하는 법 (2) - 자동화 스크립트 작성 및 적용
-description: >-
-  마크다운 텍스트 파일의 다국어 번역을 위한 프롬프트를 디자인하고, Anthropic으로부터 발급받은 API 키와 작성한 프롬프트를 적용하여 Python으로 작업을 자동화하는 과정을 다룬다. 이 포스트는 해당 시리즈의 두 번째 글로, API 발급 및 연동과 Python 스크립트 작성 방법을 소개한다.
+description: 마크다운 텍스트 파일의 다국어 번역을 위한 프롬프트를 디자인하고, Anthropic으로부터 발급받은 API 키와 작성한 프롬프트를
+  적용하여 Python으로 작업을 자동화하는 과정을 다룬다. 이 포스트는 해당 시리즈의 두 번째 글로, API 발급 및 연동과 Python 스크립트
+  작성 방법을 소개한다.
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
+image: /assets/img/technology.jpg
 ---
 ## 들어가며
 최근에 블로그 포스트의 다국어 번역을 위해 Anthropic의 Claude 3.5 Sonnet API를 도입하였다. 이에 이 시리즈에서는 도입 과정에서 Claude 3.5 Sonnet API를 선택한 이유와 프롬프트 디자인 방법, 그리고 Python 스크립트를 통한 API 연동 및 자동화 구현 방법을 다루고자 한다.  

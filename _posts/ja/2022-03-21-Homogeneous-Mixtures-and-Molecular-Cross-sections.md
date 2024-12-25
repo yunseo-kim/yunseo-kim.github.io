@@ -1,10 +1,10 @@
 ---
-title: "均一混合物と分子の断面積"
-description: >-
-  二種類以上の核種が混ざっている均一混合物の巨視的断面積を計算してみよう。
+title: 均一混合物と分子の断面積
+description: 二種類以上の核種が混ざっている均一混合物の巨視的断面積を計算してみよう。
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
+image: /assets/img/atoms.png
 ---
 ## 均一混合物（Homogeneous Mixture）の巨視的断面積
 二種類の核種 $X$ と $Y$ が均一に混ざっている混合物を考えてみよう。各核種の原子密度はそれぞれ $N_X$ と $N_Y$ $\text{atom/cm}^3$であり、中性子とこの核との特定の反応に対する反応断面積はそれぞれ $\sigma_X$、$\sigma_Y$ とする。

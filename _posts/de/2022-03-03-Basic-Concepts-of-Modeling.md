@@ -1,13 +1,13 @@
 ---
-title: "Grundkonzepte der Modellierung"
-description: >-
-  Wir betrachten die Konzepte der mathematischen Modellierung, gewöhnliche Differentialgleichungen, partielle Differentialgleichungen und Anfangswertprobleme.
+title: Grundkonzepte der Modellierung
+description: Wir betrachten die Konzepte der mathematischen Modellierung, gewöhnliche
+  Differentialgleichungen, partielle Differentialgleichungen und Anfangswertprobleme.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## Modellierung
 - **Modell**: Eine mathematische Formulierung eines technischen Problems durch Variablen, Funktionen und Gleichungen
 - **Mathematische Modellierung** oder **Modellierung**: Der Prozess der Erstellung eines Modells, seiner mathematischen Lösung und der Interpretation der Ergebnisse

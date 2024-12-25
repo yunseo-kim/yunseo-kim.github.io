@@ -1,12 +1,12 @@
 ---
-title: "和または差の公式（積和公式と和積公式）"
-description: >-
-  三角関数の積を和または差の形に変形する公式を学び、三角関数の加法定理からその公式を導出します。そして、これらから三角関数の和または差の形を積の形に変形する公式も導出します。
+title: 和または差の公式（積和公式と和積公式）
+description: 三角関数の積を和または差の形に変形する公式を学び、三角関数の加法定理からその公式を導出します。そして、これらから三角関数の和または差の形を積の形に変形する公式も導出します。
 categories: [Mathematics, Trigonometry]
-tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product
+    Identities]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **積を和または差に変形する公式（積和公式）**
 >

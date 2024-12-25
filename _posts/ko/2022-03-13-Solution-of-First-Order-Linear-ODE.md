@@ -1,12 +1,11 @@
 ---
-title: "1계 선형상미분방정식의 풀이"
-description: >-
-  1계 선형상미분방정식의 풀이법을 알아보자.
+title: 1계 선형상미분방정식의 풀이
+description: 1계 선형상미분방정식의 풀이법을 알아보자.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## 1계 선형상미분방정식
 1계 상미분방정식을 대수적으로
 

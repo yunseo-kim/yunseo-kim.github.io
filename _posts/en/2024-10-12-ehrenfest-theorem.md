@@ -1,14 +1,14 @@
 ---
-title: "Ehrenfest Theorem"
-description: >-
-  Learn how to calculate the expectation values of position and momentum from the wave function in quantum mechanics,
-  and extend this to the calculation formula for the expectation value of any mechanical variable Q(x,p).
-  Then, derive the Ehrenfest theorem from this.
+title: Ehrenfest Theorem
+description: Learn how to calculate the expectation values of position and momentum
+  from the wave function in quantum mechanics, and extend this to the calculation
+  formula for the expectation value of any mechanical variable Q(x,p). Then, derive
+  the Ehrenfest theorem from this.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - $$ \hat x \equiv x,\ \hat p \equiv -i\hbar\nabla$$
 > - $$ \langle Q(x,p) \rangle = \int \Psi^*[Q(x, -i\hbar\nabla)]\Psi dx $$

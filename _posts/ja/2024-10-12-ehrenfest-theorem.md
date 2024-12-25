@@ -1,14 +1,12 @@
 ---
-title: "エーレンフェストの定理(Ehrenfest theorem)"
-description: >-
-  量子力学において波動関数から位置と運動量の期待値を求める方法を学び、
-  これを任意の力学的変数Q(x,p)に対する期待値の計算式に拡張する。
+title: エーレンフェストの定理(Ehrenfest theorem)
+description: 量子力学において波動関数から位置と運動量の期待値を求める方法を学び、 これを任意の力学的変数Q(x,p)に対する期待値の計算式に拡張する。
   そしてこれからエーレンフェストの定理(Ehrenfest theorem)を導出する。
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - $$ \hat x \equiv x,\ \hat p \equiv -i\hbar\nabla$$
 > - $$ \langle Q(x,p) \rangle = \int \Psi^*[Q(x, -i\hbar\nabla)]\Psi dx $$

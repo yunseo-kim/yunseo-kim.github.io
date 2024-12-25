@@ -1,12 +1,11 @@
 ---
-title: "베르누이 방정식(Bernoulli Equation)"
-description: >-
-  베르누이 방정식과, 베르누이 방정식의 특수한 형태인 로지스틱 방정식의 풀이법을 알아본다.
+title: 베르누이 방정식(Bernoulli Equation)
+description: 베르누이 방정식과, 베르누이 방정식의 특수한 형태인 로지스틱 방정식의 풀이법을 알아본다.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## 베르누이 방정식(Bernoulli Equation)
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{는 임의의 실수)}  \tag{1} $$

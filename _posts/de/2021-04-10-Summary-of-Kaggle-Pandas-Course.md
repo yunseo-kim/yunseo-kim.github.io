@@ -1,13 +1,11 @@
 ---
-title: "Zusammenfassung des Kaggle-Pandas-Kurses"
-description: >-
-  Ich habe den Inhalt des Pandas-Minikurses aus den öffentlichen Kaggle-Kursen zusammengefasst.
+title: Zusammenfassung des Kaggle-Pandas-Kurses
+description: Ich habe den Inhalt des Pandas-Minikurses aus den öffentlichen Kaggle-Kursen
+  zusammengefasst.
 categories: [Data Science, Machine Learning]
 tags: [Kaggle Courses, Pandas]
-toc: true
-toc_sticky: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 # Pandas
 Lösen Sie kurze praktische Aufgaben, um Ihre Datenmanipulationsfähigkeiten zu perfektionieren.
 

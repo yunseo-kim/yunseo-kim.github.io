@@ -1,12 +1,13 @@
 ---
-title: "Rayons X continus et caractéristiques (Continuous and Characteristic X Rays)"
-description: >-
-  Découvrons les deux principes de génération des rayons X en tant que rayonnement atomique, ainsi que les caractéristiques respectives du rayonnement de freinage et des rayons X caractéristiques.
+title: Rayons X continus et caractéristiques (Continuous and Characteristic X Rays)
+description: Découvrons les deux principes de génération des rayons X en tant que
+  rayonnement atomique, ainsi que les caractéristiques respectives du rayonnement
+  de freinage et des rayons X caractéristiques.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Radiation, Atomic Radiation, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## TL;DR
 > - **bremsstrahlung (rayonnement de freinage, breaking radiation)** : rayons X à spectre continu émis lorsque des particules chargées comme les électrons passent près d'un noyau atomique et sont accélérées par les forces électriques
 > - Longueur d'onde minimale : $\lambda_\text{min} = \cfrac{hc}{E_\text{max}} = \cfrac{12400 \text{[Å}\cdot\text{eV]}}{V\text{[eV]}}$

@@ -1,12 +1,13 @@
 ---
 title: Auch KI möchte an Halloween feiern(?) (Hasst KI die Arbeit an Halloween?)
-description: >-
-  Am 31. Oktober 2024 trat plötzlich eine Anomalie auf, bei der das Claude 3.5 Sonnet-Modell die gegebenen Aufgaben äußerst nachlässig bearbeitete. Dies führte zu einer Störung des automatischen Übersetzungssystems für Blogbeiträge, das in den letzten Monaten problemlos funktioniert hatte. Hier werden Vermutungen über die Ursache dieses Phänomens und mögliche Lösungsansätze vorgestellt.
-categories:
-- Blogging
-tags:
-- Jekyll
-- LLM
+description: Am 31. Oktober 2024 trat plötzlich eine Anomalie auf, bei der das Claude
+  3.5 Sonnet-Modell die gegebenen Aufgaben äußerst nachlässig bearbeitete. Dies führte
+  zu einer Störung des automatischen Übersetzungssystems für Blogbeiträge, das in
+  den letzten Monaten problemlos funktioniert hatte. Hier werden Vermutungen über
+  die Ursache dieses Phänomens und mögliche Lösungsansätze vorgestellt.
+categories: [AI & Data, GenAI]
+tags: [LLM]
+image: /assets/img/technology.jpg
 ---
 ## Problembeschreibung
 Wie in der Serie ['Wie man Beiträge mit der Claude 3.5 Sonnet API automatisch übersetzt'](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1) beschrieben, nutzt dieser Blog seit Ende Juni 2024 ein mehrsprachiges Übersetzungssystem für Beiträge, das auf dem Claude 3.5 Sonnet-Modell basiert. Diese Automatisierung funktionierte in den letzten 4 Monaten ohne größere Probleme.

@@ -1,12 +1,13 @@
 ---
-title: "Partículas subatômicas e componentes do átomo"
-description: >-
-  Examinamos brevemente as partículas elementares importantes na engenharia nuclear, como elétrons, prótons, nêutrons, fótons e neutrinos, e exploramos a estrutura dos átomos e núcleos atômicos.
+title: Partículas subatômicas e componentes do átomo
+description: Examinamos brevemente as partículas elementares importantes na engenharia
+  nuclear, como elétrons, prótons, nêutrons, fótons e neutrinos, e exploramos a estrutura
+  dos átomos e núcleos atômicos.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## Partícula subatômica (subatomic particle)
 **Partículas subatômicas (subatomic particles)** são partículas menores que os átomos. As partículas subatômicas incluem partículas compostas, que são formadas por partículas constituintes menores, e partículas elementares, que são consideradas indivisíveis.
 Na engenharia nuclear, as seguintes partículas elementares são particularmente importantes:

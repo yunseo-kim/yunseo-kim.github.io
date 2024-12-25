@@ -1,10 +1,11 @@
 ---
-title: "Mistura Homogênea e Seção de Choque de Moléculas"
-description: >-
-  Vamos calcular a seção de choque macroscópica de uma mistura homogênea contendo dois ou mais nuclídeos.
+title: Mistura Homogênea e Seção de Choque de Moléculas
+description: Vamos calcular a seção de choque macroscópica de uma mistura homogênea
+  contendo dois ou mais nuclídeos.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
+image: /assets/img/atoms.png
 ---
 ## Seção de Choque Macroscópica de uma Mistura Homogênea
 Considere uma mistura homogênea contendo dois nuclídeos, $X$ e $Y$. As densidades atômicas de cada nuclídeo são $N_X$ e $N_Y$ $\text{átomo/cm}^3$, respectivamente, e as seções de choque para uma reação específica de nêutrons com esses núcleos são $\sigma_X$ e $\sigma_Y$, respectivamente.

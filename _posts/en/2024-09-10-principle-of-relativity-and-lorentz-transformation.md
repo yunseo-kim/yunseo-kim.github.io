@@ -1,12 +1,15 @@
 ---
-title: "Principle of Relativity and Lorentz Transformation"
-description: >-
-  Learn about the concept of reference frames and the Galilean transformation widely used in classical mechanics. Also, briefly examine Maxwell's equations and the Michelson-Morley experiment, which formed the background for the emergence of the Lorentz transformation, and derive the transformation matrix of the Lorentz transformation.
+title: Principle of Relativity and Lorentz Transformation
+description: Learn about the concept of reference frames and the Galilean transformation
+  widely used in classical mechanics. Also, briefly examine Maxwell's equations and
+  the Michelson-Morley experiment, which formed the background for the emergence of
+  the Lorentz transformation, and derive the transformation matrix of the Lorentz
+  transformation.
 categories: [Engineering Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
+image: /assets/img/math-and-physics-cropped.png
 ---
-
 ## TL;DR
 > **Principle of Relativity**: The principle that all physical laws should be the same in all inertial reference frames moving at constant velocity relative to each other
 {: .prompt-info }

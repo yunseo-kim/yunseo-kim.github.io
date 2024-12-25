@@ -1,7 +1,7 @@
 ---
-title: "Prinzipien für das Schreiben guten Codes"
-description: >-
-  Wir untersuchen die Notwendigkeit, guten Code zu schreiben, und die wichtigsten allgemeinen Prinzipien für die Erstellung von gutem Code.
+title: Prinzipien für das Schreiben guten Codes
+description: Wir untersuchen die Notwendigkeit, guten Code zu schreiben, und die wichtigsten
+  allgemeinen Prinzipien für die Erstellung von gutem Code.
 categories: [Programming]
 tags: [Coding, PS/CP]
 image: /assets/img/technology.jpg

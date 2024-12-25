@@ -1,15 +1,13 @@
 ---
-title: "시간에 무관한 슈뢰딩거 방정식(Time-independent Schrödinger Equation)"
-description: >-
-  슈뢰딩거 방정식의 원래 형태(시간에 의존하는 슈뢰딩거 방정식) Ψ(x,t)에 변수분리법을 적용하여
-  시간에 무관한 슈뢰딩거 방정식 ψ(x)를 유도하고,
-  이렇게 얻은 변수분리한 해가 수학적, 물리적으로 갖는 의미와 중요성을 알아본다.
-  그리고 변수분리한 해들의 선형결합으로 슈뢰딩거 방정식의 일반해를 구하는 방법을 살펴본다.
+title: 시간에 무관한 슈뢰딩거 방정식(Time-independent Schrödinger Equation)
+description: 슈뢰딩거 방정식의 원래 형태(시간에 의존하는 슈뢰딩거 방정식) Ψ(x,t)에 변수분리법을 적용하여 시간에 무관한 슈뢰딩거 방정식
+  ψ(x)를 유도하고, 이렇게 얻은 변수분리한 해가 수학적, 물리적으로 갖는 의미와 중요성을 알아본다. 그리고 변수분리한 해들의 선형결합으로 슈뢰딩거
+  방정식의 일반해를 구하는 방법을 살펴본다.
 categories: [Engineering Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
+image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - 변수분리한 해: $ \Psi(x,t) = \psi(x)\phi(t)$
 > - 시간의존성("wiggle factor"): $ \phi(t) = e^{-iEt/\hbar} $

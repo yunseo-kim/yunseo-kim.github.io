@@ -1,17 +1,13 @@
 ---
-title: "Mise en place d'un environnement de développement pour l'apprentissage automatique"
-description: >-
-  Cet article traite de la méthode de mise en place d'un environnement de développement, qui peut être considérée comme la première étape pour étudier l'apprentissage automatique sur une machine locale. Tout le contenu a été rédigé sur la base d'Ubuntu 20.04 LTS avec une carte graphique NVIDIA Geforce RTX 3070.
-categories:
-  - Data Science
-  - Machine Learning
-  - Deep Learning
-tags:
-  - Development Environment
-toc: true
-toc_sticky: true
+title: Mise en place d'un environnement de développement pour l'apprentissage automatique
+description: Cet article traite de la méthode de mise en place d'un environnement
+  de développement, qui peut être considérée comme la première étape pour étudier
+  l'apprentissage automatique sur une machine locale. Tout le contenu a été rédigé
+  sur la base d'Ubuntu 20.04 LTS avec une carte graphique NVIDIA Geforce RTX 3070.
+categories: [AI & Data, Machine Learning]
+tags: [Development Environment, CUDA, PyTorch, TensorFlow]
+image: /assets/img/technology.jpg
 ---
-
 ## Aperçu
 Cet article traite de la méthode de mise en place d'un environnement de développement, qui peut être considérée comme la première étape pour étudier l'apprentissage automatique sur une machine locale. Tout le contenu a été rédigé sur la base d'Ubuntu 20.04 LTS avec une carte graphique NVIDIA Geforce RTX 3070.
 

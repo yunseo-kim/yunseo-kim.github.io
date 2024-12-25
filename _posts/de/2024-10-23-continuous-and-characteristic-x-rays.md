@@ -1,12 +1,12 @@
 ---
-title: "Kontinuierliche und charakteristische Röntgenstrahlung"
-description: >-
-  Untersuchung der zwei Entstehungsprinzipien der atomaren Röntgenstrahlung und der jeweiligen Eigenschaften von Bremsstrahlung und charakteristischer Röntgenstrahlung.
+title: Kontinuierliche und charakteristische Röntgenstrahlung
+description: Untersuchung der zwei Entstehungsprinzipien der atomaren Röntgenstrahlung
+  und der jeweiligen Eigenschaften von Bremsstrahlung und charakteristischer Röntgenstrahlung.
 categories: [Engineering Physics, Nuclear Engineering]
 tags: [Radiation, Atomic Radiation, Atomic Structure]
 math: true
+image: /assets/img/atoms.png
 ---
-
 ## TL;DR
 > - **Bremsstrahlung**: Kontinuierliche Röntgenstrahlung, die entsteht, wenn geladene Teilchen wie Elektronen in der Nähe eines Atomkerns durch elektrische Kräfte beschleunigt werden
 > - Minimale Wellenlänge: $\lambda_\text{min} = \cfrac{hc}{E_\text{max}} = \cfrac{12400 \text{[Å}\cdot\text{eV]}}{V\text{[eV]}}$

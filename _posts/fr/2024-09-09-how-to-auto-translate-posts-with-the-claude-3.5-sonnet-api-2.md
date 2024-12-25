@@ -1,12 +1,14 @@
 ---
-title: Comment traduire automatiquement des articles avec l'API Claude 3.5 Sonnet (2) - Rédaction et application d'un script d'automatisation
-description: >-
-  Cet article traite de la conception d'un prompt pour la traduction multilingue de fichiers texte en markdown, et du processus d'automatisation en Python en utilisant la clé API fournie par Anthropic et le prompt rédigé. Ce post est le deuxième de la série, présentant la méthode d'obtention et d'intégration de l'API ainsi que la rédaction du script Python.
-categories:
-- Blogging
-tags:
-- Jekyll
-- LLM
+title: Comment traduire automatiquement des articles avec l'API Claude 3.5 Sonnet
+  (2) - Rédaction et application d'un script d'automatisation
+description: Cet article traite de la conception d'un prompt pour la traduction multilingue
+  de fichiers texte en markdown, et du processus d'automatisation en Python en utilisant
+  la clé API fournie par Anthropic et le prompt rédigé. Ce post est le deuxième de
+  la série, présentant la méthode d'obtention et d'intégration de l'API ainsi que
+  la rédaction du script Python.
+categories: [AI & Data, GenAI]
+tags: [Jekyll, Markdown, LLM]
+image: /assets/img/technology.jpg
 ---
 ## Introduction
 J'ai récemment adopté l'API Claude 3.5 Sonnet d'Anthropic pour la traduction multilingue des articles de blog. Dans cette série, nous aborderons les raisons du choix de l'API Claude 3.5 Sonnet, la méthode de conception des prompts, ainsi que l'implémentation de l'intégration API et de l'automatisation via des scripts Python.  
