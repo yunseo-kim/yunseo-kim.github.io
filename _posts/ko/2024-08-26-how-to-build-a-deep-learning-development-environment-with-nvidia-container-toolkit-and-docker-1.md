@@ -2,12 +2,8 @@
 title: "NVIDIA Container Toolkit과 Docker로 딥러닝 개발환경 구축하기 (1) - NVIDIA Container Toolkit & Docker Engine 설치"
 description: >-
   이 시리즈는 로컬에 NVIDIA Container Toolkit과 Docker 기반의 딥러닝 개발환경을 구축하고, 원격 서버로 활용할 수 있도록 SSH 및 Jupyter Lab을 설정하는 방법을 다룬다. 이 포스트는 해당 시리즈의 첫 번째 글로, NVIDIA Container Toolkit의 설치 방법을 소개한다.
-categories:
-  - Data Science
-  - Machine Learning
-  - Deep Learning
-tags:
-  - Development Environment
+categories: [AI & Data, Machine Learning]
+tags: [Development Environment, Docker, CUDA, PyTorch]
 ---
 
 ## 개요
