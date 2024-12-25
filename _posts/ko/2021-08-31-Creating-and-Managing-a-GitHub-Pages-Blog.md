@@ -2,15 +2,14 @@
 title: "GitHub Pages 블로그 만들고 관리하기"
 description: >-
   정적 웹 페이지와 동적 웹 페이지의 특징과 차이, 정적 웹 사이트 생성기(Static Site Generator)에 대해 알아보고 Jekyll 블로그를 GitHub Pages에 호스팅해 보자.
-categories:
-  - Blogging
-tags:
-  - Jekyll
+categories: [AI & Data, Blogging]
+tags: [Jekyll, Markdown]
+image: /assets/img/technology.jpg
 ---
 
 2021년 초부터 Jekyll을 이용해서 GitHub Pages에 블로그를 호스팅하기 시작했다. 그런데 블로그 구축 당시에 설치 과정을 제대로 정리를 안 해 놨더니 추후 유지관리할 때 어려움이 좀 있어서, 간략하게나마 설치 과정과 유지관리 방법을 정리해 놓기로 했다.  
-~~사실 내가 아직 정적 사이트 호스팅에 익숙하지가 않은 탓이 제일 크다.~~
-(2024.06 내용 업데이트)
+
+(+ 2024.12 내용 업데이트)
 
 ## 1. 정적 사이트 생성기 & 웹 호스팅
 ### 1-1. 정적 웹 페이지 vs 동적 웹 페이지
@@ -52,8 +51,8 @@ Jekyll, Hugo, Gatsby 등 여러 SSG가 존재하지만, Jekyll을 사용하기�
   - Jekyll은 Github Pages에서 공식 지원하는 정적 웹 사이트 생성기이다. 물론 Hugo, Gatsby 등 다른 SSG들도 Github Pages에서 얼마든지 호스팅할 수 있고 Netlify 등 아예 다른 호스팅 서비스를 이용한다는 선택지도 있지만, 사실 이 정도 규모의 개인 블로그를 운영하는 데 있어서 기술적으로 어떤 SSG를 사용하여 구축했는지와 빌드 속도, 성능 등은 크게 중요하지 않으므로 그냥 조금이라도 더 유지보수가 간단하고 참고할 문서가 많은 것이 좋겠다고 판단했다.
   - Jekyll은 또한 Hugo, Gatsby 등 다른 경쟁자들에 비해 개발 기간이 제일 길다. 그만큼 관련 문서화가 잘 되어 있고, 실제로 문제가 생겼을 때 참고할 수 있는 자료의 양이 압도적으로 많다.
 - 사용할 수 있는 테마와 플러그인이 다양한가?
-  - 직접 HTML을 작성하는 게 아니라 SSG를 사용한다고 해도, 각종 템플릿을 직접 만들어 내는 것은 번거롭고 시간도 오래 걸리며, 굳이 그럴 필요도 없다. 웹 상에 이미 공개되어 있는 훌륭한 테마들이 많으니, 마음에 드는 것을 채택해서 활용하면 된다.
-  - 더군다나 나는 원래 C나 Python을 주로 활용하기 때문에, Jekyll의 Ruby나 Hugo의 Go 언어는 잘 모르는 상황이라 더더욱 기존에 개발되어 있는 테마와 플러그인들을 적극적으로 활용하려고 했다.
+  - 직접 HTML을 작성하는 게 아니라 SSG를 사용한다고 해도, 각종 템플릿을 직접 만들어 내는 것은 번거롭고 시간도 오래 걸리며 굳이 그럴 필요도 없다. 웹 상에 이미 공개되어 있는 훌륭한 테마들이 많으니, 마음에 드는 것을 채택해서 활용하면 된다.
+  - 더군다나 나는 원래 C나 Python을 주로 활용하기 때문에, Jekyll의 Ruby나 Hugo의 Go 언어는 잘은 모르는 상황이라 더더욱 기존에 개발되어 있는 테마와 플러그인들을 적극적으로 활용하려고 했다.
   - Jekyll에는 한눈에 봐도 마음에 드는 테마를 금방 찾아낼 수 있었던 반면, Hugo나 Gatsby는 상대적으로 개인 블로그 목적으로 쓰기에 적합한 테마의 수가 그리 많지는 않았던 것 같다. 아무래도 상술한 것처럼 개발자들이 개인 블로그 호스팅을 위해 많이 사용하는 Github Pages와의 연동성, 그리고 개발 기간이 여기에도 영향을 크게 미친 것 같다.
 
 ### 2-2. 테마 선택
@@ -65,7 +64,7 @@ Jekyll, Hugo, Gatsby 등 여러 SSG가 존재하지만, Jekyll을 사용하기�
 - 카테고리와 태그 분류 기능 지원
 - Google Analytics 기본 지원
 - 사전 정의된 스킨 선택 가능
-- 디자인이 더 유려하고 마음에 드는 Chirpy 테마를 이후에 발견하고 넘어가긴 했지만, 어차피 공대 공대한 블로그라는 걸 감안하면 예쁘진 않아도 나름 깔끔한 디자인을 가지고 있어서 무난히 사용할 만 했던 것 같다.
+- 디자인이 더 유려하고 마음에 드는 Chirpy 테마를 이후에 발견하고 넘어가긴 했지만, 어차피 공돌이스러운 블로그라는 걸 감안하면 예쁘진 않아도 나름 깔끔한 디자인을 가지고 있어서 무난히 사용할 만 했던 것 같다.
 
 #### Chirpy Jekyll Theme (2022.04~)
 - Github Repo: <https://github.com/cotes2020/jekyll-theme-chirpy/>
@@ -137,14 +136,28 @@ description: >-
   DESCRIPTION
 date: YYYY-MM-DD HH:MM:SS +/-TTTT
 categories: [TOP_CATEGORIE, SUB_CATEGORIE]
-tags: [TAG]     # TAG names should always be lowercase
+tags: [TAG]
+image:
+  path: /path/to/image
+  alt: image alternative text
+toc: true
+comments: false
+math: true
+mermaid: true
 ---
 ```
 - **title**: 포스트 제목
 - **description**: 요약문. 작성하지 않을 시 본문 내용의 앞부분 일부를 자동으로 가져다 사용하지만 검색엔진 최적화(SEO)를 위해서는 description 메타 태그를 직접 적절히 작성해 주는 것을 권장함. 로마자 기준 135~160자, 한글 기준 80~110자 정도 분량이 적절함.
-- **date**: 정확한 포스트 작성 일시와 timezone(생략 가능, 생략 시 파일 제목의 작성 일시 정보를 자동으로 인식해 사용)
+- **date**: 정확한 포스트 작성 일시와 timezone(생략 가능, 생략 시 파일의 작성 날짜 또는 수정된 날짜 정보를 자동으로 인식해 사용)
 - **categories**: 포스트의 카테고리 분류
 - **tags**: 포스트에 적용할 태그 분류
+- **image**: 포스트 상단에 미리보기 이미지 삽입
+  - **path**: 이미지 파일 경로
+  - **alt**: 대체 텍스트(생략 가능)
+- **toc**: 오른쪽 사이드바의 목차 기능 사용 여부, 기본값은 `true`
+- **comments**: 사이트 기본 설정과 별개로, 개별 포스트의 댓글 사용 여부를 명시적으로 지정하고 싶을 경우 사용
+- **math**: 내장된 [MathJax](https://www.mathjax.org/) 기반 수식 표현 기능 활성화, 기본값은 페이지 성능을 위해 비활성화(`false`)
+- **mermaid**: 내장된 [Mermaid](https://github.com/mermaid-js/mermaid) 기반 다이어그램 표현 기능 활성화, 기본값은 비활성화(`false`)
 
 ## 5. 업그레이드
 
