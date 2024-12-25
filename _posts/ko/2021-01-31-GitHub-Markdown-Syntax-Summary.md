@@ -2,12 +2,9 @@
 title: "GitHub 마크다운 문법 정리"
 description: >-
   Markdown이 무엇인지 알아보고, GitHub Pages 블로그 호스팅을 위해 GitHub Flavored Markdown 기준으로 주요 Markdown 문법을 정리하였다.
-categories:
-  - Blogging
-tags:
-  - Jekyll
-toc: true
-toc_sticky: true
+categories: [AI & Data, Blogging]
+tags: [Jekyll, Markdown]
+image: /assets/img/technology.jpg
 ---
 
 GitHub Pages 활용을 위해서는 **markdown** 문법에 대해 알 필요가 있다.
@@ -63,12 +60,7 @@ GitHub 공식 문서의 [Mastering Markdown](https://guides.github.com/features/
 ##### This is an H5
 ###### This is an H6
 ```
-# This is an H1
-## This is an H2
-### This is an H3
-#### This is an H4
-##### This is an H5
-###### This is an H6
+H1 태그는 원칙적으로 한 페이지에 하나만 있어야 하므로, 보통 포스트나 문서 작성 시에는 직접 쓸 일은 잘 없다.
 
 ### 2.3. 강조
 ```
