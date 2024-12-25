@@ -16,10 +16,10 @@ timezone: Asia/Seoul
 
 title: Yunseo Kim's Study Notes        # the main title
 
-tagline: Mathematics, Physics, and DS. # it will display as the subtitle
+tagline: Mathematics, Physics, and Engineering. # it will display as the subtitle
 
 description: >-                        # used by seo meta and the atom feed
-  Yunseo Kim's personal blog mainly covering mathematics, physics, and DS.
+  Yunseo Kim's personal blog mainly covering mathematics, physics, and engineering.
 
 # fill in the protocol & hostname for your site
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
