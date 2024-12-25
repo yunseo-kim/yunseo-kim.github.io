@@ -5,7 +5,7 @@ description: Exploramos los conceptos básicos de las computadoras cuánticas y 
   ventajas sobre las computadoras clásicas, el papel que se espera que desempeñen
   en el futuro, y consideramos la necesidad de que Corea se prepare con anticipación
   para la era de la computación cuántica. Este ensayo fue escrito por el autor cuando
-  estaba en segundo año de secundaria.
+  año de secundaria.
 categories: [Engineering Physics, Quantum Computing]
 tags: [Quantum Computing]
 image: /assets/img/quantum-computer.png
@@ -34,7 +34,7 @@ Sin embargo, para utilizar las computadoras cuánticas en la industria de esta m
 Al mismo tiempo, es necesario formar personal especializado que pueda escribir algoritmos cuánticos y mantener, reparar y operar computadoras cuánticas. Dado que el software existente no puede ejecutarse en computadoras cuánticas, se necesitará un software completamente nuevo adecuado para computadoras cuánticas.
 
 Aunque la IA comenzó a recibir atención seria a partir de la década de 2010, tecnologías como el perceptrón, que son la base de la IA actual, se han estado investigando durante décadas. Para que tengamos competitividad cuando las computadoras cuánticas reciban tanta atención en el futuro como la IA hoy en día, necesitamos prepararnos desde ahora.
-Según el profesor Lee Jun-gu de la Escuela de Ingeniería Eléctrica y Electrónica del Instituto Avanzado de Ciencia y Tecnología de Corea (KAIST), la tecnología de computación cuántica de Corea está actualmente entre 5 y 10 años por detrás de otros países avanzados. Antes de que la brecha se amplíe aún más y se vuelva irreversible, debemos establecer políticas relacionadas con una visión a largo plazo y aumentar aún más la escala de inversión. A través del apoyo constante y consistente a nivel gubernamental, debemos esforzarnos por realizar investigaciones de demostración de computadoras cuánticas y asegurar derechos de propiedad intelectual relacionados con el software. Para lograr esto, será necesario un intercambio de información suficiente y una cooperación fluida entre la industria, los investigadores de ciencias básicas y los responsables de la formulación de políticas gubernamentales.
+Según el profesor Rhee June-koo de la Escuela de Ingeniería Eléctrica y Electrónica del Instituto Avanzado de Ciencia y Tecnología de Corea (KAIST), la tecnología de computación cuántica de Corea está actualmente entre 5 y 10 años por detrás de otros países avanzados. Antes de que la brecha se amplíe aún más y se vuelva irreversible, debemos establecer políticas relacionadas con una visión a largo plazo y aumentar aún más la escala de inversión. A través del apoyo constante y consistente a nivel gubernamental, debemos esforzarnos por realizar investigaciones de demostración de computadoras cuánticas y asegurar derechos de propiedad intelectual relacionados con el software. Para lograr esto, será necesario un intercambio de información suficiente y una cooperación fluida entre la industria, los investigadores de ciencias básicas y los responsables de la formulación de políticas gubernamentales.
 
 ## Referencias
 - [Diccionario de términos económicos de Hankyung, "Computadora cuántica"](https://dic.hankyung.com/economy/view/?seq=11787)
