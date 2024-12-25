@@ -8,7 +8,7 @@ description: Exploramos os conceitos básicos dos computadores quânticos, suas 
   ano do ensino médio.
 categories: [Engineering Physics, Quantum Computing]
 tags: [Quantum Computing]
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/quantum-computer.png
 ---
 Nas últimas décadas, desde os anos 1960, a capacidade de computação dos computadores aumentou exponencialmente. Esse desenvolvimento foi alcançado miniaturizando os componentes chamados transistores que entram nos processadores dos computadores, permitindo integrar um número maior deles na mesma área. Um exemplo claro que demonstra a velocidade de desenvolvimento do desempenho dos computadores é que os smartphones mais recentes que usamos hoje têm um desempenho que supera o dos supercomputadores mais poderosos da década de 1990. Considerando que é praticamente impossível encontrar uma área que não use computadores hoje, o desempenho dos computadores é um fator crucial que determina a velocidade geral do desenvolvimento tecnológico na sociedade moderna. No entanto, o problema é que, à medida que o tamanho de cada transistor se torna extremamente pequeno, essa abordagem para melhorar a capacidade de computação dos computadores está agora atingindo seus limites físicos. É por isso que os cientistas estão focando nos computadores quânticos. Neste artigo, discutiremos as características dos computadores quânticos, suas vantagens em relação aos computadores convencionais, seus papéis esperados na sociedade futura e os desafios que precisam ser superados para isso.
 
