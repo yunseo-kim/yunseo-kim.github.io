@@ -73,6 +73,8 @@ def update_frontmatter_bulk(filename):
     filtered_frontmatter["image"] = get_image_for_post(filtered_frontmatter)
 
     # Overwrite each translation file
+    target_path = os.path.join(posts_dir, source_lang_code, filename)
+    update_frontmatter.overwrite_frontmatter(target_path, filtered_frontmatter)
     for lang_code in list_lang_codes:
         target_path = os.path.join(posts_dir, lang_code, filename)
         update_frontmatter.overwrite_frontmatter(target_path, filtered_frontmatter)
