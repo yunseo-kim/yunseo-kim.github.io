@@ -1,9 +1,9 @@
 ---
 title: Kaggle-Pandas 코스 내용 정리
 description: Kaggle 공개 코스 중 Pandas 미니 코스의 내용을 요약하였다.
-categories: [Data Science, Machine Learning]
+categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas]
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/technology.jpg
 ---
 # Pandas
 Solve short hands-on challenges to perfect your data manipulation skills.
