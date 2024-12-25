@@ -12,14 +12,14 @@ exclude_keys = ["title", "description"]
 def get_image_for_post(metadata):
     """
     Returns an image path based on categories/tags rules:
-      - If categories has "AI & Markdown" or "Programming":
+      - If categories has "AI & Data" or "Programming":
           "/assets/img/technology.jpg"
       - If categories has "Nuclear Engineering":
           - If tags has "Plasma Physics" or "Fusion Power":
               "/assets/img/tokamak-plasma-cropped.png"
             else:
               "/assets/img/atoms.png"
-      - If categories has "Modern Physics":
+      - If tags has "Quantum Mechanics":
           "/assets/img/schrodinger-cat-cropped.png"
       - Else:
           "/assets/img/math-and-physics-cropped.png"
@@ -35,7 +35,7 @@ def get_image_for_post(metadata):
         tags = [tags]
 
     # 1. AI & Markdown or Programming
-    if any(cat in ["AI & Markdown", "Programming"] for cat in categories):
+    if any(cat in ["AI & Data", "Programming"] for cat in categories):
         return "/assets/img/technology.jpg"
 
     # 2. Nuclear Engineering
@@ -47,7 +47,7 @@ def get_image_for_post(metadata):
             return "/assets/img/atoms.png"
 
     # 3. Modern Physics
-    if "Modern Physics" in categories:
+    if "Quantum Mechanics" in tags:
         return "/assets/img/schrodinger-cat-cropped.png"
 
     # 4. Default
