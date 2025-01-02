@@ -65,7 +65,7 @@ m_1v_1^{\prime}\sin\theta_1 = m_2v_2^{\prime}\sin\theta_2 \label{eqn:momentum_co
 
 이며, 또한 에너지 보존에 의해
 
-$$ \frac{1}{2}m_1v_1^2 = \frac{1}{2}m_1v_1{\prime}^2 + \frac{1}{2}m_2v_2{\prime}^2 $$
+$$ \frac{1}{2}m_1v_1^2 = \frac{1}{2}m_1{v_1^{\prime}}^2 + \frac{1}{2}m_2{v_2^{\prime}}^2 $$
 
 $$ v_1^2 = {v_1^{\prime}}^2 + \frac{m_2}{m_1}{v_2^{\prime}}^2 \label{eqn:energy_conservation}\tag{3}$$
 
@@ -140,7 +140,7 @@ $$ \overline{\zeta_L} = \frac{2m_1m_2}{(m_1+m_2)^2} \approx \frac{2m_1}{m_2}\tex
 ### 단일 충돌에 의한 최대 내부 에너지 전환률
 운동량 보존(식 [$\ref{eqn:momentum_conservation}$])은 이 경우에도 동일하게 성립하나, 비탄성 충돌이므로 운동에너지는 보존되지 않는다. 이때 비탄성 충돌에 의해 손실된 운동에너지는 $\Delta U$의 내부에너지로 전환되므로
 
-$$ \Delta U = \frac{1}{2} m_1 v_1^2 - \left( \frac{1}{2} m_1 {v_1{\prime}}^2 + \frac{1}{2} m_2 {v_2{\prime}}^2 \right) \label{eqn:delta_U}\tag{12} $$
+$$ \Delta U = \frac{1}{2} m_1 v_1^2 - \left( \frac{1}{2} m_1 {v_1^{\prime}}^2 + \frac{1}{2} m_2 {v_2^{\prime}}^2 \right) \label{eqn:delta_U}\tag{12} $$
 
 이다. 이제 여기에 식 ($\ref{eqn:momentum_conservation}$)을 대입하여 정리하면 다음을 얻는다.
 
@@ -152,10 +152,10 @@ $$\begin{align*}
 
 $\Delta U$를 $v_2^\prime$에 대해 미분하여, 해당 도함수의 값이 $0$이 되는 극점과 그 점에서의 최댓값을 구하면
 
-$$ \cfrac{d \Delta U}{d v_2{\prime}} = m_2 v_1 \cos \theta_2 - m_2 v_2{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = 0 \tag{14}$$
+$$ \cfrac{d \Delta U}{d v_2^{\prime}} = m_2 v_1 \cos \theta_2 - m_2 v_2^{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = 0 \tag{14}$$
 
 $$ \begin{gather*} 
-v_2{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = v_1 \cos \theta_2 \\
+v_2^{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = v_1 \cos \theta_2 \\
 v_2^\prime = \frac{m_1v_1\cos\theta_2}{m_1+m_2}.
 \end{gather*} $$
 

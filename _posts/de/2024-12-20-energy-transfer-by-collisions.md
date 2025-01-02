@@ -65,7 +65,7 @@ m_1v_1^{\prime}\sin\theta_1 = m_2v_2^{\prime}\sin\theta_2 \label{eqn:momentum_co
 
 Aufgrund der Energieerhaltung gilt:
 
-$$ \frac{1}{2}m_1v_1^2 = \frac{1}{2}m_1v_1{\prime}^2 + \frac{1}{2}m_2v_2{\prime}^2 $$
+$$ \frac{1}{2}m_1v_1^2 = \frac{1}{2}m_1{v_1^{\prime}}^2 + \frac{1}{2}m_2{v_2^{\prime}}^2 $$
 
 $$ v_1^2 = {v_1^{\prime}}^2 + \frac{m_2}{m_1}{v_2^{\prime}}^2 \label{eqn:energy_conservation}\tag{3}$$
 
@@ -137,7 +137,7 @@ Die Energieübertragungseffizienz ist sehr gering, was es schwierig macht, das t
 ### Maximale innere Energieumwandlungsrate bei einzelnen Stößen
 Die Impulserhaltung (Gleichung [$\ref{eqn:momentum_conservation}$]) gilt auch in diesem Fall, aber die kinetische Energie wird bei inelastischen Stößen nicht erhalten. Die durch den inelastischen Stoß verlorene kinetische Energie wird in innere Energie $\Delta U$ umgewandelt:
 
-$$ \Delta U = \frac{1}{2} m_1 v_1^2 - \left( \frac{1}{2} m_1 {v_1{\prime}}^2 + \frac{1}{2} m_2 {v_2{\prime}}^2 \right) \label{eqn:delta_U}\tag{12} $$
+$$ \Delta U = \frac{1}{2} m_1 v_1^2 - \left( \frac{1}{2} m_1 {v_1^{\prime}}^2 + \frac{1}{2} m_2 {v_2^{\prime}}^2 \right) \label{eqn:delta_U}\tag{12} $$
 
 Einsetzen von Gleichung ($\ref{eqn:momentum_conservation}$) und Umformen ergibt:
 
@@ -149,10 +149,10 @@ $$\begin{align*}
 
 Differenzieren von $\Delta U$ nach $v_2^\prime$ und Nullsetzen der Ableitung ergibt den Extrempunkt und den Maximalwert:
 
-$$ \cfrac{d \Delta U}{d v_2{\prime}} = m_2 v_1 \cos \theta_2 - m_2 v_2{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = 0 \tag{14}$$
+$$ \cfrac{d \Delta U}{d v_2^{\prime}} = m_2 v_1 \cos \theta_2 - m_2 v_2^{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = 0 \tag{14}$$
 
 $$ \begin{gather*} 
-v_2{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = v_1 \cos \theta_2 \\
+v_2^{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = v_1 \cos \theta_2 \\
 v_2^\prime = \frac{m_1v_1\cos\theta_2}{m_1+m_2}.
 \end{gather*} $$
 

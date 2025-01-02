@@ -65,7 +65,7 @@ m_1v_1^{\prime}\sin\theta_1 = m_2v_2^{\prime}\sin\theta_2 \label{eqn:momentum_co
 
 y por conservación de la energía:
 
-$$ \frac{1}{2}m_1v_1^2 = \frac{1}{2}m_1v_1{\prime}^2 + \frac{1}{2}m_2v_2{\prime}^2 $$
+$$ \frac{1}{2}m_1v_1^2 = \frac{1}{2}m_1{v_1^{\prime}}^2 + \frac{1}{2}m_2{v_2^{\prime}}^2 $$
 
 $$ v_1^2 = {v_1^{\prime}}^2 + \frac{m_2}{m_1}{v_2^{\prime}}^2 \label{eqn:energy_conservation}\tag{3}$$
 
@@ -137,7 +137,7 @@ lo que resulta en una eficiencia de transferencia de energía muy baja, dificult
 ### Tasa máxima de conversión de energía interna por colisión única
 La conservación del momento (ecuación [$\ref{eqn:momentum_conservation}$]) se mantiene igual en este caso, pero como es una colisión inelástica, la energía cinética no se conserva. En este caso, la energía cinética perdida por la colisión inelástica se convierte en energía interna $\Delta U$, por lo tanto:
 
-$$ \Delta U = \frac{1}{2} m_1 v_1^2 - \left( \frac{1}{2} m_1 {v_1{\prime}}^2 + \frac{1}{2} m_2 {v_2{\prime}}^2 \right) \label{eqn:delta_U}\tag{12} $$
+$$ \Delta U = \frac{1}{2} m_1 v_1^2 - \left( \frac{1}{2} m_1 {v_1^{\prime}}^2 + \frac{1}{2} m_2 {v_2^{\prime}}^2 \right) \label{eqn:delta_U}\tag{12} $$
 
 Ahora, sustituyendo la ecuación ($\ref{eqn:momentum_conservation}$) aquí y reorganizando, obtenemos:
 
@@ -149,10 +149,10 @@ $$\begin{align*}
 
 Diferenciando $\Delta U$ con respecto a $v_2^\prime$, encontrando el punto extremo donde la derivada es 0 y el valor máximo en ese punto:
 
-$$ \cfrac{d \Delta U}{d v_2{\prime}} = m_2 v_1 \cos \theta_2 - m_2 v_2{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = 0 \tag{14}$$
+$$ \cfrac{d \Delta U}{d v_2^{\prime}} = m_2 v_1 \cos \theta_2 - m_2 v_2^{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = 0 \tag{14}$$
 
 $$ \begin{gather*} 
-v_2{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = v_1 \cos \theta_2 \\
+v_2^{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = v_1 \cos \theta_2 \\
 v_2^\prime = \frac{m_1v_1\cos\theta_2}{m_1+m_2}.
 \end{gather*} $$
 

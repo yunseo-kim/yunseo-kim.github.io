@@ -65,7 +65,7 @@ m_1v_1^{\prime}\sin\theta_1 = m_2v_2^{\prime}\sin\theta_2 \label{eqn:momentum_co
 
 Also, due to energy conservation:
 
-$$ \frac{1}{2}m_1v_1^2 = \frac{1}{2}m_1v_1{\prime}^2 + \frac{1}{2}m_2v_2{\prime}^2 $$
+$$ \frac{1}{2}m_1v_1^2 = \frac{1}{2}m_1{v_1^{\prime}}^2 + \frac{1}{2}m_2{v_2^{\prime}}^2 $$
 
 $$ v_1^2 = {v_1^{\prime}}^2 + \frac{m_2}{m_1}{v_2^{\prime}}^2 \label{eqn:energy_conservation}\tag{3}$$
 
@@ -137,7 +137,7 @@ The energy transfer efficiency is very low, making it difficult to reach thermal
 ### Maximum Internal Energy Conversion Rate by Single Collision
 Momentum conservation (equation [$\ref{eqn:momentum_conservation}$]) still applies in this case, but kinetic energy is not conserved due to inelastic collision. In this case, the kinetic energy lost by inelastic collision is converted to internal energy $\Delta U$, so:
 
-$$ \Delta U = \frac{1}{2} m_1 v_1^2 - \left( \frac{1}{2} m_1 {v_1{\prime}}^2 + \frac{1}{2} m_2 {v_2{\prime}}^2 \right) \label{eqn:delta_U}\tag{12} $$
+$$ \Delta U = \frac{1}{2} m_1 v_1^2 - \left( \frac{1}{2} m_1 {v_1^{\prime}}^2 + \frac{1}{2} m_2 {v_2^{\prime}}^2 \right) \label{eqn:delta_U}\tag{12} $$
 
 Now, substituting equation ($\ref{eqn:momentum_conservation}$) here and simplifying, we get:
 
@@ -149,10 +149,10 @@ $$\begin{align*}
 
 Differentiating $\Delta U$ with respect to $v_2^\prime$, finding the extremum where the derivative is 0, and calculating the maximum value at that point:
 
-$$ \cfrac{d \Delta U}{d v_2{\prime}} = m_2 v_1 \cos \theta_2 - m_2 v_2{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = 0 \tag{14}$$
+$$ \cfrac{d \Delta U}{d v_2^{\prime}} = m_2 v_1 \cos \theta_2 - m_2 v_2^{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = 0 \tag{14}$$
 
 $$ \begin{gather*} 
-v_2{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = v_1 \cos \theta_2 \\
+v_2^{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = v_1 \cos \theta_2 \\
 v_2^\prime = \frac{m_1v_1\cos\theta_2}{m_1+m_2}.
 \end{gather*} $$
 

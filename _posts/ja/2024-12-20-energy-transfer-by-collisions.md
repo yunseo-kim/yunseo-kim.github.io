@@ -65,7 +65,7 @@ m_1v_1^{\prime}\sin\theta_1 = m_2v_2^{\prime}\sin\theta_2 \label{eqn:momentum_co
 
 であり、またエネルギー保存により
 
-$$ \frac{1}{2}m_1v_1^2 = \frac{1}{2}m_1v_1{\prime}^2 + \frac{1}{2}m_2v_2{\prime}^2 $$
+$$ \frac{1}{2}m_1v_1^2 = \frac{1}{2}m_1{v_1^{\prime}}^2 + \frac{1}{2}m_2{v_2^{\prime}}^2 $$
 
 $$ v_1^2 = {v_1^{\prime}}^2 + \frac{m_2}{m_1}{v_2^{\prime}}^2 \label{eqn:energy_conservation}\tag{3}$$
 
@@ -140,7 +140,7 @@ $$ \overline{\zeta_L} = \frac{2m_1m_2}{(m_1+m_2)^2} \approx \frac{2m_1}{m_2}\tex
 ### 単一衝突による最大内部エネルギー変換率
 運動量保存（式[$\ref{eqn:momentum_conservation}$]）はこの場合も同様に成り立つが、非弾性衝突なので運動エネルギーは保存されない。このとき非弾性衝突により失われた運動エネルギーは$\Delta U$の内部エネルギーに変換されるので
 
-$$ \Delta U = \frac{1}{2} m_1 v_1^2 - \left( \frac{1}{2} m_1 {v_1{\prime}}^2 + \frac{1}{2} m_2 {v_2{\prime}}^2 \right) \label{eqn:delta_U}\tag{12} $$
+$$ \Delta U = \frac{1}{2} m_1 v_1^2 - \left( \frac{1}{2} m_1 {v_1^{\prime}}^2 + \frac{1}{2} m_2 {v_2^{\prime}}^2 \right) \label{eqn:delta_U}\tag{12} $$
 
 となる。ここに式（$\ref{eqn:momentum_conservation}$）を代入して整理すると次を得る。
 
@@ -152,10 +152,10 @@ $$\begin{align*}
 
 $\Delta U$を$v_2^\prime$について微分し、その導関数の値が$0$となる極値とその点での最大値を求めると
 
-$$ \cfrac{d \Delta U}{d v_2{\prime}} = m_2 v_1 \cos \theta_2 - m_2 v_2{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = 0 \tag{14}$$
+$$ \cfrac{d \Delta U}{d v_2^{\prime}} = m_2 v_1 \cos \theta_2 - m_2 v_2^{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = 0 \tag{14}$$
 
 $$ \begin{gather*} 
-v_2{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = v_1 \cos \theta_2 \\
+v_2^{\prime} \left( \frac{m_1 + m_2}{m_1} \right) = v_1 \cos \theta_2 \\
 v_2^\prime = \frac{m_1v_1\cos\theta_2}{m_1+m_2}.
 \end{gather*} $$
 
