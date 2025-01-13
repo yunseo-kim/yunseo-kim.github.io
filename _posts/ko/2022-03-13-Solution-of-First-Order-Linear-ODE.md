@@ -1,28 +1,28 @@
 ---
-title: 1계 선형상미분방정식의 풀이
-description: 1계 선형상미분방정식의 풀이법을 알아보자.
+title: 1계 선형 상미분방정식의 풀이
+description: 1계 선형 상미분방정식의 풀이법을 알아보자.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 image: /assets/img/math-and-physics-cropped.png
 ---
-## 1계 선형상미분방정식
+## 1계 선형 상미분방정식
 1계 상미분방정식을 대수적으로
 
 $$ y'+p(x)y=r(x) \tag{1} $$
 
 의 형태로 가져갈 수 있으면 **선형(linear)** 이라고 하고, 그렇지 않으면 **비선형(nonlinear)** 이라고 한다.
 
-식 (1)과 같은 형태를 1계 선형상미분방정식의 **표준형(standard form)** 이라고 하며, 만약 주어진 1계 선형상미분방정식의 첫 항이 $f(x)y'$이면 방정식의 양변을 $f(x)$로 나누어 표준형을 얻을 수 있다.
+식 (1)과 같은 형태를 1계 선형 상미분방정식의 **표준형(standard form)** 이라고 하며, 만약 주어진 1계 선형 상미분방정식의 첫 항이 $f(x)y'$이면 방정식의 양변을 $f(x)$로 나누어 표준형을 얻을 수 있다.
 
 공학에서는 종종 $r(x)$를 **입력(input)**, $y(x)$를 **출력(output)** 또는 입력(과 초기조건)에 대한 **응답(response)** 이라고 부른다.
 
-## 제차 선형상미분방정식
+## 동차 선형 상미분방정식
 식 (1)을 풀고자 하는 어떤 구간 $a<x<b$를 $J$ 라고 하자. 식 (1)에서 구간 $J$에 대해 $r(x)\equiv 0$이면
 
 $$ y'+p(x)y=0 \tag{2}$$
 
-이고, 이를 **제차(homogeneous)** 라 한다. 이 경우 [변수분리법](/posts/Separation-of-Variables/)을 사용할 수 있다.
+이고, 이를 **동차(homogeneous)** 라 한다. 이 경우 [변수분리법](/posts/Separation-of-Variables/)을 사용할 수 있다.
 
 $$ \frac{dy}{y} = -p(x)dx $$
 
@@ -32,8 +32,8 @@ $$ y(x) = ce^{-\int p(x)dx} \tag{3}$$
 
 $c=0$일 경우 **자명한 해(trivial solution)** $y(x)=0$을 얻는다.
 
-## 비제차 선형상미분방정식
-구간 $J$에서 $r(x)\not\equiv 0$인 경우 **비제차(nonhomogeneous)** 라고 한다. 비제차 선형상미분방정식 (1)은 $x$에만 의존하는 적분인자를 가짐이 알려져 있다. 이 적분인자 $F(x)$는 [적분인자를 구하는 방법](/posts/Exact-Differential-Equation-and-Integrating-Factor/#적분인자를-구하는-방법)의 식 (11)로 구할 수도 있고, 다음과 같이 직접 구할 수도 있다.
+## 비동차 선형 상미분방정식
+구간 $J$에서 $r(x)\not\equiv 0$인 경우 **비동차(nonhomogeneous)** 라고 한다. 비동차 선형상미분방정식 (1)은 $x$에만 의존하는 적분인자를 가짐이 알려져 있다. 이 적분인자 $F(x)$는 [적분인자를 구하는 방법](/posts/Exact-Differential-Equation-and-Integrating-Factor/#적분인자를-구하는-방법)의 식 (11)로 구할 수도 있고, 다음과 같이 직접 구할 수도 있다.
 
 식 (1)에 $F(x)$를 곱하면
 
