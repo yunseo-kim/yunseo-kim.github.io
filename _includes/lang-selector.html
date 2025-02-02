@@ -65,14 +65,14 @@ function changeLang(url) {
         <option value="{% if lang == site.default_lang %}{{ page.url }}{% else %}/{{ lang }}{{ page.url }}{% endif %}"
                 {% if lang == site.active_lang %}selected{% endif %}>
             {% case lang %}
-            {% when 'ko' %}한국어
-            {% when 'en' %}English
-            {% when 'ja' %}日本語
-            {% when 'zh-TW' %}正體中文
-            {% when 'es' %}Español
-            {% when 'pt-BR' %}Português
-            {% when 'fr' %}Français
-            {% when 'de' %}Deutsch
+            {% when 'ko' %}🇰🇷 한국어
+            {% when 'en' %}🇺🇸 English
+            {% when 'ja' %}🇯🇵 日本語
+            {% when 'zh-TW' %}🇹🇼 正體中文
+            {% when 'es' %}🇪🇸 Español
+            {% when 'pt-BR' %}🇧🇷 Português
+            {% when 'fr' %}🇫🇷 Français
+            {% when 'de' %}🇩🇪 Deutsch
             {% else %}{{ lang }}
             {% endcase %}
         </option>
