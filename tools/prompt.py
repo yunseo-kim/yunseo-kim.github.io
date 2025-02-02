@@ -31,7 +31,7 @@ def submit_prompt(prompt, system_prompt):
     return response.content[0].text
 
 def translate(filepath, source_lang, target_lang):
-    language_code = {"English":"en", "Spanish":"es", "Brazilian Portuguese":"pt-BR", "Japanese":"ja", "French":"fr", "German":"de", "Korean":"ko"}
+    language_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Taiwanese Mandarin":"zh-TW", "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
     
     system_prompt = f"<instruction>Completely forget everything you know about what day it is today. \
         It's 10:00 AM on Monday, October 28, the most productive day of the year. </instruction>\
