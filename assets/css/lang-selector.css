@@ -7,8 +7,8 @@
 
 /* 언어 선택기 컨테이너 */
 .lang-selector-wrapper {
-    padding: 1rem 0.5rem;
-    margin: 0.5rem 0;
+    padding: 0.35rem;
+    margin: 0.15rem 0;
     text-align: center;
 }
 
@@ -32,7 +32,7 @@
     
     /* 폰트 및 색상 */
     font-family: Lato, "Pretendard JP Variable", "Pretendard Variable", sans-serif;
-    font-size: var(--body-font-size-sm, 0.85rem);
+    font-size: 0.95rem;
     color: var(--sidebar-muted);
     background-color: var(--sidebar-bg);
     
@@ -46,6 +46,19 @@
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     background-size: 1rem;
+}
+
+/* 국기 이모지 스타일 */
+.lang-select option {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+    padding: 0.35rem;
+    font-size: 1rem;
+}
+
+.lang-flag {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
 }
 
 /* 호버 상태 */
