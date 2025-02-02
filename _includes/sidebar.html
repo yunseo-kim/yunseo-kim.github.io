@@ -40,11 +40,12 @@
     </ul>
   </nav>
 
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-    <div class="lang-selector">
-      {%- include lang-selector.html -%}
-    </div>
+  <!-- 언어 선택기를 별도 섹션으로 분리 -->
+  <div class="lang-selector-wrapper w-100">
+    {%- include lang-selector.html -%}
+  </div>
 
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
     {% unless site.theme_mode %}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
         <i class="fas fa-adjust"></i>

@@ -1,0 +1,89 @@
+/**
+ * 언어 선택기 스타일
+ * 
+ * 사이드바에 위치한 언어 선택 드롭다운의 스타일을 정의합니다.
+ * 테마의 다크 모드를 지원하며, 모바일 환경에서도 최적화되어 있습니다.
+ */
+
+/* 언어 선택기 컨테이너 */
+.lang-selector-wrapper {
+    padding: 1rem 0.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+/* 드롭다운 컨테이너 */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    min-width: 120px;
+    max-width: 80%;
+}
+
+/* 선택 입력 요소 */
+.lang-select {
+    /* 기본 스타일 */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    
+    /* 폰트 및 색상 */
+    font-family: Lato, "Pretendard JP Variable", "Pretendard Variable", sans-serif;
+    font-size: var(--body-font-size-sm, 0.85rem);
+    color: var(--sidebar-muted);
+    background-color: var(--sidebar-bg);
+    
+    /* 모양 및 상호작용 */
+    border-radius: var(--bs-border-radius, 0.375rem);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    /* 화살표 아이콘 추가 */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+}
+
+/* 호버 상태 */
+.lang-select:hover {
+    color: var(--sidebar-active);
+    background-color: var(--sidebar-hover);
+}
+
+/* 포커스 상태 */
+.lang-select:focus {
+    outline: 2px solid var(--sidebar-active);
+    outline-offset: 2px;
+    color: var(--sidebar-active);
+}
+
+/* Firefox 브라우저 대응 */
+.lang-select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 var(--sidebar-muted);
+}
+
+/* IE 브라우저 대응 */
+.lang-select::-ms-expand {
+    display: none;
+}
+
+/* 다크 모드 대응 */
+[data-mode="dark"] .lang-select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+/* 모바일 환경 최적화 */
+@media (max-width: 768px) {
+    .lang-select {
+        padding: 0.75rem 2rem 0.75rem 1rem;  /* 더 큰 터치 영역 */
+    }
+    
+    .lang-dropdown {
+        min-width: 140px;  /* 모바일에서 더 넓은 선택 영역 */
+    }
+}
