@@ -1,8 +1,9 @@
 ---
 title: 諧振子（The Harmonic Oscillator）的代數解法
 description: 建立量子力學中諧振子的薛丁格方程式，並探討該方程式的代數解法。從交換子、正則交換關係和階梯算符推導出任意定態的波函數和能量本徵值。
-categories: [工程物理, 現代物理]
-tags: [量子力學, 薛丁格方程式, 波函數, 交換子, 階梯算符]
+categories: [Engineering Physics, Modern Physics]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
+    Operators]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png
 ---
@@ -291,7 +292,7 @@ $$ \psi_n = \frac{1}{\sqrt{n!}}\left(\hat{a}_+ \right)^n \psi_0. \tag{27}$$
 也就是說，在方程（$\ref{eqn:psi_n_and_E_n}$）中，規範化常數 $A_n=\cfrac{1}{\sqrt{n!}}$。
 
 ### 定態的正交性
-和[一維無限方井](/posts/the-infinite-square-well/#3-這個狀態具有正交性orthogonality)一樣，諧振子的定態也是正交的。
+和[一維無限方井](/posts/the-infinite-square-well/#3-這些狀態具有正交性orthogonality)一樣，諧振子的定態也是正交的。
 
 $$ \int_{-\infty}^{\infty} \psi_m^*\psi_n\ dx = \delta_{mn}. \tag{28}$$
 
@@ -311,7 +312,7 @@ n\int_{-\infty}^{\infty} \psi_m^*\psi_n\ dx &= \int_{-\infty}^{\infty} \psi_m^* 
 
 $$ \therefore \ (m \neq n) \ \Rightarrow \ \int_{-\infty}^{\infty} \psi_m^*\psi_n\ dx = 0.\ \blacksquare $$
 
-利用正交性，就像[一維無限方井的方程（19）中所做的那樣](/posts/the-infinite-square-well/#求解依時間的薛丁格方程的一般解-psixt)，當我們將 $\Psi(x,0)$ 展開為定態的線性組合 $\sum c_n\psi_n(x)$ 時，可以使用[傅立葉方法](/posts/the-infinite-square-well/#使用傅立葉方法fouriers-trick求係數-c_n)來求係數 $c_n$。
+利用正交性，就像[一維無限方井的方程（19）中所做的那樣](/posts/the-infinite-square-well/#求解時間相依薛丁格方程的一般解psixt)，當我們將 $\Psi(x,0)$ 展開為定態的線性組合 $\sum c_n\psi_n(x)$ 時，可以使用[傅立葉方法](/posts/the-infinite-square-well/#使用傅立葉方法fouriers-trick求係數c_n)來求係數 $c_n$。
 
 $$ c_n = \int \psi_n^*\Psi(x,0)\ dx. $$
 

@@ -1,8 +1,8 @@
 ---
 title: 薛丁格方程式與波函數
 description: 探討量子力學中與經典力學中牛頓運動定律具有相似地位的薛丁格方程式的基本形式。同時,也探討作為薛丁格方程式解的波函數所具有的物理意義的統計解釋、量子力學的不確定性觀點,以及哥本哈根詮釋中測量行為所具有的物理意義(波函數坍縮)。
-categories: [工程物理, 現代物理]
-tags: [量子力學, 薛丁格方程式, 波函數]
+categories: [Engineering Physics, Modern Physics]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true
 image: /assets/img/schrodinger-cat-cropped.png

@@ -1,8 +1,8 @@
 ---
 title: 調和振盪子（The Harmonic Oscillator）的解析解法
 description: 建立量子力學中調和振盪子的薛丁格方程，並探討該方程的解析解法。引入無量綱變數 𝜉 來求解方程，並使用厄米多項式表示任意規範化的定態。
-categories: [工程物理, 現代物理]
-tags: [量子力學, 薛丁格方程, 波函數, 厄米多項式]
+categories: [Engineering Physics, Modern Physics]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png
 ---

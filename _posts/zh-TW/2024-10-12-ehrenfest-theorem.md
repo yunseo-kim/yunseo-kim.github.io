@@ -1,8 +1,8 @@
 ---
 title: 埃倫費斯特定理（Ehrenfest theorem）
 description: 探討在量子力學中如何從波函數計算位置和動量的期望值，並將其擴展到任意力學變量Q(x,p)的期望值計算公式。從中推導出埃倫費斯特定理（Ehrenfest theorem）。
-categories: [工程物理, 現代物理]
-tags: [量子力學, 薛丁格方程, 波函數]
+categories: [Engineering Physics, Modern Physics]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png
 ---

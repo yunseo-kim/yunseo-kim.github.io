@@ -1,8 +1,8 @@
 ---
 title: 自由粒子（The Free Particle）
 description: 探討V(x)=0的自由粒子情況下，變數分離解無法規範化的事實及其意義，定性地展示一般解的位置-動量不確定性關係，並計算Ψ(x,t)的相速度和群速度，進行物理解釋。
-categories: [工程物理, 現代物理]
-tags: [量子力學, 薛丁格方程, 波函數, 不確定性原理]
+categories: [Engineering Physics, Modern Physics]
+tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png
 ---
@@ -114,7 +114,7 @@ $$ \int_{-\infty}^{\infty}\Psi_k^*\Psi_k dx = |A|^2\int_{-\infty}^{\infty}dx = \
 
 $$ \Psi(x,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \phi(k)e^{i(kx-\frac{\hbar k^2}{2m}t)}dk. \label{eqn:Psi_general_solution}\tag{10}$$
 
-> 這裡，$\cfrac{1}{\sqrt{2\pi}}\phi(k)dk$ 扮演了與['時間無關薛丁格方程'文章中式 (21)](/posts/time-independent-schrodinger-equation/#3-時間相依薛丁格方程的一般解是變數分離解的線性組合) 中 $c_n$ 相同的角色。
+> 這裡，$\cfrac{1}{\sqrt{2\pi}}\phi(k)dk$ 扮演了與['時間無關薛丁格方程'文章中式 (21)](/posts/time-independent-schrodinger-equation/#3-時間相依薛丁格方程式的一般解是變數分離解的線性組合) 中 $c_n$ 相同的角色。
 {: .prompt-info }
 
 這個波函數對於適當的 $\phi(k)$ 可以被規範化，但必須有 $k$ 的範圍，因此也有能量和速度的範圍。這被稱為**波包（wave packet）**。

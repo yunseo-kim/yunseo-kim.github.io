@@ -3,8 +3,8 @@ title: "碰撞引起的能量傳遞"
 description: >-
   分別計算彈性碰撞和非彈性碰撞兩種情況下粒子間碰撞的能量傳遞率，
   並比較碰撞的兩個粒子質量相近和相差很大時各種情況下的能量傳遞率大小。
-categories: [工程物理, 核工程]
-tags: [核物理, 電漿物理]
+categories: [Engineering Physics, Nuclear Engineering]
+tags: [Nuclear Physics, Plasma Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---
