@@ -12,14 +12,14 @@ image: /assets/img/schrodinger-cat-cropped.png
 >
 > $$ i\hbar\frac{\partial \Psi}{\partial t} = - \frac{\hbar^2}{2m}\frac{\partial^2 \Psi}{\partial x^2} + V\Psi $$
 >
-> - 波函數 $\Psi(x,t)$ 的統計解釋(Born 解釋): 波函數絕對值的平方 $|\Psi(x,t)|^2$ 是在時間 $t$、位置 $x$ 處發現粒子的**機率密度函數**。
+> - 波函數 $\Psi(x,t)$ 的統計解釋(Born 解釋): 波函數絕對值的平方 $\|\Psi(x,t)\|^2$ 是在時間 $t$、位置 $x$ 處發現粒子的**機率密度函數**。
 > - 波函數的規範化:
->   - $\int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 1$
+>   - $\int_{-\infty}^{\infty} \|\Psi(x,t)\|^2 dx = 1$
 >   - 如果 $\Psi(x,t)$ 是薛丁格方程式的解,那麼對於任意複數常數 $A$, $A\Psi(x,t)$ 也同樣是解,此時決定常數 $A$ 以滿足上式的過程稱為規範化(normalization)
 >   - **無法規範化的解(non-normalizable solutions)**不能表示粒子,因此不是有效的波函數,只有**平方可積的(square-integrable)**解才是物理上可能的狀態
 >   - 在某一時刻規範化的波函數,隨著時間的推移 $\Psi$ 雖然會變化,但仍會持續保持規範化狀態
 > - 機率流:
->   - $J(x,t) \equiv \cfrac{i\hbar}{2m}\left(\Psi\cfrac{\partial \Psi^*}{\partial x}-\Psi^*\cfrac{\partial \Psi}{\partial x}\right)$
+>   - $J(x,t) \equiv \cfrac{i\hbar}{2m}\left(\Psi\cfrac{\partial \Psi^\*}{\partial x}-\Psi^\*\cfrac{\partial \Psi}{\partial x}\right)$
 >   - 發現粒子的機率通過點 $x$ 的流量(單位時間內的機率)
 >   - 如果在時間 $t$、區域 $a<x<b$ 中發現粒子的機率為 $P_{ab}(t)$,則 $\cfrac{dP_{ab}}{dt} = J(a,t) - J(b,t)$
 {: .prompt-info }
@@ -59,7 +59,7 @@ flowchart TD
 ## 波函數 $\Psi(x,t)$ 的統計解釋 (Born 解釋)
 在經典力學中,粒子位於一個點,而在量子力學中,表示粒子狀態的波函數在給定的 $t$ 時是 $x$ 的函數,也就是說它分布在空間中。我們應該如何解釋這個物理意義呢?
 
-根據玻恩(Born)的**統計解釋**,波函數絕對值的平方 $|\Psi(x,t)|^2$ 是在時間 $t$、位置 $x$ 處發現粒子的機率密度函數。波函數 $\Psi$ 本身是複數,但 $|\Psi|^2=\Psi^*\Psi$ ($\Psi^*$ 是 $\Psi$ 的共軛複數)是大於或等於 0 的實數,因此這種解釋成立。也就是說,可以表示為:
+根據玻恩(Born)的**統計解釋**,波函數絕對值的平方 $\|\Psi(x,t)\|^2$ 是在時間 $t$、位置 $x$ 處發現粒子的機率密度函數。波函數 $\Psi$ 本身是複數,但 $\|\Psi\|^2=\Psi^*\Psi$ ($\Psi^*$ 是 $\Psi$ 的共軛複數)是大於或等於 0 的實數,因此這種解釋成立。也就是說,可以表示為:
 
 $$ \int_a^b |\Psi(x,t)|^2 dx = \text{在時間 }t\text{ 時在 }a\text{ 和 }b\text{ 之間找到粒子的機率}. \tag{2}$$
 
@@ -111,7 +111,7 @@ $$ \int_a^b |\Psi(x,t)|^2 dx = \text{在時間 }t\text{ 時在 }a\text{ 和 }b\t
 ## 測量與波函數坍縮
 粒子在測量之前並沒有精確的位置,只有通過測量才獲得了 $C$ 這個特定位置(在後面的文章中我們會討論,實際上根據海森堡的不確定性原理,這個位置也不是完全精確的值,而是有一定的誤差範圍)。但是,如果在第一次測量後立即進行額外的測量,我們不會每次測量都得到不同的值,而是必定得到相同的結果。這可以用以下方式解釋:
 
-在進行第一次測量的瞬間,測量對象的波函數急劇變化,集中在點 $C$ 附近形成一個窄而尖的 $|\Psi(x,t)|^2$ 圖形。這被稱為波函數因測量而**坍縮(collapse)**到點 $C$。
+在進行第一次測量的瞬間,測量對象的波函數急劇變化,集中在點 $C$ 附近形成一個窄而尖的 $\|\Psi(x,t)\|^2$ 圖形。這被稱為波函數因測量而**坍縮(collapse)**到點 $C$。
 
 也就是說,物理過程可以分為兩種不同類型:
 - 波函數根據薛丁格方程式緩慢變化的一般(ordinary)過程
@@ -121,7 +121,7 @@ $$ \int_a^b |\Psi(x,t)|^2 dx = \text{在時間 }t\text{ 時在 }a\text{ 和 }b\t
 {: .prompt-tip }
 
 ## 波函數的規範化(Normalization)
-由於波函數絕對值的平方 $|\Psi(x,t)|^2$ 是在時間 $t$、位置 $x$ 處發現粒子的機率密度,對所有 $x$ 積分 $|\Psi|^2$ 應該等於 1。
+由於波函數絕對值的平方 $\|\Psi(x,t)\|^2$ 是在時間 $t$、位置 $x$ 處發現粒子的機率密度,對所有 $x$ 積分 $\|\Psi\|^2$ 應該等於 1。
 
 $$ \int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 1. \label{eqn:wavefunction_norm}\tag{3} $$
 
@@ -133,7 +133,7 @@ $$ \int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 1. \label{eqn:wavefunction_norm}\t
 
 $$ \frac{d}{dt}\int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = \int_{-\infty}^{\infty} \frac{\partial}{\partial t}|\Psi(x,t)|^2 dx. \label{eqn:norm_proof_1}\tag{4} $$
 
-> $|\Psi|^2$ 對 $x$ 積分的結果只是 $t$ 的函數,所以左邊使用全微分($d/dt$),但 $|\Psi|^2$ 本身是 $x$ 和 $t$ 的二元函數,所以右邊使用偏微分($\partial/\partial t$)。
+> $\|\Psi\|^2$ 對 $x$ 積分的結果只是 $t$ 的函數,所以左邊使用全微分($d/dt$),但 $\|\Psi\|^2$ 本身是 $x$ 和 $t$ 的二元函數,所以右邊使用偏微分($\partial/\partial t$)。
 {: .prompt-tip }
 
 根據乘積的微分規則,上式可以改寫為:
@@ -163,7 +163,7 @@ $$ \frac{d}{dt}\int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = \frac{i\hbar}{2m}\left
 
 $$ \frac{d}{dt}\int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 0 \label{eqn:norm_proof_fin}\tag{10} $$
 
-所以, $\int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx$ 是與時間無關的常數。
+所以, $\int_{-\infty}^{\infty} \|\Psi(x,t)\|^2 dx$ 是與時間無關的常數。
 
 $$ \therefore \text{如果 }\Psi\text{ 在某一時刻 }t\text{ 是規範化的,那麼對於所有其他時刻 }t\text{ 也是規範化的。} \blacksquare $$
 

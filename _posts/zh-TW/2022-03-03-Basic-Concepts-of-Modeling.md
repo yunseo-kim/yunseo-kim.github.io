@@ -82,7 +82,7 @@ $$ \frac {dy}{dt} = -ky$$
 $$ \frac {dy}{dt} = -ky, \qquad y(0)=0.5 $$
 
 ### 2. 數學求解
-前面建立的常微分方程的通解如下（參考[分離變數法](/posts/Separation-of-Variables/#模型示例放射性碳定年法radiocarbon-dating)）：
+前面建立的常微分方程的通解如下（參考[分離變數法](/posts/Separation-of-Variables/#建模例子放射性碳定年法-radiocarbon-dating)）：
 
 $$ y(t)=ce^{-kt} $$
 

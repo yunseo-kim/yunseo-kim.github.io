@@ -9,7 +9,7 @@ image: /assets/img/atoms.png
 ## 均勻混合物（Homogeneous Mixture）的巨觀截面積
 讓我們考慮一個由兩種核種 $X$ 和 $Y$ 均勻混合的混合物。假設每種核種的原子密度分別為 $N_X$ 和 $N_Y$ $\text{atom/cm}^3$，而中子與這些核的特定反應的反應截面積分別為 $\sigma_X$ 和 $\sigma_Y$。
 
-那麼，中子與原子核 $X$ 和 $Y$ 每單位長度發生碰撞的機率分別為 $\Sigma_X=N_X\sigma_X$ 和 $\Sigma_Y=N_Y\sigma_Y$（參考[巨觀截面積](/posts/Neutron-Interactions-and-Cross-sections/#巨觀截面積macroscopic-cross-section)）。因此，中子與這兩種原子核每單位長度發生反應的總機率如下：
+那麼，中子與原子核 $X$ 和 $Y$ 每單位長度發生碰撞的機率分別為 $\Sigma_X=N_X\sigma_X$ 和 $\Sigma_Y=N_Y\sigma_Y$（參考[巨觀截面積](/posts/Neutron-Interactions-and-Cross-sections/#巨觀截面macroscopic-cross-section)）。因此，中子與這兩種原子核每單位長度發生反應的總機率如下：
 
 $$ \Sigma = \Sigma_X + \Sigma_Y = N_X\sigma_X + N_Y\sigma_Y \tag{1}$$
 

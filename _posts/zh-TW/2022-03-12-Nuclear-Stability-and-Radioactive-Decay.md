@@ -21,7 +21,7 @@ image: /assets/img/atoms.png
 - 衰變後產生的原子核大多處於激發態，因此會以伽瑪射線或X射線的形式釋放能量
 
 ## 貝他衰變（β-decay）
-### 正貝他衰變（β^+衰變）
+### 正貝他衰變（$\beta^+$衰變）
 
  $$p \to n+\beta^+ +\nu_e$$
  
@@ -31,7 +31,7 @@ image: /assets/img/atoms.png
 
 例）$^{23}\_{12}\text{Mg} \to\;^{23}\_{11}\text{Na} + e^+ + \nu_e$
 
-### 負貝他衰變（β^-衰變）
+### 負貝他衰變（$\beta^-$衰變）
 
 $$ n\to p+\beta^- + \overline{\nu}_e $$
 

@@ -126,7 +126,7 @@ $$ E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{n^2\pi^2\hbar^2}{2ma^2}. \tag{9}$$
 
 現在我們可以通過歸一化$\psi$來求得$A$。
 
-> 原本應該是歸一化$\Psi(x,t)$，但根據[時間無關薛丁格方程](/posts/time-independent-schrodinger-equation/#1-定態stationary-states)的式 (11)，這等同於歸一化$\psi(x)$。
+> 原本應該是歸一化$\Psi(x,t)$，但根據[時間無關薛丁格方程](/posts/time-independent-schrodinger-equation/#1-它們是穩態stationary-states)的式 (11)，這等同於歸一化$\psi(x)$。
 {: .prompt-tip }
 
 $$ \int_0^a |A|^2 \sin^2(kx)dx = |A|^2\frac{a}{2} = 1 $$
@@ -208,11 +208,11 @@ $$ \int \psi_m(x)^*f(x)dx = \sum_{n=1}^{\infty} c_n\int\psi_m(x)^*\psi_n(x)dx = 
 $$ c_n = \int \psi_n(x)^*f(x)dx \label{eqn:coefficients_n}\tag{16}$$
 
 ## 求解時間相依薛丁格方程的一般解$\Psi(x,t)$
-無限方井的每個定態根據['時間無關薛丁格方程'文章中的式 (10)](/posts/time-independent-schrodinger-equation/#1-定態stationary-states) 和我們先前得到的式 ($\ref{eqn:psi_n}$) 可以表示為
+無限方井的每個定態根據['時間無關薛丁格方程'文章中的式 (10)](/posts/time-independent-schrodinger-equation/#1-它們是穩態stationary-states) 和我們先前得到的式 ($\ref{eqn:psi_n}$) 可以表示為
 
 $$ \Psi_n(x,t) = \sqrt{\frac{2}{a}}\sin{\left(\frac{n\pi}{a}x \right)}e^{-i(n^2\pi^2\hbar/2ma^2)t} \tag{17}$$
 
-此外，我們在[時間無關薛丁格方程](/posts/time-independent-schrodinger-equation/#3-時間相依薛丁格方程的一般解是變數分離解的線性組合)中看到，薛丁格方程的一般解可以表示為定態的線性組合。因此，
+此外，我們在[時間無關薛丁格方程](/posts/time-independent-schrodinger-equation/#3-時間相依薛丁格方程式的一般解是變數分離解的線性組合)中看到，薛丁格方程的一般解可以表示為定態的線性組合。因此，
 
 $$ \Psi(x,t) = \sum_{n=1}^{\infty} c_n\sqrt{\frac{2}{a}}\sin{\left(\frac{n\pi}{a}x \right)}e^{-i(n^2\pi^2\hbar/2ma^2)t} \label{eqn:general_solution}\tag{18}$$
 

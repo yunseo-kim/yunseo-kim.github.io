@@ -25,7 +25,7 @@ $$ \langle x \rangle = \int_{-\infty}^{\infty}x|\Psi(x,t)|^2 dx \label{eqn:x_exp
 
 對於處於相同狀態 $\Psi$ 的足夠多數量的粒子，分別測量它們的位置後取測量結果的平均值，就會得到通過上述公式計算的 $\langle x \rangle$。
 
-> 請注意，這裡所說的期望值並非對同一粒子重複測量得到的平均值，而是對具有相同狀態的系統的**系綜（ensemble）**進行測量結果的平均值。如果對同一粒子在短時間間隔內進行多次重複測量，由於在第一次測量時[波函數會發生坍塌（collapse）](/posts/schrodinger-equation-and-the-wave-function/#測量和波函數的坍塌)，因此在後續的測量中將會持續得到相同的值。
+> 請注意，這裡所說的期望值並非對同一粒子重複測量得到的平均值，而是對具有相同狀態的系統的**系綜（ensemble）**進行測量結果的平均值。如果對同一粒子在短時間間隔內進行多次重複測量，由於在第一次測量時[波函數會發生坍塌（collapse）](/posts/schrodinger-equation-and-the-wave-function/#測量與波函數坍縮)，因此在後續的測量中將會持續得到相同的值。
 {: .prompt-warning }
 
 ### 動量 $p$ 的期望值

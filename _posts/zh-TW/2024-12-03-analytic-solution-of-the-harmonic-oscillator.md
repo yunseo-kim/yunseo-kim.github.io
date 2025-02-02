@@ -157,7 +157,7 @@ $$ K = 2n + 1 $$
 
 $$ E_n = \left(n+\frac{1}{2} \right)\hbar\omega, \quad n=0,1,2,\dots \label{eqn:E_n}\tag{14}$$
 
-這與[調和振盪子的代數解法](/posts/algebraic-solution-of-the-harmonic-oscillator/#定態-psi_n-和能量水平-e_n)中的式（21）得到的能量量子化條件完全一致，儘管我們使用了完全不同的方法。
+這與[調和振盪子的代數解法](/posts/algebraic-solution-of-the-harmonic-oscillator/#定態-psi_n-和能量級-e_n)中的式（21）得到的能量量子化條件完全一致，儘管我們使用了完全不同的方法。
 
 ## 厄米多項式（Hermite polynomials）$H_n(\xi)$ 和定態 $\psi_n(x)$
 ### 厄米多項式 $H_n$

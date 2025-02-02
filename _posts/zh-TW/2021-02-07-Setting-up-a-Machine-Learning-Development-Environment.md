@@ -189,7 +189,7 @@ Collecting matplotlib
 訪問[CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive),然後選擇前面確認的版本進入。本文選擇進入[CUDA Toolkit 11.0 Update1](https://developer.nvidia.com/cuda-11.0-update1-download-archive)。  
 ![CUDA 11.0 Update 1](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-1.png)  
 現在選擇相應的平台和安裝程式類型,然後按照螢幕上顯示的指示操作。此時,[建議盡可能使用系統套件管理器安裝](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#choose-installation-method)。作者偏好的方法是deb (network)。  
-![選擇CUDA平台](/assets/img/머신러닝-개발환境-구축하기/CUDA_installation-2.png)  
+![選擇CUDA平台](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-2.png)  
 ![安裝CUDA](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-3.png)  
 
 執行以下命令安裝CUDA。

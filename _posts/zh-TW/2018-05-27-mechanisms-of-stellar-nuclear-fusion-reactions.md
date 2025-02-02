@@ -9,8 +9,8 @@ image: /assets/img/tokamak-plasma-cropped.png
 ## 質子-質子鏈反應 (proton-proton chain reaction)
 這是人們最常知道的恆星核融合反應。重氫的原子核，即氘核（deuteron），是由一個質子（p）和一個中子（n）結合而成的。因此，要使兩個質子結合成重氫的原子核，其中一個質子必須變成中子。那麼，質子是如何變成中子的呢？
 
-- 中子（$n$）變成質子（$p$）並釋放出電子（$e⁻$）和反電子中微子（$\nu_e$）的過程稱為「[β衰變](/posts/Nuclear-Stability-and-Radioactive-Decay/#音的beta衰變beta--decay)」。其反應方程式為 $n \rightarrow p + e^{-} + \overline{\nu_e}$。
-- 質子（$p$）變成中子（$n$）的過程是β衰變的反過程。因此，這被稱為「[逆β衰變](/posts/Nuclear-Stability-and-Radioactive-Decay/#陽的beta衰變beta-decay)」。那麼，逆β衰變的反應方程式是什麼樣的呢？核反應方程式並沒有什麼特別之處。只需將質子和中子的位置互換，將電子改為正電子，將反電子中微子改為電子中微子即可。用方程式表示為 $p \rightarrow n + e^{+} + \nu_e$。
+- 中子（$n$）變成質子（$p$）並釋放出電子（$e⁻$）和反電子中微子（$\nu_e$）的過程稱為「[β衰變](/posts/Nuclear-Stability-and-Radioactive-Decay/#負貝他衰變beta-衰變)」。其反應方程式為 $n \rightarrow p + e^{-} + \overline{\nu_e}$。
+- 質子（$p$）變成中子（$n$）的過程是β衰變的反過程。因此，這被稱為「[逆β衰變](/posts/Nuclear-Stability-and-Radioactive-Decay/#正貝他衰變beta衰變)」。那麼，逆β衰變的反應方程式是什麼樣的呢？核反應方程式並沒有什麼特別之處。只需將質子和中子的位置互換，將電子改為正電子，將反電子中微子改為電子中微子即可。用方程式表示為 $p \rightarrow n + e^{+} + \nu_e$。
 
 通過上述過程形成重氫原子核後，接著進行 $^2_1D + p \rightarrow {^3_2He}$ 反應生成氦-3原子核，最後兩個氦-3原子核碰撞形成一個氦-4原子核和兩個質子。  
 ![p-p chain reaction](https://upload.wikimedia.org/wikipedia/commons/8/85/Fusion_in_the_Sun.svg)

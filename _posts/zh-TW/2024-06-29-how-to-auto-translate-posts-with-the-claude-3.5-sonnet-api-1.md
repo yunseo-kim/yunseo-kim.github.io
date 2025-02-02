@@ -21,7 +21,7 @@ Claude 3系列模型根據模型大小提供Haiku、Sonnet和Opus版本。
 ![Claude 3.5 Sonnet性能基準測試結果](/assets/img/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api/LLM-benchmark.webp)
 > 圖片來源：[Anthropic主頁](https://www.anthropic.com/news/claude-3-5-sonnet)
 
-（2024.10.31更新）2024年10月22日，Anthropic發布了Claude 3.5 Sonnet的升級版API（"claude-3-5-sonnet-20241022"）和Claude 3.5 Haiku。然而，由於[後面將提到的問題](#防止偷懶-20241031-萬聖節補丁)，本博客目前仍在使用現有的"claude-3-5-sonnet-20240620" API。
+（2024.10.31更新）2024年10月22日，Anthropic發布了Claude 3.5 Sonnet的升級版API（"claude-3-5-sonnet-20241022"）和Claude 3.5 Haiku。然而，由於[後面將提到的問題](#防止偷懶20241031-萬聖節補丁)，本博客目前仍在使用現有的"claude-3-5-sonnet-20240620" API。
 
 ## 為什麼選擇Claude 3.5進行文章翻譯
 即使不使用Claude 3.5或GPT-4等語言模型，也存在Google翻譯或DeepL等現有商業翻譯API。儘管如此，我決定使用LLM進行翻譯的原因是，與其他商業翻譯服務不同，用戶可以通過提示設計向模型提供寫作目的或主要主題等額外的上下文信息或要求，而模型可以根據這些信息提供考慮上下文的翻譯。雖然DeepL或Google翻譯通常也提供出色的翻譯質量，但由於無法很好地把握文章主題或整體上下文的限制，在要求翻譯非日常對話的專業主題的長文時，相對而言翻譯結果可能會顯得不自然。特別是Claude，如上所述，在寫作、語言推理、多語言理解和翻譯領域被認為比競爭對手GPT-4相對更出色，而且在簡單測試時也顯示出比GPT-4更流暢的翻譯質量，因此我認為它適合用於翻譯本博客上的工程相關文章。

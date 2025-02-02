@@ -50,7 +50,7 @@ $$ -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=E\psi \tag{1}$$
 
 $$ \frac{d^2\psi}{dx^2} = -k^2\psi \text{，其中 }k\equiv \frac{\sqrt{2mE}}{\hbar} \label{eqn:t_independent_schrodinger_eqn}\tag{2}$$
 
-[到這裡為止，與勢能為 $0$ 的無限方井內部相同](/posts/the-infinite-square-well/#模型及邊界條件設定)。不過這次我們將一般解寫成以下指數函數形式：
+[到這裡為止，與勢能為 $0$ 的無限方井內部相同](/posts/the-infinite-square-well/#模型和邊界條件設置)。不過這次我們將一般解寫成以下指數函數形式：
 
 $$ \psi(x) = Ae^{ikx} + Be^{-ikx}. \tag{3}$$
 
@@ -107,10 +107,10 @@ $$ v_{\text{phase}} = \left|\frac{\omega}{k}\right| = \frac{\hbar|k|}{2m} = \sqr
 
 $$ \int_{-\infty}^{\infty}\Psi_k^*\Psi_k dx = |A|^2\int_{-\infty}^{\infty}dx = \infty. \tag{9}$$
 
-也就是說，<u>在自由粒子的情況下，變數分離解在物理上不是可能的狀態。</u>自由粒子無法以[定態](/posts/time-independent-schrodinger-equation/#1-定態stationary-states)存在，也無法具有[某個特定的能量值](/posts/time-independent-schrodinger-equation/#2-具有一個明確的總能量值-e而非某個範圍的機率分布的狀態)。事實上，直觀地想，在兩端完全沒有邊界條件的情況下形成駐波才更奇怪。
+也就是說，<u>在自由粒子的情況下，變數分離解在物理上不是可能的狀態。</u>自由粒子無法以[定態](/posts/time-independent-schrodinger-equation/#1-它們是穩態stationary-states)存在，也無法具有[某個特定的能量值](/posts/time-independent-schrodinger-equation/#2-它們具有一個明確的總能量值-e而不是一個機率分布範圍)。事實上，直觀地想，在兩端完全沒有邊界條件的情況下形成駐波才更奇怪。
 
 ## 求解時間相依薛丁格方程的一般解 $\Psi(x,t)$
-儘管如此，這個變數分離解仍然具有重要意義，因為除了物理解釋之外，[時間相依薛丁格方程的一般解是變數分離解的線性組合](/posts/time-independent-schrodinger-equation/#3-時間相依薛丁格方程的一般解是變數分離解的線性組合)這一數學意義仍然成立。只是在這種情況下，由於沒有限制條件，一般解不是對不連續變數 $n$ 的和（$\sum$），而是對連續變數 $k$ 的積分（$\int$）形式。
+儘管如此，這個變數分離解仍然具有重要意義，因為除了物理解釋之外，[時間相依薛丁格方程的一般解是變數分離解的線性組合](/posts/time-independent-schrodinger-equation/#3-時間相依薛丁格方程式的一般解是變數分離解的線性組合)這一數學意義仍然成立。只是在這種情況下，由於沒有限制條件，一般解不是對不連續變數 $n$ 的和（$\sum$），而是對連續變數 $k$ 的積分（$\int$）形式。
 
 $$ \Psi(x,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \phi(k)e^{i(kx-\frac{\hbar k^2}{2m}t)}dk. \label{eqn:Psi_general_solution}\tag{10}$$
 
