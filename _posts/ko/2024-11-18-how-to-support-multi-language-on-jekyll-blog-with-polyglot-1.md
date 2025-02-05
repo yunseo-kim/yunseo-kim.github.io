@@ -53,7 +53,7 @@ plugins:
 
 ```yml
 # Polyglot Settings
-languages: ["en", "ko", "es", "pt-BR", "ja", "fr", "de"]
+languages: ["en", "ko", "ja", "zh-TW", "es", "pt-BR", "fr", "de"]
 default_lang: "en"
 exclude_from_localization: ["javascript", "images", "css", "public", "assets", "sitemap"]
 parallel_localization: false
@@ -83,6 +83,8 @@ lang_from_path: true
 > - `/ja/sitemap.xml`{: .filepath}
 > - `/fr/sitemap.xml`{: .filepath}
 > - `/de/sitemap.xml`{: .filepath}
+>
+> (2025.01.14. 업데이트) [상술한 내용을 README에 보강하여 제출한 Pull Request](https://github.com/untra/polyglot/pull/230)가 받아들여짐에 따라, 이제 [Polyglot 공식 문서](https://github.com/untra/polyglot?tab=readme-ov-file#sitemap-generation)에서도 동일한 안내를 확인할 수 있다.
 {: .prompt-tip }
 
 > 'parallel_localization'을 'true'로 지정하면 빌드 시간이 상당히 단축되는 장점이 있으나, 2024년 7월 시점 기준으로 본 블로그에 대해 해당 기능을 활성화했을 때 페이지 오른쪽 사이드바의 'Recently Updated'와 'Trending Tags' 부분 링크 제목이 정상적으로 처리되지 않고 다른 언어와 뒤섞이는 버그가 있었다. 아직 안정화가 덜 된 것 같으니 사이트에 적용하려면 미리 정상 작동하는지 테스트를 거칠 필요가 있다. 또한 [Windows를 사용하는 경우에도 해당 기능이 지원되지 않으므로 비활성화해야 한다](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
@@ -115,13 +117,12 @@ sass:
 
 따라서 나는 [Chirpy 테마의 head.html](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/head.html)을 가져온 뒤에 아래와 같이 직접 내용을 추가하였다.
 [Polyglot 공식 블로그의 SEO Recipes 페이지](https://polyglot.untra.io/seo/)를 참고하여 작업하였으나, `page.permalink`가 없을 경우 `page.url` 속성을 대신 사용하도록 수정하였다.
-또한 [Google Search Central 공식 문서](https://developers.google.com/search/docs/specialty/international/localized-versions#xdefault)를 참고하여 사이트 기본 언어 페이지에 대한 hreflang 속성값으로 `site.default_lang` 대신 `x-default`를 지정함으로써, 사이트가 지원하는 언어 목록에 방문자의 선호 언어가 없거나 혹은 방문자의 선호 언어를 인식할 수 없는 경우 fallback으로 해당 페이지 링크를 인식하도록 하였다.
 
 {% raw %}
 ```liquid
   <meta http-equiv="Content-Language" content="{{site.active_lang}}">
 
-  {% if site.default_lang %}<link rel="alternate" hreflang="x-default" href="{{site.url}}{{page.url}}" />{% endif %}
+  {% if site.default_lang %}<link rel="alternate" hreflang="{{site.default_lang}}" href="{{site.url}}{{page.url}}" />{% endif %}
   {% for lang in site.languages %}{% if lang == site.default_lang %}{% continue %}{% endif %}
   <link rel="alternate" hreflang="{{lang}}" href="{{site.url}}/{{lang}}{{page.url}}" />
   {% endfor %}
@@ -171,43 +172,164 @@ layout: content
 {% endraw %}
 
 ## 사이드바에 언어 선택 버튼 추가
+(2025.02.05. 업데이트) 언어 선택 버튼을 드롭다운 리스트 형식으로 개선하였다.  
 `_includes/lang-selector.html`{: .filepath} 파일을 생성하고 다음과 같이 내용을 입력하였다.
 
 {% raw %}
 ```liquid
-<p>
-{%- for lang in site.languages -%}
-  {%- if lang == site.default_lang -%}
-<a ferh="{{ page.url }}" style="display:inline-block; white-space:nowrap;">
-    {%- if lang == site.active_lang -%}
-      <b>{{ lang }}</b>
-    {%- else -%}
-      {{ lang }}
-    {%- endif -%}
-</a>
-  {%- else -%}
-<a href="/{{ lang }}{{ page.url }}" style="display:inline-block; white-space:nowrap;">
-  {%- if lang == site.active_lang -%}
-      <b>{{ lang }}</b>
-    {%- else -%}
-      {{ lang }}
-    {%- endif -%}
-</a>
-  {%- endif -%}
-{%- endfor -%}
-</p>
+<link rel="stylesheet" href="{{ '/assets/css/lang-selector.css' | relative_url }}">
+
+<div class="lang-dropdown">
+    <select class="lang-select" onchange="changeLang(this.value)" aria-label="Select Language">
+    {%- for lang in site.languages -%}
+        <option value="{% if lang == site.default_lang %}{{ page.url }}{% else %}/{{ lang }}{{ page.url }}{% endif %}"
+                {% if lang == site.active_lang %}selected{% endif %}>
+            {% case lang %}
+            {% when 'ko' %}🇰🇷 한국어
+            {% when 'en' %}🇺🇸 English
+            {% when 'ja' %}🇯🇵 日本語
+            {% when 'zh-TW' %}🇹🇼 正體中文
+            {% when 'es' %}🇪🇸 Español
+            {% when 'pt-BR' %}🇧🇷 Português
+            {% when 'fr' %}🇫🇷 Français
+            {% when 'de' %}🇩🇪 Deutsch
+            {% else %}{{ lang }}
+            {% endcase %}
+        </option>
+    {%- endfor -%}
+    </select>
+</div>
+
+<script>
+function changeLang(url) {
+    window.location.href = url;
+}
+</script>
 ```
 {: file='_includes/lang-selector.html'}
 {% endraw %}
 
-그 다음, [Chirpy 테마의 `_includes/sidebar.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html) 중 "sidebar-bottom" 클래스 부분에 다음 세 줄을 추가하여 앞서 작성한 `_includes/lang-selector.html`{: .filepath}의 내용을 Jekyll이 페이지 빌드 시에 불러오도록 하였다.
+또한 `assets/css/lang-selector.css`{: .filepath} 파일을 생성하고 다음과 같이 내용을 입력하였다.
+
+```css
+/**
+ * 언어 선택기 스타일
+ * 
+ * 사이드바에 위치한 언어 선택 드롭다운의 스타일을 정의합니다.
+ * 테마의 다크 모드를 지원하며, 모바일 환경에서도 최적화되어 있습니다.
+ */
+
+/* 언어 선택기 컨테이너 */
+.lang-selector-wrapper {
+    padding: 0.35rem;
+    margin: 0.15rem 0;
+    text-align: center;
+}
+
+/* 드롭다운 컨테이너 */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    min-width: 120px;
+    max-width: 80%;
+}
+
+/* 선택 입력 요소 */
+.lang-select {
+    /* 기본 스타일 */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    
+    /* 폰트 및 색상 */
+    font-family: Lato, "Pretendard JP Variable", "Pretendard Variable", sans-serif;
+    font-size: 0.95rem;
+    color: var(--sidebar-muted);
+    background-color: var(--sidebar-bg);
+    
+    /* 모양 및 상호작용 */
+    border-radius: var(--bs-border-radius, 0.375rem);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+    /* 화살표 아이콘 추가 */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+}
+
+/* 국기 이모지 스타일 */
+.lang-select option {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+    padding: 0.35rem;
+    font-size: 1rem;
+}
+
+.lang-flag {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+}
+
+/* 호버 상태 */
+.lang-select:hover {
+    color: var(--sidebar-active);
+    background-color: var(--sidebar-hover);
+}
+
+/* 포커스 상태 */
+.lang-select:focus {
+    outline: 2px solid var(--sidebar-active);
+    outline-offset: 2px;
+    color: var(--sidebar-active);
+}
+
+/* Firefox 브라우저 대응 */
+.lang-select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 var(--sidebar-muted);
+}
+
+/* IE 브라우저 대응 */
+.lang-select::-ms-expand {
+    display: none;
+}
+
+/* 다크 모드 대응 */
+[data-mode="dark"] .lang-select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+/* 모바일 환경 최적화 */
+@media (max-width: 768px) {
+    .lang-select {
+        padding: 0.75rem 2rem 0.75rem 1rem;  /* 더 큰 터치 영역 */
+    }
+    
+    .lang-dropdown {
+        min-width: 140px;  /* 모바일에서 더 넓은 선택 영역 */
+    }
+}
+```
+{: file='assets/css/lang-selector.css'}
+
+그 다음, [Chirpy 테마의 `_includes/sidebar.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html) 중 "sidebar-bottom" 클래스 바로 앞에 다음과 같이 세 줄을 추가하여 앞서 작성한 `_includes/lang-selector.html`{: .filepath}의 내용을 Jekyll이 페이지 빌드 시에 불러오도록 하였다.
 
 {% raw %}
 ```liquid
-    <div class="lang-selector">
-      {%- include lang-selector.html -%}
-    </div>
+  (전략)...
+  <div class="lang-selector-wrapper w-100">
+    {%- include lang-selector.html -%}
+  </div>
+
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
+    ...(후략)
 ```
+{: file='_includes/sidebar.html'}
 {% endraw %}
 
 ## Further Reading
