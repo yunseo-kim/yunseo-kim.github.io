@@ -1,30 +1,33 @@
 ---
-title: NVIDIA Container Toolkit과 Docker로 딥러닝 개발환경 구축하기 (1) - NVIDIA Container Toolkit
-  & Docker Engine 설치
-description: 이 시리즈는 로컬에 NVIDIA Container Toolkit과 Docker 기반의 딥러닝 개발환경을 구축하고, 원격 서버로
+title: NVIDIA Container Toolkit과 Docker/Podman으로 딥러닝 개발환경 구축하기 (1) - NVIDIA Container Toolkit
+  & 컨테이너 엔진 설치
+description: 이 시리즈는 로컬에 NVIDIA Container Toolkit으로 컨테이너 기반의 딥러닝 개발환경을 구축하고, 원격 서버로
   활용할 수 있도록 SSH 및 Jupyter Lab을 설정하는 방법을 다룬다. 이 포스트는 해당 시리즈의 첫 번째 글로, NVIDIA Container
-  Toolkit의 설치 방법을 소개한다.
+  Toolkit과 컨테이너 엔진의 설치 방법을 소개한다.
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, Docker, CUDA, PyTorch]
 image: /assets/img/technology.jpg
 ---
 ## 개요
-이 시리즈에서는 NVIDIA Container Toolkit과 Docker를 설치하고, Docker Hub의 [nvidia/cuda 리포지터리](https://hub.docker.com/r/nvidia/cuda)에서 제공하는 CUDA 및 cuDNN 이미지를 기반으로 Dockerfile을 작성하여 딥러닝 개발환경을 구축하는 과정을 다룬다. 필요한 분들은 자유롭게 가져다 사용할 수 있도록 이 과정을 거쳐 완성한 [Dockerfile](https://github.com/yunseo-kim/dl-env-docker)과 [이미지](https://hub.docker.com/r/yunseokim/dl-env/tags)를 GitHub와 Docker Hub를 통해 공유하며, 추가적으로 원격 서버로 활용하기 위한 SSH 및 Jupyter Lab 설정 가이드를 제공한다.  
+이 시리즈에서는 NVIDIA Container Toolkit과 Docker 또는 Podman을 설치하고, Docker Hub의 [nvidia/cuda 리포지터리](https://hub.docker.com/r/nvidia/cuda)에서 제공하는 CUDA 및 cuDNN 이미지를 기반으로 Dockerfile을 작성하여 딥러닝 개발환경을 구축하는 과정을 다룬다. 필요한 분들은 자유롭게 가져다 사용할 수 있도록 이 과정을 거쳐 완성한 [Dockerfile](https://github.com/yunseo-kim/dl-env-docker)과 [이미지](https://hub.docker.com/r/yunseokim/dl-env/tags)를 GitHub와 Docker Hub를 통해 공유하며, 추가적으로 원격 서버로 활용하기 위한 SSH 및 Jupyter Lab 설정 가이드를 제공한다.  
 시리즈는 3개의 글로 이루어질 예정이며, 읽고 있는 이 글은 해당 시리즈의 첫 번째 글이다.
-- 1편: NVIDIA Container Toolkit & Docker Engine 설치 (본문)
-- [2편: GPU 활용을 위한 컨테이너 런타임 구성, Dockerfile 작성 및 Docker 이미지 빌드](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-2)
+- 1편: NVIDIA Container Toolkit & 컨테이너 엔진 설치 (본문)
+- [2편: GPU 활용을 위한 컨테이너 런타임 구성, Dockerfile 작성 및 컨테이너 이미지 빌드](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-2)
 - 3편 (업로드 예정)
 
-x86_64 리눅스 환경에서 CUDA를 지원하는 NVIDIA 그래픽카드를 장착한 시스템이라고 전제하고 진행하며, Ubuntu 또는 Fedora 이외의 배포판에서는 직접 테스트해 보지 않았기에 몇몇 세부적인 부분은 약간 차이가 있을 수 있다.
+x86_64 리눅스 환경에서 CUDA를 지원하는 NVIDIA 그래픽카드를 장착한 시스템이라고 전제하고 진행하며, Ubuntu 또는 Fedora 이외의 배포판에서는 직접 테스트해 보지 않았기에 몇몇 세부적인 부분은 약간 차이가 있을 수 있다.  
+(2025.02.18. 내용 업데이트)
 
 ### 개발환경 구성
 - 호스트 운영체제 및 아키텍처: x86_64, 리눅스 환경(Ubuntu 18.04/20.04/22.04 LTS, RHEL/Centos, Fedora, openSUSE/SLES 15.x 등)
 - 구축할 기술 스택(언어 및 라이브러리)
   - Python 3
   - NVIDIA Container Toolkit
-  - Docker CE
+  - Docker CE / Podman
   - CUDA 12.4
   - cuDNN
+  - OpenSSH
+  - tmux
   - JupyterLab
   - NumPy & SciPy
   - CuPy (optional, NumPy/SciPy-compatible Array Library for GPU-accelerated Computing with Python)
@@ -35,10 +38,12 @@ x86_64 리눅스 환경에서 CUDA를 지원하는 NVIDIA 그래픽카드를 장
   - scikit-learn
   - cuML (optional, to execute machine learning algorithms on GPUs with an API that closely follows the scikit-learn API)
   - PyTorch
-  - OpenSSH
   - tqdm
 
   > 상황에 따라, 그리고 본인의 선호에 따라, pandas 대신 [Polars](https://pola.rs/) DataFrame 라이브러리를 대신 사용하는 것도 고려해 볼 수 있다. Rust로 작성되었고, [대용량 데이터 처리 시 cuDF + pandas 조합에는 밀리지만 순정 pandas 패키지와 비교했을 때는 상당히 뛰어난 퍼포먼스를 보이며](https://docs.rapids.ai/api/cudf/stable/cudf_pandas/benchmarks/), Query에 보다 특화된 문법을 제공한다. [Polars 공식 블로그](https://pola.rs/posts/polars-on-gpu/)에 따르면 NVIDIA RAPIDS 팀과 협력하여 가까운 미래에 cuDF와의 연동도 지원할 계획이라고 한다.
+  {: .prompt-tip }
+
+  > Docker CE와 Podman 중 무엇을 사용할지 고민이라면 [후술한 비교 표](#3-컨테이너-엔진-설치)가 도움이 될 수 있다.
   {: .prompt-tip }
 
 ### 이전에 작성한 머신러닝 개발환경 구축 가이드와의 비교표
@@ -208,16 +213,58 @@ sudo zypper ar https://nvidia.github.io/libnvidia-container/stable/rpm/nvidia-co
 sudo zypper --gpg-auto-import-keys install nvidia-container-toolkit
 ```
 
-## 3. Docker Engine 설치
-다음으로 Docker Engine을 설치한다. [Docker 공식 문서](https://docs.docker.com/engine/install/)를 참고하여 설치를 진행한다.
+## 3. 컨테이너 엔진 설치
+다음으로는 컨테이너 엔진으로 Docker CE 또는 Podman을 설치한다. 사용 환경과 선호에 맞게 둘 중 하나를 선택하여 설치하면 되며, [Docker 공식 문서](https://docs.docker.com/engine/install/)와 [Podman 공식 문서](https://podman.io/docs/installation)를 참고한다.
 
-### Ubuntu의 경우
-#### 3-Ubuntu-1. 패키지 충돌 방지를 위한 이전 버전 혹은 비공식 패키지 제거
+다음 표는 Docker와 Podman의 주요 차이점 및 장단점을 정리한 것이다.
+
+| 비교항목 | Docker | Podman |
+| --- | --- | --- |
+| 아키텍처 | 클라이언트-서버 모델, 데몬(daemon) 기반 | 데몬리스(daemonless) 구조 |
+| 보안 | 기본적으로 root 권한으로 실행되는 데몬에 <br>의존하므로 잠재적인 보안상의 위험 존재<br>(2020년 발표된 버전 20.10부터 루트리스 <br>모드를 지원하나, 추가적인 설정 필요) | 데몬에 의존하지 않아 별도로 지정하지 않는 <br>한 기본적으로 루트리스로 작동하며,<br> SELinux로 보호받음 |
+| 자원 사용량 | 데몬 기반 구조의 특성상 백그라운드 프로세스가<br> 상시 동작하므로, 일반적으로 더 많은 양의<br> 자원 사용 | 일반적으로 더 적은 자원 간접비용(overhead) |
+| 컨테이너 시작 시간 | 상대적으로 느림 | 간소화된 아키텍처로 최대 50% 정도<br> 더 빠르게 실행됨 |
+| 생태계 및 문서화 | 광범위한 생태계와 커뮤니티 지원,<br> 풍부한 관련 문서 | 상대적으로 소규모의 생태계와 관련 문서 |
+| 네트워킹 | Docker Bridge Network 사용 | CNI(Container Network Interface)<br> 플러그인 사용 |
+| Kubernetes YAML<br> 네이티브 지원 | X(변환 필요) | O |
+
+참고 자료:
+- <https://www.redhat.com/en/topics/containers/what-is-podman>
+- <https://www.datacamp.com/blog/docker-vs-podman>
+- <https://apidog.com/blog/docker-vs-podman/>
+- <https://www.privacyguides.org/articles/2022/04/22/linux-application-sandboxing/#securing-linux-containers>
+
+Docker는 그 역사가 더 오래되었으며 업계에서 사실상의 표준 지위를 누려 왔으므로 폭넓은 생태계와 풍부한 관련 문서가 존재한다는 것이 가장 큰 장점이다.  
+Podman은 Red Hat에 의해 비교적 최근에 개발되었으며, 태생적으로 데몬리스(daemonless), 루트리스(rootless)를 지향하는 발전된 구조이기에 보안, 시스템 자원 사용량 및 컨테이너 시작 시간 등 여러 측면에서 장점을 지닌다. 데몬에 문제가 생겨 다운되면 모든 컨테이너들이 함께 다운되는 Docker와 달리, 각 컨테이너가 완전히 독립적이라 특정 컨테이너의 다운이 다른 컨테이너에 영향을 미치지 않는다는 점도 Podman의 강점이다.
+
+각자의 주어진 여건에 맞추어 사용할 도구를 선택하는 것이 무엇보다 중요하며, 처음 입문하는 개인 사용자라면 Podman으로 시작하는 것이 좋은 선택일 듯 싶다. Docker에 비해 상대적으로 생태계 규모가 작다고 하나 상술한 여러 장점들 덕에 빠른 속도로 성장하며 격차를 좁히고 있고, Dockerfile 문법이나 Docker 이미지, CLI(명령줄 인터페이스) 등 많은 부분에서 기존의 Docker와 호환되므로 개인이나 소규모 단체 입장에서는 그리 문제 되지 않을 것이다.
+
+### Podman
+대다수의 주요 리눅스 배포판의 시스템 기본 리포지터리에서 지원하므로 간단히 설치할 수 있다.
+
+#### Ubuntu의 경우
+```bash
+sudo apt install podman
+```
+
+#### Fedora의 경우
+```bash
+sudo dnf install podman
+```
+
+#### openSUSE
+```bash
+sudo zypper install podman
+```
+
+### Docker CE
+#### Ubuntu의 경우
+##### 3-Ubuntu-1. 패키지 충돌 방지를 위한 이전 버전 혹은 비공식 패키지 제거
 ```bash
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt remove $pkg; done
 ```
 
-#### 3-Ubuntu-2. 리포지터리 구성
+##### 3-Ubuntu-2. 리포지터리 구성
 ```bash
 # Add Docker's official GPG key:
 sudo apt update
@@ -233,12 +280,12 @@ echo \
 sudo apt update
 ```
 
-#### 3-Ubuntu-3. 패키지 설치
+##### 3-Ubuntu-3. 패키지 설치
 ```bash
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-#### 3-Ubuntu-4. `Docker` 그룹 생성하고 사용자 등록하기  
+##### 3-Ubuntu-4. `Docker` 그룹 생성하고 사용자 등록하기
 non-root 사용자도 `sudo` 없이 Docker를 관리할 수 있게 하려면, `Docker` 그룹을 생성한 뒤 Docker를 이용하고자 하는 사용자를 등록하면 된다. 터미널에서 다음 명령을 실행한다.
 ```bash
 sudo groupadd docker
@@ -246,8 +293,8 @@ sudo usermod -aG docker $USER
 ```
 이후 로그아웃했다가 다시 로그인하면 변경된 설정이 적용된다. Ubuntu 또는 Debian의 경우, 별다른 작업 없이도 시스템 부팅 시마다 Docker 서비스가 자동으로 실행된다.
 
-### Fedora의 경우
-#### 3-Fedora-1. 패키지 충돌 방지를 위한 이전 버전 혹은 비공식 패키지 제거
+#### Fedora의 경우
+##### 3-Fedora-1. 패키지 충돌 방지를 위한 이전 버전 혹은 비공식 패키지 제거
 ```bash
 sudo dnf remove docker \
                 docker-client \
@@ -261,13 +308,13 @@ sudo dnf remove docker \
                 docker-engine
 ```
 
-#### 3-Fedora-2. 리포지터리 구성
+##### 3-Fedora-2. 리포지터리 구성
 ```bash
 sudo dnf install dnf-plugins-core
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 ```
 
-#### 3-Fedora-3. 패키지 설치  
+##### 3-Fedora-3. 패키지 설치
 ```bash
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
@@ -275,7 +322,7 @@ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 > 만약 GPG 키가 일치하지 않을 경우, 공급망 공격에 의해 위조된 패키지를 다운로드한 것일 수 있으므로 설치를 중단해야 한다.
 {: .prompt-danger }
 
-#### 3-Fedora-4. Docker 데몬 시작  
+##### 3-Fedora-4. Docker 데몬 시작
 이제 Docker가 설치되었지만 실행되지 않은 상태이므로, 다음 명령어를 입력하여 Docker를 실행할 수 있다.
 ```bash
 sudo systemctl start docker
@@ -286,14 +333,14 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
 
-#### 3-Fedora-5. `Docker` 그룹에 사용자 등록하기  
+##### 3-Fedora-5. `Docker` 그룹에 사용자 등록하기
 non-root 사용자도 Docker를 관리할 수 있도록 하려면 `Docker` 그룹에 Docker를 이용하고자 하는 사용자를 등록한다. Fedora의 경우 앞선 패키지 설치 과정에서 `Docker` 그룹을 자동으로 생성하므로, 사용자 등록만 진행하면 된다.
 ```bash
 sudo usermod -aG docker $USER
 ```
 이후 로그아웃했다가 다시 로그인하면 변경된 설정이 적용된다.
 
-### 정상적으로 설정되었는지 확인  
+#### 정상적으로 설정되었는지 확인
 터미널에서 다음 명령을 실행해본다.
 ```bash
 docker run hello-world
