@@ -31,7 +31,7 @@
     padding: 0.5rem 2rem 0.5rem 1rem;
     
     /* 폰트 및 색상 */
-    font-family: Lato, "Pretendard JP Variable", "Pretendard Variable", sans-serif;
+    font-family: "Pretendard JP Variable", "Pretendard Variable", sans-serif;
     font-size: 0.95rem;
     color: var(--sidebar-muted);
     background-color: var(--sidebar-bg);
