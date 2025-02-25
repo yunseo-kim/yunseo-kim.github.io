@@ -44,7 +44,7 @@ $$y=e^{\lambda x}\label{eqn:general_sol}\tag{2}$$
 형태의 해를 우선 시도해 볼 수 있다.
 
 > 물론 이는 어디까지나 추측에 불과하며, 정말로 일반해가 이런 형태일 거라는 보장은 전혀 없다. 하지만 뭐가 되었든 선형 독립인 두 해를 일단 구하기만 한다면, [2계 동차 선형 상미분방정식](/posts/homogeneous-linear-odes-of-second-order/#기저와-일반해)에서 살펴봤다시피 [중첩의 원리](/posts/homogeneous-linear-odes-of-second-order/#중첩의-원리)에 의해 일반해를 구할 수 있다.  
-> 잠시 뒤에 보겠지만, [다른 형태의 해를 구해야 하는 경우](#ii-실이중근)도 있다.
+> 잠시 뒤에 보겠지만, [다른 형태의 해를 구해야 하는 경우](#ii-실이중근-lambda---cfraca2)도 있다.
 {: .prompt-info }
 
 식 ($\ref{eqn:general_sol}$)와 그 도함수
