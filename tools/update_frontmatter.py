@@ -7,7 +7,7 @@ import yaml
 
 posts_dir = '../_posts/'
 source_lang_code = "ko"
-target_lang_codes = ["en", "es", "pt-BR", "ja", "fr", "de"]
+target_lang_codes = ["en", "ja", "zh-TW", "es", "pt-BR", "fr", "de"]
 exclude_keys = ["title", "description"]
 
 ###############################################################################
