@@ -5,7 +5,7 @@ description: This article introduces the proton-proton chain reaction and the ca
   essay was written by the author for a high school science club activity when they
   were in the first year of high school. Unlike other posts, it is written in a colloquial
   style, but it has been uploaded as it was originally written for archiving purposes.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

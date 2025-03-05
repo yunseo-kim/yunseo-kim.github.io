@@ -1,5 +1,5 @@
-2018-05-27-mechanisms-of-stellar-nuclear-fusion-reactions.md,b922a96169767b043b00b3b4d624171621622063295df94eadbb7e24a72dea3a
-2019-03-26-fusion power-from-toroidal-pinch-to-tokamak.md,4c0578c905b682440ad5cf9bdbaa3838bedca9f00cd12ce806da199bd1e3361f
+2018-05-27-mechanisms-of-stellar-nuclear-fusion-reactions.md,90af7b304a392e6f7476e4bc2ae318130bbfc912ed90b56916f4287a4dede8b4
+2019-03-26-fusion power-from-toroidal-pinch-to-tokamak.md,94d0ee069368652c36cccfd44065bd6abf8b015ca8fdda094638f3b265c3ba03
 2019-05-10-The-Role-of-Quantum-Computers-in-Future-and-Challenges-to-Overcome.md,6e0b773bbc0d5277f79df66fa9428c072eb4811c525a5eedb13ec1804b3fe6c6
 2021-01-31-GitHub-Markdown-Syntax-Summary.md,73e645390213e8cb4b2993b2b5bf507186888598b224ff0d54cd4a563681f216
 2021-02-07-Setting-up-a-Machine-Learning-Development-Environment.md,5f89d4a422810fbc0486f77e6d9b9dc213923f871da94c568c771aa92634d996
@@ -9,14 +9,14 @@
 2022-03-03-Basic-Concepts-of-Modeling.md,9c9c206578d5644228b340e34125593fd9c6d9bc732ae69003a86a5f18d4f782
 2022-03-08-Separation-of-Variables.md,7aaeff71c89ae7297b8594743715d55a6c9579220548c423e9fe84c7ee46bee9
 2022-03-09-Exact-Differential-Equation-and-Integrating-Factor.md,5d8d9844bd89c5644dbbfd4fda2a99503f6d8b8d824677286f074fd2a777d256
-2022-03-09-Mass-and-Energy-Particles-and-Waves.md,7fec15a873fc76b5681d5fdac4b5ed452d232173f54712b0e826e0d6cc3c6a44
-2022-03-12-Nuclear-Stability-and-Radioactive-Decay.md,6728126b1d26572ef45690e4b61c4cafe9c91382afc892495786f13b97f8a502
+2022-03-09-Mass-and-Energy-Particles-and-Waves.md,24f3504bcebacb2413a3f064d40e6aff9e08422294063058cb1a209d047d7121
+2022-03-12-Nuclear-Stability-and-Radioactive-Decay.md,d8684610890bf3a5040ff079a4c4bb16c2f4db349bd9d6729574748b6a210868
 2022-03-13-Solution-of-First-Order-Linear-ODE.md,9e73a262ebc6b45e217c6414132aa1f3dc7a4818fa42e177e3facb1e6fdde2c9
-2022-03-15-Calculation-of-Radioactive-Equilibrium.md,506536ad81e8222597e6844e401f5d461ee8e1b6e6bd1bcd8819b5616307cddb
+2022-03-15-Calculation-of-Radioactive-Equilibrium.md,3d337c8bb0e809078dcc5b1ff25dd293a97ff161d7cedb8160b067a4e38db9ed
 2022-03-16-Bernoulli-Equation.md,71e44cdf71ed2a50c9231d83bc46f3dbbb11046714c20856d3642a1fb62d7e75
-2022-03-19-Neutron-Interactions-and-Cross-sections.md,62198f17494b1615e9e91ac695dc64aaabd30f07e0050eba8374ff861c9469e8
-2022-03-20-Neutron-Attenuation-and-Mean-Free-Path.md,9083e1d2645f74ff58616abc855d10e99dcfa8fc7073dae19c97a108a89b5cd7
-2022-03-21-Homogeneous-Mixtures-and-Molecular-Cross-sections.md,13429071d9306b00a02b3db81a454228299a2437d013691c6220e3b0c16faeb6
+2022-03-19-Neutron-Interactions-and-Cross-sections.md,5b9ad5f74387dc2cbd04fdda7c31da3fe0ece311aabf77f86a31c141a86c11be
+2022-03-20-Neutron-Attenuation-and-Mean-Free-Path.md,ce77a323eebb34e74b50e6df656fa0a984b6c7b61ac8ae2bf8e8dd28a071ebb7
+2022-03-21-Homogeneous-Mixtures-and-Molecular-Cross-sections.md,4a2b8a50415bfb5ffd30f6d2f30b98bb174f5ce48ce354ef3d92c4cc5a9d2424
 2024-04-14-Technical-debt.md,69dcbda688ace4ccf994fbc305b7fc719c428a33f9b1e817f47d600d0338bf0d
 2024-06-21-Principles-for-Writing-Clean-Code.md,f803624343fabb1e22e4872e10a3e74e152df5dfad4f5af9bae0ca6c3c9b140f
 2024-06-29-how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1.md,9efea83f69064415913e8c0d4a3543868680d918e8b186efc5d15628cfaafd6d
@@ -25,8 +25,8 @@
 2024-08-11-sum-to-product-and-product-to-sum-identities.md,1bcf0c1bc960d3fd30f03be008844497ef88aaa932488454c8b81929266608c5
 2024-08-17-harmonic-addition-theorem.md,d1307ff934b3f24f19a7e1d199f0446bd98e2750d9d755a6af3c30f005580363
 2024-08-26-how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1.md,e508add795146a6bcccb4ec0c06e9dbdc130153cb4c33d0349474a93aa5899c3
-2024-09-03-constituents-of-an-atom.md,184fd3a469235200e2d9b844befcb09f3a3736c9c70e99dc3f28215f46c0478d
-2024-09-04-nuclear-reactions-and-binding-energy.md,0d0dcff15001273824972e14b7eba545d9cbef013612ba66d38d8835cbeb0b53
+2024-09-03-constituents-of-an-atom.md,6ff7627101e32781fa9e2395a1c7cace3db20a04d63193da39550ea6882d8f6d
+2024-09-04-nuclear-reactions-and-binding-energy.md,391f7a0e485e3fb2cd3439109caf3c4bdbb8239d6782a0ea6c40d0e118ab456c
 2024-09-06-how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-2.md,d105235d269d212cd90965a614c2839885a58401579d4a6d34b0c2927edbae22
 2024-09-09-how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-2.md,3e999cdb14b00ee8c7377c5a961237d8fb18fa7639864b60556de362036817e8
 2024-09-10-principle-of-relativity-and-lorentz-transformation.md,486a2872c9dd49829fbcacc1d5483a6c42ad7d68c7c24606c103c5875050e56c
@@ -34,14 +34,15 @@
 2024-10-12-ehrenfest-theorem.md,0ab6d09a687f9fa87ade1fc8d359087d016bce76e39220c55b37b514161804b3
 2024-10-16-time-independent-schrodinger-equation.md,6bc572b843e5fa78bd81798069d5e55fe59a1ab2afee2e6be374d5cbe2cd83a8
 2024-10-18-the-infinite-square-well.md,2388828dc5a486d8048eab60cec5681a56f9884174fe13a46ca0a3fc7a85f715
-2024-10-23-continuous-and-characteristic-x-rays.md,19b6274b45ad77717d10d697080a606dfbbac3a2b96ba5e2697d1beecc69e7d8
+2024-10-23-continuous-and-characteristic-x-rays.md,c0643592e4e7fead9bd53d8a3864cb34e071a2eafbf4562ce19cdb62e1c52f18
 2024-10-30-the-free-particle.md,d93a04aadca566e95ac570a53dd1f9595d7b202713d3370f53e0f87855c40238
 2024-11-04-does-ai-hate-to-work-on-halloween.md,8d3d4dee0bf5dec7be9b0b8144ca1fb0b4eac94ac74a6b0dc4aa7f3c13ba15c4
-2024-11-11-definition-of-plasma-and-saha-equation.md,ae3585ea1c44ebb2665ccebcac09f8f0af52ab756c8be78cd75eaa8f9759a263
+2024-11-11-definition-of-plasma-and-saha-equation.md,49a34aaa12864655edd6a08718a86b4284581aaebb24f34a3625709ad5f3be44
 2024-11-18-how-to-support-multi-language-on-jekyll-blog-with-polyglot-1.md,fee570e83f81d7d6cc0e29d2e630ec07f56659ebd2694527442f3556be29f263
 2024-11-25-how-to-support-multi-language-on-jekyll-blog-with-polyglot-2.md,40d5089c46168d09a764016d80c6cb0a50d9278de09763f916f1069c4972dd00
 2024-11-29-algebraic-solution-of-the-harmonic-oscillator.md,efb1f67171c5434b1ad52c442546e42ec66407837779989a495245448a49d96f
 2024-12-03-analytic-solution-of-the-harmonic-oscillator.md,6be93ca391e86844974191bbd16c7652daf081ec0b294939d6a43f028a8f5e6c
-2024-12-20-energy-transfer-by-collisions.md,732b2d233afd7f2e8ae2f0b25d37387d5ea6c7039cf5ae594f4fd1465d9e35d4
+2024-12-20-energy-transfer-by-collisions.md,b0697129522499c78a8b2c1c6c279ee165c1e2a1acfb5a681be5ca0c14f0eedd
 2025-01-13-homogeneous-linear-odes-of-second-order.md,8860e9111d5b99f2b6b3012d9edfcfef5bc661339bc5a716635357eb4fc0cfaf
+2025-02-15-various-reactions-due-to-collisions-in-plasma.md,78079c45f3a0639a65f1e76e955b1585ce2dc4b8ae14642d631a91a3673d82e4
 2025-02-22-homogeneous-linear-odes-with-constant-coefficients.md,5ab960450976e2cb91102632ec41895475a70f5905fd69c9e0e789cd4d969c4f

@@ -3,7 +3,7 @@ title: Massa e Energia, Partículas e Ondas
 description: Vamos explorar o princípio da equivalência massa-energia da teoria da
   relatividade e calcular a energia de um elétron em movimento considerando os efeitos
   relativísticos.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
 image: /assets/img/atoms.png

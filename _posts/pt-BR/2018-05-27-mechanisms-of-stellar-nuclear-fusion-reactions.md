@@ -6,7 +6,7 @@ description: Este artigo introduz a reação em cadeia próton-próton e o ciclo
   no primeiro ano do ensino médio. Diferentemente de outros posts, está escrito em
   um estilo coloquial, mas foi carregado exatamente como o texto original na época
   para fins de arquivamento.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

@@ -1,7 +1,7 @@
 ---
 title: 次原子粒子與原子的組成元素
 description: 簡要探討電子、質子、中子、光子、中微子等在原子核工程中重要的基本粒子，並了解原子和原子核的結構。
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
 image: /assets/img/atoms.png

@@ -1,8 +1,8 @@
 ---
 title: 衝突によるエネルギー伝達
 description: 粒子間の衝突によるエネルギー伝達率を弾性衝突と非弾性衝突の2つに分けて求め、 これにより衝突する2つの粒子の質量が似ている場合と大きく異なる場合のそれぞれについてエネルギー伝達率の大きさを比較する。
-categories: [Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Plasma Physics]
+categories: [Nuclear Engineering, Plasma Physics]
+tags: [Nuclear Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---

@@ -6,7 +6,7 @@ description: This post covers the concept of nuclear fusion, its background as a
   notes that this essay was originally written for a high school science club activity
   when they were in their second year of high school. Unlike other posts, it is written
   in a colloquial style, but has been uploaded in its original form for archival purposes.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

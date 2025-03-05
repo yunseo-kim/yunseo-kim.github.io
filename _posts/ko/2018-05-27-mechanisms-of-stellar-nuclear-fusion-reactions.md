@@ -3,7 +3,7 @@ title: 항성의 핵융합 반응 메커니즘
 description: 이 글에서는 항성의 핵에서 일어나는 핵융합 반응 중 양성자-양성자 연쇄 반응(proton-proton chain reaction)과
   탄소-질소-산소 순환 반응(CNO cycle)을 소개한다. 필자가 고등학교 1학년 때 교내 과학동아리 활동을 위해 작성했던 에세이로, 다른 포스트들과는
   달리 구어체로 작성되어 있으나 아카이빙 목적으로 당시 원문 그대로 업로드하였음을 밝힌다.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

@@ -3,7 +3,7 @@ title: Neutron Attenuation and Mean Free Path
 description: Calculate the intensity of a neutron beam as it passes through a target
   material based on penetration distance, and derive the mean free path of neutrons
   from this calculation.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

@@ -7,7 +7,7 @@ description: Dieser Beitrag behandelt das Konzept der Kernfusion, die Gr체nde f�
   Essay urspr체nglich f체r eine Schulaktivit채t in der 11. Klasse geschrieben wurde und
   daher in einem eher umgangssprachlichen Stil verfasst ist, der sich von anderen
   Beitr채gen unterscheidet. Er wurde zu Archivierungszwecken unver채ndert hochgeladen.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

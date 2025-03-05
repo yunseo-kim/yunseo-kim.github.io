@@ -1,7 +1,7 @@
 ---
 title: 中性子減衰と平均自由行程（Mean Free Path）
 description: 単一エネルギーの中性子ビームを標的に照射した際の、標的透過距離に応じた中性子ビームの強度を計算し、これから中性子の平均自由行程を導出する。
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

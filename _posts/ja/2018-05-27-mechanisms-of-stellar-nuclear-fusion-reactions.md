@@ -2,7 +2,7 @@
 title: 恒星の核融合反応メカニズム
 description: この記事では、恒星の核で起こる核融合反応のうち、陽子-陽子連鎖反応（proton-proton chain reaction）と炭素-窒素-酸素サイクル（CNO
   cycle）を紹介する。 筆者が高校1年生の時に校内の科学部活動のために作成したエッセイで、他の投稿とは異なり口語体で書かれているが、アーカイブ目的で当時の原文をそのままアップロードしたことを明記する。
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

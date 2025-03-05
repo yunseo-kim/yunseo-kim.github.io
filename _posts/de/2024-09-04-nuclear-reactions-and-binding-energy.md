@@ -3,7 +3,7 @@ title: Kernreaktionen und Bindungsenergie
 description: Wir betrachten die Ausdrücke für Kernreaktionen, die Definition des Q-Werts
   (Q-value), sowie die Konzepte des Massendefekts (mass defect) und der Bindungsenergie
   (binding energy).
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
 image: /assets/img/atoms.png

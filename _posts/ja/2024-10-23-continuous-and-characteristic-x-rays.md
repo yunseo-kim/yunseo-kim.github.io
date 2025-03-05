@@ -1,8 +1,8 @@
 ---
 title: 連続X線と特性X線(Continuous and Characteristic X Rays)
 description: 原子放射線に該当するX線の2つの発生原理と、それに伴うブレムスシュトラールング及び特性X線のそれぞれの特徴について学ぶ。
-categories: [Physics, Nuclear Engineering]
-tags: [Radiation, Atomic Radiation, Atomic Structure]
+categories: [Nuclear Engineering, Radiation]
+tags: [Atomic Radiation, Atomic Structure]
 math: true
 image: /assets/img/atoms.png
 ---

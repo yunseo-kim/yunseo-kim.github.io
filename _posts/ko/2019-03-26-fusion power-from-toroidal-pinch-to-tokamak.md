@@ -3,7 +3,7 @@ title: '핵융합 발전: 토로이드 핀치부터 토카막까지'
 description: 핵융합의 개념과 차세대 전력원으로 주목받게 된 배경, 핵융합 발전 상용화를 위해 달성해야 하는 기술적인 목표와 토로이드 핀치(toroidal
   pinch)에서 ITER에 이르기까지 큰 흐름에서의 핵융합 발전 기술 변천사를 다룬다. 필자가 고등학교 2학년 때 교내 과학동아리 활동을 위해
   작성했던 에세이로, 다른 포스트들과는 달리 구어체로 작성되어 있으나 아카이빙 목적으로 당시 원문 그대로 업로드하였음을 밝힌다.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

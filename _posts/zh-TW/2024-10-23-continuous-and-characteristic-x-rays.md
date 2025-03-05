@@ -1,8 +1,8 @@
 ---
 title: 連續X射線與特性X射線(Continuous and Characteristic X Rays)
 description: 探討原子輻射中X射線的兩種產生原理，以及相應的制動輻射和特性X射線的各自特徵。
-categories: [Physics, Nuclear Engineering]
-tags: [Radiation, Atomic Radiation, Atomic Structure]
+categories: [Nuclear Engineering, Radiation]
+tags: [Atomic Radiation, Atomic Structure]
 math: true
 image: /assets/img/atoms.png
 ---

@@ -2,8 +2,8 @@
 title: 플라즈마의 정의와 온도의 개념, 그리고 사하 방정식(Saha equation)
 description: 플라즈마의 정의에서 '집단적 움직임'이 의미하는 바를 살펴보며, 사하 방정식(Saha equation)을 알아본다. 또한 플라즈마
   물리에서의 온도의 개념을 명확히 한다.
-categories: [Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Plasma Physics]
+categories: [Nuclear Engineering, Plasma Physics]
+tags: [Nuclear Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---

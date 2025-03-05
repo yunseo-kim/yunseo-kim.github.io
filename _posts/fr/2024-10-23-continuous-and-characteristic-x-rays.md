@@ -3,8 +3,8 @@ title: Rayons X continus et caractéristiques (Continuous and Characteristic X R
 description: Découvrons les deux principes de génération des rayons X en tant que
   rayonnement atomique, ainsi que les caractéristiques respectives du rayonnement
   de freinage et des rayons X caractéristiques.
-categories: [Physics, Nuclear Engineering]
-tags: [Radiation, Atomic Radiation, Atomic Structure]
+categories: [Nuclear Engineering, Radiation]
+tags: [Atomic Radiation, Atomic Structure]
 math: true
 image: /assets/img/atoms.png
 ---

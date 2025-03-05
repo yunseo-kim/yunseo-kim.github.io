@@ -2,8 +2,8 @@
 title: Raios X Contínuos e Característicos
 description: Exploramos os dois princípios de geração de raios X como radiação atômica
   e as características respectivas do bremsstrahlung e dos raios X característicos.
-categories: [Physics, Nuclear Engineering]
-tags: [Radiation, Atomic Radiation, Atomic Structure]
+categories: [Nuclear Engineering, Radiation]
+tags: [Atomic Radiation, Atomic Structure]
 math: true
 image: /assets/img/atoms.png
 ---

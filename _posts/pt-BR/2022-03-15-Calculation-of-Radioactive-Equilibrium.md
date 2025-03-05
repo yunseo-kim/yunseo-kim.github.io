@@ -3,7 +3,7 @@ title: Cálculo do Equilíbrio Radioativo
 description: Vamos explorar a relação entre a constante de decaimento, a meia-vida
   e a vida média de radionuclídeos, e calcular a atividade de um radionuclídeo em
   um tempo t arbitrário em uma cadeia de decaimento dada.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Radiation]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true

@@ -2,7 +2,7 @@
 title: 恆星的核融合反應機制
 description: 本文介紹恆星核心中發生的核融合反應，包括質子-質子鏈反應(proton-proton chain reaction)和碳-氮-氧循環反應(CNO
   cycle)。這是作者在高中一年級時為校內科學社團活動所撰寫的文章，與其他文章不同，採用口語化的寫作風格，為了存檔目的而原文上傳。
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

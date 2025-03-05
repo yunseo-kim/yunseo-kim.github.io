@@ -2,7 +2,7 @@
 title: Mistura Homogênea e Seção de Choque de Moléculas
 description: Vamos calcular a seção de choque macroscópica de uma mistura homogênea
   contendo dois ou mais nuclídeos.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

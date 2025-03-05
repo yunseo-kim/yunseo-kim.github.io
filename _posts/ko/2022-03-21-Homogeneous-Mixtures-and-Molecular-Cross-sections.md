@@ -1,7 +1,7 @@
 ---
 title: 균일혼합물과 분자의 단면적
 description: 두 가지 이상의 핵종이 섞여 있는 균일혼합물의 거시적 단면적을 계산해 보자.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

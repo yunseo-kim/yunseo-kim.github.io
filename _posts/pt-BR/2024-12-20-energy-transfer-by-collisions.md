@@ -4,8 +4,8 @@ description: Calcula-se a taxa de transferência de energia por colisão entre p
   dividindo-a em colisões elásticas e inelásticas, e compara-se a magnitude da taxa
   de transferência de energia para os casos em que as massas das duas partículas colidentes
   são semelhantes e muito diferentes.
-categories: [Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Plasma Physics]
+categories: [Nuclear Engineering, Plasma Physics]
+tags: [Nuclear Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---

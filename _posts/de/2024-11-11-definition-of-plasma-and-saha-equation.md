@@ -3,8 +3,8 @@ title: Definition und Temperaturkonzept des Plasmas sowie die Saha-Gleichung
 description: Wir betrachten die Bedeutung des 'kollektiven Verhaltens' in der Definition
   des Plasmas und untersuchen die Saha-Gleichung. Außerdem klären wir das Konzept
   der Temperatur in der Plasmaphysik.
-categories: [Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Plasma Physics]
+categories: [Nuclear Engineering, Plasma Physics]
+tags: [Nuclear Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---

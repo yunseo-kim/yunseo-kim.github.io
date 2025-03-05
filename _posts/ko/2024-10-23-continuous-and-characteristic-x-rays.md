@@ -1,9 +1,8 @@
 ---
 title: 연속 X선과 특성 X선(Continuous and Characteristic X Rays)
-description: 원자 방사선에 해당하는 X선의 2가지 발생 원리와, 그에 따른 bremsstrahlung 및 특성 X선의 각각의 특징에 대해
-  알아본다.
-categories: [Physics, Nuclear Engineering]
-tags: [Radiation, Atomic Radiation, Atomic Structure]
+description: 원자 방사선에 해당하는 X선의 2가지 발생 원리와, 그에 따른 bremsstrahlung 및 특성 X선의 각각의 특징에 대해 알아본다.
+categories: [Nuclear Engineering, Radiation]
+tags: [Atomic Radiation, Atomic Structure]
 math: true
 image: /assets/img/atoms.png
 ---

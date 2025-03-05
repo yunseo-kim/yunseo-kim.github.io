@@ -3,7 +3,7 @@ title: Subatomic Particles and Atomic Components
 description: A brief overview of elementary particles important in nuclear engineering,
   such as electrons, protons, neutrons, photons, and neutrinos, and an examination
   of the structure of atoms and atomic nuclei.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
 image: /assets/img/atoms.png

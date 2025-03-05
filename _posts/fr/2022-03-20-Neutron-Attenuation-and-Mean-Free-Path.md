@@ -2,7 +2,7 @@
 title: Atténuation des neutrons et libre parcours moyen (Mean Free Path)
 description: Calcul de l'intensité d'un faisceau de neutrons mono-énergétique lors
   de sa pénétration dans une cible, et déduction du libre parcours moyen des neutrons.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

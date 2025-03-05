@@ -1,7 +1,7 @@
 ---
 title: 中子交互作用與反應截面
 description: 中子是電中性的，因此不受電荷影響，可以穿過原子的電子雲直接與原子核反應。我們將探討中子交互作用的類型和原子核的反應截面概念。
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true

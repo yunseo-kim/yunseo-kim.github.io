@@ -4,7 +4,7 @@ description: Os nêutrons são eletricamente neutros, portanto podem passar pela
   de elétrons do átomo sem serem afetados eletricamente e reagir diretamente com o
   núcleo atômico. Vamos examinar os tipos de interações de nêutrons e o conceito de
   seção de choque nuclear.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true

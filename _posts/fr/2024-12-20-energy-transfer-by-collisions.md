@@ -4,8 +4,8 @@ description: Calcul du taux de transfert d'énergie par collision entre particul
   pour les collisions élastiques et inélastiques, et comparaison de l'ampleur du taux
   de transfert d'énergie dans les cas où les masses des deux particules en collision
   sont similaires ou très différentes.
-categories: [Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Plasma Physics]
+categories: [Nuclear Engineering, Plasma Physics]
+tags: [Nuclear Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---

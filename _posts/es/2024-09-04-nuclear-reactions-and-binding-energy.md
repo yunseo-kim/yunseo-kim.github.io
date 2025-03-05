@@ -3,7 +3,7 @@ title: Reacciones nucleares y energía de enlace
 description: Exploramos las expresiones de las reacciones nucleares, la definición
   del valor Q (Q-value), y los conceptos de defecto de masa (mass defect) y energía
   de enlace (binding energy).
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
 image: /assets/img/atoms.png

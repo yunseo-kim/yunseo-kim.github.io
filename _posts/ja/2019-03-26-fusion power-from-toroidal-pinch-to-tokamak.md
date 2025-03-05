@@ -2,7 +2,7 @@
 title: '核融合発電: トロイダルピンチからトカマクまで'
 description: 核融合の概念と次世代電力源として注目されるようになった背景、核融合発電の商用化に向けて達成すべき技術的目標、そしてトロイダルピンチ(toroidal
   pinch)からITERに至るまでの核融合発電技術の変遷を大きな流れで扱う。 筆者が高校2年生の時に校内の科学部活動のために作成したエッセイで、他の投稿とは異なり口語体で書かれているが、アーカイブ目的で当時の原文をそのままアップロードしたことを明記する。
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

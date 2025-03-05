@@ -1,7 +1,7 @@
 ---
 title: 核融合發電：從環形捏縮到托卡馬克
 description: 本文探討核融合的概念及其成為下一代電力來源的背景，以及實現核融合發電商業化所需達成的技術目標。從環形捏縮（toroidal pinch）到ITER，本文概述了核融合發電技術的演變歷程。這是作者高中二年級時為校內科學社團活動所撰寫的文章，與其他文章不同，採用口語化的寫作風格，但為了存檔目的，原文內容保持不變。
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

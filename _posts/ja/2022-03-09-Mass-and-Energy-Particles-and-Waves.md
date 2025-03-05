@@ -1,7 +1,7 @@
 ---
 title: 質量とエネルギー、粒子と波動
 description: 相対性理論の質量-エネルギー等価原理を探求し、運動する電子のエネルギーを相対論的効果を考慮して計算してみよう。
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
 image: /assets/img/atoms.png

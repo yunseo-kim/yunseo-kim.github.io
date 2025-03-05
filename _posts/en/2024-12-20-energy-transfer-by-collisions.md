@@ -4,8 +4,8 @@ description: Calculate the energy transfer rate due to particle collisions for b
   elastic and inelastic collisions, and compare the magnitude of energy transfer rates
   for cases when the masses of the two colliding particles are similar and when they
   are significantly different.
-categories: [Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Plasma Physics]
+categories: [Nuclear Engineering, Plasma Physics]
+tags: [Nuclear Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---

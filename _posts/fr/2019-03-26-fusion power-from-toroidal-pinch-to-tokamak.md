@@ -8,7 +8,7 @@ description: Ce texte aborde le concept de fusion nucléaire, les raisons pour l
   était en deuxième année de lycée. Contrairement à ses autres articles, celui-ci
   est écrit dans un style plus familier, mais il a été téléchargé tel quel à des fins
   d'archivage.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

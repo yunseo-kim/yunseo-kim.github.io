@@ -2,7 +2,7 @@
 title: Mass and Energy, Particles and Waves
 description: Explore the mass-energy equivalence principle of relativity theory and
   calculate the energy of moving electrons considering relativistic effects.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
 image: /assets/img/atoms.png

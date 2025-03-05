@@ -3,7 +3,7 @@ title: Subatomare Teilchen und Bestandteile des Atoms
 description: Ein kurzer Überblick über die in der Kerntechnik wichtigen Elementarteilchen
   wie Elektronen, Protonen, Neutronen, Photonen und Neutrinos, sowie die Struktur
   von Atomen und Atomkernen.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
 image: /assets/img/atoms.png

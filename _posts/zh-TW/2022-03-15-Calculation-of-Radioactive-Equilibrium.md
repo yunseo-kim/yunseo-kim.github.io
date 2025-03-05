@@ -1,7 +1,7 @@
 ---
 title: 輻射平衡計算
 description: 探討放射性核種的衰變常數、半衰期和平均壽命之間的關係，並計算給定衰變鏈中任意時間 t 的放射性核種的放射性活度。
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Radiation]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true

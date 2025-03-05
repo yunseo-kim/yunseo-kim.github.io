@@ -3,8 +3,8 @@ title: Rayos X Continuos y Característicos
 description: Exploramos los dos principios de generación de rayos X como radiación
   atómica, y las características respectivas de la radiación de frenado y los rayos
   X característicos.
-categories: [Physics, Nuclear Engineering]
-tags: [Radiation, Atomic Radiation, Atomic Structure]
+categories: [Nuclear Engineering, Radiation]
+tags: [Atomic Radiation, Atomic Structure]
 math: true
 image: /assets/img/atoms.png
 ---

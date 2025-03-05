@@ -2,7 +2,7 @@
 title: Homogeneous Mixtures and Molecular Cross-sections
 description: Let's calculate the macroscopic cross-section of a homogeneous mixture
   containing two or more nuclides.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

@@ -1,7 +1,7 @@
 ---
 title: 均勻混合物與分子的截面積
 description: 讓我們計算含有兩種或更多核種的均勻混合物的巨觀截面積。
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

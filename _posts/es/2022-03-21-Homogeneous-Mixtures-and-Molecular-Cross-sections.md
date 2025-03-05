@@ -2,7 +2,7 @@
 title: Mezclas homogéneas y sección transversal de moléculas
 description: Calculemos la sección transversal macroscópica de una mezcla homogénea
   que contiene dos o más nucleidos.
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

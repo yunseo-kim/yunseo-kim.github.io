@@ -1,8 +1,8 @@
 ---
 title: プラズマの定義と温度の概念、そしてサハ方程式(Saha equation)
 description: プラズマの定義における「集団的振る舞い」の意味を考察し、サハ方程式(Saha equation)について学びます。 また、プラズマ物理学における温度の概念を明確にします。
-categories: [Physics, Nuclear Engineering]
-tags: [Nuclear Physics, Plasma Physics]
+categories: [Nuclear Engineering, Plasma Physics]
+tags: [Nuclear Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---

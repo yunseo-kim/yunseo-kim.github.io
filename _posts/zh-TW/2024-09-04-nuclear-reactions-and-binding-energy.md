@@ -1,7 +1,7 @@
 ---
 title: 核反應與結合能
 description: 探討核反應的表達式和Q值(Q-value)的定義,以及質量虧損(mass defect)和結合能(binding energy)的概念。
-categories: [Physics, Nuclear Engineering]
+categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
 image: /assets/img/atoms.png
