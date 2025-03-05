@@ -6,7 +6,7 @@ description: Examinamos a forma básica da equação de Schrödinger, que tem um
   onda obtida como solução da equação de Schrödinger, as perspectivas sobre a indeterminação
   quântica e o significado físico do ato de medição na interpretação de Copenhague
   (colapso da função de onda).
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true

@@ -3,7 +3,7 @@ title: Partículas subatómicas y componentes del átomo
 description: Examinamos brevemente las partículas elementales importantes en la ingeniería
   nuclear, como electrones, protones, neutrones, fotones y neutrinos, y exploramos
   la estructura de los átomos y núcleos atómicos.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
 image: /assets/img/atoms.png

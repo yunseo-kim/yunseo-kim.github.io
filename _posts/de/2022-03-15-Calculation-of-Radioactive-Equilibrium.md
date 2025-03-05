@@ -3,7 +3,7 @@ title: Berechnung des Strahlungsgleichgewichts
 description: Wir untersuchen die Beziehung zwischen der Zerfallskonstante, der Halbwertszeit
   und der mittleren Lebensdauer von Radionukliden und berechnen die Radioaktivität
   von Radionukliden zu einem beliebigen Zeitpunkt t in einer gegebenen Zerfallskette.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true

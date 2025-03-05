@@ -2,7 +2,7 @@
 title: Nuclear Stability and Radioactive Decay
 description: Learn about the Segre Chart, types of radioactive decay, and isomeric
   transitions.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.png

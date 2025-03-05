@@ -4,7 +4,7 @@ description: Nous explorons comment calculer les valeurs attendues de la positio
   et de l'impulsion à partir de la fonction d'onde en mécanique quantique, puis nous
   étendons cela à une formule de calcul de la valeur attendue pour toute variable
   mécanique Q(x,p). Enfin, nous dérivons le théorème d'Ehrenfest à partir de ces résultats.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

@@ -1,8 +1,7 @@
 ---
 title: 與時間無關的薛丁格方程式(Time-independent Schrödinger Equation)
-description: 將薛丁格方程式的原始形式(時間相依薛丁格方程式) Ψ(x,t)應用變數分離法,推導出與時間無關的薛丁格方程式
-  ψ(x),並探討這種變數分離解在數學和物理上的意義和重要性。同時,我們還將研究如何通過變數分離解的線性組合來求得薛丁格方程式的一般解。
-categories: [Engineering Physics, Modern Physics]
+description: 將薛丁格方程式的原始形式(時間相依薛丁格方程式) Ψ(x,t)應用變數分離法,推導出與時間無關的薛丁格方程式 ψ(x),並探討這種變數分離解在數學和物理上的意義和重要性。同時,我們還將研究如何通過變數分離解的線性組合來求得薛丁格方程式的一般解。
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

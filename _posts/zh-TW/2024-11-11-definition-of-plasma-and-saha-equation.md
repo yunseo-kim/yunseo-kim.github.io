@@ -1,7 +1,7 @@
 ---
 title: 電漿的定義和溫度概念，以及薩哈方程式(Saha equation)
 description: 探討電漿定義中「集體行為」的含義，並了解薩哈方程式(Saha equation)。同時釐清電漿物理學中溫度的概念。
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Plasma Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

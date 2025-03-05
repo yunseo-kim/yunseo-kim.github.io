@@ -5,7 +5,7 @@ description: We examine the simple yet important representative problem of the 1
   We find the nth stationary state ψ(x) and energy E of a particle in this ideal situation,
   and learn four important mathematical properties of ψ(x). From this, we derive the
   general solution Ψ(x,t).
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

@@ -2,7 +2,7 @@
 title: Mélanges homogènes et sections efficaces moléculaires
 description: Calculons la section efficace macroscopique d'un mélange homogène contenant
   deux types de noyaux ou plus.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

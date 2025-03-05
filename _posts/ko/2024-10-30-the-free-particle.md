@@ -2,7 +2,7 @@
 title: 자유입자(The Free Particle)
 description: V(x)=0인 자유 입자의 경우 변수분리한 해를 규격화할 수 없다는 사실과 이것이 의미하는 바를 알아보며, 일반해에 대한 위치-운동량
   불확정성 관계를 정성적으로 보이고 Ψ(x,t)의 위상속도와 무리속도를 구하여 물리적으로 해석한다.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

@@ -4,7 +4,7 @@ description: Se establece la ecuación de Schrödinger para el oscilador armóni
   mecánica cuántica y se examina su solución algebraica. Se obtienen las funciones
   de onda y los niveles de energía de cualquier estado estacionario a partir de los
   conmutadores, las relaciones de conmutación canónicas y los operadores escalera.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
     Operators]
 math: true

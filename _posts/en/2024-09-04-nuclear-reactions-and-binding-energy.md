@@ -2,7 +2,7 @@
 title: Nuclear Reactions and Binding Energy
 description: Learn about the expression of nuclear reactions, the definition of Q-value,
   and the concepts of mass defect and binding energy.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
 image: /assets/img/atoms.png

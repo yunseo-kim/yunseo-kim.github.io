@@ -1,7 +1,7 @@
 ---
 title: 放射平衡計算
 description: 放射性核種の崩壊定数と半減期、平均寿命の相関関係について学び、与えられた崩壊連鎖における任意の時間tでの放射性核種の放射能を計算してみる。
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true

@@ -5,7 +5,7 @@ description: Examinamos o problema do poço quadrado infinito unidimensional, um
   Nesta situação ideal, determinamos o n-ésimo estado estacionário ψ(x) e a energia
   E da partícula, e exploramos quatro importantes propriedades matemáticas de ψ(x).
   A partir disso, obtemos a solução geral Ψ(x,t).
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

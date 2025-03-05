@@ -1,14 +1,14 @@
 ---
-title: "Energy Transfer by Collisions"
-description: >-
-  Calculate the energy transfer rate due to particle collisions for both elastic and inelastic collisions,
-  and compare the magnitude of energy transfer rates for cases when the masses of the two colliding particles are similar and when they are significantly different.
-categories: [Engineering Physics, Nuclear Engineering]
+title: Energy Transfer by Collisions
+description: Calculate the energy transfer rate due to particle collisions for both
+  elastic and inelastic collisions, and compare the magnitude of energy transfer rates
+  for cases when the masses of the two colliding particles are similar and when they
+  are significantly different.
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Plasma Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## TL;DR
 > - Total energy and momentum are conserved during collisions
 > - Ions that have lost all electrons and electrons themselves only possess kinetic energy

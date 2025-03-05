@@ -6,7 +6,7 @@ description: Wir leiten die zeitunabhängige Schrödinger-Gleichung ψ(x) her, i
   und physikalische Bedeutung und Wichtigkeit der so erhaltenen separierten Lösung.
   Schließlich betrachten wir die Methode zur Bestimmung der allgemeinen Lösung der
   Schrödinger-Gleichung durch Linearkombination der separierten Lösungen.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

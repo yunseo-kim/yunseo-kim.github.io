@@ -6,7 +6,7 @@ description: Derivamos la ecuación de Schrödinger independiente del tiempo ψ(
   la importancia de la solución separada obtenida. También examinamos cómo obtener
   la solución general de la ecuación de Schrödinger mediante la combinación lineal
   de soluciones separadas.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

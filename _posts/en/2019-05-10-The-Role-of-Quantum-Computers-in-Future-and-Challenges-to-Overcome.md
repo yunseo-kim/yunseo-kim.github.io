@@ -1,7 +1,10 @@
 ---
 title: The Role of Quantum Computers in Future Society and Challenges to Overcome
-description: 'Explore the basic concepts of quantum computers, their advantages over classical computers, and their expected roles in the future. This essay, written by the author as a high school student, also considers the necessity for Korea to prepare in advance for the quantum computing era.'
-categories: [Engineering Physics, Quantum Computing]
+description: Explore the basic concepts of quantum computers, their advantages over
+  classical computers, and their expected roles in the future. This essay, written
+  by the author as a high school student, also considers the necessity for Korea to
+  prepare in advance for the quantum computing era.
+categories: [Physics, Quantum Computing]
 tags: [Quantum Computing]
 image: /assets/img/quantum-computer.jpg
 ---

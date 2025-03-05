@@ -1,7 +1,7 @@
 ---
 title: 核穩定性及放射性衰變
 description: 探討塞格雷圖、放射性衰變類型以及同質異能態轉變。
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.png

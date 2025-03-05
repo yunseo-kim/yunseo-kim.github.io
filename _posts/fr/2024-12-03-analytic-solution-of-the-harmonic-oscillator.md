@@ -4,7 +4,7 @@ description: Nous établissons l'équation de Schrödinger pour l'oscillateur ha
   en mécanique quantique et examinons sa solution analytique. Nous résolvons l'équation
   en introduisant la variable sans dimension 𝜉 et exprimons tout état stationnaire
   normalisé à l'aide des polynômes d'Hermite.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

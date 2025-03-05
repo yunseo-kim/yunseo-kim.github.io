@@ -9,7 +9,7 @@ description: Este artículo aborda el concepto de fusión nuclear, los anteceden
   cuando estaba en segundo año de secundaria. A diferencia de otras publicaciones,
   está escrito en un estilo coloquial, pero se ha subido tal como estaba originalmente
   con fines de archivo.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

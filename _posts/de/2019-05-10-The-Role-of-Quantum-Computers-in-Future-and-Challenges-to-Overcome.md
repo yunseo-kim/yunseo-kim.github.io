@@ -1,7 +1,11 @@
 ---
-title: Die Rolle von Quantencomputern in der Gesellschaft der Zukunft und zu lösende Herausforderungen
-description: 'Wir untersuchen die grundlegenden Konzepte von Quantencomputern, ihre Vorteile gegenüber klassischen Computern und ihre erwartete Rolle in der Zukunft. Außerdem betrachten wir die Notwendigkeit für Korea, sich auf das Zeitalter der Quantencomputer vorzubereiten. Dieser Aufsatz wurde vom Autor als Oberschüler verfasst.'
-categories: [Engineering Physics, Quantum Computing]
+title: Die Rolle von Quantencomputern in der Gesellschaft der Zukunft und zu lösende
+  Herausforderungen
+description: Wir untersuchen die grundlegenden Konzepte von Quantencomputern, ihre
+  Vorteile gegenüber klassischen Computern und ihre erwartete Rolle in der Zukunft.
+  Außerdem betrachten wir die Notwendigkeit für Korea, sich auf das Zeitalter der
+  Quantencomputer vorzubereiten. Dieser Aufsatz wurde vom Autor als Oberschüler verfasst.
+categories: [Physics, Quantum Computing]
 tags: [Quantum Computing]
 image: /assets/img/quantum-computer.jpg
 ---

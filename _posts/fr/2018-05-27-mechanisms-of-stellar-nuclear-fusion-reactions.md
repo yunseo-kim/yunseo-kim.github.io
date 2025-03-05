@@ -6,7 +6,7 @@ description: Cet article présente la réaction en chaîne proton-proton et le c
   de club scientifique au lycée en première année. Contrairement aux autres articles,
   il est rédigé dans un style informel, mais a été téléchargé tel quel à des fins
   d'archivage.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

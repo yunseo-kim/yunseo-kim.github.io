@@ -6,7 +6,7 @@ description: Aborda o conceito de fusão nuclear, o contexto que a tornou uma fo
   esclarece que este é um ensaio escrito para uma atividade de clube de ciências quando
   estava no segundo ano do ensino médio, e está em um estilo mais coloquial do que
   outros posts, mas foi carregado na forma original para fins de arquivamento.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

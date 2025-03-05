@@ -5,7 +5,7 @@ description: Exploramos el concepto de sistemas de referencia y la transformaci�
   las ecuaciones de Maxwell y el experimento de Michelson-Morley que sirvieron de
   base para la aparición de la transformación de Lorentz, y derivamos la matriz de
   transformación de Lorentz.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
 image: /assets/img/math-and-physics-cropped.png

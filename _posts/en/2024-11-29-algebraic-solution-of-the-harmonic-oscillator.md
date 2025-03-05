@@ -4,7 +4,7 @@ description: We set up the Schrödinger equation for the harmonic oscillator in 
   mechanics and explore its algebraic solution method. We derive the wave function
   and energy levels of any stationary state from commutators, canonical commutation
   relations, and ladder operators.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
     Operators]
 math: true

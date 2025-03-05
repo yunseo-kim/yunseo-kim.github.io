@@ -1,7 +1,7 @@
 ---
 title: 질량과 에너지, 입자와 파동
 description: 상대성이론의 질량-에너지 등가 원리를 탐구하고, 운동하는 전자의 에너지를 상대론적 효과를 고려하여 계산해 보자.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
 image: /assets/img/atoms.png

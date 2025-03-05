@@ -1,7 +1,7 @@
 ---
 title: 中子衰減和平均自由程（Mean Free Path）
 description: 計算單一能量中子束照射目標物時，中子束強度隨目標物穿透距離的變化，並由此推導中子的平均自由程。
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

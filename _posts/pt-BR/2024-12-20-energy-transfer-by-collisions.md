@@ -1,14 +1,14 @@
 ---
-title: "Transferência de energia por colisão"
-description: >-
-  Calcula-se a taxa de transferência de energia por colisão entre partículas, dividindo-a em colisões elásticas e inelásticas,
-  e compara-se a magnitude da taxa de transferência de energia para os casos em que as massas das duas partículas colidentes são semelhantes e muito diferentes.
-categories: [Engineering Physics, Nuclear Engineering]
+title: Transferência de energia por colisão
+description: Calcula-se a taxa de transferência de energia por colisão entre partículas,
+  dividindo-a em colisões elásticas e inelásticas, e compara-se a magnitude da taxa
+  de transferência de energia para os casos em que as massas das duas partículas colidentes
+  são semelhantes e muito diferentes.
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Plasma Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## TL;DR
 > - A energia total e o momento são conservados durante a colisão
 > - Íons que perderam todos os elétrons e ficaram apenas com o núcleo atômico, e elétrons, possuem apenas energia cinética

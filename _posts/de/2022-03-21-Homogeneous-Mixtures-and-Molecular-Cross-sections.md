@@ -2,7 +2,7 @@
 title: Homogene Mischungen und molekulare Wirkungsquerschnitte
 description: Berechnen wir den makroskopischen Wirkungsquerschnitt einer homogenen
   Mischung aus zwei oder mehr Nukliden.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

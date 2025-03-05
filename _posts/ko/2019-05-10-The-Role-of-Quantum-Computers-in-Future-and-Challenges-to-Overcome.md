@@ -2,7 +2,7 @@
 title: 미래 사회에서 양자컴퓨터의 역할과 해결해야 할 과제
 description: '양자컴퓨터의 기본 개념과 고전적인 컴퓨터 대비 가지는 장점, 미래에 기대되는 역할에 대해 알아보고, 한국에서 양자컴퓨터 시대에
   미리 대비해야 할 필요성을 고찰한다. 이 글은 필자가 고등학생일 때 작성했던 에세이이다. '
-categories: [Engineering Physics, Quantum Computing]
+categories: [Physics, Quantum Computing]
 tags: [Quantum Computing]
 image: /assets/img/quantum-computer.jpg
 ---

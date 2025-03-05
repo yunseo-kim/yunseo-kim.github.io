@@ -1,14 +1,12 @@
 ---
-title: "충돌에 의한 에너지 전달"
-description: >-
-  입자 간 충돌에 의한 에너지 전달률을 탄성 충돌과 비탄성 충돌 두 가지로 나누어 구하고,
-  이로부터 충돌하는 두 입자의 질량이 비슷할 때와 크게 다를 때 각각의 경우에 대하여 에너지 전달률의 크기를 비교한다.
-categories: [Engineering Physics, Nuclear Engineering]
+title: 충돌에 의한 에너지 전달
+description: 입자 간 충돌에 의한 에너지 전달률을 탄성 충돌과 비탄성 충돌 두 가지로 나누어 구하고, 이로부터 충돌하는 두 입자의 질량이
+  비슷할 때와 크게 다를 때 각각의 경우에 대하여 에너지 전달률의 크기를 비교한다.
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Plasma Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## TL;DR
 > - 충돌 시 총 에너지와 운동량은 보존됨
 > - 모든 전자를 잃고 원자핵만 남은 이온과 전자는 운동에너지만을 가짐

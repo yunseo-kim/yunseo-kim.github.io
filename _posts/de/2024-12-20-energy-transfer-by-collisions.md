@@ -1,14 +1,14 @@
 ---
-title: "Energieübertragung durch Kollisionen"
-description: >-
-  Berechnung der Energieübertragungsrate durch Teilchenkollisionen für elastische und inelastische Stöße,
-  und Vergleich der Energieübertragungsraten für Fälle, in denen die Massen der kollidierenden Teilchen ähnlich oder sehr unterschiedlich sind.
-categories: [Engineering Physics, Nuclear Engineering]
+title: Energieübertragung durch Kollisionen
+description: Berechnung der Energieübertragungsrate durch Teilchenkollisionen für
+  elastische und inelastische Stöße, und Vergleich der Energieübertragungsraten für
+  Fälle, in denen die Massen der kollidierenden Teilchen ähnlich oder sehr unterschiedlich
+  sind.
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Plasma Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## TL;DR
 > - Bei Kollisionen bleiben Gesamtenergie und Impuls erhalten
 > - Ionen, die alle Elektronen verloren haben, und Elektronen besitzen nur kinetische Energie

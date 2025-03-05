@@ -6,7 +6,7 @@ description: We derive the time-independent Schrödinger equation ψ(x) by apply
   significance and importance of the separated solution obtained this way. We also
   examine the method of obtaining the general solution of the Schrödinger equation
   as a linear combination of separated solutions.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

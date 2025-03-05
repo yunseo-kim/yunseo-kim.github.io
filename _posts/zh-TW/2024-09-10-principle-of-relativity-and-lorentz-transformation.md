@@ -1,7 +1,7 @@
 ---
 title: 相對性原理與洛倫茲變換
 description: 探討參考系的概念和古典力學中廣泛使用的伽利略變換座標變換。此外,簡要介紹麥克斯韋方程式和邁克爾遜-莫雷實驗作為洛倫茲變換的背景,並推導洛倫茲變換矩陣。
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
 image: /assets/img/math-and-physics-cropped.png

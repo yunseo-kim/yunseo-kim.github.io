@@ -3,7 +3,7 @@ title: 슈뢰딩거 방정식과 파동함수
 description: 양자역학에서 고전역학에서의 뉴턴 운동 법칙과 비슷한 위상을 갖는 슈뢰딩거 방정식의 기본 형태를 살펴본다. 또한, 슈뢰딩거 방정식의
   해로서 구해지는 파동함수가 갖는 물리적 의미에 대한 통계적 해석과 양자역학적 비결정성에 관한 관점들, 그리고 코펜하겐 해석에서 측정 행위가 갖는
   물리적 의미(파동함수의 붕괴)를 알아본다.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true

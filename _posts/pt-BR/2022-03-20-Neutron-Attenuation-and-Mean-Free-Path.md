@@ -3,7 +3,7 @@ title: Atenuação de Nêutrons e Livre Caminho Médio (Mean Free Path)
 description: Calcula-se a intensidade de um feixe de nêutrons de energia única quando
   irradiado em um alvo em função da distância de penetração no alvo, e a partir disso,
   deriva-se o livre caminho médio dos nêutrons.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

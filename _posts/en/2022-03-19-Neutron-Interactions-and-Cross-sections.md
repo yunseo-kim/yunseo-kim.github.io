@@ -3,7 +3,7 @@ title: Neutron Interactions and Cross-sections
 description: Neutrons, being electrically neutral, can pass through the electron cloud
   of atoms without electrical influence and directly interact with atomic nuclei.
   We explore the types of neutron interactions and the concept of nuclear cross-sections.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true

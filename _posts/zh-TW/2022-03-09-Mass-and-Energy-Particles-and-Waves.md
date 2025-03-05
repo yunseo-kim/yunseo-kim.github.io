@@ -1,7 +1,7 @@
 ---
 title: 質量與能量、粒子與波動
 description: 探索相對論的質量-能量等價原理，並考慮相對論效應計算運動電子的能量。
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
 image: /assets/img/atoms.png

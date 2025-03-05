@@ -1,7 +1,7 @@
 ---
 title: 量子電腦在未來社會的角色與需要解決的挑戰
-description: '探討量子電腦的基本概念及相較於傳統電腦的優勢，以及未來預期的角色。同時思考韓國在量子電腦時代來臨前需要提前準備的必要性。這篇文章是作者在高中時期撰寫的論文。'
-categories: [Engineering Physics, Quantum Computing]
+description: 探討量子電腦的基本概念及相較於傳統電腦的優勢，以及未來預期的角色。同時思考韓國在量子電腦時代來臨前需要提前準備的必要性。這篇文章是作者在高中時期撰寫的論文。
+categories: [Physics, Quantum Computing]
 tags: [Quantum Computing]
 image: /assets/img/quantum-computer.jpg
 ---

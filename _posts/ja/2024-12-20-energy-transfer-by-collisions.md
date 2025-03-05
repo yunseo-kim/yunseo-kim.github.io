@@ -1,14 +1,11 @@
 ---
-title: "衝突によるエネルギー伝達"
-description: >-
-  粒子間の衝突によるエネルギー伝達率を弾性衝突と非弾性衝突の2つに分けて求め、
-  これにより衝突する2つの粒子の質量が似ている場合と大きく異なる場合のそれぞれについてエネルギー伝達率の大きさを比較する。
-categories: [Engineering Physics, Nuclear Engineering]
+title: 衝突によるエネルギー伝達
+description: 粒子間の衝突によるエネルギー伝達率を弾性衝突と非弾性衝突の2つに分けて求め、 これにより衝突する2つの粒子の質量が似ている場合と大きく異なる場合のそれぞれについてエネルギー伝達率の大きさを比較する。
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Plasma Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## TL;DR
 > - 衝突時の全エネルギーと運動量は保存される
 > - すべての電子を失い原子核のみ残ったイオンと電子は運動エネルギーのみを持つ

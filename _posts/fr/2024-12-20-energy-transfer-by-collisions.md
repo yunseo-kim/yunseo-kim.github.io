@@ -1,14 +1,14 @@
 ---
-title: "Transfert d'énergie par collision"
-description: >-
-  Calcul du taux de transfert d'énergie par collision entre particules pour les collisions élastiques et inélastiques,
-  et comparaison de l'ampleur du taux de transfert d'énergie dans les cas où les masses des deux particules en collision sont similaires ou très différentes.
-categories: [Engineering Physics, Nuclear Engineering]
+title: Transfert d'énergie par collision
+description: Calcul du taux de transfert d'énergie par collision entre particules
+  pour les collisions élastiques et inélastiques, et comparaison de l'ampleur du taux
+  de transfert d'énergie dans les cas où les masses des deux particules en collision
+  sont similaires ou très différentes.
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Plasma Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## TL;DR
 > - L'énergie totale et la quantité de mouvement sont conservées lors des collisions
 > - Les ions ayant perdu tous leurs électrons et les électrons n'ont que de l'énergie cinétique

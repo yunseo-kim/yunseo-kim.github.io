@@ -4,7 +4,7 @@ description: Wir untersuchen, wie man in der Quantenmechanik Erwartungswerte fü
   und Impuls aus der Wellenfunktion berechnet, und erweitern dies auf eine Formel
   für den Erwartungswert einer beliebigen mechanischen Variable Q(x,p). Daraus leiten
   wir dann das Ehrenfest-Theorem ab.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

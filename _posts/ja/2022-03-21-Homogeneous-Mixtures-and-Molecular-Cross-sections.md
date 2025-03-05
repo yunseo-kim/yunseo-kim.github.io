@@ -1,7 +1,7 @@
 ---
 title: 均一混合物と分子の断面積
 description: 二種類以上の核種が混ざっている均一混合物の巨視的断面積を計算してみよう。
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.png

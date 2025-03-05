@@ -2,7 +2,7 @@
 title: 상대성 원리와 로런츠 변환
 description: 기준계의 개념과 고전역학에서 널리 사용해왔던 좌표 변환인 갈릴레이 변환에 대해 알아본다. 또한 로런츠 변환의 등장 배경이 된
   맥스웰 방정식과 마이컬슨-몰리 실험을 간단히 살펴보고, 로런츠 변환의 변환행렬을 유도한다.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
 image: /assets/img/math-and-physics-cropped.png

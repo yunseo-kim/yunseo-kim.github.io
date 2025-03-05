@@ -6,7 +6,7 @@ description: Dieser Artikel stellt die Proton-Proton-Kettenreaktion und den CNO-
   Aktivität des schulischen Wissenschaftsclubs geschrieben hat. Im Gegensatz zu anderen
   Beiträgen ist er in umgangssprachlichem Stil verfasst, wurde aber zu Archivierungszwecken
   im Originaltext hochgeladen.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

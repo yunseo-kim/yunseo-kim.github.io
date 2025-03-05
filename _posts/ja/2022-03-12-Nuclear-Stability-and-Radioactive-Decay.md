@@ -1,7 +1,7 @@
 ---
 title: 核安定性と放射性崩壊
 description: セグレ図と放射性崩壊の種類、そして異性体遷移について学ぶ。
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.png

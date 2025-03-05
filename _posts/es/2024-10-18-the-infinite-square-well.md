@@ -5,7 +5,7 @@ description: Examinamos el problema del pozo cuadrado infinito unidimensional, u
   cuántica. En esta situación ideal, encontramos el n-ésimo estado estacionario ψ(x)
   y la energía E de la partícula, y exploramos 4 importantes propiedades matemáticas
   de ψ(x). A partir de esto, obtenemos la solución general Ψ(x,t).
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

@@ -4,7 +4,7 @@ description: Estabelecemos a equação de Schrödinger para o oscilador harmôni
   mecânica quântica e examinamos o método de solução analítica para esta equação.
   Resolvemos a equação introduzindo a variável adimensional 𝜉 e expressamos qualquer
   estado estacionário normalizado usando polinômios de Hermite.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

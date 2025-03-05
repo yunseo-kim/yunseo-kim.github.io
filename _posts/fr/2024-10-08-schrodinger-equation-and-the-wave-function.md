@@ -7,7 +7,7 @@ description: Nous examinons la forme fondamentale de l'équation de Schrödinger
   physique de la fonction d'onde obtenue comme solution de l'équation de Schrödinger,
   ainsi que la signification physique de l'acte de mesure dans l'interprétation de
   Copenhague (effondrement de la fonction d'onde).
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true

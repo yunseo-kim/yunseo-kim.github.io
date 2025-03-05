@@ -1,7 +1,7 @@
 ---
 title: 中性子相互作用と反応断面積
 description: 中性子は電気的に中性であるため、電気的影響を受けずに原子の電子雲を通過して原子核と直接反応することができる。中性子相互作用の種類と原子核の反応断面積の概念について学ぶ。
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true

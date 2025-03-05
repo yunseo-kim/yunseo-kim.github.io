@@ -4,7 +4,7 @@ description: Neutronen sind elektrisch neutral und können daher ohne elektrisch
   durch die Elektronenwolke des Atoms direkt mit dem Atomkern reagieren. Wir betrachten
   die Arten der Neutronenwechselwirkungen und das Konzept des Wirkungsquerschnitts
   des Atomkerns.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true

@@ -7,7 +7,7 @@ description: Wir betrachten die grundlegende Form der Schrödinger-Gleichung, di
   erhalten wird, verschiedene Perspektiven auf die quantenmechanische Unbestimmtheit
   und die physikalische Bedeutung des Messvorgangs (Kollaps der Wellenfunktion) in
   der Kopenhagener Deutung.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true

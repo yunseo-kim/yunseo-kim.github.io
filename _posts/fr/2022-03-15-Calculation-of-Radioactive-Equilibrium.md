@@ -3,7 +3,7 @@ title: Calcul de l'équilibre radiatif
 description: Nous examinons la relation entre la constante de désintégration, la demi-vie
   et la durée de vie moyenne des radionucléides, et calculons l'activité des radionucléides
   à un temps t donné dans une chaîne de désintégration donnée.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true

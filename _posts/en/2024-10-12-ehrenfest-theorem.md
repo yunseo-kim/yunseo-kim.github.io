@@ -4,7 +4,7 @@ description: Learn how to calculate the expectation values of position and momen
   from the wave function in quantum mechanics, and extend this to the calculation
   formula for the expectation value of any mechanical variable Q(x,p). Then, derive
   the Ehrenfest theorem from this.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

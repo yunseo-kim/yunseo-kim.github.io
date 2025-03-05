@@ -1,12 +1,11 @@
 ---
 title: 一維無限方井(The 1D Infinite Square Well)
 description: 探討量子力學基本概念的簡單而重要的代表性問題 - 一維無限方井問題。在這種理想情況下，我們求解粒子的第n個定態波函數ψ(x)和能量E，並了解ψ(x)的四個重要數學性質。最後，我們從中得出一般解Ψ(x,t)。
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - 一維無限方井問題：
 >   $$V(x) = \begin{cases}

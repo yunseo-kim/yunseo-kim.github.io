@@ -1,7 +1,10 @@
 ---
 title: Le rôle des ordinateurs quantiques dans la société future et les défis à relever
-description: 'Examinons les concepts de base des ordinateurs quantiques, leurs avantages par rapport aux ordinateurs classiques, leur rôle attendu dans le futur, et la nécessité pour la Corée de se préparer à l''ère de l''informatique quantique. Cet essai a été rédigé par l''auteur lorsqu''il était lycéen.'
-categories: [Engineering Physics, Quantum Computing]
+description: Examinons les concepts de base des ordinateurs quantiques, leurs avantages
+  par rapport aux ordinateurs classiques, leur rôle attendu dans le futur, et la nécessité
+  pour la Corée de se préparer à l'ère de l'informatique quantique. Cet essai a été
+  rédigé par l'auteur lorsqu'il était lycéen.
+categories: [Physics, Quantum Computing]
 tags: [Quantum Computing]
 image: /assets/img/quantum-computer.jpg
 ---

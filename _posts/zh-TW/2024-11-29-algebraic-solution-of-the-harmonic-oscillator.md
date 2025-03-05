@@ -1,13 +1,12 @@
 ---
 title: 諧振子（The Harmonic Oscillator）的代數解法
 description: 建立量子力學中諧振子的薛丁格方程式，並探討該方程式的代數解法。從交換子、正則交換關係和階梯算符推導出任意定態的波函數和能量本徵值。
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
     Operators]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - 如果振幅足夠小，任何振動都可以近似為簡諧振動（simple harmonic oscillation），因此簡諧振動在物理學中具有重要意義
 > - 諧振子：$V(x) = \cfrac{1}{2}kx^2 = \cfrac{1}{2}m\omega^2 x^2$

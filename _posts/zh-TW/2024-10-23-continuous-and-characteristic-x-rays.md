@@ -1,12 +1,11 @@
 ---
 title: 連續X射線與特性X射線(Continuous and Characteristic X Rays)
 description: 探討原子輻射中X射線的兩種產生原理，以及相應的制動輻射和特性X射線的各自特徵。
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Radiation, Atomic Radiation, Atomic Structure]
 math: true
 image: /assets/img/atoms.png
 ---
-
 ## TL;DR
 > - **制動輻射（bremsstrahlung）**：帶電粒子（如電子）在原子核附近通過時，由於電力作用而加速，從而發射出連續光譜的X射線
 > - 最小波長：$\lambda_\text{min} = \cfrac{hc}{E_\text{max}} = \cfrac{12400 \text{[Å}\cdot\text{eV]}}{V\text{[eV]}}$

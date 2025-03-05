@@ -1,12 +1,11 @@
 ---
 title: 自由粒子（The Free Particle）
 description: 探討V(x)=0的自由粒子情況下，變數分離解無法規範化的事實及其意義，定性地展示一般解的位置-動量不確定性關係，並計算Ψ(x,t)的相速度和群速度，進行物理解釋。
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png
 ---
-
 ## TL;DR
 > - 自由粒子：$V(x)=0$，無邊界條件（任意能量）
 > - 變數分離解 $\Psi_k(x,t) = Ae^{i\left(kx-\frac{\hbar k^2}{2m}t \right)}$ 平方積分時發散至無窮大，因此無法規範化，這暗示：

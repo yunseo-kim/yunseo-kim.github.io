@@ -6,7 +6,7 @@ description: We examine the basic form of the Schrödinger equation, which holds
   function obtained as a solution to the Schrödinger equation, perspectives on quantum
   indeterminacy, and the physical significance of measurement in the Copenhagen interpretation
   (collapse of the wave function).
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
 mermaid: true

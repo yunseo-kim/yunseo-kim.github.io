@@ -6,7 +6,7 @@ description: Este artículo introduce la reacción en cadena protón-protón y e
   secundaria para una actividad del club de ciencias de la escuela. A diferencia de
   otras publicaciones, está escrito en un estilo coloquial, pero se ha subido tal
   como estaba originalmente con fines de archivo.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png

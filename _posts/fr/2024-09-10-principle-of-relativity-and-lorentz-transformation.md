@@ -5,7 +5,7 @@ description: Nous explorons le concept de référentiel et la transformation de 
   équations de Maxwell et l'expérience de Michelson-Morley qui ont conduit à l'émergence
   de la transformation de Lorentz, et nous dérivons la matrice de transformation de
   Lorentz.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
 image: /assets/img/math-and-physics-cropped.png

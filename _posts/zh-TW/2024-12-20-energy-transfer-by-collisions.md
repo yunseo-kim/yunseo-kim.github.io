@@ -1,14 +1,11 @@
 ---
-title: "碰撞引起的能量傳遞"
-description: >-
-  分別計算彈性碰撞和非彈性碰撞兩種情況下粒子間碰撞的能量傳遞率，
-  並比較碰撞的兩個粒子質量相近和相差很大時各種情況下的能量傳遞率大小。
-categories: [Engineering Physics, Nuclear Engineering]
+title: 碰撞引起的能量傳遞
+description: 分別計算彈性碰撞和非彈性碰撞兩種情況下粒子間碰撞的能量傳遞率， 並比較碰撞的兩個粒子質量相近和相差很大時各種情況下的能量傳遞率大小。
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Plasma Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.png
 ---
-
 ## TL;DR
 > - 碰撞時總能量和動量守恆
 > - 失去所有電子只剩原子核的離子和電子只有動能

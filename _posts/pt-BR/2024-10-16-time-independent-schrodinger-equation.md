@@ -7,7 +7,7 @@ description: Derivamos a equação de Schrödinger independente do tempo ψ(x) a
   matemática e física da solução separada obtida desta forma. Também exploramos o
   método de obter a solução geral da equação de Schrödinger através da combinação
   linear de soluções separadas.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

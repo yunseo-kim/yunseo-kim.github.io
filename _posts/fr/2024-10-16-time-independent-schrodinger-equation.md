@@ -6,7 +6,7 @@ description: Nous dérivons l'équation de Schrödinger indépendante du temps �
   l'importance mathématique et physique de la solution à variables séparées ainsi
   obtenue. Enfin, nous étudions comment obtenir la solution générale de l'équation
   de Schrödinger par combinaison linéaire des solutions à variables séparées.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

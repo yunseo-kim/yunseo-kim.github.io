@@ -2,7 +2,7 @@
 title: Stabilité nucléaire et désintégration radioactive
 description: Découvrez le tableau de Segré, les types de désintégration radioactive
   et la transition isomère.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radiation, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.png

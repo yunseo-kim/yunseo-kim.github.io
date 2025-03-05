@@ -3,7 +3,7 @@ title: Masse und Energie, Teilchen und Wellen
 description: Erforschen Sie das Masse-Energie-Äquivalenzprinzip der Relativitätstheorie
   und berechnen Sie die Energie eines bewegten Elektrons unter Berücksichtigung relativistischer
   Effekte.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
 image: /assets/img/atoms.png

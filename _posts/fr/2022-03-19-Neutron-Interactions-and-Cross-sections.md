@@ -4,7 +4,7 @@ description: Les neutrons étant électriquement neutres, ils peuvent traverser 
   électronique des atomes sans subir d'influence électrique et interagir directement
   avec le noyau atomique. Nous examinons les types d'interactions des neutrons et
   le concept de section efficace des noyaux atomiques.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true

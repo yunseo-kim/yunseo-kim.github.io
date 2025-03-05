@@ -6,7 +6,7 @@ description: Exploramos los conceptos básicos de las computadoras cuánticas y 
   en el futuro, y consideramos la necesidad de que Corea se prepare con anticipación
   para la era de la computación cuántica. Este ensayo fue escrito por el autor cuando
   año de secundaria.
-categories: [Engineering Physics, Quantum Computing]
+categories: [Physics, Quantum Computing]
 tags: [Quantum Computing]
 image: /assets/img/quantum-computer.jpg
 ---

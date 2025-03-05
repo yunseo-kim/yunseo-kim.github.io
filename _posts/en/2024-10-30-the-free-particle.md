@@ -4,7 +4,7 @@ description: We explore the fact that the separated variable solution for a free
   with V(x)=0 cannot be normalized and what this implies, qualitatively show the position-momentum
   uncertainty relation for the general solution, and calculate and physically interpret
   the phase velocity and group velocity of Ψ(x,t).
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

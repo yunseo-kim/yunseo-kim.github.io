@@ -5,7 +5,7 @@ description: Examinons le problème du puits carré infini unidimensionnel, un e
   quantique. Dans cette situation idéale, nous déterminons le n-ième état stationnaire
   ψ(x) et l'énergie E d'une particule, et nous étudions quatre propriétés mathématiques
   importantes de ψ(x). À partir de là, nous obtenons la solution générale Ψ(x,t).
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

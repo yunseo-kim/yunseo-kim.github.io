@@ -1,7 +1,7 @@
 ---
 title: 自由粒子（The Free Particle）
 description: ポテンシャルV(x)=0の自由粒子の場合、変数分離した解を規格化できないという事実とその意味を探り、 一般解に対する位置-運動量の不確定性関係を定性的に示し、Ψ(x,t)の位相速度と群速度を求めて物理的に解釈する。
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

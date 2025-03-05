@@ -4,7 +4,7 @@ description: Exploramos el hecho de que la solución separable para una partícu
   con V(x)=0 no se puede normalizar y lo que esto significa, demostramos cualitativamente
   la relación de incertidumbre posición-momento para la solución general, y calculamos
   e interpretamos físicamente la velocidad de fase y de grupo de Ψ(x,t).
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

@@ -5,7 +5,7 @@ description: Wir betrachten das einfache, aber wichtige Modellproblem des eindim
   Wir bestimmen die n-te stationäre Zustandsfunktion ψ(x) und Energie E des Teilchens
   in dieser idealen Situation, untersuchen vier wichtige mathematische Eigenschaften
   von ψ(x) und leiten daraus die allgemeine Lösung Ψ(x,t) ab.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

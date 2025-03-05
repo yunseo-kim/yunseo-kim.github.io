@@ -4,7 +4,7 @@ description: Wir stellen die Schrödinger-Gleichung für den harmonischen Oszill
   in der Quantenmechanik auf und untersuchen ihre analytische Lösungsmethode. Wir
   lösen die Gleichung durch Einführung der dimensionslosen Variable 𝜉 und stellen
   beliebige normierte stationäre Zustände mithilfe von Hermite-Polynomen dar.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

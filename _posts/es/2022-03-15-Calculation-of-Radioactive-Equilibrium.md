@@ -3,7 +3,7 @@ title: Cálculo del equilibrio radiactivo
 description: Exploramos la relación entre la constante de desintegración, la vida
   media y la vida promedio de los radionúclidos, y calculamos la actividad de los
   radionúclidos en un tiempo t dado para una cadena de desintegración dada.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true

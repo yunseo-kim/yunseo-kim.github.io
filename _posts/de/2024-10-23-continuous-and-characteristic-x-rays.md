@@ -2,7 +2,7 @@
 title: Kontinuierliche und charakteristische Röntgenstrahlung
 description: Untersuchung der zwei Entstehungsprinzipien der atomaren Röntgenstrahlung
   und der jeweiligen Eigenschaften von Bremsstrahlung und charakteristischer Röntgenstrahlung.
-categories: [Engineering Physics, Nuclear Engineering]
+categories: [Physics, Nuclear Engineering]
 tags: [Radiation, Atomic Radiation, Atomic Structure]
 math: true
 image: /assets/img/atoms.png

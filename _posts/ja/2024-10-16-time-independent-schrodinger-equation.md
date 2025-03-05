@@ -2,7 +2,7 @@
 title: 時間に依存しないシュレーディンガー方程式(Time-independent Schrödinger Equation)
 description: シュレーディンガー方程式の元の形（時間依存シュレーディンガー方程式）Ψ(x,t)に変数分離法を適用して 時間に依存しないシュレーディンガー方程式ψ(x)を導出し、
   このように得られた変数分離解が数学的、物理的に持つ意味と重要性を理解する。 そして変数分離解の線形結合によってシュレーディンガー方程式の一般解を求める方法を検討する。
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

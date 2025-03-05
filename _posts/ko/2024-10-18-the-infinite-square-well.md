@@ -3,7 +3,7 @@ title: 1차원 무한 사각 우물(The 1D Infinite Square Well)
 description: 양자역학의 기본 개념들을 잘 보여주는 간단하면서도 중요한 대표 문제, 1차원 무한 사각 우물 문제를 살펴본다. 이러한 이상적인
   상황에서 입자의 n번째 정상상태 ψ(x)와 에너지 E를 구하고, ψ(x)가 갖는 중요한 수학적 성질 4가지를 알아본다. 그리고 이로부터 일반해
   Ψ(x,t)을 구한다.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

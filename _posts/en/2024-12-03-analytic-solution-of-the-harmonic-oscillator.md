@@ -4,7 +4,7 @@ description: We set up the Schrödinger equation for the harmonic oscillator in 
   mechanics and explore its analytical solution method. We solve the equation by introducing
   the dimensionless variable 𝜉, and express any normalized stationary state using
   Hermite polynomials.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

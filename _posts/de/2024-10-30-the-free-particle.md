@@ -4,7 +4,7 @@ description: Wir untersuchen die Tatsache, dass die separierte Lösung für ein 
   Teilchen mit V(x)=0 nicht normierbar ist und was das bedeutet, zeigen qualitativ
   die Orts-Impuls-Unschärferelation für die allgemeine Lösung und berechnen die Phasen-
   und Gruppengeschwindigkeit von Ψ(x,t) mit physikalischer Interpretation.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

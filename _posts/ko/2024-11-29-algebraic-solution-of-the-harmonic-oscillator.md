@@ -2,7 +2,7 @@
 title: 조화진동자(The Harmonic Oscillator)의 대수적 풀이
 description: 양자역학에서의 조화진동자에 대한 슈뢰딩거 방정식을 세우고, 해당 방정식의 대수적인 풀이법을 알아본다. 교환자와 정준교환관계
   및 사다리연산자로부터 임의의 정상상태의 파동함수와 에너지 준위를 구한다.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
     Operators]
 math: true

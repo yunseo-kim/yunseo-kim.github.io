@@ -1,7 +1,7 @@
 ---
 title: 調和振動子（The Harmonic Oscillator）の解析的解法
 description: 量子力学における調和振動子のシュレーディンガー方程式を立て、その方程式の解析的な解法を学ぶ。 無次元変数ξを導入して方程式を解き、任意の規格化された定常状態をエルミート多項式を用いて表す。
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

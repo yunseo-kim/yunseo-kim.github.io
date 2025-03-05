@@ -4,7 +4,7 @@ description: Wir stellen die Schrödinger-Gleichung für den harmonischen Oszill
   in der Quantenmechanik auf und untersuchen ihre algebraische Lösungsmethode. Aus
   Kommutatoren, kanonischen Vertauschungsrelationen und Leiteroperatoren leiten wir
   die Wellenfunktion und Energieniveaus für beliebige stationäre Zustände ab.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
     Operators]
 math: true

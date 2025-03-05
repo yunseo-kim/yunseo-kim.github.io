@@ -5,7 +5,7 @@ description: Wir betrachten das Konzept des Bezugssystems und die Galilei-Transf
   Blick auf die Maxwell-Gleichungen und das Michelson-Morley-Experiment, die den Hintergrund
   für die Entstehung der Lorentz-Transformation bildeten, und leiten die Transformationsmatrix
   der Lorentz-Transformation her.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
 image: /assets/img/math-and-physics-cropped.png

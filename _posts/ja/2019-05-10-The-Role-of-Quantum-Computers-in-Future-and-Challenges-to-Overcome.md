@@ -1,7 +1,7 @@
 ---
 title: 未来社会における量子コンピューターの役割と解決すべき課題
-description: '量子コンピューターの基本概念と従来のコンピューターに比べた利点、将来期待される役割について学び、韓国が量子コンピューター時代に備えるべき必要性を考察する。この文章は筆者が高校生の時に書いたエッセイである。'
-categories: [Engineering Physics, Quantum Computing]
+description: 量子コンピューターの基本概念と従来のコンピューターに比べた利点、将来期待される役割について学び、韓国が量子コンピューター時代に備えるべき必要性を考察する。この文章は筆者が高校生の時に書いたエッセイである。
+categories: [Physics, Quantum Computing]
 tags: [Quantum Computing]
 image: /assets/img/quantum-computer.jpg
 ---

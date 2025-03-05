@@ -2,7 +2,7 @@
 title: 조화진동자(The Harmonic Oscillator)의 해석적 풀이
 description: 양자역학에서의 조화진동자에 대한 슈뢰딩거 방정식을 세우고, 해당 방정식의 해석적인 풀이법을 알아본다. 무차원 변수 𝜉를 도입하여
   방정식을 풀고, 임의의 규격화된 정상상태를 에르미트 다항식을 이용하여 나타낸다.
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png

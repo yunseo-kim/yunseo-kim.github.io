@@ -5,7 +5,7 @@ description: Nous examinons le fait que la solution à variables séparées pour
   nous démontrons qualitativement la relation d'incertitude position-impulsion pour
   la solution générale, et nous calculons et interprétons physiquement la vitesse
   de phase et la vitesse de groupe de Ψ(x,t).
-categories: [Engineering Physics, Modern Physics]
+categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
 image: /assets/img/schrodinger-cat-cropped.png
