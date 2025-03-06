@@ -35,7 +35,7 @@ image: /assets/img/math-and-physics-cropped.png
 {: .prompt-info }
 
 ## Voraussetzungen
-- [[Trigonometrische Additionstheoreme]](/posts/trigonometric-addition-formulas)
+- [Trigonometrische Additionstheoreme](/posts/trigonometric-addition-formulas)
 
 ## Mehrfachwinkelformeln
 ### Formeln für den doppelten Winkel

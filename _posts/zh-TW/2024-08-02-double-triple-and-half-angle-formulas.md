@@ -32,7 +32,7 @@ image: /assets/img/math-and-physics-cropped.png
 {: .prompt-info }
 
 ## 先備知識
-- [[三角函數加法定理]](/posts/trigonometric-addition-formulas)
+- [三角函數加法定理](/posts/trigonometric-addition-formulas)
 
 ## 倍角公式
 ### 2倍角公式

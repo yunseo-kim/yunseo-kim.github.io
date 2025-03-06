@@ -34,7 +34,7 @@ image: /assets/img/math-and-physics-cropped.png
 {: .prompt-info }
 
 ## Pré-requisitos
-- [[Fórmulas de Adição Trigonométrica]](/posts/trigonometric-addition-formulas)
+- [Fórmulas de Adição Trigonométrica](/posts/trigonometric-addition-formulas)
 
 ## Fórmulas de Ângulo Múltiplo
 ### Fórmulas de Ângulo Duplo

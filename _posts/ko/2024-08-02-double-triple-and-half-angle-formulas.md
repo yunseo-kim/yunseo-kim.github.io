@@ -33,7 +33,7 @@ image: /assets/img/math-and-physics-cropped.png
 {: .prompt-info }
 
 ## Prerequisites
-- [[삼각함수의 덧셈정리]](/posts/trigonometric-addition-formulas)
+- [삼각함수의 덧셈정리](/posts/trigonometric-addition-formulas)
 
 ## 배각의 공식
 ### 2배각의 공식

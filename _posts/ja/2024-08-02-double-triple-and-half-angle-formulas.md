@@ -32,7 +32,7 @@ image: /assets/img/math-and-physics-cropped.png
 {: .prompt-info }
 
 ## 前提条件
-- [[三角関数の加法定理]](/posts/trigonometric-addition-formulas)
+- [三角関数の加法定理](/posts/trigonometric-addition-formulas)
 
 ## 倍角の公式
 ### 2倍角の公式
