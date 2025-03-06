@@ -5,7 +5,7 @@ description: Examinons les concepts de base des ordinateurs quantiques, leurs av
   pour la Corée de se préparer à l'ère de l'informatique quantique. Cet essai a été
   rédigé par l'auteur lorsqu'il était lycéen.
 categories: [Physics, Quantum Computing]
-tags: [Quantum Computing]
+tags: []
 image: /assets/img/quantum-computer.jpg
 ---
 Depuis les années 1960, la puissance de calcul des ordinateurs a augmenté de façon exponentielle au cours des dernières décennies. Ce progrès a été réalisé en miniaturisant les composants appelés transistors qui entrent dans les unités de traitement des ordinateurs, permettant d'en intégrer un plus grand nombre sur une même surface. Un exemple frappant qui illustre bien la vitesse de progression des performances des ordinateurs est que les smartphones les plus récents que nous utilisons aujourd'hui surpassent les superordinateurs les plus puissants des années 1990. Étant donné qu'il est pratiquement impossible de trouver un domaine qui n'utilise pas d'ordinateurs de nos jours, les performances des ordinateurs sont un facteur clé qui détermine la vitesse globale du développement technologique dans la société moderne. Cependant, le problème est que cette méthode d'amélioration des capacités de calcul des ordinateurs atteint maintenant ses limites physiques, car la taille de chaque transistor devient extrêmement petite. C'est la raison pour laquelle les scientifiques s'intéressent aux ordinateurs quantiques. Dans cet article, nous allons parler des caractéristiques des ordinateurs quantiques, de leurs avantages par rapport aux ordinateurs conventionnels, de leur rôle attendu dans la société future et des défis à relever pour y parvenir.

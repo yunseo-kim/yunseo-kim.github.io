@@ -6,7 +6,7 @@ description: Wir untersuchen die grundlegenden Konzepte von Quantencomputern, ih
   Außerdem betrachten wir die Notwendigkeit für Korea, sich auf das Zeitalter der
   Quantencomputer vorzubereiten. Dieser Aufsatz wurde vom Autor als Oberschüler verfasst.
 categories: [Physics, Quantum Computing]
-tags: [Quantum Computing]
+tags: []
 image: /assets/img/quantum-computer.jpg
 ---
 Seit den 1960er Jahren hat sich die Rechenleistung von Computern über Jahrzehnte hinweg exponentiell gesteigert. Diese Entwicklung wurde durch die Miniaturisierung der Transistoren, die in den Prozessoren der Computer verbaut sind, erreicht, wodurch mehr Komponenten auf der gleichen Fläche integriert werden konnten. Ein anschauliches Beispiel für die rasante Leistungssteigerung von Computern ist die Tatsache, dass moderne Smartphones die leistungsfähigsten Supercomputer der 1990er Jahre bei weitem übertreffen. Da es heute praktisch keinen Bereich mehr gibt, in dem Computer nicht eingesetzt werden, ist ihre Leistungsfähigkeit ein entscheidender Faktor für die allgemeine technologische Entwicklung der modernen Gesellschaft. Das Problem ist jedoch, dass diese Art der Leistungssteigerung durch die extreme Miniaturisierung der einzelnen Transistoren nun an ihre physikalischen Grenzen stößt. Dies ist der Grund, warum Wissenschaftler ihre Aufmerksamkeit auf Quantencomputer richten. In diesem Artikel möchte ich über die Eigenschaften von Quantencomputern, ihre Vorteile gegenüber herkömmlichen Computern sowie ihre erwartete Rolle in der Gesellschaft der Zukunft und die Herausforderungen, die es dafür zu bewältigen gilt, sprechen.

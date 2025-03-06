@@ -5,7 +5,7 @@ description: Explore the basic concepts of quantum computers, their advantages o
   by the author as a high school student, also considers the necessity for Korea to
   prepare in advance for the quantum computing era.
 categories: [Physics, Quantum Computing]
-tags: [Quantum Computing]
+tags: []
 image: /assets/img/quantum-computer.jpg
 ---
 Over the past several decades since the 1960s, the computational power of computers has increased exponentially. This development has been achieved by miniaturizing transistors, components inside computer processors, to integrate more of them into the same area. A striking example that illustrates the rapid pace of computer performance improvement is that the latest smartphones we use today possess performance that surpasses the most powerful supercomputers of the 1990s. Given that it's virtually impossible to find a field that doesn't use computers today, computer performance is a crucial factor determining the overall pace of technological advancement in modern society. However, the problem is that as individual transistors become extremely small, this method of improving computer processing power is now reaching its physical limits. This is why scientists are focusing on quantum computers. In this article, we will discuss the characteristics of quantum computers, their advantages over existing computers, their expected roles in future society, and the challenges that need to be addressed to realize these roles.
