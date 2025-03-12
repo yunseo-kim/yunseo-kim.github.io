@@ -2,7 +2,7 @@
 title: Les lois du mouvement de Newton
 description: Examinons les lois du mouvement de Newton, la signification de ces trois lois, les définitions de la masse inertielle et de la masse gravitationnelle, ainsi que le principe d'équivalence, qui a une importance significative non seulement en mécanique classique mais aussi dans la théorie de la relativité générale ultérieure.
 categories: [Physics, Classical Dynamics]
-tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
+tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
 image: /assets/img/math-and-physics-cropped.png
 ---

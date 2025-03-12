@@ -2,7 +2,7 @@
 title: ニュートンの運動法則
 description: ニュートンの運動法則とその3つの法則の意味、慣性質量と重力質量の定義について学び、古典力学だけでなく後の一般相対性理論でも重要な意味を持つ等価原理を考察する。
 categories: [Physics, Classical Dynamics]
-tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
+tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
 image: /assets/img/math-and-physics-cropped.png
 ---

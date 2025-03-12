@@ -2,7 +2,7 @@
 title: Newton's Laws of Motion
 description: Explore Newton's laws of motion, their meanings, the definitions of inertial and gravitational mass, and the principle of equivalence, which is significant not only in classical mechanics but also in the later theory of general relativity.
 categories: [Physics, Classical Dynamics]
-tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
+tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
 image: /assets/img/math-and-physics-cropped.png
 ---

@@ -2,7 +2,7 @@
 title: 뉴턴의 운동 법칙
 description: 뉴턴의 운동 법칙 및 해당 3가지 법칙이 갖는 의미, 그리고 관성 질량과 중력 질량의 정의에 대해 알아보고, 고전 역학뿐 아니라 이후의 일반 상대성 이론에서도 중요한 의미를 갖는 등가의 원리를 살펴본다.
 categories: [Physics, Classical Dynamics]
-tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
+tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
 image: /assets/img/math-and-physics-cropped.png
 ---

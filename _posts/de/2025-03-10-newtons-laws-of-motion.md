@@ -2,7 +2,7 @@
 title: Newtons Bewegungsgesetze
 description: Wir betrachten Newtons Bewegungsgesetze und die Bedeutung der drei Gesetze, definieren die träge und die schwere Masse und untersuchen das Äquivalenzprinzip, das nicht nur in der klassischen Mechanik, sondern auch in der späteren allgemeinen Relativitätstheorie eine wichtige Rolle spielt.
 categories: [Physics, Classical Dynamics]
-tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
+tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
 image: /assets/img/math-and-physics-cropped.png
 ---

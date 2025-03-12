@@ -2,7 +2,7 @@
 title: 牛頓運動定律
 description: 探討牛頓運動定律及其三大定律的含義，並定義慣性質量和重力質量，以及檢視等效原理在經典力學和後續的廣義相對論中的重要意義。
 categories: [Physics, Classical Dynamics]
-tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
+tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
 image: /assets/img/math-and-physics-cropped.png
 ---
