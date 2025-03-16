@@ -1,6 +1,6 @@
 ---
 title: 수열과 급수
-description: 수열과 급수의 정의, 수열의 수렴과 발산, 급수의 수렴과 발산, 자연상수 e의 정의 등 미적분학의 기초 개념들을 살펴본다.
+description: 수열과 급수의 정의, 수열의 수렴과 발산, 급수의 수렴과 발산, 자연로그의 밑 e의 정의 등 미적분학의 기초 개념들을 살펴본다.
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true
@@ -82,12 +82,17 @@ $$ \lim_{n\to \infty} (t a_n) = t\left(\lim_{n\to \infty} a_n \right) \label{eqn
 
 이다. 이러한 성질을 **수렴하는 수열의 기본 성질** 또는 **극한의 기본 성질**이라 한다.
 
-## 자연상수
-**자연상수**는
+## 자연로그의 밑 $e$
+**자연로그의 밑**은
 
 $$ e := \lim_{n\to \infty} \left(1+\frac{1}{n} \right)^n \approx 2.718 $$
 
 로 정의한다. 이는 수학에서 가장 중요한 상수 중 하나라고 할 수 있다.
+
+> 유독 한국에서만 '자연상수'라는 표현이 꽤 널리 쓰이고 있으나, 이는 표준 용어가 아니다. 대한수학회에서 수학용어집에 등재한 공식 용어는 ['자연로그의 밑'](https://www.kms.or.kr/mathdict/list.html?key=kname&keyword=%EC%9E%90%EC%97%B0%EB%A1%9C%EA%B7%B8%EC%9D%98+%EB%B0%91)이며, '자연상수'라는 표현은 해당 용어집에서 찾아볼 수 없다. 심지어 국립국어원 표준국어대사전에서도 '자연상수'라는 단어는 찾아볼 수 없으며, ['자연로그'에 대한 사전 풀이](https://stdict.korean.go.kr/search/searchView.do?pageSize=10&searchKeyword=%EC%9E%90%EC%97%B0%EB%A1%9C%EA%B7%B8)에서 "흔히 e로 표시하는 특정한 수"라고만 언급하고 있다.  
+> 영어권과 일본에서도 이에 대응하는 용어는 존재하지 않으며, 영어 기준으로 'the base of the natural logarithm'이나 줄여서 'natural base', 혹은 'Euler's number'나 'the number $e$' 정도로 주로 지칭하는 듯 하다.  
+> 출처도 불분명하고 대한수학회에서 공식 용어로 인정한 적도 없을 뿐더러, 한국을 제외하면 전 세계 어디에서도 쓰지 않는 이러한 용어를 고집할 이유가 전혀 없으므로, 앞으로 여기서는 나도 '자연로그의 밑'이라고 지칭하거나 그냥 $e$라고 표기하겠다.
+{: .prompt-tip }
 
 ## 급수
 수열

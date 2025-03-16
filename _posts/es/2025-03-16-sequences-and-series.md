@@ -1,6 +1,6 @@
 ---
 title: Sucesiones y series
-description: Exploramos conceptos básicos del cálculo como la definición de sucesiones y series, convergencia y divergencia de sucesiones, convergencia y divergencia de series, y la definición del número e.
+description: Exploramos conceptos básicos del cálculo como la definición de sucesiones y series, convergencia y divergencia de sucesiones, convergencia y divergencia de series, y la definición del número e como base del logaritmo natural.
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true
@@ -8,11 +8,11 @@ image: /assets/img/math-and-physics-cropped.png
 ---
 
 ## Sucesiones
-En cálculo, una **sucesión (sequence)** generalmente se refiere a una sucesión infinita. Es decir, una sucesión es una función definida en el conjunto de los **números naturales (natural numbers)**
+En cálculo, una **sucesión (sequence)** generalmente se refiere a una sucesión infinita. Es decir, una sucesión es una función definida en el conjunto de todos los **números naturales (natural numbers)**
 
 $$ \mathbb{N} := \{1,2,3,\dots\} $$
 
-Si los valores de esta función son números reales, se llama 'sucesión real', si son números complejos, 'sucesión compleja', si son puntos, 'sucesión de puntos', si son matrices, 'sucesión de matrices', si son funciones, 'sucesión de funciones', si son conjuntos, 'sucesión de conjuntos', etc., pero todos estos pueden denominarse simplemente 'sucesión'.
+Si los valores de esta función son números reales, se llama 'sucesión real', si son números complejos, 'sucesión compleja', si son puntos, 'sucesión de puntos', si son matrices, 'sucesión de matrices', si son funciones, 'sucesión de funciones', si son conjuntos, 'sucesión de conjuntos', etc., pero todos estos pueden ser simplemente referidos como 'sucesión'.
 
 Normalmente, para el **cuerpo de los números reales (the field of real numbers)** $\mathbb{R}$, en una sucesión $\mathbf{a}: \mathbb{N} \to \mathbb{R}$, se denota
 
@@ -30,7 +30,7 @@ $$ \begin{gather*}
 (a_n)_{n=1}^{\infty}, \qquad (a_n)
 \end{gather*} $$
 
-> *En el proceso de definir una sucesión, en lugar del conjunto de todos los números naturales $\mathbb{N}$ como dominio, se puede usar el conjunto de enteros no negativos
+> *En el proceso de definir una sucesión, en lugar del conjunto de todos los números naturales $\mathbb{N}$, el dominio puede ser el conjunto de enteros no negativos
 >
 > $$ \mathbb{N}_0 := \{0\} \cup \mathbb{N} = \{0,1,2,\dots\} $$
 >
@@ -38,7 +38,7 @@ $$ \begin{gather*}
 >
 > $$\{2,3,4,\dots \}$$
 >
-> Por ejemplo, al tratar la teoría de series de potencias, es más natural que el dominio sea $\mathbb{N}_0$.
+> Por ejemplo, al tratar la teoría de las series de potencias, es más natural que el dominio sea $\mathbb{N}_0$.
 {: .prompt-info }
 
 ## Convergencia y divergencia
@@ -61,14 +61,14 @@ Si cada término de la sucesión $(a_n)$ crece indefinidamente, se escribe
 
 $$ \lim_{n\to \infty} a_n = \infty $$
 
-y se dice que *diverge a infinito positivo*. De manera similar, si cada término de la sucesión $(a_n)$ decrece indefinidamente, se escribe
+y se dice que *diverge a más infinito*. De manera similar, si cada término de la sucesión $(a_n)$ decrece indefinidamente, se escribe
 
 $$ \lim_{n\to \infty} a_n = -\infty $$
 
-y se dice que *diverge a infinito negativo*.
+y se dice que *diverge a menos infinito*.
 
 ## Propiedades básicas de las sucesiones convergentes
-Si las sucesiones $(a_n)$ y $(b_n)$ convergen ambas (es decir, tienen valores límite), entonces las sucesiones $(a_n + b_n)$ y $(a_n \cdot b_n)$ también convergen, y en este caso
+Si las sucesiones $(a_n)$ y $(b_n)$ convergen (es decir, tienen valores límite), las sucesiones $(a_n + b_n)$ y $(a_n \cdot b_n)$ también convergen, y en este caso
 
 $$ \lim_{n\to \infty} (a_n + b_n) = \lim_{n\to \infty} a_n + \lim_{n\to \infty} b_n \label{eqn:props_of_conv_series_1}\tag{1}$$
 
@@ -80,19 +80,24 @@ $$ \lim_{n\to \infty} (t a_n) = t\left(\lim_{n\to \infty} a_n \right) \label{eqn
 
 Estas propiedades se conocen como **propiedades básicas de las sucesiones convergentes** o **propiedades básicas del límite**.
 
-## Número e
-El **número e** se define como
+## La base e del logaritmo natural
+**La base del logaritmo natural** se define como
 
 $$ e := \lim_{n\to \infty} \left(1+\frac{1}{n} \right)^n \approx 2.718 $$
 
-Este es uno de los números más importantes en matemáticas.
+Esta es una de las constantes más importantes en matemáticas.
+
+> Aunque en Corea se usa ampliamente la expresión 'constante natural', este no es un término estándar. El término oficial registrado en el diccionario de términos matemáticos de la Sociedad Matemática de Corea es ['base del logaritmo natural'](https://www.kms.or.kr/mathdict/list.html?key=kname&keyword=%EC%9E%90%EC%97%B0%EB%A1%9C%EA%B7%B8%EC%9D%98+%EB%B0%91), y la expresión 'constante natural' no se encuentra en dicho diccionario. Incluso en el Diccionario Estándar del Instituto Nacional de la Lengua Coreana, no se puede encontrar la palabra 'constante natural', y en la [definición de diccionario de 'logaritmo natural'](https://stdict.korean.go.kr/search/searchView.do?pageSize=10&searchKeyword=%EC%9E%90%EC%97%B0%EB%A1%9C%EA%B7%B8) solo se menciona como "un número específico comúnmente denotado por e".  
+> En los países de habla inglesa y en Japón tampoco existe un término correspondiente, y en inglés generalmente se refiere como 'the base of the natural logarithm' o abreviado como 'natural base', o 'Euler's number' o 'the number $e$'.  
+> No hay razón para insistir en un término cuyo origen es incierto, que nunca ha sido reconocido oficialmente por la Sociedad Matemática de Corea, y que no se usa en ninguna parte del mundo excepto en Corea, así que de ahora en adelante aquí me referiré a él como 'la base del logaritmo natural' o simplemente lo denotaré como $e$.
+{: .prompt-tip }
 
 ## Series
 Dada una sucesión
 
 $$ \mathbf{a} = (a_1, a_2, a_3, \dots) $$
 
-la sucesión de sumas parciales
+la nueva sucesión formada por las sumas parciales de esta sucesión
 
 $$ a_1, \quad a_1 + a_2, \quad a_1 + a_2 + a_3, \quad \dots $$
 
@@ -121,8 +126,8 @@ puede representar tanto la <u>serie</u> como la <u>suma de la serie</u>, dependi
 Se dice que una serie que no converge **diverge**.
 
 ## Propiedades básicas de las series convergentes
-De las [propiedades básicas de las sucesiones convergentes](#propiedades-básicas-de-las-sucesiones-convergentes), obtenemos las siguientes propiedades básicas de las series convergentes. Para un número real $t$ y dos series convergentes $\sum a_n$, $\sum b_n$:
+De las [propiedades básicas de las sucesiones convergentes](#propiedades-básicas-de-las-sucesiones-convergentes), obtenemos las siguientes propiedades básicas de las series convergentes. Para un número real $t$ y dos series convergentes $\sum a_n$, $\sum b_n$, se cumple que
 
 $$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n $$
 
-La convergencia de una serie no se ve afectada por el cambio de un número finito de términos. Es decir, si para dos sucesiones $(a_n)$, $(b_n)$, $a_n=b_n$ excepto para un número finito de $n$, entonces la serie $\sum a_n$ converge si y solo si la serie $\sum b_n$ converge.
+La convergencia de una serie no se ve afectada por el cambio de un número finito de términos. Es decir, si para dos sucesiones $(a_n)$, $(b_n)$, $a_n=b_n$ excepto para un número finito de $n$, la serie $\sum a_n$ converge si y solo si la serie $\sum b_n$ converge.
