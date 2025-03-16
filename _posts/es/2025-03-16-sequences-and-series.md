@@ -80,7 +80,7 @@ $$ \lim_{n\to \infty} (t a_n) = t\left(\lim_{n\to \infty} a_n \right) \label{eqn
 
 Estas propiedades se conocen como **propiedades básicas de las sucesiones convergentes** o **propiedades básicas del límite**.
 
-## La base e del logaritmo natural
+## La base $e$ del logaritmo natural
 **La base del logaritmo natural** se define como
 
 $$ e := \lim_{n\to \infty} \left(1+\frac{1}{n} \right)^n \approx 2.718 $$

@@ -83,7 +83,7 @@ $$ \lim_{n\to \infty} (t a_n) = t\left(\lim_{n\to \infty} a_n \right) \label{eqn
 
 Ces propriétés sont appelées **propriétés fondamentales des suites convergentes** ou **propriétés fondamentales des limites**.
 
-## La base e du logarithme naturel
+## La base $e$ du logarithme naturel
 
 **La base du logarithme naturel** est définie par
 
