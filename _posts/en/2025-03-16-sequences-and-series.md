@@ -128,6 +128,6 @@ A series that does not converge is said to **diverge**.
 ## Basic Properties of Convergent Series
 From the [basic properties of convergent sequences](#basic-properties-of-convergent-sequences), we obtain the following basic properties of convergent series. For a real number $t$ and two convergent series $\sum a_n$, $\sum b_n$,
 
-$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n $$
+$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n \tag{4}$$
 
 The convergence of a series is not affected by changes in a finite number of terms. That is, if $a_n=b_n$ for all but finitely many $n$ in two sequences $(a_n)$, $(b_n)$, the series $\sum a_n$ converges if and only if the series $\sum b_n$ converges.

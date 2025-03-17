@@ -132,7 +132,7 @@ $$ \sum a_n $$
 ## 収束する級数の基本的性質
 [収束する数列の基本的性質](#収束する数列の基本的性質)から、次のように収束する級数の基本的性質が得られます。実数 $t$ と収束する二つの級数 $\sum a_n$、$\sum b_n$ に対して
 
-$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n $$
+$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n \tag{4}$$
 
 が成り立ちます。
 

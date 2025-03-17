@@ -128,6 +128,6 @@ Eine Reihe, die nicht konvergiert, wird als **divergent** bezeichnet.
 ## Grundlegende Eigenschaften konvergenter Reihen
 Aus den [grundlegenden Eigenschaften konvergenter Folgen](#grundlegende-eigenschaften-konvergenter-folgen) ergeben sich die folgenden grundlegenden Eigenschaften konvergenter Reihen. Für eine reelle Zahl $t$ und zwei konvergente Reihen $\sum a_n$, $\sum b_n$ gilt:
 
-$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n $$
+$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n \tag{4}$$
 
 Die Konvergenz einer Reihe wird nicht durch die Änderung einer endlichen Anzahl von Gliedern beeinflusst. Das heißt, wenn für zwei Folgen $(a_n)$, $(b_n)$ gilt, dass $a_n=b_n$ für alle $n$ außer einer endlichen Anzahl, dann ist die notwendige und hinreichende Bedingung für die Konvergenz der Reihe $\sum a_n$, dass die Reihe $\sum b_n$ konvergiert.

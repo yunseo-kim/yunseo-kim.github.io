@@ -132,7 +132,7 @@ $$ \sum a_n $$
 ## 收斂級數的基本性質
 從[收斂數列的基本性質](#收斂數列的基本性質)可以得到以下收斂級數的基本性質。對於實數 $t$ 和兩個收斂級數 $\sum a_n$, $\sum b_n$，
 
-$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n $$
+$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n \tag{4}$$
 
 成立。
 

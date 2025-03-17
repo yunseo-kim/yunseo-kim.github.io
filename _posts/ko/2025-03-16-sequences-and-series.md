@@ -132,7 +132,7 @@ $$ \sum a_n $$
 ## 수렴하는 급수의 기본 성질
 [수렴하는 수열의 기본 성질](#수렴하는-수열의-기본-성질)로부터 다음과 같이 수렴하는 급수의 기본 성질을 얻는다. 실수 $t$와 수렴하는 두 급수 $\sum a_n$, $\sum b_n$에 대하여
 
-$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n $$
+$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n \tag{4}$$
 
 이 성립한다.
 

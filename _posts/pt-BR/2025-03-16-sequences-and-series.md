@@ -128,6 +128,6 @@ Uma série que não converge é dita **divergente**.
 ## Propriedades Básicas de Séries Convergentes
 Das [propriedades básicas de sequências convergentes](#propriedades-básicas-de-sequências-convergentes), obtemos as seguintes propriedades básicas de séries convergentes. Para um número real $t$ e duas séries convergentes $\sum a_n$ e $\sum b_n$,
 
-$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n $$
+$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n \tag{4}$$
 
 A convergência de uma série não é afetada pela mudança de um número finito de termos. Ou seja, se duas sequências $(a_n)$ e $(b_n)$ são iguais exceto para um número finito de $n$, a série $\sum a_n$ converge se e somente se a série $\sum b_n$ converge.

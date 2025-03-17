@@ -135,6 +135,6 @@ Une série qui ne converge pas est dite **divergente**.
 
 À partir des [propriétés fondamentales des suites convergentes](#propriétés-fondamentales-des-suites-convergentes), on obtient les propriétés fondamentales suivantes pour les séries convergentes. Pour un nombre réel $t$ et deux séries convergentes $\sum a_n$ et $\sum b_n$,
 
-$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n $$
+$$ \sum(a_n + b_n) = \sum a_n + \sum b_n, \qquad \sum ta_n = t\sum a_n \tag{4}$$
 
 La convergence d'une série n'est pas affectée par le changement d'un nombre fini de termes. En d'autres termes, si pour deux suites $(a_n)$ et $(b_n)$, $a_n=b_n$ sauf pour un nombre fini de $n$, alors la série $\sum a_n$ converge si et seulement si la série $\sum b_n$ converge.
