@@ -10,8 +10,8 @@ image: /assets/img/math-and-physics-cropped.png
 ## TL;DR
 > - **nth-term test for divergence**: $\lim_{n\to\infty} a_n \neq 0 \Rightarrow \text{series }\sum a_n \text{ diverges}$
 > - **Convergence/divergence of geometric series**: Geometric series $\sum ar^{n-1}$
->   - converges if $|r| < 1$
->   - diverges if $|r| \geq 1$
+>   - converges if $\|r\| < 1$
+>   - diverges if $\|r\| \geq 1$
 > - **Convergence/divergence of p-series**: p-series $\sum \cfrac{1}{n^p}$
 >   - converges if $p>1$
 >   - diverges if $p\leq 1$
@@ -34,7 +34,7 @@ image: /assets/img/math-and-physics-cropped.png
 > - **Integral Test**: For a continuous, decreasing function $f: [1,\infty) \rightarrow \mathbb{R}$ with $f(x)>0$ always, the series $\sum f(n)$ converges if and only if the integral $\int_1^\infty f(x)\ dx := \lim_{b\to\infty} \int_1^b f(x)\ dx$ converges
 > - **Alternating Series Test**: An alternating series $\sum a_n$ converges if the following conditions are met:
 >   1. The signs of $a_n$ and $a_{n+1}$ are different for all $n$
->   2. $|a_n| \geq |a_{n+1}|$ for all $n$
+>   2. $\|a_n\| \geq \|a_{n+1}\|$ for all $n$
 >   3. $\lim_{n\to\infty} a_n = 0$
 > - A series that converges absolutely also converges. The converse is not true.
 {: .prompt-info }
@@ -119,8 +119,8 @@ Therefore, we know that the necessary and sufficient condition for the geometric
 
 > **Convergence/divergence of geometric series**  
 > The geometric series $\sum ar^{n-1}$
-> - converges if $|r| < 1$
-> - diverges if $|r| \geq 1$
+> - converges if $\|r\| < 1$
+> - diverges if $\|r\| \geq 1$
 {: .prompt-info }
 
 From this, we obtain
@@ -277,14 +277,14 @@ For alternating series, the following theorem discovered by the German mathemati
 > **Alternating Series Test**  
 > If
 > 1. The signs of $a_n$ and $a_{n+1}$ are different for all $n$,
-> 2. $|a_n| \geq |a_{n+1}|$ for all $n$, and
+> 2. $\|a_n\| \geq |a_{n+1}|$ for all $n$, and
 > 3. $\lim_{n\to\infty} a_n = 0$,
 >
 > then the alternating series $\sum a_n$ converges.
 {: .prompt-info }
 
 ## Absolute Convergence
-For a series $\sum a_n$, if the series $\sum |a_n|$ converges, we say that "the series $\sum a_n$ **converges absolutely**".
+For a series $\sum a_n$, if the series $\sum \|a_n\|$ converges, we say that "the series $\sum a_n$ **converges absolutely**".
 
 In this case, the following theorem holds:
 
@@ -308,7 +308,7 @@ Then we have,
 
 $$ a = a^+ - a^-, \qquad |a| = a^+ + a^- $$
 
-Since $0 \leq a^\pm \leq |a|$, by the [Comparison Test](#comparison-test), if the series $\sum |a_n|$ converges, then the series $\sum a_n^+$ and $\sum a_n^-$ also converge. Therefore, by the [basic properties of convergent series](/posts/sequences-and-series/#basic-properties-of-convergent-series),
+Since $0 \leq a^\pm \leq \|a\|$, by the [Comparison Test](#comparison-test), if the series $\sum \|a_n\|$ converges, then the series $\sum a_n^+$ and $\sum a_n^-$ also converge. Therefore, by the [basic properties of convergent series](/posts/sequences-and-series/#basic-properties-of-convergent-series),
 
 $$ \sum a_n = \sum (a_n^+ - a_n^-) = \sum a_n^+ - \sum a_n^- $$
 

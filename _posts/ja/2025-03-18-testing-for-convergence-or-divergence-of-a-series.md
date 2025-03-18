@@ -10,8 +10,8 @@ image: /assets/img/math-and-physics-cropped.png
 ## TL;DR
 > - **一般項判定法（$n$th-term test for divergence）**: $\lim_{n\to\infty} a_n \neq 0 \Rightarrow \text{級数 }\sum a_n \text{は発散}$
 > - **等比級数の収束/発散**: 等比級数 $\sum ar^{n-1}$は
->   - $|r| < 1$なら収束
->   - $|r| \geq 1$なら発散
+>   - $\|r\| < 1$なら収束
+>   - $\|r\| \geq 1$なら発散
 > - **$p$-級数の収束/発散**: $p$-級数 $\sum \cfrac{1}{n^p}$は
 >   - $p>1$なら収束
 >   - $p\leq 1$なら発散
@@ -34,7 +34,7 @@ image: /assets/img/math-and-physics-cropped.png
 > - **積分判定法（Integral Test）**: 連続関数 $f: \left[1,\infty \right) \rightarrow \mathbb{R}$が減少関数で常に $f(x)>0$のとき、級数 $\sum f(n)$が収束する必要十分条件は積分 $\int_1^\infty f(x)\ dx := \lim_{b\to\infty} \int_1^b f(x)\ dx$が収束すること
 > - **交代級数判定法（Alternating Series Test）**: 次の条件を満たす場合、交代級数 $\sum a_n$は収束する
 >   1. すべての $n$に対して $a_n$と $a_{n+1}$の符号が異なる
->   2. すべての $n$に対して $|a_n| \geq |a_{n+1}|$
+>   2. すべての $n$に対して $\|a_n\| \geq \|a_{n+1}\|$
 >   3. $\lim_{n\to\infty} a_n = 0$
 > - 絶対収束する級数は収束する。逆は成り立たない。
 {: .prompt-info }
@@ -121,8 +121,8 @@ $$ \lim_{n\to\infty} r^n = 0 \quad \Leftrightarrow \quad |r| < 1 $$
 
 > **等比級数の収束/発散**  
 > 等比級数 $\sum ar^{n-1}$は
-> - $|r| < 1$なら収束
-> - $|r| \geq 1$なら発散
+> - $\|r\| < 1$なら収束
+> - $\|r\| \geq 1$なら発散
 {: .prompt-info }
 
 これにより
@@ -282,14 +282,14 @@ $$ f(2) + \cdots + f(n+1) \leq \int_1^{n+1} f(x)\ dx \leq f(1) + \cdots + f(n) $
 
 > **交代級数判定法（Alternating Series Test）**  
 > 1. すべての $n$に対して $a_n$と $a_{n+1}$の符号が異なり、
-> 2. すべての $n$に対して $|a_n| \geq |a_{n+1}|$であり、
+> 2. すべての $n$に対して $\|a_n\| \geq \|a_{n+1}\|$であり、
 > 3. $\lim_{n\to\infty} a_n = 0$ならば、
 >
 > 交代級数 $\sum a_n$は収束します。
 {: .prompt-info }
 
 ## 絶対収束級数
-級数 $\sum a_n$に対して級数 $\sum |a_n|$が収束するとき、"級数 $\sum a_n$は**絶対収束**する（**converge absolutely**）"と言います。
+級数 $\sum a_n$に対して級数 $\sum \|a_n\|$が収束するとき、"級数 $\sum a_n$は**絶対収束**する（**converge absolutely**）"と言います。
 
 このとき次の定理が成り立ちます。
 
@@ -313,7 +313,7 @@ a^- &:= -\min\{a,0\} = \frac{1}{2}(|a| - a)
 
 $$ a = a^+ - a^-, \qquad |a| = a^+ + a^- $$
 
-を得ます。すると $0 \leq a^\pm \leq |a|$なので、[比較判定法](#比較判定法)により級数 $\sum |a_n|$が収束する場合、級数 $\sum a_n^+$と $\sum a_n^-$もすべて収束し、したがって[収束する級数の基本的性質](/posts/sequences-and-series/#収束する級数の基本的性質)により
+を得ます。すると $0 \leq a^\pm \leq \|a\|$なので、[比較判定法](#比較判定法)により級数 $\sum \|a_n\|$が収束する場合、級数 $\sum a_n^+$と $\sum a_n^-$もすべて収束し、したがって[収束する級数の基本的性質](/posts/sequences-and-series/#収束する級数の基本的性質)により
 
 $$ \sum a_n = \sum (a_n^+ - a_n^-) = \sum a_n^+ - \sum a_n^- $$
 

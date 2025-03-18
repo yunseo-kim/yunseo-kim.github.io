@@ -10,8 +10,8 @@ image: /assets/img/math-and-physics-cropped.png
 ## TL;DR
 > - **Teste do termo geral (n-ésimo termo) para divergência**: $\lim_{n\to\infty} a_n \neq 0 \Rightarrow \text{a série }\sum a_n \text{ diverge}$
 > - **Convergência/divergência da série geométrica**: A série geométrica $\sum ar^{n-1}$
->   - converge se $|r| < 1$
->   - diverge se $|r| \geq 1$
+>   - converge se $\|r\| < 1$
+>   - diverge se $\|r\| \geq 1$
 > - **Convergência/divergência da série p**: A série p $\sum \cfrac{1}{n^p}$
 >   - converge se $p>1$
 >   - diverge se $p\leq 1$
@@ -34,7 +34,7 @@ image: /assets/img/math-and-physics-cropped.png
 > - **Teste da integral**: Para uma função contínua e decrescente $f: [1,\infty) \rightarrow \mathbb{R}$ com $f(x)>0$ para todo $x$, a série $\sum f(n)$ converge se e somente se a integral $\int_1^\infty f(x)\ dx := \lim_{b\to\infty} \int_1^b f(x)\ dx$ converge
 > - **Teste da série alternada**: Uma série alternada $\sum a_n$ converge se as seguintes condições são satisfeitas:
 >   1. $a_n$ e $a_{n+1}$ têm sinais opostos para todo $n$
->   2. $|a_n| \geq |a_{n+1}|$ para todo $n$
+>   2. $\|a_n\| \geq \|a_{n+1}\|$ para todo $n$
 >   3. $\lim_{n\to\infty} a_n = 0$
 > - Uma série que converge absolutamente também converge. O inverso não é necessariamente verdadeiro.
 {: .prompt-info }
@@ -119,8 +119,8 @@ Portanto, sabemos que a condição necessária e suficiente para a convergência
 
 > **Convergência/divergência da série geométrica**  
 > A série geométrica $\sum ar^{n-1}$
-> - converge se $|r| < 1$
-> - diverge se $|r| \geq 1$
+> - converge se $\|r\| < 1$
+> - diverge se $\|r\| \geq 1$
 {: .prompt-info }
 
 A partir disso, obtemos
@@ -277,14 +277,14 @@ Para séries alternadas, o seguinte teorema descoberto pelo matemático alemão 
 > **Teste da série alternada**  
 > Se
 > 1. $a_n$ e $a_{n+1}$ têm sinais opostos para todo $n$,
-> 2. $|a_n| \geq |a_{n+1}|$ para todo $n$, e
+> 2. $\|a_n\| \geq \|a_{n+1}\|$ para todo $n$, e
 > 3. $\lim_{n\to\infty} a_n = 0$,
 >
 > então a série alternada $\sum a_n$ converge.
 {: .prompt-info }
 
 ## Série absolutamente convergente
-Se para uma série $\sum a_n$, a série $\sum |a_n|$ converge, dizemos que "a série $\sum a_n$ **converge absolutamente**".
+Se para uma série $\sum a_n$, a série $\sum \|a_n\|$ converge, dizemos que "a série $\sum a_n$ **converge absolutamente**".
 
 Neste caso, o seguinte teorema é válido.
 
@@ -308,7 +308,7 @@ Então, obtemos
 
 $$ a = a^+ - a^-, \qquad |a| = a^+ + a^- $$
 
-Como $0 \leq a^\pm \leq |a|$, pelo [teste de comparação](#teste-de-comparação), se a série $\sum |a_n|$ converge, as séries $\sum a_n^+$ e $\sum a_n^-$ também convergem, e portanto, pelas [propriedades básicas de séries convergentes](/posts/sequences-and-series/#propriedades-básicas-de-séries-convergentes),
+Como $0 \leq a^\pm \leq \|a\|$, pelo [teste de comparação](#teste-de-comparação), se a série $\sum \|a_n\|$ converge, as séries $\sum a_n^+$ e $\sum a_n^-$ também convergem, e portanto, pelas [propriedades básicas de séries convergentes](/posts/sequences-and-series/#propriedades-básicas-de-séries-convergentes),
 
 $$ \sum a_n = \sum (a_n^+ - a_n^-) = \sum a_n^+ - \sum a_n^- $$
 

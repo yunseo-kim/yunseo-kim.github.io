@@ -10,8 +10,8 @@ image: /assets/img/math-and-physics-cropped.png
 ## TL;DR
 > - **Test du terme général (n-ième test pour la divergence)** : $\lim_{n\to\infty} a_n \neq 0 \Rightarrow \text{la série }\sum a_n \text{ diverge}$
 > - **Convergence/divergence de la série géométrique** : La série géométrique $\sum ar^{n-1}$ 
->   - converge si $|r| < 1$
->   - diverge si $|r| \geq 1$
+>   - converge si $\|r\| < 1$
+>   - diverge si $\|r\| \geq 1$
 > - **Convergence/divergence de la série p** : La série p $\sum \cfrac{1}{n^p}$
 >   - converge si $p>1$
 >   - diverge si $p\leq 1$
@@ -34,7 +34,7 @@ image: /assets/img/math-and-physics-cropped.png
 > - **Test de l'intégrale (Integral Test)** : Pour une fonction continue et décroissante $f: [1,\infty) \rightarrow \mathbb{R}$ avec $f(x)>0$ pour tout $x$, la série $\sum f(n)$ converge si et seulement si l'intégrale $\int_1^\infty f(x)\ dx := \lim_{b\to\infty} \int_1^b f(x)\ dx$ converge
 > - **Test des séries alternées (Alternating Series Test)** : Une série alternée $\sum a_n$ converge si les conditions suivantes sont satisfaites :
 >   1. $a_n$ et $a_{n+1}$ ont des signes opposés pour tout $n$
->   2. $|a_n| \geq |a_{n+1}|$ pour tout $n$
+>   2. $\|a_n\| \geq \|a_{n+1}\|$ pour tout $n$
 >   3. $\lim_{n\to\infty} a_n = 0$
 > - Une série qui converge absolument converge. La réciproque n'est pas vraie.
 {: .prompt-info }
@@ -119,8 +119,8 @@ donc on sait que la condition nécessaire et suffisante pour que la série géom
 
 > **Convergence/divergence de la série géométrique**  
 > La série géométrique $\sum ar^{n-1}$
-> - converge si $|r| < 1$
-> - diverge si $|r| \geq 1$
+> - converge si $\|r\| < 1$
+> - diverge si $\|r\| \geq 1$
 {: .prompt-info }
 
 De là, on obtient
@@ -277,12 +277,12 @@ Pour les séries alternées, le théorème suivant, découvert par le mathémati
 > **Test des séries alternées (Alternating Series Test)**  
 > Une série alternée $\sum a_n$ converge si les conditions suivantes sont satisfaites :
 > 1. $a_n$ et $a_{n+1}$ ont des signes opposés pour tout $n$,
-> 2. $|a_n| \geq |a_{n+1}|$ pour tout $n$, et
+> 2. $\|a_n\| \geq \|a_{n+1}\|$ pour tout $n$, et
 > 3. $\lim_{n\to\infty} a_n = 0$.
 {: .prompt-info }
 
 ## Série absolument convergente
-Pour une série $\sum a_n$, si la série $\sum |a_n|$ converge, on dit que "la série $\sum a_n$ **converge absolument**".
+Pour une série $\sum a_n$, si la série $\sum \|a_n\|$ converge, on dit que "la série $\sum a_n$ **converge absolument**".
 
 Dans ce cas, le théorème suivant est vrai.
 
@@ -306,7 +306,7 @@ Alors,
 
 $$ a = a^+ - a^-, \qquad |a| = a^+ + a^- $$
 
-Comme $0 \leq a^\pm \leq |a|$, par le [test de comparaison](#test-de-comparaison), si la série $\sum |a_n|$ converge, alors les séries $\sum a_n^+$ et $\sum a_n^-$ convergent également, et donc par la [propriétés fondamentales des séries convergentes](/posts/sequences-and-series/#propriétés-fondamentales-des-séries-convergentes),
+Comme $0 \leq a^\pm \leq \|a\|$, par le [test de comparaison](#test-de-comparaison), si la série $\sum \|a_n\|$ converge, alors les séries $\sum a_n^+$ et $\sum a_n^-$ convergent également, et donc par la [propriétés fondamentales des séries convergentes](/posts/sequences-and-series/#propriétés-fondamentales-des-séries-convergentes),
 
 $$ \sum a_n = \sum (a_n^+ - a_n^-) = \sum a_n^+ - \sum a_n^- $$
 
