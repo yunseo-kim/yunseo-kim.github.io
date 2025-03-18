@@ -115,7 +115,7 @@ On the other hand,
 
 $$ \lim_{n\to\infty} r^n = 0 \quad \Leftrightarrow \quad |r| < 1 $$
 
-Therefore, we know that the necessary and sufficient condition for the geometric series ($\ref{eqn:geometric_series}$) to converge is $|r| < 1$.
+Therefore, we know that the necessary and sufficient condition for the geometric series ($\ref{eqn:geometric_series}$) to converge is $\|r\| < 1$.
 
 > **Convergence/divergence of geometric series**  
 > The geometric series $\sum ar^{n-1}$
@@ -277,7 +277,7 @@ For alternating series, the following theorem discovered by the German mathemati
 > **Alternating Series Test**  
 > If
 > 1. The signs of $a_n$ and $a_{n+1}$ are different for all $n$,
-> 2. $\|a_n\| \geq |a_{n+1}|$ for all $n$, and
+> 2. $\|a_n\| \geq \|a_{n+1}\|$ for all $n$, and
 > 3. $\lim_{n\to\infty} a_n = 0$,
 >
 > then the alternating series $\sum a_n$ converges.

@@ -117,7 +117,7 @@ $$ 1 + r + \cdots + r^{n-1} = \frac{1-r^n}{1-r} = \frac{1}{1-r} - \frac{r^n}{1-r
 
 $$ \lim_{n\to\infty} r^n = 0 \quad \Leftrightarrow \quad |r| < 1 $$
 
-であるため、等比級数 ($\ref{eqn:geometric_series}$)が収束する必要十分条件は $|r| < 1$であることがわかります。
+であるため、等比級数 ($\ref{eqn:geometric_series}$)が収束する必要十分条件は $\|r\| < 1$であることがわかります。
 
 > **等比級数の収束/発散**  
 > 等比級数 $\sum ar^{n-1}$は

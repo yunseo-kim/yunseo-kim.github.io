@@ -115,7 +115,7 @@ Por outro lado,
 
 $$ \lim_{n\to\infty} r^n = 0 \quad \Leftrightarrow \quad |r| < 1 $$
 
-Portanto, sabemos que a condição necessária e suficiente para a convergência da série geométrica ($\ref{eqn:geometric_series}$) é $|r| < 1$.
+Portanto, sabemos que a condição necessária e suficiente para a convergência da série geométrica ($\ref{eqn:geometric_series}$) é $\|r\| < 1$.
 
 > **Convergência/divergência da série geométrica**  
 > A série geométrica $\sum ar^{n-1}$
