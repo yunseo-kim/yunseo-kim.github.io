@@ -308,7 +308,7 @@ Entonces obtenemos,
 
 $$ a = a^+ - a^-, \qquad |a| = a^+ + a^- $$
 
-Ahora, como $0 \leq a^\pm \leq \|a\|$, por la [prueba de comparación](#prueba-de-comparación), si la serie $\sum \|a_n\|$ converge, las series $\sum a_n^+$ y $\sum a_n^-$ también convergen, y por lo tanto, por las [propiedades básicas de series convergentes](/posts/sequences-and-series/#propiedades-básicas-de-series-convergentes),
+Ahora, como $0 \leq a^\pm \leq \|a\|$, por la [prueba de comparación](#prueba-de-comparación), si la serie $\sum \|a_n\|$ converge, las series $\sum a_n^+$ y $\sum a_n^-$ también convergen, y por lo tanto, por las [propiedades básicas de las series convergentes](/posts/sequences-and-series/#propiedades-básicas-de-las-series-convergentes),
 
 $$ \sum a_n = \sum (a_n^+ - a_n^-) = \sum a_n^+ - \sum a_n^- $$
 
