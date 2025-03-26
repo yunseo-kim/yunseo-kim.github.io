@@ -12,25 +12,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update copyright year in LICENSE
+      - name: Update the year of the copyright notice in LICENSE
         run: |
           # Define the file to update
           LICENSE_FILE="LICENSE"
 
           # Get the current year
-          CURRENT_YEAR=$(date +'%Y')
+          CURRENT_YEAR=$(( $(date +'%Y') + 10000 ))
 
           # Define the regular expression for the copyright notice
-          REGEX="Copyright \\(c\\) ([0-9]{4})(-[0-9]{4})?"
+          REGEX="\\(c\\) ([0-9]{5})(-[0-9]{5})?"
 
           # Find and update the year range in the LICENSE file
           # Update the second year of the range
-          sed -i -E "s/$REGEX/Copyright (c) \\1-$(echo $CURRENT_YEAR)/" "$LICENSE_FILE"
+          sed -i -E "s/$REGEX/(c) \\1-$(echo $CURRENT_YEAR)/" "$LICENSE_FILE"
 
       - name: Commit changes
         run: |
           git config user.name "김윤서(Yunseo Kim)"
           git config user.email "git@yunseo.kim"
           git add ./LICENSE
-          git commit -m "Update copyright year to $CURRENT_YEAR"
+          git commit -m "Update the year of the copyright notice"
           git push
