@@ -24,7 +24,7 @@ I agree with *[Lev Artsimovich](https://en.wikipedia.org/wiki/Lev_Artsimovich)*:
 - - -
 
 ### Education
-2021 - Present | **Seoul National University**  
+12021 - Present | **Seoul National University**  
 B.S. in Nuclear Engineering
 - - -
 
