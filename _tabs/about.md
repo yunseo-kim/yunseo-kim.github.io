@@ -23,7 +23,7 @@ I agree with *[Lev Artsimovich](https://en.wikipedia.org/wiki/Lev_Artsimovich)*:
 [![LinkedIn Badge](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&link=https://www.linkedin.com/in/yunseo-kim/)](https://www.linkedin.com/in/yunseo-kim/)
 - - -
 
-### Education
+### Education <img src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTgzYnlsaGZwZWhqajI5ZzR2d3I0b2NrbTYxZTdtZXR1Zmp2NXg5biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dBrXAuiJQpBTgFhHFH/giphy.gif" width=32 alt="">
 12021 - Present | **Seoul National University**  
 B.S. in Nuclear Engineering
 - - -
@@ -34,16 +34,16 @@ B.S. in Nuclear Engineering
 <!--END_SECTION:badges-->
 - - -
 
-### Code Stats <img src = "https://media.giphy.com/media/KzJkzjggfGN5Py6nkT/giphy.gif" width=32>
+### Code Stats <img src = "https://media.giphy.com/media/KzJkzjggfGN5Py6nkT/giphy.gif" width=32 alt="">
 [![Docker Pulls](https://img.shields.io/docker/pulls/yunseokim/dl-env?style=flat-square&logo=docker&logoColor=2496ED&link=https%3A%2F%2Fhub.docker.com%2Fu%2Fyunseokim)](https://hub.docker.com/u/yunseokim)
 ![GitHub User's stars](https://img.shields.io/github/stars/yunseo-kim?affiliations=OWNER%2CCOLLABORATOR&label=GitHub%20stars&logo=GitHub&style=flat-square)
 
 [![Yunseo Kim's GitHub stats](https://github-readme-stats.vercel.app/api?username=yunseo-kim&show_icons=true&include_all_commits=true&disable_animations=false&count_private=true)](https://github.com/anuraghazra/github-readme-stats)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yunseo-kim&hide=jupyter%20notebook&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
-[![Solved.ac profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=yunseo47)](https://solved.ac/yunseo47)
+[![Solved.ac profile](https://mazassumnida.wtf/api/v2/generate_badge?boj=yunseo47)](https://solved.ac/yunseo47)
 - - -
 
-### Skills & Favorite Tools <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width="32">
+### Skills & Favorite Tools <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width="32" alt="">
 
 ![Clang](https://img.shields.io/badge/-C-A8B9CC?style=flat-square&logo=C&logoColor=white)
 ![C++](https://img.shields.io/badge/-C%2B%2B-00599C?style=flat-square&logo=C%2B%2B&logoColor=white)
