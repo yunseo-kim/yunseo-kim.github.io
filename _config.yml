@@ -101,7 +101,7 @@ cdn:
 
 # the avatar on sidebar, support local or CORS resources
 avatar: 'https://avatars.githubusercontent.com/u/65203374' # '/assets/img/profile.tiff'
-social_preview_image: '/assets/img/schrodinger-cat-cropped.png'
+social_preview_image: 
 
 # boolean type, the global switch for TOC in posts.
 toc: true
