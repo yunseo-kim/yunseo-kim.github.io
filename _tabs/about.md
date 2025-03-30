@@ -40,10 +40,10 @@ B.S. in Nuclear Engineering
 
 [![Yunseo Kim's GitHub stats](https://github-readme-stats.vercel.app/api?username=yunseo-kim&show_icons=true&include_all_commits=true&disable_animations=false&count_private=true)](https://github.com/anuraghazra/github-readme-stats){: .normal }
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yunseo-kim&hide=jupyter%20notebook&layout=donut)](https://github.com/anuraghazra/github-readme-stats){: .normal }
-[![Solved.ac profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=yunseo47)](https://solved.ac/yunseo47){: .normal }
+[![Solved.ac profile](https://mazassumnida.wtf/api/v2/generate_badge?boj=yunseo47)](https://solved.ac/yunseo47){: .normal }
 - - -
 
-### Skills & Favorite Tools <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width="32">
+### Skills & Favorite Tools <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width="32" alt="">
 
 ![Clang](https://img.shields.io/badge/-C-A8B9CC?style=flat-square&logo=C&logoColor=white){: .normal }
 ![C++](https://img.shields.io/badge/-C%2B%2B-00599C?style=flat-square&logo=C%2B%2B&logoColor=white){: .normal }
