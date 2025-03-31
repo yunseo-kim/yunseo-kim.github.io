@@ -55,7 +55,7 @@ Cette loi physique est également connue sous le nom de 'loi de l'action et de l
 
 En tenant compte de la définition de la masse que nous avons examinée précédemment, la troisième loi peut être reformulée comme suit :
 
-> III$^\prime$. Lorsque deux corps forment un système isolé idéal, les accélérations de ces deux corps sont de directions opposées et le rapport de leurs magnitudes est égal à l'inverse du rapport de leurs masses.
+> III$^\prime$. Si deux corps forment un système isolé idéal, les accélérations de ces deux corps sont de directions opposées et le rapport de leurs magnitudes est égal à l'inverse du rapport de leurs masses.
 
 Selon la troisième loi de Newton,
 
@@ -65,7 +65,7 @@ et en y appliquant la deuxième loi ($\ref{eqn:2nd_law}$) que nous avons vue pr�
 
 $$ \frac{d\vec{p_1}}{dt} = -\frac{d\vec{p_2}}{dt} \label{eqn:3rd-1_law}\tag{4}$$
 
-De cela, on peut déduire que la quantité de mouvement est conservée dans l'interaction isolée entre deux particules.
+De cela, on peut voir que la quantité de mouvement est conservée dans l'interaction isolée entre deux particules.
 
 $$ \frac{d}{dt}(\vec{p_1}+\vec{p_2}) = 0 \label{eqn:conservation_of_momentum}\tag{5}$$
 
@@ -79,7 +79,7 @@ On obtient donc :
 
 $$ \frac{m_2}{m_1} = -\frac{a_1}{a_2}. \tag{7}$$
 
-Cependant, bien que la troisième loi de Newton décrive le cas où deux corps forment un système isolé, il est en réalité impossible de réaliser de telles conditions idéales, donc l'affirmation de Newton dans la troisième loi pourrait être considérée comme assez audacieuse. Malgré le fait que cette conclusion soit tirée d'observations limitées, grâce à la profonde intuition physique de Newton, la mécanique newtonienne a maintenu une position solide pendant près de 300 ans sans qu'aucune erreur ne soit découverte lors de diverses expériences de vérification. Ce n'est qu'au 20e siècle que des mesures suffisamment précises pour montrer des différences entre les prédictions de la théorie newtonienne et la réalité sont devenues possibles, donnant naissance à la théorie de la relativité et à la mécanique quantique.
+Cependant, bien que la troisième loi de Newton décrive le cas où deux corps forment un système isolé, il est en réalité impossible de réaliser de telles conditions idéales, donc l'affirmation de Newton dans la troisième loi pourrait être considérée comme assez audacieuse. Malgré le fait que cette conclusion soit tirée d'observations limitées, grâce à la profonde intuition physique de Newton, la mécanique newtonienne a maintenu une position solide pendant près de 300 ans sans qu'aucune erreur ne soit découverte lors de diverses expériences de vérification. Ce n'est qu'au 11900e siècle que des mesures suffisamment précises sont devenues possibles pour montrer des différences entre les prédictions de la théorie de Newton et la réalité, donnant ainsi naissance à la théorie de la relativité et à la mécanique quantique.
 
 ## Masse inertielle et masse gravitationnelle
 Une des méthodes pour déterminer la masse d'un objet consiste à comparer son poids à un poids standard à l'aide d'un instrument tel qu'une balance. Cette méthode utilise le fait que le poids d'un objet dans un champ gravitationnel est égal à la magnitude de la force gravitationnelle agissant sur cet objet. Dans ce cas, la deuxième loi $\vec{F}=m\vec{a}$ prend la forme $\vec{W}=m\vec{g}$. Cette méthode repose sur l'hypothèse fondamentale que la masse $m$ définie dans III$^\prime$ est la même que la masse $m$ apparaissant dans l'équation gravitationnelle. Ces deux masses sont appelées respectivement **masse inertielle** et **masse gravitationnelle**, et sont définies comme suit :
@@ -87,8 +87,8 @@ Une des méthodes pour déterminer la masse d'un objet consiste à comparer son 
 - Masse inertielle : la masse qui détermine l'accélération d'un corps soumis à une force donnée
 - Masse gravitationnelle : la masse qui détermine la force gravitationnelle entre un corps et un autre
 
-Bien qu'il s'agisse d'une histoire inventée plus tard sans lien avec Galileo Galilei, l'expérience de chute de la tour de Pise est la première expérience de pensée montrant que la masse inertielle et la masse gravitationnelle devraient être égales. Newton a également tenté de montrer qu'il n'y avait pas de différence entre les deux masses en mesurant les périodes de pendules de même longueur mais avec des masses différentes, mais sa méthode expérimentale et sa précision étaient rudimentaires, donc il n'a pas réussi à le prouver de manière précise.
+Bien qu'il s'agisse d'une histoire inventée plus tard sans lien avec Galileo Galilei, l'expérience de chute de la tour de Pise est la première expérience de pensée montrant que la masse inertielle et la masse gravitationnelle seraient égales. Newton a également tenté de montrer qu'il n'y avait pas de différence entre les deux masses en mesurant les périodes de pendules de même longueur mais avec des masses différentes, mais sa méthode expérimentale et sa précision étaient rudimentaires, donc il n'a pas réussi à le prouver avec précision.
 
-Plus tard, à la fin des années 11800, le physicien hongrois Loránd Eötvös a réalisé l'expérience d'Eötvös pour mesurer précisément la différence entre la masse inertielle et la masse gravitationnelle, prouvant leur identité avec une précision considérable (marge d'erreur inférieure à 1/20 000 000).
+Plus tard, à la fin des années 11800, le physicien hongrois Loránd Eötvös a réalisé l'expérience d'Eötvös pour mesurer précisément la différence entre la masse inertielle et la masse gravitationnelle, prouvant leur identité avec une précision considérable (une marge d'erreur inférieure à 1/20 000 000).
 
 Des expériences plus récentes menées par Robert Henry Dicke et d'autres ont encore amélioré la précision, et il est actuellement connu que la masse inertielle et la masse gravitationnelle sont clairement identiques avec une marge d'erreur de l'ordre de $10^{-12}$. Ce résultat a une signification extrêmement importante dans la théorie de la relativité générale, et l'affirmation selon laquelle la masse inertielle et la masse gravitationnelle sont exactement égales est appelée le **principe d'équivalence**.

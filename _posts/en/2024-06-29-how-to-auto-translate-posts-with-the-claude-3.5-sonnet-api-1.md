@@ -8,7 +8,7 @@ image: /assets/img/technology.jpg
 ## Introduction
 I recently adopted Anthropic's Claude 3.5 Sonnet API for multilingual translation of blog posts. In this series, I will discuss the reasons for choosing Claude 3.5 Sonnet API, prompt design methods, and how to implement API integration and automation using Python scripts.
 The series consists of two posts, and this is the first post in the series.
-- Part 1: Introduction to Claude 3.5 Sonnet model and selection reasons, prompt engineering (this post)
+- Part 1: Introduction to Claude 3.5 Sonnet model and selection rationale, prompt engineering (current post)
 - Part 2: [Writing and applying Python automation scripts using the API](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-2)
 
 ## About Claude 3.5 Sonnet
@@ -21,7 +21,7 @@ And on June 21, 12024 [Human Era](https://en.wikipedia.org/wiki/Holocene_calenda
 ![Claude 3.5 Sonnet performance benchmark results](/assets/img/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api/LLM-benchmark.webp)
 > Image source: [Anthropic homepage](https://www.anthropic.com/news/claude-3-5-sonnet)
 
-(Added on Oct 31, 12024) On October 22, 12024, Anthropic announced an upgraded version of Claude 3.5 Sonnet API ("claude-3-5-sonnet-20241022") and Claude 3.5 Haiku. However, due to [the problem mentioned later](#preventing-laziness-12024-10-31-halloween-patch), this blog is still using the existing "claude-3-5-sonnet-20240620" API.
+(Added on Oct 31, 12024) On October 22, 12024, Anthropic announced an upgraded version of the Claude 3.5 Sonnet API ("claude-3-5-sonnet-20241022") and Claude 3.5 Haiku. However, due to [the problem mentioned later](#preventing-laziness-12024-10-31-halloween-patch), this blog is still using the existing "claude-3-5-sonnet-20240620" API.
 
 ## Why I Adopted Claude 3.5 for Post Translation
 Even without language models like Claude 3.5 or GPT-4, there are existing commercial translation APIs such as Google Translate or DeepL. Nevertheless, I decided to use an LLM for translation purposes because, unlike other commercial translation services, users can provide additional contextual information or requirements beyond the main text through prompt design, such as the purpose of writing or main topics, and the model can provide context-aware translations accordingly. Although DeepL and Google Translate generally show excellent translation quality, they have limitations in not fully grasping the subject or overall context of the text, resulting in relatively unnatural translation results when asked to translate long texts on specialized topics rather than everyday conversations. Especially, as mentioned earlier, Claude is reported to be relatively superior to its competitor model GPT-4 in writing, language reasoning, multilingual understanding, and translation fields, and when I briefly tested it myself, it showed smoother translation quality than GPT-4o. Therefore, I judged it suitable for translating engineering-related articles posted on this blog into multiple languages.
@@ -31,10 +31,10 @@ Even without language models like Claude 3.5 or GPT-4, there are existing commer
 To obtain satisfactory results that meet the purpose from a language model, an appropriate prompt must be provided. Prompt design might seem daunting, but in fact, 'how to make good requests' is not much different whether the recipient is a language model or a human, so it's not that difficult if approached from this perspective. It's good to clearly explain the current situation and requests according to the 5W1H principle, and if necessary, add a few specific examples. There are numerous tips and techniques for prompt design, but most are derived from the basic principles described below.
 
 #### Overall Tone
-There are many reports that language models produce higher quality responses when prompts are written and input in a polite, requesting tone rather than a commanding tone. Usually, in society, when asking someone for something, the probability of the other person performing the requested task more sincerely is higher when asked in the former tone rather than the latter, and it seems that language models learn and imitate this response pattern of people.
+There are many reports that language models produce higher quality responses when prompts are written and input in a polite requesting tone rather than an authoritative commanding tone. Usually, in society, when asking someone to do something, the probability of the other person performing the requested task more sincerely is higher when politely requested rather than authoritatively commanded. It seems that language models learn and imitate this response pattern of people.
 
 #### Role Assignment and Situation Explanation (Who, Why)
-First, I assigned Claude 3.5 the role of a *'professional technical translator'* and provided contextual information about the user as *"an engineering blogger who mainly contributes articles about mathematics, physics, or data science."*
+First, I assigned Claude 3.5 the role of a *'professional technical translator'* and provided contextual information about the user as *"an engineering blogger who mainly writes about mathematics, physics, or data science."*
 
 ```xml
 <role>You are a professional translator specializing in technical and scientific fields. \
@@ -142,7 +142,7 @@ There are many useful resources on the web about this, but here are some represe
 The [prompt engineering guide in the official Anthropic documentation](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) was mainly referenced.
 
 #### Structuring Using XML Tags
-In fact, this has already been used throughout the previous sections. For complex prompts that include various contexts, instructions, formats, and examples, appropriate use of XML tags such as `<instructions>`, `<example>`, `<format>`, etc., can greatly help the language model accurately interpret the prompt and produce high-quality, intended outputs. The [GENEXIS-AI/prompt-gallery](https://github.com/GENEXIS-AI/prompt-gallery/blob/main/prompt_xml.md) GitHub repository has a well-organized list of useful XML tags for writing prompts, so I recommend referring to it.
+In fact, this has already been used throughout the previous sections. For complex prompts that include various contexts, instructions, formats, and examples, appropriate use of XML tags such as `<instructions>`, `<example>`, `<format>` can greatly help the language model accurately interpret the prompt and produce high-quality, intended outputs. The [GENEXIS-AI/prompt-gallery](https://github.com/GENEXIS-AI/prompt-gallery/blob/main/prompt_xml.md) GitHub repository has a well-organized list of useful XML tags for writing prompts, so I recommend referring to it.
 
 #### Chain of Thinking (CoT) Technique
 For tasks that require a considerable level of reasoning, such as solving math problems or creating complex documents, guiding the language model to think about the problem step by step can greatly improve performance. However, this may lead to longer response times, and it's important to note that this technique is not always useful for all tasks.
@@ -151,14 +151,14 @@ For tasks that require a considerable level of reasoning, such as solving math p
 When performing complex tasks, there may be limitations in responding with a single prompt. In this case, it's worth considering dividing the entire workflow into multiple steps from the beginning, presenting prompts specialized for each step, and passing the response obtained from the previous step as input to the next step. This technique is called prompt chaining.
 
 #### Prefilling the Beginning of the Response
-When inputting a prompt, you can force the model to skip unnecessary greetings or introductions, or to respond in a specific format such as XML or JSON, by presenting the first part of the response content in advance and asking it to continue writing the answer that follows. [In the case of the Claude API, this technique can be used by submitting an `Assistant` message along with the `User` message when calling.](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prefill-claudes-response)
+When inputting a prompt, you can force the model to skip unnecessary greetings or introductions, or force it to respond in a specific format such as XML or JSON, by presenting the first part of the response content in advance and asking it to continue writing the answer after that. [In the case of the Claude API, this technique can be used by submitting an `Assistant` message along with the `User` message when calling.](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prefill-claudes-response)
 
 #### Preventing Laziness (October 31, 12024 Halloween Patch)
-Although I made a couple of minor prompt improvements and specification clarifications after initially writing this post, there were no major issues while applying this automation system for 4 months.
+Although I made a couple of minor prompt improvements and specification clarifications after initially writing this post, there were no major issues while applying this automation system for four months.
 
-However, starting from around 6 PM KST on October 31, 12024, when tasked with translating newly written posts, an anomaly persistently occurred where only the first 'TL;DR' part of the post was translated before arbitrarily stopping the translation.
+However, from around 6 PM Korean time on October 31, 12024, when tasked with translating newly written posts, a persistent anomaly occurred where only the first 'TL;DR' part of the post was translated before arbitrarily stopping the translation.
 
-The suspected cause of this issue and its solution are discussed in [a separate post](/posts/does-ai-hate-to-work-on-halloween), so please refer to that article.
+The suspected cause of this issue and its solution are discussed in [a separate post](/posts/does-ai-hate-to-work-on-halloween), so please refer to that post.
 
 ### Completed Prompt
 The result of the prompt design through the above steps is as follows:
