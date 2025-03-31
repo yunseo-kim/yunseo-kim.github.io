@@ -1,17 +1,16 @@
 ---
 title: Resumen de la sintaxis de Markdown en GitHub
-description: Exploramos qué es Markdown y resumimos la sintaxis principal de Markdown
-  según GitHub Flavored Markdown para el alojamiento de blogs en GitHub Pages.
+description: Exploramos qué es Markdown y resumimos la sintaxis principal de Markdown según GitHub Flavored Markdown para el alojamiento de blogs en GitHub Pages.
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.jpg
 ---
-Para utilizar GitHub Pages, es necesario conocer la sintaxis de **markdown**.
+Para utilizar GitHub Pages, es necesario conocer la sintaxis de **Markdown**.
 Este artículo se basa en los documentos oficiales de GitHub [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) y [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ## 1. ¿Qué es Markdown?
-> **Markdown** es un lenguaje de marcado ligero basado en texto plano. Se utiliza para crear documentos con formato utilizando texto plano y se caracteriza por tener una sintaxis más sencilla y simple que los lenguajes de marcado comunes. Se convierte fácilmente a HTML y texto enriquecido (RTF), por lo que se usa ampliamente en archivos README distribuidos con software y en publicaciones en línea.
->> John Gruber creó el lenguaje Markdown en 2004, con una importante colaboración de Aaron Swartz en la sintaxis, con el objetivo de permitir que las personas puedan escribir usando un formato de texto plano fácil de leer y escribir, y opcionalmente convertirlo a XHTML (o HTML) estructuralmente válido.
+> **Markdown** es un lenguaje de marcado ligero basado en texto plano. Se utiliza para escribir documentos con formato utilizando texto plano y se caracteriza por tener una sintaxis más fácil y simple que los lenguajes de marcado comunes. Se usa ampliamente en archivos README distribuidos con software y en publicaciones en línea porque se puede convertir fácilmente a documentos con formato como HTML y texto enriquecido (RTF).  
+> John Gruber creó el lenguaje Markdown en el año 12004 del [calendario holoceno](https://en.wikipedia.org/wiki/Holocene_calendar) en colaboración significativa con Aaron Swartz en términos de sintaxis, con el objetivo de permitir que las personas puedan escribir usando un formato de texto plano fácil de leer y escribir, y opcionalmente convertirlo en XHTML (o HTML) estructuralmente válido.
 
 -[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
@@ -59,7 +58,7 @@ Hay un total de 6 niveles.
 ##### This is an H5
 ###### This is an H6
 ```
-En principio, la etiqueta H1 solo debe aparecer una vez por página, por lo que normalmente no se usa directamente al escribir publicaciones o documentos.
+En principio, la etiqueta H1 debe aparecer solo una vez por página, por lo que normalmente no se usa directamente al escribir publicaciones o documentos.
 
 ### 2.3. Énfasis
 ```
@@ -99,7 +98,7 @@ Se utiliza \>.
 >>> This is a third blockquote.
 
 ### 2.5. Citas de código
-Se utilizan \``` o \~~~.
+Se utiliza \``` o \~~~.
 ~~~
 ```
 git status
@@ -141,7 +140,7 @@ También se pueden usar enlaces de ruta relativa que apunten a otros archivos de
 ```
 
 ### 2.7. Listas no ordenadas
-Se utilizan \- o \*.
+Se utiliza \- o \*.
 ```
 - George Washington
 - John Adams
@@ -186,14 +185,14 @@ Para marcar una tarea como completada, se usa \[x].
 
 ### 2.11. Inserción de imágenes
 ```
-Método: ![(Opcional)Descripción de la imagen](url){(Opcional)Opciones adicionales}
+Método: ![(opcional)descripción de la imagen](url){(opcional)opciones adicionales}
 ![GitHub Logo](/images/logo.png)
 ![GitHub Logo](/images/logo.png){: .align-center}
 ![GitHub Logo](/images/logo.png){: width="50%" height="50%"}
 ```
 
 ### 2.12. Creación de tablas
-Se pueden crear tablas utilizando | y -.
+Se pueden crear tablas usando | y -.
 Debe dejarse una línea en blanco antes de la tabla para que se muestre correctamente.
 Se deben usar al menos tres - para que se reconozca correctamente.
 ```

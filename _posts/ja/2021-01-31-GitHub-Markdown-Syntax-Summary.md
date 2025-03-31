@@ -1,5 +1,5 @@
 ---
-title: GitHub マークダウン文法のまとめ
+title: GitHubのマークダウン文法まとめ
 description: Markdownとは何かを理解し、GitHub Pagesブログホスティングのために、GitHub Flavored Markdownを基準に主要なMarkdown文法をまとめました。
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
@@ -9,16 +9,16 @@ GitHub Pagesを活用するには、**markdown**文法について知る必要�
 GitHub公式ドキュメントの[Mastering Markdown](https://guides.github.com/features/mastering-markdown/)と[Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)を参考に作成しました。
 
 ## 1. マークダウンとは
-> **マークダウン（markdown）**は、プレーンテキストベースの軽量マークアップ言語です。プレーンテキストで書式付きの文書を作成するのに使用され、一般的なマークアップ言語に比べて文法が簡単で簡潔なのが特徴です。HTMLやリッチテキスト（RTF）などの書式付き文書に簡単に変換できるため、アプリケーションソフトウェアと一緒に配布されるREADMEファイルやオンライン投稿などによく使用されます。
->> ジョン・グルーバーは2004年に、文法面でアーロン・スワーツとの重要な協力を通じてマークダウン言語を作成しました。人々が読みやすく書きやすいプレーンテキストフォーマットを使用して書くことができ、構造的に有効なXHTML（またはHTML）に選択的に変換できるようにすることが目標です。
+> **マークダウン（markdown）**は、一般的なテキストベースの軽量マークアップ言語です。一般的なテキストで書式付きの文書を作成するのに使用され、一般的なマークアップ言語に比べて文法が簡単で簡潔なのが特徴です。HTMLやリッチテキスト（RTF）などの書式付き文書に簡単に変換できるため、アプリケーションソフトウェアと一緒に配布されるREADMEファイルやオンライン投稿などによく使用されます。  
+> ジョン・グルーバーは[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar)12004年に、文法面でアーロン・シュワルツと重要な協力を通じてマークダウン言語を作成しました。人々が読みやすく書きやすいプレーンテキストフォーマットを使用して書くことができ、構造的に有効なXHTML（またはHTML）に選択的に変換できるようにすることが目標です。
 
 -[ウィキペディア、マークダウン](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. マークダウン文法
-マークダウンには定められた標準がないため、細かい文法は使用場所によって少しずつ異なる場合があります。ここでまとめたマークダウン文法は[GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)基準です。
+マークダウンには定められた標準がないため、詳細な文法は使用場所によって少しずつ異なる場合があります。ここでまとめたマークダウン文法は[GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)基準です。
 
 ### 2.1. 改行、段落の区切り
-マークダウンでは、エンターキー1回は改行として認識されません。
+マークダウンではエンターキー1回は改行として認識されません。
 ~~~
 1つ目の文。
 2つ目の文。
@@ -112,7 +112,7 @@ git add
 git commit
 ```
 
-プログラミング言語を指定して、シンタックスハイライトを有効にすることもできます。
+プログラミング言語を指定して、構文強調表示を有効にすることもできます。
 ~~~
 ```ruby
 require 'redcarpet'
@@ -194,7 +194,7 @@ puts markdown.to_html
 ### 2.12. 表の作成
 |と-を使用して表を作成できます。
 表の前に1行空けておく必要があります。
-少なくとも3つ以上の-を使用しないと正常に認識されません。
+少なくとも3つ以上の-を使用する必要があります。
 ```
 
 | Left-aligned | Center-aligned | Right-aligned |

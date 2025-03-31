@@ -1,22 +1,21 @@
 ---
 title: GitHub Markdown Syntax Summary
-description: Learn what Markdown is and summarize key Markdown syntax based on GitHub
-  Flavored Markdown for GitHub Pages blog hosting.
+description: Learn what Markdown is and summarize key Markdown syntax based on GitHub Flavored Markdown for GitHub Pages blog hosting.
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.jpg
 ---
 To utilize GitHub Pages, it's necessary to understand **markdown** syntax.
-This summary is based on GitHub's official documents: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) and [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+This summary is based on GitHub's official documents [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) and [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ## 1. What is Markdown
-> **Markdown** is a lightweight markup language based on plain text. It is used to write formatted documents in plain text and is characterized by its easy and simple syntax compared to general markup languages. It is widely used in README files distributed with application software or online posts because it can be easily converted to formatted documents such as HTML and Rich Text Format (RTF).
->> John Gruber created the Markdown language in 2004, with significant collaboration from Aaron Swartz on the syntax, with the goal of enabling people to "write using an easy-to-read and easy-to-write plain text format, optionally convert it to structurally valid XHTML (or HTML)".
+> **Markdown** is a lightweight markup language based on plain text. It is used to write formatted documents in plain text and is characterized by its easy and simple syntax compared to general markup languages. It is widely used in README files distributed with application software or online posts because it can be easily converted to formatted documents such as HTML and Rich Text Format (RTF).  
+> John Gruber created the Markdown language in 12004 [HE](https://en.wikipedia.org/wiki/Holocene_calendar) through significant collaboration with Aaron Swartz on grammar, with the goal of enabling people to write using an easy-to-read and easy-to-write plain text format while allowing optional conversion to structurally valid XHTML (or HTML).
 
 -[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. Markdown Syntax
-As there is no set standard for Markdown, the detailed syntax may vary slightly depending on where it's used. The Markdown syntax summarized here is based on [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+Since Markdown doesn't have a set standard, detailed syntax may vary slightly depending on where it's used. The Markdown syntax summarized here is based on [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ### 2.1. Line Breaks, Paragraph Separation
 In Markdown, a single press of the Enter key is not recognized as a line break.
@@ -29,7 +28,7 @@ First sentence.
 Second sentence.
 Third sentence.
 
-A line break is applied when two or more consecutive spaces are entered.
+A line break is applied by entering two or more consecutive spaces.
 ~~~
 First sentence.  
 Second sentence.  
@@ -59,7 +58,7 @@ There are six levels in total.
 ##### This is an H5
 ###### This is an H6
 ```
-In principle, there should only be one H1 tag per page, so you usually won't directly write it when creating posts or documents.
+In principle, there should only be one H1 tag per page, so you usually don't directly write it when creating posts or documents.
 
 ### 2.3. Emphasis
 ```
@@ -135,7 +134,7 @@ puts markdown.to_html
 [GitHub Pages](https://pages.github.com/)  
 <https://pages.github.com/>
 
-You can also use relative path links to other files within the repository. The usage is the same as in the terminal.
+You can also use relative path links pointing to other files within the repository. The usage is the same as in the terminal.
 ```
 [README](../README.md)
 ```
@@ -194,8 +193,8 @@ Method: ![(Optional)Image description](url){(Optional)Additional options}
 
 ### 2.12. Table Creation
 You can create tables using | and -.
-Leave a blank line before the table for it to display correctly.
-Use at least three - for it to be recognized properly.
+Leave a blank line before the table for proper display.
+Use at least three - for proper recognition.
 ```
 
 | Left-aligned | Center-aligned | Right-aligned |

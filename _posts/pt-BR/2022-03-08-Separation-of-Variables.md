@@ -1,7 +1,6 @@
 ---
 title: Método de Separação de Variáveis
-description: Vamos explorar o método de separação de variáveis e apresentar alguns
-  exemplos relacionados.
+description: Aprenda sobre o método de separação de variáveis e veja alguns exemplos relacionados.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
@@ -10,7 +9,7 @@ image: /assets/img/math-and-physics-cropped.png
 ## Método de Separação de Variáveis
 **Equação separável**: Uma equação que pode ser expressa na forma $g(y)y'=f(x)$ através de manipulação algébrica.
 
-Integrando ambos os lados de uma equação separável $g(y)y'=f(x)$ em relação a $x$, obtemos:
+Integrando ambos os lados da equação separável $g(y)y'=f(x)$ em relação a $x$, obtemos:
 
 $$ \int g(y)y'dx = \int f(x)dx + c $$ 
 
@@ -18,10 +17,10 @@ Como $y'dx=dy$, temos:
 
 $$ \int g(y)dy = \int f(x)dx + c $$
 
-Assim, podemos separar a expressão em termos de $x$ e a expressão em termos de $y$ nos lados direito e esquerdo, respectivamente. Se $f$ e $g$ forem funções contínuas, podemos calcular essas integrais para obter a solução geral da equação diferencial dada. Este método de resolução é chamado de **método de separação de variáveis**.
+Assim, podemos separar as expressões em termos de $x$ e $y$ nos lados direito e esquerdo, respectivamente. Se $f$ e $g$ forem funções contínuas, podemos calcular essas integrais para obter a solução geral da equação diferencial dada. Este método de resolução é chamado de **método de separação de variáveis**.
 
 ## Exemplo de Modelagem: Datação por Radiocarbono
-Oetzi é uma múmia do Neolítico descoberta nos Alpes de Oetztal em 1991. Se a proporção de carbono-14 em relação ao carbono-12 nesta múmia é 52,5% da de um organismo vivo, aproximadamente quando Oetzi viveu e morreu?
+Oetzi é uma múmia do Neolítico descoberta nos Alpes de Oetztal em 11991 HE (Era Humana). Se a proporção de carbono-14 em relação ao carbono-12 nesta múmia é 52,5% da de um organismo vivo, aproximadamente quando Oetzi viveu e morreu?
 > A proporção de carbono-14 radioativo em relação ao carbono-12 é constante na atmosfera e nos organismos vivos. Quando um organismo morre, a absorção de carbono-14 pela respiração e alimentação cessa, mas o decaimento do carbono-14 continua, reduzindo assim a proporção de carbono radioativo. Portanto, a idade de um fóssil pode ser estimada comparando a proporção de carbono radioativo no fóssil com a proporção na atmosfera. A meia-vida do carbono-14 é de 5715 anos.
 {: .prompt-info }
 
@@ -48,7 +47,7 @@ $$ e^{kt}=e^{-.0.0001213t}=0.525$$
 
 $$ t=\frac {\log 0.525}{-0.0001213}=5312.$$
 
-$$ \therefore \text{Aproximadamente 5300 anos atrás}. $$
+$$ \therefore \text{Estima-se que morreu há cerca de 5310 anos, por volta de 6680 HE}. $$
 
 ## Exemplo de Modelagem: Problema de Mistura
 Inicialmente, um tanque contém 1000L de água com 10kg de sal dissolvido. Uma solução salina flui para o tanque a uma taxa de 10L por minuto, contendo 0,2kg de sal por litro. A solução no tanque é bem misturada e mantida uniforme, e esta solução salina flui para fora do tanque a uma taxa de 10L por minuto. Encontre a quantidade de sal $y(t)$ no tanque no tempo $t$.
@@ -77,7 +76,7 @@ $$ \therefore y(t)=200-190e^{-0.01t} $$
 Isso significa que, na situação dada, a quantidade de sal no tanque se aproxima e converge exponencialmente para 200kg.
 
 ## Exemplo de Modelagem: Lei de Resfriamento de Newton
-Durante o inverno, a temperatura diurna de um edifício de escritórios é mantida a 20°C. O aquecimento é desligado às 22h e ligado novamente às 6h. Em uma determinada madrugada, às 2h, a temperatura interna do edifício era de 17,4°C. A temperatura externa era de 10°C às 22h e caiu para 4°C às 6h. Qual era a temperatura interna do edifício quando o aquecimento foi ligado às 6h?
+Durante o inverno, a temperatura diurna de um edifício de escritórios é mantida a 20°C. O aquecimento é desligado às 22h e ligado novamente às 6h. Em uma determinada madrugada, às 2h, a temperatura interna do edifício era de 17,4°C. A temperatura externa era de 10°C às 22h e caiu para 4°C às 6h. Qual era a temperatura interna do edifício às 6h quando o aquecimento foi ligado?
 > **Lei de Resfriamento de Newton**  
 > A taxa de variação da temperatura T de um objeto em relação ao tempo é proporcional à diferença entre a temperatura do objeto e a temperatura do ambiente ao seu redor.
 {: .prompt-info }
@@ -88,7 +87,7 @@ Seja $T(t)$ a temperatura interna do edifício e $T_A$ a temperatura externa. En
 $$ \frac {dT}{dt}=k(T-T_A) $$
 
 ### 2. Solução Geral
-Como sabemos apenas que $T_A$ varia entre 10°C e 4°C, mas não sabemos exatamente que valores assume, não podemos resolver a equação estabelecida anteriormente. Nestes casos, *pode ser útil tentar resolver simplificando a situação para um problema mais fácil*. A média dos dois valores conhecidos é 7°C, então vamos assumir que a função desconhecida $T_A$ é uma função constante $T_A=7$. Mesmo que não seja exato, podemos esperar obter um valor aproximado da temperatura interna do edifício $T$ às 6h, que é o que queremos determinar.
+Sabemos apenas que $T_A$ varia entre 10°C e 4°C, mas não sabemos exatamente que valores assume, então não podemos resolver a equação estabelecida anteriormente. Nestes casos, *pode ser útil simplificar a situação para um problema mais fácil*. A média dos dois valores conhecidos é 7°C, então vamos assumir que a função desconhecida $T_A$ é uma função constante $T_A=7$. Mesmo que não seja exato, podemos esperar obter um valor aproximado para a temperatura interna do edifício $T$ às 6h, que é o que queremos determinar.
 
 Para a constante $T_A=7$, a equação diferencial ordinária estabelecida anteriormente é separável. Separando as variáveis, integrando e aplicando a função exponencial, podemos obter a solução geral:
 

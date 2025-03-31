@@ -10,8 +10,8 @@ Für die Nutzung von GitHub Pages ist es notwendig, die **Markdown**-Syntax zu k
 Dieser Beitrag wurde unter Bezugnahme auf die offiziellen GitHub-Dokumente [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) und [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) verfasst.
 
 ## 1. Was ist Markdown?
-> **Markdown** ist eine leichtgewichtige Auszeichnungssprache, die auf normalem Text basiert. Sie wird verwendet, um formatierte Dokumente mit normalem Text zu erstellen und zeichnet sich durch eine einfachere und unkompliziertere Syntax im Vergleich zu herkömmlichen Auszeichnungssprachen aus. Da sie leicht in HTML und Rich Text Format (RTF) umgewandelt werden kann, wird sie häufig für README-Dateien, die mit Anwendungssoftware verteilt werden, oder für Online-Beiträge verwendet.
->> John Gruber entwickelte die Markdown-Sprache im Jahr 2004 in bedeutender Zusammenarbeit mit Aaron Swartz in Bezug auf die Syntax. Das Ziel war es, Menschen die Möglichkeit zu geben, in einem leicht lesbaren und schreibbaren Klartext-Format zu schreiben, das optional in strukturell gültiges XHTML (oder HTML) umgewandelt werden kann.
+> **Markdown** ist eine leichtgewichtige Auszeichnungssprache, die auf normalem Text basiert. Sie wird verwendet, um formatierte Dokumente mit einfachem Text zu erstellen und zeichnet sich durch eine einfachere und unkompliziertere Syntax im Vergleich zu herkömmlichen Auszeichnungssprachen aus. Da sie leicht in HTML und Rich Text Format (RTF) konvertiert werden kann, wird sie häufig für README-Dateien, die mit Anwendungssoftware verteilt werden, oder für Online-Beiträge verwendet.  
+> John Gruber entwickelte die Markdown-Sprache im Jahr 12004 [HE](https://en.wikipedia.org/wiki/Holocene_calendar) in bedeutender Zusammenarbeit mit Aaron Swartz in Bezug auf die Grammatik. Das Ziel war es, Menschen die Möglichkeit zu geben, in einem leicht lesbaren und schreibbaren Klartext-Format zu schreiben, das optional in strukturell gültiges XHTML (oder HTML) umgewandelt werden kann.
 
 -[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 

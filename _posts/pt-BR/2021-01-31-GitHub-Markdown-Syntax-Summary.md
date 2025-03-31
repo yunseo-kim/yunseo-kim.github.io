@@ -1,7 +1,6 @@
 ---
-title: Sintaxe Markdown do GitHub
-description: Aprenda o que é Markdown e um resumo das principais sintaxes do GitHub
-  Flavored Markdown para hospedar blogs no GitHub Pages.
+title: Resumo da sintaxe Markdown do GitHub
+description: Aprenda o que é Markdown e resuma as principais sintaxes do GitHub Flavored Markdown para hospedar blogs no GitHub Pages.
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.jpg
@@ -10,8 +9,8 @@ Para utilizar o GitHub Pages, é necessário conhecer a sintaxe **markdown**.
 Este texto foi escrito com base nos documentos oficiais do GitHub [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) e [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ## 1. O que é Markdown
-> **Markdown** é uma linguagem de marcação leve baseada em texto simples. É usada para criar documentos formatados usando texto simples e se caracteriza por ter uma sintaxe mais simples e fácil em comparação com linguagens de marcação comuns. É facilmente convertida em HTML e Rich Text Format (RTF), sendo muito utilizada em arquivos README distribuídos com software e em postagens online.
->> John Gruber criou a linguagem Markdown em 2004, com uma colaboração significativa de Aaron Swartz na sintaxe, com o objetivo de permitir que as pessoas "escrevam usando um formato de texto simples fácil de ler e escrever", e que possa ser opcionalmente convertido em XHTML (ou HTML) estruturalmente válido.
+> **Markdown** é uma linguagem de marcação leve baseada em texto simples. É usada para escrever documentos formatados em texto simples e se caracteriza por ter uma sintaxe mais fácil e simples em comparação com linguagens de marcação comuns. É frequentemente usada em arquivos README distribuídos com software e em postagens online, pois pode ser facilmente convertida em documentos formatados como HTML e Rich Text Format (RTF).  
+> John Gruber criou a linguagem Markdown em 12004 do [calendário holoceno](https://en.wikipedia.org/wiki/Holocene_calendar), com significativa colaboração de Aaron Swartz na parte sintática, com o objetivo de permitir que as pessoas escrevam usando um formato de texto simples fácil de ler e escrever, com a opção de convertê-lo em XHTML (ou HTML) estruturalmente válido.
 
 -[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
@@ -29,7 +28,7 @@ Primeira frase.
 Segunda frase.
 Terceira frase.
 
-A quebra de linha é aplicada quando dois ou mais espaços são inseridos consecutivamente.
+A quebra de linha é aplicada quando você insere dois ou mais espaços consecutivos.
 ~~~
 Primeira frase.  
 Segunda frase.  
@@ -39,7 +38,7 @@ Primeira frase.
 Segunda frase.  
 Terceira frase.
 
-Parágrafos são separados por uma linha em branco (pressionar Enter duas vezes).
+Os parágrafos são separados por uma linha em branco (pressionar Enter duas vezes).
 ~~~
 Um parágrafo.
 
@@ -50,7 +49,7 @@ Um parágrafo.
 Outro parágrafo.
 
 ### 2.2. Cabeçalhos
-Existem 6 níveis no total.
+Existem seis níveis no total.
 ```
 # This is an H1
 ## This is an H2
@@ -59,7 +58,7 @@ Existem 6 níveis no total.
 ##### This is an H5
 ###### This is an H6
 ```
-Em princípio, deve haver apenas uma tag H1 por página, então geralmente não há muitas ocasiões para usá-la diretamente ao escrever posts ou documentos.
+Em princípio, deve haver apenas uma tag H1 por página, então geralmente não há necessidade de escrevê-la diretamente ao criar posts ou documentos.
 
 ### 2.3. Ênfase
 ```
@@ -135,7 +134,7 @@ puts markdown.to_html
 [GitHub Pages](https://pages.github.com/)  
 <https://pages.github.com/>
 
-Você também pode usar links de caminho relativo para apontar para outros arquivos no repositório. O uso é o mesmo que no terminal.
+Você também pode usar links de caminho relativo para apontar para outros arquivos dentro do repositório. O uso é o mesmo que no terminal.
 ```
 [README](../README.md)
 ```

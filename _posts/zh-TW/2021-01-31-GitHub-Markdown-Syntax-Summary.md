@@ -9,13 +9,13 @@ image: /assets/img/technology.jpg
 本文參考了 GitHub 官方文件的 [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) 和 [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) 撰寫而成。
 
 ## 1. 什麼是 Markdown
-> **Markdown** 是一種輕量級的標記語言，基於純文本。它用於使用純文本編寫格式化文檔，其特點是相比一般的標記語言，語法更簡單易懂。由於可以輕鬆轉換為 HTML 和富文本（RTF）等格式化文檔，因此常用於與應用軟件一起分發的 README 文件或在線帖子等。
->> 約翰·格魯伯（John Gruber）在 2004 年與亞倫·斯沃茨（Aaron Swartz）在語法方面進行了重要合作，創造了 Markdown 語言。其目標是讓人們能夠使用易讀易寫的純文本格式進行寫作，同時可選擇性地轉換為結構上有效的 XHTML（或 HTML）。
+> **Markdown** 是一種輕量級的標記語言，基於純文本。它用於撰寫具有格式的文檔，其特點是相比一般的標記語言，語法更簡單易懂。由於可以輕鬆轉換為 HTML 和富文本（RTF）等格式文檔，因此常用於隨應用軟件分發的 README 文件或在線帖子等。  
+> 約翰·格魯伯（John Gruber）在[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar) 12004年與亞倫·斯沃茨（Aaron Swartz）在語法方面進行了重要合作，創造了 Markdown 語言。其目標是讓人們能夠使用易讀易寫的純文本格式進行寫作，同時可選擇性地轉換為結構上有效的 XHTML（或 HTML）。
 
 -[維基百科，Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. Markdown 語法
-由於 Markdown 沒有固定的標準，因此細節語法可能因使用場合而略有不同。這裡整理的 Markdown 語法是基於 [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) 標準。
+由於 Markdown 沒有固定的標準，因此不同使用場景下的細節語法可能略有不同。這裡整理的 Markdown 語法是基於 [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) 標準。
 
 ### 2.1. 換行、段落分隔
 在 Markdown 中，單次按下 Enter 鍵不會被識別為換行。
@@ -38,7 +38,7 @@ image: /assets/img/technology.jpg
 第二句話。  
 第三句話。
 
-段落與段落之間用空行（連按兩次 Enter 鍵）分隔。
+段落與段落之間用空行（連按兩次 Enter 鍵）來分隔。
 ~~~
 一個段落。
 
@@ -49,7 +49,7 @@ image: /assets/img/technology.jpg
 另一個段落。
 
 ### 2.2. 標題（Headers）
-共有 6 個級別。
+共有 6 個等級。
 ```
 # This is an H1
 ## This is an H2
@@ -161,7 +161,7 @@ puts markdown.to_html
 2. James Monroe
 3. John Quincy Adams
 
-### 2.9. 嵌套列表
+### 2.9. 巢狀列表
 ```
 1. First list item
    - First nested list item
@@ -192,7 +192,7 @@ puts markdown.to_html
 ```
 
 ### 2.12. 創建表格
-使用 | 和 - 可以創建表格。
+使用 | 和 - 來創建表格。
 表格前需要留一個空行才能正確顯示。
 至少需要使用 3 個以上的 - 才能被正確識別。
 ```

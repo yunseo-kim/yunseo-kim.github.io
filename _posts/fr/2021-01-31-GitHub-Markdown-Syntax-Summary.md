@@ -1,26 +1,24 @@
 ---
 title: Résumé de la syntaxe Markdown de GitHub
-description: Nous avons examiné ce qu'est Markdown et résumé les principales syntaxes
-  Markdown basées sur GitHub Flavored Markdown pour l'hébergement de blogs GitHub
-  Pages.
+description: Nous avons examiné ce qu'est Markdown et résumé les principales syntaxes Markdown basées sur GitHub Flavored Markdown pour l'hébergement de blogs GitHub Pages.
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.jpg
 ---
 Pour utiliser GitHub Pages, il est nécessaire de connaître la syntaxe **markdown**.
-Ce texte a été rédigé en se référant aux documents officiels de GitHub [Maîtriser Markdown](https://guides.github.com/features/mastering-markdown/) et [Syntaxe de base pour l'écriture et la mise en forme](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+Cet article a été rédigé en se référant aux documents officiels de GitHub [Maîtriser Markdown](https://guides.github.com/features/mastering-markdown/) et [Syntaxe de base pour l'écriture et la mise en forme](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ## 1. Qu'est-ce que Markdown
-> **Markdown** est un langage de balisage léger basé sur du texte brut. Il est utilisé pour créer des documents formatés en texte brut et se caractérise par une syntaxe plus simple et plus facile que les langages de balisage ordinaires. Il est largement utilisé pour les fichiers README distribués avec les logiciels d'application et les publications en ligne car il peut être facilement converti en documents formatés tels que HTML et Rich Text Format (RTF).
->> John Gruber a créé le langage Markdown en 2004 avec une collaboration significative d'Aaron Swartz sur la syntaxe, dans le but de permettre aux gens d'écrire en utilisant un format de texte brut facile à lire et à écrire, avec la possibilité optionnelle de le convertir en XHTML (ou HTML) structurellement valide.
+> **Markdown** est un langage de balisage léger basé sur du texte brut. Il est utilisé pour créer des documents formatés en texte brut et se caractérise par une syntaxe plus simple et plus facile que les langages de balisage ordinaires. Comme il peut être facilement converti en documents formatés tels que HTML et Rich Text Format (RTF), il est largement utilisé pour les fichiers README distribués avec les logiciels d'application et les publications en ligne.  
+> John Gruber a créé le langage Markdown en [12004 de l'ère humaine](https://en.wikipedia.org/wiki/Holocene_calendar) en collaboration significative avec Aaron Swartz sur le plan grammatical, avec pour objectif de permettre aux gens d'écrire en utilisant un format de texte brut facile à lire et à écrire, tout en permettant une conversion optionnelle en XHTML (ou HTML) structurellement valide.
 
--[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
+-[Wikipédia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. Syntaxe Markdown
 Comme il n'existe pas de norme établie pour Markdown, la syntaxe détaillée peut varier légèrement selon l'utilisation. La syntaxe Markdown résumée ici est basée sur [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ### 2.1. Saut de ligne, séparation de paragraphe
-Dans Markdown, appuyer une fois sur la touche Entrée n'est pas reconnu comme un saut de ligne.
+Dans Markdown, une seule pression de la touche Entrée n'est pas reconnue comme un saut de ligne.
 ~~~
 Première phrase.
 Deuxième phrase.
@@ -30,7 +28,7 @@ Première phrase.
 Deuxième phrase.
 Troisième phrase.
 
-Le saut de ligne est appliqué en entrant deux espaces consécutifs ou plus.
+Un saut de ligne est appliqué en entrant deux espaces consécutifs ou plus.
 ~~~
 Première phrase.  
 Deuxième phrase.  
@@ -40,7 +38,7 @@ Première phrase.
 Deuxième phrase.  
 Troisième phrase.
 
-Les paragraphes sont séparés par une ligne vide (appuyer deux fois sur la touche Entrée).
+Les paragraphes sont séparés par une ligne vide (deux pressions de la touche Entrée).
 ~~~
 Un paragraphe.
 
@@ -51,7 +49,7 @@ Un paragraphe.
 Un autre paragraphe.
 
 ### 2.2. En-têtes
-Il y a 6 niveaux au total.
+Il y a six niveaux au total.
 ```
 # Ceci est un H1
 ## Ceci est un H2
@@ -62,7 +60,7 @@ Il y a 6 niveaux au total.
 ```
 En principe, il ne devrait y avoir qu'une seule balise H1 par page, donc on n'a généralement pas besoin de l'écrire directement lors de la rédaction d'un article ou d'un document.
 
-### 2.3. Accentuation
+### 2.3. Emphase
 ```
 *Ce texte est en italique*
 _Ceci est aussi en italique_
@@ -187,7 +185,7 @@ Pour marquer une tâche comme terminée, utilisez \[x].
 
 ### 2.11. Insertion d'image
 ```
-Méthode : ![(optionnel)Description de l'image](url){(optionnel)options supplémentaires}
+Méthode : ![(optionnel)description de l'image](url){(optionnel)options supplémentaires}
 ![Logo GitHub](/images/logo.png)
 ![Logo GitHub](/images/logo.png){: .align-center}
 ![Logo GitHub](/images/logo.png){: width="50%" height="50%"}
@@ -200,12 +198,12 @@ Il faut utiliser au moins trois - pour que le tableau soit correctement reconnu.
 ```
 
 | Aligné à gauche | Centré | Aligné à droite |
-| :---            |  :---: |           ---:  |
-| git status      | git status | git status  |
-| git diff        | git diff   | git diff    |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
 ```
 
 | Aligné à gauche | Centré | Aligné à droite |
-| :---            |  :---: |           ---:  |
-| git status      | git status | git status  |
-| git diff        | git diff   | git diff    |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
