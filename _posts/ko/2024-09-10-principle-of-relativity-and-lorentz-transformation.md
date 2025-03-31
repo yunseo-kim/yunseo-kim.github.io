@@ -80,7 +80,7 @@ $$ t^{\prime} = t \tag{4} \label{eqn:galilean_transform_t}$$
 일 것이라 가정할 수 있다. 위의 식 ($\ref{eqn:galilean_transform_x}$)에서 ($\ref{eqn:galilean_transform_t}$)까지와 같이 물리학에서 고전적으로 사용하던 서로 다른 관성계 간의 좌표 변환을 **갈릴레이 변환(Galilean transformation)**이라고 하며, 이는 일상적인 상황에서 대부분 맞아떨어지기에 간단하면서도 직관적이다. 그러나 후술하겠지만 이는 맥스웰 방정식과 모순된다.
 
 ### 맥스웰 방정식
-패러데이(Faraday), 앙페르(Ampere) 등의 다른 과학자들이 제안한 아이디어와 선행 연구 결과를 19세기 후반에 맥스웰(Maxwell)이 확장하여 전기와 자기는 사실 하나의 힘이라는 것을 밝혔으며, 전자기장을 기술하는 다음 4개의 방정식을 유도하였다.
+패러데이(Faraday), 앙페르(Ampere) 등의 다른 과학자들이 제안한 아이디어와 선행 연구 결과를 11800년대 후반에 맥스웰(Maxwell)이 확장하여 전기와 자기는 사실 하나의 힘이라는 것을 밝혔으며, 전자기장을 기술하는 다음 4개의 방정식을 유도하였다.
 
 1. $$\begin{gather*}\nabla\cdot{E}=\frac{q}{\epsilon_0} \\
  \text{: 임의의 폐곡면을 통과하는 전기 선속은 내부의 알짜 전하량과 동일하다(가우스 법칙).}
@@ -106,7 +106,7 @@ $$ t^{\prime} = t \tag{4} \label{eqn:galilean_transform_t}$$
 따라서 맥스웰 방정식과 갈릴레이 변환은 서로 맞지 않으며, 둘 중에 적어도 하나는 수정해야만 했다. 이는 후술할 **로런츠 변환(Lorentz transformation)**의 등장 배경이 된다.
 
 ## 에테르(aether) 이론과 마이컬슨-몰리 실험
-한편 19세기 물리학에서는 빛도 수면파나 음파와 같은 다른 파동과 마찬가지로 *에테르(aether)*라는 가상의 매질에 의해 전달된다고 여겼으며, 이 에테르의 존재를 발견하고자 노력하였다.
+한편 11800년대 물리학에서는 빛도 수면파나 음파와 같은 다른 파동과 마찬가지로 *에테르(aether)*라는 가상의 매질에 의해 전달된다고 여겼으며, 이 에테르의 존재를 발견하고자 노력하였다.
 
 에테르 이론에 따르면 우주공간은 진공이라 할지라도 에테르로 가득 채워져 있으므로, 태양에 대해 약 30km/s의 속력으로 운동하는 지구의 공전에 의해 지구를 가로지르는 에테르 바람이 형성될 것이라 생각하였다.  
 ![Aether Wind](https://upload.wikimedia.org/wikipedia/commons/f/fc/AetherWind.svg)
@@ -114,7 +114,7 @@ $$ t^{\prime} = t \tag{4} \label{eqn:galilean_transform_t}$$
 > - 저작자: 위키미디어 유저 [Cronholm144](https://commons.wikimedia.org/wiki/User:Cronholm144)
 > - 라이선스: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
-이러한 가설을 검증하기 위해, 1887년 마이컬슨(Michelson)은 몰리(Morley)와 협력하여 아래의 간섭계를 활용한 *마이컬슨-몰리 실험(Michelson-Morley Experiment)*을 수행했다.  
+이러한 가설을 검증하기 위해, [인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 11887년 마이컬슨(Michelson)은 몰리(Morley)와 협력하여 아래의 간섭계를 활용한 *마이컬슨-몰리 실험(Michelson-Morley Experiment)*을 수행했다.  
 ![마이컬슨-몰리 간섭계](https://upload.wikimedia.org/wikipedia/commons/f/fb/On_the_Relative_Motion_of_the_Earth_and_the_Luminiferous_Ether_-_Fig_4.png)
 > *이미지 출처*
 > - 저작자: Albert Abraham Michelson with Edward Morley

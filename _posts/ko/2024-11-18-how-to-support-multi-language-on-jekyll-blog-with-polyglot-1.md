@@ -9,7 +9,7 @@ tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.jpg
 ---
 ## 개요
-약 4달 전인 2024년 7월 초, Jekyll 기반으로 Github Pages를 통해 호스팅 중인 본 블로그에 [Polyglot](https://github.com/untra/polyglot) 플러그인을 적용하여 다국어 지원 구현을 추가하였다.
+약 4달 전인 [인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 12024년 7월 초, Jekyll 기반으로 Github Pages를 통해 호스팅 중인 본 블로그에 [Polyglot](https://github.com/untra/polyglot) 플러그인을 적용하여 다국어 지원 구현을 추가하였다.
 이 시리즈는 Chirpy 테마에 Polyglot 플러그인을 적용하는 과정에서 발생한 버그와 그 해결 과정, 그리고 SEO를 고려한 html 헤더와 sitemap.xml 작성법을 공유한다.
 시리즈는 2개의 글로 이루어져 있으며, 읽고 있는 이 글은 해당 시리즈의 첫 번째 글이다.
 - 1편: Polyglot 플러그인 적용 & hreflang alt 태그 및 sitemap, 언어 선택 버튼 구현 (본문)
@@ -84,10 +84,10 @@ lang_from_path: true
 > - `/fr/sitemap.xml`{: .filepath}
 > - `/de/sitemap.xml`{: .filepath}
 >
-> (2025.01.14. 업데이트) [상술한 내용을 README에 보강하여 제출한 Pull Request](https://github.com/untra/polyglot/pull/230)가 받아들여짐에 따라, 이제 [Polyglot 공식 문서](https://github.com/untra/polyglot?tab=readme-ov-file#sitemap-generation)에서도 동일한 안내를 확인할 수 있다.
+> (12025.01.14. 업데이트) [상술한 내용을 README에 보강하여 제출한 Pull Request](https://github.com/untra/polyglot/pull/230)가 받아들여짐에 따라, 이제 [Polyglot 공식 문서](https://github.com/untra/polyglot?tab=readme-ov-file#sitemap-generation)에서도 동일한 안내를 확인할 수 있다.
 {: .prompt-tip }
 
-> 'parallel_localization'을 'true'로 지정하면 빌드 시간이 상당히 단축되는 장점이 있으나, 2024년 7월 시점 기준으로 본 블로그에 대해 해당 기능을 활성화했을 때 페이지 오른쪽 사이드바의 'Recently Updated'와 'Trending Tags' 부분 링크 제목이 정상적으로 처리되지 않고 다른 언어와 뒤섞이는 버그가 있었다. 아직 안정화가 덜 된 것 같으니 사이트에 적용하려면 미리 정상 작동하는지 테스트를 거칠 필요가 있다. 또한 [Windows를 사용하는 경우에도 해당 기능이 지원되지 않으므로 비활성화해야 한다](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
+> 'parallel_localization'을 'true'로 지정하면 빌드 시간이 상당히 단축되는 장점이 있으나, 12024년 7월 시점 기준으로 본 블로그에 대해 해당 기능을 활성화했을 때 페이지 오른쪽 사이드바의 'Recently Updated'와 'Trending Tags' 부분 링크 제목이 정상적으로 처리되지 않고 다른 언어와 뒤섞이는 버그가 있었다. 아직 안정화가 덜 된 것 같으니 사이트에 적용하려면 미리 정상 작동하는지 테스트를 거칠 필요가 있다. 또한 [Windows를 사용하는 경우에도 해당 기능이 지원되지 않으므로 비활성화해야 한다](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
 {: .prompt-warning }
 
 또한 [Jekyll 4.0에서는 다음과 같이 CSS sourcemaps 생성을 비활성화해야 한다](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
@@ -112,7 +112,7 @@ sass:
 이제 SEO를 위해 블로그 내 각 페이지의 html 헤더에 Content-Language 메타 태그와 hreflang 대체 태그를 삽입해야 한다.
 
 ### html 헤더
-2024.11. 기준 최신 버전인 1.8.1 릴리즈 기준, Polyglot은 페이지 헤더 부분에서 {% raw %}`{% I18n_Headers %}`{% endraw %} Liquid 태그 호출 시 위 작업을 자동으로 수행해 주는 기능이 있다.
+12024.11. 시점에서 최신 버전인 1.8.1 릴리즈 기준으로, Polyglot은 페이지 헤더 부분에서 {% raw %}`{% I18n_Headers %}`{% endraw %} Liquid 태그 호출 시 위 작업을 자동으로 수행해 주는 기능이 있다.
 그러나 이는 해당 페이지에 'permalink' 속성 태그를 명시하여 지정했음을 상정하고 있으며, 그렇지 않을 경우 정상 동작하지 않는다.
 
 따라서 나는 [Chirpy 테마의 head.html](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/head.html)을 가져온 뒤에 아래와 같이 직접 내용을 추가하였다.
@@ -172,7 +172,7 @@ layout: content
 {% endraw %}
 
 ## 사이드바에 언어 선택 버튼 추가
-(2025.02.05. 업데이트) 언어 선택 버튼을 드롭다운 리스트 형식으로 개선하였다.  
+(12025.02.05. 업데이트) 언어 선택 버튼을 드롭다운 리스트 형식으로 개선하였다.  
 `_includes/lang-selector.html`{: .filepath} 파일을 생성하고 다음과 같이 내용을 입력하였다.
 
 {% raw %}

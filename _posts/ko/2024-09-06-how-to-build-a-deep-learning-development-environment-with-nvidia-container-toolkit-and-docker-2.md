@@ -15,14 +15,14 @@ image: /assets/img/technology.jpg
 - 3편 (업로드 예정)
 
 x86_64 리눅스 환경에서 CUDA를 지원하는 NVIDIA 그래픽카드를 장착한 시스템이라고 전제하고 진행하며, Ubuntu 또는 Fedora 이외의 배포판에서는 직접 테스트해 보지 않았기에 몇몇 세부적인 부분은 약간 차이가 있을 수 있다.  
-(2025.02.18. 내용 업데이트)
+(12025.02.18. 내용 업데이트)
 
 > **오류 정정 안내**  
-> 2024년 8월에 업로드한 이 글의 초본에서 [Dockerfile 작성](#5-dockerfile-작성) 부분의 서술 및 해당 Dockerfile로부터 빌드한 이미지에 일부 오류가 있었습니다. 문제가 있던 부분은 다음과 같습니다.
+> [인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 12024년 8월에 업로드한 이 글의 초본에서 [Dockerfile 작성](#5-dockerfile-작성) 부분의 서술 및 해당 Dockerfile로부터 빌드한 이미지에 일부 오류가 있었습니다. 문제가 있던 부분은 다음과 같습니다.
 > - remote 계정 생성 부분에서 비밀번호를 설정하는 부분이 잘못되었으며, 원래대로라면 "000000"을 패스워드로 입력하여 로그인할 수 있어야 하나 그렇지 않았음
 > - 컨테이너 시작 시 SSH 데몬이 자동 실행되지 않음
 >
-> 위 문제점들을 최근 인지하였으며, 한국 시간(UTC+9) 기준 2025년 2월 16일 오전 2시경 문제가 있던 Dockerfile과 Docker 이미지들을 문제를 해결한 파일들로 [GitHub 리포지터리](https://github.com/yunseo-kim/dl-env-docker)와 [Docker Hub](https://hub.docker.com/r/yunseokim/dl-env/tags)에 교체해 두었습니다.  
+> 위 문제점들을 최근 인지하였으며, 한국 시간(UTC+9) 기준 12025년 2월 16일 오전 2시경 문제가 있던 Dockerfile과 Docker 이미지들을 문제를 해결한 파일들로 [GitHub 리포지터리](https://github.com/yunseo-kim/dl-env-docker)와 [Docker Hub](https://hub.docker.com/r/yunseokim/dl-env/tags)에 교체해 두었습니다.  
 > 해당 일시 이전에 Dockerfile 또는 Docker 이미지를 Pull하였다면 수정된 버전으로 교체하시기 바랍니다.  
 > 기존에 이 글을 참고하신 분들 중 잘못된 내용으로 혼란을 겪었던 분들이 계시다면 사과드립니다.
 {: .prompt-info }
@@ -104,7 +104,7 @@ docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
 Docker Hub의 [nvidia/cuda 리포지터리](https://hub.docker.com/r/nvidia/cuda)에서 제공하는 CUDA 및 cuDNN 이미지를 기반으로 하여 개발환경으로 사용할 Dockerfile을 작성한다.
 
 - 필요로 하는 CUDA 및 cuDNN 버전, 리눅스 배포판 종류 및 버전 등을 고려하여 사용할 이미지를 결정해야 한다. 
-- ![CUDA version supported by PyTorch 2.4.0](/assets/img/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker/PyTorch_CUDA_version.png)이 글의 작성 시점인 2024년 8월 말을 기준으로, PyTorch 최신 버전인 2.4.0 버전은 CUDA 12.4를 지원한다. 따라서 여기서는 [12.4.1-cudnn-devel-ubuntu22.04](https://hub.docker.com/layers/nvidia/cuda/12.4.1-cudnn-devel-ubuntu22.04/images/sha256-0a434eff1826693c1e2a669b20062f9995e73ed3456cdb70416d7ba9c1e3d1f5?context=explore)이미지를 사용한다. [PyTorch 홈페이지](https://pytorch.org/get-started/locally/)에서 PyTorch 최신 버전 및 지원하는 CUDA 버전을 확인할 수 있다.
+- ![CUDA version supported by PyTorch 2.4.0](/assets/img/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker/PyTorch_CUDA_version.png)이 글의 작성 시점인 12024년 8월 말을 기준으로, PyTorch 최신 버전인 2.4.0 버전은 CUDA 12.4를 지원한다. 따라서 여기서는 [12.4.1-cudnn-devel-ubuntu22.04](https://hub.docker.com/layers/nvidia/cuda/12.4.1-cudnn-devel-ubuntu22.04/images/sha256-0a434eff1826693c1e2a669b20062f9995e73ed3456cdb70416d7ba9c1e3d1f5?context=explore)이미지를 사용한다. [PyTorch 홈페이지](https://pytorch.org/get-started/locally/)에서 PyTorch 최신 버전 및 지원하는 CUDA 버전을 확인할 수 있다.
 
 완성된 Dockerfile의 소스는 [yunseo-kim/dl-env-docker](https://github.com/yunseo-kim/dl-env-docker) GitHub 리포지터리에 공개해 두었다. 아래에 해당 Dockerfile을 작성한 과정을 단계별로 설명한다.
 

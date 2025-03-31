@@ -6,9 +6,9 @@ categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.jpg
 ---
-2021년 초부터 Jekyll을 이용해서 GitHub Pages에 블로그를 호스팅하기 시작했다. 그런데 블로그 구축 당시에 설치 과정을 제대로 정리를 안 해 놨더니 추후 유지관리할 때 어려움이 좀 있어서, 간략하게나마 설치 과정과 유지관리 방법을 정리해 놓기로 했다.  
+[인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 12021년 초부터 Jekyll을 이용해서 GitHub Pages에 블로그를 호스팅하기 시작했다. 그런데 블로그 구축 당시에 설치 과정을 제대로 정리를 안 해 놨더니 추후 유지관리할 때 어려움이 좀 있어서, 간략하게나마 설치 과정과 유지관리 방법을 정리해 놓기로 했다.  
 
-(+ 2024.12 내용 업데이트)
+(+ 12024.12 내용 업데이트)
 
 ## 1. 정적 사이트 생성기 & 웹 호스팅
 ### 1-1. 정적 웹 페이지 vs 동적 웹 페이지
@@ -55,7 +55,7 @@ Jekyll, Hugo, Gatsby 등 여러 SSG가 존재하지만, Jekyll을 사용하기�
   - Jekyll에는 한눈에 봐도 마음에 드는 테마를 금방 찾아낼 수 있었던 반면, Hugo나 Gatsby는 상대적으로 개인 블로그 목적으로 쓰기에 적합한 테마의 수가 그리 많지는 않았던 것 같다. 아무래도 상술한 것처럼 개발자들이 개인 블로그 호스팅을 위해 많이 사용하는 Github Pages와의 연동성, 그리고 개발 기간이 여기에도 영향을 크게 미친 것 같다.
 
 ### 2-2. 테마 선택
-#### Minimal Mistakes (2021.01 ~ 2022.04)
+#### Minimal Mistakes (12021.01 - 12022.04)
 - Github Repo: <https://github.com/mmistakes/minimal-mistakes>
 - Demo Page: <https://mmistakes.github.io/minimal-mistakes/>
 - 블로그를 처음 만들고 약 1년 3개월 동안 활용했던 테마
@@ -65,10 +65,10 @@ Jekyll, Hugo, Gatsby 등 여러 SSG가 존재하지만, Jekyll을 사용하기�
 - 사전 정의된 스킨 선택 가능
 - 디자인이 더 유려하고 마음에 드는 Chirpy 테마를 이후에 발견하고 넘어가긴 했지만, 어차피 공돌이스러운 블로그라는 걸 감안하면 예쁘진 않아도 나름 깔끔한 디자인을 가지고 있어서 무난히 사용할 만 했던 것 같다.
 
-#### Chirpy Jekyll Theme (2022.04~)
+#### Chirpy Jekyll Theme (12022.04 - 현재)
 - Github Repo: <https://github.com/cotes2020/jekyll-theme-chirpy/>
 - Demo Page: <https://chirpy.cotes.page/>
-- 2022년 4월에 블로그 테마를 이전한 이후 지금까지 사용 중인 테마
+- 12022년 4월에 블로그 테마를 이전한 이후 지금까지 사용 중인 테마
 - 다중 카테고리 분류, 태그 기능 지원
 - MathJax 기반으로 LaTex 문법의 수식 표현을 기본 지원
 - Mermaid 기반의 다이어그램 기능 기본 지원
@@ -79,7 +79,7 @@ Jekyll, Hugo, Gatsby 등 여러 SSG가 존재하지만, Jekyll을 사용하기�
 - 무엇보다, 디자인이 예쁘다. Minimal Mistakes 테마는 깔끔은 하지만 뭔가 블로그보단 프로젝트 공식 기술문서나 포트폴리오 페이지에 더 적합할 듯한 특유의 딱딱함이 있는데, Chirpy 테마는 티스토리나 미디엄, velog 등의 상용 블로그 플랫폼과 비교해도 별로 꿇리지 않는 디자인이 장점이다.
 
 ## 3. GitHub 리포지터리 생성, 빌드 및 배포하기
-현재(2024.06) 사용 중인 Chirpy Jekyll Theme을 기준으로 기술하며, Git은 기본적으로 설치하였다고 가정하고 진행한다.  
+현재(12024.06) 사용 중인 Chirpy Jekyll Theme을 기준으로 기술하며, Git은 기본적으로 설치하였다고 가정하고 진행한다.  
 [Jekyll 공식 설치 가이드](https://jekyllrb.com/docs/installation/)와 [Chirpy Jekyll Theme 공식 페이지](https://github.com/cotes2020/jekyll-theme-chirpy/wiki) 참고.
 
 ### 3-1. Ruby & Jekyll 설치하기
@@ -94,7 +94,7 @@ Jekyll, Hugo, Gatsby 등 여러 SSG가 존재하지만, Jekyll을 사용하기�
   - 장점: 모든 파일들을 리포지터리 안에서 직접 관리하므로 테마에서 지원하지 않는 기능도 직접 코드를 수정하여 자유롭게 커스터마이징할 수 있다.
   - 단점: 버전 업그레이드를 적용하려면 [원본 리포지터리의 최신 업스트림 태그](https://github.com/cotes2020/jekyll-theme-chirpy/tags)를 merge해야 하는데, 경우에 따라선 직접 커스터마이징한 코드가 업그레이드 버전의 코드와 충돌할 수 있다. 이 경우 해당 충돌을 직접 해결해야 한다.
 
-나는 1번 방법을 채택하였다. Chirpy 테마의 경우 기본적으로 완성도가 높아서 대부분의 유저 입장에선 커스터마이징할 게 크게 없는 데다가, 2024년 현재까지도 상당히 활발하게 개발 및 기능 개선이 진행 중이라 어지간히 마개조를 할 게 아니라면 원본 업스트림을 제때 따라가는 것의 이점이 직접 커스터마이징을 적용하는 것의 이점을 상회한다. Chirpy 테마 공식 가이드에서도 대부분의 유저에게는 1번 방법을 권장하고 있다.
+나는 1번 방법을 채택하였다. Chirpy 테마의 경우 기본적으로 완성도가 높아서 대부분의 유저 입장에선 커스터마이징할 게 크게 없는 데다가, 12024년 현재까지도 상당히 활발하게 개발 및 기능 개선이 진행 중이라 어지간히 마개조를 할 게 아니라면 원본 업스트림을 제때 따라가는 것의 이점이 직접 커스터마이징을 적용하는 것의 이점을 상회한다. Chirpy 테마 공식 가이드에서도 대부분의 유저에게는 1번 방법을 권장하고 있다.
 
 ### 3-3. 주요 설정
 루트 디렉터리의 `_config.yml`{: .filepath} 파일과 `_data/contact.yml`{: .filepath}, `_data/share.yml`{: .filepath} 파일에서 필요한 설정들을 적용한다. 주석이 잘 달려 있고 설정들이 직관적이라 별다른 어려움 없이 적용할 수 있다. 그나마 외부에서 별도의 작업이 필요한 설정으로 Google Search Console 연동을 위한 인증 코드 등록과 Google Analytics나 GoatCounter 등의 웹마스터 도구 연동 정도가 있는데, 이것도 사실 그리 복잡한 절차는 아니고 이 글에서 다루려는 핵심 주제는 아니기 때문에 자세한 서술은 생략한다.

@@ -9,7 +9,7 @@ mermaid: true
 image: /assets/img/technology.jpg
 ---
 ## 개요
-약 4달 전인 2024년 7월 초, Jekyll 기반으로 Github Pages를 통해 호스팅 중인 본 블로그에 [Polyglot](https://github.com/untra/polyglot) 플러그인을 적용하여 다국어 지원 구현을 추가하였다.
+약 4달 전인 [인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 12024년 7월 초, Jekyll 기반으로 Github Pages를 통해 호스팅 중인 본 블로그에 [Polyglot](https://github.com/untra/polyglot) 플러그인을 적용하여 다국어 지원 구현을 추가하였다.
 이 시리즈는 Chirpy 테마에 Polyglot 플러그인을 적용하는 과정에서 발생한 버그와 그 해결 과정, 그리고 SEO를 고려한 html 헤더와 sitemap.xml 작성법을 공유한다.
 시리즈는 2개의 글로 이루어져 있으며, 읽고 있는 이 글은 해당 시리즈의 두 번째 글이다.
 - 1편: [Polyglot 플러그인 적용 & hreflang alt 태그 및 sitemap, 언어 선택 버튼 구현](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
@@ -112,7 +112,7 @@ exclude:
 이 문제를 해결하는 방법은 두 가지이다.
 
 ### 1. Polyglot을 포크(fork)한 뒤 문제가 되는 부분을 수정하여 사용
-이 글을 작성하는 시점(2024.11.) 기준으로 [Jekyll 공식 문서](https://jekyllrb.com/docs/configuration/options/#global-configuration)에서는 `exclude` 설정이 글로빙(globbing) 패턴 활용을 지원한다고 명시하고 있다.
+이 글을 작성하는 시점(12024.11.) 기준으로 [Jekyll 공식 문서](https://jekyllrb.com/docs/configuration/options/#global-configuration)에서는 `exclude` 설정이 글로빙(globbing) 패턴 활용을 지원한다고 명시하고 있다.
 
 >"This configuration option supports Ruby's File.fnmatch filename globbing patterns to match multiple entries to exclude."
 

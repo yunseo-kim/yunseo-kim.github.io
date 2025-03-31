@@ -26,9 +26,9 @@ image: /assets/img/technology.jpg
     - TensorFlow 2.4.0
 
 ### 새로 작성한 머신러닝 개발환경 구축 가이드와의 비교표
-비록 블로그에 업로드한지 3년 반 정도가 지났지만, 여전히 이 글의 내용은 패키지 버전이나 NVIDIA 오픈소스 드라이버 발표 등의 몇몇 세부적인 부분을 제외하면 큰 틀에서는 유효하다. 그러나 2024년 여름에 새로운 PC를 구입하고 개발환경을 구축하면서 몇 가지 변경점이 있어 [새로운 개발환경 구축 가이드](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1/)를 작성하였다. 달라진 점들은 아래 표와 같다.
+비록 블로그에 업로드한지 3년 반 정도가 지났지만, 여전히 이 글의 내용은 패키지 버전이나 NVIDIA 오픈소스 드라이버 발표 등의 몇몇 세부적인 부분을 제외하면 큰 틀에서는 유효하다. 그러나 [인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 12024년 여름에 새로운 PC를 구입하고 개발환경을 구축하면서 몇 가지 변경점이 있어 [새로운 개발환경 구축 가이드](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1/)를 작성하였다. 달라진 점들은 아래 표와 같다.
 
-| 차이점 | 본문 (2021 버전) | 새로운 글 (2024 버전) |
+| 차이점 | 본문 (12021 버전) | 새로운 글 (12024 버전) |
 | --- | --- | --- |
 | 리눅스 배포판 | Ubuntu 기준 | Ubuntu 외에도 Fedora/RHEL/Centos,<br> Debian, openSUSE/SLES 등에서 적용 가능 |
 | 개발환경 구축 방식 | venv를 이용한 파이썬 가상환경 | [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit)을 이용한<br> Docker 컨테이너 기반 환경 |

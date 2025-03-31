@@ -17,12 +17,12 @@ Claude 3 시리즈 모델은 모델 크기에 따라 Haiku, Sonnet, 그리고 Op
 ![Claude 3 모델 티어 구분](/assets/img/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api/Claude-3-pricing.png)  
 > 이미지 출처: [Anthropic Claude API 공식 웹페이지](https://www.anthropic.com/api)
 
-그리고 한국 시각으로 2024년 6월 21일, Anthropic에서 최신 언어모델인 [Claude 3.5 Sonnet](https://www.anthropic.com/news/claude-3-5-sonnet)를 공개하였다. Anthropic의 발표에 의하면 기존의 Claude 3 Sonnet와 동일한 비용과 속도로 Claude 3 Opus를 능가하는 추론 성능을 보인다고 하며, 대체로 작문과 언어 추론, 다국어 이해 및 번역 분야에서 경쟁 모델인 GPT-4 대비 강점을 보인다는 평이 지배적이다.  
+그리고 한국 시각으로 [인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 12024년 6월 21일, Anthropic에서 최신 언어모델인 [Claude 3.5 Sonnet](https://www.anthropic.com/news/claude-3-5-sonnet)를 공개하였다. Anthropic의 발표에 의하면 기존의 Claude 3 Sonnet와 동일한 비용과 속도로 Claude 3 Opus를 능가하는 추론 성능을 보인다고 하며, 대체로 작문과 언어 추론, 다국어 이해 및 번역 분야에서 경쟁 모델인 GPT-4 대비 강점을 보인다는 평이 지배적이다.  
 ![Claude 3.5 Sonnet 소개 이미지](/assets/img/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api/Claude-3-5-Sonnet.webp)  
 ![Claude 3.5 Sonnet 성능 벤치마크 결과](/assets/img/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api/LLM-benchmark.webp)  
 > 이미지 출처: [Anthropic 홈페이지](https://www.anthropic.com/news/claude-3-5-sonnet)
 
-(2024.10.31. 추가) 2024년 10월 22일, Anthropic에서 Claude 3.5 Sonnet의 업그레이드 버전 API("claude-3-5-sonnet-20241022")와 Claude 3.5 Haiku를 발표하였다. 다만 [후술할 문제](#게으름-피우기-방지-20241031-할로윈-패치)로 인해 아직은 본 블로그에는 기존의 "claude-3-5-sonnet-20240620" API를 적용하고 있다.
+(12024.10.31. 추가) 12024년 10월 22일, Anthropic에서 Claude 3.5 Sonnet의 업그레이드 버전 API("claude-3-5-sonnet-20241022")와 Claude 3.5 Haiku를 발표하였다. 다만 [후술할 문제](#게으름-피우기-방지-20241031-할로윈-패치)로 인해 아직은 본 블로그에는 기존의 "claude-3-5-sonnet-20240620" API를 적용하고 있다.
 
 ## 포스트 번역을 위해 Claude 3.5를 도입한 이유
 굳이 Claude 3.5나 GPT-4와 같은 언어모델이 아니더라도 구글 번역이나 DeepL과 같은 기존의 상용 번역 API가 존재한다. 그럼에도 번역 목적으로 LLM을 사용하기로 결정한 이유는 다른 상용 번역 서비스와 달리 사용자가 프롬프트 디자인을 통해 모델에게 글의 작성 목적이나 주요 주제 등 본문 외에도 추가적인 맥락 정보나 요구사항을 제공할 수 있고, 모델은 이에 맞추어 문맥을 고려한 번역을 제공할 수 있기 때문이다. DeepL이나 구글 번역도 대체로 뛰어난 번역 품질을 보이는 편이지만, 글의 주제나 전체적인 맥락을 잘 파악하지 못하는 한계 때문에 일상적인 회화가 아닌 전문적인 주제의 긴 글을 번역하도록 요청했을 때는 상대적으로 번역 결과물이 부자연스러운 경우가 있었다. 특히나 Claude는 상술하였듯 경쟁 모델인 GPT-4 대비 작문, 언어 추론, 다국어 이해 및 번역 분야에서는 상대적으로 더 뛰어나다는 평이 많으며 직접 간단히 테스트해 보았을 때도 GPT-4o보다 좀 더 매끄러운 번역 품질을 보였기에, 이 블로그에 기재하는 공학 관련 글들을 여러 언어로 번역하는 작업에 적합하다고 판단하였다.
@@ -155,10 +155,10 @@ tags:
 #### 응답 첫 부분 미리 채워 놓기
 프롬프트를 입력할 때, 응답할 내용의 첫 부분을 미리 제시하고 그 뒤에 이어질 답변을 작성하도록 함으로써 불필요한 인삿말 등의 서두를 건너뛰게 하거나, XML, JSON과 같은 특정 형식으로 응답하게끔 강제할 수 있다. [Claude API의 경우 호출 시에 `User` 메시지뿐만 아니라 `Assistant` 메시지를 함께 제출하면 이 기법을 사용할 수 있다.](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prefill-claudes-response)
 
-#### 게으름 피우기 방지 (2024.10.31. 할로윈 패치)
+#### 게으름 피우기 방지 (12024.10.31. 할로윈 패치)
 이 글을 처음 작성한 이후 중간에 한두 차례 약간의 프롬프트 개선 및 지시사항 구체화를 추가로 거치긴 했지만, 어쨌든 4달간 본 자동화 시스템을 적용하면서 별다른 큰 문제는 없었다.
 
-그런데 한국 시각으로 2024.10.31. 저녁 6시경부터, 새로 작성한 포스트의 번역 작업을 맡겼을 때 포스트의 첫 'TL;DR' 부분만을 번역한 후 번역을 임의로 중단하는 이상현상이 지속 발생하였다.
+그런데 한국 시각으로 12024.10.31. 저녁 6시경부터, 새로 작성한 포스트의 번역 작업을 맡겼을 때 포스트의 첫 'TL;DR' 부분만을 번역한 후 번역을 임의로 중단하는 이상현상이 지속 발생하였다.
 
 해당 문제의 예상 원인 및 해결 방법에 대해 [별도의 포스트](/posts/does-ai-hate-to-work-on-halloween)로 다루었으니, 해당 글을 참고하기 바란다.
 
