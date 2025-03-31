@@ -1,44 +1,40 @@
 ---
-title: Cómo traducir automáticamente publicaciones con la API de Claude 3.5 Sonnet
-  (1) - Diseño de prompts
-description: Se aborda el proceso de diseñar prompts para la traducción multilingüe
-  de archivos de texto en markdown, y automatizar el trabajo en Python utilizando
-  la clave API emitida por Anthropic y los prompts creados. Este post es el primero
-  de la serie y presenta el método y proceso de diseño de prompts.
+title: Cómo traducir automáticamente publicaciones con la API de Claude 3.5 Sonnet (1) - Diseño de prompts
+description: Diseñamos prompts para la traducción multilingüe de archivos de texto en markdown y cubrimos el proceso de automatización del trabajo en Python aplicando la clave API obtenida de Anthropic y el prompt creado. Esta publicación es la primera de la serie e introduce los métodos y procesos de diseño de prompts.
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
 image: /assets/img/technology.jpg
 ---
 ## Introducción
-Recientemente, implementé la API de Claude 3.5 Sonnet de Anthropic para traducir las publicaciones del blog a varios idiomas. En esta serie, cubriremos las razones para elegir la API de Claude 3.5 Sonnet, los métodos de diseño de prompts y cómo implementar la automatización mediante la integración de API con scripts de Python.  
-La serie consta de dos artículos, y este que estás leyendo es el primero.
-- Parte 1: Introducción al modelo Claude 3.5 Sonnet, razones para su selección y prompt engineering (este artículo)
-- Parte 2: [Escritura e implementación de scripts de automatización en Python utilizando la API](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-2)
+Recientemente, implementé la API de Claude 3.5 Sonnet de Anthropic para la traducción multilingüe de las publicaciones del blog. En esta serie, abordaré las razones para elegir la API de Claude 3.5 Sonnet, los métodos de diseño de prompts y cómo implementar la automatización mediante la integración de API y scripts de Python.  
+La serie consta de dos publicaciones, y esta es la primera de ellas.
+- Parte 1: Introducción al modelo Claude 3.5 Sonnet, razones para su selección y ingeniería de prompts (este artículo)
+- Parte 2: [Escritura y aplicación de scripts de automatización en Python utilizando la API](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-2)
 
-## Sobre Claude 3.5 Sonnet
-Los modelos de la serie Claude 3 vienen en versiones Haiku, Sonnet y Opus según el tamaño del modelo.  
+## Acerca de Claude 3.5 Sonnet
+Los modelos de la serie Claude 3 se ofrecen en versiones Haiku, Sonnet y Opus según el tamaño del modelo.  
 ![Diferenciación de niveles de modelos Claude 3](/assets/img/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api/Claude-3-pricing.png)  
-> Fuente de la imagen: [Página web oficial de la API de Anthropic Claude](https://www.anthropic.com/api)
+> Fuente de la imagen: [Página web oficial de la API de Claude de Anthropic](https://www.anthropic.com/api)
 
-Y el 21 de junio de 2024 (hora de Corea), Anthropic lanzó su último modelo de lenguaje, [Claude 3.5 Sonnet](https://www.anthropic.com/news/claude-3-5-sonnet). Según el anuncio de Anthropic, supera el rendimiento de inferencia de Claude 3 Opus con el mismo costo y velocidad que Claude 3 Sonnet, y generalmente se considera que tiene ventajas sobre su competidor GPT-4 en áreas como redacción, razonamiento lingüístico, comprensión multilingüe y traducción.  
+Y el 21 de junio del 12024 (según el [calendario holoceno](https://en.wikipedia.org/wiki/Holocene_calendar)), hora de Corea, Anthropic lanzó su último modelo de lenguaje, [Claude 3.5 Sonnet](https://www.anthropic.com/news/claude-3-5-sonnet). Según el anuncio de Anthropic, supera el rendimiento de inferencia de Claude 3 Opus con el mismo costo y velocidad que el Claude 3 Sonnet original, y generalmente se considera que tiene ventajas sobre su modelo competidor, GPT-4, en áreas como redacción, razonamiento lingüístico, comprensión multilingüe y traducción.  
 ![Imagen de introducción de Claude 3.5 Sonnet](/assets/img/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api/Claude-3-5-Sonnet.webp)  
-![Resultados del benchmark de rendimiento de Claude 3.5 Sonnet](/assets/img/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api/LLM-benchmark.webp)  
+![Resultados de evaluación comparativa de rendimiento de Claude 3.5 Sonnet](/assets/img/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api/LLM-benchmark.webp)  
 > Fuente de las imágenes: [Página web de Anthropic](https://www.anthropic.com/news/claude-3-5-sonnet)
 
-(Actualización 31.10.2024) El 22 de octubre de 2024, Anthropic anunció una versión actualizada de la API de Claude 3.5 Sonnet ("claude-3-5-sonnet-20241022") y Claude 3.5 Haiku. Sin embargo, debido al [problema que se mencionará más adelante](#prevención-de-pereza-parche-de-halloween-31102024), este blog aún utiliza la API "claude-3-5-sonnet-20240620" original.
+(Actualización del 12024.10.31.) El 22 de octubre del 12024, Anthropic anunció una versión actualizada de la API de Claude 3.5 Sonnet ("claude-3-5-sonnet-20241022") y Claude 3.5 Haiku. Sin embargo, debido al [problema que se mencionará más adelante](#prevención-de-la-pereza-parche-de-halloween-del-20241031), este blog aún está utilizando la API "claude-3-5-sonnet-20240620" existente.
 
 ## Razones para implementar Claude 3.5 para la traducción de publicaciones
-Incluso sin modelos de lenguaje como Claude 3.5 o GPT-4, existen APIs de traducción comerciales establecidas como Google Translate o DeepL. La razón por la que decidí usar un LLM para propósitos de traducción es que, a diferencia de otros servicios de traducción comerciales, los usuarios pueden proporcionar información contextual adicional y requisitos a través del diseño de prompts, como el propósito de escritura y los temas principales del texto, y el modelo puede proporcionar traducciones que consideren este contexto. Aunque DeepL y Google Translate generalmente muestran una excelente calidad de traducción, pueden producir resultados relativamente poco naturales cuando se les pide que traduzcan textos largos sobre temas especializados, no conversaciones cotidianas, debido a sus limitaciones para comprender el tema y el contexto general. En particular, como se mencionó anteriormente, Claude es considerado relativamente superior a su competidor GPT-4 en áreas de redacción, razonamiento lingüístico, comprensión multilingüe y traducción, y cuando lo probé brevemente, mostró una calidad de traducción más fluida que GPT-4, por lo que determiné que era adecuado para traducir los artículos de ingeniería publicados en este blog a varios idiomas.
+Incluso sin necesidad de modelos de lenguaje como Claude 3.5 o GPT-4, existen APIs de traducción comerciales existentes como Google Translate o DeepL. Sin embargo, la razón por la que decidí usar un LLM para fines de traducción es que, a diferencia de otros servicios de traducción comerciales, el usuario puede proporcionar información contextual adicional o requisitos a través del diseño de prompts, como el propósito de escritura o los temas principales del texto, además del contenido principal, y el modelo puede proporcionar una traducción que tenga en cuenta este contexto. Aunque DeepL y Google Translate generalmente muestran una excelente calidad de traducción, debido a la limitación de no comprender bien el tema o el contexto general del texto, cuando se les pide que traduzcan textos largos sobre temas especializados en lugar de conversaciones cotidianas, los resultados de la traducción tienden a ser relativamente poco naturales. En particular, como se mencionó anteriormente, Claude se considera generalmente superior a su modelo competidor GPT-4 en áreas como redacción, razonamiento lingüístico, comprensión multilingüe y traducción, y cuando lo probé brevemente, mostró una calidad de traducción más fluida que GPT-4o, por lo que consideré que era adecuado para la tarea de traducir los artículos de ingeniería publicados en este blog a varios idiomas.
 
-## Diseño del Prompt
-### Principios básicos para hacer solicitudes
-Para obtener resultados satisfactorios que cumplan con el propósito de un modelo de lenguaje, es necesario proporcionar prompts apropiados. Aunque el diseño de prompts puede parecer abrumador, en realidad "cómo hacer una buena solicitud" no es muy diferente ya sea que el destinatario sea un modelo de lenguaje o una persona, por lo que no es tan difícil si se aborda desde esta perspectiva. Es bueno explicar claramente la situación actual y los requisitos siguiendo los principios de las 5W1H, y si es necesario, agregar algunos ejemplos específicos. Aunque existen numerosos consejos y técnicas para el diseño de prompts, la mayoría se derivan de los principios básicos que se describirán a continuación.
+## Diseño de prompts
+### Principios básicos al hacer una solicitud
+Para obtener resultados satisfactorios que cumplan con el propósito de un modelo de lenguaje, es necesario proporcionar un prompt adecuado. Aunque el diseño de prompts puede parecer abrumador, en realidad, "cómo hacer una buena solicitud" no es muy diferente ya sea que el destinatario sea un modelo de lenguaje o una persona, por lo que abordar desde esta perspectiva no es tan difícil. Es bueno explicar claramente la situación actual y los requisitos de acuerdo con las cinco W y una H, y si es necesario, agregar algunos ejemplos específicos. Aunque existen numerosos consejos y técnicas para el diseño de prompts, la mayoría se derivan de los principios básicos que se describirán a continuación.
 
 #### Tono general
-Hay muchos informes que indican que los modelos de lenguaje producen respuestas de mayor calidad cuando los prompts se escriben y se ingresan en un tono cortés de solicitud en lugar de un tono autoritario de comando. En la sociedad en general, cuando se le pide algo a alguien, es más probable que la persona realice la tarea solicitada con más sinceridad cuando se usa el último tono en lugar del primero, y parece que los modelos de lenguaje aprenden y emulan estos patrones de respuesta humana.
+Se ha informado ampliamente que cuando se escriben y se ingresan prompts con un tono de solicitud cortés en lugar de un tono de comando autoritario, el modelo de lenguaje produce respuestas de mayor calidad. Normalmente, cuando se le pide algo a alguien en la sociedad, la probabilidad de que la otra persona realice la tarea solicitada con más sinceridad es mayor cuando se utiliza el primero tipo de tono en lugar del segundo, y parece que los modelos de lenguaje aprenden y emulan este patrón de respuesta humana.
 
 #### Asignación de roles y explicación de la situación (quién, por qué)
-Primero, asigné a Claude 3.5 el rol de "traductor técnico profesional" y proporcioné información contextual sobre el usuario como "un blogger de ingeniería que principalmente contribuye con artículos sobre matemáticas, física y ciencia de datos".
+Primero, asigné a Claude 3.5 el papel de *"traductor profesional técnico (professional technical translator)"* y proporcioné información contextual sobre el usuario como *"un bloguero de ingeniería que principalmente contribuye con artículos sobre matemáticas, física y ciencia de datos"*.
 
 ```xml
 <role>You are a professional translator specializing in technical and scientific fields. \
@@ -47,21 +43,21 @@ Your client is an engineering blogger who writes mainly about math, physics \
 and data science for his Jekyll blog.</role>
 ```
 
-#### Comunicación de requisitos generales (qué)
-Luego, solicité traducir el texto en formato markdown proporcionado del {source_lang} al {target_lang} mientras se mantiene el formato.
+#### Comunicación de la solicitud general (qué)
+A continuación, solicité traducir el texto en formato markdown proporcionado por el usuario de {source_lang} a {target_lang} mientras se mantiene el formato.
 
 ```xml
 <task>Please translate the provided <format>markdown</format> text from <lang>{source_lang}</lang> \
 to <lang>{target_lang}</lang> while preserving the format.</task>
 ```
 
-> Al llamar a la API de Claude, las variables de idioma de origen y destino se insertan respectivamente en los lugares {source_lang} y {target_lang} a través de la función f-string del script Python.
+> Al llamar a la API de Claude, las posiciones de {source_lang} y {target_lang} en el prompt se llenan respectivamente con las variables de idioma de origen y destino de la traducción a través de la función f-string del script de Python.
 {: .prompt-info }
 
 #### Especificación de requisitos y ejemplos (cómo)
-Para tareas simples, las etapas anteriores pueden ser suficientes para obtener los resultados deseados, pero para tareas que requieren instrucciones más complejas, puede ser necesaria una explicación adicional.
+Para tareas simples, los pasos anteriores pueden ser suficientes para obtener los resultados deseados, pero para tareas que requieren explicaciones adicionales, puede ser necesario proporcionar más detalles.
 
-Cuando los requisitos son complejos y múltiples, es más fácil de entender (tanto para humanos como para modelos de lenguaje) si se presentan como una lista concisa en lugar de explicarlos de manera narrativa. Además, proporcionar ejemplos cuando sea necesario puede ser útil.
+Cuando los requisitos son complejos y múltiples, es más fácil de entender desde la perspectiva del lector (ya sea humano o modelo de lenguaje) si se presentan en forma de lista concisa en lugar de describirlos detalladamente. Además, proporcionar ejemplos si es necesario puede ser útil.
 En este caso, se agregaron las siguientes condiciones:
 
 ##### Manejo del YAML front matter
@@ -81,21 +77,21 @@ tags:
 ---
 ```
 
-Sin embargo, al traducir las publicaciones, aunque el título (title) y la descripción (description) deben traducirse a varios idiomas, es más conveniente para el mantenimiento dejar los nombres de categorías (categories) y etiquetas (tags) en inglés para mantener la consistencia en las URLs de las publicaciones. Por lo tanto, se resolvió este problema agregando la siguiente instrucción para no traducir ninguna etiqueta excepto 'title' y 'description'.
+Sin embargo, al traducir la publicación, las etiquetas de título (title) y descripción (description) deben traducirse a varios idiomas, pero para mantener la coherencia de la URL de la publicación, es más fácil de mantener si los nombres de categorías (categories) y etiquetas (tags) se dejan en inglés sin traducir. Por lo tanto, se agregó la siguiente instrucción para evitar la traducción de etiquetas que no sean 'title' y 'description'. Como Claude probablemente ya ha aprendido información sobre el YAML front matter, esta explicación debería ser suficiente en la mayoría de los casos.
 
 ```xml
 - <condition>please do not modify the YAML front matter except for the 'title' and 'description' tags, \
   under any circumstances, regardless of the language you are translating to.</condition> \n\n\
 ```
 
-> Se enfatizó que **sin excepción** no se deben modificar otras etiquetas del YAML front matter agregando la frase "under any circumstances, regardless of the language you are translating to".
+> Se enfatizó que no se deben modificar otras etiquetas del YAML front matter **sin excepciones** agregando la frase "under any circumstances, regardless of the language you are translating to".
 {: .prompt-tip }
 
-##### Manejo de texto que incluye idiomas distintos al idioma de origen
-Al escribir el texto original en coreano, cuando se introduce la definición de un concepto o se utilizan ciertos términos técnicos, a menudo se incluye la expresión en inglés entre paréntesis, como en '*중성자 감쇠 (Neutron Attenuation)*'. Al traducir estas expresiones, a veces se mantienen los paréntesis y otras veces se omite la expresión en inglés entre paréntesis, lo que resulta en inconsistencias en el método de traducción. Para abordar esto, se establecieron las siguientes pautas detalladas:
+##### Manejo de casos en los que el texto original incluye idiomas distintos al idioma de origen
+Al escribir el texto original en coreano, a menudo se incluye la expresión en inglés entre paréntesis cuando se introduce la definición de un concepto o se utilizan algunos términos técnicos, como en '*중성자 감쇠 (Neutron Attenuation)*'. Al traducir estas expresiones, a veces se mantienen los paréntesis y otras veces se omite el inglés entre paréntesis, lo que resulta en un problema de inconsistencia en el método de traducción. Para abordar esto, se establecieron las siguientes pautas detalladas:
 - Para términos técnicos:
-  - Al traducir a idiomas que no usan el alfabeto romano, como el japonés, mantener el formato 'expresión traducida(expresión en inglés)'.
-  - Al traducir a idiomas basados en el alfabeto romano, como español, portugués o francés, se permite tanto la notación independiente 'expresión traducida' como la notación combinada 'expresión traducida(expresión en inglés)', dejando que Claude elija autónomamente la que considere más apropiada.
+  - Al traducir a idiomas no basados en el alfabeto romano, como el japonés, mantener el formato 'expresión traducida(expresión en inglés)'.
+  - Al traducir a idiomas basados en el alfabeto romano, como español, portugués o francés, se permite tanto la notación única 'expresión traducida' como la notación combinada 'expresión traducida(expresión en inglés)', y se permite que Claude elija autónomamente la que considere más apropiada.
 - Para nombres propios, la ortografía original debe preservarse de alguna forma en el resultado de la traducción.
 
 ```xml
@@ -121,7 +117,7 @@ Al escribir el texto original en coreano, cuando se introduce la definición de 
 ```
 
 ##### Manejo de enlaces a otras publicaciones
-Algunas publicaciones incluyen enlaces a otras publicaciones, y durante la fase de prueba, cuando no se proporcionaron pautas específicas sobre esto, surgió frecuentemente el problema de que los enlaces internos se rompían porque se interpretaba que la parte de la ruta de la URL también debía traducirse. Este problema se resolvió agregando esta frase al prompt:
+Algunas publicaciones incluyen enlaces a otras publicaciones, y durante la fase de prueba, cuando no se proporcionaron instrucciones específicas sobre esto, a menudo surgía el problema de que los enlaces internos se rompían porque se interpretaba que incluso la parte de la ruta de la URL debía ser traducida. Este problema se resolvió agregando la siguiente frase al prompt:
 
 ```xml
 - <condition><if>the provided text contains links in markdown format, \
@@ -133,8 +129,8 @@ Algunas publicaciones incluyen enlaces a otras publicaciones, y durante la fase 
     #wirkungsquerschnitt-cross-section-oder-mikroskopischer-wirkungsquerschnitt-microscopic-cross-section)'.</example></condition> \n\n\
 ```
 
-##### Producir solo el resultado de la traducción
-Finalmente, se presenta la siguiente oración para asegurar que solo se produzca el resultado de la traducción sin agregar comentarios adicionales en la respuesta:
+##### Producir solo el resultado de la traducción como respuesta
+Finalmente, se presenta la siguiente frase para que solo se produzca el resultado de la traducción sin agregar ningún otro comentario en la respuesta:
 
 ```xml
 <important>In any case, without exception, the output should contain only the translation results, without any text such as \
@@ -142,28 +138,28 @@ Finalmente, se presenta la siguiente oración para asegurar que solo se produzca
 ```
 
 ### Técnicas adicionales de diseño de prompts
-Sin embargo, existen técnicas adicionales que se aplican específicamente a los modelos de lenguaje, a diferencia de cuando se solicita trabajo a humanos.
-Aunque hay muchos recursos útiles sobre esto en la web, aquí hay algunos consejos representativos que pueden ser útiles de manera general.  
-Se consultó principalmente la [guía de prompt engineering en la documentación oficial de Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview).
+Sin embargo, a diferencia de cuando se solicita una tarea a un humano, existen técnicas adicionales que se aplican específicamente en el caso de los modelos de lenguaje.
+Aunque hay muchos recursos útiles sobre esto en la web, aquí se resumen algunos consejos representativos que se pueden utilizar de manera general:  
+Se ha consultado principalmente la [guía de ingeniería de prompts en la documentación oficial de Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview).
 
 #### Estructuración utilizando etiquetas XML
-De hecho, esto ya se ha estado utilizando hasta ahora. Para prompts complejos que incluyen varios contextos, instrucciones, formatos y ejemplos, el uso apropiado de etiquetas XML como `<instructions>`, `<example>`, `<format>` ayuda significativamente al modelo de lenguaje a interpretar el prompt con precisión y producir resultados de alta calidad que se ajusten a la intención. El repositorio GitHub [GENEXIS-AI/prompt-gallery](https://github.com/GENEXIS-AI/prompt-gallery/blob/main/prompt_xml.md) tiene una buena compilación de etiquetas XML útiles para escribir prompts.
+De hecho, esto ya se ha estado utilizando hasta ahora. Para prompts complejos que incluyen varios contextos, instrucciones, formatos y ejemplos, el uso apropiado de etiquetas XML como `<instructions>`, `<example>`, `<format>`, etc., puede ser de gran ayuda para que el modelo de lenguaje interprete con precisión el prompt y produzca una salida de alta calidad que se ajuste a la intención. El repositorio de GitHub [GENEXIS-AI/prompt-gallery](https://github.com/GENEXIS-AI/prompt-gallery/blob/main/prompt_xml.md) tiene una buena recopilación de etiquetas XML útiles para escribir prompts, por lo que se recomienda consultarlo.
 
 #### Técnica de razonamiento paso a paso (CoT, chain of thinking)
-Para tareas que requieren un nivel considerable de razonamiento, como resolver problemas matemáticos o crear documentos complejos, guiar al modelo de lenguaje para que piense en el problema paso a paso puede mejorar significativamente su rendimiento. Sin embargo, esto puede aumentar el tiempo de respuesta, y esta técnica no siempre es útil para todas las tareas, así que hay que tener cuidado.
+Para tareas que requieren un nivel considerable de razonamiento, como la resolución de problemas matemáticos o la redacción de documentos complejos, guiar al modelo de lenguaje para que piense en el problema paso a paso puede mejorar significativamente el rendimiento. Sin embargo, en este caso, el tiempo de respuesta puede aumentar, y esta técnica no siempre es útil para todas las tareas, así que hay que tener cuidado.
 
 #### Técnica de encadenamiento de prompts (prompt chaining)
-Para tareas complejas, puede haber limitaciones al usar un solo prompt. En estos casos, se puede considerar dividir el flujo de trabajo completo en varios pasos desde el principio, presentar prompts especializados para cada paso y pasar la respuesta obtenida en un paso como entrada para el siguiente paso. Esta técnica se conoce como encadenamiento de prompts.
+Cuando se necesita realizar una tarea compleja, puede haber limitaciones al abordarla con un solo prompt. En este caso, se puede considerar dividir todo el flujo de trabajo en varias etapas desde el principio, presentar prompts especializados para cada etapa y pasar la respuesta obtenida en la etapa anterior como entrada para la siguiente etapa. Esta técnica se conoce como encadenamiento de prompts (prompt chaining).
 
-#### Prellenado del inicio de la respuesta
-Al ingresar un prompt, se puede forzar al modelo a omitir saludos innecesarios y otros preámbulos, o a responder en un formato específico como XML o JSON, presentando previamente la primera parte del contenido de la respuesta y haciendo que continúe escribiendo la respuesta a partir de ahí. [En el caso de la API de Claude, esta técnica se puede usar enviando un mensaje `Assistant` junto con el mensaje `User` al hacer la llamada.](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prefill-claudes-response)
+#### Prellenado de la primera parte de la respuesta
+Al ingresar el prompt, se puede forzar a omitir saludos innecesarios u otros preámbulos, o forzar a responder en un formato específico como XML o JSON, presentando previamente la primera parte del contenido de la respuesta y solicitando que se continúe la respuesta a partir de ahí. [En el caso de la API de Claude, esta técnica se puede utilizar enviando un mensaje de `Assistant` junto con el mensaje de `User` al hacer la llamada.](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prefill-claudes-response)
 
-#### Prevención de pereza (Parche de Halloween 31.10.2024)
-Aunque hubo un par de mejoras menores en el prompt y especificaciones más detalladas de las instrucciones después de escribir este artículo por primera vez, no hubo problemas importantes durante los 4 meses de aplicación de este sistema de automatización.
+#### Prevención de la pereza (Parche de Halloween del 12024.10.31.)
+Aunque hubo una o dos mejoras menores en el prompt y una mayor especificación de las instrucciones después de escribir este artículo por primera vez, no hubo grandes problemas durante los 4 meses de aplicación de este sistema de automatización.
 
-Sin embargo, alrededor de las 6 PM (hora de Corea) del 31.10.2024, comenzó a ocurrir continuamente un fenómeno anormal donde, al asignar la traducción de nuevas publicaciones, solo traducía la parte inicial 'TL;DR' del post y luego detenía arbitrariamente la traducción.
+Sin embargo, a partir de las 6 PM del 12024.10.31. hora de Corea, cuando se asignaba la tarea de traducir una nueva publicación, persistía una anomalía en la que solo se traducía la primera parte 'TL;DR' de la publicación y luego se interrumpía arbitrariamente la traducción.
 
-Las causas sospechadas de este problema y sus soluciones se tratan en [una publicación separada](/posts/does-ai-hate-to-work-on-halloween), así que por favor consulta ese artículo.
+La causa probable de este problema y el método de solución se tratan en [una publicación separada](/posts/does-ai-hate-to-work-on-halloween), así que por favor consulta ese artículo.
 
 ### Prompt completado
 El resultado del diseño del prompt siguiendo los pasos anteriores es el siguiente:
@@ -207,5 +203,5 @@ In the provided markdown format text, \n\
 "Here is the translation of the text provided, preserving the markdown format:" or something of that nature!!</important>
 ```
 
-## Lecturas adicionales
+## Lectura adicional
 Continúa en la [Parte 2](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-2)
