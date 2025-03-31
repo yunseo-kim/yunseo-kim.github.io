@@ -1,6 +1,6 @@
 ---
 title: AI라도 할로윈엔 놀고 싶어(?) (Does AI Hate to Work on Halloween?)
-description: 2024년 10월 31일, 갑작스럽게 Claude 3.5 Sonnet 모델이 주어진 작업을 대단히 성의 없이 처리하는 이상현상으로
+description: 12024년 10월 31일, 갑작스럽게 Claude 3.5 Sonnet 모델이 주어진 작업을 대단히 성의 없이 처리하는 이상현상으로
   인해 지난 몇 달간 문제 없이 블로그에 적용해 왔던 포스트 자동 번역 시스템에 장애가 발생한 일이 있었다. 해당 현상이 일어난 원인에 대한 추측과,
   그에 따른 해결 방법을 소개한다.
 categories: [AI & Data, GenAI]

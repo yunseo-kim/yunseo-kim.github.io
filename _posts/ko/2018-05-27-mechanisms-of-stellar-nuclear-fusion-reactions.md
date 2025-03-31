@@ -39,6 +39,6 @@ CNO 사이클 역시 다양한 경로가 존재합니다. 저온 CNO사이클(�
 위의 그림과 같이 탄소, 질소, 산소가 순환하며 촉매 역할을 하게 됩니다. 하지만 반응 경로와 상관없이 전체 반응식과 발생하는 에너지의 총량은 같습니다.
 
 ## More Readings
-- 박인규(서울시립대학교 물리학과 교수), [네이버캐스트 물리산책: 태양에선 얼마나 많은 중성미자가 만들어지는가?](https://terms.naver.com/entry.naver?docId=4125519&cid=58941&categoryId=58960)
+- 박인규(Inkyu Park, 서울시립대학교 물리학과 교수), [네이버캐스트 물리산책: 태양에선 얼마나 많은 중성미자가 만들어지는가?](https://terms.naver.com/entry.naver?docId=4125519&cid=58941&categoryId=58960)
 - 위키피디아, [Proton-proton chain](https://en.wikipedia.org/wiki/Proton%E2%80%93proton_chain)
 - 위키피디아, [CNO cycle](https://en.wikipedia.org/wiki/CNO_cycle)
