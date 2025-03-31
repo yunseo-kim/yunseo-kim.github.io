@@ -69,6 +69,14 @@ def translate(filepath, source_lang, target_lang):
             (/posts/Neutron-Interactions-and-Cross-sections/#단면적cross-section-또는-미시적-단면적microscopic-cross-section)' \
             would be '[Neutronenwechselwirkungen und Wirkungsquerschnitte](/posts/Neutron-Interactions-and-Cross-sections/\
             #wirkungsquerschnitt-cross-section-oder-mikroskopischer-wirkungsquerschnitt-microscopic-cross-section)'.</example></condition> \n\n\
+        - <condition>Posts in this blog use the holocene calendar as the year numbering system, \
+          so the year and date notations such as followings are intentional, not typos.\n\
+          - <example>12024년 6월 21일</example>\n\
+          - <example>12024.10.31.</example>\n\
+          - <example>11687년</example>\n\
+          - <example>11800년대 말</example>\n\
+          - <example>11960년대</example>\n\
+          </condition>\n\n\
         <important>In any case, without exception, the output should contain only the translation results, without any text such as \
         “Here is the translation of the text provided, preserving the markdown format:” or something of that nature!!</important>"
     system_prompt = system_prompt.replace("        ",'')
