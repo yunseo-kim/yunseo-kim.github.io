@@ -8,7 +8,7 @@ from tqdm import tqdm
 # optionally followed by either a date separator pattern (e.g. .03.26 or /03/26)
 # or by a Korean suffix such as "년" or "년도"
 advanced_pattern = re.compile(
-    r'(?<!\d)(\d{4})((?:[./]\d{1,2}[./]\d{1,2})|\s*년(?:도)?)?(?!\d)'
+    r'(?:(?<!\d)(\d{4})((?:[./]\d{1,2}[./]\d{1,2})|\s*년(?:도)?)?(?!\d)|(\d{1,2})세기)'
 )
 
 # Simple regex pattern for file name conversion (only standalone 4-digit number)
