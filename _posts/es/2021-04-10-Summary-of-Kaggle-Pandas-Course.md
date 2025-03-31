@@ -23,7 +23,7 @@ pd.DataFrame({'Bob': ['Me gustó.', 'Fue horrible.'], 'Sue': ['Bastante bueno.',
 ```
 Los DataFrames se declaran en formato de diccionario de Python. Las claves son los nombres de las columnas y los valores son listas con los elementos a incluir.
 
-Normalmente, al declarar un DataFrame, se asignan etiquetas a las columnas, pero a las filas se les asignan enteros 0, 1, 2... Si es necesario, se pueden especificar manualmente las etiquetas de las filas. La lista de etiquetas de filas en un DataFrame se llama **Índice** y se puede especificar usando el parámetro ```index```.
+Normalmente, al declarar un DataFrame se asignan etiquetas a las columnas, pero a las filas se les asignan enteros 0, 1, 2... Si es necesario, se pueden especificar manualmente las etiquetas de las filas. La lista de etiquetas de filas en un DataFrame se llama **Índice** y se puede especificar usando el parámetro ```index```.
 ```python
 pd.DataFrame({'Bob': ['Me gustó.', 'Fue horrible.'], 
               'Sue': ['Bastante bueno.', 'Insípido.']},
@@ -37,7 +37,7 @@ pd.Series([1, 2, 3, 4, 5])
 ```
 Una Series es esencialmente como una sola columna de un DataFrame. Por lo tanto, también se puede especificar un índice. La diferencia es que tiene un "nombre" (```name```) en lugar de un "nombre de columna".
 ```python
-pd.Series([30, 35, 40], index=['Ventas 2015', 'Ventas 2016', 'Ventas 2017'], name='Producto A')
+pd.Series([30, 35, 40], index=['Ventas 12015', 'Ventas 12016', 'Ventas 12017'], name='Producto A')
 ```
 Las Series y los DataFrames están estrechamente relacionados. Puede ser útil pensar en un DataFrame simplemente como un conjunto de Series.
 
@@ -49,9 +49,9 @@ Producto A,Producto B,Producto C,
 35,34,1,
 41,11,11
 ```
-Es decir, un archivo CSV es una tabla donde cada valor está separado por comas (de ahí el nombre "Comma-Separated Values", CSV).
+Es decir, un archivo CSV es una tabla que separa cada valor con comas (de ahí el nombre "Comma-Separated Values", CSV).
 
-Para cargar datos en formato CSV en un DataFrame, se usa la función ```pd.read_csv()```.
+Para cargar datos en formato CSV como un DataFrame, se usa la función ```pd.read_csv()```.
 
 Se puede verificar el tamaño de un DataFrame usando el atributo ```shape```.
 
@@ -60,10 +60,10 @@ Se pueden ver las primeras cinco filas de un DataFrame usando el comando ```head
 La función ```pd.read_csv()``` tiene más de 30 parámetros. Por ejemplo, si el archivo CSV que se quiere cargar incluye su propio índice, se puede especificar el valor del parámetro ```index_col``` para usar esa columna como índice en lugar de que pandas asigne automáticamente uno.
 
 ### Escribir datos
-Se puede exportar un DataFrame a un archivo CSV usando el método ```to_csv()```. Se usa así:
+Se puede exportar un DataFrame a un archivo CSV usando el método ```to_csv()```. Se usa de la siguiente manera:
 ```python
 (nombre del DataFrame).to_csv("(ruta del archivo CSV)")
 ```
 
 ## Lección 2. Indexación, Selección y Asignación
-Seleccionar valores específicos para usar de un DataFrame o Series de pandas es un paso en casi todas las operaciones que involucran datos.
+Seleccionar valores específicos para usar de un DataFrame o Series de pandas es un paso que se da en casi todas las operaciones que utilizan datos.

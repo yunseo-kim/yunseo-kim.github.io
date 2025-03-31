@@ -23,16 +23,16 @@ image: /assets/img/math-and-physics-cropped.png
 >   - If $\sqrt[n]{a_n}< 1-\epsilon$ for all $n$, then the series $\sum a_n$ converges
 >   - If $\sqrt[n]{a_n}> 1+\epsilon$ for all $n$, then the series $\sum a_n$ diverges
 > - **Root Test**: For a series of positive terms $\sum a_n$, if the limit $\lim_{n\to\infty} \sqrt[n]{a_n} =: r$ exists,
->   - the series $\sum a_n$ converges if $r<1$
->   - the series $\sum a_n$ diverges if $r>1$
+>   - If $r<1$, then the series $\sum a_n$ converges
+>   - If $r>1$, then the series $\sum a_n$ diverges
 > - **Ratio Test**: For a sequence of positive terms $(a_n)$ and $0 < r < 1$
 >   - If $a_{n+1}/a_n \leq r$ for all $n$, then the series $\sum a_n$ converges
 >   - If $a_{n+1}/a_n \geq 1$ for all $n$, then the series $\sum a_n$ diverges
 > - For a sequence of positive terms $(a_n)$, if the limit $\rho := \lim_{n\to\infty} \cfrac{a_{n+1}}{a_n}$ exists,
->   - the series $\sum a_n$ converges if $\rho < 1$
->   - the series $\sum a_n$ diverges if $\rho > 1$
-> - **Integral Test**: For a continuous, decreasing function $f: [1,\infty) \rightarrow \mathbb{R}$ with $f(x)>0$ always, the series $\sum f(n)$ converges if and only if the integral $\int_1^\infty f(x)\ dx := \lim_{b\to\infty} \int_1^b f(x)\ dx$ converges
-> - **Alternating Series Test**: An alternating series $\sum a_n$ converges if the following conditions are met:
+>   - If $\rho < 1$, then the series $\sum a_n$ converges
+>   - If $\rho > 1$, then the series $\sum a_n$ diverges
+> - **Integral Test**: For a continuous decreasing function $f: [1,\infty) \rightarrow \mathbb{R}$ with $f(x)>0$ always, the series $\sum f(n)$ converges if and only if the integral $\int_1^\infty f(x)\ dx := \lim_{b\to\infty} \int_1^b f(x)\ dx$ converges
+> - **Alternating Series Test**: An alternating series $\sum a_n$ converges if the following conditions are satisfied:
 >   1. The signs of $a_n$ and $a_{n+1}$ are different for all $n$
 >   2. $\|a_n\| \geq \|a_{n+1}\|$ for all $n$
 >   3. $\lim_{n\to\infty} a_n = 0$
@@ -61,11 +61,11 @@ The following theorem allows us to easily identify some series that clearly dive
 {: .prompt-info }
 
 ### Proof
-Let $l$ be the sum of a converging series $\sum a_n$, and let
+Let $l$ be the sum of a converging series $\sum a_n$, and let $s_n$ be the sum of the first $n$ terms:
 
 $$ s_n := a_1 + a_2 + \cdots + a_n $$
 
-be the sum of the first $n$ terms. Then,
+Then,
 
 $$ \forall \epsilon > 0,\, \exists N \in \mathbb{N}\ (n > N \Rightarrow |s_n - l| < \epsilon). $$
 
@@ -84,7 +84,7 @@ The harmonic series is a series obtained from a sequence where each term is the 
 
 $$ H_n := 1 + \frac{1}{2} + \cdots + \frac{1}{n} \quad (n=1,2,3,\dots) $$
 
-This series can be shown to diverge as follows:
+We can show that this series diverges as follows:
 
 $$ \begin{align*}
 \lim_{n\to\infty} H_n &= 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \frac{1}{8} + \frac{1}{9} + \cdots + \frac{1}{16} + \cdots \\
@@ -95,7 +95,7 @@ $$ \begin{align*}
 
 As we can see, despite the divergence of the series $H_n$, the general term $1/n$ converges to 0.
 
-> While $\lim_{n\to\infty} a_n \neq 0$ necessarily implies that the series $\sum a_n$ diverges, it is dangerous to assume that the series $\sum a_n$ will converge just because $\lim_{n\to\infty} a_n = 0$. In such cases, other methods should be used to determine convergence/divergence.
+> If $\lim_{n\to\infty} a_n \neq 0$, the series $\sum a_n$ must diverge, but it is dangerous to assume that the series $\sum a_n$ will converge just because $\lim_{n\to\infty} a_n = 0$. In this case, other methods should be used to determine convergence/divergence.
 {: .prompt-danger }
 
 ## Geometric Series
@@ -158,7 +158,7 @@ $$ \sum_{n=1}^{\infty} \frac{1}{n^p} $$
 In p-series, when $p=1$, it becomes the harmonic series, which we have shown to diverge.  
 The problem of finding the value of the p-series when $p=2$, i.e., $\sum \cfrac{1}{n^2}$, is called the 'Basel problem', named after the hometown of the Bernoulli family, which first proved that this series converges and produced several famous mathematicians over several generations. The answer to this problem is known to be $\cfrac{\pi^2}{6}$.
 
-More generally, the p-series with $p>1$ is called the **zeta function**. This is one of the special functions introduced by Leonhard Euler in 1740 and later named by Riemann, defined as
+More generally, the p-series with $p>1$ is called the **zeta function**. This is one of the special functions introduced by Leonhard Euler in [12740 HE](https://en.wikipedia.org/wiki/Holocene_calendar) and later named by Riemann, defined as
 
 $$ \zeta(s) := \sum_{n=1}^{\infty} \frac{1}{n^s} \qquad (s>1) $$
 
@@ -172,7 +172,7 @@ The integral
 
 $$ \int_1^\infty \frac{1}{x^p}\ dx = \left[\frac{1}{-p+1}\frac{1}{x^{p-1}} \right]^\infty_1 = \frac{1}{p-1} $$
 
-converges, so by the [Integral Test](#integral-test), we know that the series $\sum \cfrac{1}{n^p}$ also converges.
+converges, so by the [Integral Test](#integral-test), we can see that the series $\sum \cfrac{1}{n^p}$ also converges.
 
 #### ii) When $p\leq 1$
 In this case,
@@ -185,9 +185,9 @@ We know that the harmonic series $\sum \cfrac{1}{n}$ diverges, so by the [Compar
 By i) and ii), the p-series $\sum \cfrac{1}{n^p}$ converges if $p>1$ and diverges if $p \leq 1$. $\blacksquare$
 
 ## Comparison Test
-Jakob Bernoulli's **Comparison Test** is useful for determining the convergence/divergence of **series of positive terms**, which are series whose general terms are non-negative real numbers.
+Jakob Bernoulli's **Comparison Test** is useful for determining the convergence/divergence of **series of positive terms**, which are series whose general terms consist of non-negative real numbers.
 
-A series of positive terms $\sum a_n$ is an increasing sequence, so unless it diverges to infinity ($\sum a_n = \infty$), it must converge. Therefore, in a series of positive terms, the expression
+A series of positive terms $\sum a_n$ is an increasing sequence, so unless it diverges to infinity ($\sum a_n = \infty$), it must converge. Therefore, in a series of positive terms, an expression like
 
 $$ \sum a_n < \infty $$
 
@@ -199,12 +199,12 @@ means that <u>it converges</u>.
 > - $\sum a_n = \infty \ \Rightarrow \ \sum b_n = \infty$
 {: .prompt-info }
 
-In particular, for series of positive terms that have forms similar to the geometric series $\sum ar^{n-1}$ or p-series $\sum \cfrac{1}{n^p}$ that we looked at earlier, such as $\sum \cfrac{1}{n^2 + n}$, $\sum \cfrac{\log n}{n^3}$, $\sum \cfrac{1}{2^n + 3^n}$, $\sum \cfrac{1}{\sqrt{n}}$, $\sum \sin{\cfrac{1}{n}}$, it's a good idea to actively try the Comparison Test.
+In particular, for series of positive terms that have forms similar to the geometric series $\sum ar^{n-1}$ or p-series $\sum \cfrac{1}{n^p}$ that we looked at earlier, such as $\sum \cfrac{1}{n^2 + n}$, $\sum \cfrac{\log n}{n^3}$, $\sum \cfrac{1}{2^n + 3^n}$, $\sum \cfrac{1}{\sqrt{n}}$, $\sum \sin{\cfrac{1}{n}}$, it's a good idea to actively try the Comparison Test to determine their convergence/divergence.
 
 All the other convergence/divergence tests that will be discussed later can be derived from this **Comparison Test**, and in that sense, the Comparison Test can be considered the most important.
 
 ### Limit Comparison Test
-For series of positive terms $\sum a_n$ and $\sum b_n$, suppose that the dominant terms in the numerator and denominator of the ratio of the general terms $a_n/b_n$ cancel out, resulting in $\lim_{n\to\infty} \cfrac{a_n}{b_n}=c \text{ (}c\text{ is a finite positive number)}$. If we know whether the series $\sum b_n$ converges or diverges, we can use the following **Limit Comparison Test**.
+For series of positive terms $\sum a_n$ and $\sum b_n$, suppose that the ratio of the general terms of the two series, $a_n/b_n$, has its dominant terms in the numerator and denominator cancel out, resulting in $\lim_{n\to\infty} \cfrac{a_n}{b_n}=c \text{ (}c\text{ is a finite positive number)}$. If we know whether the series $\sum b_n$ converges or diverges, we can use the following **Limit Comparison Test**.
 
 > **Limit Comparison Test**  
 > If
@@ -248,10 +248,10 @@ For series of positive terms $\sum a_n$ and $\sum b_n$, suppose that the dominan
 {: .prompt-info }
 
 ## Integral Test
-The integral method can be used to determine the convergence/divergence of series composed of decreasing positive sequences.
+The integral method can be used to determine the convergence/divergence of series consisting of decreasing positive sequences.
 
 > **Integral Test**  
-> For a continuous, decreasing function $f: [1,\infty) \rightarrow \mathbb{R}$ with $f(x)>0$ always, the series $\sum f(n)$ converges if and only if the integral
+> For a continuous decreasing function $f: [1,\infty) \rightarrow \mathbb{R}$ with $f(x)>0$ always, the series $\sum f(n)$ converges if and only if the integral
 >
 > $$ \int_1^\infty f(x)\ dx := \lim_{b\to\infty} \int_1^b f(x)\ dx $$
 >
@@ -263,14 +263,14 @@ If the function $f(x)$ is continuous, decreasing, and always positive, the inequ
 
 $$ f(n+1) \leq \int_n^{n+1} f(x)\ dx \leq f(n) $$
 
-holds. Adding this inequality from $n=1$ to the general term, we get the inequality
+holds. Adding this inequality from $n=1$ to the general term, we get
 
 $$ f(2) + \cdots + f(n+1) \leq \int_1^{n+1} f(x)\ dx \leq f(1) + \cdots + f(n) $$
 
-Now, using the [Comparison Test](#comparison-test), we obtain the desired result. $\blacksquare$
+Now, applying the [Comparison Test](#comparison-test) gives us the desired result. $\blacksquare$
 
 ## Alternating Series
-A series $\sum a_n$ where each term $a_n$ is non-zero and has a different sign from the next term $a_{n+1}$, i.e., where positive and negative terms alternate, is called an **alternating series**.
+A series $\sum a_n$ where the sign of each term $a_n$ is different from the sign of the next term $a_{n+1}$ (i.e., positive and negative terms alternate) and no term is zero is called an **alternating series**.
 
 For alternating series, the following theorem discovered by the German mathematician Gottfried Wilhelm Leibniz can be usefully applied to determine convergence/divergence.
 
@@ -286,7 +286,7 @@ For alternating series, the following theorem discovered by the German mathemati
 ## Absolute Convergence
 For a series $\sum a_n$, if the series $\sum \|a_n\|$ converges, we say that "the series $\sum a_n$ **converges absolutely**".
 
-In this case, the following theorem holds:
+The following theorem holds in this case:
 
 > **Theorem**  
 > A series that converges absolutely also converges.
@@ -308,7 +308,7 @@ Then we have,
 
 $$ a = a^+ - a^-, \qquad |a| = a^+ + a^- $$
 
-Since $0 \leq a^\pm \leq \|a\|$, by the [Comparison Test](#comparison-test), if the series $\sum \|a_n\|$ converges, then the series $\sum a_n^+$ and $\sum a_n^-$ also converge. Therefore, by the [basic properties of convergent series](/posts/sequences-and-series/#basic-properties-of-convergent-series),
+Since $0 \leq a^\pm \leq \|a\|$, by the [Comparison Test](#comparison-test), if the series $\sum \|a_n\|$ converges, then the series $\sum a_n^+$ and $\sum a_n^-$ also both converge. Therefore, by the [basic properties of convergent series](/posts/sequences-and-series/#basic-properties-of-convergent-series),
 
 $$ \sum a_n = \sum (a_n^+ - a_n^-) = \sum a_n^+ - \sum a_n^- $$
 

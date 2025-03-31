@@ -1,6 +1,6 @@
 ---
 title: Prueba de convergencia/divergencia de series (Testing for Convergence or Divergence of a Series)
-description: Se examinan varios métodos para determinar la convergencia/divergencia de series.
+description: Examinamos varios métodos para determinar la convergencia/divergencia de series.
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true
@@ -18,7 +18,7 @@ image: /assets/img/math-and-physics-cropped.png
 > - **Prueba de comparación**: Si $0 \leq a_n \leq b_n$, entonces  
 >   - $\sum b_n < \infty \ \Rightarrow \ \sum a_n < \infty$
 >   - $\sum a_n = \infty \ \Rightarrow \ \sum b_n = \infty$
-> - **Prueba de comparación del límite**: Si $\lim_{n\to\infty} \frac{a_n}{b_n} = c \text{ (}c\text{ es un número positivo finito)}$, entonces las dos series $\sum a_n$ y $\sum b_n$ convergen o divergen juntas
+> - **Prueba del límite de comparación**: Si $\lim_{n\to\infty} \frac{a_n}{b_n} = c \text{ (}c\text{ es un número positivo finito)}$, entonces las dos series $\sum a_n$ y $\sum b_n$ convergen o divergen juntas
 > - Para una serie de términos positivos $\sum a_n$ y un número positivo $\epsilon < 1$  
 >   - Si $\sqrt[n]{a_n}< 1-\epsilon$ para todo $n$, entonces la serie $\sum a_n$ converge
 >   - Si $\sqrt[n]{a_n}> 1+\epsilon$ para todo $n$, entonces la serie $\sum a_n$ diverge
@@ -31,24 +31,24 @@ image: /assets/img/math-and-physics-cropped.png
 > - Para una sucesión de números positivos $(a_n)$, si existe el límite $\rho := \lim_{n\to\infty} \cfrac{a_{n+1}}{a_n}$,
 >   - Si $\rho < 1$, entonces la serie $\sum a_n$ converge
 >   - Si $\rho > 1$, entonces la serie $\sum a_n$ diverge
-> - **Prueba de la integral**: Para una función continua y decreciente $f: \left[1,\infty \right) \rightarrow \mathbb{R}$ con $f(x)>0$ siempre, la serie $\sum f(n)$ converge si y solo si la integral $\int_1^\infty f(x)\ dx := \lim_{b\to\infty} \int_1^b f(x)\ dx$ converge
+> - **Prueba de la integral**: Si $f: \left[1,\infty \right) \rightarrow \mathbb{R}$ es una función continua, decreciente y siempre positiva, entonces la serie $\sum f(n)$ converge si y solo si la integral $\int_1^\infty f(x)\ dx := \lim_{b\to\infty} \int_1^b f(x)\ dx$ converge
 > - **Prueba de series alternantes**: Una serie alternante $\sum a_n$ converge si se cumplen las siguientes condiciones:
 >   1. $a_n$ y $a_{n+1}$ tienen signos opuestos para todo $n$
 >   2. $\|a_n\| \geq \|a_{n+1}\|$ para todo $n$
 >   3. $\lim_{n\to\infty} a_n = 0$
-> - Una serie absolutamente convergente es convergente. Lo contrario no es necesariamente cierto.
+> - Una serie que converge absolutamente también converge. Lo contrario no es necesariamente cierto.
 {: .prompt-info }
 
 ## Prerrequisitos
 - [Sucesiones y series](/posts/sequences-and-series/)
 
 ## Introducción
-Anteriormente en [Sucesiones y series](/posts/sequences-and-series/#convergencia-y-divergencia-de-series), vimos las definiciones de convergencia y divergencia de series. En este artículo, resumiremos varios métodos que se pueden usar para determinar la convergencia/divergencia de series. En general, determinar la convergencia/divergencia de una serie es mucho más fácil que calcular su suma exacta.
+Anteriormente, en [Sucesiones y series](/posts/sequences-and-series/#convergencia-y-divergencia-de-series), vimos la definición de convergencia y divergencia de series. En este artículo, resumiremos varios métodos que se pueden utilizar para determinar la convergencia/divergencia de series. En general, determinar la convergencia/divergencia de una serie es mucho más fácil que calcular su suma exacta.
 
 ## Prueba del término n-ésimo
-Para una serie $\sum a_n$, $a_n$ se llama el **término general** de la serie.
+Para una serie $\sum a_n$, $a_n$ se denomina el **término general** de dicha serie.
 
-Por el siguiente teorema, podemos fácilmente determinar que algunas series divergen obviamente, por lo que es sabio verificar esto primero al juzgar la convergencia/divergencia de una serie para evitar perder tiempo.
+El siguiente teorema nos permite saber fácilmente que algunas series divergen obviamente, por lo que es prudente verificar esto primero al determinar la convergencia/divergencia de una serie para evitar perder tiempo.
 
 > **Prueba del término n-ésimo para divergencia**  
 > Si una serie $\sum a_n$ converge, entonces
@@ -95,7 +95,7 @@ $$ \begin{align*}
 
 Como se puede ver, aunque la serie $H_n$ diverge, el término general $1/n$ converge a $0$.
 
-> Si $\lim_{n\to\infty} a_n \neq 0$, entonces la serie $\sum a_n$ definitivamente diverge, pero es peligroso pensar que la serie $\sum a_n$ convergerá si $\lim_{n\to\infty} a_n = 0$, y en este caso se deben usar otros métodos para determinar la convergencia/divergencia.
+> Si $\lim_{n\to\infty} a_n \neq 0$, entonces la serie $\sum a_n$ definitivamente diverge, pero es peligroso pensar que la serie $\sum a_n$ convergerá si $\lim_{n\to\infty} a_n = 0$. En este caso, se deben usar otros métodos para determinar la convergencia/divergencia.
 {: .prompt-danger }
 
 ## Series geométricas
@@ -134,7 +134,7 @@ Sustituyendo $r=-\epsilon$, $n=2$ en esta ecuación, obtenemos
 
 $$ \frac{1}{1+\epsilon} - (1 - \epsilon) = \frac{\epsilon^2}{1 + \epsilon} $$
 
-Por lo tanto, si $0 < \epsilon < 1$,
+Por lo tanto, si $0 < \epsilon < 1$
 
 $$ 0 < \frac{1}{1 + \epsilon} - (1 - \epsilon) < \epsilon^2 $$
 
@@ -155,14 +155,14 @@ $$ \sum_{n=1}^{\infty} \frac{1}{n^p} $$
 > - diverge si $p\leq 1$
 {: .prompt-info }
 
-En las series p, cuando $p=1$, se convierte en la serie armónica, que ya hemos demostrado que diverge.  
-El problema de encontrar el valor de la serie p cuando $p=2$, es decir, $\sum \cfrac{1}{n^2}$, se llama el 'problema de Basilea', nombrado así por la ciudad base de la familia Bernoulli, que produjo varios matemáticos famosos a lo largo de varias generaciones y que fue la primera en demostrar que esta serie converge. Se sabe que la respuesta a este problema es $\cfrac{\pi^2}{6}$.
+En el caso de $p=1$ en una serie p, se convierte en la serie armónica, que ya hemos demostrado que diverge.  
+El problema de encontrar el valor de la serie p cuando $p=2$, es decir, $\sum \cfrac{1}{n^2}$, se llama el 'problema de Basilea', nombrado así por la ciudad base de la familia Bernoulli, que demostró por primera vez que esta serie converge y produjo varios matemáticos famosos a lo largo de varias generaciones. Se sabe que la respuesta a este problema es $\cfrac{\pi^2}{6}$.
 
-Más generalmente, la serie p para $p>1$ se llama **función zeta**. Esta es una función especial introducida por Leonhard Euler en 1740 y posteriormente nombrada por Riemann, definida como
+Más generalmente, la serie p para $p>1$ se llama **función zeta**. Esta es una función especial introducida por Leonhard Euler en el año 11740 del [calendario de la era humana](https://en.wikipedia.org/wiki/Holocene_calendar) y posteriormente nombrada por Riemann, definida como
 
 $$ \zeta(s) := \sum_{n=1}^{\infty} \frac{1}{n^s} \qquad (s>1) $$
 
-Esto se desvía un poco del tema de este artículo y, para ser honesto, como soy un estudiante de ingeniería y no un matemático, no lo sé muy bien, así que no lo trataré aquí, pero Leonhard Euler demostró que la función zeta también se puede expresar como un producto infinito de números primos llamado **producto de Euler**, y posteriormente la función zeta ocupa una posición central en varios campos de la teoría analítica de números. La **función zeta de Riemann**, que extiende el dominio de definición de la función zeta a los números complejos, y el importante problema no resuelto relacionado con ella, la **hipótesis de Riemann**, son algunos de ellos.
+Esto se desvía un poco del tema de este artículo y, para ser honesto, como soy un estudiante de ingeniería y no un matemático, no lo sé muy bien, así que no lo trataré aquí, pero Leonhard Euler demostró que la función zeta también se puede expresar como un producto infinito de números primos llamado **producto de Euler**, y posteriormente la función zeta ocupa una posición central en varios campos de la teoría analítica de números. La **función zeta de Riemann**, que extiende el dominio de la función zeta a los números complejos, y la importante conjetura no resuelta relacionada con ella, la **hipótesis de Riemann**, son ejemplos de ello.
 
 Volviendo al tema original, la demostración de la prueba de series p requiere la [prueba de comparación](#prueba-de-comparación) y la [prueba de la integral](#prueba-de-la-integral) que se discutirán más adelante. Sin embargo, la convergencia/divergencia de las series p puede ser útil en la [prueba de comparación](#prueba-de-comparación) que se discutirá justo después de las series geométricas, por lo que se ha colocado intencionalmente hacia el principio.
 
@@ -175,7 +175,7 @@ $$ \int_1^\infty \frac{1}{x^p}\ dx = \left[\frac{1}{-p+1}\frac{1}{x^{p-1}} \righ
 converge, por lo que por la [prueba de la integral](#prueba-de-la-integral), sabemos que la serie $\sum \cfrac{1}{n^p}$ también converge.
 
 #### ii) Cuando $p\leq 1$
-En este caso,
+En este caso
 
 $$ 0 \leq \frac{1}{n} \leq \frac{1}{n^p} $$
 
@@ -199,14 +199,14 @@ significa que <u>converge</u>.
 > - $\sum a_n = \infty \ \Rightarrow \ \sum b_n = \infty$
 {: .prompt-info }
 
-En particular, es bueno intentar activamente la prueba de comparación al determinar la convergencia/divergencia de series que tienen una forma similar a las series geométricas $\sum ar^{n-1}$ o las series p $\sum \cfrac{1}{n^p}$ que vimos anteriormente, como $\sum \cfrac{1}{n^2 + n}$, $\sum \cfrac{\log n}{n^3}$, $\sum \cfrac{1}{2^n + 3^n}$, $\sum \cfrac{1}{\sqrt{n}}$, $\sum \sin{\cfrac{1}{n}}$, etc.
+En particular, para series de términos positivos como $\sum \cfrac{1}{n^2 + n}$, $\sum \cfrac{\log n}{n^3}$, $\sum \cfrac{1}{2^n + 3^n}$, $\sum \cfrac{1}{\sqrt{n}}$, $\sum \sin{\cfrac{1}{n}}$, que tienen formas similares a las series geométricas $\sum ar^{n-1}$ o las series p $\sum \cfrac{1}{n^p}$ que vimos anteriormente, es bueno intentar activamente la prueba de comparación para determinar su convergencia/divergencia.
 
-Varias otras pruebas de convergencia/divergencia que se discutirán más adelante se pueden derivar de esta **prueba de comparación**, y en ese sentido, se puede decir que la prueba de comparación es la más importante.
+Todas las demás pruebas de convergencia/divergencia que se discutirán más adelante se pueden derivar de esta **prueba de comparación**, y en ese sentido, se puede decir que la prueba de comparación es la más importante.
 
-### Prueba de comparación del límite
-Para series de términos positivos $\sum a_n$ y $\sum b_n$, supongamos que los términos dominantes en el numerador y denominador de la razón de los términos generales de las dos series $a_n/b_n$ se cancelan, resultando en $\lim_{n\to\infty} \cfrac{a_n}{b_n}=c \text{ (}c\text{ es un número positivo finito)}$. Si conocemos la convergencia/divergencia de la serie $\sum b_n$, podemos usar la siguiente **prueba de comparación del límite**.
+### Prueba del límite de comparación
+Para series de términos positivos $\sum a_n$ y $\sum b_n$, supongamos que el término dominante en el numerador y el denominador de la razón de los términos generales de las dos series $a_n/b_n$ se cancela, resultando en $\lim_{n\to\infty} \cfrac{a_n}{b_n}=c \text{ (}c\text{ es un número positivo finito)}$. Si conocemos la convergencia/divergencia de la serie $\sum b_n$, podemos utilizar la siguiente **prueba del límite de comparación**.
 
-> **Prueba de comparación del límite**  
+> **Prueba del límite de comparación**  
 > Si
 >
 > $$ \lim_{n\to\infty} \frac{a_n}{b_n} = c \text{ (}c\text{ es un número positivo finito)}$$
@@ -226,7 +226,7 @@ Para series de términos positivos $\sum a_n$ y $\sum b_n$, supongamos que los t
 >
 > $$ \lim_{n\to\infty} \sqrt[n]{a_n} =: r $$
 >
-> Entonces,
+> Entonces
 > - Si $r<1$, la serie $\sum a_n$ converge
 > - Si $r>1$, la serie $\sum a_n$ diverge
 {: .prompt-info }
@@ -242,16 +242,16 @@ Para series de términos positivos $\sum a_n$ y $\sum b_n$, supongamos que los t
 {: .prompt-info }
 
 > **Corolario**  
-> Para una sucesión de números positivos $(a_n)$, supongamos que existe el límite $\rho := \lim_{n\to\infty} \cfrac{a_{n+1}}{a_n}$. Entonces,
+> Para una sucesión de números positivos $(a_n)$, supongamos que existe el límite $\rho := \lim_{n\to\infty} \cfrac{a_{n+1}}{a_n}$. Entonces
 > - Si $\rho < 1$, la serie $\sum a_n$ converge
 > - Si $\rho > 1$, la serie $\sum a_n$ diverge
 {: .prompt-info }
 
 ## Prueba de la integral
-El método de integración se puede usar para determinar la convergencia/divergencia de series compuestas por sucesiones decrecientes de números positivos.
+Usando el cálculo integral, podemos determinar la convergencia/divergencia de series compuestas por sucesiones decrecientes de términos positivos.
 
 > **Prueba de la integral**  
-> Para una función continua y decreciente $f: \left[1,\infty \right) \rightarrow \mathbb{R}$ con $f(x)>0$ siempre, la serie $\sum f(n)$ converge si y solo si la integral
+> Si $f: \left[1,\infty \right) \rightarrow \mathbb{R}$ es una función continua, decreciente y siempre positiva, entonces la serie $\sum f(n)$ converge si y solo si la integral
 >
 > $$ \int_1^\infty f(x)\ dx := \lim_{b\to\infty} \int_1^b f(x)\ dx $$
 >
@@ -270,7 +270,7 @@ $$ f(2) + \cdots + f(n+1) \leq \int_1^{n+1} f(x)\ dx \leq f(1) + \cdots + f(n) $
 Ahora, aplicando la [prueba de comparación](#prueba-de-comparación), obtenemos el resultado deseado. $\blacksquare$
 
 ## Series alternantes
-Una serie $\sum a_n$ donde los términos generales no son cero y el signo de cada término $a_n$ es diferente del signo del siguiente término $a_{n+1}$, es decir, donde los términos positivos y negativos aparecen alternativamente, se llama **serie alternante**.
+Una serie $\sum a_n$ cuyos términos generales no son cero y el signo de cada término $a_n$ es diferente del signo del siguiente término $a_{n+1}$, es decir, una serie donde los términos positivos y negativos aparecen alternativamente, se llama **serie alternante**.
 
 Para las series alternantes, el siguiente teorema descubierto por el matemático alemán Gottfried Wilhelm Leibniz puede ser útilmente aplicado para determinar la convergencia/divergencia.
 
@@ -289,15 +289,15 @@ Si para una serie $\sum a_n$, la serie $\sum \|a_n\|$ converge, se dice que "la 
 En este caso, se cumple el siguiente teorema.
 
 > **Teorema**  
-> Una serie absolutamente convergente es convergente.
+> Una serie que converge absolutamente también converge.
 {: .prompt-info }
 
-> El recíproco de este teorema no es cierto.  
+> El recíproco del teorema anterior no es cierto.  
 > Cuando una serie converge pero no converge absolutamente, se dice que "**converge condicionalmente**".
 {: .prompt-warning }
 
 ### Demostración
-Para un número real $a$, definamos
+Para un número real $a$, definimos
 
 $$ \begin{align*}
 a^+ &:= \max\{a,0\} = \frac{1}{2}(|a| + a), \\
@@ -308,7 +308,7 @@ Entonces obtenemos,
 
 $$ a = a^+ - a^-, \qquad |a| = a^+ + a^- $$
 
-Ahora, como $0 \leq a^\pm \leq \|a\|$, por la [prueba de comparación](#prueba-de-comparación), si la serie $\sum \|a_n\|$ converge, las series $\sum a_n^+$ y $\sum a_n^-$ también convergen, y por lo tanto, por las [propiedades básicas de las series convergentes](/posts/sequences-and-series/#propiedades-básicas-de-las-series-convergentes),
+Como $0 \leq a^\pm \leq \|a\|$, por la [prueba de comparación](#prueba-de-comparación), si la serie $\sum \|a_n\|$ converge, las series $\sum a_n^+$ y $\sum a_n^-$ también convergen, y por lo tanto, por las [propiedades básicas de las series convergentes](/posts/sequences-and-series/#propiedades-básicas-de-las-series-convergentes),
 
 $$ \sum a_n = \sum (a_n^+ - a_n^-) = \sum a_n^+ - \sum a_n^- $$
 

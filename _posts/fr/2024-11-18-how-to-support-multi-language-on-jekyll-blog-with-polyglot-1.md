@@ -1,30 +1,29 @@
 ---
 title: Comment supporter le multilinguisme sur un blog Jekyll avec Polyglot (1) - Application du plugin Polyglot & implémentation des balises hreflang alt, du sitemap et du bouton de sélection de langue
-description: 'Cet article présente le processus d''implémentation du support multilingue sur un blog Jekyll basé sur le thème ''jekyll-theme-chirpy'' en utilisant le plugin Polyglot. C''est le premier article de cette série, couvrant l''application du plugin Polyglot et la modification de l''en-tête HTML et du sitemap.'
+description: 'Cet article présente le processus d''implémentation du support multilingue sur un blog Jekyll basé sur le thème ''jekyll-theme-chirpy'' en utilisant le plugin Polyglot. C''est le premier article de la série, couvrant l''application du plugin Polyglot et la modification de l''en-tête HTML et du sitemap.'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.jpg
 ---
-
 ## Aperçu
-Il y a environ 4 mois, début juillet 2024, j'ai ajouté le support multilingue à ce blog hébergé sur GitHub Pages et basé sur Jekyll en appliquant le plugin [Polyglot](https://github.com/untra/polyglot).
+Il y a environ 4 mois, au début du mois de juillet de l'an 12024 du [calendrier holocène](https://en.wikipedia.org/wiki/Holocene_calendar), j'ai ajouté le support multilingue à ce blog basé sur Jekyll et hébergé via GitHub Pages en appliquant le plugin [Polyglot](https://github.com/untra/polyglot).
 Cette série partage les bugs rencontrés lors de l'application du plugin Polyglot au thème Chirpy, leur processus de résolution, ainsi que la méthode pour écrire l'en-tête HTML et le sitemap.xml en tenant compte du SEO.
-La série se compose de deux articles, et celui-ci est le premier de la série.
+La série se compose de deux articles, et celui que vous lisez est le premier de la série.
 - Partie 1 : Application du plugin Polyglot & implémentation des balises hreflang alt, du sitemap et du bouton de sélection de langue (cet article)
 - Partie 2 : [Dépannage de l'échec de construction du thème Chirpy et des erreurs de fonction de recherche](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
 
 ## Exigences
 - [x] Le résultat de la construction (pages web) doit pouvoir être fourni en distinguant les chemins par langue (ex. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
-- [x] Pour minimiser le temps et l'effort supplémentaires nécessaires au support multilingue, il devrait être possible de reconnaître automatiquement la langue en fonction du chemin local où se trouve le fichier (ex. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) lors de la construction, sans avoir à spécifier manuellement les balises 'lang' et 'permalink' dans le YAML front matter du fichier Markdown original.
-- [x] La partie en-tête de chaque page du site doit inclure les balises méta Content-Language appropriées et les balises alternatives hreflang pour répondre aux directives SEO de Google pour la recherche multilingue.
-- [x] Il devrait être possible de fournir tous les liens des pages supportant chaque langue sur le site sans omission dans `sitemap.xml`{: .filepath}, et `sitemap.xml`{: .filepath} lui-même ne devrait exister qu'une seule fois dans le chemin racine sans duplication.
+- [x] Pour minimiser le temps et l'effort supplémentaires nécessaires au support multilingue, le système doit pouvoir reconnaître automatiquement la langue en fonction du chemin local où se trouve le fichier (ex. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) lors de la construction, sans avoir à spécifier manuellement les balises 'lang' et 'permalink' dans le YAML front matter du fichier Markdown original.
+- [x] L'en-tête de chaque page du site doit inclure les balises méta Content-Language appropriées et les balises alternatives hreflang pour répondre aux directives SEO de Google pour la recherche multilingue.
+- [x] Le `sitemap.xml`{: .filepath} doit pouvoir fournir tous les liens des pages supportant chaque langue sur le site sans omission, et le `sitemap.xml`{: .filepath} lui-même ne doit exister qu'une seule fois dans le chemin racine sans duplication.
 - [x] Toutes les fonctionnalités fournies par le [thème Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) doivent fonctionner normalement sur chaque page de langue, et si ce n'est pas le cas, elles doivent être modifiées pour fonctionner correctement.
-  - [x] Fonctionnement normal des fonctions 'Recently Updated', 'Trending Tags'
+  - [x] Fonctionnement normal des fonctions 'Recently Updated' et 'Trending Tags'
   - [x] Pas d'erreur lors du processus de construction utilisant GitHub Actions
   - [x] Fonctionnement normal de la fonction de recherche de posts en haut à droite du blog
 
 ## Application du plugin Polyglot
-Comme Jekyll ne prend pas en charge nativement les blogs multilingues, un plugin externe doit être utilisé pour implémenter un blog multilingue répondant aux exigences ci-dessus. Après recherche, j'ai constaté que [Polyglot](https://github.com/untra/polyglot) est largement utilisé pour l'implémentation de sites web multilingues et peut satisfaire la plupart des exigences ci-dessus, j'ai donc adopté ce plugin.
+Comme Jekyll ne prend pas en charge nativement les blogs multilingues, il est nécessaire d'utiliser un plugin externe pour implémenter un blog multilingue répondant aux exigences ci-dessus. Après recherche, j'ai constaté que [Polyglot](https://github.com/untra/polyglot) est largement utilisé pour l'implémentation de sites web multilingues et peut satisfaire la plupart des exigences ci-dessus, j'ai donc adopté ce plugin.
 
 ### Installation du plugin
 Comme j'utilise Bundler, j'ai ajouté le contenu suivant à `Gemfile`.
@@ -63,7 +62,7 @@ lang_from_path: true
 - default_lang : Langue de repli par défaut
 - exclude_from_localization : Spécifie les expressions régulières des chemins de fichiers/dossiers racine à exclure de la localisation
 - parallel_localization : Valeur booléenne indiquant s'il faut paralléliser le traitement multilingue lors de la construction
-- lang_from_path : Valeur booléenne, si définie sur 'true', elle reconnaîtra et utilisera automatiquement le code de langue inclus dans la chaîne de chemin du fichier Markdown sans avoir à spécifier explicitement l'attribut 'lang' dans le YAML front matter à l'intérieur du fichier Markdown
+- lang_from_path : Valeur booléenne, si définie sur 'true', reconnaît et utilise automatiquement le code de langue inclus dans la chaîne de chemin du fichier Markdown sans avoir à spécifier explicitement l'attribut 'lang' dans le YAML front matter du fichier Markdown
 
 > La [documentation officielle du protocole Sitemap](https://www.sitemaps.org/protocol.html#location) stipule ce qui suit :
 >
@@ -71,9 +70,9 @@ lang_from_path: true
 >
 >> "Il est fortement recommandé de placer votre Sitemap dans le répertoire racine de votre serveur web."
 >
-> Pour se conformer à cela, il faut ajouter 'sitemap.xml' à la liste 'exclude_from_localization' pour s'assurer qu'un seul fichier `sitemap.xml`{: .filepath} existe dans le répertoire racine, et non des fichiers de contenu identique créés pour chaque langue, comme dans le mauvais exemple ci-dessous.
+> Pour se conformer à cela, il faut ajouter 'sitemap.xml' à la liste 'exclude_from_localization' afin qu'un seul fichier `sitemap.xml`{: .filepath} avec le même contenu existe dans le répertoire racine, et non pas un pour chaque langue comme dans le mauvais exemple ci-dessous.
 >
-> Mauvais exemple (le contenu de chaque fichier n'est pas différent par langue, tous sont identiques) :
+> Mauvais exemple (le contenu de chaque fichier n'est pas différent selon la langue, tous sont identiques) :
 > - `/sitemap.xml`{: .filepath}
 > - `/ko/sitemap.xml`{: .filepath}
 > - `/es/sitemap.xml`{: .filepath}
@@ -82,10 +81,10 @@ lang_from_path: true
 > - `/fr/sitemap.xml`{: .filepath}
 > - `/de/sitemap.xml`{: .filepath}
 >
-> (Mise à jour du 14.01.2025) Suite à l'acceptation de [la Pull Request que j'ai soumise pour renforcer le contenu mentionné ci-dessus dans le README](https://github.com/untra/polyglot/pull/230), on peut maintenant trouver les mêmes instructions dans la [documentation officielle de Polyglot](https://github.com/untra/polyglot?tab=readme-ov-file#sitemap-generation).
+> (Mise à jour du 14.01.12025) Suite à l'acceptation de [la Pull Request que j'ai soumise pour renforcer le contenu mentionné ci-dessus dans le README](https://github.com/untra/polyglot/pull/230), les mêmes instructions peuvent désormais être trouvées dans la [documentation officielle de Polyglot](https://github.com/untra/polyglot?tab=readme-ov-file#sitemap-generation).
 {: .prompt-tip }
 
-> Définir 'parallel_localization' sur 'true' présente l'avantage de réduire considérablement le temps de construction, mais à partir de juillet 2024, lorsque cette fonctionnalité était activée pour ce blog, il y avait un bug où les titres des liens dans les sections 'Recently Updated' et 'Trending Tags' de la barre latérale droite de la page n'étaient pas traités correctement et se mélangeaient avec d'autres langues. Cela semble encore instable, donc si vous voulez l'appliquer à votre site, il est nécessaire de tester à l'avance pour vérifier son bon fonctionnement. De plus, [cette fonctionnalité n'est pas prise en charge sous Windows, elle doit donc être désactivée](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
+> Définir 'parallel_localization' sur 'true' présente l'avantage de réduire considérablement le temps de construction, mais en juillet 12024, lorsque cette fonctionnalité était activée pour ce blog, il y avait un bug où les titres des liens dans les sections 'Recently Updated' et 'Trending Tags' de la barre latérale droite de la page n'étaient pas traités correctement et étaient mélangés avec d'autres langues. Cela semble encore instable, donc si vous voulez l'appliquer à votre site, il est nécessaire de tester à l'avance pour vérifier son bon fonctionnement. De plus, [cette fonctionnalité n'est pas prise en charge sous Windows et doit être désactivée](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
 {: .prompt-warning }
 
 De plus, [dans Jekyll 4.0, vous devez désactiver la génération de sourcemaps CSS comme suit](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
@@ -98,20 +97,20 @@ sass:
 
 ### Points à noter lors de la rédaction de posts
 Voici les points à noter lors de la rédaction de posts multilingues :
-- Spécification du code de langue approprié : Il faut spécifier le code de langue ISO approprié en utilisant soit le chemin du fichier (ex. `/_posts/ko/example-post.md`{: .filepath}) soit l'attribut 'lang' dans le YAML front matter (ex. `lang: ko`). Référez-vous aux exemples de la [documentation pour développeurs Chrome](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales).
+- Spécification du code de langue approprié : Il faut spécifier le code de langue ISO approprié en utilisant le chemin du fichier (ex. `/_posts/ko/example-post.md`{: .filepath}) ou l'attribut 'lang' dans le YAML front matter (ex. `lang: ko`). Référez-vous aux exemples de la [documentation pour développeurs Chrome](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales).
 
-> Cependant, bien que la [documentation pour développeurs Chrome](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales) indique les codes régionaux sous la forme 'pt_BR', il faut en réalité utiliser 'pt-BR' avec un tiret (-) au lieu d'un underscore (_) pour que cela fonctionne correctement lors de l'ajout ultérieur de balises alternatives hreflang dans l'en-tête HTML.
+> Cependant, bien que la [documentation pour développeurs Chrome](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales) utilise le format 'pt_BR' pour les codes régionaux, il faut en réalité utiliser 'pt-BR' avec un - au lieu de _ pour que cela fonctionne correctement lors de l'ajout ultérieur de balises alternatives hreflang dans l'en-tête HTML.
 
 - Les chemins et noms de fichiers doivent être cohérents.
 
 Pour plus de détails, veuillez consulter le [README du dépôt GitHub untra/polyglot](https://github.com/untra/polyglot?tab=readme-ov-file#how-to-use-it).
 
 ## Modification de l'en-tête HTML et du sitemap
-Maintenant, pour le SEO, nous devons insérer la balise méta Content-Language et les balises alternatives hreflang dans l'en-tête HTML de chaque page du blog.
+Maintenant, nous devons insérer la balise méta Content-Language et les balises alternatives hreflang dans l'en-tête HTML de chaque page du blog pour le SEO.
 
 ### En-tête HTML
-À partir de la version 1.8.1, la dernière version en novembre 2024, Polyglot dispose d'une fonctionnalité qui effectue automatiquement les tâches ci-dessus lorsque la balise Liquid {% raw %}`{% I18n_Headers %}`{% endraw %} est appelée dans la partie en-tête de la page.
-Cependant, cela suppose que l'attribut 'permalink' a été explicitement spécifié pour cette page, et ne fonctionne pas correctement si ce n'est pas le cas.
+À partir de la version 1.8.1, la plus récente en novembre 12024, Polyglot dispose d'une fonctionnalité qui effectue automatiquement cette tâche lorsque la balise Liquid {% raw %}`{% I18n_Headers %}`{% endraw %} est appelée dans la partie en-tête de la page.
+Cependant, cela suppose que l'attribut 'permalink' a été spécifié explicitement pour cette page, et ne fonctionne pas correctement si ce n'est pas le cas.
 
 J'ai donc récupéré le [head.html du thème Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/head.html) puis ajouté directement le contenu suivant.
 J'ai travaillé en me référant à [la page SEO Recipes du blog officiel de Polyglot](https://polyglot.untra.io/seo/), mais j'ai modifié pour utiliser l'attribut `page.url` à la place si `page.permalink` n'existe pas.
@@ -170,7 +169,7 @@ layout: content
 {% endraw %}
 
 ## Ajout d'un bouton de sélection de langue dans la barre latérale
-(Mise à jour du 05.02.2025) J'ai amélioré le bouton de sélection de langue en le transformant en une liste déroulante.  
+(Mise à jour du 05.02.12025) J'ai amélioré le bouton de sélection de langue en le transformant en une liste déroulante.  
 Créez un fichier `_includes/lang-selector.html`{: .filepath} et entrez le contenu suivant :
 
 {% raw %}
@@ -273,7 +272,7 @@ De plus, créez un fichier `assets/css/lang-selector.css`{: .filepath} et entrez
     font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
 }
 
-/* État au survol */
+/* État de survol */
 .lang-select:hover {
     color: var(--sidebar-active);
     background-color: var(--sidebar-hover);
@@ -286,13 +285,13 @@ De plus, créez un fichier `assets/css/lang-selector.css`{: .filepath} et entrez
     color: var(--sidebar-active);
 }
 
-/* Prise en charge de Firefox */
+/* Prise en charge du navigateur Firefox */
 .lang-select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 var(--sidebar-muted);
 }
 
-/* Prise en charge d'IE */
+/* Prise en charge du navigateur IE */
 .lang-select::-ms-expand {
     display: none;
 }
@@ -305,7 +304,7 @@ De plus, créez un fichier `assets/css/lang-selector.css`{: .filepath} et entrez
 /* Optimisation pour l'environnement mobile */
 @media (max-width: 768px) {
     .lang-select {
-        padding: 0.75rem 2rem 0.75rem 1rem;  /* Zone tactile plus grande */
+        padding: 0.75rem 2rem 0.75rem 1rem;  /* Zone de toucher plus grande */
     }
     
     .lang-dropdown {
@@ -315,7 +314,7 @@ De plus, créez un fichier `assets/css/lang-selector.css`{: .filepath} et entrez
 ```
 {: file='assets/css/lang-selector.css'}
 
-Ensuite, j'ai ajouté les trois lignes suivantes juste avant la classe "sidebar-bottom" dans le [`_includes/sidebar.html`{: .filepath} du thème Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html) pour que Jekyll charge le contenu de `_includes/lang-selector.html`{: .filepath} précédemment écrit lors de la construction de la page :
+Ensuite, j'ai ajouté les trois lignes suivantes juste avant la classe "sidebar-bottom" dans [`_includes/sidebar.html`{: .filepath} du thème Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html) pour que Jekyll charge le contenu de `_includes/lang-selector.html`{: .filepath} créé précédemment lors de la construction de la page :
 
 {% raw %}
 ```liquid
@@ -330,5 +329,5 @@ Ensuite, j'ai ajouté les trois lignes suivantes juste avant la classe "sidebar-
 {: file='_includes/sidebar.html'}
 {% endraw %}
 
-## Lecture complémentaire
+## Pour aller plus loin
 Suite dans la [Partie 2](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)

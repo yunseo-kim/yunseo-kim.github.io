@@ -61,7 +61,7 @@ Der folgende Satz ermöglicht es uns, die offensichtliche Divergenz einiger Reih
 {: .prompt-info }
 
 ### Beweis
-Sei $l$ die Summe einer konvergierenden Reihe $\sum a_n$ und $s_n$ die Summe der ersten $n$ Glieder:
+Sei $l$ die Summe einer konvergenten Reihe $\sum a_n$ und sei $s_n$ die Summe der ersten $n$ Glieder:
 
 $$ s_n := a_1 + a_2 + \cdots + a_n $$
 
@@ -95,7 +95,7 @@ $$ \begin{align*}
 
 Obwohl die Reihe $H_n$ divergiert, konvergiert das allgemeine Glied $1/n$ gegen 0.
 
-> Wenn $\lim_{n\to\infty} a_n \neq 0$, dann divergiert die Reihe $\sum a_n$ sicher, aber es ist gefährlich anzunehmen, dass die Reihe $\sum a_n$ konvergiert, nur weil $\lim_{n\to\infty} a_n = 0$. In diesem Fall müssen andere Methoden verwendet werden, um die Konvergenz/Divergenz zu bestimmen.
+> Wenn $\lim_{n\to\infty} a_n \neq 0$, dann divergiert die Reihe $\sum a_n$ sicher, aber wenn $\lim_{n\to\infty} a_n = 0$, ist es gefährlich anzunehmen, dass die Reihe $\sum a_n$ konvergiert. In diesem Fall müssen andere Methoden verwendet werden, um die Konvergenz/Divergenz zu bestimmen.
 {: .prompt-danger }
 
 ## Geometrische Reihe
@@ -134,7 +134,7 @@ Wenn wir $r=-\epsilon$ und $n=2$ in diese Gleichung einsetzen, erhalten wir
 
 $$ \frac{1}{1+\epsilon} - (1 - \epsilon) = \frac{\epsilon^2}{1 + \epsilon} $$
 
-Daher, wenn $0 < \epsilon < 1$, gilt
+Daher, wenn $0 < \epsilon < 1$, dann
 
 $$ 0 < \frac{1}{1 + \epsilon} - (1 - \epsilon) < \epsilon^2 $$
 
@@ -155,16 +155,16 @@ $$ \sum_{n=1}^{\infty} \frac{1}{n^p} $$
 > - divergiert, wenn $p\leq 1$
 {: .prompt-info }
 
-In einer p-Reihe wird der Fall $p=1$ zur harmonischen Reihe, von der wir bereits gezeigt haben, dass sie divergiert.  
-Das Problem, den Wert der p-Reihe für $p=2$, also $\sum \cfrac{1}{n^2}$, zu finden, wird als 'Basel-Problem' bezeichnet, benannt nach dem Heimatort der Bernoulli-Familie, die über mehrere Generationen hinweg viele berühmte Mathematiker hervorbrachte und die Konvergenz dieser Reihe zuerst bewies. Es ist bekannt, dass die Antwort auf dieses Problem $\cfrac{\pi^2}{6}$ ist.
+Im Fall $p=1$ wird die p-Reihe zur harmonischen Reihe, von der wir bereits gezeigt haben, dass sie divergiert.  
+Das Problem, den Wert der p-Reihe für $p=2$, also $\sum \cfrac{1}{n^2}$, zu finden, wird als "Basel-Problem" bezeichnet, benannt nach dem Heimatort der Bernoulli-Familie, die über mehrere Generationen hinweg viele berühmte Mathematiker hervorbrachte und die Konvergenz dieser Reihe zuerst bewies. Es ist bekannt, dass die Antwort auf dieses Problem $\cfrac{\pi^2}{6}$ ist.
 
-Allgemeiner wird die p-Reihe für $p>1$ als **Zeta-Funktion** bezeichnet. Diese wurde 1740 von Leonhard Euler eingeführt und später von Riemann benannt. Sie ist eine spezielle Funktion, definiert als
+Allgemeiner wird die p-Reihe für $p>1$ als **Zeta-Funktion** bezeichnet. Diese wurde von Leonhard Euler im Jahr 11740 des [Holozän-Kalenders](https://en.wikipedia.org/wiki/Holocene_calendar) eingeführt und später von Riemann benannt. Sie ist eine spezielle Funktion, definiert als
 
 $$ \zeta(s) := \sum_{n=1}^{\infty} \frac{1}{n^s} \qquad (s>1) $$
 
 Da dies etwas vom Thema dieses Beitrags abweicht und ich ehrlich gesagt als Ingenieurstudent und nicht als Mathematiker nicht viel darüber weiß, werde ich hier nicht weiter darauf eingehen. Leonhard Euler zeigte jedoch, dass die Zeta-Funktion auch als unendliches Produkt von Primzahlen, bekannt als **Euler-Produkt**, dargestellt werden kann. Seitdem nimmt die Zeta-Funktion eine zentrale Stellung in verschiedenen Bereichen der analytischen Zahlentheorie ein. Die **Riemann-Zeta-Funktion**, eine Erweiterung der Zeta-Funktion auf komplexe Zahlen, und das damit verbundene wichtige ungelöste Problem, die **Riemann-Hypothese**, sind Teil davon.
 
-Um zum ursprünglichen Thema zurückzukehren: Für den Beweis des p-Reihentests benötigen wir den später behandelten [Vergleichstest](#vergleichstest) und den [Integraltest](#integraltest). Die Konvergenz/Divergenz von p-Reihen kann jedoch zusammen mit geometrischen Reihen nützlich im gleich folgenden [Vergleichstest](#vergleichstest) verwendet werden, weshalb sie absichtlich weiter vorne platziert wurde.
+Um zum ursprünglichen Thema zurückzukehren: Für den Beweis des p-Reihentests benötigen wir den später behandelten [Vergleichstest](#vergleichstest) und [Integraltest](#integraltest). Die Konvergenz/Divergenz von p-Reihen kann jedoch zusammen mit geometrischen Reihen nützlich für den [Vergleichstest](#vergleichstest) sein, der als nächstes behandelt wird, weshalb sie absichtlich weiter vorne platziert wurde.
 
 ### Beweis
 #### i) Für $p>1$
@@ -185,13 +185,13 @@ Wir wissen, dass die harmonische Reihe $\sum \cfrac{1}{n}$ divergiert, daher div
 Aus i) und ii) folgt, dass die p-Reihe $\sum \cfrac{1}{n^p}$ für $p>1$ konvergiert und für $p \leq 1$ divergiert. $\blacksquare$
 
 ## Vergleichstest
-Der **Vergleichstest** von Jakob Bernoulli ist nützlich, um die Konvergenz/Divergenz von **Reihen mit positiven Gliedern** zu bestimmen, deren allgemeine Glieder nicht-negative reelle Zahlen sind.
+Der **Vergleichstest** von Jakob Bernoulli ist nützlich, um die Konvergenz/Divergenz von **Reihen mit positiven Gliedern** zu bestimmen, also Reihen, deren allgemeine Glieder nicht-negative reelle Zahlen sind.
 
 Eine Reihe mit positiven Gliedern $\sum a_n$ ist eine zunehmende Folge, daher konvergiert sie, wenn sie nicht gegen Unendlich divergiert ($\sum a_n = \infty$). Daher bedeutet der Ausdruck
 
 $$ \sum a_n < \infty $$
 
-für Reihen mit positiven Gliedern, dass sie <u>konvergieren</u>.
+für Reihen mit positiven Gliedern, dass die Reihe <u>konvergiert</u>.
 
 > **Vergleichstest**  
 > Wenn $0 \leq a_n \leq b_n$, dann  
@@ -199,12 +199,12 @@ für Reihen mit positiven Gliedern, dass sie <u>konvergieren</u>.
 > - $\sum a_n = \infty \ \Rightarrow \ \sum b_n = \infty$
 {: .prompt-info }
 
-Insbesondere bei Reihen mit positiven Gliedern, die ähnliche Formen wie die zuvor betrachteten geometrischen Reihen $\sum ar^{n-1}$ oder p-Reihen $\sum \cfrac{1}{n^p}$ haben, wie z.B. $\sum \cfrac{1}{n^2 + n}$, $\sum \cfrac{\log n}{n^3}$, $\sum \cfrac{1}{2^n + 3^n}$, $\sum \cfrac{1}{\sqrt{n}}$, $\sum \sin{\cfrac{1}{n}}$, ist es ratsam, den Vergleichstest aktiv auszuprobieren.
+Insbesondere für Reihen mit positiven Gliedern, die ähnliche Formen wie die zuvor betrachteten geometrischen Reihen $\sum ar^{n-1}$ oder p-Reihen $\sum \cfrac{1}{n^p}$ haben, wie z.B. $\sum \cfrac{1}{n^2 + n}$, $\sum \cfrac{\log n}{n^3}$, $\sum \cfrac{1}{2^n + 3^n}$, $\sum \cfrac{1}{\sqrt{n}}$, $\sum \sin{\cfrac{1}{n}}$, ist es ratsam, den Vergleichstest aktiv zu versuchen.
 
-Viele der später diskutierten Konvergenz-/Divergenztests können aus diesem **Vergleichstest** abgeleitet werden, was seine Bedeutung unterstreicht.
+Alle anderen später behandelten Konvergenz-/Divergenztests können aus diesem **Vergleichstest** abgeleitet werden, was seine zentrale Bedeutung unterstreicht.
 
 ### Grenzwertvergleichstest
-Für Reihen mit positiven Gliedern $\sum a_n$ und $\sum b_n$, wenn das Verhältnis der allgemeinen Glieder $a_n/b_n$ so ist, dass die dominanten Terme im Zähler und Nenner sich aufheben und $\lim_{n\to\infty} \cfrac{a_n}{b_n}=c \text{ (}c\text{ ist eine endliche positive Zahl)}$, dann kann der folgende **Grenzwertvergleichstest** verwendet werden, wenn die Konvergenz/Divergenz der Reihe $\sum b_n$ bekannt ist.
+Für zwei Reihen mit positiven Gliedern $\sum a_n$ und $\sum b_n$, wenn das Verhältnis der allgemeinen Glieder $a_n/b_n$ so ist, dass die dominanten Terme im Zähler und Nenner sich aufheben und $\lim_{n\to\infty} \cfrac{a_n}{b_n}=c \text{ (}c\text{ ist eine endliche positive Zahl)}$, dann kann der folgende **Grenzwertvergleichstest** angewendet werden, wenn die Konvergenz/Divergenz der Reihe $\sum b_n$ bekannt ist.
 
 > **Grenzwertvergleichstest**  
 > Wenn
@@ -231,7 +231,7 @@ Für Reihen mit positiven Gliedern $\sum a_n$ und $\sum b_n$, wenn das Verhältn
 > - divergiert die Reihe $\sum a_n$, wenn $r>1$
 {: .prompt-info }
 
-> Im obigen Korollar kann für den Fall $r=1$ keine Aussage über Konvergenz/Divergenz getroffen werden, und es müssen andere Methoden verwendet werden.
+> Im Fall $r=1$ im obigen Korollar kann die Konvergenz/Divergenz nicht bestimmt werden, und andere Methoden müssen verwendet werden.
 {: .prompt-warning }
 
 ## Quotientenkriterium
@@ -248,10 +248,10 @@ Für Reihen mit positiven Gliedern $\sum a_n$ und $\sum b_n$, wenn das Verhältn
 {: .prompt-info }
 
 ## Integraltest
-Mit Hilfe der Integralrechnung kann die Konvergenz/Divergenz von Reihen mit abnehmenden positiven Folgen bestimmt werden.
+Mit Hilfe der Integralrechnung kann man die Konvergenz/Divergenz von Reihen mit abnehmenden positiven Folgen bestimmen.
 
 > **Integraltest**  
-> Sei $f: \left[1,\infty \right) \rightarrow \mathbb{R}$ eine stetige, abnehmende Funktion mit $f(x)>0$ für alle $x$. Die Reihe $\sum f(n)$ konvergiert genau dann, wenn das Integral
+> Sei $f: \left[1,\infty \right) \rightarrow \mathbb{R}$ eine stetige, abnehmende Funktion mit $f(x)>0$ für alle $x$. Dann konvergiert die Reihe $\sum f(n)$ genau dann, wenn das Integral
 >
 > $$ \int_1^\infty f(x)\ dx := \lim_{b\to\infty} \int_1^b f(x)\ dx $$
 >
@@ -278,11 +278,11 @@ Für alternierende Reihen kann der folgende Satz, der vom deutschen Mathematiker
 > Eine alternierende Reihe $\sum a_n$ konvergiert, wenn
 > 1. $a_n$ und $a_{n+1}$ haben für alle $n$ unterschiedliche Vorzeichen,
 > 2. $\|a_n\| \geq \|a_{n+1}\|$ für alle $n$, und
-> 3. $\lim_{n\to\infty} a_n = 0$
+> 3. $\lim_{n\to\infty} a_n = 0$.
 {: .prompt-info }
 
 ## Absolut konvergente Reihen
-Eine Reihe $\sum a_n$ wird als **absolut konvergent** bezeichnet, wenn die Reihe $\sum \|a_n\|$ konvergiert.
+Wenn für eine Reihe $\sum a_n$ die Reihe $\sum \|a_n\|$ konvergiert, sagt man, die Reihe $\sum a_n$ **konvergiert absolut**.
 
 In diesem Fall gilt der folgende Satz:
 
