@@ -9,8 +9,8 @@ client = anthropic.Anthropic(
 
 def submit_prompt(prompt, system_prompt):
     # print("- Submit prompt")
-    response = client.messages.create(
-        model="claude-3-5-sonnet-20240620",
+    with client.messages.stream(
+        model="claude-3-7-sonnet-20250219",
         max_tokens=8192,
         temperature=0,
         system=system_prompt,
@@ -26,9 +26,12 @@ def submit_prompt(prompt, system_prompt):
             },
             {"role": "assistant", "content": "---"} # Prefilling "---" forces Claude to skip the preamble
         ]
-    )
+    ) as stream:
+        for event in stream:
+          if event.type == "message_stop":
+            return event.message.content[0].text
     # print("- Get model response")
-    return response.content[0].text
+    return stream.get_final_text()
 
 def translate(filepath, source_lang, target_lang):
     language_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Taiwanese Mandarin":"zh-TW", "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
