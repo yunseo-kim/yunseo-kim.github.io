@@ -1,37 +1,33 @@
 ---
-title: Comment supporter le multilinguisme sur un blog Jekyll avec Polyglot (2) -
-  Résolution des problèmes de compilation du thème Chirpy et des erreurs de recherche
-description: Présentation du processus d'implémentation du support multilingue en
-  appliquant le plugin Polyglot à un blog Jekyll basé sur 'jekyll-theme-chirpy'. Ce
-  billet est le deuxième de la série et traite de l'identification et de la résolution
-  des erreurs survenues lors de l'application de Polyglot au thème Chirpy.
+title: Comment prendre en charge plusieurs langues sur un blog Jekyll avec Polyglot (2) - Résolution des problèmes de compilation du thème Chirpy et des erreurs de recherche
+description: 'Présentation du processus d''implémentation du support multilingue en appliquant le plugin Polyglot à un blog Jekyll basé sur le thème ''jekyll-theme-chirpy''. Ce billet est le deuxième de la série, traitant de l''identification et de la résolution des erreurs survenues lors de l''application de Polyglot au thème Chirpy.'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 mermaid: true
 image: /assets/img/technology.jpg
 ---
 ## Aperçu
-Il y a environ 4 mois, début juillet 2024, j'ai ajouté le support multilingue à ce blog hébergé sur GitHub Pages en utilisant Jekyll en appliquant le plugin [Polyglot](https://github.com/untra/polyglot).
-Cette série partage les bugs rencontrés lors de l'application du plugin Polyglot au thème Chirpy, leur processus de résolution, ainsi que la méthode pour écrire l'en-tête html et le sitemap.xml en tenant compte du SEO.
-La série se compose de deux articles, et celui que vous lisez est le deuxième de la série.
-- Partie 1 : [Application du plugin Polyglot & Implémentation des balises alt hreflang, du sitemap et du bouton de sélection de langue](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
+Il y a environ 4 mois, début juillet 12024 du [calendrier holocène](https://en.wikipedia.org/wiki/Holocene_calendar), j'ai ajouté le support multilingue à ce blog hébergé sur GitHub Pages avec Jekyll en appliquant le plugin [Polyglot](https://github.com/untra/polyglot).
+Cette série partage les bugs rencontrés lors de l'application du plugin Polyglot au thème Chirpy, leur processus de résolution, ainsi que la méthode de rédaction des en-têtes HTML et du sitemap.xml en tenant compte du référencement.
+La série se compose de deux articles, et celui que vous lisez est le deuxième.
+- Partie 1 : [Application du plugin Polyglot & implémentation des balises hreflang alt, sitemap et bouton de sélection de langue](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
 - Partie 2 : Résolution des problèmes de compilation du thème Chirpy et des erreurs de recherche (cet article)
 
 ## Exigences
-- [x] Pouvoir fournir les résultats de la compilation (pages web) séparés par chemin linguistique (ex. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
-- [x] Pour minimiser le temps et l'effort supplémentaires nécessaires au support multilingue, pouvoir reconnaître automatiquement la langue en fonction du chemin local où se trouve le fichier markdown original (ex. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) lors de la compilation, sans avoir à spécifier manuellement les balises 'lang' et 'permalink' dans le YAML front matter de chaque fichier markdown écrit.
-- [x] L'en-tête de chaque page du site doit inclure les balises meta Content-Language et hreflang alternatives appropriées pour répondre aux directives SEO de Google pour la recherche multilingue.
-- [x] Pouvoir fournir tous les liens des pages supportant chaque langue sur le site sans omission dans `sitemap.xml`{: .filepath}, et `sitemap.xml`{: .filepath} lui-même ne doit exister qu'une seule fois dans le chemin racine sans duplication.
-- [x] Toutes les fonctionnalités fournies par le [thème Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) doivent fonctionner normalement sur chaque page linguistique, sinon elles doivent être modifiées pour fonctionner correctement.
+- [x] Le résultat de la compilation (pages web) doit être fourni avec des chemins distincts par langue (ex. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
+- [x] Pour minimiser le temps et l'effort supplémentaires nécessaires au support multilingue, le système doit reconnaître automatiquement la langue en fonction du chemin local où se trouve le fichier markdown original (ex. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}), sans avoir à spécifier manuellement les balises 'lang' et 'permalink' dans le YAML front matter.
+- [x] L'en-tête de chaque page du site doit inclure les balises méta Content-Language appropriées et les balises alternatives hreflang pour répondre aux directives de référencement de Google pour la recherche multilingue.
+- [x] Le `sitemap.xml`{: .filepath} doit fournir tous les liens vers les pages prenant en charge chaque langue sans omission, et le `sitemap.xml`{: .filepath} lui-même doit exister uniquement dans le chemin racine, sans duplication.
+- [x] Toutes les fonctionnalités fournies par le [thème Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) doivent fonctionner normalement sur chaque page de langue, sinon elles doivent être modifiées pour fonctionner correctement.
   - [x] Fonctionnement normal des fonctionnalités 'Recently Updated', 'Trending Tags'
-  - [x] Pas d'erreur lors du processus de compilation utilisant GitHub Actions
+  - [x] Absence d'erreurs lors du processus de compilation avec GitHub Actions
   - [x] Fonctionnement normal de la fonction de recherche de posts en haut à droite du blog
 
 ## Avant de commencer
-Cet article fait suite à la [partie 1](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1), donc si vous ne l'avez pas encore lue, il est recommandé de la lire d'abord.
+Cet article fait suite à la [première partie](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1), donc si vous ne l'avez pas encore lue, je vous recommande de la lire d'abord.
 
-## Résolution des problèmes ('relative_url_regex': target of repeat operator is not specified)
-Après avoir terminé les étapes précédentes, lorsque j'ai exécuté la commande `bundle exec jekyll serve` pour tester la compilation, une erreur s'est produite avec le message `'relative_url_regex': target of repeat operator is not specified`, et la compilation a échoué.
+## Résolution de problèmes ('relative_url_regex': target of repeat operator is not specified)
+Après avoir terminé les étapes précédentes, j'ai exécuté la commande `bundle exec jekyll serve` pour tester la compilation, mais elle a échoué avec l'erreur `'relative_url_regex': target of repeat operator is not specified`.
 
 ```shell
 ...(début omis)
@@ -51,9 +47,9 @@ ndor\/bundle\/)(?!vendor\/cache\/)(?!vendor\/gems\/)(?!vendor\/ruby\/)(?!en\/
 ...(fin omise)
 ```
 
-Après avoir recherché si un problème similaire avait déjà été signalé, j'ai trouvé [exactement le même problème](https://github.com/untra/polyglot/issues/204) enregistré dans le dépôt Polyglot, et une solution existait également.
+Après avoir recherché si un problème similaire avait été signalé, j'ai trouvé [exactement le même problème](https://github.com/untra/polyglot/issues/204) déjà enregistré dans le dépôt Polyglot, avec une solution.
 
-Dans le fichier [`_config.yml`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_config.yml) du [thème Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) appliqué à ce blog, il existe la clause suivante :
+Le fichier [`_config.yml`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_config.yml) du thème Chirpy que j'utilise contient la syntaxe suivante :
 
 ```yml
 exclude:
@@ -68,7 +64,7 @@ exclude:
 ```
 {: file='_config.yml'}
 
-La cause du problème réside dans le fait que les expressions régulières des deux fonctions suivantes incluses dans le fichier [`site.rb`{: .filepath}](https://github.com/untra/polyglot/blob/master/lib/jekyll/polyglot/patches/jekyll/site.rb) de Polyglot ne traitent pas correctement les motifs de globbing incluant des jokers comme `"*.gem"`, `"*.gemspec"`, `"*.config.js"` ci-dessus.
+Le problème vient des expressions régulières dans les deux fonctions du fichier [`site.rb`{: .filepath}](https://github.com/untra/polyglot/blob/master/lib/jekyll/polyglot/patches/jekyll/site.rb) de Polyglot qui ne traitent pas correctement les modèles de globbing contenant des caractères génériques comme `"*.gem"`, `"*.gemspec"`, `"*.config.js"`.
 
 {% raw %}
 ```ruby
@@ -108,19 +104,19 @@ La cause du problème réside dans le fait que les expressions régulières des 
       %r{(?<!hreflang="#{@default_lang}" )#{start}="?#{url}#{@baseurl}/((?:#{regex}[^,'"\s/?.]+\.?)*(?:/[^\]\[)("'\s]*)?)"}
     end
 ```
-{: file='(chemin racine de polyglot)/lib/jekyll/polyglot/patches/jekyll/site.rb'}
+{: file='(polyglot root path)/lib/jekyll/polyglot/patches/jekyll/site.rb'}
 {% endraw %}
 
 Il existe deux façons de résoudre ce problème.
 
-### 1. Forker Polyglot, modifier la partie problématique et l'utiliser
-Au moment de la rédaction de cet article (novembre 2024), la [documentation officielle de Jekyll](https://jekyllrb.com/docs/configuration/options/#global-configuration) indique que le paramètre `exclude` prend en charge l'utilisation de motifs de globbing de noms de fichiers.
+### 1. Forker Polyglot et modifier les parties problématiques
+Au moment de la rédaction de cet article (11.12024), la [documentation officielle de Jekyll](https://jekyllrb.com/docs/configuration/options/#global-configuration) indique que le paramètre `exclude` prend en charge les modèles de globbing pour les noms de fichiers.
 
 >"This configuration option supports Ruby's File.fnmatch filename globbing patterns to match multiple entries to exclude."
 
-En d'autres termes, la cause du problème ne réside pas dans le thème Chirpy mais dans les deux fonctions `relative_url_regex()` et `absolute_url_regex()` de Polyglot, donc la solution fondamentale consiste à les modifier pour qu'elles ne posent plus de problème.
+Le problème ne vient donc pas du thème Chirpy mais des fonctions `relative_url_regex()` et `absolute_url_regex()` de Polyglot, donc la solution fondamentale est de les modifier pour éviter ce problème.
 
-Comme ce bug n'a pas encore été résolu dans Polyglot, vous pouvez forker le dépôt Polyglot en vous référant à [cet article de blog](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C) et à [la réponse donnée au problème GitHub précédent](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322), puis modifier la partie problématique comme suit et l'utiliser à la place du Polyglot original.
+Comme ce bug n'est pas encore résolu dans Polyglot, vous pouvez forker le dépôt Polyglot en vous référant à [ce billet de blog](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C) et à [la réponse dans l'issue GitHub mentionnée](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322), puis modifier les parties problématiques comme suit et utiliser cette version au lieu de Polyglot original.
 
 {% raw %}
 ```ruby
@@ -156,21 +152,21 @@ Comme ce bug n'a pas encore été résolu dans Polyglot, vous pouvez forker le d
       %r{(?<!hreflang="#{@default_lang}" )#{start}="?#{url}#{@baseurl}/((?:#{regex}[^,'"\s/?.]+\.?)*(?:/[^\]\[)("'\s]*)?)"}
     end
 ```
-{: file='(chemin racine de polyglot)/lib/jekyll/polyglot/patches/jekyll/site.rb'}
+{: file='(polyglot root path)/lib/jekyll/polyglot/patches/jekyll/site.rb'}
 {% endraw %}
 
-### 2. Remplacer les motifs de globbing par des noms de fichiers exacts dans le fichier de configuration '_config.yml' du thème Chirpy
-En réalité, la méthode orthodoxe et idéale serait que le correctif ci-dessus soit intégré au flux principal de Polyglot. Cependant, en attendant, il faudrait utiliser la version forkée à la place, ce qui serait fastidieux de suivre et refléter chaque mise à jour du flux amont de Polyglot sans les manquer. C'est pourquoi j'ai utilisé une autre méthode.
+### 2. Remplacer les modèles de globbing par des noms de fichiers exacts dans le fichier '_config.yml' du thème Chirpy
+La méthode idéale serait que ce correctif soit intégré au flux principal de Polyglot. Mais en attendant, il faudrait utiliser une version forkée, ce qui peut être fastidieux car il faut suivre les mises à jour de Polyglot. J'ai donc opté pour une autre approche.
 
-Si l'on vérifie les fichiers situés dans le chemin racine du projet dans le [dépôt du thème Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) correspondant aux motifs `"*.gem"`, `"*.gemspec"`, `"*.config.js"`, il n'y en a de toute façon que 3 :
+En examinant les fichiers à la racine du [dépôt du thème Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy), on constate que les modèles `"*.gem"`, `"*.gemspec"`, `"*.config.js"` ne correspondent qu'à 3 fichiers :
 - `jekyll-theme-chirpy.gemspec`{: .filepath}
 - `purgecss.config.js`{: .filepath}
 - `rollup.config.js`{: .filepath}
 
-Par conséquent, si l'on supprime les motifs de globbing dans la clause `exclude` du fichier `_config.yml`{: .filepath} et qu'on les remplace comme suit, Polyglot pourra les traiter sans problème.
+On peut donc supprimer les modèles de globbing dans la section `exclude` du fichier `_config.yml`{: .filepath} et les remplacer comme suit pour que Polyglot puisse les traiter sans problème.
 
 ```yml
-exclude: # Modifié en référence au problème https://github.com/untra/polyglot/issues/204.
+exclude: # Modifié en référence à l'issue https://github.com/untra/polyglot/issues/204
   # - "*.gem"
   - jekyll-theme-chirpy.gemspec # - "*.gemspec"
   - tools
@@ -183,12 +179,12 @@ exclude: # Modifié en référence au problème https://github.com/untra/polyglo
 {: file='_config.yml'}
 
 ## Modification de la fonction de recherche
-Après avoir terminé les étapes précédentes, presque toutes les fonctionnalités du site fonctionnaient de manière satisfaisante comme prévu. Cependant, j'ai découvert tardivement qu'il y avait un problème : la barre de recherche située en haut à droite de la page appliquant le thème Chirpy n'indexait pas les pages dans des langues autres que `site.default_lang` (l'anglais dans le cas de ce blog), et lors d'une recherche dans une langue autre que l'anglais, elle affichait également les pages en anglais dans les résultats de recherche.
+Après avoir terminé les étapes précédentes, presque toutes les fonctionnalités du site fonctionnaient comme prévu. Cependant, j'ai découvert que la barre de recherche située en haut à droite de la page avec le thème Chirpy n'indexait pas les pages dans des langues autres que `site.default_lang` (l'anglais dans le cas de ce blog), et affichait des pages en anglais même lors de recherches dans d'autres langues.
 
-Pour comprendre la cause, examinons quels sont les fichiers impliqués dans la fonction de recherche et où le problème se produit.
+Pour comprendre la cause, examinons les fichiers impliqués dans la fonction de recherche et où le problème se produit.
 
 ### '_layouts/default.html'
-En vérifiant le fichier [`_layouts/default.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_layouts/default.html) qui constitue le cadre de toutes les pages du blog, on peut voir qu'il charge le contenu de `search-results.html`{: .filepath} et `search-loader.html`{: .filepath} à l'intérieur de l'élément `<body>`.
+En examinant le fichier [`_layouts/default.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_layouts/default.html) qui structure toutes les pages du blog, on constate qu'il charge le contenu de `search-results.html`{: .filepath} et `search-loader.html`{: .filepath} dans l'élément `<body>`.
 
 {% raw %}
 ```liquid
@@ -198,7 +194,7 @@ En vérifiant le fichier [`_layouts/default.html`{: .filepath}](https://github.c
     <div id="main-wrapper" class="d-flex justify-content-center">
       <div class="container d-flex flex-column px-xxl-5">
         
-        (...omission...)
+        (...omis...)
 
         {% include_cached search-results.html lang=lang %}
       </div>
@@ -210,7 +206,7 @@ En vérifiant le fichier [`_layouts/default.html`{: .filepath}](https://github.c
       </aside>
     </div>
 
-    (...omission...)
+    (...omis...)
 
     {% include_cached search-loader.html lang=lang %}
   </body>
@@ -219,7 +215,7 @@ En vérifiant le fichier [`_layouts/default.html`{: .filepath}](https://github.c
 {% endraw %}
 
 ### '_includes/search-result.html'
-[`_includes/search-result.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_includes/search-results.html) constitue le conteneur `search-results` pour stocker les résultats de recherche pour le mot-clé saisi dans la barre de recherche.
+[`_includes/search-result.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_includes/search-results.html) crée le conteneur `search-results` pour stocker les résultats de recherche.
 
 {% raw %}
 ```html
@@ -238,7 +234,7 @@ En vérifiant le fichier [`_layouts/default.html`{: .filepath}](https://github.c
 {% endraw %}
 
 ### '_includes/search-loader.html'
-[`_includes/search-loader.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_includes/search-loader.html) est la partie centrale qui implémente la recherche basée sur la bibliothèque [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search). On peut voir qu'elle fonctionne côté client en exécutant JavaScript dans le navigateur du visiteur pour trouver les parties correspondant au mot-clé saisi dans le contenu du fichier d'index [`search.json`{: .filepath}](#assetsjsdatasearchjson) et renvoyer le lien du post correspondant sous forme d'élément `<article>`.
+[`_includes/search-loader.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_includes/search-loader.html) est la partie essentielle qui implémente la recherche basée sur la bibliothèque [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search). Elle exécute un JavaScript côté client qui trouve les correspondances avec les mots-clés saisis dans le fichier d'index [`search.json`{: .filepath}](#assetsjsdatasearchjson) et renvoie les liens des articles correspondants sous forme d'éléments `<article>`.
 
 {% raw %}
 ```js
@@ -317,33 +313,33 @@ swcache: true
 {: file='/assets/js/data/search.json'}
 {% endraw %}
 
-Il définit un fichier JSON contenant le titre, l'URL, les informations de catégorie et de tags, la date de création, un extrait des 200 premiers caractères du contenu, et le contenu complet de tous les posts du site en utilisant la syntaxe Liquid de Jekyll.
+Ce fichier utilise la syntaxe Liquid de Jekyll pour définir un fichier JSON contenant le titre, l'URL, les catégories et tags, la date de création, un extrait des 200 premiers caractères du contenu, et le contenu complet de tous les articles du site.
 
-### Structure de fonctionnement de la fonction de recherche et identification de la partie problématique
-En résumé, lors de l'hébergement du thème Chirpy sur GitHub Pages, la fonction de recherche fonctionne selon le processus suivant :
+### Structure de fonctionnement de la recherche et identification du problème
+En résumé, la fonction de recherche sur GitHub Pages avec le thème Chirpy fonctionne selon le processus suivant :
 
 ```mermaid
 stateDiagram
-  state "Modifications" as CH
-  state "Début de la compilation" as BLD
-  state "Création de search.json" as IDX
-  state "Site Web statique" as DEP
-  state "En test" as TST
-  state "Chargeur de recherche" as SCH
-  state "Résultats" as R
+  state "Changes" as CH
+  state "Build start" as BLD
+  state "Create search.json" as IDX
+  state "Static Website" as DEP
+  state "In Test" as TST
+  state "Search Loader" as SCH
+  state "Results" as R
     
-  [*] --> CH: Faire des modifications
+  [*] --> CH: Make Changes
   CH --> BLD: Commit & Push origin
   BLD --> IDX: jekyll build
-  IDX --> TST: Compilation terminée
-  TST --> CH: Erreur détectée
-  TST --> DEP: Déploiement
-  DEP --> SCH: Saisie de recherche
-  SCH --> R: Retour des résultats
+  IDX --> TST: Build Complete
+  TST --> CH: Error Detected
+  TST --> DEP: Deploy
+  DEP --> SCH: Search Input
+  SCH --> R: Return Results
   R --> [*]
 ```
 
-J'ai confirmé que `search.json`{: .filepath} est créé par Polyglot pour chaque langue comme suit :
+J'ai constaté que Polyglot génère `search.json`{: .filepath} pour chaque langue comme suit :
 - `/assets/js/data/search.json`{: .filepath}
 - `/ko/assets/js/data/search.json`{: .filepath}
 - `/es/assets/js/data/search.json`{: .filepath}
@@ -352,16 +348,16 @@ J'ai confirmé que `search.json`{: .filepath} est créé par Polyglot pour chaqu
 - `/fr/assets/js/data/search.json`{: .filepath}
 - `/de/assets/js/data/search.json`{: .filepath}
 
-Par conséquent, la partie qui cause le problème est le "Chargeur de recherche". Le problème de non-recherche des pages dans des langues autres que l'anglais se produit parce que `_includes/search-loader.html`{: .filepath} charge statiquement uniquement le fichier d'index en anglais (`/assets/js/data/search.json`{: .filepath}), indépendamment de la langue de la page actuellement visitée.
+Le problème se situe donc dans le "Search Loader". Les pages dans des langues autres que l'anglais ne sont pas trouvées car `_includes/search-loader.html`{: .filepath} charge statiquement uniquement le fichier d'index anglais (`/assets/js/data/search.json`{: .filepath}), quelle que soit la langue de la page visitée.
 
-> - Cependant, contrairement aux fichiers markdown ou html, pour les fichiers JSON, le wrapper Polyglot fonctionne pour les variables fournies par Jekyll telles que `post.title`, `post.content`, etc., mais la fonction [Relativized Local Urls](https://github.com/untra/polyglot?tab=readme-ov-file#relativized-local-urls) ne semble pas fonctionner.
-> - De même, j'ai confirmé lors du processus de test que dans le modèle de fichier JSON, il n'est pas possible d'accéder aux [balises liquid {% raw %}`{{ site.default_lang }}`, `{{ site.active_lang }}`{% endraw %} fournies en plus par Polyglot](https://github.com/untra/polyglot?tab=readme-ov-file#features) en dehors des variables fournies par défaut par Jekyll.
+> - Contrairement aux fichiers markdown ou html, pour les fichiers JSON, le wrapper Polyglot fonctionne pour les variables Jekyll comme `post.title`, `post.content`, mais la fonctionnalité [Relativized Local Urls](https://github.com/untra/polyglot?tab=readme-ov-file#relativized-local-urls) ne semble pas fonctionner.
+> - De même, dans les templates de fichiers JSON, on ne peut pas accéder aux balises liquid [fournies par Polyglot {% raw %}`{{ site.default_lang }}`, `{{ site.active_lang }}`{% endraw %}](https://github.com/untra/polyglot?tab=readme-ov-file#features) en plus des variables standard de Jekyll.
 >
-> Par conséquent, bien que les valeurs telles que `title`, `snippet`, `content` dans le fichier d'index soient générées différemment pour chaque langue, la valeur `url` renvoie le chemin par défaut sans tenir compte de la langue, et un traitement approprié doit être ajouté dans la partie "Chargeur de recherche".
+> Par conséquent, les valeurs comme `title`, `snippet`, `content` dans le fichier d'index sont générées différemment selon la langue, mais la valeur `url` renvoie le chemin de base sans tenir compte de la langue, et un traitement approprié doit être ajouté dans la partie "Search Loader".
 {: .prompt-warning }
 
 ### Résolution du problème
-Pour résoudre cela, il faut modifier le contenu de `_includes/search-loader.html`{: .filepath} comme suit :
+Pour résoudre ce problème, il faut modifier le contenu de `_includes/search-loader.html`{: .filepath} comme suit :
 
 {% raw %}
 ```
@@ -374,7 +370,7 @@ Pour résoudre cela, il faut modifier le contenu de `_includes/search-loader.htm
       <h2><a href="{url}">{title}</a></h2>
       {% endif %}
 
-(...omission...)
+(...omis...)
 
 <script>
   {% comment %} Note: dependent library will be loaded in `js-selector.html` {% endcomment %}
@@ -390,15 +386,15 @@ Pour résoudre cela, il faut modifier le contenu de `_includes/search-loader.htm
       json: '{{ search_path | relative_url }}',
       searchResultTemplate: '{{ result_elem | strip_newlines }}',
 
-(...suite omise)
+(...suite)
 ```
 {: file='_includes/search-loader.html'}
 {% endraw %}
 
-- J'ai modifié la partie liquid de {% raw %}`{% capture result_elem %}`{% endraw %} pour ajouter le préfixe {% raw %}`"/{{ site.active_lang }}"`{% endraw %} devant l'URL du post chargée depuis le fichier JSON lorsque `site.active_lang` (langue de la page actuelle) et `site.default_lang` (langue par défaut du site) sont différentes.
-- De la même manière, j'ai modifié la partie `<script>` pour désigner `search_path` comme le chemin par défaut (`/assets/js/data/search.json`{: .filepath}) si la langue de la page actuelle et la langue par défaut du site sont identiques lors du processus de compilation, sinon le chemin correspondant à cette langue (par exemple, `/ko/assets/js/data/search.json`{: .filepath}).
+- J'ai modifié la syntaxe liquid dans la partie {% raw %}`{% capture result_elem %}`{% endraw %} pour ajouter le préfixe {% raw %}`"/{{ site.active_lang }}"`{% endraw %} devant l'URL du post chargée depuis le fichier JSON lorsque `site.active_lang` (langue de la page actuelle) est différente de `site.default_lang` (langue par défaut du site).
+- De même, j'ai modifié la partie `<script>` pour définir `search_path` comme le chemin par défaut (`/assets/js/data/search.json`{: .filepath}) si la langue de la page actuelle est identique à la langue par défaut du site, ou comme le chemin correspondant à cette langue (par exemple, `/ko/assets/js/data/search.json`{: .filepath}) si elles sont différentes.
 
-Après avoir effectué ces modifications et recompilé le site web, j'ai confirmé que les résultats de recherche s'affichent correctement pour chaque langue.
+Après ces modifications et une nouvelle compilation du site web, j'ai confirmé que les résultats de recherche s'affichent correctement pour chaque langue.
 
-> Comme `{url}` est l'emplacement où la valeur URL lue depuis le fichier JSON sera insérée ultérieurement et non l'URL elle-même, Polyglot ne la reconnaît pas comme cible de localisation, donc elle doit être traitée directement selon la langue. Le problème est que {% raw %}`"/{{ site.active_lang }}{url}"`{% endraw %} ainsi traité est reconnu comme une URL, et bien que la localisation soit déjà terminée, Polyglot ne le sait pas et essaie de la localiser en double (par exemple, `"/ko/ko/posts/example-post"`{: .filepath}). Pour empêcher cela, j'ai spécifié la [balise {% raw %}`{% static_href %}`{% endraw %}](https://github.com/untra/polyglot?tab=readme-ov-file#disabling-url-relativizing).
+> `{url}` est un emplacement où sera insérée la valeur URL lue depuis le fichier JSON, et non une URL en soi, donc Polyglot ne le reconnaît pas comme cible de localisation et doit être traité directement selon la langue. Le problème est que {% raw %}`"/{{ site.active_lang }}{url}"`{% endraw %} est reconnu comme une URL, et bien que la localisation soit déjà terminée, Polyglot ne le sait pas et tente de la localiser à nouveau (par exemple, `"/ko/ko/posts/example-post"`{: .filepath}). Pour éviter cela, j'ai spécifié la balise [{% raw %}`{% static_href %}`{% endraw %}](https://github.com/untra/polyglot?tab=readme-ov-file#disabling-url-relativizing).
 {: .prompt-tip }

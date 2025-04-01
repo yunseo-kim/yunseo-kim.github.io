@@ -1,29 +1,29 @@
 ---
-title: Polyglotを使ってJekyllブログで多言語サポートを実装する方法 (1) - Polyglotプラグインの適用 & hreflang altタグおよびsitemap、言語選択ボタンの実装
-description: "'jekyll-theme-chirpy'ベースのJekyllブログにPolyglotプラグインを適用して多言語サポートを実装した過程を紹介します。この投稿はそのシリーズの最初の記事で、Polyglotプラグインを適用し、htmlヘッダーとsitemapを修正する部分を扱います。'"
+title: Polyglotを使用してJekyllブログで多言語サポートを実装する方法 (1) - Polyglotプラグインの適用 & hreflang altタグ、サイトマップ、言語選択ボタンの実装
+description: '''jekyll-theme-chirpy''ベースのJekyllブログにPolyglotプラグインを適用して多言語サポートを実装した過程を紹介します。このポストはシリーズの最初の記事で、Polyglotプラグインの適用とHTMLヘッダーとサイトマップの修正部分を扱います。'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.jpg
 ---
 ## 概要
-約4ヶ月前の[人類暦](https://en.wikipedia.org/wiki/Holocene_calendar)12024年7月初め、JekyllベースでGithub Pagesを通じてホスティングしている本ブログに[Polyglot](https://github.com/untra/polyglot)プラグインを適用して多言語サポートの実装を追加しました。
-このシリーズは、ChirpyテーマにPolyglotプラグインを適用する過程で発生したバグとその解決過程、そしてSEOを考慮したhtmlヘッダーとsitemap.xmlの作成方法を共有します。
-シリーズは2つの記事で構成されており、この記事はそのシリーズの最初の記事です。
-- 第1回：Polyglotプラグインの適用 & hreflang altタグおよびsitemap、言語選択ボタンの実装（本文）
-- 第2回：[Chirpyテーマのビルド失敗および検索機能エラーのトラブルシューティング](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+約4ヶ月前の[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar) 12024年7月初め、JekyllベースでGithub Pagesを通じてホスティングしているこのブログに[Polyglot](https://github.com/untra/polyglot)プラグインを適用して多言語サポートを実装しました。
+このシリーズでは、ChirpyテーマにPolyglotプラグインを適用する過程で発生したバグとその解決過程、そしてSEOを考慮したHTMLヘッダーとsitemap.xmlの作成方法を共有します。
+シリーズは2つの記事で構成されており、現在読んでいるこの記事はシリーズの最初の記事です。
+- 第1回：Polyglotプラグインの適用 & hreflang altタグ、サイトマップ、言語選択ボタンの実装（本文）
+- 第2回：[Chirpyテーマのビルド失敗と検索機能エラーのトラブルシューティング](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
 
 ## 要件
-- [x] ビルドした結果物（ウェブページ）を言語別のパス（例：`/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）で区別して提供できること。
-- [x] 多言語サポートに追加的に必要な時間と労力を可能な限り最小化するために、作成した原本のマークダウンファイルのYAML front matterに'lang'および'permalink'タグを一々指定しなくても、ビルド時に該当ファイルが位置するローカルパス（例：`/_posts/ko/`{: .filepath}、`/_posts/ja/`{: .filepath}）に応じて自動的に言語を認識できること。
-- [x] サイト内の各ページのヘッダー部分は適切なContent-Languageメタタグとhreflang代替タグを含み、Googleの多言語検索のためのSEOガイドラインを満たすこと。
-- [x] サイト内で各言語をサポートするすべてのページリンクを漏れなく`sitemap.xml`{: .filepath}で提供できること、また`sitemap.xml`{: .filepath}自体は重複なくルートパスに1つだけ存在すること。
-- [x] [Chirpyテーマ](https://github.com/cotes2020/jekyll-theme-chirpy)で提供されるすべての機能が各言語ページで正常に動作すること。そうでない場合は正常に動作するように修正すること。
+- [x] ビルドした結果（ウェブページ）を言語別のパス（例：`/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）で区分して提供できること。
+- [x] 多言語サポートに追加的に必要な時間と労力を可能な限り最小化するため、作成した原本のマークダウンファイルのYAML front matterに'lang'および'permalink'タグを一つ一つ指定しなくても、ビルド時に該当ファイルが位置するローカルパス（例：`/_posts/ko/`{: .filepath}、`/_posts/ja/`{: .filepath}）に応じて自動的に言語を認識できること。
+- [x] サイト内の各ページのヘッダー部分は適切なContent-Languageメタタグとhreflang代替タグを含め、Googleの多言語検索のためのSEOガイドラインを満たすこと。
+- [x] サイト内で各言語をサポートするすべてのページリンクを漏れなく`sitemap.xml`{: .filepath}で提供できること、また`sitemap.xml`{: .filepath}自体は重複なくルートパスに一つだけ存在すること。
+- [x] [Chirpyテーマ](https://github.com/cotes2020/jekyll-theme-chirpy)で提供するすべての機能が各言語ページで正常に動作すること、そうでない場合は正常に動作するように修正すること。
   - [x] 'Recently Updated'、'Trending Tags'機能の正常動作
-  - [x] GitHub Actionsを利用したビルドプロセスでエラーが発生しないこと
-  - [x] ブログ右上の投稿検索機能の正常動作
+  - [x] GitHub Actionsを利用したビルド過程でエラーが発生しないこと
+  - [x] ブログ右上のポスト検索機能の正常動作
 
 ## Polyglotプラグインの適用
-Jekyllは多言語ブログを基本サポートしていないため、上記の要件を満たす多言語ブログ実装のためには外部プラグインを活用する必要があります。検索してみると[Polyglot](https://github.com/untra/polyglot)が多言語ウェブサイト実装用途でよく使われており、上記の要件のほとんどを満たすことができるため、このプラグインを採用しました。
+Jekyllは多言語ブログを基本サポートしていないため、上記の要件を満たす多言語ブログ実装のためには外部プラグインを活用する必要があります。検索してみると[Polyglot](https://github.com/untra/polyglot)が多言語ウェブサイト実装用途で多く使われており、上記要件のほとんどを満たすことができるため、このプラグインを採用しました。
 
 ### プラグインのインストール
 私はBundlerを使用しているため、`Gemfile`に次の内容を追加しました。
@@ -37,7 +37,7 @@ end
 
 その後、ターミナルで`bundle update`を実行すると自動的にインストールが完了します。
 
-もしBundlerを使用しない場合、ターミナルで`gem install jekyll-polyglot`コマンドでgemを直接インストールした後、`_config.yml`{: .filepath}に次のようにプラグインを追加することもできます。
+もしBundlerを使用しない場合は、ターミナルで`gem install jekyll-polyglot`コマンドでgemを直接インストールした後、`_config.yml`{: .filepath}に次のようにプラグインを追加することもできます。
 
 ```yml
 plugins:
@@ -45,7 +45,7 @@ plugins:
 ```
 {: file='_config.yml'}
 
-### 設定の構成
+### 設定構成
 次に`_config.yml`{: .filepath}ファイルを開き、以下の内容を追加します。
 
 ```yml
@@ -61,18 +61,18 @@ lang_from_path: true
 - languages: サポートしたい言語リスト
 - default_lang: デフォルトのフォールバック言語
 - exclude_from_localization: ローカライゼーション対象から除外するルートファイル/フォルダパス文字列正規表現指定
-- parallel_localization: ビルドプロセスで多言語処理を並列化するかどうかを指定するブール値
-- lang_from_path: ブール値で、'true'に設定すると投稿マークダウンファイル内にYAML front matterで'lang'属性を別途明示しなくても、該当マークダウンファイルのパス文字列が言語コードを含んでいれば、これを自動的に認識して使用する
+- parallel_localization: ビルド過程で多言語処理を並列化するかどうかを指定するboolean値
+- lang_from_path: boolean値で、'true'に設定するとポストマークダウンファイル内にYAML front matterで'lang'属性を別途明示しなくても、該当マークダウンファイルのパス文字列が言語コードを含む場合、これを自動的に認識して使用する
 
-> [Sitemapプロトコル公式ドキュメント](https://www.sitemaps.org/protocol.html#location)では次のように明記されています。
+> [サイトマッププロトコル公式ドキュメント](https://www.sitemaps.org/protocol.html#location)では次のように明記されています。
 >
 >> "The location of a Sitemap file determines the set of URLs that can be included in that Sitemap. A Sitemap file located at http://example.com/catalog/sitemap.xml can include any URLs starting with http://example.com/catalog/ but can not include URLs starting with http://example.com/images/."
 >
 >> "It is strongly recommended that you place your Sitemap at the root directory of your web server."
 >
-> これを遵守するためには、同じ内容の`sitemap.xml`{: .filepath}ファイルが言語別に作成されずにルートディレクトリに1つだけ存在するように'exclude_from_localization'リストに追加して、以下の誤った例のようにならないようにする必要があります。
+> これを遵守するためには、同一内容の`sitemap.xml`{: .filepath}ファイルが言語別に作成されずにルートディレクトリに一つだけ存在するように'exclude_from_localization'リストに追加して、以下の誤った例のようにならないようにする必要があります。
 >
-> 誤った例（各ファイルの内容は言語別に異なるものではなく、すべて同じ）：
+> 誤った例（各ファイルの内容は言語別に異なるわけではなく、すべて同じ）：
 > - `/sitemap.xml`{: .filepath}
 > - `/ko/sitemap.xml`{: .filepath}
 > - `/es/sitemap.xml`{: .filepath}
@@ -81,10 +81,10 @@ lang_from_path: true
 > - `/fr/sitemap.xml`{: .filepath}
 > - `/de/sitemap.xml`{: .filepath}
 >
-> （12025.01.14. 更新）[上述の内容をREADMEに補強して提出したPull Request](https://github.com/untra/polyglot/pull/230)が受け入れられたため、現在は[Polyglot公式ドキュメント](https://github.com/untra/polyglot?tab=readme-ov-file#sitemap-generation)でも同じ案内を確認できます。
+> （12025.01.14. アップデート）[上述した内容をREADMEに補強して提出したPull Request](https://github.com/untra/polyglot/pull/230)が受け入れられたため、現在は[Polyglot公式ドキュメント](https://github.com/untra/polyglot?tab=readme-ov-file#sitemap-generation)でも同じ案内を確認できます。
 {: .prompt-tip }
 
-> 'parallel_localization'を'true'に指定するとビルド時間がかなり短縮されるメリットがありますが、12024年7月時点で本ブログに対してこの機能を有効にした際、ページ右側のサイドバーの'Recently Updated'と'Trending Tags'部分のリンクタイトルが正常に処理されず、他の言語と混ざってしまうバグがありました。まだ安定化が不十分なようですので、サイトに適用する際は事前に正常動作するかテストを行う必要があります。また、[Windowsを使用する場合もこの機能がサポートされないため、無効化する必要があります](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility)。
+> 'parallel_localization'を'true'に指定するとビルド時間がかなり短縮されるメリットがありますが、12024年7月時点基準で本ブログについて該当機能を有効にした際、ページ右側のサイドバーの'Recently Updated'と'Trending Tags'部分のリンクタイトルが正常に処理されず、他の言語と混ざるバグがありました。まだ安定化が不十分なようですので、サイトに適用する前に正常に動作するかテストを行う必要があります。また、[Windowsを使用する場合も該当機能がサポートされないため無効化する必要があります](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility)。
 {: .prompt-warning }
 
 また、[Jekyll 4.0では次のようにCSSソースマップ生成を無効化する必要があります](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility)。
@@ -95,22 +95,22 @@ sass:
 ```
 {: file='_config.yml'}
 
-### 投稿作成時の注意点
-多言語投稿作成時に注意すべき点は次の通りです。
-- 適切な言語コードの指定：ファイルパス（例：`/_posts/ko/example-post.md`{: .filepath}）またはYAML front matterの'lang'属性（例：`lang: ko`）を利用して適切なISO言語コードを指定する必要があります。[Chrome開発者ドキュメント](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales)の例を参考にしてください。
+### ポスト作成時の注意点
+多言語ポスト作成時に注意すべき点は次の通りです。
+- 適切な言語コード指定：ファイルパス（例：`/_posts/ko/example-post.md`{: .filepath}）またはYAML front matterの'lang'属性（例：`lang: ko`）を利用して適切なISO言語コードを指定する必要があります。[Chrome開発者ドキュメント](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales)の例を参考にしてください。
 
-> ただし、[Chrome開発者ドキュメント](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales)では地域コードを'pt_BR'のような形式で表記していますが、実際には'pt-BR'のように_の代わりに-を使用する必要があります。これは後にHTMLヘッダーにhreflang代替タグを追加する際に正常に動作するためです。
+> ただし、[Chrome開発者ドキュメント](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales)では地域コードを'pt_BR'のような形式で表記していますが、実際には'pt-BR'のように_の代わりに-を使用しなければ、後にHTMLヘッダーにhreflang代替タグを追加する際に正常に動作します。
 
-- ファイルパスと名前は一貫性がある必要があります。
+- ファイルパスと名前は一貫性があるべきです。
 
-詳細については、GitHub [untra/polyglotリポジトリのREADME](https://github.com/untra/polyglot?tab=readme-ov-file#how-to-use-it)を参照してください。
+詳細についてはGitHub [untra/polyglotリポジトリのREADME](https://github.com/untra/polyglot?tab=readme-ov-file#how-to-use-it)を参照してください。
 
-## HTMLヘッダーおよびsitemapの修正
-次に、SEOのためにブログ内の各ページのHTMLヘッダーにContent-Languageメタタグとhreflang代替タグを挿入する必要があります。
+## HTMLヘッダーとサイトマップの修正
+次にSEOのためにブログ内の各ページのHTMLヘッダーにContent-Languageメタタグとhreflang代替タグを挿入する必要があります。
 
 ### HTMLヘッダー
-12024.11.時点で最新バージョンである1.8.1リリース基準で、Polyglotはページヘッダー部分で{% raw %}`{% I18n_Headers %}`{% endraw %} Liquidタグ呼び出し時に上記の作業を自動的に行う機能があります。
-しかし、これは該当ページに'permalink'属性タグを明示的に指定したことを前提としており、そうでない場合は正常に動作しません。
+12024.11.時点での最新バージョンである1.8.1リリース基準で、Polyglotはページヘッダー部分で{% raw %}`{% I18n_Headers %}`{% endraw %} Liquidタグ呼び出し時に上記作業を自動的に実行する機能があります。
+しかし、これは該当ページに'permalink'属性タグを明示的に指定していることを前提としており、そうでない場合は正常に動作しません。
 
 したがって、私は[Chirpyテーマのhead.html](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/head.html)を取得した後、以下のように直接内容を追加しました。
 [Polyglot公式ブログのSEO Recipesページ](https://polyglot.untra.io/seo/)を参考に作業しましたが、`page.permalink`がない場合は`page.url`属性を代わりに使用するように修正しました。
@@ -127,8 +127,8 @@ sass:
 {: file='/_includes/head.html'}
 {% endraw %}
 
-### sitemap
-Jekyllでビルド時に自動生成されるsitemapは多言語ページを正常にサポートしないため、ルートディレクトリに`sitemap.xml`{: .filepath}ファイルを作成し、次のように内容を入力します。
+### サイトマップ
+Jekyllでビルド時に自動生成されるサイトマップは多言語ページを正常にサポートしないため、ルートディレクトリに`sitemap.xml`{: .filepath}ファイルを作成し、次のように内容を入力します。
 
 {% raw %}
 ```liquid
@@ -169,7 +169,7 @@ layout: content
 {% endraw %}
 
 ## サイドバーに言語選択ボタンを追加
-（12025.02.05. 更新）言語選択ボタンをドロップダウンリスト形式に改善しました。  
+（12025.02.05. アップデート）言語選択ボタンをドロップダウンリスト形式に改善しました。  
 `_includes/lang-selector.html`{: .filepath}ファイルを作成し、次のように内容を入力しました。
 
 {% raw %}
@@ -329,5 +329,5 @@ function changeLang(url) {
 {: file='_includes/sidebar.html'}
 {% endraw %}
 
-## さらなる読み物
+## 続きを読む
 [パート2](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)に続きます

@@ -1,15 +1,12 @@
 ---
-title: Aufbau einer Entwicklungsumgebung für maschinelles Lernen
-description: Dieser Artikel behandelt die Methode zum Aufbau einer Entwicklungsumgebung,
-  die als erster Schritt zum Studium des maschinellen Lernens auf einem lokalen Rechner
-  betrachtet werden kann. Der gesamte Inhalt wurde basierend auf Ubuntu 20.04 LTS
-  mit einer NVIDIA GeForce RTX 3070 Grafikkarte geschrieben.
+title: Aufbau einer Machine-Learning-Entwicklungsumgebung
+description: In diesem Artikel wird die Einrichtung einer Entwicklungsumgebung behandelt, die als erster Schritt zum Erlernen von maschinellem Lernen auf einem lokalen Rechner betrachtet werden kann. Alle Inhalte wurden auf Ubuntu 20.04 LTS mit einer NVIDIA Geforce RTX 3070 Grafikkarte erstellt.
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, CUDA, PyTorch, TensorFlow]
 image: /assets/img/technology.jpg
 ---
-## Überblick
-Dieser Artikel behandelt die Methode zum Aufbau einer Entwicklungsumgebung, die als erster Schritt zum Studium des maschinellen Lernens auf einem lokalen Rechner betrachtet werden kann. Der gesamte Inhalt wurde basierend auf Ubuntu 20.04 LTS mit einer NVIDIA GeForce RTX 3070 Grafikkarte geschrieben.
+## Übersicht
+In diesem Artikel wird die Einrichtung einer Entwicklungsumgebung behandelt, die als erster Schritt zum Erlernen von maschinellem Lernen auf einem lokalen Rechner betrachtet werden kann. Alle Inhalte wurden auf Ubuntu 20.04 LTS mit einer NVIDIA Geforce RTX 3070 Grafikkarte erstellt.
 
 - Aufzubauender Technologie-Stack
   - Ubuntu 20.04 LTS
@@ -23,108 +20,108 @@ Dieser Artikel behandelt die Methode zum Aufbau einer Entwicklungsumgebung, die 
   - scikit-learn
   - CUDA 11.0.3
   - cuDNN 8.0.5
-  - Deep Learning Framework (es wird empfohlen, nur eines pro Umgebung zu installieren)
+  - Deep-Learning-Frameworks (es wird empfohlen, nur eines pro Umgebung zu installieren)
     - PyTorch 1.7.1
     - TensorFlow 2.4.0
 
-### Vergleichstabelle mit dem neu erstellten Leitfaden zum Aufbau einer Entwicklungsumgebung für maschinelles Lernen
-Obwohl es etwa dreieinhalb Jahre her ist, seit dieser Artikel im Blog veröffentlicht wurde, ist der Inhalt dieses Artikels in großen Zügen immer noch gültig, abgesehen von einigen Details wie Paketversionen oder der Veröffentlichung des NVIDIA Open-Source-Treibers. Als ich jedoch im Sommer 2024 einen neuen PC kaufte und die Entwicklungsumgebung aufbaute, gab es einige Änderungen, weshalb ich [einen neuen Leitfaden zum Aufbau der Entwicklungsumgebung](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1/) geschrieben habe. Die Unterschiede sind in der folgenden Tabelle aufgeführt.
+### Vergleichstabelle mit dem neu erstellten Machine-Learning-Entwicklungsumgebungs-Leitfaden
+Obwohl seit der Veröffentlichung dieses Artikels im Blog etwa dreieinhalb Jahre vergangen sind, ist der Inhalt dieses Artikels abgesehen von einigen Details wie Paketversionen oder der Veröffentlichung von NVIDIA Open-Source-Treibern im Großen und Ganzen noch gültig. Als ich jedoch im Sommer 12024 des [Holozän-Kalenders](https://en.wikipedia.org/wiki/Holocene_calendar) einen neuen PC kaufte und eine Entwicklungsumgebung einrichtete, gab es einige Änderungen, weshalb ich einen [neuen Leitfaden zur Einrichtung einer Entwicklungsumgebung](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1/) erstellt habe. Die Unterschiede sind in der folgenden Tabelle aufgeführt.
 
-| Unterschied | Dieser Artikel (Version 2021) | Neuer Artikel (Version 2024) |
+| Unterschied | Dieser Artikel (Version 12021) | Neuer Artikel (Version 12024) |
 | --- | --- | --- |
 | Linux-Distribution | Basierend auf Ubuntu | Anwendbar auf Ubuntu sowie Fedora/RHEL/Centos,<br> Debian, openSUSE/SLES usw. |
-| Methode zum Aufbau der Entwicklungsumgebung | Python-Virtuelle Umgebung mit venv | Docker-Container-basierte Umgebung mit<br> [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit) |
+| Methode zum Aufbau der Entwicklungsumgebung | Python-Virtualenv mit venv | Docker-Container-basierte Umgebung mit<br> [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit) |
 | Installation des NVIDIA-Grafiktreibers | O | O |
-| Direkte Installation von CUDA und cuDNN<br> auf dem Hostsystem | O (Verwendung des Apt-Paketmanagers) | X (Verwendung von vorinstallierten Images,<br> die von NVIDIA auf Docker Hub bereitgestellt werden,<br> daher keine direkte Arbeit erforderlich) |
-| Portabilität | Entwicklungsumgebung muss bei jedem<br> Wechsel zu einem anderen System<br> neu aufgebaut werden | Docker-basiert, daher einfache Portierung<br> bestehender Images (außer zusätzlicher<br> Volumen- oder Netzwerkeinstellungen) oder<br> Erstellung neuer Images bei Bedarf mit<br> vorbereiteten Dockerfiles |
-| Nutzung zusätzlicher GPU-Beschleunigungsbibliotheken<br> neben cuDNN | X | Einführung von [CuPy](https://cupy.dev/), [cuDF](https://docs.rapids.ai/api/cudf/stable/), [cuML](https://docs.rapids.ai/api/cuml/stable/), [DALI](https://developer.nvidia.com/DALI) |
-| Jupyter Notebook-Schnittstelle | Jupyter Notebook (classic) | JupyterLab (Next-Generation) |
-| SSH-Server-Konfiguration | Nicht behandelt | Grundlegende SSH-Server-Konfiguration in Teil 3 enthalten |
+| Direkte Installation von CUDA und cuDNN<br> auf dem Host-System | O (mit Apt-Paketmanager) | X (Verwendung von [vorinstallierten Images von NVIDIA<br> auf Docker Hub](https://hub.docker.com/r/nvidia/cuda), daher keine<br> direkte Arbeit erforderlich) |
+| Portabilität | Bei jedem Systemwechsel muss die<br> Entwicklungsumgebung neu aufgebaut werden | Docker-basiert, daher kann mit der erstellten Dockerfile<br> bei Bedarf ein neues Image erstellt oder das<br> bestehende Image (ohne zusätzliche Volumes oder<br> Netzwerkeinstellungen) leicht portiert werden |
+| Nutzung zusätzlicher GPU-<br>Beschleunigungsbibliotheken neben cuDNN | X | Einführung von [CuPy](https://cupy.dev/), [cuDF](https://docs.rapids.ai/api/cudf/stable/), [cuML](https://docs.rapids.ai/api/cuml/stable/), [DALI](https://developer.nvidia.com/DALI) |
+| Jupyter Notebook-Oberfläche | Jupyter Notebook (klassisch) | JupyterLab (Next-Generation) |
+| SSH-Server-Konfiguration | Nicht behandelt | Teil 3 enthält eine grundlegende SSH-Server-Konfiguration |
 
-Wenn Sie eine Python-virtuelle Umgebung wie venv anstelle von Docker verwenden möchten, ist dieser bestehende Artikel immer noch gültig und Sie können ihn weiterhin lesen. Wenn Sie die Vorteile der hohen Portabilität usw. von Docker-Containern nutzen möchten, oder wenn Sie planen, eine andere Linux-Distribution als Ubuntu wie Fedora zu verwenden, oder wenn Sie eine Umgebung mit einer NVIDIA-Grafikkarte verwenden und zusätzliche GPU-Beschleunigungsbibliotheken wie CuPy, cuDF, cuML, DALI usw. nutzen möchten, oder wenn Sie per Fernzugriff über SSH und JupyterLab-Konfiguration zugreifen möchten, empfehle ich Ihnen, auch den [neuen Leitfaden](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1/) zu konsultieren.
+Wenn du lieber Python-Virtualenvs wie venv anstelle von Docker verwenden möchtest, ist dieser Artikel nach wie vor gültig und du kannst ihn weiterhin lesen. Wenn du jedoch die Vorteile von Docker-Containern wie hohe Portabilität nutzen möchtest, eine andere Linux-Distribution als Ubuntu wie Fedora verwenden willst, eine Umgebung mit NVIDIA-Grafikkarte hast und zusätzliche GPU-Beschleunigungsbibliotheken wie CuPy, cuDF, cuML oder DALI nutzen möchtest, oder wenn du per SSH und JupyterLab remote zugreifen möchtest, empfehle ich dir, auch den [neuen Leitfaden](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1/) zu konsultieren.
 
 ## 0. Voraussetzungen
-- Für das Studium des maschinellen Lernens wird die Verwendung von Linux empfohlen. Es ist zwar auch unter Windows möglich, aber es kann in vielen kleinen Bereichen zu Zeitverschwendung kommen. Am unkompliziertesten ist es, die neueste LTS-Version von Ubuntu zu verwenden. Nicht-Open-Source-Treiber werden automatisch installiert, was bequem ist, und aufgrund der großen Benutzerzahl sind die meisten technischen Dokumente für Ubuntu geschrieben.
-- Im Allgemeinen ist Python in den meisten Linux-Distributionen, einschließlich Ubuntu, vorinstalliert. Wenn Python jedoch nicht installiert ist, müssen Sie es zuerst installieren, bevor Sie diesem Artikel folgen.
-  - Sie können die aktuell installierte Python-Version mit dem folgenden Befehl überprüfen:
+- Für das Erlernen von maschinellem Lernen wird Linux empfohlen. Es ist zwar auch unter Windows möglich, aber es kann in verschiedenen Bereichen zu Zeitverschwendung kommen. Die neueste LTS-Version von Ubuntu ist die sicherste Wahl. Nicht-Open-Source-Treiber werden automatisch installiert, was bequem ist, und aufgrund der großen Benutzerbasis sind die meisten technischen Dokumente für Ubuntu geschrieben.
+- In der Regel ist Python in den meisten Linux-Distributionen, einschließlich Ubuntu, vorinstalliert. Falls Python jedoch nicht installiert ist, solltest du es vor dem Befolgen dieses Artikels installieren.
+  - Die aktuell installierte Python-Version kann mit folgendem Befehl überprüft werden:
   ```
   $ python3 --version
   ```
-  - Wenn Sie TensorFlow 2 oder PyTorch verwenden möchten, sollten Sie die kompatiblen Python-Versionen überprüfen. Zum Zeitpunkt des Schreibens dieses Artikels unterstützt [die neueste Version von PyTorch Python-Versionen](https://pytorch.org/get-started/locally/#linux-python) 3.6-3.8, und [die neueste Version von TensorFlow 2 unterstützt Python-Versionen](https://www.tensorflow.org/install) 3.5-3.8.  
+  - Wenn du TensorFlow 2 oder PyTorch verwenden möchtest, solltest du die kompatiblen Python-Versionen überprüfen. Zum Zeitpunkt der Erstellung dieses Artikels unterstützt [die neueste Version von PyTorch Python-Versionen](https://pytorch.org/get-started/locally/#linux-python) 3.6-3.8, und [die neueste Version von TensorFlow 2 unterstützt Python-Versionen](https://www.tensorflow.org/install) 3.5-3.8.  
   In diesem Artikel verwenden wir Python 3.8.
-- Wenn Sie planen, maschinelles Lernen auf einem lokalen Rechner zu studieren, ist es ratsam, mindestens eine GPU vorzubereiten. Während die Datenvorverarbeitung auch mit der CPU möglich ist, ist der Unterschied in der Trainingsgeschwindigkeit zwischen CPU und GPU bei größeren Modellen in der Trainingsphase überwältigend (insbesondere im Fall des Deep Learning).
-  - Für maschinelles Lernen gibt es praktisch nur eine Wahl für den GPU-Hersteller. Sie müssen ein NVIDIA-Produkt verwenden. NVIDIA ist ein Unternehmen, das erheblich in den Bereich des maschinellen Lernens investiert hat, und fast alle Frameworks für maschinelles Lernen verwenden die CUDA-Bibliothek von NVIDIA.
-  - Wenn Sie planen, eine GPU für maschinelles Lernen zu verwenden, sollten Sie zuerst überprüfen, ob das Grafikkartenmodell, das Sie verwenden möchten, CUDA unterstützt. Sie können den Namen des GPU-Modells, das derzeit in Ihrem Computer installiert ist, im Terminal mit dem Befehl `uname -m && cat /etc/*release` überprüfen. Suchen Sie den entsprechenden Modellnamen in der GPU-Liste im [Link](https://developer.nvidia.com/cuda-gpus) und überprüfen Sie den Wert der **Compute Capability**. Dieser Wert sollte mindestens 3.5 betragen, damit CUDA verwendet werden kann.
+- Wenn du maschinelles Lernen auf deinem lokalen Rechner lernen möchtest, ist es ratsam, mindestens eine GPU vorzubereiten. Datenvorverarbeitung kann zwar auch mit der CPU durchgeführt werden, aber in der Modelltrainingsphase wird der Geschwindigkeitsunterschied zwischen CPU und GPU mit zunehmender Modellgröße überwältigend (besonders bei Deep Learning).
+  - Für maschinelles Lernen gibt es praktisch nur eine Wahl für den GPU-Hersteller: NVIDIA. NVIDIA hat stark in den Bereich des maschinellen Lernens investiert, und fast alle Machine-Learning-Frameworks verwenden die CUDA-Bibliothek von NVIDIA.
+  - Wenn du eine GPU für maschinelles Lernen verwenden möchtest, solltest du zunächst überprüfen, ob dein Grafikkartenmodell CUDA unterstützt. Der Name des in deinem Computer installierten GPU-Modells kann im Terminal mit dem Befehl `uname -m && cat /etc/*release` überprüft werden. Suche das entsprechende Modell in der GPU-Liste unter [diesem Link](https://developer.nvidia.com/cuda-gpus) und überprüfe den Wert **Compute Capability**. Dieser Wert sollte mindestens 3.5 betragen, damit CUDA verwendet werden kann.
   - Die Kriterien für die GPU-Auswahl sind in folgendem Artikel gut zusammengefasst. Der Autor aktualisiert den Artikel kontinuierlich.  
   [Which GPU(s) to Get for Deep Learning](https://timdettmers.com/2020/09/07/which-gpu-for-deep-learning/)  
-  Ein weiterer sehr informativer Artikel desselben Autors ist [A Full Hardware Guide to Deep Learning](https://timdettmers.com/2018/12/16/deep-learning-hardware-guide/). Die Schlussfolgerung des obigen Artikels lautet wie folgt:
-    > Die RTX 3070 und RTX 3080 sind mächtige Karten, aber ihnen fehlt etwas Speicher. Für viele Aufgaben benötigen Sie jedoch nicht so viel Speicher.  
-    > Die RTX 3070 ist perfekt, wenn Sie Deep Learning lernen möchten. Das liegt daran, dass die grundlegenden Fähigkeiten zum Training der meisten Architekturen erlernt werden können, indem man sie einfach etwas herunterskaliert oder etwas kleinere Eingangsbilder verwendet. Wenn ich Deep Learning erneut lernen würde, würde ich wahrscheinlich eine RTX 3070 oder sogar mehrere verwenden, wenn ich das Geld übrig hätte.
-    > Die RTX 3080 ist derzeit bei weitem die kosteneffizienteste Karte und daher ideal für Prototyping. Für Prototyping möchten Sie den größten Speicher, der noch günstig ist. Mit Prototyping meine ich hier Prototyping in jedem Bereich: Forschung, kompetitives Kaggle, Hacken von Ideen/Modellen für ein Startup, Experimentieren mit Forschungscode. Für all diese Anwendungen ist die RTX 3080 die beste GPU.
+  Ein weiterer nützlicher Artikel desselben Autors ist [A Full Hardware Guide to Deep Learning](https://timdettmers.com/2018/12/16/deep-learning-hardware-guide/). Die Schlussfolgerung des obigen Artikels lautet wie folgt:
+    > The RTX 3070 and RTX 3080 are mighty cards, but they lack a bit of memory. For many tasks, however, you do not need that amount of memory.  
+    > The RTX 3070 is perfect if you want to learn deep learning. This is so because the basic skills of training most architectures can be learned by just scaling them down a bit or using a bit smaller input images. If I would learn deep learning again, I would probably roll with one RTX 3070, or even multiple if I have the money to spare.
+    > The RTX 3080 is currently by far the most cost-efficient card and thus ideal for prototyping. For prototyping, you want the largest memory, which is still cheap. With prototyping, I mean here prototyping in any area: Research, competitive Kaggle, hacking ideas/models for a startup, experimenting with research code. For all these applications, the RTX 3080 is the best GPU.
 
-Wenn Sie alle oben genannten Punkte erfüllt haben, lassen Sie uns mit dem Aufbau der Arbeitsumgebung beginnen.
+Wenn alle oben genannten Anforderungen erfüllt sind, können wir mit dem Aufbau der Arbeitsumgebung beginnen.
 
-## 1. Erstellung des Arbeitsverzeichnisses
-Öffnen Sie ein Terminal und bearbeiten Sie die .bashrc-Datei, um die Umgebungsvariable zu registrieren (der Befehl folgt nach dem $-Prompt).  
-Öffnen Sie zunächst den nano-Editor mit folgendem Befehl (vim oder ein anderer Editor ist auch in Ordnung):
+## 1. Erstellen des Arbeitsverzeichnisses
+Öffne ein Terminal und bearbeite die .bashrc-Datei, um Umgebungsvariablen zu registrieren (der Befehl folgt nach dem $-Prompt).  
+Öffne zunächst den Nano-Editor mit folgendem Befehl (vim oder ein anderer Editor ist auch in Ordnung):
 ```
 $ nano ~/.bashrc
 ```
-Fügen Sie am Ende der Datei Folgendes hinzu. Sie können den Inhalt in den Anführungszeichen nach Belieben in einen anderen Pfad ändern.  
+Füge am Ende der Datei Folgendes hinzu. Der Inhalt in Anführungszeichen kann bei Bedarf in einen anderen Pfad geändert werden.  
 ```export ML_PATH="$HOME/ml"```
 
-Drücken Sie Strg+O zum Speichern und dann Strg+X zum Beenden.
+Drücke Strg+O zum Speichern und dann Strg+X zum Beenden.
 
-Führen Sie nun den folgenden Befehl aus, um die Umgebungsvariable anzuwenden:
+Führe nun den folgenden Befehl aus, um die Umgebungsvariable zu aktivieren:
 ```
 $ source ~/.bashrc
 ```
-Erstellen Sie das Verzeichnis:
+Erstelle das Verzeichnis:
 ```
 $ mkdir -p $ML_PATH
 ```
 
 ## 2. Installation des pip-Paketmanagers
-Es gibt mehrere Möglichkeiten, die für maschinelles Lernen erforderlichen Python-Pakete zu installieren. Sie können eine wissenschaftliche Python-Distribution wie Anaconda verwenden (empfohlen für Windows-Betriebssysteme) oder das integrierte Packaging-Tool von Python, pip, verwenden. Hier werden wir den pip-Befehl in der Bash-Shell unter Linux oder macOS verwenden.
+Es gibt verschiedene Möglichkeiten, die für maschinelles Lernen erforderlichen Python-Pakete zu installieren. Du kannst eine wissenschaftliche Python-Distribution wie Anaconda verwenden (empfohlen für Windows-Betriebssysteme) oder das native Python-Packaging-Tool pip. Hier werden wir den pip-Befehl in der Bash-Shell unter Linux oder macOS verwenden.
 
-Überprüfen Sie mit dem folgenden Befehl, ob pip auf Ihrem System installiert ist:
+Überprüfe mit folgendem Befehl, ob pip auf deinem System installiert ist:
 ```
 $ pip3 --version
 
-Der Befehl 'pip3' wurde nicht gefunden, kann aber installiert werden mit:
+Befehl 'pip3' nicht gefunden. Er kann jedoch installiert werden mit:
 
 sudo apt install python3-pip
 
 ```
-Wenn Sie eine solche Ausgabe sehen, ist pip nicht auf Ihrem System installiert. Installieren Sie es mit dem Paketmanager Ihres Systems (hier apt) (wenn eine Versionsnummer angezeigt wird, ist es bereits installiert, überspringen Sie diesen Befehl):
+Wenn du eine ähnliche Ausgabe erhältst, ist pip nicht auf deinem System installiert. Installiere es mit dem Paketmanager deines Systems (hier apt) (wenn eine Versionsnummer angezeigt wird, ist es bereits installiert, und du kannst diesen Befehl überspringen):
 ```
 $ sudo apt install python3-pip
 ```
-Nun ist pip auf Ihrem System installiert.
+Jetzt ist pip auf deinem System installiert.
 
-## 3. Erstellung einer unabhängigen virtuellen Umgebung (empfohlen)
-Um eine virtuelle Umgebung zu erstellen (um Konflikte mit Bibliotheksversionen anderer Projekte zu vermeiden), installieren Sie venv:
+## 3. Erstellen einer unabhängigen virtuellen Umgebung (empfohlen)
+Um eine virtuelle Umgebung zu erstellen (um Konflikte mit Bibliotheksversionen anderer Projekte zu vermeiden), installiere venv:
 ```
 $ sudo apt install python3-venv
 ```
-Erstellen Sie dann eine unabhängige Python-Umgebung wie folgt. Der Grund dafür ist, Konflikte zwischen den für jedes Projekt erforderlichen Bibliotheksversionen zu vermeiden. Sie sollten also bei jedem Start eines neuen Projekts eine neue virtuelle Umgebung erstellen, um eine unabhängige Umgebung aufzubauen.
+Erstelle dann eine unabhängige Python-Umgebung wie folgt. Der Grund dafür ist, dass jedes Projekt unterschiedliche Bibliotheksversionen benötigen kann, die in Konflikt geraten könnten. Daher solltest du für jedes neue Projekt eine neue virtuelle Umgebung erstellen, um eine isolierte Umgebung zu gewährleisten.
 ```
 $ cd $ML_PATH
 $ python3 -m venv --system-site-packages ./(Umgebungsname)
 ```
-Um diese virtuelle Umgebung zu aktivieren, öffnen Sie ein Terminal und geben Sie den folgenden Befehl ein:
+Um diese virtuelle Umgebung zu aktivieren, öffne ein Terminal und gib Folgendes ein:
 ```
 $ cd $ML_PATH
 $ source ./(Umgebungsname)/bin/activate
 ```
-Aktualisieren Sie pip in der virtuellen Umgebung, nachdem Sie sie aktiviert haben:
+Nach der Aktivierung der virtuellen Umgebung aktualisiere pip innerhalb der virtuellen Umgebung:
 ```
 (env) $ pip install -U pip
 ```
-Um die virtuelle Umgebung später zu deaktivieren, verwenden Sie den Befehl `deactivate`. Wenn die Umgebung aktiviert ist, wird jedes Paket, das Sie mit dem pip-Befehl installieren, in dieser unabhängigen Umgebung installiert, und Python wird dieses Paket verwenden.
+Um die virtuelle Umgebung später zu deaktivieren, verwende den Befehl `deactivate`. Wenn die Umgebung aktiviert ist, wird jedes mit pip installierte Paket in dieser isolierten Umgebung installiert, und Python wird diese Pakete verwenden.
 
-## 3′. (Wenn keine virtuelle Umgebung erstellt wird) Aktualisierung der pip-Version
-Bei der Installation von pip auf dem System wird eine Binärdatei vom Mirror-Server der Distribution (hier Ubuntu) heruntergeladen und installiert. Diese Binärdatei ist in der Regel nicht die neueste Version, da die Updates oft verzögert sind (in meinem Fall wurde Version 20.3.4 installiert). Um die neueste Version von pip zu verwenden, führen Sie den folgenden Befehl aus, um pip im *Benutzer-Heimatverzeichnis* zu installieren (oder zu aktualisieren, falls es bereits installiert ist):  
+## 3′. (Falls keine virtuelle Umgebung erstellt wird) Aktualisierung der pip-Version
+Bei der Installation von pip auf dem System wird eine Binärdatei vom Mirror-Server der Distribution (hier Ubuntu) heruntergeladen und installiert. Diese Binärdatei ist oft nicht die neueste Version, da Updates verzögert sein können (in meinem Fall wurde Version 20.3.4 installiert). Um die neueste Version von pip zu verwenden, führe den folgenden Befehl aus, um pip im *Home-Verzeichnis des Benutzers* zu installieren (oder zu aktualisieren, falls bereits installiert):
 ```
 $ python3 -m pip install -U pip
 
@@ -132,21 +129,21 @@ Collecting pip
 (gekürzt)
 Successfully installed pip-21.0.1
 ```
-Sie können sehen, dass pip auf Version 21.0.1 installiert wurde, die zum Zeitpunkt des Schreibens dieses Artikels die neueste ist. Da das im Benutzer-Heimatverzeichnis installierte pip vom System nicht automatisch erkannt wird, müssen Sie es als PATH-Umgebungsvariable registrieren, damit das System es erkennen und verwenden kann.
+Wie zu sehen ist, wurde pip auf Version 21.0.1 aktualisiert, die zum Zeitpunkt der Erstellung dieses Artikels die neueste Version war. Da das im Benutzer-Home-Verzeichnis installierte pip vom System nicht automatisch erkannt wird, muss es als PATH-Umgebungsvariable registriert werden, damit das System es erkennen und verwenden kann.
 
-Öffnen Sie erneut die .bashrc-Datei mit einem Editor:
+Öffne erneut die .bashrc-Datei mit einem Editor:
 ```
 $ nano ~/.bashrc
 ```
-Suchen Sie diesmal nach der Zeile, die mit `export PATH=` beginnt. Wenn es keinen Pfad dahinter gibt, fügen Sie einfach den Inhalt hinzu, wie Sie es in [Schritt 1](#1-erstellung-des-arbeitsverzeichnisses) getan haben. Wenn es bereits andere registrierte Pfade gibt, fügen Sie den Inhalt mit einem Doppelpunkt dahinter hinzu.  
+Suche diesmal nach der Zeile, die mit `export PATH=` beginnt. Wenn keine Pfade dahinter stehen, füge den Inhalt einfach wie in [Schritt 1](#1-erstellen-des-arbeitsverzeichnisses) hinzu. Wenn bereits andere Pfade registriert sind, füge den Inhalt mit einem Doppelpunkt dahinter hinzu:  
 ```export PATH="$HOME/.local/bin"```  
 ```export PATH="(bestehender Pfad):$HOME/.local/bin"```
 
-[Wenn Sie das System-pip auf eine andere Weise als den System-Paketmanager aktualisieren, können Probleme aufgrund von Versionskonflikten auftreten](https://github.com/pypa/pip/issues/5599). Deshalb installieren wir pip separat im Benutzer-Heimatverzeichnis. Aus dem gleichen Grund ist es ratsam, den Befehl `python3 -m pip` anstelle von `pip` zu verwenden, wenn Sie pip außerhalb einer virtuellen Umgebung verwenden.
+[Die Aktualisierung des System-pip auf andere Weise als über den System-Paketmanager kann zu Versionskonflikten führen](https://github.com/pypa/pip/issues/5599). Deshalb installieren wir pip separat im Home-Verzeichnis des Benutzers. Aus demselben Grund ist es ratsam, außerhalb einer virtuellen Umgebung den Befehl `python3 -m pip` anstelle von `pip` zu verwenden.
 
-## 4. Installation von Paketen für maschinelles Lernen (jupyter, matplotlib, numpy, pandas, scipy, scikit-learn)
-Installieren Sie alle erforderlichen Pakete und ihre Abhängigkeiten mit dem folgenden pip-Befehl.  
-In meinem Fall verwende ich venv, daher verwende ich einfach den `pip`-Befehl. Wenn Sie venv nicht verwenden, empfehle ich, wie bereits erwähnt, stattdessen den Befehl `python3 -m pip` zu verwenden.
+## 4. Installation von Machine-Learning-Paketen (jupyter, matplotlib, numpy, pandas, scipy, scikit-learn)
+Installiere mit dem folgenden pip-Befehl alle benötigten Pakete und ihre Abhängigkeiten.  
+Da ich venv verwende, benutze ich einfach den `pip`-Befehl. Wenn du venv nicht verwendest, empfehle ich wie bereits erwähnt, stattdessen den Befehl `python3 -m pip` zu verwenden.
 ```
 (env) $ pip install -U jupyter matplotlib numpy pandas scipy scikit-learn
 
@@ -155,35 +152,35 @@ Collecting jupyter
 Collecting matplotlib
 (gekürzt)
 ```
-Wenn Sie venv verwendet haben, registrieren Sie den Kernel in Jupyter und geben Sie ihm einen Namen:
+Wenn du venv verwendest, registriere den Kernel in Jupyter und gib ihm einen Namen:
 ```
 (env) $ python3 -m ipykernel install --user --name=(Kernelname)
 ```
-Ab jetzt können Sie Jupyter mit folgendem Befehl starten:
+Um Jupyter ab jetzt zu starten, verwende den folgenden Befehl:
 ```
 (env) $ jupyter notebook
 ```
 
 ## 5. Installation von CUDA & cuDNN
-### 5-1. Überprüfung der erforderlichen CUDA & cuDNN Versionen
-Überprüfen Sie die unterstützten CUDA-Versionen in der [offiziellen PyTorch-Dokumentation](https://pytorch.org/get-started/locally/).  
-![Überprüfung der kompatiblen CUDA-Version für PyTorch](/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png)  
-Basierend auf PyTorch Version 1.7.1 sind die unterstützten CUDA-Versionen 9.2, 10.1, 10.2, 11.0. Für NVIDIA 30-Serie GPUs ist CUDA 11 erforderlich, daher wissen wir, dass Version 11.0 benötigt wird.
+### 5-1. Überprüfung der benötigten CUDA & cuDNN-Versionen
+Überprüfe die unterstützten CUDA-Versionen in der [offiziellen PyTorch-Dokumentation](https://pytorch.org/get-started/locally/).  
+![Überprüfung der PyTorch-kompatiblen CUDA-Version](/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png)  
+Für PyTorch Version 1.7.1 werden die CUDA-Versionen 9.2, 10.1, 10.2 und 11.0 unterstützt. Da NVIDIA 30-Series-GPUs CUDA 11 benötigen, wissen wir, dass Version 11.0 erforderlich ist.
 
-Überprüfen Sie auch die erforderliche CUDA-Version in der [offiziellen TensorFlow 2-Dokumentation](https://www.tensorflow.org/install/gpu).  
-![Überprüfung der kompatiblen CUDA-Version für TensorFlow 2](/assets/img/머신러닝-개발환경-구축하기/TensorFlow_GPU_support.png)  
-Basierend auf TensorFlow Version 2.4.0 haben wir festgestellt, dass CUDA Version 11.0 und cuDNN Version 8.0 erforderlich sind.
+Überprüfe auch die benötigte CUDA-Version in der [offiziellen TensorFlow 2-Dokumentation](https://www.tensorflow.org/install/gpu).  
+![Überprüfung der TensorFlow 2-kompatiblen CUDA-Version](/assets/img/머신러닝-개발환경-구축하기/TensorFlow_GPU_support.png)  
+Für TensorFlow Version 2.4.0 wird ebenfalls CUDA Version 11.0 und cuDNN Version 8.0 benötigt.
 
-In meinem Fall überprüfe ich die CUDA-Versionen, die mit beiden Paketen kompatibel sind, da ich je nach Situation entweder PyTorch oder TensorFlow 2 verwende. Sie sollten die Anforderungen des Pakets überprüfen, das Sie benötigen, und sich danach richten.
+Da ich je nach Situation sowohl PyTorch als auch TensorFlow 2 verwende, habe ich die CUDA-Versionen überprüft, die mit beiden Paketen kompatibel sind. Du solltest die Anforderungen der Pakete überprüfen, die du benötigst, und dich danach richten.
 
 ### 5-2. Installation von CUDA
-Gehen Sie zum [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive) und wählen Sie die Version aus, die Sie zuvor überprüft haben. In diesem Artikel wählen wir [CUDA Toolkit 11.0 Update1](https://developer.nvidia.com/cuda-11.0-update1-download-archive).  
+Besuche das [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive) und wähle die zuvor ermittelte Version aus. In diesem Artikel wählen wir [CUDA Toolkit 11.0 Update1](https://developer.nvidia.com/cuda-11.0-update1-download-archive).  
 ![CUDA 11.0 Update 1](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-1.png)  
-Wählen Sie nun die entsprechende Plattform und den Installertyp aus und folgen Sie den Anweisungen auf dem Bildschirm. [Es wird empfohlen, wenn möglich den Systempaketmanager für den Installer zu verwenden](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#choose-installation-method). Meine bevorzugte Methode ist deb (network).  
-![Auswahl der CUDA-Plattform](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-2.png)  
-![Installation von CUDA](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-3.png)  
+Wähle nun die entsprechende Plattform und den Installertyp aus und folge den Anweisungen auf dem Bildschirm. [Es wird empfohlen, wenn möglich den Systempaketmanager für die Installation zu verwenden](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#choose-installation-method). Ich bevorzuge die Methode deb (network).  
+![CUDA-Plattformauswahl](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-2.png)  
+![CUDA-Installation](/assets/img/머신러닝-개발환경-구축하기/CUDA_installation-3.png)  
 
-Führen Sie die folgenden Befehle aus, um CUDA zu installieren:
+Führe die folgenden Befehle aus, um CUDA zu installieren:
 ```
 $ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
 $ sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -192,22 +189,22 @@ $ sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cud
 $ sudo apt update
 $ sudo apt install cuda-toolkit-11-0 cuda-drivers
 ```
-Wenn Sie aufmerksam sind, werden Sie bemerkt haben, dass die letzte Zeile leicht von den Anweisungen im Bild abweicht. Bei der Netzwerkinstallation würde die Eingabe von cuda allein, wie im Bild gezeigt, die neueste Version 11.2 installieren, was nicht das ist, was wir wollen. Sie können verschiedene Meta-Paket-Optionen im [CUDA 11.0 Linux-Installationsleitfaden](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#package-manager-metas) einsehen. Hier haben wir die letzte Zeile modifiziert, um das CUDA Toolkit-Paket in Version 11.0 zu installieren und das Treiberpaket automatisch aktualisieren zu lassen.
+Wenn du aufmerksam bist, hast du vielleicht bemerkt, dass die letzte Zeile etwas anders ist als die Anweisung im Bild. Bei der Netzwerkinstallation würde die Eingabe von nur "cuda", wie im Bild gezeigt, die neueste Version 11.2 installieren, was nicht das ist, was wir wollen. Im [CUDA 11.0 Linux-Installationsleitfaden](https://docs.nvidia.com/cuda/archive/11.0/cuda-installation-guide-linux/index.html#package-manager-metas) findest du verschiedene Meta-Paketoptionen. Hier haben wir die letzte Zeile geändert, um das CUDA Toolkit-Paket in Version 11.0 zu installieren und das Treiberpaket automatisch aktualisieren zu lassen.
 
 ### 5-3. Installation von cuDNN
-Installieren Sie cuDNN wie folgt:
+Installiere cuDNN wie folgt:
 ```
 $ sudo apt install libcudnn8=8.0.5.39-1+cuda11.0
 $ sudo apt install libcudnn8-dev=8.0.5.39-1+cuda11.0
 ```
 ## 6. Installation von PyTorch
-Wenn Sie in Schritt 3 eine virtuelle Umgebung erstellt haben, fahren Sie mit aktivierter virtueller Umgebung fort. Überspringen Sie diesen Schritt, wenn Sie PyTorch nicht benötigen.  
-Gehen Sie zur [PyTorch-Website](https://pytorch.org/get-started/locally/), wählen Sie den zu installierenden PyTorch-Build (Stable), das Betriebssystem (Linux), das Paket (Pip), die Sprache (Python) und CUDA (11.0) aus und folgen Sie den Anweisungen auf dem Bildschirm.  
-![Installation von PyTorch](/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png)
+Wenn du in Schritt 3 eine virtuelle Umgebung erstellt hast, aktiviere diese vor dem Fortfahren. Wenn du PyTorch nicht benötigst, überspringe diesen Schritt.  
+Besuche die [PyTorch-Website](https://pytorch.org/get-started/locally/), wähle den zu installierenden PyTorch-Build (Stable), das Betriebssystem (Linux), das Paket (Pip), die Sprache (Python) und CUDA (11.0) aus und folge den Anweisungen auf dem Bildschirm.  
+![PyTorch-Installation](/assets/img/머신러닝-개발환경-구축하기/PyTorch_Installation.png)
 ```
 (env) $ pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 ```
-Um zu überprüfen, ob PyTorch korrekt installiert wurde, starten Sie den Python-Interpreter und führen Sie die folgenden Befehle aus. Wenn ein Tensor zurückgegeben wird, war die Installation erfolgreich.
+Um zu überprüfen, ob PyTorch korrekt installiert wurde, starte den Python-Interpreter und führe die folgenden Befehle aus. Wenn ein Tensor zurückgegeben wird, war die Installation erfolgreich.
 ```
 (env) $ python3
 Python 3.8.5 (default, Jul 28 2020, 12:59:40) 
@@ -222,20 +219,20 @@ tensor([[0.8187, 0.5925, 0.2768],
         [0.9205, 0.9239, 0.9065],
         [0.2424, 0.1018, 0.3426]])
 ```
-Um zu überprüfen, ob der GPU-Treiber und CUDA aktiviert und verfügbar sind, führen Sie den folgenden Befehl aus:
+Um zu überprüfen, ob der GPU-Treiber und CUDA aktiviert und verfügbar sind, führe den folgenden Befehl aus:
 ```
 >>> torch.cuda.is_available()
 True
 ```
 
 ## 7. Installation von TensorFlow 2
-Ignorieren Sie diesen Schritt, wenn Sie TensorFlow nicht benötigen.  
-Wenn Sie PyTorch in Schritt 6 in einer virtuellen Umgebung installiert haben, deaktivieren Sie diese Umgebung, gehen Sie zurück zu den Schritten 3 und 4, erstellen und aktivieren Sie eine neue virtuelle Umgebung und fahren Sie dann fort. Wenn Sie Schritt 6 übersprungen haben, fahren Sie einfach fort.  
-Installieren Sie TensorFlow wie folgt:
+Wenn du TensorFlow nicht benötigst, überspringe diesen Schritt.  
+Wenn du PyTorch in Schritt 6 in einer virtuellen Umgebung installiert hast, deaktiviere diese Umgebung, kehre zu den Schritten 3 und 4 zurück, erstelle und aktiviere eine neue virtuelle Umgebung und fahre dann fort. Wenn du Schritt 6 übersprungen hast, fahre einfach fort.  
+Installiere TensorFlow wie folgt:
 ```
 (env2) $ pip install --upgrade tensorflow
 ```
-Um zu überprüfen, ob TensorFlow korrekt installiert wurde, führen Sie den folgenden Befehl aus. Wenn der GPU-Name angezeigt wird und ein Tensor zurückgegeben wird, war die Installation erfolgreich.
+Um zu überprüfen, ob TensorFlow korrekt installiert wurde, führe den folgenden Befehl aus. Wenn der GPU-Name angezeigt wird und ein Tensor zurückgegeben wird, war die Installation erfolgreich.
 ```
 (env2) $ python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
 

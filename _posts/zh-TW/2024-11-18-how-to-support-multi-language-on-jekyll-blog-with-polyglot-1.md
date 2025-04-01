@@ -1,32 +1,32 @@
 ---
-title: 如何在 Jekyll 部落格中使用 Polyglot 支援多語言 (1) - 套用 Polyglot 外掛程式 & 實作 hreflang alt 標籤、sitemap 和語言選擇按鈕
-description: '介紹在基於 ''jekyll-theme-chirpy'' 的 Jekyll 部落格中套用 Polyglot 外掛程式來實現多語言支援的過程。這篇文章是該系列的第一篇,涵蓋了套用 Polyglot 外掛程式並修改 html 標頭和 sitemap 的部分。'
+title: 使用Polyglot在Jekyll部落格實現多語言支援 (1) - 應用Polyglot外掛程式 & 實現hreflang alt標籤、sitemap及語言選擇按鈕
+description: '介紹在基於''jekyll-theme-chirpy''的Jekyll部落格中應用Polyglot外掛程式實現多語言支援的過程。這篇文章是該系列的第一篇，涵蓋了應用Polyglot外掛程式並修改html標頭和sitemap的部分。'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.jpg
 ---
 ## 概述
-大約 4 個月前,也就是[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar) 12024 年 7 月初,我在這個基於 Jekyll 並透過 Github Pages 託管的部落格中套用了 [Polyglot](https://github.com/untra/polyglot) 外掛程式來實現多語言支援。
-這個系列將分享在 Chirpy 主題中套用 Polyglot 外掛程式的過程中遇到的錯誤及其解決方法,以及考慮 SEO 的 html 標頭和 sitemap.xml 的撰寫方法。
-這個系列由兩篇文章組成,您正在閱讀的是該系列的第一篇。
-- 第一篇:套用 Polyglot 外掛程式 & 實作 hreflang alt 標籤、sitemap 和語言選擇按鈕 (本文)
-- 第二篇:[Chirpy 主題建置失敗和搜尋功能錯誤的疑難排解](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+大約4個月前，也就是[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar) 12024年7月初，我在基於Jekyll並通過Github Pages託管的本部落格中應用了[Polyglot](https://github.com/untra/polyglot)外掛程式來實現多語言支援。
+這個系列將分享在Chirpy主題中應用Polyglot外掛程式的過程中遇到的錯誤及其解決方法，以及考慮SEO的html標頭和sitemap.xml的編寫方法。
+本系列由兩篇文章組成，您正在閱讀的是該系列的第一篇。
+- 第1篇：Polyglot外掛程式應用 & 實現hreflang alt標籤、sitemap及語言選擇按鈕（本文）
+- 第2篇：[Chirpy主題構建失敗及搜尋功能錯誤故障排除](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
 
 ## 需求
-- [x] 必須能夠按語言路徑(例如 `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath})區分並提供建置結果(網頁)。
-- [x] 為了盡可能減少多語言支援所需的額外時間和精力,即使不在原始 Markdown 檔案的 YAML front matter 中逐一指定 'lang' 和 'permalink' 標籤,也應能在建置時根據該檔案所在的本地路徑(例如 `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath})自動識別語言。
-- [x] 網站內每個頁面的標頭部分應包含適當的 Content-Language 元標籤和 hreflang 替代標籤,以滿足 Google 多語言搜尋的 SEO 指南。
-- [x] 必須能在 `sitemap.xml`{: .filepath} 中提供網站內支援每種語言的所有頁面連結,且不遺漏,而 `sitemap.xml`{: .filepath} 本身應只存在於根路徑中,不得重複。
-- [x] [Chirpy 主題](https://github.com/cotes2020/jekyll-theme-chirpy)提供的所有功能都必須在各語言頁面中正常運作,如果不正常,則必須修正使其正常運作。
-  - [x] 'Recently Updated', 'Trending Tags' 功能正常運作
-  - [x] 使用 GitHub Actions 的建置過程中不會出現錯誤
+- [x] 構建的結果（網頁）應按語言路徑（例如 `/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）分類提供。
+- [x] 為了盡量減少多語言支援所需的額外時間和精力，不必在原始markdown檔案的YAML front matter中逐一指定'lang'和'permalink'標籤，而是在構建時根據檔案所在的本地路徑（例如 `/_posts/ko/`{: .filepath}、`/_posts/ja/`{: .filepath}）自動識別語言。
+- [x] 網站中每個頁面的標頭部分應包含適當的Content-Language元標籤和hreflang替代標籤，以滿足Google多語言搜尋的SEO指南。
+- [x] 網站中支援每種語言的所有頁面連結應完整地在`sitemap.xml`{: .filepath}中提供，而`sitemap.xml`{: .filepath}本身應只存在於根路徑中，不得重複。
+- [x] [Chirpy主題](https://github.com/cotes2020/jekyll-theme-chirpy)提供的所有功能應在各語言頁面中正常運作，如果不正常，則需進行修正。
+  - [x] 'Recently Updated'、'Trending Tags'功能正常運作
+  - [x] 使用GitHub Actions構建過程中不出現錯誤
   - [x] 部落格右上角的文章搜尋功能正常運作
 
-## 套用 Polyglot 外掛程式
-由於 Jekyll 不原生支援多語言部落格,為了滿足上述需求實現多語言部落格,需要使用外部外掛程式。經過搜尋,發現 [Polyglot](https://github.com/untra/polyglot) 被廣泛用於多語言網站實現,且能滿足大部分上述需求,因此採用了該外掛程式。
+## 應用Polyglot外掛程式
+由於Jekyll不原生支援多語言部落格，為了滿足上述需求實現多語言部落格，需要使用外部外掛程式。經過搜尋，發現[Polyglot](https://github.com/untra/polyglot)被廣泛用於多語言網站實現，且能滿足大部分上述需求，因此採用了該外掛程式。
 
 ### 安裝外掛程式
-我正在使用 Bundler,所以在 `Gemfile` 中添加了以下內容:
+我使用Bundler，所以在`Gemfile`中添加了以下內容：
 
 ```ruby
 group :jekyll_plugins do
@@ -35,9 +35,9 @@ end
 ```
 {: file='Gemfile'}
 
-之後在終端機中執行 `bundle update`,就會自動完成安裝。
+然後在終端執行`bundle update`即可完成安裝。
 
-如果不使用 Bundler,也可以在終端機中使用 `gem install jekyll-polyglot` 命令直接安裝 gem,然後在 `_config.yml`{: .filepath} 中添加外掛程式,如下所示:
+如果不使用Bundler，也可以在終端執行`gem install jekyll-polyglot`命令直接安裝gem，然後在`_config.yml`{: .filepath}中添加以下外掛程式：
 
 ```yml
 plugins:
@@ -46,7 +46,7 @@ plugins:
 {: file='_config.yml'}
 
 ### 配置設定
-接下來,打開 `_config.yml`{: .filepath} 檔案並添加以下內容:
+接下來，打開`_config.yml`{: .filepath}檔案並添加以下內容：
 
 ```yml
 # Polyglot Settings
@@ -58,21 +58,21 @@ lang_from_path: true
 ```
 {: file='_config.yml'}
 
-- languages:想要支援的語言列表
-- default_lang:預設的 fallback 語言
-- exclude_from_localization:指定要從本地化中排除的根檔案/資料夾路徑字串正則表達式
-- parallel_localization:布林值,指定是否在建置過程中並行處理多語言
-- lang_from_path:布林值,設為 'true' 時,即使在文章 Markdown 檔案內的 YAML front matter 中沒有明確指定 'lang' 屬性,只要該 Markdown 檔案的路徑字串包含語言代碼,就會自動識別並使用
+- languages: 想要支援的語言列表
+- default_lang: 預設fallback語言
+- exclude_from_localization: 排除在本地化之外的根檔案/資料夾路徑字串正則表達式
+- parallel_localization: 布林值，指定是否在構建過程中並行處理多語言
+- lang_from_path: 布林值，設為'true'時，即使在文章markdown檔案中的YAML front matter中沒有明確指定'lang'屬性，只要該markdown檔案的路徑字串包含語言代碼，也會自動識別並使用
 
-> [Sitemap 協議官方文件](https://www.sitemaps.org/protocol.html#location)中明確指出:
+> [Sitemap協議官方文件](https://www.sitemaps.org/protocol.html#location)中明確指出：
 >
 >> "The location of a Sitemap file determines the set of URLs that can be included in that Sitemap. A Sitemap file located at http://example.com/catalog/sitemap.xml can include any URLs starting with http://example.com/catalog/ but can not include URLs starting with http://example.com/images/."
 >
 >> "It is strongly recommended that you place your Sitemap at the root directory of your web server."
 >
-> 為了遵守這一規定,應該將 'sitemap' 添加到 'exclude_from_localization' 列表中,確保相同內容的 `sitemap.xml`{: .filepath} 檔案不會為每種語言生成,而只在根目錄中存在一個,避免出現以下錯誤示例:
+> 為了遵循這一規定，應確保相同內容的`sitemap.xml`{: .filepath}檔案不會按語言分別生成，而是只存在於根目錄中，因此需要將其添加到'exclude_from_localization'列表中，避免出現以下錯誤示例：
 >
-> 錯誤示例(每個檔案的內容在不同語言間並無差異,都是相同的):
+> 錯誤示例（每個檔案的內容相同，沒有語言差異）：
 > - `/sitemap.xml`{: .filepath}
 > - `/ko/sitemap.xml`{: .filepath}
 > - `/es/sitemap.xml`{: .filepath}
@@ -81,13 +81,13 @@ lang_from_path: true
 > - `/fr/sitemap.xml`{: .filepath}
 > - `/de/sitemap.xml`{: .filepath}
 >
-> (12025.01.14. 更新) [提交上述內容補充到 README 的 Pull Request](https://github.com/untra/polyglot/pull/230) 已被接受,現在在 [Polyglot 官方文件](https://github.com/untra/polyglot?tab=readme-ov-file#sitemap-generation)中也可以看到相同的說明。
+> （12025.01.14. 更新）[提交的包含上述內容的Pull Request](https://github.com/untra/polyglot/pull/230)已被接受，現在在[Polyglot官方文件](https://github.com/untra/polyglot?tab=readme-ov-file#sitemap-generation)中也可以看到相同的指導。
 {: .prompt-tip }
 
-> 將 'parallel_localization' 設為 'true' 可以大幅縮短建置時間,但在 12024 年 7 月時,對本部落格啟用該功能時,頁面右側側邊欄的 'Recently Updated' 和 'Trending Tags' 部分的連結標題無法正常處理,出現與其他語言混雜的錯誤。看來還不夠穩定,如果要應用到網站上,需要先進行測試確認是否正常運作。此外,[Windows 用戶也不支援該功能,因此需要停用](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility)。
+> 將'parallel_localization'設為'true'可以大幅縮短構建時間，但截至12024年7月，在本部落格啟用該功能時，頁面右側邊欄的'Recently Updated'和'Trending Tags'部分的連結標題無法正常處理，會與其他語言混雜。這似乎尚未完全穩定，因此在應用到網站前需要先測試其是否正常運作。此外，[Windows用戶也不支援此功能，需要將其停用](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility)。
 {: .prompt-warning }
 
-此外,[在 Jekyll 4.0 中,需要如下停用 CSS sourcemaps 的生成](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility):
+此外，[在Jekyll 4.0中，需要禁用CSS sourcemaps生成](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility)：
 
 ```yml
 sass:
@@ -96,24 +96,24 @@ sass:
 {: file='_config.yml'}
 
 ### 撰寫文章時的注意事項
-撰寫多語言文章時需要注意以下幾點:
-- 指定適當的語言代碼:必須使用檔案路徑(例如 `/_posts/ko/example-post.md`{: .filepath})或 YAML front matter 中的 'lang' 屬性(例如 `lang: ko`)來指定適當的 ISO 語言代碼。參考 [Chrome 開發者文件](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales)中的示例。
+撰寫多語言文章時需注意以下幾點：
+- 正確指定語言代碼：可以通過檔案路徑（例如 `/_posts/ko/example-post.md`{: .filepath}）或YAML front matter中的'lang'屬性（例如 `lang: ko`）來指定適當的ISO語言代碼。參考[Chrome開發者文件](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales)的示例。
 
-> 但是,請注意,[Chrome 開發者文件](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales)中使用 'pt_BR' 這樣的格式來表示地區代碼,但實際上應該使用 'pt-BR' 這樣的格式,即用 - 代替 _,這樣在之後添加 html 標頭的 hreflang 替代標籤時才能正常運作。
+> 不過，[Chrome開發者文件](https://developer.chrome.com/docs/extensions/reference/api/i18n#locales)中將地區代碼表示為'pt_BR'這樣的格式，但實際上應使用'pt-BR'這樣的格式，即用-代替_，這樣在後續添加html標頭中的hreflang替代標籤時才能正常運作。
 
 - 檔案路徑和名稱應保持一致。
 
-詳細資訊請參考 GitHub [untra/polyglot 儲存庫的 README](https://github.com/untra/polyglot?tab=readme-ov-file#how-to-use-it)。
+詳細信息請參考GitHub [untra/polyglot儲存庫的README](https://github.com/untra/polyglot?tab=readme-ov-file#how-to-use-it)。
 
-## 修改 html 標頭和 sitemap
-現在,為了 SEO,我們需要在部落格內每個頁面的 html 標頭中插入 Content-Language 元標籤和 hreflang 替代標籤。
+## 修改html標頭和sitemap
+現在，為了SEO，我們需要在部落格中每個頁面的html標頭中插入Content-Language元標籤和hreflang替代標籤。
 
-### html 標頭
-在 12024.11. 時的最新版本 1.8.1 發布版中,Polyglot 在頁面標頭部分呼叫 {% raw %}`{% I18n_Headers %}`{% endraw %} Liquid 標籤時,會自動執行上述操作。
-然而,這假設該頁面已明確指定了 'permalink' 屬性標籤,如果沒有指定,則無法正常運作。
+### html標頭
+截至12024.11.的最新版本1.8.1，Polyglot在頁面標頭部分調用{% raw %}`{% I18n_Headers %}`{% endraw %} Liquid標籤時會自動執行上述操作。
+但這假設該頁面已通過'permalink'屬性標籤明確指定，否則無法正常運作。
 
-因此,我從 [Chirpy 主題的 head.html](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/head.html) 中取得內容後,直接添加了以下內容:
-參考了 [Polyglot 官方部落格的 SEO Recipes 頁面](https://polyglot.untra.io/seo/),但修改為在 `page.permalink` 不存在時使用 `page.url` 屬性代替。
+因此，我從[Chirpy主題的head.html](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/head.html)中獲取代碼，然後直接添加了以下內容：
+參考了[Polyglot官方部落格的SEO Recipes頁面](https://polyglot.untra.io/seo/)，但修改為在`page.permalink`不存在時使用`page.url`屬性代替。
 
 {% raw %}
 ```liquid
@@ -128,7 +128,7 @@ sass:
 {% endraw %}
 
 ### sitemap
-由於 Jekyll 在建置時自動生成的 sitemap 不能正確支援多語言頁面,因此在根目錄創建 `sitemap.xml`{: .filepath} 檔案,並輸入以下內容:
+Jekyll在構建時自動生成的sitemap不能正確支援多語言頁面，因此需要在根目錄創建`sitemap.xml`{: .filepath}檔案，並輸入以下內容：
 
 {% raw %}
 ```liquid
@@ -169,8 +169,8 @@ layout: content
 {% endraw %}
 
 ## 在側邊欄添加語言選擇按鈕
-(12025.02.05. 更新) 將語言選擇按鈕改進為下拉列表形式。  
-創建 `_includes/lang-selector.html`{: .filepath} 檔案,並輸入以下內容:
+（12025.02.05. 更新）已將語言選擇按鈕改進為下拉列表形式。  
+創建`_includes/lang-selector.html`{: .filepath}檔案，並輸入以下內容：
 
 {% raw %}
 ```liquid
@@ -206,14 +206,14 @@ function changeLang(url) {
 {: file='_includes/lang-selector.html'}
 {% endraw %}
 
-此外,創建 `assets/css/lang-selector.css`{: .filepath} 檔案,並輸入以下內容:
+同時創建`assets/css/lang-selector.css`{: .filepath}檔案，並輸入以下內容：
 
 ```css
 /**
  * 語言選擇器樣式
  * 
- * 定義側邊欄中語言選擇下拉選單的樣式。
- * 支援主題的深色模式,並針對移動環境進行了優化。
+ * 定義側邊欄中語言選擇下拉列表的樣式。
+ * 支援主題的深色模式，並針對移動環境進行了優化。
  */
 
 /* 語言選擇器容器 */
@@ -223,7 +223,7 @@ function changeLang(url) {
     text-align: center;
 }
 
-/* 下拉選單容器 */
+/* 下拉列表容器 */
 .lang-dropdown {
     position: relative;
     display: inline-block;
@@ -241,13 +241,13 @@ function changeLang(url) {
     width: 100%;
     padding: 0.5rem 2rem 0.5rem 1rem;
     
-    /* 字體和顏色 */
+    /* 字體及顏色 */
     font-family: Lato, "Pretendard JP Variable", "Pretendard Variable", sans-serif;
     font-size: 0.95rem;
     color: var(--sidebar-muted);
     background-color: var(--sidebar-bg);
     
-    /* 形狀和互動 */
+    /* 形狀及互動 */
     border-radius: var(--bs-border-radius, 0.375rem);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -285,13 +285,13 @@ function changeLang(url) {
     color: var(--sidebar-active);
 }
 
-/* Firefox 瀏覽器適配 */
+/* Firefox瀏覽器適配 */
 .lang-select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 var(--sidebar-muted);
 }
 
-/* IE 瀏覽器適配 */
+/* IE瀏覽器適配 */
 .lang-select::-ms-expand {
     display: none;
 }
@@ -304,17 +304,17 @@ function changeLang(url) {
 /* 移動環境優化 */
 @media (max-width: 768px) {
     .lang-select {
-        padding: 0.75rem 2rem 0.75rem 1rem;  /* 更大的觸摸區域 */
+        padding: 0.75rem 2rem 0.75rem 1rem;  /* 更大的觸控區域 */
     }
     
     .lang-dropdown {
-        min-width: 140px;  /* 移動端更寬的選擇區域 */
+        min-width: 140px;  /* 移動設備上更寬的選擇區域 */
     }
 }
 ```
 {: file='assets/css/lang-selector.css'}
 
-接下來,在 [Chirpy 主題的 `_includes/sidebar.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html) 中,"sidebar-bottom" 類別正前方添加以下三行,使 Jekyll 在頁面建置時載入先前編寫的 `_includes/lang-selector.html`{: .filepath} 的內容:
+接下來，在[Chirpy主題的`_includes/sidebar.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html)中"sidebar-bottom"類別前添加以下三行，使Jekyll在頁面構建時載入前面創建的`_includes/lang-selector.html`{: .filepath}內容：
 
 {% raw %}
 ```liquid
@@ -330,4 +330,4 @@ function changeLang(url) {
 {% endraw %}
 
 ## 延伸閱讀
-繼續閱讀 [第二部分](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+繼續閱讀[第2部分](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)

@@ -1,33 +1,33 @@
 ---
-title: 如何使用Polyglot在Jekyll部落格上支援多語言 (2) - Chirpy主題構建失敗和搜尋功能錯誤的故障排除
-description: '介紹在基於''jekyll-theme-chirpy''的Jekyll部落格上應用Polyglot外掛程式實現多語言支援的過程。這篇文章是該系列的第二篇，涵蓋了識別和解決在Chirpy主題上應用Polyglot時出現的錯誤原因。'
+title: 使用Polyglot在Jekyll部落格實現多語言支援 (2) - Chirpy主題構建失敗及搜尋功能錯誤排除
+description: '介紹在基於''jekyll-theme-chirpy''的Jekyll部落格中應用Polyglot外掛實現多語言支援的過程。這篇文章是該系列的第二篇，主要討論在Chirpy主題應用Polyglot時遇到的錯誤原因識別與解決方案。'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 mermaid: true
 image: /assets/img/technology.jpg
 ---
 ## 概述
-大約4個月前，也就是2024年7月初，我在這個通過Github Pages託管的Jekyll基礎部落格上應用了[Polyglot](https://github.com/untra/polyglot)外掛程式來實現多語言支援。
-這個系列分享了在Chirpy主題上應用Polyglot外掛程式過程中遇到的錯誤及其解決方法，以及考慮SEO的html標頭和sitemap.xml的編寫方法。
-該系列由兩篇文章組成，您正在閱讀的這篇是該系列的第二篇。
-- 第1篇：[應用Polyglot外掛程式 & 實現hreflang alt標籤、sitemap和語言選擇按鈕](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
-- 第2篇：Chirpy主題構建失敗和搜尋功能錯誤的故障排除（本文）
+大約4個月前，也就是[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar) 12024年7月初，我在透過Github Pages託管的Jekyll部落格上應用了[Polyglot](https://github.com/untra/polyglot)外掛來實現多語言支援。
+這個系列分享了在Chirpy主題上應用Polyglot外掛過程中遇到的錯誤及其解決方法，以及考慮SEO的html標頭和sitemap.xml編寫方法。
+本系列共有兩篇文章，您正在閱讀的是系列中的第二篇。
+- 第1篇：[Polyglot外掛程式應用 & 實現hreflang alt標籤、sitemap及語言選擇按鈕](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
+- 第2篇：Chirpy主題構建失敗及搜尋功能錯誤故障排除（本文）
 
 ## 需求
-- [x] 必須能夠按語言路徑（例如 `/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）區分提供構建結果（網頁）。
-- [x] 為了盡可能減少多語言支援所需的額外時間和精力，即使不在原始markdown檔案的YAML front matter中指定'lang'和'permalink'標籤，也應該能夠根據檔案所在的本地路徑（例如 `/_posts/ko/`{: .filepath}、`/_posts/ja/`{: .filepath}）在構建時自動識別語言。
-- [x] 網站內每個頁面的標頭部分應包含適當的Content-Language元標籤和hreflang替代標籤，以滿足Google多語言搜尋的SEO指南。
-- [x] 必須能夠在 `sitemap.xml`{: .filepath} 中提供網站內支援每種語言的所有頁面連結，且不遺漏，而 `sitemap.xml`{: .filepath} 本身應該只存在於根路徑中，不得重複。
-- [x] [Chirpy主題](https://github.com/cotes2020/jekyll-theme-chirpy)提供的所有功能都應在每種語言頁面上正常運作，如果不正常，則必須進行修改使其正常運作。
+- [x] 構建的結果（網頁）應按語言路徑（例如 `/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）分類提供。
+- [x] 為了盡量減少多語言支援所需的額外時間和精力，不必在原始markdown文件的YAML front matter中逐一指定'lang'和'permalink'標籤，而是在構建時根據文件所在的本地路徑（例如 `/_posts/ko/`{: .filepath}、`/_posts/ja/`{: .filepath}）自動識別語言。
+- [x] 網站中每個頁面的標頭部分應包含適當的Content-Language元標籤和hreflang替代標籤，以滿足Google多語言搜尋的SEO指南。
+- [x] 網站中支援每種語言的所有頁面連結應完整地在`sitemap.xml`{: .filepath}中提供，而`sitemap.xml`{: .filepath}本身應只存在於根路徑中，不得重複。
+- [x] [Chirpy主題](https://github.com/cotes2020/jekyll-theme-chirpy)提供的所有功能應在各語言頁面中正常運作，如果不正常，則需進行修改使其正常運作。
   - [x] 'Recently Updated'、'Trending Tags'功能正常運作
-  - [x] 使用GitHub Actions的構建過程中不會出現錯誤
+  - [x] 使用GitHub Actions構建過程中不出現錯誤
   - [x] 部落格右上角的文章搜尋功能正常運作
 
 ## 開始之前
 這篇文章是[第1篇](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)的延續，如果您還沒有閱讀，建議先閱讀前一篇文章。
 
-## 故障排除（'relative_url_regex': target of repeat operator is not specified）
-完成前面的步驟後，當執行 `bundle exec jekyll serve` 命令進行構建測試時，出現了 `'relative_url_regex': target of repeat operator is not specified` 錯誤，導致構建失敗。
+## 故障排除 ('relative_url_regex': target of repeat operator is not specified)
+完成前面的步驟後，執行`bundle exec jekyll serve`命令進行構建測試時，出現了`'relative_url_regex': target of repeat operator is not specified`錯誤，導致構建失敗。
 
 ```shell
 ...(前略)
@@ -47,9 +47,9 @@ ndor\/bundle\/)(?!vendor\/cache\/)(?!vendor\/gems\/)(?!vendor\/ruby\/)(?!en\/
 ...(後略)
 ```
 
-搜尋是否有類似問題被報告過後，發現在Polyglot儲存庫中已經有[完全相同的問題](https://github.com/untra/polyglot/issues/204)被登記，並且也存在解決方案。
+搜尋類似問題後，發現Polyglot倉庫中已有[完全相同的問題](https://github.com/untra/polyglot/issues/204)被報告，且已有解決方案。
 
-在本部落格應用的[Chirpy主題的 `_config.yml`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_config.yml) 檔案中存在以下語句：
+本部落格使用的[Chirpy主題的`_config.yml`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_config.yml)文件中有以下內容：
 
 ```yml
 exclude:
@@ -64,7 +64,7 @@ exclude:
 ```
 {: file='_config.yml'}
 
-問題的原因在於[Polyglot的 `site.rb`{: .filepath}](https://github.com/untra/polyglot/blob/master/lib/jekyll/polyglot/patches/jekyll/site.rb) 檔案中包含的以下兩個函數的正則表達式語句無法正確處理上述 `"*.gem"`、`"*.gemspec"`、`"*.config.js"` 等包含萬用字元的全域模式（globbing pattern）。
+問題的原因在於[Polyglot的`site.rb`{: .filepath}](https://github.com/untra/polyglot/blob/master/lib/jekyll/polyglot/patches/jekyll/site.rb)文件中的以下兩個函數的正則表達式無法正確處理像`"*.gem"`、`"*.gemspec"`、`"*.config.js"`這樣包含萬用字元的glob模式。
 
 {% raw %}
 ```ruby
@@ -107,16 +107,16 @@ exclude:
 {: file='(polyglot root path)/lib/jekyll/polyglot/patches/jekyll/site.rb'}
 {% endraw %}
 
-解決這個問題有兩種方法。
+解決這個問題有兩種方法：
 
-### 1. 分叉（fork）Polyglot後修改問題部分並使用
-截至撰寫本文時（2024.11.），[Jekyll官方文件](https://jekyllrb.com/docs/configuration/options/#global-configuration)中明確指出 `exclude` 設置支援使用全域模式（globbing pattern）。
+### 1. Fork Polyglot並修改問題部分
+截至撰寫本文時（12024.11.），[Jekyll官方文檔](https://jekyllrb.com/docs/configuration/options/#global-configuration)指出`exclude`設定支援Ruby的File.fnmatch文件名glob模式來匹配多個要排除的項目。
 
 >"This configuration option supports Ruby's File.fnmatch filename globbing patterns to match multiple entries to exclude."
 
-也就是說，問題的根源不在Chirpy主題，而在於Polyglot的 `relative_url_regex()`、`absolute_url_regex()` 這兩個函數，因此修改這些函數使其不會出現問題是根本的解決方案。
+也就是說，問題的根源不在Chirpy主題，而在Polyglot的`relative_url_regex()`和`absolute_url_regex()`兩個函數，因此根本解決方案是修改這些函數以避免問題發生。
 
-由於Polyglot中該錯誤尚未解決，可以參考[這篇部落格文章](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)和[前面GitHub問題中的回答](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322)，分叉（fork）Polyglot儲存庫後，將問題部分修改如下，然後使用修改後的版本代替原始Polyglot。
+由於Polyglot尚未修復此錯誤，可以參考[這篇部落格文章](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)和[GitHub問題中的回覆](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322)，fork Polyglot倉庫後修改問題部分如下，然後使用修改後的版本替代原始Polyglot：
 
 {% raw %}
 ```ruby
@@ -155,15 +155,15 @@ exclude:
 {: file='(polyglot root path)/lib/jekyll/polyglot/patches/jekyll/site.rb'}
 {% endraw %}
 
-### 2. 在Chirpy主題的 '_config.yml' 設定檔中將全域模式（globbing pattern）替換為精確的檔案名
-事實上，最正統和理想的方法是將上述修補程式合併到Polyglot的主線中。然而，在此之前，我們必須使用分叉版本代替，但這種情況下，每次Polyglot上游版本更新時，都需要不遺漏地反映和跟進該更新，這會很麻煩，所以我使用了另一種方法。
+### 2. 在Chirpy主題的'_config.yml'設定文件中將glob模式替換為確切的文件名
+理想的方法是將上述修補程式合併到Polyglot主線中。但在此之前，需要使用fork版本，這樣每次Polyglot上游更新時都需要跟進，比較麻煩，所以我選擇了另一種方法。
 
-如果查看[Chirpy主題儲存庫](https://github.com/cotes2020/jekyll-theme-chirpy)中專案根目錄下的檔案，對應 `"*.gem"`、`"*.gemspec"`、`"*.config.js"` 模式的檔案其實只有以下3個：
+檢查[Chirpy主題倉庫](https://github.com/cotes2020/jekyll-theme-chirpy)中項目根目錄下符合`"*.gem"`、`"*.gemspec"`、`"*.config.js"`模式的文件，實際上只有以下3個：
 - `jekyll-theme-chirpy.gemspec`{: .filepath}
 - `purgecss.config.js`{: .filepath}
 - `rollup.config.js`{: .filepath}
 
-因此，在 `_config.yml`{: .filepath} 檔案的 `exclude` 語句中刪除全域模式（globbing pattern），並按以下方式重寫，Polyglot就能夠正常處理：
+因此，可以在`_config.yml`{: .filepath}文件的`exclude`部分刪除glob模式，改為如下具體文件名：
 
 ```yml
 exclude: # 參考 https://github.com/untra/polyglot/issues/204 問題進行修改。
@@ -179,12 +179,12 @@ exclude: # 參考 https://github.com/untra/polyglot/issues/204 問題進行修�
 {: file='_config.yml'}
 
 ## 修改搜尋功能
-完成前面的步驟後，幾乎所有的網站功能都按預期令人滿意地運作。然而，我後來發現應用Chirpy主題的頁面右上角的搜尋欄無法索引 `site.default_lang`（在本部落格的情況下是英語）以外的語言頁面，而且在英語以外的其他語言中搜尋時，搜尋結果也會顯示英語頁面，這是一個問題。
+完成前面的步驟後，大部分網站功能都按預期運作良好。然而，我後來發現Chirpy主題頁面右上角的搜尋欄無法索引`site.default_lang`（本部落格為英文）以外語言的頁面，且在非英文語言中搜尋時也只顯示英文頁面的搜尋結果。
 
-為了了解原因，讓我們看看哪些檔案與搜尋功能有關，以及問題出在哪裡。
+為了找出原因，讓我們看看哪些文件與搜尋功能相關，以及問題出在哪裡。
 
 ### '_layouts/default.html'
-檢查構成部落格內所有頁面框架的 [`_layouts/default.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_layouts/default.html) 檔案，可以看到在 `<body>` 元素內載入了 `search-results.html`{: .filepath} 和 `search-loader.html`{: .filepath} 的內容。
+檢查構成部落格所有頁面框架的[`_layouts/default.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_layouts/default.html)文件，可以看到在`<body>`元素內載入了`search-results.html`{: .filepath}和`search-loader.html`{: .filepath}的內容。
 
 {% raw %}
 ```liquid
@@ -215,7 +215,7 @@ exclude: # 參考 https://github.com/untra/polyglot/issues/204 問題進行修�
 {% endraw %}
 
 ### '_includes/search-result.html'
-[`_includes/search-result.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_includes/search-results.html) 構建了一個 `search-results` 容器，用於在搜尋框輸入搜尋詞時儲存該關鍵字的搜尋結果。
+[`_includes/search-result.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_includes/search-results.html)構建了一個`search-results`容器，用於在搜尋框輸入關鍵字時存儲該關鍵字的搜尋結果。
 
 {% raw %}
 ```html
@@ -234,7 +234,7 @@ exclude: # 參考 https://github.com/untra/polyglot/issues/204 問題進行修�
 {% endraw %}
 
 ### '_includes/search-loader.html'
-[`_includes/search-loader.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_includes/search-loader.html) 是基於 [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search) 庫實現搜尋的核心部分，它通過在訪客的瀏覽器上執行JavaScript來查找 [`search.json`{: .filepath}](#assetsjsdatasearchjson) 索引檔案內容中與輸入關鍵字匹配的部分，並將相應的文章連結作為 `<article>` 元素返回，從而實現客戶端搜尋功能。
+[`_includes/search-loader.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/_includes/search-loader.html)是基於[Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)庫實現搜尋功能的核心部分，它在訪問者的瀏覽器中執行JavaScript，從[`search.json`{: .filepath}](#assetsjsdatasearchjson)索引文件中找出與輸入關鍵字匹配的部分，並以`<article>`元素形式返回相應文章連結，實現客戶端搜尋。
 
 {% raw %}
 ```js
@@ -313,10 +313,10 @@ swcache: true
 {: file='/assets/js/data/search.json'}
 {% endraw %}
 
-使用Jekyll的Liquid語法定義了一個JSON檔案，包含網站內所有文章的標題、URL、分類和標籤信息、撰寫日期、前200字的摘要，以及全文內容。
+使用Jekyll的Liquid語法定義了一個JSON文件，包含網站中所有文章的標題、URL、分類和標籤信息、發布日期、前200字摘要以及全文內容。
 
-### 搜尋功能運作結構和問題發生部分識別
-總結一下，在GitHub Pages上託管Chirpy主題時，搜尋功能按以下流程運作：
+### 搜尋功能運作結構及問題識別
+總結來說，在GitHub Pages上託管Chirpy主題時，搜尋功能按以下流程運作：
 
 ```mermaid
 stateDiagram
@@ -339,7 +339,7 @@ stateDiagram
   R --> [*]
 ```
 
-在這裡，我確認 `search.json`{: .filepath} 被Polyglot按以下方式為每種語言生成：
+我確認`search.json`{: .filepath}被Polyglot按以下語言分別生成：
 - `/assets/js/data/search.json`{: .filepath}
 - `/ko/assets/js/data/search.json`{: .filepath}
 - `/es/assets/js/data/search.json`{: .filepath}
@@ -348,16 +348,16 @@ stateDiagram
 - `/fr/assets/js/data/search.json`{: .filepath}
 - `/de/assets/js/data/search.json`{: .filepath}
 
-因此，問題的根源在於"Search Loader"部分。無法搜尋到英文以外其他語言版本頁面的問題是因為 `_includes/search-loader.html`{: .filepath} 無論當前訪問的頁面語言如何，都只靜態地載入英文索引檔案（`/assets/js/data/search.json`{: .filepath}）。
+因此，問題出在"Search Loader"部分。非英文頁面無法被搜尋到的問題是因為`_includes/search-loader.html`{: .filepath}無論當前訪問頁面的語言是什麼，都只靜態加載英文索引文件（`/assets/js/data/search.json`{: .filepath}）。
 
-> - 然而，與Markdown或html格式檔案不同，對於JSON檔案，Polyglot wrapper雖然對 `post.title`、`post.content` 等Jekyll提供的變數有效，但[Relativized Local Urls](https://github.com/untra/polyglot?tab=readme-ov-file#relativized-local-urls)功能似乎不起作用。
-> - 同樣，在JSON檔案模板中，除了Jekyll默認提供的變數外，無法訪問[Polyglot額外提供的 {% raw %}`{{ site.default_lang }}`、`{{ site.active_lang }}`{% endraw %} liquid標籤](https://github.com/untra/polyglot?tab=readme-ov-file#features)，這一點在測試過程中得到確認。
+> - 不過，與Markdown或html格式文件不同，對於JSON文件，Polyglot wrapper可以處理`post.title`、`post.content`等Jekyll提供的變數，但[Relativized Local Urls](https://github.com/untra/polyglot?tab=readme-ov-file#relativized-local-urls)功能似乎不起作用。
+> - 同樣，在JSON文件模板中，除了Jekyll基本提供的變數外，無法訪問[Polyglot額外提供的{% raw %}`{{ site.default_lang }}`、`{{ site.active_lang }}`{% endraw %} liquid標籤](https://github.com/untra/polyglot?tab=readme-ov-file#features)，這在測試過程中得到確認。
 >
-> 因此，索引檔案中的 `title`、`snippet`、`content` 等值會根據語言不同而生成不同的內容，但 `url` 值會返回不考慮語言的默認路徑，需要在"Search Loader"部分添加適當的處理。
+> 因此，索引文件中的`title`、`snippet`、`content`等值會根據語言不同而生成不同內容，但`url`值返回的是不考慮語言的基本路徑，需要在"Search Loader"部分添加適當處理。
 {: .prompt-warning }
 
 ### 問題解決
-要解決這個問題，需要將 `_includes/search-loader.html`{: .filepath} 的內容修改如下：
+要解決這個問題，需要修改`_includes/search-loader.html`{: .filepath}的內容如下：
 
 {% raw %}
 ```
@@ -391,10 +391,10 @@ stateDiagram
 {: file='_includes/search-loader.html'}
 {% endraw %}
 
-- 修改了 {% raw %}`{% capture result_elem %}`{% endraw %} 部分的liquid語句，當 `site.active_lang`（當前頁面語言）和 `site.default_lang`（網站默認語言）不同時，在從JSON檔案讀取的文章URL前加上 {% raw %}`"/{{ site.active_lang }}"`{% endraw %} 前綴。
-- 使用相同的方法，修改了 `<script>` 部分，在構建過程中比較當前頁面的語言和網站默認語言，如果相同則指定默認路徑（`/assets/js/data/search.json`{: .filepath}），如果不同則指定對應語言的路徑（例如 `/ko/assets/js/data/search.json`{: .filepath}）作為 `search_path`。
+- 當`site.active_lang`（當前頁面語言）與`site.default_lang`（網站默認語言）不同時，在從JSON文件加載的文章URL前添加{% raw %}`"/{{ site.active_lang }}"`{% endraw %}前綴，修改了{% raw %}`{% capture result_elem %}`{% endraw %}部分的liquid語法。
+- 同樣，在構建過程中比較當前頁面語言和網站默認語言，如果相同則使用默認路徑（`/assets/js/data/search.json`{: .filepath}），如果不同則使用對應語言的路徑（例如`/ko/assets/js/data/search.json`{: .filepath}）作為`search_path`，修改了`<script>`部分。
 
-進行上述修改後重新構建網站，確認每種語言的搜尋結果都能正常顯示。
+進行上述修改後重新構建網站，確認各語言的搜尋結果都能正常顯示。
 
-> `{url}` 是未來從JSON檔案中讀取的URL值的佔位符，而不是URL本身，因此Polyglot不會將其識別為本地化目標，需要直接根據語言進行處理。問題是，經過這樣處理的 {% raw %}`"/{{ site.active_lang }}{url}"`{% endraw %} 會被識別為URL，雖然本地化已經完成，但Polyglot並不知道這一點，因此會嘗試重複進行本地化（例如 `"/ko/ko/posts/example-post"`{: .filepath}）。為了防止這種情況，我們明確使用了 [{% raw %}`{% static_href %}`{% endraw %} 標籤](https://github.com/untra/polyglot?tab=readme-ov-file#disabling-url-relativizing)。
+> `{url}`是JSON文件中讀取的URL值的佔位符，而非URL本身，因此Polyglot不會將其識別為本地化目標，需要根據語言直接處理。問題是處理後的{% raw %}`"/{{ site.active_lang }}{url}"`{% endraw %}會被識別為URL，雖然已完成本地化，但Polyglot不知道這一點，會嘗試重複本地化（例如`"/ko/ko/posts/example-post"`{: .filepath}）。為防止這種情況，使用了[{% raw %}`{% static_href %}`{% endraw %}標籤](https://github.com/untra/polyglot?tab=readme-ov-file#disabling-url-relativizing)。
 {: .prompt-tip }

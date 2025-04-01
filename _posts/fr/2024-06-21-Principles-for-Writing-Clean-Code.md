@@ -1,40 +1,39 @@
 ---
 title: Principes pour écrire du bon code
-description: Découvrez la nécessité d'écrire du bon code et les principaux principes
-  généralement appliqués pour y parvenir.
+description: Découvrez la nécessité d'écrire du bon code et les principes généraux pour y parvenir.
 categories: [Programming]
 tags: [Coding, PS/CP]
 image: /assets/img/technology.jpg
 ---
 ## La nécessité d'écrire du bon code
-Si l'on se contente d'écrire rapidement du code pour une implémentation immédiate, la [dette technique](/posts/Technical-debt/) peut s'accumuler à un niveau ingérable, ce qui peut poser des problèmes de maintenance ultérieurement. Par conséquent, il est inutile de souligner l'importance d'écrire dès le départ un code lisible et facile à maintenir lors de la réalisation d'un projet de développement.
+Si l'on se contente d'écrire rapidement du code pour une implémentation immédiate, la [dette technique](/posts/Technical-debt/) peut s'accumuler à un niveau ingérable et causer des problèmes de maintenance ultérieurs. Par conséquent, il est indiscutablement important d'écrire dès le départ un code lisible et facile à maintenir lors du développement d'un projet.
 
-Dans le cas de la résolution de problèmes algorithmiques (PS, Problem Solving) ou de la programmation compétitive (CP, Competitive Programming), on dit souvent que le code utilisé pour résoudre le problème n'est généralement pas réutilisé après la fin du problème ou de la compétition, et en particulier dans le cas de la CP, qu'une implémentation rapide est plus importante que l'écriture d'un bon code en raison des contraintes de temps. Pour répondre à cette question, il est nécessaire de réfléchir à ce pour quoi on fait du PS/CP et quelle direction on souhaite prendre.
+Dans le cas de la résolution de problèmes algorithmiques (PS, Problem Solving) ou de la programmation compétitive (CP, Competitive Programming), on pourrait penser que l'écriture de bon code est moins importante que l'implémentation rapide, puisque le code utilisé n'est généralement pas réutilisé après la résolution du problème ou la fin du concours, et que les compétitions imposent des contraintes de temps. Pour répondre à cette question, il faut réfléchir à ce que l'on cherche à accomplir à travers le PS/CP et quelle direction on souhaite prendre.
 
-Personnellement, je pense que les points que l'on peut apprendre à travers le PS/CP sont les suivants :
-- On peut utiliser et maîtriser divers algorithmes et structures de données dans le processus de résolution de problèmes dans les limites de temps d'exécution et de mémoire données, ce qui permet d'acquérir une intuition sur les algorithmes et structures de données à utiliser dans certaines situations lors de la réalisation de projets réels.
-- Après avoir écrit et soumis le code, on peut recevoir immédiatement un retour objectif sur la justesse/l'erreur, le temps d'exécution et l'utilisation de la mémoire, ce qui permet de s'entraîner à écrire rapidement et habilement un code précis sans rien manquer.
-- On peut voir le code écrit par d'autres experts, le comparer avec son propre code et trouver des points d'amélioration.
-- Comme on écrit de manière répétitive du code de petite taille et aux fonctionnalités similaires par rapport aux projets de développement réels, on peut s'entraîner à écrire un code concis et de qualité en prêtant attention aux détails sans être contraint par des délais (surtout si on s'entraîne seul au PS).
+Personnellement, je pense que les avantages du PS/CP sont les suivants :
+- On peut utiliser et maîtriser divers algorithmes et structures de données pour résoudre des problèmes dans les limites de temps d'exécution et de mémoire imposées, ce qui permet de développer une intuition sur les algorithmes et structures de données à utiliser dans des situations spécifiques lors de projets réels
+- On reçoit immédiatement des retours objectifs sur la justesse de la solution, le temps d'exécution et l'utilisation de la mémoire après avoir soumis son code, ce qui permet de s'entraîner à écrire du code précis rapidement et avec compétence
+- On peut comparer son code avec celui d'experts et identifier des points d'amélioration
+- Comparé aux projets de développement réels, on écrit de manière répétitive du code de petite taille ayant des fonctionnalités similaires, ce qui permet (surtout lorsqu'on pratique le PS seul) de s'exercer à écrire du code concis et de qualité en prêtant attention aux détails sans être contraint par des délais
 
-Bien qu'il puisse y avoir des cas où l'on pratique le PS/CP simplement comme un passe-temps, si on le fait indirectement pour améliorer ses compétences en programmation, le dernier point "s'entraîner à écrire du bon code" est un avantage tout aussi important que les trois premiers. Écrire du bon code ne vient pas naturellement dès le début, mais nécessite une pratique répétée et constante. De plus, un code complexe et difficile à lire est difficile à déboguer et n'est pas facile à écrire correctement du premier coup, même pour soi-même. Par conséquent, si l'on perd du temps dans un débogage inefficace, on finit souvent par ne pas implémenter si rapidement que ça. Bien que le PS/CP soit bien sûr très différent du travail réel, ne pas du tout se soucier d'écrire du bon code et se précipiter sur l'implémentation immédiate est, pour les raisons mentionnées ci-dessus, une inversion des priorités. C'est pourquoi je pense personnellement qu'il est préférable d'écrire un code concis et efficace même en PS/CP.
+Bien que certains pratiquent le PS/CP simplement comme un loisir, si on le fait pour améliorer indirectement ses compétences en programmation, le dernier point concernant "l'entraînement à écrire du bon code" est un avantage tout aussi important que les trois premiers. Écrire du bon code ne vient pas naturellement dès le début, mais nécessite une pratique constante. De plus, un code complexe et difficile à lire est difficile à déboguer et même difficile à écrire correctement du premier coup, ce qui peut entraîner une perte de temps en débogage inefficace et finalement ralentir l'implémentation. Bien que le PS/CP diffère considérablement du travail professionnel, négliger complètement l'écriture de bon code au profit d'une implémentation rapide serait, pour les raisons mentionnées, une inversion des priorités. C'est pourquoi je pense personnellement qu'il est préférable d'écrire un code concis et efficace même en PS/CP.
 
-> Commentaire ajouté en décembre 2024 :  
-> Vu l'ambiance actuelle, à moins d'être spécialisé en informatique et de faire du développement son métier, si on veut utiliser la programmation comme un outil pour l'analyse numérique ou l'interprétation de données expérimentales, il serait peut-être préférable d'utiliser activement l'IA comme GitHub Copilot, Cursor, Windsurf, etc. pour gagner du temps et consacrer ce temps gagné à étudier autre chose. Si on apprécie le PS/CP comme un passe-temps en soi, personne ne va l'en empêcher, mais consacrer du temps et des efforts au PS/CP pour s'entraîner à l'écriture de code semble maintenant avoir un rapport coût-bénéfice assez faible. Même dans le cas des métiers du développement, je m'attends à ce que l'importance des tests de codage en tant qu'examen d'embauche diminue probablement considérablement par rapport à avant.
+> Commentaire ajouté en 12024.12 :  
+> Vu la tendance actuelle, à moins d'être spécialisé en informatique et de faire du développement son métier, pour ceux qui utilisent la programmation comme un outil pour l'analyse numérique ou le traitement de données expérimentales, il serait probablement plus judicieux d'utiliser activement des outils d'IA comme GitHub Copilot, Cursor ou Windsurf pour gagner du temps et consacrer ce temps économisé à d'autres apprentissages. Si le PS/CP est pratiqué comme un loisir, personne ne vous en dissuadera, mais investir du temps et des efforts dans le PS/CP pour s'entraîner à l'écriture de code semble désormais avoir un rapport coût-bénéfice assez faible. Même pour les métiers du développement, je prévois que l'importance des tests de codage comme critère d'embauche diminuera probablement considérablement par rapport à avant.
 {: .prompt-warning }
 
 ## Principes pour écrire du bon code
-Que ce soit pour le code écrit en compétition ou dans la pratique professionnelle, les conditions pour qu'un code soit considéré comme bon ne sont pas très différentes. Cet article traite des principaux principes généralement appliqués pour écrire du bon code. Cependant, en PS/CP, il peut y avoir des compromis relatifs par rapport à la pratique professionnelle pour une implémentation rapide, et ces cas seront mentionnés séparément dans l'article.
+Que ce soit pour du code écrit en compétition ou en milieu professionnel, les critères qui définissent un bon code ne sont pas fondamentalement différents. Cet article traite des principes généraux pour écrire du bon code. Cependant, en PS/CP, certains compromis peuvent être faits pour une implémentation rapide par rapport au milieu professionnel, et ces cas seront mentionnés spécifiquement dans l'article.
 
-### Écrire un code concis
+### Écrire du code concis
 > "KISS (Keep It Simple, Stupid)"
 
-- Plus le code est court et concis, moins il y a de risques de fautes de frappe ou de bugs simples, et plus le débogage est facile.
-- Écrire autant que possible de manière à ce que le code puisse être facilement interprété sans commentaires supplémentaires, et n'ajouter des commentaires que lorsque c'est vraiment nécessaire pour des explications détaillées. Il est préférable de maintenir la structure du code elle-même concise plutôt que de s'appuyer sur des commentaires.
-- Si des commentaires sont écrits, ils doivent être clairs et concis.
-- Limiter le nombre d'arguments passés à une fonction à 3 ou moins, et si plus d'arguments doivent être passés ensemble, les regrouper en un seul objet.
-- La profondeur (depth) des instructions conditionnelles qui s'emboîtent en double ou triple diminue la lisibilité, donc il faut éviter autant que possible d'augmenter la profondeur des instructions conditionnelles.
-  ex) Le code ci-dessous utilisant la clause de garde (Guard Clause) est plus avantageux en termes de lisibilité que le code ci-dessus.
+- Plus le code est court et concis, moins il y a de risques de fautes de frappe ou de bugs simples, et plus le débogage est facile
+- Écrire le code de manière à ce qu'il soit facilement interprétable sans commentaires supplémentaires, et n'ajouter des commentaires que lorsque c'est vraiment nécessaire pour des explications détaillées. Il est préférable de maintenir une structure de code concise plutôt que de s'appuyer sur des commentaires
+- Si des commentaires sont nécessaires, les rédiger de manière claire et concise
+- Limiter le nombre d'arguments passés à une fonction à trois maximum, et si plus d'arguments doivent être transmis ensemble, les regrouper en un seul objet
+- La profondeur des instructions conditionnelles (imbrication de conditions) réduit la lisibilité, il faut donc éviter autant que possible d'augmenter cette profondeur.
+  Ex) Le code ci-dessous utilisant des clauses de garde (Guard Clause) est plus lisible que le code au-dessus
 
   ```python
   async def verify_token(email: str, token: str, purpose: str):
@@ -62,8 +61,8 @@ Que ce soit pour le code écrit en compétition ou dans la pratique professionne
     
     return True
   ```
-- Cependant, en PS/CP, pour aller plus loin et réduire la longueur du code afin de l'écrire rapidement, on utilise parfois l'astuce des macros en C/C++. C'est utile à utiliser occasionnellement pour les compétitions où le temps est limité, mais c'est une méthode qui ne fonctionne que pour le PS/CP, et en général, l'utilisation de macros en C++ doit être évitée.
-  ex)  
+- Cependant, en PS/CP, on utilise parfois des astuces comme les macros en C/C++ pour réduire davantage la longueur du code et l'écrire plus rapidement. C'est utile dans les compétitions où le temps est limité, mais c'est une pratique spécifique au PS/CP et l'utilisation de macros en C++ devrait généralement être évitée.
+  Ex)
 
   ```c++
   #define FOR(i,n) for(int i=0; i<n; i++)
@@ -72,32 +71,32 @@ Que ce soit pour le code écrit en compétition ou dans la pratique professionne
 ### Modularisation du code
 > "DRY (Don't Repeat Yourself)"
 
-- Si le même code est utilisé de manière répétée, séparer cette partie en fonction ou en classe pour la réutiliser.
-- La modularisation pour réutiliser activement le code améliore la lisibilité, et s'il est nécessaire de modifier le code ultérieurement, il suffit de modifier la fonction ou la classe concernée une seule fois, ce qui facilite la maintenance.
-- En principe, l'idéal est qu'une fonction n'effectue qu'une seule tâche et non deux ou plus. Cependant, le code écrit en PS/CP est généralement un programme de petite taille effectuant des fonctions simples, donc il y a des limites à la réutilisation, et comme le temps est limité, il peut être difficile de suivre strictement ce principe comme dans la pratique professionnelle.
+- Séparer les parties de code répétitives en fonctions ou classes pour les réutiliser
+- La modularisation pour une réutilisation active du code améliore la lisibilité et facilite la maintenance, car il suffit de modifier la fonction ou la classe concernée une seule fois en cas de besoin
+- En principe, une fonction ne devrait idéalement accomplir qu'une seule tâche. Cependant, en PS/CP, les programmes sont généralement de petite taille avec des fonctionnalités simples, ce qui limite les possibilités de réutilisation, et les contraintes de temps rendent difficile le respect strict de ce principe comme en milieu professionnel.
 
 ### Utilisation des bibliothèques standard
 > "Don't reinvent the wheel"
 
-- Lors de l'étude des algorithmes ou des structures de données, il est utile d'implémenter directement des structures de données comme les files ou les piles, ou des algorithmes de tri pour comprendre leurs principes, mais sinon, il est préférable d'utiliser activement les bibliothèques standard.
-- Les bibliothèques standard ont déjà été utilisées et vérifiées d'innombrables fois, et sont bien optimisées, ce qui les rend plus efficaces que de les réimplémenter soi-même.
-- Comme on peut utiliser des bibliothèques existantes, il n'est pas nécessaire de perdre du temps à implémenter directement du code ayant la même fonctionnalité, et lors de la collaboration, il est plus facile pour les autres membres de l'équipe de comprendre le code écrit.
+- Lors de l'apprentissage des algorithmes ou des structures de données, il est utile d'implémenter soi-même des structures comme les files ou les piles, ou des algorithmes de tri pour en comprendre les principes, mais sinon, il est préférable d'utiliser activement les bibliothèques standard
+- Les bibliothèques standard ont été largement utilisées et validées, et sont bien optimisées, ce qui les rend plus efficaces qu'une implémentation personnelle
+- L'utilisation de bibliothèques existantes évite de perdre du temps à réimplémenter des fonctionnalités identiques, et facilite la compréhension du code par les autres membres de l'équipe lors de collaborations
 
-### Utilisation d'une nomenclature cohérente et claire
+### Utilisation de conventions de nommage cohérentes et claires
 > "Follow standard conventions"
 
-- Utiliser des noms de variables et de fonctions non ambigus.
-- Généralement, chaque langage de programmation a ses propres conventions de nommage, donc il faut apprendre les conventions de nommage utilisées dans la bibliothèque standard du langage utilisé et les appliquer de manière cohérente lors de la déclaration de classes, fonctions, variables, etc.
-- Nommer de manière à ce que la fonction de chaque variable, fonction et classe soit clairement visible, et si c'est un type booléen, dans quelles conditions il renvoie vrai (True).
+- Utiliser des noms de variables et de fonctions non ambigus
+- Chaque langage de programmation a généralement ses propres conventions de nommage, il est donc important de se familiariser avec celles utilisées dans la bibliothèque standard du langage et de les appliquer de manière cohérente lors de la déclaration de classes, fonctions, variables, etc.
+- Nommer clairement chaque variable, fonction et classe pour refléter sa fonctionnalité, et pour les types booléens, indiquer clairement dans quelles conditions ils renvoient vrai (True)
 
-### Normaliser toutes les données avant de les stocker
-- Traiter toutes les données sous une forme cohérente et normalisée.
-- Si les mêmes données ont plus d'une forme, des bugs subtils et difficiles à détecter peuvent survenir, comme de légères différences dans la représentation des chaînes de caractères ou des valeurs de hachage différentes.
-- Lors du stockage et du traitement de données telles que les fuseaux horaires, les chaînes de caractères, etc., il faut les convertir dans un format standard unique comme UTC, encodage UTF-8, etc. dès qu'elles sont reçues ou calculées. Il est préférable d'effectuer la normalisation dès le début dans le constructeur de la classe représentant ces données, ou dans la fonction qui reçoit les données.
+### Normaliser toutes les données lors du stockage
+- Traiter toutes les données dans un format cohérent et normalisé
+- Si les mêmes données existent sous plusieurs formats, des bugs subtils et difficiles à détecter peuvent survenir, comme des différences mineures dans la représentation des chaînes de caractères ou des valeurs de hachage différentes
+- Lors du stockage et du traitement de données comme les fuseaux horaires ou les chaînes de caractères, il faut les convertir dès leur réception ou calcul dans un format standard unique comme UTC ou l'encodage UTF-8. Il est préférable d'effectuer cette normalisation dès le constructeur de la classe qui représente ces données ou dès la fonction qui les reçoit.
 
 ### Séparer la logique du code et les données
-- Ne pas mettre directement dans les instructions conditionnelles les données qui n'ont rien à voir avec la logique du code, mais les séparer dans un tableau distinct.
-  ex) Il est préférable d'écrire comme dans le code ci-dessous plutôt que dans celui du dessus.
+- Séparer les données qui n'ont pas de rapport avec la logique du code en les plaçant dans des tables distinctes plutôt que directement dans les instructions conditionnelles
+  Ex) Le code ci-dessous est préférable au code au-dessus.
 
   ```c++
   string getMonthName(int month){

@@ -1,81 +1,80 @@
 ---
-title: Aufbau einer Deep-Learning-Entwicklungsumgebung mit NVIDIA Container Toolkit und Docker/Podman (2) - Container-Runtime-Konfiguration für GPU-Nutzung, Erstellung eines Dockerfiles und Aufbau eines Container-Images
-description: Diese Serie behandelt den Aufbau einer containerisierten Deep-Learning-Entwicklungsumgebung mit NVIDIA Container Toolkit auf dem lokalen System und die Konfiguration von SSH und Jupyter Lab zur Nutzung als Remote-Server. Dieser Beitrag ist der zweite Teil der Serie und befasst sich mit dem Prozess der Erstellung eines Dockerfiles und dem Aufbau eines Container-Images.
+title: NVIDIA Container Toolkit und Docker/Podman für den Aufbau einer Deep-Learning-Entwicklungsumgebung (2) - Container-Runtime-Konfiguration für GPU-Nutzung, Dockerfile-Erstellung und Container-Image-Build
+description: Diese Serie behandelt die Einrichtung einer containerisierten Deep-Learning-Entwicklungsumgebung mit NVIDIA Container Toolkit und deren Konfiguration als Remote-Server mit SSH und Jupyter Lab. Dieser Beitrag ist der zweite Teil der Serie und befasst sich mit der Erstellung eines Dockerfiles und dem Bauen eines Container-Images.
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, Docker, CUDA, PyTorch]
 image: /assets/img/technology.jpg
 ---
-
-## Überblick
-In dieser Serie behandeln wir die Installation von NVIDIA Container Toolkit und Docker oder Podman sowie die Erstellung eines Dockerfiles basierend auf CUDA- und cuDNN-Images aus dem [nvidia/cuda Repository](https://hub.docker.com/r/nvidia/cuda) auf Docker Hub, um eine Deep-Learning-Entwicklungsumgebung aufzubauen. Für diejenigen, die es benötigen, teile ich das [Dockerfile](https://github.com/yunseo-kim/dl-env-docker) und [Image](https://hub.docker.com/r/yunseokim/dl-env/tags), die durch diesen Prozess erstellt wurden, über GitHub und Docker Hub, damit sie frei verwendet werden können. Zusätzlich biete ich eine Anleitung zur Konfiguration von SSH und Jupyter Lab für die Nutzung als Remote-Server.  
-Die Serie wird aus 3 Beiträgen bestehen, und dieser Beitrag, den Sie gerade lesen, ist der zweite Teil der Serie.
-- [Teil 1: Installation von NVIDIA Container Toolkit & Container Engine](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1)
-- Teil 2: Container-Runtime-Konfiguration für GPU-Nutzung, Erstellung eines Dockerfiles und Aufbau eines Container-Images (dieser Beitrag)
+## Übersicht
+In dieser Serie behandeln wir die Installation von NVIDIA Container Toolkit und Docker oder Podman sowie die Erstellung eines Dockerfiles basierend auf CUDA- und cuDNN-Images aus dem [nvidia/cuda Repository](https://hub.docker.com/r/nvidia/cuda) auf Docker Hub, um eine Deep-Learning-Entwicklungsumgebung aufzubauen. Für alle, die diese Umgebung nutzen möchten, stelle ich das fertige [Dockerfile](https://github.com/yunseo-kim/dl-env-docker) und [Image](https://hub.docker.com/r/yunseokim/dl-env/tags) auf GitHub und Docker Hub zur Verfügung, zusammen mit einer Anleitung zur Konfiguration von SSH und Jupyter Lab für die Nutzung als Remote-Server.  
+Die Serie besteht aus 3 Teilen, und dieser Beitrag ist der zweite Teil.
+- [Teil 1: Installation von NVIDIA Container Toolkit & Container-Engine](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1)
+- Teil 2: Container-Runtime-Konfiguration für GPU-Nutzung, Dockerfile-Erstellung und Container-Image-Build (dieser Beitrag)
 - Teil 3 (geplant)
 
-Wir gehen davon aus, dass Sie in einer x86_64 Linux-Umgebung mit einer NVIDIA-Grafikkarte arbeiten, die CUDA unterstützt. Bitte beachten Sie, dass einige spezifische Details bei anderen Distributionen als Ubuntu oder Fedora leicht abweichen können, da ich sie nicht direkt getestet habe.  
-(Inhalt aktualisiert am 18.02.2025)
+Wir gehen von einer x86_64-Linux-Umgebung mit einer CUDA-fähigen NVIDIA-Grafikkarte aus. Obwohl ich die Anleitung hauptsächlich für Ubuntu und Fedora getestet habe, können bei anderen Distributionen einige Details abweichen.  
+(Aktualisiert am 18.02.12025)
 
-> **Fehlerkorrektur-Hinweis**  
-> In der ursprünglichen Version dieses Beitrags, die im August 2024 hochgeladen wurde, gab es einige Fehler im Abschnitt [Erstellung des Dockerfiles](#5-erstellung-des-dockerfiles) und in dem daraus erstellten Image. Die problematischen Bereiche waren:
-> - Bei der Erstellung des remote-Kontos war die Passworteinstellung fehlerhaft, und es war nicht möglich, sich mit dem Passwort "000000" anzumelden, wie es eigentlich vorgesehen war
+> **Fehlerkorrektur**  
+> In der ursprünglichen Version dieses Beitrags vom August 12024 gab es einige Fehler im Abschnitt [Dockerfile-Erstellung](#5-dockerfile-erstellung) und im daraus erstellten Image. Die Probleme waren:
+> - Bei der Erstellung des remote-Kontos wurde das Passwort nicht korrekt gesetzt; eigentlich sollte man sich mit dem Passwort "000000" anmelden können, was aber nicht funktionierte
 > - Der SSH-Daemon wurde beim Containerstart nicht automatisch gestartet
 >
-> Diese Probleme wurden kürzlich erkannt, und am 16. Februar 2025 um etwa 2 Uhr morgens koreanischer Zeit (UTC+9) wurden die fehlerhaften Dockerfiles und Docker-Images im [GitHub-Repository](https://github.com/yunseo-kim/dl-env-docker) und auf [Docker Hub](https://hub.docker.com/r/yunseokim/dl-env/tags) durch korrigierte Versionen ersetzt.  
-> Wenn Sie das Dockerfile oder Docker-Image vor diesem Zeitpunkt heruntergeladen haben, ersetzen Sie es bitte durch die aktualisierte Version.  
-> Ich entschuldige mich bei allen, die aufgrund der fehlerhaften Informationen Verwirrung erlebt haben.
+> Diese Probleme wurden kürzlich erkannt und am 16. Februar 12025 um 2 Uhr morgens (UTC+9) wurden die fehlerhaften Dockerfiles und Docker-Images im [GitHub-Repository](https://github.com/yunseo-kim/dl-env-docker) und auf [Docker Hub](https://hub.docker.com/r/yunseokim/dl-env/tags) durch korrigierte Versionen ersetzt.  
+> Wenn Sie das Dockerfile oder Docker-Image vor diesem Zeitpunkt heruntergeladen haben, aktualisieren Sie bitte auf die korrigierte Version.  
+> Ich entschuldige mich bei allen, die durch die fehlerhaften Inhalte Probleme hatten.
 {: .prompt-info }
 
-## Bevor Sie beginnen
-Dieser Beitrag ist eine Fortsetzung von [Teil 1](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1). Wenn Sie ihn noch nicht gelesen haben, empfehle ich, zuerst den vorherigen Beitrag zu lesen.
+## Bevor wir beginnen
+Dieser Beitrag ist die Fortsetzung von [Teil 1](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-1). Falls Sie diesen noch nicht gelesen haben, empfehle ich, zuerst dort zu beginnen.
 
-## 4. Konfiguration der Container-Runtime
-### Wenn Sie Podman verwenden
-[Konfigurieren Sie mit CDI (Container Device Interface).](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html)
+## 4. Container-Runtime-Konfiguration
+### Bei Verwendung von Podman
+[Konfiguration mit CDI (Container Device Interface)](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/cdi-support.html)
 
-Führen Sie den folgenden Befehl aus, um die CDI-Spezifikationsdatei im Verzeichnis `/etc/cdi`{: .filepath} zu erstellen.
+Führen Sie den folgenden Befehl aus, um die CDI-Spezifikationsdatei im Verzeichnis `/etc/cdi`{: .filepath} zu erstellen:
 ```bash
 sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
 ```
-> Wenn Sie die Grafikkarte wechseln oder die CUDA-Treiberkonfiguration ändern (einschließlich Versionsupgrades), müssen Sie die CDI-Spezifikationsdatei neu erstellen.
+> Wenn Sie Ihre Grafikkarte wechseln oder die CUDA-Treiberkonfiguration ändern (einschließlich Versionsupgrades), müssen Sie die CDI-Spezifikationsdatei neu erstellen.
 {: .prompt-warning }
 
-> Die Verwendung des NVIDIA Container Runtime Hooks zusammen mit CDI kann zu Konflikten führen. Wenn `/usr/share/containers/oci/hooks.d/oci-nvidia-hook.json`{: .filepath} existiert, löschen Sie diese Datei oder achten Sie darauf, den Container nicht mit der Umgebungsvariable `NVIDIA_VISIBLE_DEVICES` auszuführen.
+> Die Verwendung des NVIDIA Container Runtime Hooks zusammen mit CDI kann zu Konflikten führen. Falls die Datei `/usr/share/containers/oci/hooks.d/oci-nvidia-hook.json`{: .filepath} existiert, sollten Sie diese entweder löschen oder darauf achten, Container nicht mit gesetzter `NVIDIA_VISIBLE_DEVICES`-Umgebungsvariable auszuführen.
 {: .prompt-warning }
 
-### Wenn Sie Docker verwenden
-Wir erklären basierend auf dem [rootless Modus](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#rootless-mode).
+### Bei Verwendung von Docker
+Wir erklären die Konfiguration für den [Rootless-Modus](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#rootless-mode).
 
-#### 4-Docker-1. Konfiguration der Container-Runtime mit dem `nvidia-ctk` Befehl
+#### 4-Docker-1. Container-Runtime-Konfiguration mit `nvidia-ctk`
 ```bash
 nvidia-ctk runtime configure --runtime=docker --config=$HOME/.config/docker/daemon.json
 ```
 Dieser Befehl modifiziert die Datei `/etc/docker/daemon.json`{: .filepath}, damit Docker die NVIDIA Container Runtime nutzen kann.
 
-#### 4-Docker-2. Neustart des Docker-Daemons
-Starten Sie den Docker-Daemon neu, um die geänderten Einstellungen anzuwenden.
+#### 4-Docker-2. Docker-Daemon neustarten
+Starten Sie den Docker-Daemon neu, um die Änderungen zu übernehmen:
 ```bash
 systemctl --user restart docker
 ```
 
-#### 4-Docker-3. Konfiguration der Datei `/etc/nvidia-container-runtime/config.toml`{: .filepath} mit dem `sudo nvidia-ctk` Befehl
+#### 4-Docker-3. Konfiguration der Datei `/etc/nvidia-container-runtime/config.toml`{: .filepath} mit `sudo nvidia-ctk`
 ```bash
 sudo nvidia-ctk config --set nvidia-container-cli.no-cgroups --in-place
 ```
 
-### Überprüfung der korrekten Konfiguration
-Führen Sie einen Beispiel-CUDA-Container aus.
+### Überprüfung der Konfiguration
+Testen Sie die Konfiguration mit einem CUDA-Beispielcontainer.
 
-Wenn Sie Podman verwenden, führen Sie den folgenden Befehl aus:
+Bei Verwendung von Podman:
 ```bash
 podman run --rm --device nvidia.com/gpu=all --security-opt=label=disable ubuntu nvidia-smi
 ```
 
-Wenn Sie Docker verwenden, führen Sie den folgenden Befehl aus:
+Bei Verwendung von Docker:
 ```bash
 docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
 ```
-Wenn eine Ausgabe ähnlich der folgenden angezeigt wird, war es erfolgreich.
+Wenn eine Ausgabe ähnlich der folgenden erscheint, war die Konfiguration erfolgreich:
 
 ```bash
 +-----------------------------------------------------------------------------------------+
@@ -99,20 +98,20 @@ Wenn eine Ausgabe ähnlich der folgenden angezeigt wird, war es erfolgreich.
 +-----------------------------------------------------------------------------------------+
 ```
 
-## 5. Erstellung des Dockerfiles
-Wir erstellen ein Dockerfile für die Entwicklungsumgebung basierend auf den CUDA- und cuDNN-Images aus dem [nvidia/cuda Repository](https://hub.docker.com/r/nvidia/cuda) auf Docker Hub.
+## 5. Dockerfile-Erstellung
+Wir erstellen ein Dockerfile basierend auf den CUDA- und cuDNN-Images aus dem [nvidia/cuda Repository](https://hub.docker.com/r/nvidia/cuda) auf Docker Hub.
 
-- Sie müssen das zu verwendende Image basierend auf den benötigten CUDA- und cuDNN-Versionen, der Art und Version der Linux-Distribution usw. auswählen. 
-- ![Von PyTorch 2.4.0 unterstützte CUDA-Version](/assets/img/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker/PyTorch_CUDA_version.png)Zum Zeitpunkt des Schreibens dieses Beitrags Ende August 2024 unterstützt die neueste Version von PyTorch, Version 2.4.0, CUDA 12.4. Daher verwenden wir hier das [12.4.1-cudnn-devel-ubuntu22.04](https://hub.docker.com/layers/nvidia/cuda/12.4.1-cudnn-devel-ubuntu22.04/images/sha256-0a434eff1826693c1e2a669b20062f9995e73ed3456cdb70416d7ba9c1e3d1f5?context=explore) Image. Sie können die neueste Version von PyTorch und die unterstützte CUDA-Version auf der [PyTorch-Website](https://pytorch.org/get-started/locally/) überprüfen.
+- Berücksichtigen Sie die benötigten CUDA- und cuDNN-Versionen sowie die Linux-Distribution und -Version bei der Auswahl des Basis-Images.
+- ![Von PyTorch 2.4.0 unterstützte CUDA-Version](/assets/img/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker/PyTorch_CUDA_version.png)Zum Zeitpunkt der Erstellung dieses Beitrags (Ende August 12024) unterstützt die neueste PyTorch-Version 2.4.0 CUDA 12.4. Daher verwenden wir hier das [12.4.1-cudnn-devel-ubuntu22.04](https://hub.docker.com/layers/nvidia/cuda/12.4.1-cudnn-devel-ubuntu22.04/images/sha256-0a434eff1826693c1e2a669b20062f9995e73ed3456cdb70416d7ba9c1e3d1f5?context=explore)-Image. Die neueste PyTorch-Version und die unterstützten CUDA-Versionen können auf der [PyTorch-Website](https://pytorch.org/get-started/locally/) überprüft werden.
 
-Der Quellcode des fertigen Dockerfiles ist im GitHub-Repository [yunseo-kim/dl-env-docker](https://github.com/yunseo-kim/dl-env-docker) veröffentlicht. Im Folgenden wird der Prozess der Erstellung dieses Dockerfiles Schritt für Schritt erklärt.
+Der vollständige Quellcode des Dockerfiles ist im GitHub-Repository [yunseo-kim/dl-env-docker](https://github.com/yunseo-kim/dl-env-docker) verfügbar. Im Folgenden erläutere ich den schrittweisen Aufbau dieses Dockerfiles.
 
-### 5-1. Festlegung des Basis-Images
+### 5-1. Basis-Image festlegen
 ```Dockerfile
 FROM nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
 ```
 
-### 5-2. Installation grundlegender Dienstprogramme und Python-Voraussetzungen
+### 5-2. Grundlegende Dienstprogramme und Python-Voraussetzungen installieren
 ```Dockerfile
 # Install basic utilities and Python-related packages, gosu, and SSH server
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
@@ -130,15 +129,15 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     && gosu nobody true
 ```
 
-### 5-3. Einstellung der Systemzeitzone (in diesem Beitrag verwenden wir 'Asia/Seoul')
+### 5-3. Systemzeitzone einstellen (hier 'Asia/Seoul')
 ```Dockerfile
 # Set up time zone
 ARG TZ="Asia/Seoul"  # If necessary, replace it with a value that works for you.
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ```
 
-### 5-4. SSH-Server-Konfiguration für Fernzugriff  
-Aus Sicherheitsgründen konfigurieren wir den SSH-Server so, dass keine Root-Anmeldung bei der Fernverbindung möglich ist.
+### 5-4. SSH-Server für Fernzugriff einrichten  
+Aus Sicherheitsgründen deaktivieren wir den Root-Login über SSH:
 ```Dockerfile
 # Set up SSH server
 RUN mkdir /var/run/sshd
@@ -146,7 +145,7 @@ RUN echo "PermitRootLogin no" >> /etc/ssh/sshd_config && \
     echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
 ```
 
-Wir erstellen einen Nicht-Root-Benutzer namens 'remote' für die SSH-Verbindung.
+Wir erstellen einen Nicht-Root-Benutzer namens 'remote' für SSH-Zugriffe:
 ```Dockerfile
 # Create remote user (password can be passed to --build-arg at build time)
 #
@@ -164,18 +163,18 @@ RUN useradd --create-home --home-dir $HOME_DIR --shell /bin/bash $USER_NAME \
     && echo "$USER_NAME:$USER_PASSWORD" | chpasswd
 ```
 
-> Wenn Sie beim Erstellen des Docker-Images mit diesem Dockerfile keine separate Option angeben, ist der anfängliche Kontopasswort für den Benutzer 'remote' 000000. Dies ist aus Sicherheitsgründen sehr schwach, daher sollten Sie entweder die Option `--build-arg` beim Erstellen des Docker-Images verwenden, um ein separates Anmeldepasswort festzulegen, oder die Einstellungen sofort nach der ersten Ausführung des Containers ändern. Für die Sicherheit ist es ratsam, die Passwortanmeldung für SSH-Verbindungen zu deaktivieren und nur die Anmeldung über eine separate Schlüsseldatei zu ermöglichen. Idealerweise könnte auch ein Hardware-Schlüssel wie Yubikey verwendet werden.
-> Die SSH-Server-Konfiguration wird im nächsten Teil dieser Serie etwas ausführlicher behandelt. Wenn Sie mehr darüber erfahren möchten, können Sie die folgenden Dokumente konsultieren:
+> Wenn Sie beim Bauen des Docker-Images keine speziellen Optionen angeben, ist das anfängliche Passwort für den 'remote'-Benutzer 000000. Dies ist aus Sicherheitsgründen sehr schwach, daher sollten Sie beim Bauen des Images die Option `--build-arg` verwenden, um ein eigenes Passwort festzulegen, oder das Passwort sofort nach dem ersten Start des Containers ändern. Für bessere Sicherheit sollten Sie die Passwort-Authentifizierung für SSH deaktivieren und stattdessen Schlüsseldateien für die Anmeldung verwenden. Idealerweise könnten Sie auch Hardware-Schlüssel wie Yubikey einsetzen.
+> Die SSH-Server-Konfiguration wird im nächsten Teil dieser Serie behandelt. Für weitere Informationen können Sie die folgenden Ressourcen konsultieren:
 > - <https://help.ubuntu.com/community/SSH/OpenSSH/Configuring>
 > - <https://documentation.ubuntu.com/server/how-to/security/openssh-server/>
 > - <https://hostman.com/tutorials/how-to-install-and-configure-ssh-on-an-ubuntu-server/>
 > - <https://developers.yubico.com/SSH/>
 {: .prompt-danger }
 
-> Außerdem geht dieses Dockerfile davon aus, dass das erstellte Image nur von Ihnen selbst oder einer kleinen Gruppe vertrauenswürdiger Insider verwendet wird. Wenn Sie das erstellte Image extern verteilen müssen, ist die Passworteinstellung über `--build-arg` gefährlich und Sie sollten eine andere Methode verwenden. Bitte beachten Sie [dieses Dokument](https://docs.docker.com/reference/build-checks/secrets-used-in-arg-or-env/).
+> Dieses Dockerfile geht davon aus, dass das gebaute Image nur von Ihnen selbst oder einer kleinen Gruppe vertrauenswürdiger Personen verwendet wird. Wenn Sie das Image extern verteilen müssen, ist die Verwendung von `--build-arg` für Passwörter gefährlich und Sie sollten andere Methoden verwenden. Siehe [diese Dokumentation](https://docs.docker.com/reference/build-checks/secrets-used-in-arg-or-env/) für weitere Informationen.
 {: .prompt-danger }
 
-### 5-5. Installation von setuptools, pip und Registrierung der PATH-Umgebungsvariable
+### 5-5. Setuptools, pip installieren und PATH-Umgebungsvariable registrieren
 ```Dockerfile
 # Switch to remote user
 ENV USER_NAME="$USER_NAME"
@@ -187,7 +186,7 @@ RUN python3 -m pip install -U setuptools pip
 ENV PATH="$HOME_DIR/.local/bin:$PATH"
 ```
 
-### 5-6. Installation von Machine Learning- und Deep Learning-Paketen für die Entwicklungsumgebung
+### 5-6. Machine Learning- und Deep Learning-Pakete für die Entwicklungsumgebung installieren
 ```Dockerfile
 RUN python3 -m pip install -U \
         jupyterlab numpy scipy pandas matplotlib seaborn[stats] scikit-learn tqdm \
@@ -201,29 +200,29 @@ RUN python3 -m pip install -U cupy-cuda12x \
         cudf-cu12==24.8.* cuml-cu12==24.8.* nvidia-dali-cuda120
 ```
 
-### 5-7. Erstellung eines Verzeichnisses als Arbeitsbereich
+### 5-7. Arbeitsverzeichnis erstellen
 ```Dockerfile
 # Create a workspace directory to locate jupyter notebooks and .py files
 ENV WORK_DIR="$HOME_DIR/workspace"
 RUN mkdir -p $WORK_DIR
 ```
 
-### 5-8. Öffnen von Ports und Einstellung des `ENTRYPOINT` für die Containerausführung
-Wir öffnen die Ports 22 und 8888 für SSH und Jupyter Lab-Zugriff.  
-Um den SSH-Daemon beim Containerstart automatisch auszuführen, benötigen wir Root-Rechte. Daher verwenden wir die folgende Methode:
-1. Beim Containerstart als Root-Konto angemeldet
-2. Ausführung des `/entrypoint.sh`{: .filepath} Skripts direkt nach dem Containerstart
-3. In diesem Skript starten wir den SSH-Dienst und wechseln dann mit [`gosu`](https://github.com/tianon/gosu) zum remote-Konto
-4. Wenn beim Containerstart kein separater Befehl angegeben wurde, wird standardmäßig Jupyter Lab als remote-Konto (ohne Root-Rechte) ausgeführt
+### 5-8. Ports öffnen und `ENTRYPOINT` für den Containerstart konfigurieren
+Wir öffnen die Ports 22 und 8888 für SSH und Jupyter Lab.  
+Da für den automatischen Start des SSH-Daemons beim Containerstart Root-Rechte erforderlich sind, verwenden wir folgende Methode:
+1. Der Container startet als Root-Benutzer
+2. Direkt nach dem Start wird das Skript `/entrypoint.sh`{: .filepath} ausgeführt
+3. Dieses Skript startet den SSH-Dienst und wechselt dann mit [`gosu`](https://github.com/tianon/gosu) zum remote-Benutzer
+4. Wenn beim Containerstart kein spezieller Befehl angegeben wird, wird standardmäßig Jupyter Lab als remote-Benutzer (ohne Root-Rechte) gestartet
 
-> Im Allgemeinen wird die Verwendung von `sudo` oder `su` in Docker- oder Podman-Containern nicht empfohlen. Wenn Root-Rechte benötigt werden, ist es besser, den Container zunächst als Root-Konto zu starten, die erforderlichen Root-Aufgaben auszuführen und dann mit [`gosu`](https://github.com/tianon/gosu) zu einem Nicht-Root-Benutzer zu wechseln, wie hier beschrieben. Die Gründe dafür sind in den folgenden Ressourcen ausführlich erklärt, die bei Bedarf hilfreich sein können:
+> Die Verwendung von `sudo` oder `su` in Docker- oder Podman-Containern wird generell nicht empfohlen. Wenn Root-Rechte benötigt werden, ist es besser, den Container als Root zu starten, die erforderlichen Aufgaben auszuführen und dann mit [`gosu`](https://github.com/tianon/gosu) zu einem Nicht-Root-Benutzer zu wechseln. Die Gründe dafür sind in den folgenden Ressourcen ausführlich erklärt:
 > - <https://docs.docker.com/build/building/best-practices/#user>
 > - <https://www.sobyte.net/post/2023-01/docker-gosu-su-exec/>
 > - <https://www.baeldung.com/linux/docker-image-container-switch-user>
 > - <https://docsaid.org/en/blog/gosu-usage/>
 {: .prompt-tip }
 
-Fügen Sie zunächst den folgenden Inhalt am Ende des Dockerfiles ein:
+Fügen Sie zunächst den folgenden Inhalt am Ende des Dockerfiles hinzu:
 ```Dockerfile
 # Expose SSH and Jupyter Lab ports
 EXPOSE 22 8888
@@ -236,7 +235,7 @@ COPY --chmod=755 entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 ```
 
-Erstellen Sie als Nächstes eine Skriptdatei namens `entrypoint.sh`{: .filepath} im selben Verzeichnis wie das erstellte Dockerfile und füllen Sie sie mit folgendem Inhalt:
+Erstellen Sie dann im selben Verzeichnis wie das Dockerfile eine Datei namens `entrypoint.sh`{: .filepath} mit folgendem Inhalt:
 ```sh
 #!/bin/bash
 set -e
@@ -255,44 +254,44 @@ else
 fi
 ```
 
-## 6. Erstellung des Docker-Images und Ausführung des Containers
-### 6-1. Image-Erstellung
-Öffnen Sie ein Terminal im Verzeichnis, in dem sich das Dockerfile befindet, und führen Sie den folgenden Befehl aus:
+## 6. Docker-Image bauen und Container ausführen
+### 6-1. Image bauen
+Öffnen Sie ein Terminal im Verzeichnis mit dem Dockerfile und führen Sie folgenden Befehl aus:
 ```bash
 docker build -t dl-env:cuda12.4.1-cudnn9.1.0-ubuntu22.04 -f ./Dockerfile . \
 --build-arg USER_PASSWORD=<password>
 ```
-> Ersetzen Sie <password> durch das Anmeldepasswort, das Sie für die SSH-Verbindung verwenden möchten.
+> Ersetzen Sie \<password\> durch das Passwort, das Sie für SSH-Logins verwenden möchten.
 {: .prompt-info }
 
-### 6-2. Ausführung einer Beispiel-Workload
-Nach Abschluss des Builds führen Sie einen Einweg-Container aus, um zu überprüfen, ob alles ordnungsgemäß funktioniert.
+### 6-2. Test-Workload ausführen
+Nach dem Build können Sie einen temporären Container starten, um zu überprüfen, ob alles funktioniert.
 
-Für Podman führen Sie den folgenden Befehl aus:
+Für Podman:
 ```bash
 podman run -itd --rm --name test-container --device nvidia.com/gpu=all \
 --security-opt=label=disable -p 22:22 -p 88:8888 \
 dl-env:cuda12.4.1-cudnn9.1.0-ubuntu22.04
 ```
 
-Für Docker führen Sie den folgenden Befehl aus:
+Für Docker:
 ```bash
 docker run -itd --rm --name test-container \
 --gpus all -p 22:22 -p 88:8888 \
 dl-env:cuda12.4.1-cudnn9.1.0-ubuntu22.04
 ```
 
-Wenn Sie diesen Befehl im Terminal eingeben, wird ein Container namens `test-container` aus dem zuvor erstellten `dl-env:cuda12.4.1-cudnn9.1.0-ubuntu22.04` Image gestartet und die Ports 22 und 8888 des Containers werden mit den Ports 22 und 88 des Hostsystems verbunden. Wenn das Docker-Image im vorherigen Schritt erfolgreich erstellt wurde und der Container problemlos gestartet wurde, sollte JupyterLab im `test-container` Container unter der Standardadresse `http:127.0.0.1:8888` laufen. Daher sollten Sie, wenn Sie einen Browser auf dem Hostsystem öffnen, auf dem die Docker Engine läuft, und <http://127.0.0.1:88> aufrufen, mit der Adresse `http://127.0.0.1:8888` im Container verbunden werden und einen Bildschirm wie den folgenden sehen:
+Dieser Befehl startet einen Container namens `test-container` aus dem zuvor erstellten Image `dl-env:cuda12.4.1-cudnn9.1.0-ubuntu22.04` und verbindet Port 22 des Host-Systems mit Port 22 des Containers sowie Port 88 des Hosts mit Port 8888 des Containers. Wenn das Docker-Image korrekt gebaut wurde und der Container erfolgreich gestartet ist, sollte JupyterLab im Container unter der Standardadresse `http:127.0.0.1:8888` laufen. Öffnen Sie einen Browser auf dem Host-System und navigieren Sie zu <http://127.0.0.1:88>, um auf JupyterLab zuzugreifen. Sie sollten einen Bildschirm ähnlich dem folgenden sehen:
 
 ![JupyterLab Interface Screenshot](/assets/img/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker/Jupyter_Server.png)
 
-Öffnen Sie ein Terminal auf dem Hostsystem und führen Sie den Befehl `ssh remote@127.0.0.1` aus, um sich remote beim Ubuntu-System im Container als remote-Konto anzumelden.  
-Bei der ersten Anmeldung erhalten Sie eine Warnung, dass keine Informationen über den Schlüssel des Verbindungsziels vorliegen und eine Authentifizierung nicht möglich ist. Sie werden gefragt, ob Sie die Verbindung fortsetzen möchten. Geben Sie "yes" ein, um fortzufahren.  
-Geben Sie dann das Passwort ein (wenn Sie es beim Erstellen des Images nicht geändert haben, sollte es der Standardwert "000000" sein).
+Öffnen Sie ein Terminal auf dem Host-System und führen Sie den Befehl `ssh remote@127.0.0.1` aus, um sich per SSH beim remote-Konto im Container anzumelden.  
+Bei der ersten Anmeldung erhalten Sie eine Warnung, dass der Host-Schlüssel unbekannt ist. Geben Sie "yes" ein, um fortzufahren.  
+Geben Sie dann das Passwort ein (wenn Sie es beim Image-Build nicht geändert haben, ist es standardmäßig "000000").
 ```bash
 $ ssh remote@127.0.0.1
 The authenticity of host '127.0.0.1 (127.0.0.1)' can't be established.
-ED25519 key fingerprint is {Fingerabdruck (jeder Schlüssel hat einen einzigartigen Wert)}.
+ED25519 key fingerprint is {Fingerabdruck (jeder Schlüssel hat einen eindeutigen Wert)}.
 This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.
@@ -316,54 +315,54 @@ Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
 
 ```
-Wenn Sie eine ähnliche Ausgabe wie oben sehen, war die Remote-Anmeldung über SSH erfolgreich. Um die Verbindung zu beenden, geben Sie den Befehl `exit` ein.
+Wenn Sie eine ähnliche Ausgabe sehen, war die SSH-Anmeldung erfolgreich. Geben Sie `exit` ein, um die Verbindung zu beenden.
 
 ### 6-3. (optional) Push auf Docker Hub
-Um das erstellte Entwicklungsumgebungs-Image jederzeit bei Bedarf pullen und nutzen zu können, ist es ratsam, das erstellte Image auf Docker Hub zu pushen.  
+Um das erstellte Entwicklungsumgebungs-Image jederzeit nutzen zu können, ist es sinnvoll, es auf Docker Hub zu pushen.
 
-> Um Ihr eigenes Image auf Docker Hub zu pushen, benötigen Sie ein Docker-Konto. Falls Sie noch keines haben, registrieren Sie sich zuerst unter <https://app.docker.com/signup>.
+> Um Ihr Image auf Docker Hub zu pushen, benötigen Sie ein Docker-Konto. Falls Sie noch keines haben, registrieren Sie sich unter <https://app.docker.com/signup>.
 {: .prompt-tip }
 
-#### 6-3-1. Anmeldung bei Docker Hub
-##### Für Podman
+#### 6-3-1. Bei Docker Hub anmelden
+##### Für Podman:
 ```bash
 podman login docker.io
 ```
 
-##### Für Docker
+##### Für Docker:
 ```bash
 docker login
 ```
 
 #### 6-3-2. Image-Tag setzen
-Ersetzen Sie <dockerhub_username>, <repository_name> und (optional) :TAG durch Ihre entsprechenden Informationen.  
+Ersetzen Sie `<dockerhub_username>`, `<repository_name>` und (optional) `:TAG` durch Ihre eigenen Werte.  
 z.B. "yunseokim", "dl-env", "rapids-cuda12.4.1-cudnn9.1.0-ubuntu22.04"
 
-##### Für Podman
+##### Für Podman:
 ```bash
 podman tag IMAGE_ID docker.io/<dockerhub_username>/<repository_name>[:TAG]
 ```
 
-##### Für Docker
+##### Für Docker:
 ```bash
 docker tag IMAGE_ID <dockerhub_username>/<repository_name>[:TAG]
 ```
 
 #### 6-3-3. Image pushen
-Führen Sie abschließend den folgenden Befehl aus, um das Image auf Docker Hub zu pushen.
+Führen Sie abschließend den folgenden Befehl aus, um das Image auf Docker Hub zu pushen:
 
-##### Für Podman
+##### Für Podman:
 ```bash
 podman push docker.io/<dockerhub_username>/<repository_name>[:TAG]
 ```
 
-##### Für Docker
+##### Für Docker:
 ```bash
 docker push <dockerhub_username>/<repository_name>[:TAG]
 ```
-Sie können auf <https://hub.docker.com/> überprüfen, ob der Push erfolgreich war, wie unten gezeigt:  
+Sie können auf <https://hub.docker.com/> überprüfen, ob der Push erfolgreich war:  
 ![Docker Hub Screenshot](/assets/img/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker/yunseokim_dl-env-docker-hub.png)
 
-Das durch diesen Prozess erstellte Image wurde im öffentlichen Repository [yunseokim/dl-env](https://hub.docker.com/r/yunseokim/dl-env/tags) auf Docker Hub veröffentlicht und kann von jedem frei genutzt werden.
+Das fertige Image ist im öffentlichen Repository [yunseokim/dl-env](https://hub.docker.com/r/yunseokim/dl-env/tags) auf Docker Hub verfügbar und kann von jedem frei genutzt werden.
 
-Um das Image zu pullen, ändern Sie einfach den Teil `push` im zuvor verwendeten Push-Befehl in `pull`.
+Um das Image zu pullen, ersetzen Sie einfach `push` durch `pull` in den oben genannten Befehlen.
