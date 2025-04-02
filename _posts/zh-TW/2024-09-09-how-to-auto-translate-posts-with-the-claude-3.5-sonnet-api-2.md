@@ -8,8 +8,8 @@ image: /assets/img/technology.jpg
 ## 前言
 最近,我引入了Anthropic的Claude 3.5 Sonnet API來實現博客文章的多語言翻譯。在這個系列中,我將介紹選擇Claude 3.5 Sonnet API的原因、提示詞設計方法,以及如何通過Python腳本實現API連接和自動化。
 這個系列由兩篇文章組成,您正在閱讀的是該系列的第二篇文章。
-- 第1篇: [Claude 3.5 Sonnet模型介紹及選擇理由、提示詞工程](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1)
-- 第2篇: 使用API編寫和應用Python自動化腳本 (本文)
+- 第一篇: [Claude 3.5 Sonnet模型介紹及選擇理由、提示詞工程](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1)
+- 第二篇: 使用API編寫和應用Python自動化腳本 (本文)
 
 ## 開始之前
 本文是[第1篇](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1)的延續,如果您還沒有閱讀,建議先閱讀前一篇文章。

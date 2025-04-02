@@ -6,7 +6,7 @@ tags: [Jekyll, Markdown, LLM]
 image: /assets/img/technology.jpg
 ---
 ## Introdução
-Recentemente, introduzi a API Claude 3.5 Sonnet da Anthropic para tradução multilíngue de posts do blog. Nesta série, abordaremos os motivos para escolher a API Claude 3.5 Sonnet, métodos de design de prompts e como implementar a automação através da integração da API e scripts Python.  
+Recentemente, implementei a API Claude 3.5 Sonnet da Anthropic para tradução multilíngue dos posts do blog. Nesta série, abordarei os motivos para escolher a API Claude 3.5 Sonnet, métodos de design de prompts e como implementar a automação através de scripts Python conectados à API.  
 A série consiste em 2 posts, e este que você está lendo é o segundo post da série.
 - Parte 1: [Introdução ao modelo Claude 3.5 Sonnet, razões para seleção e engenharia de prompts](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1)
 - Parte 2: Escrevendo e aplicando scripts de automação Python usando a API (este post)
