@@ -159,7 +159,7 @@ mermaid: true
 
 ## 5. 升級
 
-假設採用了[3-2](/posts/Creating-and-Managing-a-GitHub-Pages-Blog/#3-2-創建GitHub儲存庫)中的第1種方法。如採用第2種方法，則如前所述需直接合併最新上游標籤。
+假設採用了[3-2](/posts/Creating-and-Managing-a-GitHub-Pages-Blog/#3-2-創建github儲存庫)中的第1種方法。如採用第2種方法，則如前所述需直接合併最新上游標籤。
 
 1. 編輯`Gemfile`{: .filepath}，指定"jekyll-theme-chirpy" gem的新版本。
 2. 對於主要升級，"jekyll-theme-chirpy" gem不包含的核心檔案和設定選項也可能有變更。這時需要通過以下GitHub API檢查變更，然後手動應用：
