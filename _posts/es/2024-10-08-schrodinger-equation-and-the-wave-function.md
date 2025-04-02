@@ -70,7 +70,7 @@ Esto era difícil de aceptar intuitivamente, por lo que naturalmente surgió la 
 ## Perspectivas sobre la indeterminación cuántica (quantum indeterminacy)
 Supongamos que medimos la posición de una partícula y descubrimos que está en el punto $C$. Entonces, ¿dónde estaba la partícula justo antes de la medición?
 
-### Postura realista (realist)
+### Postura realista
 
 > "Dios no juega a los dados." ("God does not play dice.")  
 > *por Albert Einstein*
@@ -80,7 +80,7 @@ La partícula estaba en $C$ desde el principio. Esta es también la perspectiva 
 > Schrödinger fue discípulo de Einstein y trabajó como su asistente durante un tiempo, y posteriormente mantuvo contacto con Einstein. Es probable que su postura realista y determinista fuera influenciada por Einstein.
 {: .prompt-info }
 
-### Postura ortodoxa (orthodox)
+### Postura ortodoxa
 
 > "Deja de decirle a Dios qué hacer con sus dados." ("Stop telling God what to do with his dice.")  
 > *por Niels Bohr, en respuesta a la cita anterior de Einstein*
@@ -95,7 +95,7 @@ Hasta justo antes de la medición, la partícula solo existe en forma de distrib
 > Lo interesante es que, de manera similar a la relación entre Einstein y Schrödinger, Heisenberg también fue discípulo de Bohr.
 {: .prompt-info }
 
-### Postura agnóstica (agnostic)
+### Postura agnóstica
 
 > "Como la antigua pregunta de cuántos ángeles pueden sentarse en la punta de una aguja, no hay necesidad de romperse la cabeza sobre si existe algo de lo que no se puede saber nada." ("One should no more rack one's brain about the problem of whether something one cannot know anything about exists all the same, than about the ancient question of how many angels are able to sit on the point of a needle.")  
 > *por Wolfgang Pauli*
@@ -120,7 +120,7 @@ Es decir, los procesos físicos pueden dividirse en dos tipos distintos:
 > Una función de onda que ha colapsado debido a una medición vuelve a extenderse espacialmente con el tiempo según la ecuación de Schrödinger. Por lo tanto, para reproducir el mismo resultado de medición, la segunda medición debe realizarse inmediatamente.
 {: .prompt-tip }
 
-## Normalización de la función de onda (Normalization)
+## Normalización de la función de onda
 Como el cuadrado del valor absoluto de la función de onda $\|\Psi(x,t)\|^2$ es la densidad de probabilidad de encontrar la partícula en la posición $x$ en el tiempo $t$, la integral de $\|\Psi\|^2$ sobre todos los valores de $x$ debe ser igual a 1.
 
 $$ \int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 1. \label{eqn:wavefunction_norm}\tag{3} $$

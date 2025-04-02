@@ -21,7 +21,7 @@ image: /assets/img/atoms.png
 - 崩壊後に生成された核はほとんどの場合励起状態にあるため、ガンマ線やX線の形でエネルギーを放出する
 
 ## ベータ崩壊（$\beta$-decay）
-### 陽電子崩壊（$\beta^+$-decay）
+### 陽のベータ崩壊（$\beta^+$-decay）
 
  $$p \to n+\beta^+ +\nu_e$$
  
@@ -31,7 +31,7 @@ image: /assets/img/atoms.png
 
 例）$^{23}\_{12}\text{Mg} \to\;^{23}\_{11}\text{Na} + e^+ + \nu_e$
 
-### 電子崩壊（$\beta^-$-decay）
+### 音の-ベータ崩壊（$\beta^-$-decay）
 
 $$ n\to p+\beta^- + \overline{\nu}_e $$
 

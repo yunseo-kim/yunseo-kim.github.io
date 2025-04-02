@@ -108,7 +108,7 @@ In 11964 of the [Holocene calendar](https://en.wikipedia.org/wiki/Holocene_calen
 > There are still other interpretations that might be correct besides the Copenhagen interpretation, such as nonlocal hidden variable theories or the many worlds interpretation.
 {: .prompt-info }
 
-## Measurement and Wave Function Collapse
+## Measurement and Collapse of the Wave Function
 A particle does not have an exact position until it is measured, and only through measurement does it acquire a specific position $C$ (though, as we'll discuss in another post, even this position has some margin of error due to Heisenberg's uncertainty principle). However, if an additional measurement is made immediately after the first measurement, the same result will always be obtained, rather than different values with each measurement. This is explained as follows:
 
 At the moment of the first measurement, the wave function of the subject changes dramatically, forming a narrow and sharp $\|\Psi(x,t)\|^2$ graph concentrated around point $C$. This is called the **collapse** of the wave function to point $C$ due to measurement.
