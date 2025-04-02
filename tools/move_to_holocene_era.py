@@ -58,13 +58,25 @@ def main():
                 filename_has_year = simple_pattern.search(file)
                 # Scan file content for convertible patterns.
                 matches = scan_file_for_matches(file_path)
-                if filename_has_year or matches:
+                if filename_has_year:
                     files_to_modify.append(file_path)
                 if matches:
                     content_matches[file_path] = matches
 
     # Summary: total number of files with Gregorian year patterns in their filenames.
     total_files = len(files_to_modify)
+
+    # Walk through _posts and its subdirectories to find all .md files.
+    target_dir = os.path.join(root_dir, "_posts")
+    for root, dirs, files in os.walk(target_dir):
+        for file in files:
+            if file.endswith(".md"):
+                file_path = os.path.join(root, file)
+                # Check if the file name contains a convertible Gregorian year.
+                filename_has_year = simple_pattern.search(file)
+                if filename_has_year:
+                    files_to_modify.append(file_path)
+    
     print(f"Total number of files with Gregorian year patterns in their filenames: {total_files}\n")
 
     # Print list of files that contain convertible content (not just file name changes).
@@ -93,7 +105,7 @@ def main():
             # If the file is in the candidate list, update the key to the new path.
             if file_path in content_matches:
                 content_matches[new_file_path] = content_matches.pop(file_path)
-            print(f"\nRenamed file: {file_path} -> {new_file_path}")
+            # print(f"\nRenamed file: {file_path} -> {new_file_path}")
 
     print("\nFilename conversion complete.")
     print("Please review the candidate content lines above for manual conversion if necessary.")
