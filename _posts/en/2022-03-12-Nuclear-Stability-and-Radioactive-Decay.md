@@ -1,6 +1,6 @@
 ---
 title: Nuclear Stability and Radioactive Decay
-description: Exploring the Segre Chart, types of radioactive decay, and isomeric transitions.
+description: Explore the Segré chart and various types of radioactive decay, the energy spectrum of electrons/positrons emitted in beta decay and the discovery of neutrinos, decay chains of several key nuclides (carbon-14, potassium-40, tritium, cesium-137), and isomeric transitions.
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
@@ -71,6 +71,7 @@ Below are some important beta decay chains.
 #### Carbon-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
+
 > Carbon-14 is naturally produced in the upper atmosphere by cosmic radiation, maintaining a relatively constant concentration in the atmosphere. Animals and plants also maintain the same carbon-14 concentration as the atmosphere during their lifetime through continuous respiration and gas exchange, but after death, this exchange stops, and the carbon-14 concentration in the remains decreases over time. This is the basis for radiocarbon dating.
 {: .prompt-tip }
 
@@ -85,7 +86,13 @@ Below are some important beta decay chains.
 #### Tritium
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
+- $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
 - $^3\mathrm{H} \to {^3\mathrm{He}} + e^{-} + \overline{\nu}_e + 18.6\ \mathrm{keV}$
+
+> Tritium is a fuel material that participates in D-T fusion reactions in fusion reactors or hydrogen bombs/neutron bombs. It is naturally produced in the atmosphere by cosmic radiation, but due to its relatively short half-life of about 12.32 years, it decays quickly and exists in very low proportions in nature. When used in fusion reactors or nuclear weapons, rather than directly loading tritium (due to its rapid decay), neutrons are irradiated onto lithium-6 to produce tritium. For this reason, highly enriched and high-purity lithium-6 for nuclear weapons is considered a critical material for nuclear development and is one of the main monitoring targets of the international community, including the IAEA.  
+> Even apart from the aforementioned uses, it is a commonly used material in small quantities, such as in military items like night sights for K2 rifles and K1 submachine guns, luminous watches, and emergency exit signs in buildings that need to maintain luminescence without power supply. Tritium is encapsulated with phosphorus, a fluorescent material, so that when tritium decays, the emitted beta rays collide with the phosphorus to produce light. Emergency exit signs typically use about 900 billion becquerels of tritium.  
+> Due to its steady demand and the impossibility of long-term stockpiling, it is treated as an important strategic material, with prices approaching $30,000 per gram. Currently, most commercially produced and sold tritium comes from pressurized heavy water reactors like CANDU (CANada Deuterium Uranium) reactors. In Korea, Wolsong Units 1-4 are CANDU reactors.
+{: .prompt-tip }
 
 #### Cesium-137
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
@@ -137,6 +144,7 @@ Example: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He
 - Nuclei formed by radioactive decay may remain in an excited state after transformation, in which case they release energy in the form of gamma rays (although gamma ray emission does not change the nuclide and is not strictly decay, the term gamma decay is sometimes used conventionally).
 - Most excited nuclei transition to the ground state by emitting gamma rays in a very short time, but in certain cases, gamma ray emission is delayed, appearing like a metastable state. These delayed states are called *isomeric states* of the nucleus.
 - The transition from an isomeric state to the ground state by emitting gamma rays is called an *isomeric transition* and is denoted as IT.
+
 ![Au-198 Decay Scheme](https://upload.wikimedia.org/wikipedia/commons/0/04/Au-198_Decay_Scheme.svg)
 > *Image source*
 > - Author: British Wikimedia user [Daveturnr](https://commons.wikimedia.org/wiki/User:Daveturnr)

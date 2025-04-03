@@ -1,6 +1,6 @@
 ---
 title: Estabilidad nuclear y desintegración radiactiva
-description: Exploramos la tabla de Segré, los tipos de desintegración radiactiva y la transición isomérica.
+description: Exploramos la tabla de Segrè, varios tipos de desintegración radiactiva, el espectro energético de electrones/positrones emitidos en la desintegración beta y el trasfondo del descubrimiento del neutrino, las cadenas de desintegración de algunos nucleidos importantes (carbono-14, potasio-40, tritio, cesio-137), y la transición isomérica.
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
@@ -71,6 +71,7 @@ A continuación, presentaré algunas cadenas importantes de desintegración beta
 #### Carbono-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
+
 > El carbono-14 se produce naturalmente en la atmósfera superior debido a la radiación cósmica, manteniendo así una concentración relativamente constante en la atmósfera. Los animales y plantas también mantienen la misma concentración de carbono-14 que la atmósfera mientras viven, debido al intercambio continuo de gases a través de la respiración. Sin embargo, después de la muerte, este intercambio cesa y la concentración de carbono-14 en el cadáver disminuye con el tiempo. Este principio es la base del método de datación por radiocarbono.
 {: .prompt-tip }
 
@@ -85,7 +86,13 @@ A continuación, presentaré algunas cadenas importantes de desintegración beta
 #### Tritio
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
+- $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
 - $^3\mathrm{H} \to {^3\mathrm{He}} + e^{-} + \overline{\nu}_e + 18.6\ \mathrm{keV}$
+
+> El tritio es un material combustible que participa en la reacción de fusión D-T en reactores de fusión o bombas de hidrógeno/neutrones. Se produce naturalmente en la atmósfera debido a la radiación cósmica, pero como su vida media es relativamente corta (aproximadamente 12,32 años), se desintegra rápidamente y existe en proporciones muy bajas en la naturaleza. En reactores de fusión o armas nucleares, debido a esta rápida desintegración, en lugar de incorporar directamente el tritio, se utiliza un método donde se irradia litio-6 con neutrones para generar tritio. Por esta razón, el litio-6 altamente enriquecido y de alta pureza para uso en armas nucleares se considera un material crucial para el desarrollo nuclear y es uno de los principales objetivos de vigilancia de la comunidad internacional, incluido el OIEA.  
+> Además, aunque no sea para los usos mencionados anteriormente, es un material que se utiliza comúnmente en pequeñas cantidades, como en las miras nocturnas del rifle K2 y la subametralladora K1, relojes luminosos, y señales de salida de emergencia en edificios que deben mantener su capacidad de iluminación durante mucho tiempo sin suministro eléctrico. El tritio se envuelve con fósforo, un material fluorescente, para que cuando los rayos beta emitidos durante la desintegración del tritio colisionen con el fósforo, se produzca luz. En el caso de las señales de salida de emergencia, se utilizan aproximadamente 900 mil millones de becquerelios de tritio.  
+> Debido a esta demanda constante y a la imposibilidad de almacenamiento a largo plazo, se trata como un material estratégico importante, con un precio que se acerca a los 30.000 dólares por gramo. Actualmente, la mayor parte del tritio producido y vendido comercialmente proviene de reactores CANDU (CANada Deuterium Uranium), que son reactores de agua pesada a presión. En Corea, las unidades 1-4 de Wolsong son reactores CANDU.
+{: .prompt-tip }
 
 #### Cesio-137
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
@@ -137,6 +144,7 @@ Ejemplo: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He
 - Los núcleos formados por desintegración radiactiva a menudo quedan en estado excitado y emiten energía en forma de rayos gamma (aunque técnicamente no es una desintegración ya que el núclido no cambia, convencionalmente a veces se usa el término "desintegración gamma").
 - La mayoría de los núcleos excitados emiten rayos gamma y pasan al estado fundamental muy rápidamente, pero en ciertos casos, la emisión de rayos gamma se retrasa, aparentando un estado metaestable. Estos estados retardados se denominan *estados isoméricos (isomeric states)* del núcleo.
 - La transición de un estado isomérico al estado fundamental mediante la emisión de rayos gamma se denomina *transición isomérica (isomeric transition)* y se denota como IT.
+
 ![Au-198 Decay Scheme](https://upload.wikimedia.org/wikipedia/commons/0/04/Au-198_Decay_Scheme.svg)
 > *Fuente de la imagen*
 > - Autor: Usuario de Wikimedia británico [Daveturnr](https://commons.wikimedia.org/wiki/User:Daveturnr)

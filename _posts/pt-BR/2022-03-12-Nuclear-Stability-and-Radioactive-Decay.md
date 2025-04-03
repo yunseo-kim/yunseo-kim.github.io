@@ -1,6 +1,6 @@
 ---
 title: Estabilidade Nuclear e Decaimento Radioativo
-description: Aprenda sobre a Carta de Segre, tipos de decaimento radioativo e transição isomérica.
+description: Exploramos a tabela de Segrè, vários tipos de decaimento radioativo, o espectro de energia de elétrons/pósitrons emitidos no decaimento beta e o contexto da descoberta do neutrino, as cadeias de decaimento de alguns nuclídeos importantes (carbono-14, potássio-40, trítio, césio-137), e a transição isomérica.
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
@@ -71,6 +71,7 @@ A seguir, apresentarei algumas cadeias importantes de decaimento beta.
 #### Carbono-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
+
 > O carbono-14 é produzido naturalmente na alta atmosfera pela radiação cósmica, mantendo uma concentração relativamente constante no ar. Animais e plantas também mantêm a mesma concentração de carbono-14 em seus corpos durante a vida, pois continuamente trocam gases com a atmosfera através da respiração. Após a morte, essa troca cessa e a concentração de carbono-14 no cadáver diminui com o tempo devido ao decaimento. Este é o princípio da datação por radiocarbono.
 {: .prompt-tip }
 
@@ -85,7 +86,13 @@ A seguir, apresentarei algumas cadeias importantes de decaimento beta.
 #### Trítio
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
+- $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
 - $^3\mathrm{H} \to {^3\mathrm{He}} + e^{-} + \overline{\nu}_e + 18.6\ \mathrm{keV}$
+
+> O trítio é um material combustível que participa da reação de fusão D-T em reatores de fusão nuclear ou bombas de hidrogênio/bombas de nêutrons. É produzido naturalmente na atmosfera por raios cósmicos, mas devido à sua meia-vida relativamente curta de 12,32 anos, decai rapidamente e existe em proporções muito baixas na natureza. Quando utilizado em reatores de fusão ou armas nucleares, devido à sua rápida decomposição, em vez de carregar diretamente o trítio, utiliza-se um método que irradia nêutrons no lítio-6 para produzir trítio. Por esse motivo, o lítio-6 altamente enriquecido e de alta pureza para uso em armas nucleares é considerado um material essencial para o desenvolvimento nuclear e é um dos principais alvos de monitoramento da comunidade internacional, incluindo a AIEA.  
+> Além dos usos mencionados, é um material usado em pequenas quantidades, mas comum, como em miras noturnas de equipamentos militares como o rifle K2 e a submetralhadora K1, relógios luminosos e sinalizações de saída de emergência em edifícios que precisam manter capacidade luminosa sem fornecimento de energia. O trítio é envolvido por fósforo, um material fluorescente, de modo que quando os raios beta emitidos durante o decaimento do trítio colidem com o fósforo, produzem luz. No caso das sinalizações de saída de emergência, são utilizados aproximadamente 900 bilhões de becquerels de trítio.  
+> Devido à demanda constante e à impossibilidade de armazenamento a longo prazo, é tratado como um recurso estratégico importante, com preço aproximado de 30.000 dólares por grama. Atualmente, a maior parte do trítio produzido e vendido comercialmente vem de reatores CANDU (CANada Deuterium Uranium), que são reatores de água pesada pressurizada. Na Coreia, as unidades 1-4 de Wolsong são reatores CANDU.
+{: .prompt-tip }
 
 #### Césio-137
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
@@ -137,6 +144,7 @@ Exemplo: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He
 - Os núcleos formados após o decaimento radioativo podem permanecer em estado excitado, liberando energia na forma de raios gama (embora a emissão de raios gama não altere o nuclídeo, convencionalmente às vezes é chamada de decaimento gama).
 - A maioria dos núcleos excitados emite raios gama e transita para o estado fundamental muito rapidamente, mas em casos específicos, a emissão de raios gama pode ser retardada, parecendo um estado metaestável. Esses estados retardados são chamados de *estados isoméricos (isomeric states)* do núcleo.
 - A transição de um estado isomérico para o estado fundamental através da emissão de raios gama é chamada de *transição isomérica (isomeric transition)*, abreviada como IT.
+
 ![Esquema de Decaimento do Au-198](https://upload.wikimedia.org/wikipedia/commons/0/04/Au-198_Decay_Scheme.svg)
 > *Fonte da imagem*
 > - Autor: Usuário do Wikimedia britânico [Daveturnr](https://commons.wikimedia.org/wiki/User:Daveturnr)

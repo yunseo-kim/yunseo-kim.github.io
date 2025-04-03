@@ -1,6 +1,6 @@
 ---
 title: Stabilité nucléaire et désintégration radioactive
-description: Découverte du tableau de Segré, des types de désintégration radioactive et des transitions isomériques.
+description: Découvrez le tableau de Segrè, les différents types de désintégration radioactive, le spectre d'énergie des électrons/positrons émis lors de la désintégration bêta et le contexte de la découverte du neutrino, les chaînes de désintégration de certains nucléides importants (carbone-14, potassium-40, tritium, césium-137), ainsi que la transition isomère.
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
@@ -71,6 +71,7 @@ Voici quelques chaînes de désintégration bêta importantes:
 #### Carbone-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
+
 > Le carbone-14 est produit naturellement dans la haute atmosphère par les rayons cosmiques, maintenant ainsi une concentration relativement constante dans l'atmosphère. Les animaux et les plantes maintiennent également une concentration de carbone-14 identique à celle de l'atmosphère tant qu'ils respirent et échangent des gaz avec l'environnement. Après leur mort, ces échanges cessent et la concentration de carbone-14 dans les restes diminue progressivement. C'est ce principe qui est utilisé dans la datation au carbone radioactif.
 {: .prompt-tip }
 
@@ -85,7 +86,13 @@ Voici quelques chaînes de désintégration bêta importantes:
 #### Tritium
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
+- $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
 - $^3\mathrm{H} \to {^3\mathrm{He}} + e^{-} + \overline{\nu}_e + 18.6\ \mathrm{keV}$
+
+> Le tritium est un matériau combustible participant aux réactions de fusion D-T dans les réacteurs à fusion ou les bombes à hydrogène/neutrons. Il est produit naturellement dans l'atmosphère par les rayons cosmiques, mais sa demi-vie relativement courte de 12,32 ans entraîne sa désintégration rapide, ce qui explique sa faible présence dans la nature. Dans les réacteurs à fusion ou les armes nucléaires, en raison de cette désintégration rapide, plutôt que d'utiliser directement le tritium, on préfère irradier du lithium-6 avec des neutrons pour produire du tritium. C'est pourquoi le lithium-6 hautement enrichi et purifié de qualité militaire est considéré comme un matériau essentiel au développement nucléaire et fait l'objet d'une surveillance internationale stricte, notamment par l'AIEA.  
+> Même en dehors de ces applications, le tritium est utilisé en petites quantités dans divers produits : viseurs nocturnes des fusils K2 et des mitraillettes K1, montres luminescentes, et signalisation des issues de secours nécessitant une luminosité durable sans alimentation électrique. Le tritium est enveloppé de phosphore, un matériau fluorescent, de sorte que les rayons bêta émis lors de sa désintégration frappent le phosphore et produisent de la lumière. Les panneaux d'issues de secours contiennent environ 900 milliards de becquerels de tritium.  
+> En raison de sa demande constante et de l'impossibilité de le stocker à long terme, le tritium est considéré comme un matériau stratégique important, avec un prix avoisinant les 30 000 dollars par gramme. Actuellement, la majorité du tritium produit et vendu commercialement provient des réacteurs à eau lourde pressurisée CANDU (CANada Deuterium Uranium), dont les unités 1 à 4 de Wolsong en Corée.
+{: .prompt-tip }
 
 #### Césium-137
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
@@ -137,6 +144,7 @@ Exemple: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He
 - Les noyaux formés par désintégration radioactive peuvent rester dans un état excité et libérer de l'énergie sous forme de rayons gamma (bien que l'émission de rayons gamma ne change pas le nucléide, on utilise parfois par convention le terme "désintégration gamma").
 - La plupart des noyaux excités émettent des rayons gamma et passent à l'état fondamental très rapidement, mais dans certains cas, l'émission de rayons gamma est retardée, créant un état quasi-stable. Ces états retardés sont appelés *états isomériques* du noyau.
 - Le passage d'un état isomérique à l'état fondamental par émission de rayons gamma est appelé *transition isomérique* et est noté IT.
+
 ![Au-198 Decay Scheme](https://upload.wikimedia.org/wikipedia/commons/0/04/Au-198_Decay_Scheme.svg)
 > *Source de l'image*
 > - Auteur: Utilisateur Wikimedia britannique [Daveturnr](https://commons.wikimedia.org/wiki/User:Daveturnr)

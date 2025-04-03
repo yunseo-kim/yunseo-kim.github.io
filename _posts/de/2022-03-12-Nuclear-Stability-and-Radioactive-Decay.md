@@ -1,6 +1,6 @@
 ---
 title: Kernstabilität und radioaktiver Zerfall
-description: Wir untersuchen das Segré-Diagramm, Arten des radioaktiven Zerfalls und isomere Übergänge.
+description: Wir betrachten das Segré-Diagramm und verschiedene Arten radioaktiven Zerfalls, das Energiespektrum von Elektronen/Positronen bei Betazerfall und die Entdeckung des Neutrinos, die Zerfallsketten einiger wichtiger Nuklide (Kohlenstoff-14, Kalium-40, Tritium, Cäsium-137) sowie isomere Übergänge.
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
@@ -71,6 +71,7 @@ Im Folgenden werden einige wichtige Beta-Zerfallsketten vorgestellt.
 #### Kohlenstoff-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
+
 > Kohlenstoff-14 wird natürlich in der oberen Atmosphäre durch kosmische Strahlung erzeugt, wodurch die Konzentration in der Atmosphäre relativ konstant bleibt. Pflanzen und Tiere nehmen während ihres Lebens durch Atmung und Stoffwechsel kontinuierlich Kohlenstoff-14 auf und halten so die gleiche Konzentration wie in der Atmosphäre aufrecht. Nach dem Tod hört dieser Austausch auf, und die Kohlenstoff-14-Konzentration im Körper nimmt mit der Zeit ab. Dies ist die Grundlage der Radiokohlenstoffdatierung.
 {: .prompt-tip }
 
@@ -85,7 +86,13 @@ Im Folgenden werden einige wichtige Beta-Zerfallsketten vorgestellt.
 #### Tritium
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
+- $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
 - $^3\mathrm{H} \to {^3\mathrm{He}} + e^{-} + \overline{\nu}_e + 18.6\ \mathrm{keV}$
+
+> Tritium ist ein Brennstoff für D-T-Fusionsreaktionen in Fusionsreaktoren oder Wasserstoffbomben/Neutronenbomben. Es wird in der Atmosphäre natürlich durch kosmische Strahlung erzeugt, hat jedoch eine relativ kurze Halbwertszeit von etwa 12,32 Jahren und zerfällt daher schnell, weshalb es in der Natur nur in sehr geringen Mengen vorkommt. Aufgrund dieser schnellen Zerfallseigenschaft wird bei Fusionsreaktoren oder Kernwaffen Tritium nicht direkt eingesetzt, sondern durch Neutronenbestrahlung von Lithium-6 erzeugt. Daher gilt hochangereichertes und hochreines Lithium-6 für Kernwaffen als kritisches Material für die Kernwaffenentwicklung und wird von der IAEA und der internationalen Gemeinschaft streng überwacht.  
+> Auch abgesehen von den genannten Anwendungen ist es ein häufig verwendetes Material in kleinen Mengen, wie in Nachtsichtvisieren für K2-Gewehre und K1-Maschinenpistolen, Leuchtzifferblättern von Uhren und Notausgangsbeschilderungen, die ohne Stromversorgung lange leuchten müssen. Dabei wird Tritium mit dem fluoreszierenden Material Phosphor umhüllt, sodass die beim Tritiumzerfall freigesetzten Betastrahlen auf den Phosphor treffen und Licht erzeugen. Für Notausgangsbeleuchtungen werden etwa 900 Milliarden Becquerel Tritium verwendet.  
+> Aufgrund der konstanten Nachfrage und der Unmöglichkeit der Langzeitlagerung wird es als wichtiges strategisches Material betrachtet und kostet fast 30.000 Dollar pro Gramm. Der Großteil des kommerziell produzierten und verkauften Tritiums stammt aus Druckschwerwasserreaktoren wie dem CANDU (CANada Deuterium Uranium)-Reaktor. In Korea sind die Reaktoren Wolsong 1-4 CANDU-Reaktoren.
+{: .prompt-tip }
 
 #### Cäsium-137
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
@@ -137,6 +144,7 @@ Beispiel: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{H
 - Kerne, die durch radioaktiven Zerfall entstehen, können sich nach der Umwandlung in einem angeregten Zustand befinden und geben dann Energie in Form von Gammastrahlung ab (obwohl bei Gammaemission kein Nuklid verändert wird und es streng genommen kein Zerfall ist, wird umgangssprachlich manchmal der Begriff "Gammazerfall" verwendet).
 - Die meisten angeregten Kerne gehen sehr schnell durch Gammaemission in den Grundzustand über, in bestimmten Fällen kann die Gammaemission jedoch verzögert sein, was wie ein metastabiler Zustand erscheint. Diese verzögerten Zustände werden als *isomere Zustände* des Kerns bezeichnet.
 - Der Übergang von einem isomeren Zustand in den Grundzustand durch Gammaemission wird als *isomerer Übergang* bezeichnet und mit IT abgekürzt.
+
 ![Au-198 Decay Scheme](https://upload.wikimedia.org/wikipedia/commons/0/04/Au-198_Decay_Scheme.svg)
 > *Bildquelle*
 > - Autor: Britischer Wikimedia-Benutzer [Daveturnr](https://commons.wikimedia.org/wiki/User:Daveturnr)

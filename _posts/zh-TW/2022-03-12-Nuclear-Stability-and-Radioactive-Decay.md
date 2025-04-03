@@ -1,6 +1,6 @@
 ---
 title: 核穩定性及放射性衰變
-description: 探討塞格雷圖、放射性衰變類型以及同質異能態轉變。
+description: 探討塞格雷圖與各種放射性衰變類型、貝塔衰變中釋放的電子/正電子能量譜及中微子的發現背景、幾種主要核種(碳-14、鉀-40、氚、銫-137)的衰變鏈，以及同質異能態轉變。
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
@@ -71,6 +71,7 @@ $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\bet
 #### 碳-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
+
 > 碳-14自然產生於大氣上層的宇宙輻射作用下，因此大氣中的碳-14濃度保持相對穩定。動植物在生命期間通過呼吸與大氣進行氣體交換，體內碳-14濃度與大氣中相同，但死亡後這種交換停止，屍體中的碳-14濃度隨時間衰減。這就是放射性碳定年法的原理。
 {: .prompt-tip }
 
@@ -85,7 +86,13 @@ $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\bet
 #### 氚
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
+- $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
 - $^3\mathrm{H} \to {^3\mathrm{He}} + e^{-} + \overline{\nu}_e + 18.6\ \mathrm{keV}$
+
+> 氚是參與核融合反應爐或氫彈、中子彈中D-T核融合反應的燃料物質，它在宇宙輻射的作用下在大氣中自然生成，但半衰期僅約12.32年，衰變較快，因此在自然界中的存在比例相當低。在核融合反應爐或核武器中使用時，由於其快速衰變的特性，通常不直接裝載氚，而是採用照射鋰-6產生氚的方式。因此，高濃縮、高純度的武器級鋰-6被視為核武開發的關鍵物質之一，是包括國際原子能機構(IAEA)在內的國際社會主要監控對象之一。  
+> 除了上述用途外，氚雖然用量少但應用廣泛，例如K2步槍和K1衝鋒槍的夜間瞄準器等軍用裝備的夜光體、夜光手錶、不需電力供應卻能長時間保持發光能力的建築物緊急出口指示標誌等。這些應用是將氚包覆在螢光物質磷中，當氚衰變時釋放的貝塔射線撞擊磷而發光，緊急出口指示燈中約使用9000億貝克的氚。  
+> 由於氚有持續的需求且無法長期儲存，因此被視為重要的戰略物資，價格高達每克3萬美元。目前商業生產和銷售的氚大多來自壓水重水反應爐CANDU(CANada Deuterium Uranium)，韓國的月城1-4號機組即為CANDU反應爐。
+{: .prompt-tip }
 
 #### 銫-137
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
@@ -137,6 +144,7 @@ $$ p + e \to n + \nu_e $$
 - 放射性衰變形成的核在轉變後可能仍處於激發態，此時會以伽瑪射線形式釋放能量（雖然伽瑪射線釋放不改變核種，嚴格來說不是衰變，但習慣上有時稱為伽瑪衰變）。
 - 激發態的核通常會很快釋放伽瑪射線回到基態，但某些情況下伽瑪射線釋放會延遲，表現得像亞穩態。這種延遲狀態稱為該核的*同質異能態(isomeric states)*。
 - 從同質異能態釋放伽瑪射線回到基態的過程稱為*同質異能態轉變(isomeric transition)*，簡稱IT。
+
 ![Au-198 Decay Scheme](https://upload.wikimedia.org/wikipedia/commons/0/04/Au-198_Decay_Scheme.svg)
 > *圖片來源*
 > - 作者：英國維基媒體用戶 [Daveturnr](https://commons.wikimedia.org/wiki/User:Daveturnr)
