@@ -6,6 +6,9 @@ tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.png
 ---
+## Prerequisites
+- [아원자 입자와 원자의 구성 요소](/posts/constituents-of-an-atom/)
+
 ## 세그레표(Segre Chart) 또는 핵종 도표 
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *이미지 출처*
@@ -29,7 +32,7 @@ image: /assets/img/atoms.png
 - 양성자($p$)가 중성자($n$)로 바뀌며 양전자($\beta^+$)와 전자 중성미자($\nu_e$)를 방출
 - 원자번호는 1 감소, 질량수는 변화 없음
 
-예) $^{23}\_{12}\text{Mg} \to\;^{23}\_{11}\text{Na} + e^+ + \nu_e$
+예) $^{23}\_{12}\mathrm{Mg} \to\;^{23}\_{11}\mathrm{Na} + e^+ + \nu_e$
 
 ### 음의 베타붕괴($\beta^-$-decay)
 
@@ -39,7 +42,7 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 - 중성자($n$)가 양성자($p$)로 바뀌며 전자($\beta^-$)와 전자 반중성미자($\overline{\nu}_e$)를 방출
 - 원자번호는 1 증가, 질량수는 변화 없음
 
-예) $^3_1\text{H} \to\;^3_2\text{He} + e^- + \overline{\nu}_e$
+예) $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 
 ### 방출되는 전자(양전자)의 에너지 스펙트럼
 ![energy spectrum of electrons emitted in beta decay](https://upload.wikimedia.org/wikipedia/commons/e/e6/Beta_spectrum_of_RaE.jpg)
@@ -51,10 +54,46 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 - $\beta^-$ 붕괴: $\overline{E}\approx 0.3E_{\text{max}}$
 - $\beta^+$ 붕괴: $\overline{E}\approx 0.4E_{\text{max}}$
 
+> 베타붕괴로 방출되는 총 에너지는 양자화되어 있으나, 전자/양전자와 반중성미자/중성미자가 에너지를 임의로 나누어 가지기 때문에 전자/양전자의 에너지만 보면 연속적인 스펙트럼이 나타난다.
+> 베타붕괴에서 방출되는 전자/양전자의 에너지 스펙트럼이 양자화되어 있지 않고 연속적이라는 것은 이론적인 예측과 불일치하는 결과였고, 에너지 보존 법칙에도 위배되는 듯이 보였다.  
+> 이러한 결과를 설명하기 위해 볼프강 에른스트 파울리(Wolfgang Ernst Pauli)가 11930년에 '<u>전기적으로 중성이고 질량이 극도로 작으며, 반응성 역시 극도로 낮은 입자</u>'의 존재를 예측하고 '중성자(neutron)'라 부르자고 제안하였으나, 11932년 제임스 채드윅(Sir James Chadwick)이 지금 우리가 알고 있는 그 중성자를 발견하고 명명함에 따라 이름이 중복되는 문제가 발생하였다. 이에 이듬해인 11933년 엔리코 페르미(Enrico Fermi)가 베타붕괴 이론을 발표하면서 "작다"라는 의미의 이탈리아어 접미사 '-ino'를 붙인 *중성미자(neutrino)*로 재명명하여 지금의 이름이 붙게 된다.  
+> 이후 11942년 중국의 핵물리학자 왕간창(王淦昌, Wáng Gànchāng)이 [전자포획](#전자포획electron-capture-또는-k-포획k-capture)을 이용한 중성미자 검출 방법을 최초로 제안하였고, 11956년 클라이드 코원(Clyde Cowon), 프레드릭 라이너스(Frederick Reines), 프랜시스 B. 해리슨(Francis B. Harrison), 해럴드 W. 크루스(Herald W. Kruse), 그리고 오스틴 D. 맥과이어(Austin D. McGuire)가 코원-라이너스 중성미자 실험(Cowan–Reines neutrino experiment)을 통해 중성미자를 검출해내는 데 성공하여 그 결과를 사이언스(Science)지에 투고함에 따라 실제로 존재함이 검증되었다. 프레드릭 라이너스는 11995년 이 공로로 노벨 물리학상을 수상하였다.  
+> 이처럼 베타붕괴의 연구는 중성미자의 존재에 대한 실마리를 제공하였다는 점에서도 과학사에서 큰 의의를 가진다.
+{: .prompt-info }
+
 ### 붕괴 사슬(Decay Chain)
 종종 베타붕괴를 통해 형성된 *딸핵종(daughter nuclide)* 도 불안정하여 연달아 베타붕괴가 일어나곤 한다. 이는 다음과 같은 *붕괴 사슬(decay chain)* 로 이어진다.
 
-$$ ^{20}\text{O} \overset{\beta^-}{\rightarrow}\;^{20}\text{F} \overset{\beta^-}{\rightarrow}\;^{20}\text{Ne (stable)} $$ 
+$$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
+
+몇 가지 주요한 베타붕괴 사슬을 아래에 소개하겠다.
+
+#### 탄소-14
+- $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
+- $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
+> 탄소-14는 우주방사선에 의해 대기권 상층에서 자연적으로 생성되며, 이에 따라 대기 중 탄소-14 농도는 큰 변화 없이 비슷한 수준을 유지한다. 동식물 역시 살아 있는 동안에는 계속해서 호흡하며 대기와의 기체 교환이 이뤄지기에 대기 중 탄소-14 농도와 동일한 체내 탄소-14 농도를 유지하나, 사망하고 나면 이러한 교환이 더 이상 이뤄지지 않기에 사체 내 탄소-14 농도는 시간이 지남에 따라 감쇠한다. 이를 이용하는 것이 방사성 탄소 연대측정법이다.
+{: .prompt-tip }
+
+#### 칼륨-40
+- $^{40}\mathrm{K} \to {^{40}\mathrm{Ca}} + e^{-} + \overline{\nu}_e + 1311\ \mathrm{keV}$ (89%)
+- $^{40}\mathrm{K} + e^{-} \to {^{40}\mathrm{Ar}}  + \nu_e + 1505\ \mathrm{keV}$ (11%)
+
+> 칼륨-40은 인간을 포함한 모든 동물의 신체 구성요소 중 가장 큰 비중을 차지하는 자연 방사선원으로, 우리가 일상적으로 섭취하는 모든 식품에도 자연적으로 존재하며 특히 브라질너트, 콩, 시금치, 바나나, 아보카도, 커피, 갈치, 마늘과 같은 식품에 풍부하다.  
+> 체중이 70kg인 성인의 체내 칼륨 양은 약 140g으로 항상 일정하게 유지되며, 그 중 칼륨-40은 0.014g 정도가 존재하고 이는 약 4330 Bq의 방사능을 지닌다.
+{: .prompt-tip }
+
+#### 삼중수소
+- $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
+- $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
+- $^3\mathrm{H} \to {^3\mathrm{He}} + e^{-} + \overline{\nu}_e + 18.6\ \mathrm{keV}$
+
+#### 세슘-137
+- $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
+
+> 세슘-137은 원자로의 핵분열 반응이나 핵실험 등으로부터 발생하는 주요 부산물로, 비교적 긴 반감기(약 30년), 투과성이 강한 감마선을 방출하는 점, 칼륨과 유사한 화학적 특성을 지녀 체내에 쉽게 흡수되는 점 등으로 인해 주요 감시 및 관리 대상인 핵종이다. 원래 자연적으로는 거의 존재하지 않았으나, 현재는 전 지구상의 토양에 평균적으로 7 μg/g 정도가 존재하는데 이는 폭주하던 전범국 일본 제국을 제압하기 위해 미국이 행한 트리니티 핵실험 및 히로시마$\cdot$나가사키 원자폭탄 투하, 그리고 그 이후 11950-11960년대에 주로 행해진 다수의 대기 중 핵실험과 몇몇 중대 원자력사고(체르노빌 원자력 발전소 사고, 브라질 고이아니아 사고 등)로 인해 발생한 것이다.  
+> 10000 Bq 이상의 세슘-137이 체내에 흡수된 경우 의학적인 처치 및 관찰이 필요할 수 있다. 체르노빌 원자력 발전소 사고 당시 인근 주민들 중 일부는 수만 Bq의 방사능에 해당하는 양의 세슘-137이 체내에 흡수된 것으로 보고되었다. 후쿠시마 원자력 발전소 사고의 경우, 사고 직후 인근 주민들의 신체에는 50-250 Bq 정도의 양이 흡수되었다고 한다.
+> 개인차가 있으며 자료마다 조금씩 다르지만, 별도의 처치가 없을 시 세슘-137의 생물학적 반감기는 CDC에 따르면 [약 110일 정도](https://web.archive.org/web/20131020123050/http://www.bt.cdc.gov/radiation/prussianblue.asp)인 것으로 알려져 있다. 다량의 세슘-137에 노출되었다고 의심되는 경우 [의료용 프러시안 블루 정제를 섭취하여 빠르게 체외로 배출되도록 유도함으로써 생물학적 반감기를 30일 정도로 단축시킬 수 있다](https://web.archive.org/web/20131020123050/http://www.bt.cdc.gov/radiation/prussianblue.asp).
+{: .prompt-tip }
 
 ## 전자포획(Electron Capture) 또는 K-포획(K-capture)
 
@@ -67,16 +106,23 @@ $$ p + e \to n + \nu_e $$
 - 전자포획에 의해 생겨난 딸핵종(daughter nuclide)은 $\beta^+$붕괴에 의해 생성된 핵과 동일하므로, 이 두 과정은 서로 경쟁한다.
 
 ## 알파붕괴($\alpha$-decay)
-- 알파입자($\alpha$, $^4_2\text{He}$)를 방출
+- 알파입자($\alpha$, $^4_2\mathrm{He}$)를 방출
 - 원자번호는 2만큼 감소하고, 질량수는 4만큼 감소
 - 납보다 무거운 핵들에서 흔히 일어남
 - 베타붕괴와 달리, 알파붕괴 시 방출되는 알파입자의 에너지는 양자화되어 있다.
 
-예) $^{238}\_{92}\text{U} \to\;^{234}\_{90}\text{Th} +\; ^4_2\text{He}$
+예) $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He}$
 
-## 자발 핵분열(Spontaneous Fission)
+## 자발핵분열(Spontaneous Fission)
 - 매우 무겁고 불안정한 핵종은 중성자를 흡수하지 않고도 스스로 핵분열하기도 함
 - 넓은 의미로 방사성 붕괴에 포함함
+- 우라늄-238의 경우 $10^9$년의 반감기로 알파 붕괴하지만, 그와 동시에 $10^16$년 정도의 반감기로 드물게 자발핵분열하기도 한다. 다음 표는 몇 가지 핵종의 자발핵분열 반감기를 나타낸 것이다.
+
+| 핵종 | 자발핵분열 반감기 | 특징 |
+| :--- | :--- | :--- |
+| $^{238}\mathrm{U}$ | 약 $10^{16}$년 | 매우 드물게 일어남 |
+| $^{240}\mathrm{Pu}$ | 약 $10^{11}$년 | 핵무기에 사용하는 핵분열 핵종 |
+| $^{252}\mathrm{Cf}$ | 약 $2.6$년 | 자발핵분열이 대단히 활발하게 일어남 <br>$\rightarrow$ 원자로 시동 등에 중성자원으로 사용 |
 
 ## 양성자 방출(Proton Emission)
 - 양성자가 극도로 많은 불안정한 핵종의 경우, 양성자 1개를 단독으로 방출하기도 함
@@ -89,9 +135,12 @@ $$ p + e \to n + \nu_e $$
 
 ### 이성체 천이(Isomeric Transition)
 - 방사성 붕괴에 의해 형성된 핵은 변환 후에도 들뜬 상태인 경우가 있는데, 이 경우 감마선의 형태로 에너지를 방출한다(감마선 방출 시 핵종이 바뀌지는 않으므로 엄밀히는 붕괴가 아니지만, 관습적으로 감마붕괴라는 표현을 사용하기도 한다). 
-- 들뜬 상태의 핵은 대부분 아주 짧은 시간 내에 감마선을 방출하며 바닥 상태로 천이하지만, 특정한 경우에는 감마선 방출이 지연되어 준안정상태처럼 보이기도 한다. 이러한 지연상태를 해당 핵의 *이성체 상태(isomeric transition)* 라 한다.
+- 들뜬 상태의 핵은 대부분 아주 짧은 시간 내에 감마선을 방출하며 바닥 상태로 천이하지만, 특정한 경우에는 감마선 방출이 지연되어 준안정상태처럼 보이기도 한다. 이러한 지연상태를 해당 핵의 *이성체 상태(isomeric states)* 라 한다.
 - 이성체 상태에서 감마선을 방출하며 바닥 상태로 천이하는 것을 *이성체 천이(isomeric transition)* 라 하고 IT로 표시한다.
 ![Au-198 Decay Scheme](https://upload.wikimedia.org/wikipedia/commons/0/04/Au-198_Decay_Scheme.svg)
 > *이미지 출처*
 > - 저작자: 영국 위키미디어 유저 [Daveturnr](https://commons.wikimedia.org/wiki/User:Daveturnr)
 > - 라이선스: 법에 저촉되지 않는 한, 어떠한 목적으로든 제한조건 없이 자유롭게 사용 가능
+
+![Cs-137 Decay Scheme](https://upload.wikimedia.org/wikipedia/commons/3/3e/Cs-137-decay.svg)
+> 라이선스: [Public Domain](https://en.wikipedia.org/wiki/Public_domain)

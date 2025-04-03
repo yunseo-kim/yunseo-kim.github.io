@@ -11,8 +11,8 @@ image: /assets/img/tokamak-plasma-cropped.png
 ## 陽子-陽子連鎖反応 (proton-proton chain reaction)
 人々に最も広く知られている恒星の核融合反応です。重水素の核である重陽子(deuteron)は陽子(p)一つと中性子(n)一つが結合して作られます。したがって、陽子と陽子が結合して重水素の核になるためには、どちらか一方の陽子が中性子に変わらなければなりません。では、どのようにして陽子が中性子に変わることができるのでしょうか？
 
-- 中性子($n$)が陽子($p$)に変わりながら電子($e⁻$)と反ニュートリノ($\nu_e$)を放出するのが「[ベータ崩壊](/posts/Nuclear-Stability-and-Radioactive-Decay/#音の-ベータ崩壊beta--decay)」です。これを反応式で書くと$n \rightarrow p + e^{-} + \overline{\nu_e}$です。
-- 陽子($p$)が中性子($n$)に変わる過程はベータ崩壊の逆過程に相当します。そのため、これを「[逆ベータ崩壊](/posts/Nuclear-Stability-and-Radioactive-Decay/#陽のベータ崩壊beta-decay)」と呼びます。では逆ベータ崩壊の反応式はどのようになるでしょうか？核反応式だからといって特別なものではありません。陽子と中性子の位置を入れ替え、電子を陽電子に、反ニュートリノをニュートリノに変えればいいのです。式で表すと$p \rightarrow n + e^{+} + \nu_e$です。
+- 中性子($n$)が陽子($p$)に変わりながら電子($e⁻$)と反ニュートリノ($\nu_e$)を放出するのが「[ベータ崩壊](/posts/Nuclear-Stability-and-Radioactive-Decay/#負のベータ崩壊beta--decay)」です。これを反応式で書くと$n \rightarrow p + e^{-} + \overline{\nu_e}$です。
+- 陽子($p$)が中性子($n$)に変わる過程はベータ崩壊の逆過程に相当します。そのため、これを「[逆ベータ崩壊](/posts/Nuclear-Stability-and-Radioactive-Decay/#正のベータ崩壊beta-decay)」と呼びます。では逆ベータ崩壊の反応式はどのようになるでしょうか？核反応式だからといって特別なものではありません。陽子と中性子の位置を入れ替え、電子を陽電子に、反ニュートリノをニュートリノに変えればいいのです。式で表すと$p \rightarrow n + e^{+} + \nu_e$です。
 
 上記の過程を経て重水素原子核が作られた後は、$^2_1D + p \rightarrow {^3_2He}$でヘリウム-3原子核が作られ、最後にヘリウム-3原子核2つが衝突してヘリウム-4原子核と陽子2つが作られることになります。  
 ![p-p chain reaction](https://upload.wikimedia.org/wikipedia/commons/8/85/Fusion_in_the_Sun.svg)
