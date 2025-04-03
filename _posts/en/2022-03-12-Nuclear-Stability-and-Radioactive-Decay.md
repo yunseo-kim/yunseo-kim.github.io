@@ -124,7 +124,7 @@ Example: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He
 ## Spontaneous Fission
 - Very heavy and unstable nuclides can undergo fission on their own without absorbing neutrons
 - Included in radioactive decay in a broad sense
-- Uranium-238 undergoes alpha decay with a half-life of $10^9$ years, but simultaneously undergoes rare spontaneous fission with a half-life of about $10^16$ years. The following table shows the spontaneous fission half-lives of several nuclides.
+- Uranium-238 undergoes alpha decay with a half-life of $10^9$ years, but simultaneously undergoes rare spontaneous fission with a half-life of about $10^{16}$ years. The following table shows the spontaneous fission half-lives of several nuclides.
 
 | Nuclide | Spontaneous Fission Half-life | Characteristics |
 | :--- | :--- | :--- |

@@ -124,7 +124,7 @@ Exemplo: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He
 ## Fissão Espontânea (Spontaneous Fission)
 - Nuclídeos muito pesados e instáveis podem sofrer fissão espontaneamente, sem absorver nêutrons
 - Incluída no conceito amplo de decaimento radioativo
-- O urânio-238, por exemplo, sofre decaimento alfa com meia-vida de $10^9$ anos, mas também, raramente, fissão espontânea com meia-vida de aproximadamente $10^16$ anos. A tabela a seguir mostra a meia-vida de fissão espontânea de alguns nuclídeos.
+- O urânio-238, por exemplo, sofre decaimento alfa com meia-vida de $10^9$ anos, mas também, raramente, fissão espontânea com meia-vida de aproximadamente $10^{16}$ anos. A tabela a seguir mostra a meia-vida de fissão espontânea de alguns nuclídeos.
 
 | Nuclídeo | Meia-vida de fissão espontânea | Características |
 | :--- | :--- | :--- |

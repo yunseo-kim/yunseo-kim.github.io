@@ -124,7 +124,7 @@ Exemple: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He
 ## Fission spontanée (Spontaneous Fission)
 - Les nucléides très lourds et instables peuvent subir une fission sans absorption préalable de neutrons
 - Considérée au sens large comme une forme de désintégration radioactive
-- L'uranium-238, par exemple, se désintègre par émission alpha avec une demi-vie de $10^9$ ans, mais subit également, rarement, une fission spontanée avec une demi-vie d'environ $10^16$ ans. Le tableau suivant présente les demi-vies de fission spontanée de quelques nucléides.
+- L'uranium-238, par exemple, se désintègre par émission alpha avec une demi-vie de $10^9$ ans, mais subit également, rarement, une fission spontanée avec une demi-vie d'environ $10^{16}$ ans. Le tableau suivant présente les demi-vies de fission spontanée de quelques nucléides.
 
 | Nucléide | Demi-vie de fission spontanée | Caractéristiques |
 | :--- | :--- | :--- |
