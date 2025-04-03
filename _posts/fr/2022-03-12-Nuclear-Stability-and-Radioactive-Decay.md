@@ -66,7 +66,8 @@ Souvent, le *nucléide fils (daughter nuclide)* formé par désintégration bêt
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
 
-Voici quelques chaînes de désintégration bêta importantes:
+### Désintégrations bêta importantes
+Voici quelques désintégrations bêta importantes:
 
 #### Carbone-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$

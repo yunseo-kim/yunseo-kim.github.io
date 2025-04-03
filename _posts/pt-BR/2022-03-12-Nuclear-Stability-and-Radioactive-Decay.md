@@ -66,7 +66,8 @@ Frequentemente, o *nuclídeo filho (daughter nuclide)* formado pelo decaimento b
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (estável)} $$
 
-A seguir, apresentarei algumas cadeias importantes de decaimento beta.
+### Decaimentos Beta Importantes
+A seguir, apresentarei alguns decaimentos beta importantes.
 
 #### Carbono-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$

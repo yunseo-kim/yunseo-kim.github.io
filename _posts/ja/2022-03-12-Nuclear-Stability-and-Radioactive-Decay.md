@@ -66,7 +66,8 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
 
-いくつかの主要なベータ崩壊連鎖を以下に紹介する。
+### 重要なベータ崩壊
+いくつかの重要なベータ崩壊を以下に紹介する。
 
 #### 炭素-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$

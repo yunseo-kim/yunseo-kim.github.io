@@ -66,7 +66,8 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
 
-몇 가지 주요한 베타붕괴 사슬을 아래에 소개하겠다.
+### 주요 베타붕괴
+몇 가지 중요한 베타붕괴를 아래에 소개하겠다.
 
 #### 탄소-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$

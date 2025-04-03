@@ -66,7 +66,8 @@ Häufig ist auch das durch Beta-Zerfall entstandene *Tochternuklid* instabil und
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stabil)} $$
 
-Im Folgenden werden einige wichtige Beta-Zerfallsketten vorgestellt.
+### Wichtige Beta-Zerfall
+Im Folgenden werden einige wichtige Beta-Zerfall vorgestellt.
 
 #### Kohlenstoff-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$

@@ -66,7 +66,8 @@ A menudo, el *núclido hijo (daughter nuclide)* formado por la desintegración b
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (estable)} $$
 
-A continuación, presentaré algunas cadenas importantes de desintegración beta.
+### Desintegraciónes beta importantes
+A continuación, presentaré algunas desintegraciónes beta importantes.
 
 #### Carbono-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$

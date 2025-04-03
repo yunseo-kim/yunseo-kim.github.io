@@ -66,7 +66,8 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
 
-以下介紹幾個主要的貝塔衰變鏈。
+### 主要的貝塔衰變
+以下介紹幾個主要的貝塔衰變。
 
 #### 碳-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$

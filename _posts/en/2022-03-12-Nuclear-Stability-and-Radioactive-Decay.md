@@ -66,7 +66,8 @@ Often, the *daughter nuclide* formed through beta decay is also unstable and und
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
 
-Below are some important beta decay chains.
+### Important Beta Decays
+Below are some important beta decays.
 
 #### Carbon-14
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
