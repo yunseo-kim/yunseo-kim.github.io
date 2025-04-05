@@ -97,7 +97,7 @@ $$ y_1 = e^{-(a/2)x} $$
 
 為了找到基底，我們需要找到與 $y_1$ 線性獨立的第二個解 $y_2$。
 
-在這種情況下，我們可以使用之前學過的[降階法](/posts/homogeneous-linear-odes-of-second-order/#降階法-reduction-of-order)。假設第二個解的形式為 $y_2=uy_1$，則
+在這種情況下，我們可以使用之前學過的[降階法](/posts/homogeneous-linear-odes-of-second-order/#降階法reduction-of-order)。假設第二個解的形式為 $y_2=uy_1$，則
 
 $$ \begin{align*}
 y_2 &= uy_1, \\

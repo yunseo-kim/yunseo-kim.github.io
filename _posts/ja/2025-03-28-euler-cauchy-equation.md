@@ -86,7 +86,7 @@ $$ y_1 = x^{(1-a)/2} $$
 
 $$ y^{\prime\prime} + \frac{a}{x}y^{\prime} + \frac{(1-a)^2}{4x^2}y = 0 \label{eqn:standard_form}\tag{5} $$
 
-の形になる。ここで線形独立なもう一つの解 $y_2$を[次数低減法](/posts/homogeneous-linear-odes-of-second-order/#次数低減法-reduction-of-order)を用いて求めよう。
+の形になる。ここで線形独立なもう一つの解 $y_2$を[階数低下法](/posts/homogeneous-linear-odes-of-second-order/#次数低下法-reduction-of-order)を用いて求めよう。
 
 求めたい二番目の解を $y_2=uy_1$とすると
 
