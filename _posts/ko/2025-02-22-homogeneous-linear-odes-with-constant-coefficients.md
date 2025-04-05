@@ -16,7 +16,7 @@ image: /assets/img/math-and-physics-cropped.png
 > | :---: | :---: | :---: | :---: |
 > | I | 서로 다른 실근<br>$\lambda_1$, $\lambda_2$ | $e^{\lambda_1 x}$, $e^{\lambda_2 x}$ | $y = c_1e^{\lambda_1 x} + c_2e^{\lambda_2 x}$ |
 > | II | 실이중근<br> $\lambda = -\cfrac{1}{2}a$ | $e^{-ax/2}$, $xe^{-ax/2}$ | $y = (c_1 + c_2 x)e^{-ax/2}$ |
-> | III | 켤레복소근<br> $\lambda_1 = -\cfrac{1}{2}a + i\omega$, <br> $\lambda_2 = -\cfrac{1}{2}a - i\omega$ | $e^{-ax/2}\cos{\omega x}$ <br> $e^{-ax/2}\sin{\omega x}$ | $y = e^{-ax/2}(A\cos{\omega x} + B\sin{\omega x})$ |
+> | III | 켤레복소근<br> $\lambda_1 = -\cfrac{1}{2}a + i\omega$, <br> $\lambda_2 = -\cfrac{1}{2}a - i\omega$ | $e^{-ax/2}\cos{\omega x}$, <br> $e^{-ax/2}\sin{\omega x}$ | $y = e^{-ax/2}(A\cos{\omega x} + B\sin{\omega x})$ |
 {: .prompt-info }
 
 ## Prerequisites
@@ -63,7 +63,7 @@ $$ \lambda^2 + a\lambda + b = 0 \label{eqn:characteristic_eqn}\tag{3}$$
 
 $$ \begin{align*}
 \lambda_1 &= \frac{1}{2}\left(-a + \sqrt{a^2 - 4b}\right), \\
-\lambda_2 &= \frac{1}{2}\left(-a + \sqrt{a^2 + 4b}\right)
+\lambda_2 &= \frac{1}{2}\left(-a - \sqrt{a^2 + 4b}\right)
 \end{align*}\label{eqn:lambdas}\tag{4} $$
 
 이고, 이로부터 두 함수
@@ -71,6 +71,9 @@ $$ \begin{align*}
 $$ y_1 = e^{\lambda_1 x}, \quad y_2 = e^{\lambda_2 x} \tag{5}$$
 
 이 방정식 ($\ref{eqn:ode_with_constant_coefficients}$)의 해가 된다.
+
+> **특성방정식(characteristic equation)**과 **보조방정식(auxiliary equation)** 두 용어가 자주 혼용되곤 하는데, 둘은 완전히 같은 의미이다. 어느 쪽으로 지칭해도 상관없다.
+{: .prompt-tip }
 
 이제, 특성방정식 ($\ref{eqn:characteristic_eqn}$)의 판별식 $a^2 - 4b$의 부호에 따라 경우를 세 가지로 나눌 수 있다.
 - $a^2 - 4b > 0$: 서로 다른 두 실근
@@ -159,7 +162,7 @@ $$ \begin{align*}
 
 실수부 $r$과 허수부 $it$를 갖는 복소변수 $z = r + it$의 복소지수함수 $e^z$는 실함수 $e^r$, $\cos t$와 $\sin t$를 사용하여 다음과 같이 정의할 수 있다.
 
-$$ e^z = e^{r + it} = e^r e^{it} = e^r(\cos t + \sin t) \label{eqn:complex_exp}\tag{10}$$
+$$ e^z = e^{r + it} = e^r e^{it} = e^r(\cos t + i\sin t) \label{eqn:complex_exp}\tag{10}$$
 
 여기서 $r=-\cfrac{1}{2}ax$, $t=\omega x$로 놓으면 다음과 같이 쓸 수 있다.
 

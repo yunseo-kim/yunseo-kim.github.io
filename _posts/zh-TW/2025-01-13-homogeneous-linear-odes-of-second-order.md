@@ -115,7 +115,7 @@ $$ y_1 = - \frac{k_2}{k_1}y_2 \quad \text{或} \quad y_2 = - \frac{k_1}{k_2}y_2 
 
 如果式 ($\ref{eqn:homogeneous_linear_ode}$) 在開區間 $I$ 上連續，則它必定有通解，且這個通解包含所有可能的特解。也就是說，在這種情況下，方程 ($\ref{eqn:homogeneous_linear_ode}$) 不會有無法從通解得到的奇解（singular solution）。
 
-## 降階法（reduction of order）
+## 降階法 （reduction of order）
 對於二階齊次常微分方程，如果能找到一個解，則可以通過解以下一階常微分方程來找到與這個解線性獨立的第二個解，即基底。這種方法稱為**降階法（reduction of order）**。
 
 對於<u>不是 $f(x)y^{\prime\prime}$ 而是 $y^{\prime\prime}$ 的標準形式</u>的二階齊次常微分方程
