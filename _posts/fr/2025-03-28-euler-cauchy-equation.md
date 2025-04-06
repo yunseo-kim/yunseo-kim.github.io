@@ -1,6 +1,6 @@
 ---
 title: Équation d'Euler-Cauchy
-description: Nous examinons comment la forme de la solution générale d'une équation différentielle ordinaire linéaire homogène à coefficients constants varie selon le signe du discriminant de l'équation caractéristique.
+description: Examinons la forme de la solution générale de l'équation d'Euler-Cauchy selon le signe du discriminant de l'équation auxiliaire.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
@@ -12,7 +12,7 @@ image: /assets/img/math-and-physics-cropped.png
 > - **Équation auxiliaire** : $m^2 + (a-1)m + b = 0$
 > - Selon le signe du discriminant $(1-a)^2 - 4b$ de l'équation auxiliaire, la forme de la solution générale peut être divisée en trois cas comme indiqué dans le tableau
 >
-> | Cas | Solutions de l'équation caractéristique | Base des solutions de l'EDO | Solution générale de l'EDO |
+> | Cas | Solutions de l'équation auxiliaire | Base des solutions de l'équation d'Euler-Cauchy | Solution générale de l'équation d'Euler-Cauchy |
 > | :---: | :---: | :---: | :---: |
 > | I | Racines réelles distinctes<br>$m_1$, $m_2$ | $x^{m_1}$, $x^{m_2}$ | $y = c_1 x^{m_1} + c_2 x^{m_2}$ |
 > | II | Racine réelle double<br> $m = \cfrac{1-a}{2}$ | $x^{(1-a)/2}$, $x^{(1-a)/2}\ln{x}$ | $y = (c_1 + c_2 \ln x)x^m$ |

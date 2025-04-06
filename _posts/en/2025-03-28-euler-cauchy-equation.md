@@ -1,6 +1,6 @@
 ---
 title: Euler-Cauchy Equation
-description: We examine how the general solution of a homogeneous linear ordinary differential equation with constant coefficients takes different forms depending on the sign of the discriminant of the characteristic equation.
+description: We examine how the general solution of the Euler-Cauchy equation takes different forms depending on the sign of the discriminant of the auxiliary equation.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
@@ -12,7 +12,7 @@ image: /assets/img/math-and-physics-cropped.png
 > - **Auxiliary equation**: $m^2 + (a-1)m + b = 0$
 > - The general solution can be categorized into three cases depending on the sign of the discriminant $(1-a)^2 - 4b$ of the auxiliary equation, as shown in the table
 >
-> | Case | Roots of the characteristic equation | Basis of solutions | General solution |
+> | Case | Roots of auxiliary equation | Basis for Euler-Cauchy equation solutions | General solution of Euler-Cauchy equation |
 > | :---: | :---: | :---: | :---: |
 > | I | Distinct real roots<br>$m_1$, $m_2$ | $x^{m_1}$, $x^{m_2}$ | $y = c_1 x^{m_1} + c_2 x^{m_2}$ |
 > | II | Real double root<br> $m = \cfrac{1-a}{2}$ | $x^{(1-a)/2}$, $x^{(1-a)/2}\ln{x}$ | $y = (c_1 + c_2 \ln x)x^m$ |

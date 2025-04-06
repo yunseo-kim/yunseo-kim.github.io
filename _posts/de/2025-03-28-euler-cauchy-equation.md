@@ -1,6 +1,6 @@
 ---
 title: Euler-Cauchy-Gleichung
-description: Wir untersuchen, welche Form die allgemeine Lösung einer homogenen linearen gewöhnlichen Differentialgleichung mit konstanten Koeffizienten annimmt, abhängig vom Vorzeichen der Diskriminante der charakteristischen Gleichung.
+description: Wir untersuchen, wie die allgemeine Lösung der Euler-Cauchy-Gleichung je nach Vorzeichen der Diskriminante der charakteristischen Gleichung verschiedene Formen annimmt.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
@@ -12,10 +12,10 @@ image: /assets/img/math-and-physics-cropped.png
 > - **Hilfsgleichung (auxiliary equation)**: $m^2 + (a-1)m + b = 0$
 > - Je nach Vorzeichen der Diskriminante der Hilfsgleichung $(1-a)^2 - 4b$ kann die allgemeine Lösung in drei Fälle unterteilt werden, wie in der Tabelle dargestellt
 >
-> | Fall | Lösungen der charakteristischen Gleichung | Basis der Lösungen der DGL | Allgemeine Lösung der DGL |
+> | Fall | Lösungen der Hilfsgleichung | Basis der Lösungen der Euler-Cauchy-Gleichung | Allgemeine Lösung der Euler-Cauchy-Gleichung |
 > | :---: | :---: | :---: | :---: |
 > | I | Verschiedene reelle Wurzeln<br>$m_1$, $m_2$ | $x^{m_1}$, $x^{m_2}$ | $y = c_1 x^{m_1} + c_2 x^{m_2}$ |
-> | II | Reelle Doppelwurzel<br> $m = \cfrac{1-a}{2}$ | $x^{(1-a)/2}$, $x^{(1-a)/2}\ln{x}$ | $y = (c_1 + c_2 \ln x)x^m$ |
+> | II | Reelle doppelte Wurzel<br> $m = \cfrac{1-a}{2}$ | $x^{(1-a)/2}$, $x^{(1-a)/2}\ln{x}$ | $y = (c_1 + c_2 \ln x)x^m$ |
 > | III | Konjugiert komplexe Wurzeln<br> $m_1 = \cfrac{1}{2}(1-a) + i\omega$, <br> $m_2 = \cfrac{1}{2}(1-a) - i\omega$ | $x^{(1-a)/2}\cos{(\omega \ln{x})}$, <br> $x^{(1-a)/2}\sin{(\omega \ln{x})}$ | $y = x^{(1-a)/2}[A\cos{(\omega \ln{x})} + B\sin{(\omega \ln{x})}]$ |
 {: .prompt-info }
 

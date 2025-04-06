@@ -1,6 +1,6 @@
 ---
 title: Equação de Euler-Cauchy
-description: Examinamos a forma da solução geral de equações diferenciais ordinárias lineares homogêneas com coeficientes constantes, dependendo do sinal do discriminante da equação característica.
+description: Examinamos como a solução geral da equação de Euler-Cauchy assume diferentes formas dependendo do sinal do discriminante da equação auxiliar.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
@@ -10,9 +10,9 @@ image: /assets/img/math-and-physics-cropped.png
 ## TL;DR
 > - Equação de Euler-Cauchy: $x^2y^{\prime\prime} + axy^{\prime} + by = 0$
 > - **Equação auxiliar**: $m^2 + (a-1)m + b = 0$
-> - A forma da solução geral pode ser dividida em três casos, dependendo do sinal do discriminante $(1-a)^2 - 4b$ da equação auxiliar, conforme mostrado na tabela
+> - A forma da solução geral pode ser dividida em três casos conforme o sinal do discriminante da equação auxiliar $(1-a)^2 - 4b$, como mostrado na tabela
 >
-> | Caso | Soluções da equação característica | Base de soluções da EDO | Solução geral da EDO |
+> | Caso | Raízes da equação auxiliar | Base das soluções da equação de Euler-Cauchy | Solução geral da equação de Euler-Cauchy |
 > | :---: | :---: | :---: | :---: |
 > | I | Raízes reais distintas<br>$m_1$, $m_2$ | $x^{m_1}$, $x^{m_2}$ | $y = c_1 x^{m_1} + c_2 x^{m_2}$ |
 > | II | Raiz real dupla<br> $m = \cfrac{1-a}{2}$ | $x^{(1-a)/2}$, $x^{(1-a)/2}\ln{x}$ | $y = (c_1 + c_2 \ln x)x^m$ |

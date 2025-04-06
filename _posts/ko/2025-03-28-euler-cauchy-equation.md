@@ -1,6 +1,6 @@
 ---
 title: 오일러-코시 방정식
-description: 특성방정식의 판별식의 부호에 따라, 각각의 경우에 상수계수 동차 선형 상미분방정식의 일반해가 어떤 형태를 띄는지 살펴본다.
+description: 보조방정식의 판별식의 부호에 따라, 각각의 경우에 오일러-코시 방정식의 일반해가 어떤 형태를 띄는지 살펴본다.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
@@ -12,7 +12,7 @@ image: /assets/img/math-and-physics-cropped.png
 > - **보조방정식(auxiliary equation)**: $m^2 + (a-1)m + b = 0$
 > - 보조방정식의 판별식 $(1-a)^2 - 4b$의 부호에 따라 일반해의 형태를 표와 같이 세 가지 경우로 나눌 수 있음
 >
-> | 경우 | 특성방정식의 해 | 상미분방정식의 해의 기저 | 상미분방정식의 일반해 |
+> | 경우 | 보조방정식의 해 | 오일러-코시 방정식의 해의 기저 | 오일러-코시 방정식의 일반해 |
 > | :---: | :---: | :---: | :---: |
 > | I | 서로 다른 실근<br>$m_1$, $m_2$ | $x^{m_1}$, $x^{m_2}$ | $y = c_1 x^{m_1} + c_2 x^{m_2}$ |
 > | II | 실이중근<br> $m = \cfrac{1-a}{2}$ | $x^{(1-a)/2}$, $x^{(1-a)/2}\ln{x}$ | $y = (c_1 + c_2 \ln x)x^m$ |

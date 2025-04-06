@@ -1,6 +1,6 @@
 ---
 title: 歐拉-柯西方程式
-description: 根據特徵方程式的判別式符號，探討常係數齊次線性常微分方程式的一般解在各種情況下呈現的形式。
+description: 根據輔助方程式的判別式符號，探討歐拉-柯西方程式的一般解在各種情況下呈現的形式。
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
@@ -10,9 +10,9 @@ image: /assets/img/math-and-physics-cropped.png
 ## TL;DR
 > - 歐拉-柯西方程式: $x^2y^{\prime\prime} + axy^{\prime} + by = 0$
 > - **輔助方程式(auxiliary equation)**: $m^2 + (a-1)m + b = 0$
-> - 根據輔助方程式的判別式 $(1-a)^2 - 4b$ 的符號，一般解的形式可分為下表所示的三種情況
+> - 根據輔助方程式的判別式 $(1-a)^2 - 4b$ 的符號，一般解的形式可分為以下三種情況
 >
-> | 情況 | 特徵方程式的解 | 常微分方程式解的基底 | 常微分方程式的一般解 |
+> | 情況 | 輔助方程式的解 | 歐拉-柯西方程式的解的基底 | 歐拉-柯西方程式的一般解 |
 > | :---: | :---: | :---: | :---: |
 > | I | 不同實根<br>$m_1$, $m_2$ | $x^{m_1}$, $x^{m_2}$ | $y = c_1 x^{m_1} + c_2 x^{m_2}$ |
 > | II | 實重根<br> $m = \cfrac{1-a}{2}$ | $x^{(1-a)/2}$, $x^{(1-a)/2}\ln{x}$ | $y = (c_1 + c_2 \ln x)x^m$ |

@@ -1,6 +1,6 @@
 ---
 title: オイラー・コーシー方程式
-description: 特性方程式の判別式の符号によって、それぞれの場合に定数係数同次線形常微分方程式の一般解がどのような形になるかを考察する。
+description: 補助方程式の判別式の符号に応じて、オイラー・コーシー方程式の一般解がどのような形になるかを考察する。
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
@@ -12,7 +12,7 @@ image: /assets/img/math-and-physics-cropped.png
 > - **補助方程式(auxiliary equation)**: $m^2 + (a-1)m + b = 0$
 > - 補助方程式の判別式 $(1-a)^2 - 4b$の符号によって一般解の形を表のように三つの場合に分けることができる
 >
-> | 場合 | 特性方程式の解 | 常微分方程式の解の基底 | 常微分方程式の一般解 |
+> | 場合 | 補助方程式の解 | オイラー・コーシー方程式の解の基底 | オイラー・コーシー方程式の一般解 |
 > | :---: | :---: | :---: | :---: |
 > | I | 異なる実根<br>$m_1$, $m_2$ | $x^{m_1}$, $x^{m_2}$ | $y = c_1 x^{m_1} + c_2 x^{m_2}$ |
 > | II | 実重根<br> $m = \cfrac{1-a}{2}$ | $x^{(1-a)/2}$, $x^{(1-a)/2}\ln{x}$ | $y = (c_1 + c_2 \ln x)x^m$ |
