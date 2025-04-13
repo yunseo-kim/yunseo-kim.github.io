@@ -156,14 +156,8 @@ def translate(filepath, source_lang, target_lang):
           while maintaining proper references to the specific sections in those posts. This ensures that cross-references 
           between posts maintain their semantic meaning and accurate linking after translation.</condition>
 
-        - <condition>Posts in this blog use the holocene calendar(인류력, 人類紀元) as the year numbering system, 
-          so the year and date notations such as followings are intentional, not typos.
-          - <example>12024년 6월 21일</example>
-          - <example>12024.10.31.</example>
-          - <example>11687년</example>
-          - <example>11800년대 말</example>
-          - <example>11960년대</example>
-          </condition>
+        - <condition>Posts in this blog use the holocene calendar, which is also known as Holocene Era(HE), ère holocène/era del holoceno/era holocena(EH), 인류력, 人類紀元, etc.,
+          as the year numbering system, and any 5-digit year notation is intentional, not a typo.</condition>
 
         <important>In any case, without exception, the output should contain only the translation results, without any text such as 
         "Here is the translation of the text provided, preserving the markdown format:" or something of that nature!!</important>"""
