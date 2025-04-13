@@ -60,7 +60,7 @@ $$ y = c_1y_1 + c_2y_2 \quad \text{(}c_1, c_2\text{は任意の定数)}\tag{3}$$
 
 このとき、次が成り立つ。
 
-> **重ね合わせの原理(superposition principle)**
+> **重ね合わせの原理(superposition principle)**  
 > 同次線形常微分方程式 ($\ref{eqn:homogeneous_linear_ode}$) について、開区間 $I$ で任意の二つの解の線形結合も同様に式 ($\ref{eqn:homogeneous_linear_ode}$) の解となる。つまり、与えられた同次線形常微分方程式に対する任意の解の和と定数倍もまたその方程式の解となる。
 {: .prompt-info }
 

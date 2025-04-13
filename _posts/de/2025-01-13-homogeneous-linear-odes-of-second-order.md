@@ -62,7 +62,7 @@ wird als **Linearkombination** von $y_1$ und $y_2$ bezeichnet.
 
 Dabei gilt Folgendes:
 
-> **Superpositionsprinzip**
+> **Superpositionsprinzip**  
 > Für die homogene lineare Differentialgleichung ($\ref{eqn:homogeneous_linear_ode}$) ist jede Linearkombination zweier beliebiger Lösungen auf einem offenen Intervall $I$ ebenfalls eine Lösung von Gleichung ($\ref{eqn:homogeneous_linear_ode}$). Das heißt, die Summe und das Vielfache beliebiger Lösungen der gegebenen homogenen linearen Differentialgleichung sind ebenfalls Lösungen dieser Gleichung.
 {: .prompt-info }
 

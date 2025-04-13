@@ -62,7 +62,7 @@ is called a **linear combination** of $y_1$ and $y_2$.
 
 The following principle holds:
 
-> **Superposition Principle**
+> **Superposition Principle**  
 > For a homogeneous linear differential equation ($\ref{eqn:homogeneous_linear_ode}$), any linear combination of two solutions in an open interval $I$ is also a solution to equation ($\ref{eqn:homogeneous_linear_ode}$). In other words, the sum and scalar multiple of any solutions to the given homogeneous linear differential equation are also solutions to that equation.
 {: .prompt-info }
 

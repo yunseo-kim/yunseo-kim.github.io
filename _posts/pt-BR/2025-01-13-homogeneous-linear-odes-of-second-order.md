@@ -62,7 +62,7 @@ $$ y = c_1y_1 + c_2y_2 \quad \text{(}c_1, c_2\text{ são constantes arbitrárias
 
 Neste caso, o seguinte princípio se aplica:
 
-> **Princípio da Superposição**
+> **Princípio da Superposição**  
 > Para uma EDO linear homogênea ($\ref{eqn:homogeneous_linear_ode}$), qualquer combinação linear de duas soluções em um intervalo aberto $I$ também é uma solução da equação ($\ref{eqn:homogeneous_linear_ode}$). Ou seja, a soma e o produto por constante de quaisquer soluções da EDO linear homogênea dada também são soluções da mesma equação.
 {: .prompt-info }
 

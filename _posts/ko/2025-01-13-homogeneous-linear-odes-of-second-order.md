@@ -60,7 +60,7 @@ $$ y = c_1y_1 + c_2y_2 \quad \text{(}c_1, c_2\text{는 임의의 상수)}\tag{3}
 
 이때 다음이 성립한다.
 
-> **중첩의 원리(superposition principle)**
+> **중첩의 원리(superposition principle)**  
 > 동차 선형 상미분방정식 ($\ref{eqn:homogeneous_linear_ode}$)에 대하여 열린 구간 $I$에서 임의의 두 해의 선형 결합은 마찬가지로 식 ($\ref{eqn:homogeneous_linear_ode}$)의 해가 된다. 즉, 주어진 동차 선형 상미분방정식에 대한 임의의 해들의 합과 상수곱 역시 해당 방정식의 해가 된다.
 {: .prompt-info }
 

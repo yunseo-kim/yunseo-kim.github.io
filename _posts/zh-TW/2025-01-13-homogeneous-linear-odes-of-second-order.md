@@ -60,7 +60,7 @@ $$ y = c_1y_1 + c_2y_2 \quad \text{（}c_1, c_2\text{為任意常數）}\tag{3}$
 
 此時，以下原理成立：
 
-> **疊加原理（superposition principle）**
+> **疊加原理（superposition principle）**  
 > 對於齊次線性常微分方程 ($\ref{eqn:homogeneous_linear_ode}$)，在開區間 $I$ 中任意兩個解的線性組合同樣是式 ($\ref{eqn:homogeneous_linear_ode}$) 的解。也就是說，給定齊次線性常微分方程的任意解的和與常數倍同樣是該方程的解。
 {: .prompt-info }
 

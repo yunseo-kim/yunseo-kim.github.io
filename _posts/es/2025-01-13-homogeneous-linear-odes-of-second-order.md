@@ -62,7 +62,7 @@ se llama **combinación lineal** de $y_1$ y $y_2$.
 
 En este caso, se cumple lo siguiente:
 
-> **Principio de superposición**
+> **Principio de superposición**  
 > Para una ecuación diferencial ordinaria lineal homogénea ($\ref{eqn:homogeneous_linear_ode}$), cualquier combinación lineal de dos soluciones en un intervalo abierto $I$ es también una solución de la ecuación ($\ref{eqn:homogeneous_linear_ode}$). Es decir, la suma y el producto por una constante de cualquier solución de la ecuación diferencial ordinaria lineal homogénea dada también son soluciones de dicha ecuación.
 {: .prompt-info }
 
