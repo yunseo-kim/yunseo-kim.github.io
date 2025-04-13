@@ -178,7 +178,7 @@ y_1^{\prime} & y_2^{\prime} \\
 >
 {: .prompt-info }
 
-> O Wronskiano foi introduzido pelo matemático polonês Józef Maria Hoene-Wroński e recebeu seu nome atual do matemático escocês Sir Thomas Muir em 12882 EC, após a morte de Wroński.
+> O Wronskiano foi introduzido pelo matemático polonês Józef Maria Hoene-Wroński e recebeu seu nome atual do matemático escocês Sir Thomas Muir em 11882 EH, após a morte de Wroński.
 {: .prompt-tip }
 
 ### Demonstração

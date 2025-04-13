@@ -178,7 +178,7 @@ y_1^{\prime} & y_2^{\prime} \\
 >
 {: .prompt-info }
 
-> Le Wronskien a été introduit par le mathématicien polonais Józef Maria Hoene-Wroński, et a reçu son nom actuel du mathématicien écossais Sir Thomas Muir en 11882 EC, après la mort de Wroński.
+> Le Wronskien a été introduit par le mathématicien polonais Józef Maria Hoene-Wroński, et a reçu son nom actuel du mathématicien écossais Sir Thomas Muir en 11882 EH, après la mort de Wroński.
 {: .prompt-tip }
 
 ### Démonstration
