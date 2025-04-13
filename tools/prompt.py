@@ -12,7 +12,7 @@ def submit_prompt(prompt, system_prompt):
     # print("- Submit prompt")
     with client.messages.stream(
         model="claude-3-7-sonnet-20250219",
-        max_tokens=8192,
+        max_tokens=16384,
         temperature=0,
         system=system_prompt,
         messages=[
@@ -40,7 +40,7 @@ def extract_hash_links(content):
     pattern = r'\[([^\]]+)\]\((/[^)]+)#([^)]+)\)'
     return re.findall(pattern, content)
 
-def get_post_content(post_path, source_lang):
+def get_post_content(post_path, target_lang):
     """Get content of a referenced post"""
     try:
         # Convert URL path format to file path format
@@ -53,7 +53,7 @@ def get_post_content(post_path, source_lang):
             clean_path = clean_path[6:] # len('posts/') = 6
         
         lang_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Taiwanese Mandarin":"zh-TW", "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
-        posts_dir = f"../_posts/{lang_code[source_lang]}"
+        posts_dir = f"../_posts/{lang_code[target_lang]}"
         
         # Check if the directory exists
         if not os.path.exists(posts_dir):
@@ -181,7 +181,7 @@ def translate(filepath, source_lang, target_lang):
         # print("Extracted hash links:")
         for link_text, post_path, hash_fragment in hash_links:
             # print(f"- {link_text} ({post_path}#{hash_fragment})")
-            post_content = get_post_content(post_path, source_lang)
+            post_content = get_post_content(post_path, target_lang)
             if post_content:
                 referenced_posts.append(f"\n\n<referenced_post path=\"{post_path}\" hash=\"{hash_fragment}\">\n{post_content}\n</referenced_post>")
         
