@@ -227,7 +227,7 @@ $$ y(x) = c_1y_1(x) + c_2y_2(x) $$
 
 由於方程 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) 是齊次線性的，根據[疊加原理](/posts/homogeneous-linear-odes-of-second-order/#疊加原理)，這個函數在區間 $I$ 上是方程 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) 的解。從式 ($\ref{eqn:linear_system}$) 可知，這個解滿足初始條件 $y(x_0)=0$、$y^{\prime}(x_0)=0$。
 
-另一方面，平凡解 $y^* \equiv 0$ 也滿足相同的初始條件 $y^*(x_0)=0$、${y^*}^{\prime}(x_0)=0$。由於方程 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) 的係數 $p$ 和 $q$ 是連續的，根據[初值問題解的存在性與唯一性定理](#初值問題解的存在性與唯一性定理)，解具有唯一性，因此 $y \equiv y^*$。即在區間 $I$ 上
+另一方面，平凡解 $y^\* \equiv 0$ 也滿足相同的初始條件 $y^\*(x\_0)=0$、${y^\*}^{\prime}(x\_0)=0$。由於方程 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) 的係數 $p$ 和 $q$ 是連續的，根據[初值問題解的存在性與唯一性定理](#初值問題解的存在性與唯一性定理)，解具有唯一性，因此 $y \equiv y^\*$。即在區間 $I$ 上
 
 $$ c_1y_1 + c_2y_2 \equiv 0 $$
 

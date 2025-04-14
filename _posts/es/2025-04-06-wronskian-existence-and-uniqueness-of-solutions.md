@@ -225,7 +225,7 @@ $$ y(x) = c_1y_1(x) + c_2y_2(x) $$
 
 Como la ecuación ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) es lineal homogénea, por el [principio de superposición](/posts/homogeneous-linear-odes-of-second-order/#principio-de-superposición), esta función es una solución de la ecuación ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) en el intervalo $I$. De la ecuación ($\ref{eqn:linear_system}$), podemos ver que esta solución satisface las condiciones iniciales $y(x_0)=0$ y $y^{\prime}(x_0)=0$.
 
-Por otro lado, existe la solución trivial $y^* \equiv 0$ que también satisface las mismas condiciones iniciales $y^*(x_0)=0$ y ${y^*}^{\prime}(x_0)=0$. Como los coeficientes $p$ y $q$ de la ecuación ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) son continuos, el [Teorema de existencia y unicidad para problemas de valor inicial](#teorema-de-existencia-y-unicidad-para-problemas-de-valor-inicial) garantiza la unicidad de la solución, por lo que $y \equiv y^*$. Es decir, en el intervalo $I$:
+Por otro lado, existe la solución trivial $y^\* \equiv 0$ que también satisface las mismas condiciones iniciales $y^\*(x_0)=0$ y ${y^\*}^{\prime}(x_0)=0$. Como los coeficientes $p$ y $q$ de la ecuación ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) son continuos, el [Teorema de existencia y unicidad para problemas de valor inicial](#teorema-de-existencia-y-unicidad-para-problemas-de-valor-inicial) garantiza la unicidad de la solución, por lo que $y \equiv y^\*$. Es decir, en el intervalo $I$:
 
 $$ c_1y_1 + c_2y_2 \equiv 0 $$
 

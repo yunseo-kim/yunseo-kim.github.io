@@ -225,7 +225,7 @@ $$ y(x) = c_1y_1(x) + c_2y_2(x) $$
 
 Since equation ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) is homogeneous and linear, by the [superposition principle](/posts/homogeneous-linear-odes-of-second-order/#superposition-principle), this function is a solution to equation ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) on interval $I$. From equation ($\ref{eqn:linear_system}$), this solution satisfies the initial conditions $y(x_0)=0$, $y^{\prime}(x_0)=0$.
 
-However, the trivial solution $y^* \equiv 0$ also satisfies the same initial conditions $y^*(x_0)=0$, ${y^*}^{\prime}(x_0)=0$. Since the coefficients $p$ and $q$ in equation ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) are continuous, the [Existence and Uniqueness Theorem for Initial Value Problems](#existence-and-uniqueness-theorem-for-initial-value-problems) guarantees that the solution is unique, so $y \equiv y^*$. This means that on interval $I$:
+However, the trivial solution $y^\* \equiv 0$ also satisfies the same initial conditions $y^\*(x_0)=0$, ${y^\*}^{\prime}(x_0)=0$. Since the coefficients $p$ and $q$ in equation ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) are continuous, the [Existence and Uniqueness Theorem for Initial Value Problems](#existence-and-uniqueness-theorem-for-initial-value-problems) guarantees that the solution is unique, so $y \equiv y^\*$. This means that on interval $I$:
 
 $$ c_1y_1 + c_2y_2 \equiv 0 $$
 

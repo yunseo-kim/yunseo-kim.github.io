@@ -225,7 +225,7 @@ $$ y(x) = c_1y_1(x) + c_2y_2(x) $$
 
 Da die Differentialgleichung ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) homogen und linear ist, ist diese Funktion nach dem [Superpositionsprinzip](/posts/homogeneous-linear-odes-of-second-order/#superpositionsprinzip) eine Lösung der Gleichung ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) auf dem Intervall $I$. Aus Gleichung ($\ref{eqn:linear_system}$) folgt, dass diese Lösung die Anfangsbedingungen $y(x_0)=0$ und $y^{\prime}(x_0)=0$ erfüllt.
 
-Andererseits existiert die triviale Lösung $y^* \equiv 0$, die dieselben Anfangsbedingungen $y^*(x_0)=0$ und ${y^*}^{\prime}(x_0)=0$ erfüllt. Da die Koeffizienten $p$ und $q$ der Differentialgleichung ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) stetig sind, garantiert der [Existenz- und Eindeutigkeitssatz für Anfangswertprobleme](#existenz--und-eindeutigkeitssatz-für-anfangswertprobleme) die Eindeutigkeit der Lösung, und daher gilt $y \equiv y^*$. Das bedeutet, dass auf dem Intervall $I$
+Andererseits existiert die triviale Lösung $y^\* \equiv 0$, die dieselben Anfangsbedingungen $y^\*(x_0)=0$ und ${y^\*}^{\prime}(x_0)=0$ erfüllt. Da die Koeffizienten $p$ und $q$ der Differentialgleichung ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) stetig sind, garantiert der [Existenz- und Eindeutigkeitssatz für Anfangswertprobleme](#existenz--und-eindeutigkeitssatz-für-anfangswertprobleme) die Eindeutigkeit der Lösung, und daher gilt $y \equiv y^\*$. Das bedeutet, dass auf dem Intervall $I$
 
 $$ c_1y_1 + c_2y_2 \equiv 0 $$
 

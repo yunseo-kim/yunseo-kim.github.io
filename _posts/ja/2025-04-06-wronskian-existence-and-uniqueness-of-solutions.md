@@ -227,7 +227,7 @@ $$ y(x) = c_1y_1(x) + c_2y_2(x) $$
 
 を導入します。方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)が同次線形であるため、[重ね合わせの原理](/posts/homogeneous-linear-odes-of-second-order/#重ね合わせの原理)によりこの関数は区間 $I$で ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)の解となります。式 ($\ref{eqn:linear_system}$)からこの解は初期条件 $y(x_0)=0$、$y^{\prime}(x_0)=0$を満たすことがわかります。
 
-一方、同じ初期条件 $y^\*(x_0)=0$、${y^\*}^{\prime}(x_0)=0$を満たす自明解 $y^* \equiv 0$が存在します。方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)の係数 $p$と $q$が連続であるため、[初期値問題の解の存在性と一意性の定理](#初期値問題の解の存在性と一意性の定理)により解の一意性が保証され、したがって $y \equiv y^\*$です。つまり、区間 $I$で
+一方、同じ初期条件 $y^\*(x_0)=0$、${y^\*}^{\prime}(x_0)=0$を満たす自明解 $y^\* \equiv 0$が存在します。方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)の係数 $p$と $q$が連続であるため、[初期値問題の解の存在性と一意性の定理](#初期値問題の解の存在性と一意性の定理)により解の一意性が保証され、したがって $y \equiv y^\*$です。つまり、区間 $I$で
 
 $$ c_1y_1 + c_2y_2 \equiv 0 $$
 

@@ -227,7 +227,7 @@ $$ y(x) = c_1y_1(x) + c_2y_2(x) $$
 
 를 도입하자. 방정식 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)이 동차 선형이므로 [중첩의 원리](/posts/homogeneous-linear-odes-of-second-order/#중첩의-원리)에 의해 이 함수는 구간 $I$에서 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)의 해가 된다. 식 ($\ref{eqn:linear_system}$)로부터 이 해는 초기조건 $y(x_0)=0$, $y^{\prime}(x_0)=0$을 만족함을 알 수 있다.
 
-한편, 동일한 초기조건 $y^\*(x_0)=0$, ${y^\*}^{\prime}(x_0)=0$을 만족하는 자명해 $y^* \equiv 0$이 존재한다. 방정식 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)의 계수 $p$와 $q$가 연속이기 때문에 [초기값 문제의 해의 존재성과 유일성의 정리](#초기값-문제의-해의-존재성과-유일성의-정리)에 의해 해의 유일성이 보장되며, 따라서 $y \equiv y^\*$이다. 즉, 구간 $I$에서
+한편, 동일한 초기조건 $y^\*(x_0)=0$, ${y^\*}^{\prime}(x_0)=0$을 만족하는 자명해 $y^\* \equiv 0$이 존재한다. 방정식 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)의 계수 $p$와 $q$가 연속이기 때문에 [초기값 문제의 해의 존재성과 유일성의 정리](#초기값-문제의-해의-존재성과-유일성의-정리)에 의해 해의 유일성이 보장되며, 따라서 $y \equiv y^\*$이다. 즉, 구간 $I$에서
 
 $$ c_1y_1 + c_2y_2 \equiv 0 $$
 
