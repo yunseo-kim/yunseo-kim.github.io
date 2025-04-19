@@ -1,6 +1,6 @@
 ---
-title: ロンスキアン(Wronskian)、解の存在と一意性
-description: 連続な任意の変数係数を持つ2階同次線形常微分方程式について、初期値問題の解の存在性と一意性の定理、ロンスキアン(Wronskian)を用いた解の線形従属/線形独立の判別法を学ぶ。また、これを用いてこのような形の方程式は常に一般解を持ち、この一般解は方程式のすべての解を含むことを示す。
+title: ロンスキアン（Wronskian）、解の存在と一意性
+description: 連続な任意の変数係数を持つ2階同次線形常微分方程式について、初期値問題の解の存在性と一意性の定理、ロンスキアン（Wronskian）を用いた解の線形従属/線形独立の判別法を学ぶ。また、これを用いてこの形の方程式は常に一般解を持ち、この一般解は方程式のすべての解を含むことを示す。
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
@@ -16,11 +16,11 @@ image: /assets/img/math-and-physics-cropped.png
 >
 > $$ y(x_0)=K_0, \qquad y^{\prime}(x_0)=K_1 $$
 >
-> について、次の4つの定理が成り立つ。
+> について、次の4つの定理が成立する。
 > 1. **初期値問題の解の存在性と一意性の定理**: 与えられた方程式および初期条件で構成される初期値問題は区間 $I$で唯一の解 $y(x)$を持つ。
-> 2. **ロンスキアン(Wronskian)を用いた解の線形従属/線形独立の判別**: 方程式の二つの解 $y_1$と $y_2$について、区間 $I$内に**ロンスキアン(Wronskian)** $W(y_1, y_2) = y_1y_2^{\prime} - y_2y_1^{\prime}$の値が $0$となる $x_0$が存在するならば、二つの解は線形従属である。また、区間 $I$内に $W\neq 0$となる $x_1$が存在するならば、二つの解は線形独立である。
+> 2. **ロンスキアン（Wronskian）を用いた解の線形従属/線形独立の判別**: 方程式の二つの解 $y_1$と $y_2$について、区間 $I$内に**ロンスキアン（Wronskian）** $W(y_1, y_2) = y_1y_2^{\prime} - y_2y_1^{\prime}$の値が $0$となる $x_0$が存在するならば、二つの解は線形従属である。また、区間 $I$内に $W\neq 0$となる $x_1$が存在するならば、二つの解は線形独立である。
 > 3. **一般解の存在**: 与えられた方程式は区間 $I$で一般解を持つ。
-> 4. **特異解の非存在**: この一般解は方程式のすべての解を含む（つまり、特異解は存在しない）。
+> 4. **特異解の非存在**: この一般解は方程式のすべての解を含む（つまり、特異解が存在しない）。
 {: .prompt-info }
 
 ## Prerequisites
@@ -32,7 +32,7 @@ image: /assets/img/math-and-physics-cropped.png
 
 ## 連続な任意の変数係数を持つ同次線形常微分方程式
 前回[定数係数を持つ2階同次線形常微分方程式](/posts/homogeneous-linear-odes-with-constant-coefficients/)と[オイラー・コーシー方程式](/posts/euler-cauchy-equation/)の一般解を学びました。
-この記事では議論をより一般的な場合に拡張し、連続な任意の**変数係数(variable coefficient)** $p$と $q$を持つ2階同次線形常微分方程式
+この記事では議論をより一般的な場合に拡張し、連続な任意の**変数係数（variable coefficient）** $p$と $q$を持つ2階同次線形常微分方程式
 
 $$ y^{\prime\prime} + p(x)y^{\prime} + q(x)y = 0 \label{eqn:homogeneous_linear_ode_with_var_coefficients}\tag{1} $$
 
@@ -40,17 +40,17 @@ $$ y^{\prime\prime} + p(x)y^{\prime} + q(x)y = 0 \label{eqn:homogeneous_linear_o
 
 $$ y(x_0)=K_0, \qquad y^{\prime}(x_0)=K_1 \label{eqn:initial_conditions}\tag{2} $$
 
-で構成される[初期値問題](/posts/homogeneous-linear-odes-of-second-order/#初期値問題と初期条件)の一意性も調べます。
+で構成される[初期値問題](/posts/homogeneous-linear-odes-of-second-order/#初期値問題と初期条件)の一意性も検討します。
 
-結論から先に言えば、連続な係数を持つ<u>線形</u>常微分方程式は*特異解(singular solution)*（一般解から得られない解）を持たないということがここで扱う内容の核心です。
+結論から先に言えば、連続な係数を持つ<u>線形</u>常微分方程式は*特異解（singular solution）*（一般解から得られない解）を持たないということがここで扱う内容の核心です。
 
 ## 初期値問題の解の存在性と一意性の定理
-> **初期値問題の解の存在性と一意性の定理(Existence and Uniqueness Theorem for Initial Value Problems)**  
+> **初期値問題の解の存在性と一意性の定理（Existence and Uniqueness Theorem for Initial Value Problems）**  
 > もし $p(x)$と $q(x)$がある開区間 $I$で連続関数であり、$x_0$が区間 $I$内にあるならば、式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)と ($\ref{eqn:initial_conditions}$)で構成される初期値問題は区間 $I$で唯一の解 $y(x)$を持つ。
 {: .prompt-info }
 
 存在性に関する証明はここでは扱わず、一意性の証明のみを見ていきます。通常、一意性を証明する方が存在性を証明するよりも簡単です。  
-証明に興味がない場合は、この部分をスキップして[解の線形従属と線形独立](#解の線形従属と線形独立)に進んでも構いません。
+証明に興味がなければ、この部分をスキップして[解の線形従属と線形独立](#解の線形従属と線形独立)に進んでも構いません。
 
 ### 一意性の証明
 常微分方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)と初期条件 ($\ref{eqn:initial_conditions}$)で構成される初期値問題が区間 $I$で二つの解 $y_1(x)$と $y_2(x)$を持つと仮定します。これら二つの解の差
@@ -82,7 +82,7 @@ $$ y^{\prime\prime} = -py^{\prime} - qy $$
 
 $$ z^{\prime} = 2yy^{\prime} - 2p{y^{\prime}}^2 - 2qyy^{\prime} \label{eqn:z_prime}\tag{4} $$
 
-を得ます。ここで $y$と $y^{\prime}$が実数であるため
+となります。ここで $y$と $y^{\prime}$が実数であるため
 
 $$ (y\pm y^{\prime})^2 = y^2 \pm 2yy^{\prime} + {y^{\prime}}^2 \geq 0 $$
 
@@ -90,7 +90,7 @@ $$ (y\pm y^{\prime})^2 = y^2 \pm 2yy^{\prime} + {y^{\prime}}^2 \geq 0 $$
 
 $$ (a)\ 2yy^{\prime} \leq y^2 + {y^{\prime}}^2 = z, \qquad (b)\ 2yy^{\prime} \geq -(y^2 + {y^{\prime}}^2) = -z \label{eqn:inequalities}\tag{5} $$
 
-を得ることができます。これら二つの不等式から $\|2yy^{\prime}\|\leq z$であることがわかり、式 ($\ref{eqn:z_prime}$)の最後の項については次の不等式が成り立ちます。
+を得ることができます。これら二つの不等式から $\|2yy^{\prime}\|\leq z$であることがわかり、式 ($\ref{eqn:z_prime}$)の最後の項については次の不等式が成立します。
 
 $$ \pm2qyy^{\prime} \leq |\pm 2qyy^{\prime}| = |q||2yy^{\prime}| \leq |q|z. $$
 
@@ -102,7 +102,7 @@ $$ z^{\prime} \leq z + 2|p|{y^{\prime}}^2 + |q|z $$
 
 $$ z^{\prime} \leq (1 + 2|p| + |q|)z $$
 
-を得て、括弧内の関数を $h = 1 + 2\|p\| + \|q\|$とすると
+を得て、括弧内の関数を $h = 1 + 2\|p\| + \|q\|$とおくと
 
 $$ z^{\prime} \leq hz \quad \forall x \in I \label{eqn:inequality_6a}\tag{6a}$$
 
@@ -132,7 +132,7 @@ $$ \begin{cases}
 \left(F_1 z \leq (F_1 z)_{x_0} = 0\right)\ \& \ \left(F_2 z \geq (F_2 z)_{x_0} = 0\right) & (x \geq x_0)
 \end{cases} $$
 
-となります。最後に不等式の両辺を正の値 $F_1$と $F_2$で割ると、次のように解の一意性を示すことができます。
+となります。最後に不等式の両辺を正の $F_1$と $F_2$で割ると、次のように解の一意性を示すことができます。
 
 $$ (z \leq 0) \ \& \ (z \geq 0) \quad \forall x \in I $$
 
@@ -141,11 +141,11 @@ $$ z = y^2 + {y^{\prime}}^2 = 0 \quad \forall x \in I $$
 $$ \therefore y \equiv y_1 - y_2 \equiv 0 \quad \forall x \in I. \ \blacksquare $$
 
 ## 解の線形従属と線形独立
-[2階同次線形常微分方程式](/posts/homogeneous-linear-odes-of-second-order/#基底と一般解)で扱った内容を少し思い出しましょう。開区間 $I$での一般解は $I$での**基底(basis)** $y_1$、$y_2$、つまり線形独立な解のペアから作られます。ここで $y_1$と $y_2$が区間 $I$で**線形独立(linearly independent)**であるとは、区間内のすべての $x$について次を満たすことを意味します。
+[2階同次線形常微分方程式](/posts/homogeneous-linear-odes-of-second-order/#基底と一般解)で扱った内容を少し思い出しましょう。開区間 $I$での一般解は $I$での**基底（basis）** $y_1$、$y_2$、つまり線形独立な解のペアから作られます。ここで $y_1$と $y_2$が区間 $I$で**線形独立（linearly independent）**であるとは、区間内のすべての $x$について次を満たすことを意味します。
 
 $$ k_1y_1(x) + k_2y_2(x) = 0 \Leftrightarrow k_1=0\text{かつ }k_2=0 \label{eqn:linearly_independent}\tag{8} $$
 
-もし上記を満たさず、少なくとも一つの $0$でない $k_1$、$k_2$について $k_1y_1(x) + k_2y_2(x) = 0$が成り立つ場合、$y_1$と $y_2$は区間 $I$で**線形従属(linearly dependent)**です。この場合、区間 $I$のすべての $x$について
+もし上記を満たさず、少なくとも一つの $0$でない $k_1$、$k_2$について $k_1y_1(x) + k_2y_2(x) = 0$が成立する場合、$y_1$と $y_2$は区間 $I$で**線形従属（linearly dependent）**です。この場合、区間 $I$のすべての $x$について
 
 $$ \text{(a) } y_1 = ky_2 \quad \text{または} \quad \text{(b) } y_2 = ly_1 \label{eqn:linearly_dependent}\tag{9}$$
 
@@ -153,8 +153,8 @@ $$ \text{(a) } y_1 = ky_2 \quad \text{または} \quad \text{(b) } y_2 = ly_1 \l
 
 ここで次の解の線形独立/線形従属の判別法を見ていきましょう。
 
-> **ロンスキアン(Wronskian)を用いた解の線形従属/線形独立の判別**  
-> **i.** 常微分方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)が開区間 $I$で連続な係数 $p(x)$と $q(x)$を持つならば、区間 $I$で方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)の二つの解 $y_1$と $y_2$が線形従属となるための必要十分条件は、これらの解の*ロンスキー行列式(Wronski determinant)*、略して**ロンスキアン(Wronskian)**と呼ばれる次の行列式
+> **ロンスキアン（Wronskian）を用いた解の線形従属/線形独立の判別**  
+> **i.** 常微分方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)が開区間 $I$で連続な係数 $p(x)$と $q(x)$を持つならば、区間 $I$で方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)の二つの解 $y_1$と $y_2$が線形従属となるための必要十分条件は、これらの解の*ロンスキー行列式（Wronski determinant）*、略して**ロンスキアン（Wronskian）**と呼ばれる次の行列式
 >
 > $$ W(y_1, y_2) = 
 \begin{vmatrix}
@@ -180,23 +180,23 @@ y_1^{\prime} & y_2^{\prime} \\
 >
 {: .prompt-info }
 
-> ロンスキアンはポーランドの数学者ユゼフ・マリア・ホエネ＝ヴロンスキ(Józef Maria Hoene-Wroński)によって初めて導入され、彼の死後の11882 HEにスコットランドの数学者トーマス・ミュア(Sir Thomas Muir)によって現在の名前が付けられました。
+> ロンスキアンはポーランドの数学者ユゼフ・マリア・ホエネ＝ヴロンスキ（Józef Maria Hoene-Wroński）によって初めて導入され、彼の死後の11882 HEにスコットランドの数学者トーマス・ミュア（Sir Thomas Muir）によって現在の名前が付けられました。
 {: .prompt-tip }
 
 ### 証明
 #### i. (a)
-区間 $I$で $y_1$と $y_2$が線形従属であるとします。すると区間 $I$で式 ($\ref{eqn:linearly_dependent}$a)または($\ref{eqn:linearly_dependent}$b)が成り立ちます。もし式 ($\ref{eqn:linearly_dependent}$a)が成り立つならば
+区間 $I$で $y_1$と $y_2$が線形従属であるとします。すると区間 $I$で式 ($\ref{eqn:linearly_dependent}$a)または($\ref{eqn:linearly_dependent}$b)が成立します。もし式 ($\ref{eqn:linearly_dependent}$a)が成立するなら
 
 $$ W(y_1, y_2) = y_1y_2^{\prime} - y_2y_1^{\prime} = ky_2ky_2^{\prime} - y_2ky_2^{\prime} = 0 $$
 
-となり、同様に式 ($\ref{eqn:linearly_dependent}$b)が成り立つ場合も
+となり、同様に式 ($\ref{eqn:linearly_dependent}$b)が成立する場合も
 
 $$ W(y_1, y_2) = y_1y_2^{\prime} - y_2y_1^{\prime} = y_1ly_1^{\prime} - ly_1y_1^{\prime} = 0 $$
 
 となるため、<u>区間 $I$内のすべての $x$について</u>ロンスキアン $W(y_1, y_2)=0$であることが確認できます。
 
 #### i. (b)
-逆に、ある $x = x_0$で $W(y_1, y_2)=0$である場合、区間 $I$で $y_1$と $y_2$が線形従属となることを示します。未知数 $k_1$、$k_2$に関する線形連立方程式
+逆に、ある $x = x_0$で $W(y_1, y_2)=0$であるとき、区間 $I$で $y_1$と $y_2$が線形従属となることを示します。未知数 $k_1$、$k_2$に関する線形連立方程式
 
 $$ \begin{gather*}
 k_1y_1(x_0) + k_2y_2(x_0) = 0 \\
@@ -221,7 +221,7 @@ y_1(x_0) & y_2(x_0) \\
 y_1^{\prime}(x_0) & y_2^{\prime}(x_0)
 \end{matrix}\right] $$
 
-であり、この行列の行列式はすなわち $W(y_1(x_0), y_2(x_0))$です。$\det(A) = W=0$であるため、$A$は**逆行列(inverse matrix)**が存在しない**特異行列(singular matrix)**であり、したがって連立方程式 ($\ref{eqn:linear_system}$)は $k_1$と $k_2$の少なくとも一方は $0$でないゼロベクトル $(0,0)$以外の解 $(c_1, c_2)$を持ちます。ここで関数
+であり、この行列の行列式はまさに $W(y_1(x_0), y_2(x_0))$です。$\det(A) = W=0$であるため、$A$は**逆行列（inverse matrix）**が存在しない**特異行列（singular matrix）**であり、したがって連立方程式 ($\ref{eqn:linear_system}$)は $k_1$と $k_2$の少なくとも一方は $0$でないゼロベクトル $(0,0)$以外の解 $(c_1, c_2)$を持ちます。ここで関数
 
 $$ y(x) = c_1y_1(x) + c_2y_2(x) $$
 
@@ -250,19 +250,19 @@ $$ y_1(x_0) = 1, \qquad y_1^{\prime}(x_0) = 0 $$
 
 $$ y_2(x_0) = 0, \qquad y_2^{\prime}(x_0) = 1 $$
 
-を満たす解 $y_2(x)$を持ちます。これら二つの解のロンスキアンは $x=x_0$で0でない値
+を満たす解 $y_2(x)$を持ちます。これら二つの解のロンスキアンは $x=x_0$で$0$でない値
 
 $$ W(y_1(x_0), y_2(x_0)) = y_1(x_0)y_2^{\prime}(x_0) - y_2(x_0)y_1^{\prime}(x_0) = 1\cdot 1 - 0\cdot 0 = 1 $$
 
-を持つため、[ロンスキアン(Wronskian)を用いた解の線形従属/線形独立の判別](#解の線形従属と線形独立)により区間 $I$で $y_1$と $y_2$は線形独立です。したがって、これら二つの解は区間 $I$で方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)の解の基底を形成し、任意の定数 $c_1$、$c_2$を持つ一般解 $y = c_1y_1 + c_2y_2$が区間 $I$で必ず存在します。$\blacksquare$
+を持つため、[ロンスキアン（Wronskian）を用いた解の線形従属/線形独立の判別](#解の線形従属と線形独立)により区間 $I$で $y_1$と $y_2$は線形独立です。したがって、これら二つの解は区間 $I$で方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)の解の基底を形成し、任意の定数 $c_1$、$c_2$を持つ一般解 $y = c_1y_1 + c_2y_2$が区間 $I$で必ず存在します。$\blacksquare$
 
 ### 特異解の非存在
 > 常微分方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)がある開区間 $I$で連続な係数 $p(x)$と $q(x)$を持つならば、区間 $I$での方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)のすべての解 $y=Y(x)$は
 >
 > $$ Y(x) = C_1y_1(x) + C_2y_2(x) \label{eqn:particular_solution}\tag{13}$$
 >
-> の形であり、ここで $y_1$、$y_2$は区間 $I$での方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)の解の基底であり、$C_1$、$C_2$は適当な定数である。  
-> つまり、方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)は一般解から得られない解である**特異解(singular solution)**を持たない。
+> の形であり、ここで $y_1$、$y_2$は区間 $I$での方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)の解の基底であり、$C_1$、$C_2$ は適当な定数である。  
+> つまり、方程式 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)は一般解から得られない解である**特異解（singular solution）**を持たない。
 {: .prompt-info }
 
 #### 証明
