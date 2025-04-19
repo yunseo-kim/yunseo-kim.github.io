@@ -56,7 +56,7 @@ Pour deux solutions quelconques $y$ et $y^\*$ de l'équation ($\ref{eqn:nonhomog
 $$ L[y - y^*] = L[y] - L[y^*] = r - r = 0.\ \blacksquare $$
 
 ## La solution générale englobe toutes les solutions
-Nous savons déjà que pour l'équation homogène ($\ref{eqn:homogeneous_linear_ode}$), [la solution générale englobe toutes les solutions possibles](/posts/wronskian-existence-and-uniqueness-of-solutions/#absence-de-solutions-singulières). Montrons que cela est également vrai pour l'équation non homogène ($\ref{eqn:nonhomogeneous_linear_ode}$).
+Nous savons déjà que pour l'équation homogène ($\ref{eqn:homogeneous_linear_ode}$), [la solution générale englobe toutes les solutions possibles](/posts/wronskian-existence-and-uniqueness-of-solutions/#la-solution-générale-englobe-toutes-les-solutions). Montrons que cela est également vrai pour l'équation non homogène ($\ref{eqn:nonhomogeneous_linear_ode}$).
 
 > **Théorème 2 : La solution générale de l'équation non homogène englobe toutes les solutions**  
 > Si les coefficients $p(x)$, $q(x)$ et la fonction d'entrée $r(x)$ de l'équation ($\ref{eqn:nonhomogeneous_linear_ode}$) sont continus sur un intervalle ouvert $I$, alors toute solution de l'équation ($\ref{eqn:nonhomogeneous_linear_ode}$) sur $I$ peut être obtenue à partir de la solution générale ($\ref{eqn:general_sol}$) en attribuant des valeurs appropriées aux constantes arbitraires $c_1$ et $c_2$ dans $y_h$.

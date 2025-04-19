@@ -20,7 +20,7 @@ image: /assets/img/math-and-physics-cropped.png
 > 1. **初值問題解的存在性與唯一性定理**：給定的方程式及初始條件所構成的初值問題在區間 $I$ 上具有唯一解 $y(x)$。
 > 2. **使用朗斯基行列式（Wronskian）判斷解的線性相依/線性獨立**：對於方程式的兩個解 $y_1$ 和 $y_2$，如果在區間 $I$ 內存在一點 $x_0$ 使得**朗斯基行列式（Wronskian）** $W(y_1, y_2) = y_1y_2^{\prime} - y_2y_1^{\prime}$ 的值為 $0$，則這兩個解是線性相依的。此外，如果在區間 $I$ 內存在一點 $x_1$ 使得 $W\neq 0$，則這兩個解是線性獨立的。
 > 3. **通解的存在**：給定的方程式在區間 $I$ 上具有通解。
-> 4. **特異解的不存在**：此通解包含方程式的所有解（即不存在特異解）。
+> 4. **奇異解的不存在**：此通解包含方程式的所有解（即不存在奇異解）。
 {: .prompt-info }
 
 ## Prerequisites
@@ -42,7 +42,7 @@ $$ y(x_0)=K_0, \qquad y^{\prime}(x_0)=K_1 \label{eqn:initial_conditions}\tag{2} 
 
 所構成的[初值問題](/posts/homogeneous-linear-odes-of-second-order/#初值問題和初始條件)的唯一性。
 
-先說結論，具有連續係數的<u>線性</u>常微分方程不具有*特異解（singular solution）*（無法從通解得到的解）是本文討論的核心。
+先說結論，具有連續係數的<u>線性</u>常微分方程不具有*奇異解（singular solution）*（無法從通解得到的解）是本文討論的核心。
 
 ## 初值問題解的存在性與唯一性定理
 > **初值問題解的存在性與唯一性定理（Existence and Uniqueness Theorem for Initial Value Problems）**  
@@ -256,13 +256,13 @@ $$ W(y_1(x_0), y_2(x_0)) = y_1(x_0)y_2^{\prime}(x_0) - y_2(x_0)y_1^{\prime}(x_0)
 
 因此，根據[使用朗斯基行列式（Wronskian）判斷解的線性相依/線性獨立](#解的線性相依與線性獨立)，在區間 $I$ 上 $y_1$ 和 $y_2$ 是線性獨立的。因此，這兩個解在區間 $I$ 上形成方程 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) 解的基底，且具有任意常數 $c_1$、$c_2$ 的通解 $y = c_1y_1 + c_2y_2$ 在區間 $I$ 上必然存在。$\blacksquare$
 
-### 特異解的不存在
+### 奇異解的不存在
 > 如果常微分方程 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) 在某個開區間 $I$ 上具有連續係數 $p(x)$ 和 $q(x)$，則區間 $I$ 上方程 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) 的所有解 $y=Y(x)$ 都具有
 >
 > $$ Y(x) = C_1y_1(x) + C_2y_2(x) \label{eqn:particular_solution}\tag{13}$$
 >
 > 的形式，其中 $y_1$、$y_2$ 是區間 $I$ 上方程 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) 解的基底，$C_1$、$C_2$ 是適當的常數。  
-> 也就是說，方程 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) 不具有無法從通解得到的解，即**特異解（singular solution）**。
+> 也就是說，方程 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$) 不具有無法從通解得到的解，即**奇異解（singular solution）**。
 {: .prompt-info }
 
 #### 證明
