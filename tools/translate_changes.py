@@ -21,7 +21,7 @@ def is_valid_file(filename):
 
 posts_dir = '../_posts/'
 source_lang = "Korean"
-target_langs = ["English", "Japanese", "Taiwanese Mandarin","Spanish", "Brazilian Portuguese", "French", "German"]
+target_langs = ["English", "Japanese", "Taiwanese Mandarin", "Spanish", "Brazilian Portuguese", "French", "German"]
 source_lang_code = "ko"
 target_lang_codes = ["en", "ja", "zh-TW", "es", "pt-BR", "fr", "de"]
 
