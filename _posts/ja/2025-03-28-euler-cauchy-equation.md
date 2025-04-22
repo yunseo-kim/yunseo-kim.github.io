@@ -1,6 +1,6 @@
 ---
 title: オイラー・コーシー方程式
-description: 補助方程式の判別式の符号に応じて、オイラー・コーシー方程式の一般解がどのような形になるかを考察する。
+description: 補助方程式の判別式の符号に応じて、それぞれの場合にオイラー・コーシー方程式の一般解がどのような形になるかを考察する。
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
@@ -15,7 +15,7 @@ image: /assets/img/math-and-physics-cropped.png
 > | 場合 | 補助方程式の解 | オイラー・コーシー方程式の解の基底 | オイラー・コーシー方程式の一般解 |
 > | :---: | :---: | :---: | :---: |
 > | I | 異なる実根<br>$m_1$, $m_2$ | $x^{m_1}$, $x^{m_2}$ | $y = c_1 x^{m_1} + c_2 x^{m_2}$ |
-> | II | 実重根<br> $m = \cfrac{1-a}{2}$ | $x^{(1-a)/2}$, $x^{(1-a)/2}\ln{x}$ | $y = (c_1 + c_2 \ln x)x^m$ |
+> | II | 重実根<br> $m = \cfrac{1-a}{2}$ | $x^{(1-a)/2}$, $x^{(1-a)/2}\ln{x}$ | $y = (c_1 + c_2 \ln x)x^m$ |
 > | III | 共役複素根<br> $m_1 = \cfrac{1}{2}(1-a) + i\omega$, <br> $m_2 = \cfrac{1}{2}(1-a) - i\omega$ | $x^{(1-a)/2}\cos{(\omega \ln{x})}$, <br> $x^{(1-a)/2}\sin{(\omega \ln{x})}$ | $y = x^{(1-a)/2}[A\cos{(\omega \ln{x})} + B\sin{(\omega \ln{x})}]$ |
 {: .prompt-info }
 
@@ -41,7 +41,7 @@ $$ x^2m(m-1)x^{m-2} + axmx^{m-1} + bx^m = 0, $$
 
 $$ [m(m-1) + am + b]x^m = 0 $$
 
-を得る。これから補助方程式
+を得る。これより補助方程式
 
 $$ m^2 + (a-1)m + b = 0 \label{eqn:auxiliary_eqn}\tag{2} $$
 
@@ -54,7 +54,7 @@ m_1 &= \frac{1}{2}\left[(1-a) + \sqrt{(1-a)^2 - 4b} \right], \\
 m_2 &= \frac{1}{2}\left[(1-a) - \sqrt{(1-a)^2 - 4b} \right]
 \end{align*}\label{eqn:m1_and_m2}\tag{3} $$
 
-となり、これから二つの関数
+となり、これより二つの関数
 
 $$ y_1 = x^{m_1}, \quad y_2 = x^{m_2}$$
 
@@ -86,9 +86,9 @@ $$ y_1 = x^{(1-a)/2} $$
 
 $$ y^{\prime\prime} + \frac{a}{x}y^{\prime} + \frac{(1-a)^2}{4x^2}y = 0 \label{eqn:standard_form}\tag{5} $$
 
-の形になる。ここで線形独立なもう一つの解 $y_2$を[階数低下法](/posts/homogeneous-linear-odes-of-second-order/#次数低下法-reduction-of-order)を用いて求めよう。
+の形になる。ここで線形独立なもう一つの解 $y_2$を[次数低下法](/posts/homogeneous-linear-odes-of-second-order/#次数低下法-reduction-of-order)を用いて求めよう。
 
-求めたい二番目の解を $y_2=uy_1$とすると
+求めたい二番目の解を $y_2=uy_1$とおくと
 
 $$ u = \int U, \qquad U = \frac{1}{y_1^2}\exp\left(-\int \frac{a}{x}\ dx \right) $$
 
@@ -100,7 +100,7 @@ $$ U = \frac{x^{-a}}{y_1^2} = \frac{x^{-a}}{x^{(1-a)}} = \frac{1}{x} $$
 
 となり、積分すると $u = \ln x$を得る。
 
-したがって $y_2 = uy_1 = y_1 \ln x$であり、$y_1$と $y_2$はその商が定数でないため線形独立である。基底 $y_1$と $y_2$に対応する一般解は
+したがって $y_2 = uy_1 = y_1 \ln x$であり、$y_1$と $y_2$はその比が定数ではないため線形独立である。基底 $y_1$と $y_2$に対応する一般解は
 
 $$ y = (c_1 + c_2 \ln x)x^m \label{eqn:general_sol_2}\tag{6}$$
 
@@ -122,10 +122,10 @@ $t=\sqrt{b - \frac{1}{4}(1-a)^2}\ln x$とおき、オイラーの公式 $e^{it} 
 
 $$ \begin{align*}
 x^{m_1} &= x^{(1-a)/2}\left[\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) + i\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right], \\
-x^{m_1} &= x^{(1-a)/2}\left[\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) - i\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right]
+x^{m_2} &= x^{(1-a)/2}\left[\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) - i\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right]
 \end{align*} \tag{8}$$
 
-であることがわかり、これから次の二つの実数解
+であることがわかり、これより次の二つの実数解
 
 $$ \begin{align*}
 \frac{x^{m_1} + x^{m_2}}{2} &= x^{(1-a)/2}\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right), \\
@@ -134,8 +134,21 @@ $$ \begin{align*}
 
 を得る。
 
-これらの商 $\cos\left(\sqrt{b - \frac{1}{4}(1-a)^2}\ln x \right)$が定数でないため、上記の二つの解は線形独立であり、したがって[重ね合わせの原理](/posts/homogeneous-linear-odes-of-second-order/#重ね合わせの原理)によりオイラー・コーシー方程式 ($\ref{eqn:euler_cauchy_eqn}$)の基底を形成する。これから次の実数一般解を得る。
+これらの比 $\cos\left(\sqrt{b - \frac{1}{4}(1-a)^2}\ln x \right)$が定数ではないため、上記の二つの解は線形独立であり、したがって[重ね合わせの原理](/posts/homogeneous-linear-odes-of-second-order/#重ね合わせの原理)によりオイラー・コーシー方程式 ($\ref{eqn:euler_cauchy_eqn}$)の基底を形成する。これより次の実数一般解を得る。
 
 $$ y = x^{(1-a)/2} \left[ A\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) + B\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right]. \label{eqn:general_sol_3}\tag{10}$$
 
-ただし、オイラー・コーシー方程式において補助方程式が共役複素根を持つ場合は、実質的な重要性はそれほど大きくない。
+ただし、オイラー・コーシー方程式において補助方程式が共役複素根を持つ場合は実質的な重要性はそれほど大きくない。
+
+## 定数係数を持つ2階同次線形常微分方程式への変換
+オイラー・コーシー方程式は変数変換によって[定数係数を持つ2階同次線形常微分方程式](/posts/homogeneous-linear-odes-with-constant-coefficients/)に変換することができる。
+
+$x = e^t$と変換すると
+
+$$ \frac{d}{dx} = \frac{1}{x}\frac{d}{dt}, \quad \frac{d^2}{dx^2} = \frac{1}{x^2}\left(\frac{d^2}{dt^2} - \frac{d}{dt} \right) $$
+
+となり、オイラー・コーシー方程式 ($\ref{eqn:euler_cauchy_eqn}$)は次のように $t$に関する定数係数同次線形常微分方程式に変わる。
+
+$$ y^{\prime\prime}(t) + (a-1)y^{\prime}(t) + by(t) = 0. \label{eqn:substituted}\tag{11} $$
+
+方程式 ($\ref{eqn:substituted}$)に[定数係数を持つ2階同次線形常微分方程式](/posts/homogeneous-linear-odes-with-constant-coefficients/)の解法を適用して $t$について解き、そうして得られた解を $t = \ln{x}$を用いて再び $x$に関する解に変換すると、[先ほど検討したのと同じ結果](#補助方程式の判別式の符号による一般解の形)が得られる。

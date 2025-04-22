@@ -1,6 +1,6 @@
 ---
 title: Équation d'Euler-Cauchy
-description: Examinons la forme de la solution générale de l'équation d'Euler-Cauchy selon le signe du discriminant de l'équation auxiliaire.
+description: Examinons comment la forme de la solution générale de l'équation d'Euler-Cauchy varie selon le signe du discriminant de l'équation auxiliaire.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
@@ -10,9 +10,9 @@ image: /assets/img/math-and-physics-cropped.png
 ## TL;DR
 > - Équation d'Euler-Cauchy : $x^2y^{\prime\prime} + axy^{\prime} + by = 0$
 > - **Équation auxiliaire** : $m^2 + (a-1)m + b = 0$
-> - Selon le signe du discriminant $(1-a)^2 - 4b$ de l'équation auxiliaire, la forme de la solution générale peut être divisée en trois cas comme indiqué dans le tableau
+> - La forme de la solution générale dépend du signe du discriminant $(1-a)^2 - 4b$ de l'équation auxiliaire, comme indiqué dans le tableau
 >
-> | Cas | Solutions de l'équation auxiliaire | Base des solutions de l'équation d'Euler-Cauchy | Solution générale de l'équation d'Euler-Cauchy |
+> | Cas | Racines de l'équation auxiliaire | Base des solutions de l'équation d'Euler-Cauchy | Solution générale de l'équation d'Euler-Cauchy |
 > | :---: | :---: | :---: | :---: |
 > | I | Racines réelles distinctes<br>$m_1$, $m_2$ | $x^{m_1}$, $x^{m_2}$ | $y = c_1 x^{m_1} + c_2 x^{m_2}$ |
 > | II | Racine réelle double<br> $m = \cfrac{1-a}{2}$ | $x^{(1-a)/2}$, $x^{(1-a)/2}\ln{x}$ | $y = (c_1 + c_2 \ln x)x^m$ |
@@ -29,25 +29,25 @@ L'**équation d'Euler-Cauchy** est une équation différentielle de la forme
 
 $$ x^2y^{\prime\prime} + axy^{\prime} + by = 0 \label{eqn:euler_cauchy_eqn}\tag{1} $$
 
-où $a$ et $b$ sont des constantes et $y(x)$ est une fonction inconnue. En substituant
+où $a$ et $b$ sont des constantes et $y(x)$ est la fonction inconnue. En substituant dans l'équation ($\ref{eqn:euler_cauchy_eqn}$)
 
 $$ y=x^m, \qquad y^{\prime}=mx^{m-1}, \qquad y^{\prime\prime}=m(m-1)x^{m-2} $$
 
-dans l'équation ($\ref{eqn:euler_cauchy_eqn}$), on obtient
+on obtient
 
 $$ x^2m(m-1)x^{m-2} + axmx^{m-1} + bx^m = 0, $$
 
-c'est-à-dire
+soit
 
 $$ [m(m-1) + am + b]x^m = 0 $$
 
-De là, on obtient l'équation auxiliaire
+Ce qui nous donne l'équation auxiliaire
 
 $$ m^2 + (a-1)m + b = 0 \label{eqn:auxiliary_eqn}\tag{2} $$
 
-et la condition nécessaire et suffisante pour que $y=x^m$ soit une solution de l'équation d'Euler-Cauchy ($\ref{eqn:euler_cauchy_eqn}$) est que $m$ soit une solution de l'équation auxiliaire ($\ref{eqn:auxiliary_eqn}$).
+La condition nécessaire et suffisante pour que $y=x^m$ soit une solution de l'équation d'Euler-Cauchy ($\ref{eqn:euler_cauchy_eqn}$) est que $m$ soit une racine de l'équation auxiliaire ($\ref{eqn:auxiliary_eqn}$).
 
-En résolvant l'équation quadratique ($\ref{eqn:auxiliary_eqn}$), on obtient
+Les racines de cette équation quadratique ($\ref{eqn:auxiliary_eqn}$) sont
 
 $$ \begin{align*}
 m_1 &= \frac{1}{2}\left[(1-a) + \sqrt{(1-a)^2 - 4b} \right], \\
@@ -60,33 +60,33 @@ $$ y_1 = x^{m_1}, \quad y_2 = x^{m_2}$$
 
 sont des solutions de l'équation ($\ref{eqn:euler_cauchy_eqn}$).
 
-Comme dans le cas des [équations différentielles ordinaires linéaires homogènes du second ordre à coefficients constants](/posts/homogeneous-linear-odes-with-constant-coefficients/), on peut distinguer trois cas selon le signe du discriminant $(1-a)^2 - 4b$ de l'équation auxiliaire ($\ref{eqn:auxiliary_eqn}$) :
+Comme pour les [équations différentielles ordinaires linéaires homogènes du second ordre à coefficients constants](/posts/homogeneous-linear-odes-with-constant-coefficients/), nous pouvons distinguer trois cas selon le signe du discriminant $(1-a)^2 - 4b$ de l'équation auxiliaire ($\ref{eqn:auxiliary_eqn}$) :
 - $(1-a)^2 - 4b > 0$ : deux racines réelles distinctes
 - $(1-a)^2 - 4b = 0$ : une racine réelle double
-- $(1-a)^2 - 4b < 0$ : racines complexes conjuguées
+- $(1-a)^2 - 4b < 0$ : deux racines complexes conjuguées
 
-## Forme de la solution générale selon le signe du discriminant de l'équation auxiliaire
+## Forme de la solution générale selon le signe du discriminant
 ### I. Deux racines réelles distinctes $m_1$ et $m_2$
-Dans ce cas, la base des solutions de l'équation ($\ref{eqn:euler_cauchy_eqn}$) sur n'importe quel intervalle est
+Dans ce cas, la base des solutions de l'équation ($\ref{eqn:euler_cauchy_eqn}$) sur tout intervalle est
 
 $$ y_1 = x^{m_1}, \quad y_2 = x^{m_2} $$
 
-et la solution générale correspondante est
+et la solution générale est
 
 $$ y = c_1 x^{m_1} + c_2 x^{m_2} \label{eqn:general_sol_1}\tag{4}$$
 
 ### II. Racine réelle double $m = \cfrac{1-a}{2}$
-Lorsque $(1-a)^2 - 4b = 0$, c'est-à-dire $b=\cfrac{(1-a)^2}{4}$, l'équation quadratique ($\ref{eqn:auxiliary_eqn}$) n'a qu'une seule solution $m = m_1 = m_2 = \cfrac{1-a}{2}$, et donc la seule solution de la forme $y = x^m$ que l'on peut obtenir est
+Lorsque $(1-a)^2 - 4b = 0$, c'est-à-dire $b=\cfrac{(1-a)^2}{4}$, l'équation quadratique ($\ref{eqn:auxiliary_eqn}$) n'a qu'une seule racine $m = m_1 = m_2 = \cfrac{1-a}{2}$, ce qui nous donne une solution de la forme
 
 $$ y_1 = x^{(1-a)/2} $$
 
-et l'équation d'Euler-Cauchy ($\ref{eqn:euler_cauchy_eqn}$) prend la forme
+et l'équation d'Euler-Cauchy ($\ref{eqn:euler_cauchy_eqn}$) devient
 
 $$ y^{\prime\prime} + \frac{a}{x}y^{\prime} + \frac{(1-a)^2}{4x^2}y = 0 \label{eqn:standard_form}\tag{5} $$
 
-Trouvons maintenant une autre solution linéairement indépendante $y_2$ en utilisant la [méthode de réduction d'ordre](/posts/homogeneous-linear-odes-of-second-order/#réduction-dordre).
+Trouvons maintenant une seconde solution linéairement indépendante $y_2$ en utilisant la [réduction d'ordre](/posts/homogeneous-linear-odes-of-second-order/#réduction-dordre).
 
-En posant la deuxième solution recherchée sous la forme $y_2=uy_1$, on obtient
+Posons $y_2=uy_1$, ce qui nous donne
 
 $$ u = \int U, \qquad U = \frac{1}{y_1^2}\exp\left(-\int \frac{a}{x}\ dx \right) $$
 
@@ -94,14 +94,14 @@ Comme $\exp \left(-\int \cfrac{a}{x}\ dx \right) = \exp (-a\ln x) = \exp(\ln{x^{
 
 $$ U = \frac{x^{-a}}{y_1^2} = \frac{x^{-a}}{x^{(1-a)}} = \frac{1}{x} $$
 
-et en intégrant, on obtient $u = \ln x$.
+En intégrant, on obtient $u = \ln x$.
 
-Par conséquent, $y_2 = uy_1 = y_1 \ln x$, et $y_1$ et $y_2$ sont linéairement indépendants car leur quotient n'est pas constant. La solution générale correspondant à la base $y_1$ et $y_2$ est
+Donc $y_2 = uy_1 = y_1 \ln x$, et $y_1$ et $y_2$ sont linéairement indépendants car leur rapport n'est pas constant. La solution générale est alors
 
 $$ y = (c_1 + c_2 \ln x)x^m \label{eqn:general_sol_2}\tag{6}$$
 
 ### III. Racines complexes conjuguées
-Dans ce cas, les solutions de l'équation auxiliaire ($\ref{eqn:auxiliary_eqn}$) sont $m = \cfrac{1}{2}(1-a) \pm i\sqrt{b - \frac{1}{4}(1-a)^2}$, et les deux solutions complexes correspondantes de l'équation ($\ref{eqn:euler_cauchy_eqn}$) peuvent s'écrire, en utilisant $x=e^{\ln x}$, comme suit :
+Dans ce cas, les racines de l'équation auxiliaire ($\ref{eqn:auxiliary_eqn}$) sont $m = \cfrac{1}{2}(1-a) \pm i\sqrt{b - \frac{1}{4}(1-a)^2}$, et les deux solutions complexes correspondantes de l'équation ($\ref{eqn:euler_cauchy_eqn}$) peuvent s'écrire, en utilisant $x=e^{\ln x}$ :
 
 $$ \begin{align*}
 x^{m_1} &= x^{(1-a)/2 + i\sqrt{b - \frac{1}{4}(1-a)^2}} \\
@@ -116,18 +116,31 @@ En posant $t=\sqrt{b - \frac{1}{4}(1-a)^2}\ln x$ et en utilisant la formule d'Eu
 
 $$ \begin{align*}
 x^{m_1} &= x^{(1-a)/2}\left[\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) + i\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right], \\
-x^{m_1} &= x^{(1-a)/2}\left[\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) - i\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right]
+x^{m_2} &= x^{(1-a)/2}\left[\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) - i\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right]
 \end{align*} \tag{8}$$
 
-et de là, on obtient les deux solutions réelles suivantes :
+Ce qui nous donne les deux solutions réelles suivantes :
 
 $$ \begin{align*}
 \frac{x^{m_1} + x^{m_2}}{2} &= x^{(1-a)/2}\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right), \\
 \frac{x^{m_1} - x^{m_2}}{2i} &= x^{(1-a)/2}\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right)
 \end{align*} \tag{9}$$
 
-Comme leur quotient $\cos\left(\sqrt{b - \frac{1}{4}(1-a)^2}\ln x \right)$ n'est pas constant, ces deux solutions sont linéairement indépendantes et forment donc une base des solutions de l'équation d'Euler-Cauchy ($\ref{eqn:euler_cauchy_eqn}$) selon le [principe de superposition](/posts/homogeneous-linear-odes-of-second-order/#principe-de-superposition). On obtient ainsi la solution générale réelle suivante :
+Ces deux solutions sont linéairement indépendantes car leur rapport $\cos\left(\sqrt{b - \frac{1}{4}(1-a)^2}\ln x \right)$ n'est pas constant. Par le [principe de superposition](/posts/homogeneous-linear-odes-of-second-order/#principe-de-superposition), elles forment une base des solutions de l'équation d'Euler-Cauchy ($\ref{eqn:euler_cauchy_eqn}$). La solution générale réelle est donc
 
 $$ y = x^{(1-a)/2} \left[ A\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) + B\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right]. \label{eqn:general_sol_3}\tag{10}$$
 
-Cependant, le cas où l'équation auxiliaire de l'équation d'Euler-Cauchy a des racines complexes conjuguées n'a pas une grande importance pratique.
+Notons toutefois que le cas des racines complexes conjuguées dans l'équation d'Euler-Cauchy n'a pas une grande importance pratique.
+
+## Transformation en équation différentielle ordinaire linéaire homogène à coefficients constants
+L'équation d'Euler-Cauchy peut être transformée en une [équation différentielle ordinaire linéaire homogène à coefficients constants](/posts/homogeneous-linear-odes-with-constant-coefficients/) par un changement de variable.
+
+En posant $x = e^t$, on obtient
+
+$$ \frac{d}{dx} = \frac{1}{x}\frac{d}{dt}, \quad \frac{d^2}{dx^2} = \frac{1}{x^2}\left(\frac{d^2}{dt^2} - \frac{d}{dt} \right) $$
+
+ce qui transforme l'équation d'Euler-Cauchy ($\ref{eqn:euler_cauchy_eqn}$) en l'équation différentielle à coefficients constants suivante :
+
+$$ y^{\prime\prime}(t) + (a-1)y^{\prime}(t) + by(t) = 0. \label{eqn:substituted}\tag{11} $$
+
+En résolvant cette équation ($\ref{eqn:substituted}$) par les méthodes des [équations différentielles ordinaires linéaires homogènes à coefficients constants](/posts/homogeneous-linear-odes-with-constant-coefficients/), puis en substituant $t = \ln{x}$, on retrouve les [résultats obtenus précédemment](#forme-de-la-solution-générale-selon-le-signe-du-discriminant).

@@ -122,7 +122,7 @@ $t=\sqrt{b - \frac{1}{4}(1-a)^2}\ln x$로 놓고 오일러 공식 $e^{it} = \cos
 
 $$ \begin{align*}
 x^{m_1} &= x^{(1-a)/2}\left[\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) + i\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right], \\
-x^{m_1} &= x^{(1-a)/2}\left[\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) - i\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right]
+x^{m_2} &= x^{(1-a)/2}\left[\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) - i\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right]
 \end{align*} \tag{8}$$
 
 임을 알 수 있고, 이로부터 다음의 두 실수해
@@ -139,3 +139,16 @@ $$ \begin{align*}
 $$ y = x^{(1-a)/2} \left[ A\cos\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) + B\sin\left(\sqrt{b - \tfrac{1}{4}(1-a)^2}\ln x \right) \right]. \label{eqn:general_sol_3}\tag{10}$$
 
 다만, 오일러-코시 방정식에서 보조방정식이 켤레복소근을 갖는 경우는 실질적인 중요성이 그리 크진 않다.
+
+## 상수계수를 갖는 2계 동차 선형 상미분방정식으로의 변환
+오일러-코시 방정식은 변수 치환을 통해 [상수계수를 갖는 2계 동차 선형 상미분방정식](/posts/homogeneous-linear-odes-with-constant-coefficients/)으로 변환할 수 있다.
+
+$x = e^t$으로 치환하면
+
+$$ \frac{d}{dx} = \frac{1}{x}\frac{d}{dt}, \quad \frac{d^2}{dx^2} = \frac{1}{x^2}\left(\frac{d^2}{dt^2} - \frac{d}{dt} \right) $$
+
+가 되어, 오일러-코시 방정식 ($\ref{eqn:euler_cauchy_eqn}$)은 다음과 같이 $t$에 대한 상수계수 동차 선형 상미분방정식으로 바뀐다.
+
+$$ y^{\prime\prime}(t) + (a-1)y^{\prime}(t) + by(t) = 0. \label{eqn:substituted}\tag{11} $$
+
+방정식 ($\ref{eqn:substituted}$)을 [상수계수를 갖는 2계 동차 선형 상미분방정식](/posts/homogeneous-linear-odes-with-constant-coefficients/)의 해법을 적용하여 $t$에 대해 풀고, 그렇게 얻은 해를 $t = \ln{x}$임을 이용하여 다시 $x$에 대한 해로 변환하면 [앞서 살펴본 것과 동일한 결과](#보조방정식의-판별식의-부호에-따른-일반해의-형태)를 얻는다.
