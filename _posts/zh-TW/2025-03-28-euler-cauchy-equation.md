@@ -84,7 +84,7 @@ $$ y_1 = x^{(1-a)/2} $$
 
 $$ y^{\prime\prime} + \frac{a}{x}y^{\prime} + \frac{(1-a)^2}{4x^2}y = 0 \label{eqn:standard_form}\tag{5} $$
 
-現在使用[降階法](/posts/homogeneous-linear-odes-of-second-order/#降階法-reduction-of-order)來找出線性獨立的另一個解 $y_2$。
+現在使用[降階法](/posts/homogeneous-linear-odes-of-second-order/#降階法reduction-of-order)來找出線性獨立的另一個解 $y_2$。
 
 設第二個解為 $y_2=uy_1$，則
 
