@@ -84,6 +84,8 @@
           {% assign _lqip = _value %}
         {% when 'class' %}
           {% assign _class = _value %}
+        {% when 'alt' %}
+          {% assign _alt = _value %}
       {% endcase %}
     {% endfor %}
 
@@ -157,7 +159,7 @@
     {% endif %}
 
     <!-- lazy-load images -->
-    {% if _lazyload %}
+    {% if _lazyload and _alt != "Preview Image" %}
       {% assign _left = _left | append: ' loading="lazy"' %}
     {% endif %}
 
