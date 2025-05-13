@@ -56,10 +56,6 @@ jobs:
         # This example will put the file in the root directory of the site.You may change the location by yourself.
         run: echo ${{ secrets.INDEXNOW_KEY }} > ./_site/${{ secrets.INDEXNOW_KEY }}.txt
       
-      - name: Setup Naver Site Verification(Old Domain)
-        run: |
-          echo naver-site-verification: ${{ secrets.LEGACY_NAVER_SITE_VERIFICATION }} > ./_site/${{ secrets.LEGACY_NAVER_SITE_VERIFICATION }}
-      
       - name: Setup Naver Site Verification
         run: |
           echo naver-site-verification: ${{ secrets.NAVER_SITE_VERIFICATION }} > ./_site/${{ secrets.NAVER_SITE_VERIFICATION }}
