@@ -6,7 +6,7 @@ description: Examinons ce que signifie le 'comportement collectif' dans la défi
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - **Plasma** : Gaz quasi-neutre composé de particules chargées et neutres présentant un comportement collectif

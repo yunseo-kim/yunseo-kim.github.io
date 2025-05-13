@@ -7,7 +7,7 @@ description: Wir betrachten die Formeln für den doppelten und dreifachen Winkel
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Formeln für den doppelten Winkel (Double-Angle Formulas)**

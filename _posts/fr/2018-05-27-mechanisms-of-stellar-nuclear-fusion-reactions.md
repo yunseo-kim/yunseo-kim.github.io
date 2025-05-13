@@ -4,7 +4,7 @@ description: Cet article présente les réactions de fusion nucléaire qui se pr
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## La chaîne de réaction proton-proton (proton-proton chain reaction)
 C'est la réaction de fusion nucléaire stellaire la plus connue du grand public. Le noyau du deutérium, appelé deutéron, est formé par la combinaison d'un proton (p) et d'un neutron (n). Par conséquent, pour que deux protons se combinent pour former un noyau de deutérium, l'un des protons doit se transformer en neutron. Comment un proton peut-il alors se transformer en neutron?

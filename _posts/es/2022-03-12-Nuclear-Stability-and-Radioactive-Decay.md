@@ -4,7 +4,7 @@ description: Exploramos la tabla de Segrè, varios tipos de desintegración radi
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Prerrequisitos
 - [Partículas subatómicas y componentes del átomo](/posts/constituents-of-an-atom/)

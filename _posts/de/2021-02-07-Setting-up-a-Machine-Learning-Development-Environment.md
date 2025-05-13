@@ -3,7 +3,7 @@ title: Aufbau einer Machine-Learning-Entwicklungsumgebung
 description: In diesem Artikel wird die Einrichtung einer Entwicklungsumgebung behandelt, die als erster Schritt zum Erlernen von maschinellem Lernen auf einem lokalen Rechner betrachtet werden kann. Alle Inhalte wurden auf Ubuntu 20.04 LTS mit einer NVIDIA Geforce RTX 3070 Grafikkarte erstellt.
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, CUDA, PyTorch, TensorFlow]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Übersicht
 In diesem Artikel wird die Einrichtung einer Entwicklungsumgebung behandelt, die als erster Schritt zum Erlernen von maschinellem Lernen auf einem lokalen Rechner betrachtet werden kann. Alle Inhalte wurden auf Ubuntu 20.04 LTS mit einer NVIDIA Geforce RTX 3070 Grafikkarte erstellt.

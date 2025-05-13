@@ -3,7 +3,7 @@ title: 良いコードを書くための原則
 description: 良いコードを書く必要性と、一般的に良いコードを書くための主要な原則について学ぶ。
 categories: [Programming]
 tags: [Coding, PS/CP]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 良いコードを書く必要性
 目の前の実装のために急いでコードを書くことだけに集中していると、[技術的負債](/posts/Technical-debt/)が手に負えないレベルまで膨らみ、後の保守に問題が生じる可能性がある。したがって、開発プロジェクトを進める際には、最初から可読性が高く保守が容易な良いコードを書くことが言うまでもなく重要である。

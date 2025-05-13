@@ -4,7 +4,7 @@ description: Exploramos el método de separación de variables y presentamos alg
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Método de separación de variables
 **Ecuación separable**: Una ecuación que puede expresarse en la forma $g(y)y'=f(x)$ mediante manipulación algebraica.

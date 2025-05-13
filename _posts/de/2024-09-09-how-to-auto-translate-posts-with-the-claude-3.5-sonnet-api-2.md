@@ -3,7 +3,7 @@ title: Wie man Posts mit der Claude 3.5 Sonnet API automatisch übersetzt (2) - 
 description: Dieser Beitrag behandelt den Prozess des Entwerfens von Prompts für die mehrsprachige Übersetzung von Markdown-Textdateien und der Automatisierung der Aufgabe mit Python unter Verwendung eines von Anthropic ausgestellten API-Schlüssels und des erstellten Prompts. Dies ist der zweite Beitrag in der Serie und stellt die API-Ausstellung, Integration und Python-Skripterstellung vor.
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Einleitung
 Kürzlich habe ich die Claude 3.5 Sonnet API von Anthropic für die mehrsprachige Übersetzung von Blogbeiträgen eingeführt. In dieser Serie möchte ich die Gründe für die Wahl der Claude 3.5 Sonnet API, die Methode des Prompt-Designs und die Implementierung der API-Integration und Automatisierung durch Python-Skripte erläutern.  

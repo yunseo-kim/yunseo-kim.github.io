@@ -4,7 +4,7 @@ description: 特定形式的常係數非齊次線性常微分方程的初值問�
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## TL;DR

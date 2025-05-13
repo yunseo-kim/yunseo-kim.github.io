@@ -4,7 +4,7 @@ description: Wir untersuchen das Konzept des Bezugssystems und die Galilei-Trans
 categories: [Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Relativitätsprinzip**: Das Prinzip, dass alle physikalischen Gesetze in verschiedenen Bezugssystemen, die sich mit konstanter Geschwindigkeit zueinander bewegen, gleich sein müssen

@@ -7,7 +7,7 @@ description: Learn how to calculate the expectation values of position and momen
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - $$ \hat x \equiv x,\ \hat p \equiv -i\hbar\nabla$$

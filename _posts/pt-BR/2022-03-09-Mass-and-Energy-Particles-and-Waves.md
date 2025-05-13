@@ -6,7 +6,7 @@ description: Vamos explorar o princípio da equivalência massa-energia da teori
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Princípio da Equivalência Massa-Energia
 Massa e energia são equivalentes e podem ser convertidas uma na outra.

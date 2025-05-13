@@ -3,7 +3,7 @@ title: Kaggle-Pandas 課程內容整理
 description: 整理了 Kaggle 公開課程中 Pandas 迷你課程的內容。
 categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 # Pandas
 通過解決簡短的實踐挑戰來完善你的數據操作技能。

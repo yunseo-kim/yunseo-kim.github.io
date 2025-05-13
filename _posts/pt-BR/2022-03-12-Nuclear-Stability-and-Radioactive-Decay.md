@@ -4,7 +4,7 @@ description: Exploramos a tabela de Segrè, vários tipos de decaimento radioati
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Pré-requisitos
 - [Partículas subatômicas e componentes do átomo](/posts/constituents-of-an-atom/)

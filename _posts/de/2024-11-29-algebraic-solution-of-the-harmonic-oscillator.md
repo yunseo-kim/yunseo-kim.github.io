@@ -8,7 +8,7 @@ categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
     Operators]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Jede Schwingung kann für kleine Amplituden als einfache harmonische Schwingung angenähert werden, was die große Bedeutung des harmonischen Oszillators in der Physik erklärt

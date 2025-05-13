@@ -8,7 +8,7 @@ categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
     Operators]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Qualquer oscilação pode ser aproximada como uma oscilação harmônica simples se a amplitude for suficientemente pequena, o que torna a oscilação harmônica simples importante na física

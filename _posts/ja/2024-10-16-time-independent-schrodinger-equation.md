@@ -5,7 +5,7 @@ description: シュレーディンガー方程式の元の形（時間依存シ�
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - 変数分離解: $ \Psi(x,t) = \psi(x)\phi(t)$

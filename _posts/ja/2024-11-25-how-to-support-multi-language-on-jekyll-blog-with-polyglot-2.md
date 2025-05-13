@@ -4,7 +4,7 @@ description: '''jekyll-theme-chirpy''ベースのJekyllブログにPolyglotプ�
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 mermaid: true
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 概要
 約4ヶ月前の[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar)12024年7月初め、Jekyll基盤でGithub Pagesを通じてホスティングしているこのブログに[Polyglot](https://github.com/untra/polyglot)プラグインを適用して多言語サポートを実装しました。

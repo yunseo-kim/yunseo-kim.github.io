@@ -4,7 +4,7 @@ description: Nous examinons les concepts fondamentaux du calcul différentiel et
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## Suites

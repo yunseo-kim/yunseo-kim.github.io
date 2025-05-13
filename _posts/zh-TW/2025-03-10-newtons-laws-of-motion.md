@@ -4,7 +4,7 @@ description: 探討牛頓運動定律及其三大定律的意義，以及慣性�
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **牛頓運動定律(Newton's laws of motion)**

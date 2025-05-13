@@ -4,7 +4,7 @@ description: 三角関数の定義と三角関数間の関係式を確認し、�
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 三角関数の定義
 ![Unit Circle and Radius Vector](/assets/img/trigonometry/definition.png)

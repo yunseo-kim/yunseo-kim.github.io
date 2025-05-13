@@ -4,7 +4,7 @@ description: Exploramos conceitos fundamentais do cálculo, incluindo definiçõ
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## Sequências

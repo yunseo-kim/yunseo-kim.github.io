@@ -6,7 +6,7 @@ description: 슈뢰딩거 방정식의 원래 형태(시간에 의존하는 슈�
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - 변수분리한 해: $ \Psi(x,t) = \psi(x)\phi(t)$

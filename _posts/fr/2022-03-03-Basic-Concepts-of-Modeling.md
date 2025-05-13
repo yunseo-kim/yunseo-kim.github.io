@@ -6,7 +6,7 @@ categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Modélisation
 - **Modèle** : Formalisation mathématique d'un problème d'ingénierie à l'aide de variables, de fonctions et d'équations

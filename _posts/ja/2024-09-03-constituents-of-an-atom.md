@@ -4,7 +4,7 @@ description: 電子、陽子、中性子、光子、ニュートリノなど原�
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 亜原子粒子（subatomic particle）
 **亜原子粒子（subatomic particle）**とは原子より小さいサイズの粒子を指す。亜原子粒子にはより小さい単位の構成粒子からなる複合粒子もあれば、これ以上分解されないと考えられる基本粒子もある。

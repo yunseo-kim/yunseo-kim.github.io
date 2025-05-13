@@ -4,7 +4,7 @@ description: Exploramos o conceito de sistemas de referência e a transformaçã
 categories: [Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Princípio da Relatividade**: O princípio de que todas as leis físicas devem ser idênticas em diferentes sistemas de referência que se movem com velocidade constante entre si

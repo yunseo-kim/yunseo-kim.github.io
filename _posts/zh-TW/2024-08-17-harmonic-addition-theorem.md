@@ -4,7 +4,7 @@ description: 對於形如 f(θ) = a cos θ + b sin θ 的三角函數和，我�
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **三角函數的合成（Harmonic Addition Theorem）**

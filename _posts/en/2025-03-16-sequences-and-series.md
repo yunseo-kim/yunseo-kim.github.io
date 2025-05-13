@@ -4,7 +4,7 @@ description: We examine fundamental concepts of calculus such as the definition 
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## Sequences

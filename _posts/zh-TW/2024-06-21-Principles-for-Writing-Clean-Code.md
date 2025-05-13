@@ -3,7 +3,7 @@ title: 撰寫良好程式碼的原則
 description: 探討撰寫良好程式碼的必要性，以及一般撰寫良好程式碼的主要原則。
 categories: [Programming]
 tags: [Coding, PS/CP]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 撰寫良好程式碼的必要性
 如果只急於快速編寫程式碼來實現當前的功能，[技術債務](/posts/Technical-debt/)可能會增加到無法控制的程度，導致後續維護出現問題。因此，在進行開發專案時，從一開始就盡可能撰寫可讀性高且易於維護的良好程式碼，其重要性不言而喻。

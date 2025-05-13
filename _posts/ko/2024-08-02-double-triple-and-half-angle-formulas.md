@@ -5,7 +5,7 @@ description: 2배각, 3배각의 공식을 살펴보고 삼각함수의 덧셈�
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **2배각의 공식 (Double-Angle Formulas)**

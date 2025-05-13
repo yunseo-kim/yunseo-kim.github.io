@@ -4,7 +4,7 @@ description: 探索相對論的質量-能量等價原理，並考慮相對論效
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 質量-能量等價原理
 質量和能量是相同的，可以相互轉換。

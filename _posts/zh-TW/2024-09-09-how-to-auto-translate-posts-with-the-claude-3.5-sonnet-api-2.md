@@ -3,7 +3,7 @@ title: 如何使用Claude 3.5 Sonnet API自動翻譯文章 (2) - 編寫和應用
 description: 本文介紹如何設計用於多語言翻譯Markdown文本文件的提示詞,以及如何使用從Anthropic獲得的API密鑰和設計的提示詞,通過Python實現工作自動化的過程。這是該系列的第二篇文章,介紹了API的獲取和連接以及Python腳本的編寫方法。
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 前言
 最近,我引入了Anthropic的Claude 3.5 Sonnet API來實現博客文章的多語言翻譯。在這個系列中,我將介紹選擇Claude 3.5 Sonnet API的原因、提示詞設計方法,以及如何通過Python腳本實現API連接和自動化。

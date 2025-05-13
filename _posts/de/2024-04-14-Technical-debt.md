@@ -4,7 +4,7 @@ description: Lasst uns das Konzept der technischen Schuld, die Gründe für ihr 
   und Möglichkeiten zu ihrer Minimierung betrachten.
 categories: [Programming]
 tags: [Coding]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Technische Schuld (Technical debt)
 Technische Schuld: Der Preis, den man später zahlen muss, wenn man in der Entwicklung Abkürzungen wählt, um unmittelbare Anforderungen zu erfüllen und das aktuelle Projekt schneller abzuschließen.

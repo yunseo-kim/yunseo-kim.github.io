@@ -6,7 +6,7 @@ categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Modelado (Modeling)
 - **Modelo (model)**: Formalización matemática de un problema de ingeniería mediante variables, funciones, ecuaciones, etc.

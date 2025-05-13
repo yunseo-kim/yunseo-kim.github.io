@@ -5,7 +5,7 @@ description: Let's calculate the macroscopic cross-section of a homogeneous mixt
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Macroscopic Cross-section of a Homogeneous Mixture
 Let's consider a homogeneous mixture of two nuclides $X$ and $Y$. The atomic densities of each nuclide are $N_X$ and $N_Y$ $\text{atom/cm}^3$ respectively, and the cross-sections for a specific reaction between neutrons and these nuclei are $\sigma_X$ and $\sigma_Y$ respectively.

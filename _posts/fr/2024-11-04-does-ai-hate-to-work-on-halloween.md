@@ -6,7 +6,7 @@ description: Le 31 octobre 12024, un phénomène étrange s'est produit lorsque 
   plusieurs mois. Je présente ici mes hypothèses sur les causes de ce phénomène et les solutions trouvées.
 categories: [AI & Data, GenAI]
 tags: [LLM]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Situation problématique
 Comme expliqué dans la série ['Comment traduire automatiquement des articles avec l'API Claude 3.5 Sonnet'](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1), ce blog utilise un système de traduction multilingue basé sur le modèle Claude 3.5 Sonnet depuis fin juin 12024 (calendrier holocène), et cette automatisation a fonctionné sans problème majeur pendant 4 mois.

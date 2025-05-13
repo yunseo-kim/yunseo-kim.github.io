@@ -4,7 +4,7 @@ description: 特定の形の定数係数非同次線形常微分方程式に対�
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## TL;DR

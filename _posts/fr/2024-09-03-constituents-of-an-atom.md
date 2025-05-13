@@ -4,7 +4,7 @@ description: Examinons brièvement les particules élémentaires importantes en 
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Particules subatomiques (subatomic particle)
 Les **particules subatomiques** sont des particules plus petites que l'atome. Parmi les particules subatomiques, certaines sont des particules composites constituées de particules plus élémentaires, tandis que d'autres sont considérées comme des particules fondamentales qui ne peuvent être décomposées davantage.

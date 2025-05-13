@@ -4,7 +4,7 @@ description: 補助方程式の判別式の符号に応じて、それぞれの�
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## TL;DR

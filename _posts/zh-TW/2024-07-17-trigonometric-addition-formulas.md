@@ -4,7 +4,7 @@ description: 探討三角函數的定義和三角函數之間的關係式，並�
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 三角函數的定義
 ![單位圓和半徑向量](/assets/img/trigonometry/definition.png)

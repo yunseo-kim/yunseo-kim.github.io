@@ -6,7 +6,7 @@ description: 양자역학의 기본 개념들을 잘 보여주는 간단하면�
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - 1차원 무한 사각 우물 문제: 

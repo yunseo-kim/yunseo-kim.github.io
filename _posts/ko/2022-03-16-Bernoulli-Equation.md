@@ -4,7 +4,7 @@ description: 베르누이 방정식과, 베르누이 방정식의 특수한 형�
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 베르누이 방정식(Bernoulli Equation)
 

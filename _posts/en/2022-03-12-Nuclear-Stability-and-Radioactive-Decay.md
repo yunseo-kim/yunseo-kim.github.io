@@ -4,7 +4,7 @@ description: Explore the Segré chart and various types of radioactive decay, th
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Prerequisites
 - [Subatomic Particles and Constituents of an Atom](/posts/constituents-of-an-atom/)

@@ -5,7 +5,7 @@ description: Explore the mass-energy equivalence principle of relativity theory 
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Mass-Energy Equivalence Principle
 Mass and energy are identical and can be converted into each other.

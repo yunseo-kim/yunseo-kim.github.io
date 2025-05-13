@@ -4,7 +4,7 @@ description: 2倍角、3倍角の公式を見て、三角関数の加法定理�
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **2倍角の公式 (Double-Angle Formulas)**

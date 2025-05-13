@@ -4,7 +4,7 @@ description: 探討塞格雷圖與各種放射性衰變類型、貝塔衰變中�
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 先備知識
 - [次原子粒子與原子的組成元素](/posts/constituents-of-an-atom/)

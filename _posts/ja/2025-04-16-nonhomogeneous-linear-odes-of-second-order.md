@@ -4,7 +4,7 @@ description: 2階非同次線形常微分方程式の一般解の構造と特性
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## TL;DR

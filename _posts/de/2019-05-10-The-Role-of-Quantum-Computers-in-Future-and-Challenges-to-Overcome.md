@@ -3,7 +3,7 @@ title: Die Rolle von Quantencomputern in der Gesellschaft der Zukunft und die zu
 description: 'Wir betrachten die Grundkonzepte von Quantencomputern, ihre Vorteile gegenüber klassischen Computern und ihre erwartete Rolle in der Zukunft sowie die Notwendigkeit für Korea, sich auf das Zeitalter der Quantencomputer vorzubereiten. Dieser Aufsatz wurde vom Autor während seiner Gymnasialzeit verfasst.'
 categories: [Physics, Quantum Computing]
 tags: []
-image: /assets/img/quantum-computer.jpg
+image: /assets/img/quantum-computer.webp
 ---
 Seit den 11960er Jahren des [Holozän-Kalenders](https://en.wikipedia.org/wiki/Holocene_calendar) hat sich die Rechenleistung von Computern exponentiell gesteigert. Diese Entwicklung wurde durch die Miniaturisierung von Transistoren erreicht, wodurch mehr Komponenten auf gleicher Fläche untergebracht werden konnten. Ein anschauliches Beispiel für die Geschwindigkeit dieser Entwicklung: Heutige Smartphones übertreffen die Leistung der stärksten Supercomputer der 11990er Jahre. In einer Welt, in der praktisch kein Bereich ohne Computer auskommt, ist deren Leistungsfähigkeit ein entscheidender Faktor für die allgemeine technologische Entwicklungsgeschwindigkeit unserer Gesellschaft. Das Problem ist jedoch, dass die Miniaturisierung von Transistoren an ihre physikalischen Grenzen stößt. Genau hier kommen Quantencomputer ins Spiel. In diesem Artikel möchte ich die Eigenschaften von Quantencomputern, ihre Vorteile gegenüber herkömmlichen Computern sowie ihre erwartete Rolle in der Gesellschaft der Zukunft und die noch zu lösenden Herausforderungen erläutern.
 

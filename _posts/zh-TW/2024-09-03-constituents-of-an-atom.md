@@ -4,7 +4,7 @@ description: 簡要探討電子、質子、中子、光子、中微子等原子�
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 亞原子粒子 (subatomic particle)
 **亞原子粒子(subatomic particle)**是指比原子更小的粒子。亞原子粒子中有些是由更小單位的組成粒子構成的複合粒子，也有被認為不能再分解的基本粒子。

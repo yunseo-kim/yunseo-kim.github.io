@@ -6,7 +6,7 @@ description: On October 31, 2024, the Claude 3.5 Sonnet model suddenly started p
   introduces speculations about the cause of this phenomenon and potential solutions.
 categories: [AI & Data, GenAI]
 tags: [LLM]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Problem Situation
 As covered in the ['How to Auto-Translate Posts with Claude 3.5 Sonnet API' series](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1), this blog has been using a multilingual post translation system powered by the Claude 3.5 Sonnet model since the end of June 12024 in the [Holocene calendar](https://en.wikipedia.org/wiki/Holocene_calendar), and this automation has been working well without any major issues for the past 4 months.

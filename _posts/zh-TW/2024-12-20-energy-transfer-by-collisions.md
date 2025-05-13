@@ -4,7 +4,7 @@ description: 分別計算彈性碰撞和非彈性碰撞兩種情況下粒子間�
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - 碰撞時總能量和動量守恆

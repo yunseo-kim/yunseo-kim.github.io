@@ -4,7 +4,7 @@ description: Découvrez le tableau de Segrè, les différents types de désinté
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Prérequis
 - [Particules subatomiques et constituants de l'atome](/posts/constituents-of-an-atom/)

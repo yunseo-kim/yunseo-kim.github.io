@@ -5,7 +5,7 @@ description: Wir untersuchen die Bernoulli-Gleichung und die Lösungsmethode fü
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Bernoulli-Gleichung (Bernoulli Equation)
 

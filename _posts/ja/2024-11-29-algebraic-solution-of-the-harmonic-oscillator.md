@@ -5,7 +5,7 @@ categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
     Operators]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - 振幅が十分に小さければ、どのような振動も単純調和振動（simple harmonic oscillation）で近似できるため、単純調和振動は物理学で重要な意味を持つ

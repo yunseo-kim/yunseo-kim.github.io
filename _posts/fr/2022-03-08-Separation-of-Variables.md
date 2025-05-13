@@ -4,7 +4,7 @@ description: Nous explorons la méthode de séparation des variables et présent
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Méthode de séparation des variables
 **Équation séparable** : Une équation qui peut être mise sous la forme $g(y)y'=f(x)$ par manipulation algébrique.

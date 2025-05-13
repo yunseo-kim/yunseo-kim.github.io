@@ -8,7 +8,7 @@ categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Neutronenwechselwirkungen
 Neutronen sind elektrisch neutral und werden daher nicht von der elektrischen Wirkung der Elektronen oder der positiven Ladung des Atomkerns im Atom beeinflusst. Folglich können Neutronen durch die Elektronenwolke des Atoms hindurchgehen und direkt mit dem Atomkern reagieren.

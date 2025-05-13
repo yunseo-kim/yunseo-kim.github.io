@@ -5,7 +5,7 @@ description: Learn about the expression of nuclear reactions, the definition of 
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Nuclear Reaction
 ### Basic Laws in Nuclear Reactions

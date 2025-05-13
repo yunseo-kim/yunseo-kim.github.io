@@ -4,7 +4,7 @@ description: 전자, 양성자, 중성자, 광자, 중성미자 등 원자핵공
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 아원자 입자 (subatomic particle)
 **아원자 입자(subatomic particle)**란 원자보다 작은 크기의 입자들을 말한다. 아원자 입자에는 더 작은 단위의 구성 입자들로 구성된 합성 입자도 있고, 더는 분해되지 않는다고 여겨지는 기본 입자들도 있다.

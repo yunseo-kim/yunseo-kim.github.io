@@ -4,7 +4,7 @@ description: 核反応の表現式とQ値（Q-value）の定義、質量欠損�
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 核反応（Nuclear Reaction）
 ### 核反応における基本法則

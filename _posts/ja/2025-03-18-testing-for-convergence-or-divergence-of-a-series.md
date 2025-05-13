@@ -4,7 +4,7 @@ description: 級数の収束/発散を判定するさまざまな方法を総合
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## TL;DR

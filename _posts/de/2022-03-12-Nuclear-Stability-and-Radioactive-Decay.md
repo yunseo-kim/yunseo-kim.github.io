@@ -4,7 +4,7 @@ description: Wir betrachten das Segré-Diagramm und verschiedene Arten radioakti
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Voraussetzungen
 - [Subatomare Teilchen und Bestandteile des Atoms](/posts/constituents-of-an-atom/)

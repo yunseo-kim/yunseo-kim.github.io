@@ -9,7 +9,7 @@ description: Nous dérivons l'équation de Schrödinger indépendante du temps �
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Solution à variables séparées : $ \Psi(x,t) = \psi(x)\phi(t)$

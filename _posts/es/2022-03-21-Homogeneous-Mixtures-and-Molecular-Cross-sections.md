@@ -5,7 +5,7 @@ description: Calculemos la sección transversal macroscópica de una mezcla homo
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Sección transversal macroscópica de una mezcla homogénea (Homogeneous Mixture)
 Consideremos una mezcla homogénea de dos nucleidos $X$ e $Y$. Las densidades atómicas de cada nucleido son $N_X$ y $N_Y$ $\text{átomo/cm}^3$ respectivamente, y las secciones transversales para una reacción específica de neutrones con estos núcleos son $\sigma_X$ y $\sigma_Y$. 

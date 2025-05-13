@@ -4,7 +4,7 @@ description: 粒子間の衝突によるエネルギー伝達率を弾性衝突�
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - 衝突時の全エネルギーと運動量は保存される

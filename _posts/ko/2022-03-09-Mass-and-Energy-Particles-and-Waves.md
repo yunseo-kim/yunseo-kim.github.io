@@ -4,7 +4,7 @@ description: 상대성이론의 질량-에너지 등가 원리를 탐구하고, 
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 질량-에너지 등가 원리
 질량과 에너지는 서로 동일하며 상호 변환할 수 있다.

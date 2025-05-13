@@ -4,7 +4,7 @@ description: セグレ図表と様々な放射性崩壊の種類、ベータ崩�
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 前提知識
 - [亜原子粒子と原子の構成要素](/posts/constituents-of-an-atom/)

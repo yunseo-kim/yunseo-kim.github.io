@@ -4,7 +4,7 @@ description: 基準系の概念と古典力学で広く使われてきた座標�
 categories: [Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **相対性原理**: 等速度で運動する互いに異なる基準系に対して、すべての物理法則が同一でなければならないという原理

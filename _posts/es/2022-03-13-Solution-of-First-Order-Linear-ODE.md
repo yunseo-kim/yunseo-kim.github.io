@@ -5,7 +5,7 @@ description: Aprendamos cómo resolver ecuaciones diferenciales lineales de prim
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Ecuación diferencial lineal de primer orden
 Si una ecuación diferencial de primer orden puede ser llevada algebraicamente a la forma

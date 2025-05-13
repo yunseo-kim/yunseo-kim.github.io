@@ -5,7 +5,7 @@ description: 本文探討核融合的概念及其成為下一代電力來源的�
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## 什麼是核融合？
 核融合是指兩個原子核碰撞並合併成一個較重原子核的反應。基本上，原子核因內部的質子而帶正電，所以當兩個原子核相互接近時，會因電荷相斥力而互相排斥。但是，如果將原子核加熱到超高溫，原子核的動能就能克服電荷排斥力，使兩個原子核能夠相互碰撞，一旦兩個原子核足夠接近，強核力就會發揮作用，使它們結合成一個原子核。  

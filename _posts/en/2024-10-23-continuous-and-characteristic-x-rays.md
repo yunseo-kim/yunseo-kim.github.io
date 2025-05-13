@@ -5,7 +5,7 @@ description: Exploring the two generation principles of X-rays as atomic radiati
 categories: [Nuclear Engineering, Radiation]
 tags: [Atomic Radiation, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## TL;DR
 > - **bremsstrahlung (breaking radiation)**: Continuous spectrum X-rays emitted when charged particles like electrons are accelerated by electrical forces while passing near atomic nuclei

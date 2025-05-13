@@ -4,7 +4,7 @@ description: 探討核反應的表達式和Q值(Q-value)的定義,以及質量�
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 核反應 (Nuclear Reaction)
 ### 核反應中的基本定律

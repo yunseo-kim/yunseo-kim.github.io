@@ -4,7 +4,7 @@ description: Dieser Beitrag behandelt das Konzept der Kernfusion, ihren Hintergr
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## Was ist Kernfusion?
 Kernfusion bezeichnet eine Reaktion, bei der zwei Atomkerne zusammenstoßen und zu einem schwereren Atomkern verschmelzen. Grundsätzlich tragen Atomkerne aufgrund der Protonen in ihrem Inneren eine positive Ladung, sodass sich zwei Atomkerne bei Annäherung durch elektrostatische Abstoßung gegenseitig wegstoßen. Wenn man die Atomkerne jedoch auf extrem hohe Temperaturen erhitzt, überwindet ihre kinetische Energie die elektrische Abstoßung, sodass die beiden Atomkerne kollidieren können. Sobald sich die Atomkerne ausreichend nahe kommen, wirkt die starke Kernkraft und verbindet sie zu einem einzigen Atomkern.  

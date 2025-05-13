@@ -6,7 +6,7 @@ categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 중성자 상호작용
 중성자는 전기적으로 중성이므로 원자 내의 전자 혹은 원자핵의 양전하에 의한 전기적 영향을 받지 않는다. 따라서 중성자는 원자의 전자구름을 통과해 원자핵과 직접 반응할 수 있다.

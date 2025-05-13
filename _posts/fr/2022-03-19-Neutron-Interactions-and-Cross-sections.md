@@ -8,7 +8,7 @@ categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Interactions des neutrons
 Les neutrons étant électriquement neutres, ils ne sont pas affectés par l'influence électrique des électrons dans l'atome ou par la charge positive du noyau atomique. Par conséquent, les neutrons peuvent traverser le nuage électronique de l'atome et interagir directement avec le noyau atomique.

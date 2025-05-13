@@ -4,7 +4,7 @@ description: 探討量子力學基本概念的簡單而重要的代表性問題 
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - 一維無限方井問題：

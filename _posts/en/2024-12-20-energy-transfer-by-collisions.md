@@ -7,7 +7,7 @@ description: Calculate the energy transfer rate due to particle collisions for b
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - Total energy and momentum are conserved during collisions

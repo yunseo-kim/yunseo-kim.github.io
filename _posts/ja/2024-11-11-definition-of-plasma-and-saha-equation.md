@@ -4,7 +4,7 @@ description: プラズマの定義における「集団的振る舞い」の意�
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - **プラズマ(plasma)**: 集団的振る舞い(collective behavior)を示す荷電粒子および中性粒子で構成される準中性(quasineutral)気体

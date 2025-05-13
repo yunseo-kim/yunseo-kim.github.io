@@ -3,7 +3,7 @@ title: NVIDIA Container Toolkit und Docker/Podman für den Aufbau einer Deep-Lea
 description: Diese Serie behandelt die Einrichtung einer containerisierten Deep-Learning-Entwicklungsumgebung mit NVIDIA Container Toolkit und deren Konfiguration als Remote-Server mit SSH und Jupyter Lab. Dieser Beitrag ist der zweite Teil der Serie und befasst sich mit der Erstellung eines Dockerfiles und dem Bauen eines Container-Images.
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, Docker, CUDA, PyTorch]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Übersicht
 In dieser Serie behandeln wir die Installation von NVIDIA Container Toolkit und Docker oder Podman sowie die Erstellung eines Dockerfiles basierend auf CUDA- und cuDNN-Images aus dem [nvidia/cuda Repository](https://hub.docker.com/r/nvidia/cuda) auf Docker Hub, um eine Deep-Learning-Entwicklungsumgebung aufzubauen. Für alle, die diese Umgebung nutzen möchten, stelle ich das fertige [Dockerfile](https://github.com/yunseo-kim/dl-env-docker) und [Image](https://hub.docker.com/r/yunseokim/dl-env/tags) auf GitHub und Docker Hub zur Verfügung, zusammen mit einer Anleitung zur Konfiguration von SSH und Jupyter Lab für die Nutzung als Remote-Server.  

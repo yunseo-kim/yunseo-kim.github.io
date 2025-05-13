@@ -3,7 +3,7 @@ title: Kaggle-機器學習入門課程內容整理
 description: 總結了Kaggle公開課程中'機器學習入門'的內容。
 categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas, scikit-learn]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 我決定要學習[Kaggle公開課程](https://www.kaggle.com/learn/overview)。
 每完成一門課程，我計劃簡單總結該課程的內容。第一篇文章是**機器學習入門**課程的摘要。

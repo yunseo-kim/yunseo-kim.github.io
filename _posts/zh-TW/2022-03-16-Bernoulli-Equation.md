@@ -4,7 +4,7 @@ description: 探討伯努利方程式及其特殊形式邏輯斯方程式的解�
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 伯努利方程式(Bernoulli Equation)
 

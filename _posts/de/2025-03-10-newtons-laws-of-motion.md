@@ -4,7 +4,7 @@ description: Wir betrachten Newtons Bewegungsgesetze und die Bedeutung dieser dr
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Newtons Bewegungsgesetze (Newton's laws of motion)**

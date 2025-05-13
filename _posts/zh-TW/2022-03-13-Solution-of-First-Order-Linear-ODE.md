@@ -4,7 +4,7 @@ description: 讓我們來了解一階線性常微分方程的解法。
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 一階線性常微分方程
 如果一階常微分方程可以代數地表示為

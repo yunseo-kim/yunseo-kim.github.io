@@ -4,7 +4,7 @@ description: Markdown이 무엇인지 알아보고, GitHub Pages 블로그 호�
   기준으로 주요 Markdown 문법을 정리하였다.
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 GitHub Pages 활용을 위해서는 **markdown** 문법에 대해 알 필요가 있다.
 GitHub 공식 문서의 [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)과 [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)를 참고하여 작성하였다.

@@ -3,7 +3,7 @@ title: 좋은 코드를 작성하기 위한 원칙
 description: 좋은 코드를 작성하는 것의 필요성과, 일반적으로 좋은 코드를 작성하기 위한 주요 원칙들을 알아본다.
 categories: [Programming]
 tags: [Coding, PS/CP]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 좋은 코드를 작성하는 것의 필요성
 당장의 구현을 위해 빠르게 코드를 작성하는 것에만 급급하면 [기술 부채](/posts/Technical-debt/)가 감당 불가능한 수준으로 불어나 추후 유지보수에 문제가 생길 수 있다. 따라서 개발 프로젝트를 진행할 때 가급적이면 처음부터 가독성 좋고 유지보수가 용이한 좋은 코드를 작성하는 것은 두말할 필요 없이 중요하다.

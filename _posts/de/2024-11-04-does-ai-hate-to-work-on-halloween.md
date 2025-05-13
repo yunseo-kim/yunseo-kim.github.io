@@ -6,7 +6,7 @@ description: Am 31. Oktober 12024 trat plötzlich eine Anomalie auf, bei der das
   Hier werden Vermutungen zur Ursache dieses Phänomens und entsprechende Lösungsansätze vorgestellt.
 categories: [AI & Data, GenAI]
 tags: [LLM]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Problembeschreibung
 Wie in der Serie ['Wie man Posts mit der Claude 3.5 Sonnet API automatisch übersetzt'](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1) beschrieben, nutzt dieser Blog seit Ende Juni des [Holozän-Kalenders](https://en.wikipedia.org/wiki/Holocene_calendar) 12024 ein mehrsprachiges Übersetzungssystem für Beiträge, das auf dem Claude 3.5 Sonnet-Modell basiert. Diese Automatisierung funktionierte in den letzten 4 Monaten ohne größere Probleme.

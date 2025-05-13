@@ -3,7 +3,7 @@ title: Configuración del entorno de desarrollo para Machine Learning
 description: Este artículo trata sobre cómo configurar un entorno de desarrollo, que puede considerarse el primer paso para estudiar machine learning en una máquina local. Todo el contenido está escrito basándose en Ubuntu 20.04 LTS con una tarjeta gráfica NVIDIA Geforce RTX 3070.
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, CUDA, PyTorch, TensorFlow]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Descripción general
 Este artículo trata sobre cómo configurar un entorno de desarrollo, que puede considerarse el primer paso para estudiar machine learning en una máquina local. Todo el contenido está escrito basándose en Ubuntu 20.04 LTS con una tarjeta gráfica NVIDIA Geforce RTX 3070.

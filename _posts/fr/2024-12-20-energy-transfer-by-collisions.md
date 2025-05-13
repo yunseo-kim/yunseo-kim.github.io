@@ -7,7 +7,7 @@ description: Calcul du taux de transfert d'énergie par collision entre particul
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - L'énergie totale et la quantité de mouvement sont conservées lors des collisions

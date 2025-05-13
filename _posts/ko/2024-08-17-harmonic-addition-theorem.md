@@ -5,7 +5,7 @@ description: f(θ) = a cos θ + b sin θ와 같은 형태의 삼각함수의 합
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **삼각함수의 합성 (Harmonic Addition Theorem)**

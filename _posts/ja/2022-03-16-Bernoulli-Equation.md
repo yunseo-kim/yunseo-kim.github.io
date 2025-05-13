@@ -4,7 +4,7 @@ description: ベルヌーイ方程式と、ベルヌーイ方程式の特殊な�
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## ベルヌーイ方程式（Bernoulli Equation）
 

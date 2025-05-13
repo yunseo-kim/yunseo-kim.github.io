@@ -4,7 +4,7 @@ description: 1계 선형 상미분방정식의 풀이법을 알아보자.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 1계 선형 상미분방정식
 1계 상미분방정식을 대수적으로

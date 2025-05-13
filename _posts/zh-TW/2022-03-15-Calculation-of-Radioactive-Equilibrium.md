@@ -5,7 +5,7 @@ categories: [Nuclear Engineering, Radiation]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## TL;DR
 > **任意時間 t 的放射性活度**

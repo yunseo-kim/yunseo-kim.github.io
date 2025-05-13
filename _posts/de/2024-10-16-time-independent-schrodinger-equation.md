@@ -9,7 +9,7 @@ description: Wir leiten die zeitunabhängige Schrödinger-Gleichung ψ(x) her, i
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Separierte Lösung: $ \Psi(x,t) = \psi(x)\phi(t)$

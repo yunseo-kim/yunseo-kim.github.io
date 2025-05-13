@@ -4,7 +4,7 @@ description: Exploramos las leyes del movimiento de Newton y el significado de e
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Leyes del movimiento de Newton (Newton's laws of motion)**

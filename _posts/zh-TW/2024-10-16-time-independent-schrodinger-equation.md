@@ -4,7 +4,7 @@ description: 將薛丁格方程式的原始形式(時間相依薛丁格方程式
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - 變數分離解: $ \Psi(x,t) = \psi(x)\phi(t)$

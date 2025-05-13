@@ -3,7 +3,7 @@ title: Resumo da sintaxe Markdown do GitHub
 description: Aprenda o que é Markdown e resuma as principais sintaxes do GitHub Flavored Markdown para hospedar blogs no GitHub Pages.
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 Para utilizar o GitHub Pages, é necessário conhecer a sintaxe **markdown**.
 Este texto foi escrito com base nos documentos oficiais do GitHub [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) e [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).

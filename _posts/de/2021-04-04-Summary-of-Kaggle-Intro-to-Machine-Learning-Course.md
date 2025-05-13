@@ -4,7 +4,7 @@ description: Ich habe den Inhalt des öffentlichen Kaggle-Kurses 'Intro to Machi
   Learning' zusammengefasst.
 categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas, scikit-learn]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 Ich habe beschlossen, die [öffentlichen Kurse von Kaggle](https://www.kaggle.com/learn/overview) zu studieren.
 Ich plane, den Inhalt jedes Kurses kurz zusammenzufassen, sobald ich ihn abgeschlossen habe. Der erste Artikel ist eine Zusammenfassung des Kurses **Intro to Machine Learning**.

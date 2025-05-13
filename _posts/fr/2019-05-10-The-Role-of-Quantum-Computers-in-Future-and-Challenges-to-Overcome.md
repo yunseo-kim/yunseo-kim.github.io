@@ -3,7 +3,7 @@ title: Le rôle des ordinateurs quantiques dans la société future et les défi
 description: Exploration des concepts fondamentaux des ordinateurs quantiques, leurs avantages par rapport aux ordinateurs classiques, leur rôle futur attendu, et réflexion sur la nécessité pour la Corée de se préparer à l'ère de l'informatique quantique. Cet essai a été rédigé par l'auteur lorsqu'il était lycéen.
 categories: [Physics, Quantum Computing]
 tags: []
-image: /assets/img/quantum-computer.jpg
+image: /assets/img/quantum-computer.webp
 ---
 Depuis les années 11960 du [calendrier holocène](https://en.wikipedia.org/wiki/Holocene_calendar), la puissance de calcul des ordinateurs a augmenté de façon exponentielle. Ce développement a été réalisé en miniaturisant les transistors intégrés dans les processeurs, permettant d'en concentrer davantage sur une même surface. Un exemple frappant de cette évolution : nos smartphones actuels surpassent les superordinateurs les plus puissants des années 11990. Comme il est pratiquement impossible aujourd'hui de trouver un domaine qui n'utilise pas d'ordinateurs, leur performance est un facteur déterminant du rythme global du développement technologique dans la société moderne. Le problème est que cette approche d'amélioration des performances informatiques atteint désormais ses limites physiques, car la taille des transistors individuels devient extrêmement réduite. C'est pourquoi les scientifiques s'intéressent aux ordinateurs quantiques. Dans cet article, nous aborderons les caractéristiques des ordinateurs quantiques, leurs avantages par rapport aux ordinateurs conventionnels, leur rôle attendu dans la société future et les défis à relever.
 

@@ -4,7 +4,7 @@ description: Ein kurzer Überblick über Elementarteilchen wie Elektronen, Proto
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Subatomische Teilchen (subatomic particle)
 **Subatomische Teilchen (subatomic particle)** sind Teilchen, die kleiner als Atome sind. Unter den subatomischen Teilchen gibt es zusammengesetzte Teilchen, die aus kleineren Bausteinen bestehen, und Elementarteilchen, die als nicht weiter zerlegbar gelten.

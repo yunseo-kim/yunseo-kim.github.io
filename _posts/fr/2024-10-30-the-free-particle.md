@@ -8,7 +8,7 @@ description: Nous examinons le fait que la solution à variables séparées pour
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Particule libre : $V(x)=0$, pas de conditions aux limites (énergie arbitraire)

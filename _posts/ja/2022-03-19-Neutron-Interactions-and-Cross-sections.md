@@ -5,7 +5,7 @@ categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 中性子相互作用
 中性子は電気的に中性であるため、原子内の電子または原子核の正電荷による電気的影響を受けない。したがって、中性子は原子の電子雲を通過して原子核と直接反応することができる。

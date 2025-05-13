@@ -5,7 +5,7 @@ description: 本系列介紹如何使用NVIDIA Container Toolkit在本地建立�
   Lab以便能夠作為遠端伺服器使用。這篇文章是系列的第一部分，介紹NVIDIA Container Toolkit和容器引擎的安裝方法。
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, Docker, CUDA, PyTorch]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 概述
 本系列將介紹如何安裝NVIDIA Container Toolkit和Docker或Podman，並基於Docker Hub的[nvidia/cuda儲存庫](https://hub.docker.com/r/nvidia/cuda)提供的CUDA和cuDNN映像檔來編寫Dockerfile，建立深度學習開發環境。為了讓有需要的人能夠自由使用，我將通過這個過程完成的[Dockerfile](https://github.com/yunseo-kim/dl-env-docker)和[映像檔](https://hub.docker.com/r/yunseokim/dl-env/tags)分享在GitHub和Docker Hub上，並額外提供將其用作遠端伺服器的SSH和Jupyter Lab設定指南。  

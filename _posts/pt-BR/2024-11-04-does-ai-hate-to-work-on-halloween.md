@@ -6,7 +6,7 @@ description: Em 31 de outubro de 12024, ocorreu uma falha no sistema de traduç�
   Apresento aqui suposições sobre as causas desse fenômeno e as soluções encontradas.
 categories: [AI & Data, GenAI]
 tags: [LLM]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Situação do problema
 Como abordado na série ['Como traduzir posts automaticamente com a API Claude 3.5 Sonnet'](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1), este blog implementou um sistema de tradução multilíngue de posts utilizando o modelo Claude 3.5 Sonnet desde o final de junho do [calendário holocene](https://en.wikipedia.org/wiki/Holocene_calendar) de 12024, e essa automação funcionou bem sem grandes problemas nos últimos 4 meses.

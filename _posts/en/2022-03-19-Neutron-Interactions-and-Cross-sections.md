@@ -7,7 +7,7 @@ categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Neutron Interactions
 Neutrons, being electrically neutral, are not affected by the electrical influence of electrons in atoms or the positive charge of atomic nuclei. Therefore, neutrons can pass through the electron cloud of atoms and directly interact with atomic nuclei.

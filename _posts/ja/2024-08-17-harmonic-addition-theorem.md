@@ -5,7 +5,7 @@ description: f(θ) = a cos θ + b sin θ の形の三角関数の和に対して
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **三角関数の合成（調和加法定理）**

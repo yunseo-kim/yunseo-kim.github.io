@@ -3,7 +3,7 @@ title: Principles for Writing Good Code
 description: Exploring the necessity of writing good code and the key principles for writing good code in general.
 categories: [Programming]
 tags: [Coding, PS/CP]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## The Necessity of Writing Good Code
 If you focus only on writing code quickly for immediate implementation, [technical debt](/posts/Technical-debt/) can grow to an unmanageable level, causing maintenance problems later. Therefore, it goes without saying that writing readable and maintainable code from the beginning is important when working on development projects.

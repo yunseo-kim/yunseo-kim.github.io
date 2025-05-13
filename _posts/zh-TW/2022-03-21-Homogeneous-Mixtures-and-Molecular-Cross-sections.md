@@ -4,7 +4,7 @@ description: 讓我們計算含有兩種或更多核種的均勻混合物的巨�
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 均勻混合物（Homogeneous Mixture）的巨觀截面積
 讓我們考慮一個由兩種核種 $X$ 和 $Y$ 均勻混合的混合物。假設每種核種的原子密度分別為 $N_X$ 和 $N_Y$ $\text{atom/cm}^3$，而中子與這些核的特定反應的反應截面積分別為 $\sigma_X$ 和 $\sigma_Y$。

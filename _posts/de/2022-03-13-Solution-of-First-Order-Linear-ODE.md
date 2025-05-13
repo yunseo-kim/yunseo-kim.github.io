@@ -5,7 +5,7 @@ description: Lasst uns die Lösungsmethode für lineare Differentialgleichungen 
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Lineare Differentialgleichung erster Ordnung
 Wenn eine Differentialgleichung erster Ordnung algebraisch in die Form

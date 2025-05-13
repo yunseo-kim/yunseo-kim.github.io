@@ -3,7 +3,7 @@ title: 建立和管理GitHub Pages部落格
 description: 了解靜態網頁和動態網頁的特點與差異，探索靜態網站生成器(Static Site Generator)，並將Jekyll部落格託管在GitHub Pages上。
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 從[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar) 12021年初開始，我使用Jekyll在GitHub Pages上託管部落格。但在建立部落格時沒有好好整理安裝過程，導致後續維護時遇到一些困難，因此決定簡單記錄一下安裝過程和維護方法。
 

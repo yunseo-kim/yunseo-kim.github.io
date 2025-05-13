@@ -7,7 +7,7 @@ description: We set up the Schrödinger equation for the harmonic oscillator in 
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Any oscillation can be approximated as simple harmonic oscillation if the amplitude is sufficiently small, making simple harmonic oscillation significant in physics

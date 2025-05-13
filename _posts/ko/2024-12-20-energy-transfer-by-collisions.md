@@ -5,7 +5,7 @@ description: 입자 간 충돌에 의한 에너지 전달률을 탄성 충돌과
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - 충돌 시 총 에너지와 운동량은 보존됨

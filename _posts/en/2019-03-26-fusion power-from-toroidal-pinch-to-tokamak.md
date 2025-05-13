@@ -4,7 +4,7 @@ description: This post covers the concept of nuclear fusion, its background as a
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## What is Nuclear Fusion?
 Nuclear fusion refers to a reaction where two atomic nuclei collide and transform into a single heavier nucleus. Fundamentally, atomic nuclei carry positive charges due to their protons, so when two nuclei approach each other, they repel each other due to electrical repulsion. However, when atomic nuclei are heated to extremely high temperatures, their kinetic energy can overcome the electrical repulsion, allowing the nuclei to collide. Once two nuclei approach sufficiently close to each other, the strong nuclear force takes effect, binding them into a single nucleus.  

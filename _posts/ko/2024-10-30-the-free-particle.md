@@ -5,7 +5,7 @@ description: V(x)=0인 자유 입자의 경우 변수분리한 해를 규격화�
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - 자유 입자: $V(x)=0$, 경계조건 없음(임의의 에너지)

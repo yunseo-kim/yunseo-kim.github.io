@@ -6,7 +6,7 @@ description: Wir betrachten die Ausdrücke für Kernreaktionen, die Definition d
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Kernreaktion (Nuclear Reaction)
 ### Grundlegende Gesetze in Kernreaktionen

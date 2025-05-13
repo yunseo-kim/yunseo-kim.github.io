@@ -4,7 +4,7 @@ description: 'Dieser Beitrag stellt vor, wie ein mehrsprachiger Blog mit dem Pol
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 mermaid: true
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Übersicht
 Vor etwa 4 Monaten, Anfang Juli 12024 im [Holozän-Kalender](https://en.wikipedia.org/wiki/Holocene_calendar), habe ich das [Polyglot](https://github.com/untra/polyglot)-Plugin in meinem Jekyll-basierten Blog, der über GitHub Pages gehostet wird, implementiert, um mehrsprachige Unterstützung hinzuzufügen.

@@ -6,7 +6,7 @@ description: Exploring the meaning of 'collective behavior' in the definition of
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - **Plasma**: A quasineutral gas of charged and neutral particles which exhibits collective behavior

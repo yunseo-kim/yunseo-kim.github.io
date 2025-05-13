@@ -7,7 +7,7 @@ description: Establecemos la ecuación de Schrödinger para el oscilador armóni
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Cualquier oscilación puede aproximarse a una oscilación armónica simple si la amplitud es lo suficientemente pequeña, lo que hace que la oscilación armónica simple sea importante en física

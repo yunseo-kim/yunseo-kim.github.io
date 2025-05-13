@@ -6,7 +6,7 @@ description: Examinamos as fórmulas de ângulo duplo e triplo e as derivamos da
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Fórmulas de Ângulo Duplo**

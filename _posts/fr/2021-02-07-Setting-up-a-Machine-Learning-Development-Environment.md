@@ -3,7 +3,7 @@ title: Construire un environnement de développement pour le Machine Learning
 description: Cet article traite de la méthode de configuration d'un environnement de développement, qui peut être considérée comme la première étape pour étudier le machine learning sur une machine locale. Tout le contenu a été rédigé sur la base d'Ubuntu 20.04 LTS avec une carte graphique NVIDIA Geforce RTX 3070.
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, CUDA, PyTorch, TensorFlow]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Aperçu
 Cet article traite de la méthode de configuration d'un environnement de développement, qui peut être considérée comme la première étape pour étudier le machine learning sur une machine locale. Tout le contenu a été rédigé sur la base d'Ubuntu 20.04 LTS avec une carte graphique NVIDIA Geforce RTX 3070.

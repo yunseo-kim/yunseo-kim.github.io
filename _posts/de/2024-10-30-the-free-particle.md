@@ -7,7 +7,7 @@ description: Wir untersuchen die Tatsache, dass die separierte Lösung für ein 
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Freies Teilchen: $V(x)=0$, keine Randbedingungen (beliebige Energie)

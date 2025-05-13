@@ -3,7 +3,7 @@ title: Principes pour écrire du bon code
 description: Découvrez la nécessité d'écrire du bon code et les principes généraux pour y parvenir.
 categories: [Programming]
 tags: [Coding, PS/CP]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## La nécessité d'écrire du bon code
 Si l'on se contente d'écrire rapidement du code pour une implémentation immédiate, la [dette technique](/posts/Technical-debt/) peut s'accumuler à un niveau ingérable et causer des problèmes de maintenance ultérieurs. Par conséquent, il est indiscutablement important d'écrire dès le départ un code lisible et facile à maintenir lors du développement d'un projet.

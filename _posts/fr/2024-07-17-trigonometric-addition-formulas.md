@@ -6,7 +6,7 @@ description: Examinons les définitions des fonctions trigonométriques et les r
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Définition des fonctions trigonométriques
 ![Cercle unitaire et vecteur rayon](/assets/img/trigonometry/definition.png)

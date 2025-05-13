@@ -7,7 +7,7 @@ categories: [Nuclear Engineering, Radiation]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## TL;DR
 > **Radioaktivität zu einem beliebigen Zeitpunkt t**

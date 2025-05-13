@@ -6,7 +6,7 @@ description: '''jekyll-theme-chirpy'' 기반의 Jekyll 블로그에 Polyglot 플
   부분을 다룬다.'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 개요
 약 4달 전인 [인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 12024년 7월 초, Jekyll 기반으로 Github Pages를 통해 호스팅 중인 본 블로그에 [Polyglot](https://github.com/untra/polyglot) 플러그인을 적용하여 다국어 지원 구현을 추가하였다.

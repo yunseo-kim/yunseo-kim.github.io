@@ -6,7 +6,7 @@ description: Exploramos cómo encontrar una función trigonométrica única corr
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Teorema de la adición armónica**

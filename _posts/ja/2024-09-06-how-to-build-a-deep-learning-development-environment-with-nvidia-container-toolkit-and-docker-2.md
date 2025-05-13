@@ -3,7 +3,7 @@ title: NVIDIA Container ToolkitとDocker/Podmanでディープラーニング開
 description: このシリーズではローカルにNVIDIA Container Toolkitでコンテナベースのディープラーニング開発環境を構築し、リモートサーバーとして活用できるようにSSHおよびJupyter Labを設定する方法を扱います。この投稿はシリーズの2番目の記事で、Dockerfileを作成しコンテナイメージをビルドする過程を扱います。
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, Docker, CUDA, PyTorch]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 概要
 このシリーズではNVIDIA Container ToolkitとDockerまたはPodmanをインストールし、Docker Hubの[nvidia/cudaリポジトリ](https://hub.docker.com/r/nvidia/cuda)から提供されるCUDAおよびcuDNNイメージをベースにDockerfileを作成してディープラーニング開発環境を構築する過程を扱います。必要な方が自由に利用できるよう、この過程を経て完成した[Dockerfile](https://github.com/yunseo-kim/dl-env-docker)と[イメージ](https://hub.docker.com/r/yunseokim/dl-env/tags)をGitHubとDocker Hubを通じて共有し、さらにリモートサーバーとして活用するためのSSHおよびJupyter Lab設定ガイドを提供します。  

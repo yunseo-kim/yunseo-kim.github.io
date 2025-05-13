@@ -4,7 +4,7 @@ description: ニュートンの運動法則とその3つの法則が持つ意味
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **ニュートンの運動法則（Newton's laws of motion）**

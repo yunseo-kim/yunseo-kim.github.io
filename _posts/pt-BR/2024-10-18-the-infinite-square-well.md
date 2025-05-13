@@ -8,7 +8,7 @@ description: Examinamos o problema do poço quadrado infinito unidimensional, um
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Problema do poço quadrado infinito unidimensional: 

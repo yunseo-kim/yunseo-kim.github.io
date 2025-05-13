@@ -5,7 +5,7 @@ description: Untersuchung der zwei Entstehungsprinzipien der atomaren Röntgenst
 categories: [Nuclear Engineering, Radiation]
 tags: [Atomic Radiation, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## TL;DR
 > - **Bremsstrahlung**: Kontinuierliche Röntgenstrahlung, die entsteht, wenn geladene Teilchen wie Elektronen in der Nähe eines Atomkerns durch elektrische Kräfte beschleunigt werden

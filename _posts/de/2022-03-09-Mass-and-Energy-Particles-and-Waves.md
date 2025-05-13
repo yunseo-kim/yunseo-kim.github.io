@@ -6,7 +6,7 @@ description: Erforschen Sie das Masse-Energie-Äquivalenzprinzip der Relativitä
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Masse-Energie-Äquivalenzprinzip
 Masse und Energie sind identisch und können ineinander umgewandelt werden.

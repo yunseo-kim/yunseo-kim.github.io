@@ -3,7 +3,7 @@ title: 建立機器學習開發環境
 description: 本文介紹在本地機器上學習機器學習的第一步：建立開發環境。所有內容都是基於Ubuntu 20.04 LTS和NVIDIA Geforce RTX 3070顯卡撰寫的。
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, CUDA, PyTorch, TensorFlow]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 概述
 本文介紹在本地機器上學習機器學習的第一步：建立開發環境。所有內容都是基於Ubuntu 20.04 LTS和NVIDIA Geforce RTX 3070顯卡撰寫的。

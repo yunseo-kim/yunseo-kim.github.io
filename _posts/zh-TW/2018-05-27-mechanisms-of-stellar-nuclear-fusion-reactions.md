@@ -4,7 +4,7 @@ description: 本文介紹恆星核心中發生的核融合反應，包括質子-
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## 質子-質子鏈式反應 (proton-proton chain reaction)
 這是人們最常知道的恆星核融合反應。重氫的原子核即氘核(deuteron)是由一個質子(p)和一個中子(n)結合而成。因此，當兩個質子結合形成重氫原子核時，其中一個質子必須轉變為中子。那麼，質子是如何變成中子的呢？

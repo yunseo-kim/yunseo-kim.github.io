@@ -4,7 +4,7 @@ description: 変数分離法について学び、関連する例をいくつか�
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 変数分離法（Separation of Variables）
 **分離可能な方程式（separable equation）**：代数的操作により $g(y)y'=f(x)$ の形で表すことができる方程式。

@@ -4,7 +4,7 @@ description: 探討2倍角、3倍角公式，並從三角函數加法定理(Trig
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Multiple-Angle Formulas, Half-Angle Formulas]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **2倍角公式 (Double-Angle Formulas)**

@@ -7,7 +7,7 @@ description: Berechnung der Energieübertragungsrate durch Teilchenkollisionen f
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - Bei Kollisionen bleiben Gesamtenergie und Impuls erhalten

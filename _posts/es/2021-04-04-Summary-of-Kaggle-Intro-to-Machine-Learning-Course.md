@@ -4,7 +4,7 @@ description: He resumido el contenido del curso público de Kaggle 'Intro to Mac
   Learning'.
 categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas, scikit-learn]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 Decidí estudiar los [cursos públicos de Kaggle](https://www.kaggle.com/learn/overview).
 Planeo resumir brevemente el contenido de cada curso a medida que los complete. Este primer artículo es un resumen del curso **Intro to Machine Learning**.

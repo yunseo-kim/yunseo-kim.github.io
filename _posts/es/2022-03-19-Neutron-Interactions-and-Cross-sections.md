@@ -8,7 +8,7 @@ categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Interacciones de neutrones
 Los neutrones son eléctricamente neutros, por lo que no se ven afectados por las fuerzas eléctricas de los electrones o la carga positiva del núcleo atómico. Por lo tanto, los neutrones pueden atravesar la nube de electrones del átomo y reaccionar directamente con el núcleo.

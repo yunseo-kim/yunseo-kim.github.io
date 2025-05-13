@@ -7,7 +7,7 @@ description: Estabelecemos a equação de Schrödinger para o oscilador harmôni
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Qualquer oscilação pode ser aproximada como uma oscilação harmônica simples (simple harmonic oscillation) se a amplitude for suficientemente pequena, o que torna a oscilação harmônica simples significativa na física

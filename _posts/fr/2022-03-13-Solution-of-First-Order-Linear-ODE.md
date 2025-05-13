@@ -5,7 +5,7 @@ description: Examinons la méthode de résolution des équations différentielle
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Équation différentielle linéaire du premier ordre
 Si une équation différentielle du premier ordre peut être mise sous la forme algébrique

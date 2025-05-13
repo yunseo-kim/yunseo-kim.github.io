@@ -6,7 +6,7 @@ description: Wir betrachten die Definition der trigonometrischen Funktionen und 
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Definition der trigonometrischen Funktionen
 ![Unit Circle and Radius Vector](/assets/img/trigonometry/definition.png)

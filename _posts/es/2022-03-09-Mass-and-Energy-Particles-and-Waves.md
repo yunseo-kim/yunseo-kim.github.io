@@ -6,7 +6,7 @@ description: Exploremos el principio de equivalencia masa-energía de la teoría
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Principio de equivalencia masa-energía
 La masa y la energía son idénticas y pueden convertirse entre sí.

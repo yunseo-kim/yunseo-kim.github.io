@@ -6,7 +6,7 @@ description: この記事では、恒星の核で起こる核融合反応のう�
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## 陽子-陽子連鎖反応 (proton-proton chain reaction)
 人々に最も広く知られている恒星の核融合反応です。重水素の核である重陽子(deuteron)は陽子(p)一つと中性子(n)一つが結合して作られます。したがって、陽子と陽子が結合して重水素の核になるためには、どちらか一方の陽子が中性子に変わらなければなりません。では、どのようにして陽子が中性子に変わることができるのでしょうか？

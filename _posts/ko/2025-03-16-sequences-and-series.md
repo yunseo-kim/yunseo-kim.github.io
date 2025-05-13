@@ -4,7 +4,7 @@ description: 수열과 급수의 정의, 수열의 수렴과 발산, 급수의 �
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## 수열

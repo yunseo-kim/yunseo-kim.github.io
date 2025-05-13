@@ -3,7 +3,7 @@ title: Zusammenfassung des Kaggle-Pandas-Kurses
 description: Eine Zusammenfassung des Inhalts des Pandas-Minikurses aus den öffentlichen Kaggle-Kursen.
 categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 # Pandas
 Lösen Sie kurze praktische Aufgaben, um Ihre Datenmanipulationsfähigkeiten zu perfektionieren.

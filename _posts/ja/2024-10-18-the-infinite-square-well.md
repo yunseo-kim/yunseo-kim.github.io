@@ -4,7 +4,7 @@ description: 量子力学の基本概念をよく示す簡単かつ重要な代�
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - 1次元無限井戸問題: 

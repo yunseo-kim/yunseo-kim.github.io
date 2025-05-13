@@ -4,7 +4,7 @@ description: Briefly examine elementary particles important in nuclear engineeri
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Subatomic Particles
 **Subatomic particles** refer to particles smaller than atoms. Subatomic particles include composite particles made up of smaller constituent particles, as well as elementary particles that are considered indivisible.

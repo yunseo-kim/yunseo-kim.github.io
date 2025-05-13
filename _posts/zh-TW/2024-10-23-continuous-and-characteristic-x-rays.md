@@ -4,7 +4,7 @@ description: 探討原子輻射中X射線的兩種產生原理，以及相應的
 categories: [Nuclear Engineering, Radiation]
 tags: [Atomic Radiation, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## TL;DR
 > - **制動輻射（bremsstrahlung）**：帶電粒子（如電子）在原子核附近通過時，由於電力作用而加速，從而發射出連續光譜的X射線

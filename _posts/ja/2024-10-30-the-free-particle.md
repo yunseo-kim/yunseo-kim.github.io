@@ -4,7 +4,7 @@ description: ポテンシャルV(x)=0の自由粒子の場合、変数分離し�
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - 自由粒子：$V(x)=0$、境界条件なし（任意のエネルギー）

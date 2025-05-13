@@ -5,7 +5,7 @@ categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 中子交互作用
 中子是電中性的，因此不受原子內電子或原子核正電荷的電力影響。因此，中子可以穿過原子的電子雲直接與原子核反應。

@@ -6,7 +6,7 @@ description: Exploramos los dos principios de generación de rayos X como radiac
 categories: [Nuclear Engineering, Radiation]
 tags: [Atomic Radiation, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## TL;DR
 > - **bremsstrahlung (radiación de frenado)**: rayos X de espectro continuo emitidos cuando partículas cargadas como electrones pasan cerca de núcleos atómicos y son aceleradas por fuerzas eléctricas

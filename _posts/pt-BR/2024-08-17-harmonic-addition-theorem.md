@@ -6,7 +6,7 @@ description: Aprenda como encontrar uma única função trigonométrica r sin(θ
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Teorema da Adição Harmônica**

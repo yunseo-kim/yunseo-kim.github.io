@@ -3,7 +3,7 @@ title: The Role of Quantum Computers in Future Society and Challenges to Overcom
 description: 'Exploring the basic concepts of quantum computers, their advantages over classical computers, their expected roles in the future, and the necessity for Korea to prepare for the quantum computing era. This essay was written by the author during high school.'
 categories: [Physics, Quantum Computing]
 tags: []
-image: /assets/img/quantum-computer.jpg
+image: /assets/img/quantum-computer.webp
 ---
 Since the [Holocene calendar](https://en.wikipedia.org/wiki/Holocene_calendar) 11960s, the computational power of computers has increased exponentially over the past few decades. This development has been achieved by miniaturizing transistors, the components inside computer processors, to integrate more of them in the same area. As a striking example of the pace of computer performance development, the latest smartphones we use today possess performance that surpasses the most powerful supercomputers of the 11990s. Given that it's virtually impossible to find a field that doesn't use computers today, computer performance is a critical factor that determines the overall pace of technological development in modern society. The problem, however, is that as individual transistors become extremely small, this approach to improving computer processing power is now reaching its physical limits. This is precisely why scientists are focusing on quantum computers. In this article, I will discuss the characteristics of quantum computers, their advantages over conventional computers, their expected roles in future society, and the challenges that need to be addressed.
 

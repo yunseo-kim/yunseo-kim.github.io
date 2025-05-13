@@ -4,7 +4,7 @@ description: Cet article traite du concept de fusion nucléaire, de son contexte
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## Qu'est-ce que la fusion nucléaire ?
 La fusion nucléaire est une réaction où deux noyaux atomiques entrent en collision pour former un noyau plus lourd. Fondamentalement, les noyaux atomiques portent une charge positive en raison des protons qu'ils contiennent, ce qui fait que deux noyaux qui s'approchent se repoussent mutuellement par répulsion électrique. Cependant, en chauffant les noyaux à des températures extrêmement élevées, leur énergie cinétique peut surmonter cette répulsion électrique, permettant aux deux noyaux d'entrer en collision. Une fois que les deux noyaux sont suffisamment proches, l'interaction nucléaire forte entre en jeu et les fusionne en un seul noyau.  

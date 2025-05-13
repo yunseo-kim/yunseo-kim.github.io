@@ -4,7 +4,7 @@ description: 정적 웹 페이지와 동적 웹 페이지의 특징과 차이, �
   Jekyll 블로그를 GitHub Pages에 호스팅해 보자.
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 [인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 12021년 초부터 Jekyll을 이용해서 GitHub Pages에 블로그를 호스팅하기 시작했다. 그런데 블로그 구축 당시에 설치 과정을 제대로 정리를 안 해 놨더니 추후 유지관리할 때 어려움이 좀 있어서, 간략하게나마 설치 과정과 유지관리 방법을 정리해 놓기로 했다.  
 

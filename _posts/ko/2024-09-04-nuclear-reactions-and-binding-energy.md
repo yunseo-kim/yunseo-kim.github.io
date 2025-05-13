@@ -4,7 +4,7 @@ description: 핵반응의 표현식과 Q값(Q-value)의 정의, 질량 결손(ma
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 핵반응 (Nuclear Reaction)
 ### 핵반응에서의 기본 법칙

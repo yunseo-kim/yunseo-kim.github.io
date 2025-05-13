@@ -10,7 +10,7 @@ description: Derivamos a equação de Schrödinger independente do tempo ψ(x) a
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Solução separada: $ \Psi(x,t) = \psi(x)\phi(t)$

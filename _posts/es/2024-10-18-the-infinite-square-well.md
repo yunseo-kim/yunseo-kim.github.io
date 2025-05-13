@@ -8,7 +8,7 @@ description: Examinamos el problema del pozo cuadrado infinito unidimensional, u
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Problema del pozo cuadrado infinito unidimensional: 

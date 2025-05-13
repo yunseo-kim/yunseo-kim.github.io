@@ -6,7 +6,7 @@ description: Nous explorons comment trouver une fonction trigonométrique unique
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Harmonic Addition Theorem]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Théorème d'addition harmonique**

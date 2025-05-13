@@ -6,7 +6,7 @@ description: Exploramos el significado del 'comportamiento colectivo' en la defi
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - **Plasma**: Gas cuasineutro de partículas cargadas y neutras que exhibe comportamiento colectivo

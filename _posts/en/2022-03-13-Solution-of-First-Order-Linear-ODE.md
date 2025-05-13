@@ -5,7 +5,7 @@ description: Let's explore the method of solving first-order linear ordinary dif
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## First-Order Linear Ordinary Differential Equation
 If a first-order ordinary differential equation can be algebraically brought to the form

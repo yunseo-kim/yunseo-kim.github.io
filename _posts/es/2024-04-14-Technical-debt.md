@@ -4,7 +4,7 @@ description: Exploremos el concepto de deuda técnica, las razones por las que o
   y cómo minimizarla.
 categories: [Programming]
 tags: [Coding]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Deuda técnica (Technical debt)
 Deuda técnica: El precio que se paga posteriormente por elegir atajos que permiten completar un proyecto más rápidamente para satisfacer requisitos inmediatos durante el proceso de desarrollo.

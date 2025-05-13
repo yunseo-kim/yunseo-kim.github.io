@@ -4,7 +4,7 @@ description: Wir betrachten grundlegende Konzepte der Infinitesimalrechnung wie 
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## Folgen

@@ -4,7 +4,7 @@ description: Dieser Artikel stellt die Kernfusionsreaktionen im Inneren von Ster
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## Proton-Proton-Kettenreaktion (proton-proton chain reaction)
 Dies ist die bekannteste Kernfusionsreaktion in Sternen. Der Kern des schweren Wasserstoffs, das Deuteron, besteht aus einem Proton (p) und einem Neutron (n). Damit zwei Protonen zu einem Deuteriumkern fusionieren können, muss sich eines der Protonen in ein Neutron umwandeln. Wie kann sich also ein Proton in ein Neutron verwandeln?

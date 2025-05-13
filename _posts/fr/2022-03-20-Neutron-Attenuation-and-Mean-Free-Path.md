@@ -5,7 +5,7 @@ description: Calcul de l'intensité d'un faisceau de neutrons mono-énergétique
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Atténuation des neutrons (Neutron Attenuation)
 Un faisceau de neutrons mono-énergétique d'intensité $I_0$ est irradié sur une cible d'épaisseur $X$, et un détecteur de neutrons est placé à une certaine distance derrière la cible. Supposons que la cible et le détecteur soient tous deux très petits, et que le détecteur ait un angle solide suffisamment petit pour ne détecter qu'une partie des neutrons traversant la cible. Ainsi, tous les neutrons entrant en collision avec la cible seront soit absorbés, soit diffusés dans une autre direction, et seuls les neutrons n'ayant pas interagi avec la cible atteindront le détecteur.

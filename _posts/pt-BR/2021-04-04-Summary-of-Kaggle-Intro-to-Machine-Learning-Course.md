@@ -4,7 +4,7 @@ description: Resumo do conteúdo do curso público do Kaggle 'Introdução ao Ap
   de Máquina'.
 categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas, scikit-learn]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 Decidi estudar os [cursos públicos do Kaggle](https://www.kaggle.com/learn/overview).
 Planejo resumir brevemente o conteúdo de cada curso à medida que os concluir. O primeiro artigo é um resumo do curso **Introdução ao Aprendizado de Máquina**.

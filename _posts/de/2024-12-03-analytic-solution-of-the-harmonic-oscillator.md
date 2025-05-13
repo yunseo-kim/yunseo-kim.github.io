@@ -7,7 +7,7 @@ description: Wir stellen die Schrödinger-Gleichung für den harmonischen Oszill
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Jede Schwingung mit ausreichend kleiner Amplitude kann als einfache harmonische Schwingung (simple harmonic oscillation) angenähert werden, was dem harmonischen Oszillator eine wichtige Bedeutung in der Physik verleiht

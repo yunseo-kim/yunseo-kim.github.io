@@ -4,7 +4,7 @@ description: 数列と級数の定義、数列の収束と発散、級数の収�
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## 数列

@@ -3,7 +3,7 @@ title: 技術債務(Technical debt)
 description: 探討技術債務的概念、產生原因，以及如何最小化技術債務。
 categories: [Programming]
 tags: [Coding]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 技術債務(Technical debt)
 技術債務：在開發過程中，為了滿足即時需求而選擇捷徑以更快完成眼前的專案，從而在未來必須付出的代價。

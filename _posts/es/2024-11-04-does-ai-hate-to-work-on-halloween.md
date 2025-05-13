@@ -7,7 +7,7 @@ description: El 31 de octubre de 2024, se produjo una interrupción repentina en
   Se presentan conjeturas sobre la causa de este fenómeno y las soluciones correspondientes.
 categories: [AI & Data, GenAI]
 tags: [LLM]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Situación del problema
 Como se trató en la serie ['Cómo traducir automáticamente publicaciones con la API de Claude 3.5 Sonnet'](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1), este blog ha implementado y utilizado un sistema de traducción multilingüe de publicaciones utilizando el modelo Claude 3.5 Sonnet desde finales de junio del [calendario holóceno](https://en.wikipedia.org/wiki/Holocene_calendar) 12024, y esta automatización ha funcionado bien sin mayores problemas durante los últimos 4 meses.

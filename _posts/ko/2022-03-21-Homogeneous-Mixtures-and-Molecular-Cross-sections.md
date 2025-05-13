@@ -4,7 +4,7 @@ description: 두 가지 이상의 핵종이 섞여 있는 균일혼합물의 거
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 균일혼합물(Homogeneous Mixture)의 거시적 단면적
 두 가지 핵종 $X$와 $Y$가 균일하게 섞여 있는 혼합물을 생각해 보자. 각 핵종의 원자 밀도는 각각 $N_X$와 $N_Y$ $\text{atom/cm}^3$이며, 중성자와 이 핵과의 특정 반응에 대한 반응단면적은 각각 $\sigma_X$, $\sigma_Y$라 하자. 

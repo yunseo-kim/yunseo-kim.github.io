@@ -6,7 +6,7 @@ description: 核融合の概念と次世代電力源として注目されるよ�
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## 核融合とは？
 核融合とは、二つの原子核が衝突して一つの重い原子核に変換される反応を言います。基本的に原子核は内部の陽子によって正電荷を帯びているため、二つの原子核が互いに接近すると電気的な斥力によってお互いを押し合います。しかし、原子核を超高温に加熱すると、原子核の運動エネルギーが電気的斥力に打ち勝ち、二つの原子核が互いに衝突することができるようになります。一度二つの原子核が十分に近づくと、強い核力が作用して一つの原子核に結合するのです。  

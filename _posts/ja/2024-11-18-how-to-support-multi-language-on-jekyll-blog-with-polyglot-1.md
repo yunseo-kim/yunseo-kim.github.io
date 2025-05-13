@@ -3,7 +3,7 @@ title: Polyglotを使用してJekyllブログで多言語サポートを実装�
 description: '''jekyll-theme-chirpy''ベースのJekyllブログにPolyglotプラグインを適用して多言語サポートを実装した過程を紹介します。このポストはシリーズの最初の記事で、Polyglotプラグインの適用とHTMLヘッダーとサイトマップの修正部分を扱います。'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 概要
 約4ヶ月前の[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar) 12024年7月初め、JekyllベースでGithub Pagesを通じてホスティングしているこのブログに[Polyglot](https://github.com/untra/polyglot)プラグインを適用して多言語サポートを実装しました。

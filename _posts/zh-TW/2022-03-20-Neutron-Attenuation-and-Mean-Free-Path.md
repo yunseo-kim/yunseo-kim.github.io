@@ -4,7 +4,7 @@ description: 計算單一能量中子束照射目標物時，中子束強度隨�
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 中子衰減（Neutron Attenuation）
 假設我們將強度為 $I_0$ 的單一能量中子束照射到厚度為 $X$ 的目標物上，並在目標物後方的一定距離放置一個中子探測器。我們假設目標物和探測器都非常小，且探測器具有很小的立體角，只能探測到穿過目標物的部分中子。在這種情況下，所有與目標物發生碰撞的中子要麼被吸收，要麼被散射到其他方向，因此只有未與目標物發生反應的中子才能進入探測器。

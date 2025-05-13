@@ -4,7 +4,7 @@ description: 探討電漿定義中「集體行為」的含義，並了解薩哈�
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - **電漿(plasma)**：由帶電粒子和中性粒子組成的準中性氣體，表現出集體行為

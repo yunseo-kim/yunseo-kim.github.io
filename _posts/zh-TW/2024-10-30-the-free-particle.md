@@ -4,7 +4,7 @@ description: 探討V(x)=0的自由粒子情況下，變數分離解無法規範�
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - 自由粒子：$V(x)=0$，無邊界條件（任意能量）

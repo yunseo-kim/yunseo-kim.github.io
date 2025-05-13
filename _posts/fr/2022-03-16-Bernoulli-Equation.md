@@ -5,7 +5,7 @@ description: Nous examinons l'équation de Bernoulli et la méthode de résoluti
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Équation de Bernoulli (Bernoulli Equation)
 

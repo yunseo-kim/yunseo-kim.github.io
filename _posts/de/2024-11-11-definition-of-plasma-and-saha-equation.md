@@ -6,7 +6,7 @@ description: Wir betrachten die Bedeutung des 'kollektiven Verhaltens' in der De
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - **Plasma**: Ein quasineutrales Gas aus geladenen und neutralen Teilchen, das kollektives Verhalten zeigt

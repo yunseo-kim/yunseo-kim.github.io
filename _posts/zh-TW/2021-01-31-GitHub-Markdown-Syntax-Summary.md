@@ -3,7 +3,7 @@ title: GitHub Markdown 語法整理
 description: 了解什麼是 Markdown，並根據 GitHub Flavored Markdown 標準整理了主要的 Markdown 語法，以用於 GitHub Pages 部落格託管。
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Markdown]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 為了使用 GitHub Pages，有必要了解 **markdown** 語法。
 本文參考了 GitHub 官方文件的 [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) 和 [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) 撰寫而成。

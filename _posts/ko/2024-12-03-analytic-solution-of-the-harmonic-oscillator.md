@@ -5,7 +5,7 @@ description: 양자역학에서의 조화진동자에 대한 슈뢰딩거 방정
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - 진폭이 충분히 작다면 어떠한 진동도 단순조화진동(simple harmonic oscillation)으로 근사할 수 있으며, 이 덕에 단순조화진동은 물리학에서 중요한 의미 가짐

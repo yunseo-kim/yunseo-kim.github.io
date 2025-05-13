@@ -4,7 +4,7 @@ description: 原子放射線に該当するX線の2つの発生原理と、そ�
 categories: [Nuclear Engineering, Radiation]
 tags: [Atomic Radiation, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## TL;DR
 > - **bremsstrahlung(制動放射、breaking radiation)**: 電子などの荷電粒子が原子核付近を通過する際、電気的引力により加速されながら放出する連続スペクトルのX線

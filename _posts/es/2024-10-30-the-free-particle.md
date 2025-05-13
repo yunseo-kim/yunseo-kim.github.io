@@ -7,7 +7,7 @@ description: Exploramos el hecho de que la solución separable para una partícu
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, The Uncertainty Principle]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Partícula libre: $V(x)=0$, sin condiciones de contorno (energía arbitraria)

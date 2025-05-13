@@ -3,7 +3,7 @@ title: 使用Polyglot在Jekyll部落格實現多語言支援 (1) - 應用Polyglo
 description: '介紹在基於''jekyll-theme-chirpy''的Jekyll部落格中應用Polyglot外掛程式實現多語言支援的過程。這篇文章是該系列的第一篇，涵蓋了應用Polyglot外掛程式並修改html標頭和sitemap的部分。'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 概述
 大約4個月前，也就是[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar) 12024年7月初，我在基於Jekyll並通過Github Pages託管的本部落格中應用了[Polyglot](https://github.com/untra/polyglot)外掛程式來實現多語言支援。

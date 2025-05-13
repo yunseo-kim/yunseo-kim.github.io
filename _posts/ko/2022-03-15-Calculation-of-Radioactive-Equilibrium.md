@@ -5,7 +5,7 @@ categories: [Nuclear Engineering, Radiation]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## TL;DR
 > **임의의 시간 t에서의 방사능**

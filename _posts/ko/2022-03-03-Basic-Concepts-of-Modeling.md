@@ -5,7 +5,7 @@ categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 모델링(Modeling)
 - **모델(model)**: 풀고자 하는 공학문제를 변수, 함수, 방정식 등을 통하여 수학적 식으로 공식화한 것

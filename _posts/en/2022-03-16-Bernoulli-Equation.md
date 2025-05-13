@@ -5,7 +5,7 @@ description: We explore the Bernoulli equation and its solution method, as well 
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Bernoulli Equation
 

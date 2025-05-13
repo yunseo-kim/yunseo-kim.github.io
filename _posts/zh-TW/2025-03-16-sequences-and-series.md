@@ -4,7 +4,7 @@ description: 探討數列與級數的定義、數列的收斂與發散、級數�
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 
 ## 數列

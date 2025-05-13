@@ -8,7 +8,7 @@ categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Commutator, Ladder
     Operators]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Any oscillation can be approximated as simple harmonic oscillation if the amplitude is small enough, which makes simple harmonic oscillation significant in physics

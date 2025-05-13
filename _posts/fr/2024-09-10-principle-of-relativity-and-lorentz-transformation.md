@@ -4,7 +4,7 @@ description: Nous explorons le concept de référentiel et la transformation de 
 categories: [Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Principe de relativité** : Principe selon lequel toutes les lois physiques doivent être identiques dans différents référentiels se déplaçant à vitesse constante les uns par rapport aux autres

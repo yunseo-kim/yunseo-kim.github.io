@@ -6,7 +6,7 @@ description: Découvrons les deux principes de génération des rayons X en tant
 categories: [Nuclear Engineering, Radiation]
 tags: [Atomic Radiation, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## TL;DR
 > - **bremsstrahlung (rayonnement de freinage, breaking radiation)** : rayons X à spectre continu émis lorsque des particules chargées comme les électrons passent près d'un noyau atomique et sont accélérées par les forces électriques

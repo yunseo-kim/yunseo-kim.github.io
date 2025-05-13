@@ -4,7 +4,7 @@ description: Examinons le concept de dette technique, les raisons de son apparit
   et les moyens de la minimiser.
 categories: [Programming]
 tags: [Coding]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Dette technique (Technical debt)
 Dette technique : le prix à payer ultérieurement pour avoir choisi des raccourcis permettant de terminer plus rapidement un projet immédiat afin de répondre aux exigences immédiates dans le processus de développement.

@@ -4,7 +4,7 @@ description: Este artículo introduce las reacciones de fusión nuclear que ocur
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## Cadena de reacción protón-protón (proton-proton chain reaction)
 Es la reacción de fusión estelar más conocida por la gente. El núcleo del deuterio, el deuterón, se forma por la combinación de un protón (p) y un neutrón (n). Por lo tanto, para que dos protones se combinen y formen un núcleo de deuterio, uno de los protones debe convertirse en un neutrón. Entonces, ¿cómo puede un protón convertirse en un neutrón?

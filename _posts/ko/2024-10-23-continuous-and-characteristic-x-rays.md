@@ -4,7 +4,7 @@ description: 원자 방사선에 해당하는 X선의 2가지 발생 원리와, 
 categories: [Nuclear Engineering, Radiation]
 tags: [Atomic Radiation, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## TL;DR
 > - **bremsstrahlung(제동 복사, breaking radiation)**: 전자와 같은 하전 입자가 원자핵 근처를 지날 때, 전기적 인력에 의해 가속되면서 방출하는 연속 스펙트럼의 X선

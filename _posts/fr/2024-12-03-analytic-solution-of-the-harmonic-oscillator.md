@@ -7,7 +7,7 @@ description: Nous établissons l'équation de Schrödinger pour l'oscillateur ha
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hermite Polynomials]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Toute oscillation peut être approximée par une oscillation harmonique simple si l'amplitude est suffisamment petite, ce qui donne à l'oscillation harmonique simple une importance significative en physique

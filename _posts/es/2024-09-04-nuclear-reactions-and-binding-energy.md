@@ -6,7 +6,7 @@ description: Exploramos las expresiones de las reacciones nucleares, la definici
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Reaction, Nuclear Radiation]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Reacción nuclear (Nuclear Reaction)
 ### Leyes fundamentales en las reacciones nucleares

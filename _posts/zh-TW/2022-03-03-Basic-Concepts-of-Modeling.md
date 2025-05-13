@@ -5,7 +5,7 @@ categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 建模（Modeling）
 - **模型（model）**：將欲解決的工程問題通過變量、函數、方程等數學式子形式化的結果

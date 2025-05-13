@@ -4,7 +4,7 @@ description: 'Apresento o processo de implementação de suporte multilíngue em
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 mermaid: true
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Visão geral
 Há cerca de 4 meses, no início de julho do ano 12024 do [calendário holoceno](https://en.wikipedia.org/wiki/Holocene_calendar), implementei o suporte multilíngue neste blog baseado em Jekyll e hospedado no Github Pages, utilizando o plugin [Polyglot](https://github.com/untra/polyglot).

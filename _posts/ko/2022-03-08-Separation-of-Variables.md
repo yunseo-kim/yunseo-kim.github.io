@@ -4,7 +4,7 @@ description: 변수분리법에 대해 알아보고, 관련 예제 몇 가지를
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 변수분리법(Separation of Variables)
 **분리 가능한 방정식(separable equation)**: 대수적 조작을 통해 $g(y)y'=f(x)$ 꼴로 나타낼 수 있는 방정식.

@@ -4,7 +4,7 @@ description: We explore the concept of reference frames and the Galilean transfo
 categories: [Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Principle of Relativity**: The principle that all physical laws must be the same in all inertial reference frames moving at constant velocities relative to each other

@@ -4,7 +4,7 @@ description: 介紹變數分離法，並提供幾個相關的例子。
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 變數分離法（Separation of Variables）
 **可分離方程（separable equation）**：可以通過代數操作轉換成 $g(y)y'=f(x)$ 形式的方程。

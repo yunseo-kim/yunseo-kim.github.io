@@ -4,7 +4,7 @@ description: '介紹在基於''jekyll-theme-chirpy''的Jekyll部落格中應用P
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 mermaid: true
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 概述
 大約4個月前，也就是[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar) 12024年7月初，我在透過Github Pages託管的Jekyll部落格上應用了[Polyglot](https://github.com/untra/polyglot)外掛來實現多語言支援。

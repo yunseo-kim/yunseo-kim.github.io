@@ -6,7 +6,7 @@ description: 이 글에서는 항성의 핵에서 일어나는 핵융합 반응 
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## 양성자-양성자 연쇄반응 (proton-proton chain reaction)
 사람들에게 가장 흔히 알려져 있는 항성의 핵융합 반응입니다. 중수소의 핵인 중양성자(deuteron)는 양성자(p) 하나와 중성자(n) 하나가 결합하여 만들어집니다. 따라서 양성자와 양성자가 결합하여 중수소의 핵이 되려면 둘 중에 한 양성자는 중성자로 바뀌어야 합니다. 그렇다면 어떻게 양성자가 중성자로 바뀔 수 있을까요?

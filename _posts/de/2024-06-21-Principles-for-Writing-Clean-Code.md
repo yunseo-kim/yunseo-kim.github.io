@@ -3,7 +3,7 @@ title: Prinzipien für das Schreiben guten Codes
 description: Die Notwendigkeit, guten Code zu schreiben, und die allgemeinen Hauptprinzipien für das Schreiben guten Codes.
 categories: [Programming]
 tags: [Coding, PS/CP]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Die Notwendigkeit, guten Code zu schreiben
 Wenn man sich nur darauf konzentriert, schnell Code zu schreiben, um eine unmittelbare Implementierung zu erreichen, kann die [technische Schuld](/posts/Technical-debt/) auf ein nicht mehr beherrschbares Niveau anwachsen und später zu Wartungsproblemen führen. Daher ist es bei der Durchführung von Entwicklungsprojekten unbestreitbar wichtig, von Anfang an lesbaren und wartungsfreundlichen Code zu schreiben.

@@ -4,7 +4,7 @@ description: 相対性理論の質量-エネルギー等価原理を探求し、
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Theory of Relativity]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## 質量-エネルギー等価原理
 質量とエネルギーは互いに同一であり、相互に変換することができる。

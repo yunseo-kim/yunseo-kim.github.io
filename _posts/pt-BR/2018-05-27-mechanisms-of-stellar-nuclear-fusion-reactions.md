@@ -4,7 +4,7 @@ description: Este artigo apresenta as reações de fusão nuclear que ocorrem no
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## Reação em Cadeia Próton-Próton (proton-proton chain reaction)
 Esta é a reação de fusão nuclear estelar mais conhecida pelas pessoas. O núcleo do deutério, chamado de dêuteron, é formado pela combinação de um próton (p) e um nêutron (n). Portanto, para que dois prótons se combinem e formem um núcleo de deutério, um dos prótons precisa se transformar em um nêutron. Então, como um próton pode se transformar em um nêutron?

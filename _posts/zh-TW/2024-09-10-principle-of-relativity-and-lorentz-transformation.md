@@ -4,7 +4,7 @@ description: 探討參考系的概念以及在古典力學中廣泛使用的座�
 categories: [Physics, Modern Physics]
 tags: [Theory of Relativity, Linear Transformation, Lorentz transformation]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **相對性原理**：等速運動的不同參考系中，所有物理定律應該是相同的原理

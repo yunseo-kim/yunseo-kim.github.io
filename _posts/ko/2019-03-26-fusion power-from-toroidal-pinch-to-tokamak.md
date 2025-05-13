@@ -6,7 +6,7 @@ description: 핵융합의 개념과 차세대 전력원으로 주목받게 된 �
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## 핵융합이란?
 핵융합이란 두 개의 원자핵이 부딪쳐 하나의 무거운 원자핵으로 변환되는 반응을 말합니다. 기본적으로 원자핵은 내부의 양성자로 인해 양전하를 띠므로 두 개의 원자핵이 서로 접근하게 되면 전기적인 척력에 의해 서로 밀어내게 됩니다. 하지만 원자핵을 초고온으로 가열하면 원자핵의 운동에너지가 전기적 척력을 이겨내어 두 원자핵이 서로 충돌할 수 있게 되고, 일단 두 원자핵이 충분히 가까이 접근하고 나면 강한핵력이 작용해 하나의 원자핵으로 결합하게 되죠.  

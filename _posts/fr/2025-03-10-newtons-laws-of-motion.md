@@ -4,7 +4,7 @@ description: Nous explorons les lois du mouvement de Newton, la signification de
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Les lois du mouvement de Newton**

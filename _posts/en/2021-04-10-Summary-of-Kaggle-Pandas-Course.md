@@ -3,7 +3,7 @@ title: Summary of Kaggle-Pandas Course Content
 description: A summary of the content from the Pandas mini-course among Kaggle's public courses.
 categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 # Pandas
 Solve short hands-on challenges to perfect your data manipulation skills.

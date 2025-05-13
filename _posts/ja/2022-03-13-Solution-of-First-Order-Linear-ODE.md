@@ -4,7 +4,7 @@ description: 1階線形常微分方程式の解法を学びましょう。
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## 1階線形常微分方程式
 1階常微分方程式を代数的に

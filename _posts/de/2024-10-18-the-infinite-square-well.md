@@ -8,7 +8,7 @@ description: Wir betrachten das einfache, aber wichtige Modellproblem des eindim
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Eindimensionaler unendlicher Potentialtopf: 

@@ -3,7 +3,7 @@ title: AI也想在萬聖節玩耍(?) (Does AI Hate to Work on Halloween?)
 description: 12024年10月31日，Claude 3.5 Sonnet模型突然開始非常敷衍地處理給定任務，導致過去幾個月來一直正常運作的部落格自動翻譯系統出現故障。本文介紹了這一現象可能的原因以及相應的解決方法。
 categories: [AI & Data, GenAI]
 tags: [LLM]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 問題情況
 如同在['使用Claude 3.5 Sonnet API自動翻譯文章的方法'系列](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1)中所述，本部落格自[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar) 12024年6月底開始導入並使用基於Claude 3.5 Sonnet模型的文章多語言翻譯系統，該自動化系統在過去4個月中一直運作良好，沒有出現重大問題。

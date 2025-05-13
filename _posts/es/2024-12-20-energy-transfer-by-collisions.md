@@ -7,7 +7,7 @@ description: Calculamos la tasa de transferencia de energía por colisiones entr
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - La energía total y el momento se conservan durante la colisión

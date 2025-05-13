@@ -4,7 +4,7 @@ description: This article introduces the nuclear fusion reactions occurring in s
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## Proton-Proton Chain Reaction
 This is the most commonly known nuclear fusion reaction in stars. The nucleus of deuterium, called a deuteron, is formed by combining one proton (p) and one neutron (n). Therefore, for two protons to combine and form a deuterium nucleus, one of the protons must transform into a neutron. So how can a proton change into a neutron?

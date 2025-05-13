@@ -5,7 +5,7 @@ description: 플라즈마의 정의에서 '집단적 움직임'이 의미하는 
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## TL;DR
 > - **플라즈마(plasma)**: 집단적인 움직임(collective behavior)을 보이는 하전입자 및 중성입자로 구성된 준중성(quasineutral) 기체

@@ -5,7 +5,7 @@ description: Exploramos la ecuación de Bernoulli y cómo resolver la ecuación 
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## Ecuación de Bernoulli (Bernoulli Equation)
 

@@ -4,7 +4,7 @@ description: 뉴턴의 운동 법칙 및 해당 3가지 법칙이 갖는 의미,
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **뉴턴의 운동 법칙(Newton's laws of motion)**

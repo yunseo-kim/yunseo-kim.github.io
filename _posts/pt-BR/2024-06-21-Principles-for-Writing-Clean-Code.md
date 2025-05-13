@@ -3,7 +3,7 @@ title: Princípios para escrever um bom código
 description: Exploramos a necessidade de escrever um bom código e os principais princípios geralmente aplicados para criar código de qualidade.
 categories: [Programming]
 tags: [Coding, PS/CP]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## A necessidade de escrever um bom código
 Se nos concentrarmos apenas em escrever código rapidamente para implementação imediata, a [dívida técnica](/posts/Technical-debt/) pode crescer a níveis incontroláveis, causando problemas de manutenção no futuro. Portanto, ao desenvolver projetos, é indiscutivelmente importante escrever código legível e de fácil manutenção desde o início.

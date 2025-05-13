@@ -8,7 +8,7 @@ description: Examinons le problème du puits carré infini unidimensionnel, un e
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
-image: /assets/img/schrodinger-cat-cropped.png
+image: /assets/img/schrodinger-cat-cropped.webp
 ---
 ## TL;DR
 > - Problème du puits carré infini unidimensionnel : 

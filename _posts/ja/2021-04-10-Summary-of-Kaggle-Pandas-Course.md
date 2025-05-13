@@ -3,7 +3,7 @@ title: Kaggle-Pandasコースの内容まとめ
 description: KaggleのオープンコースのうちPandasミニコースの内容を要約しました。
 categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 # Pandas
 データ操作スキルを完璧にするための短い実践的な課題を解決します。

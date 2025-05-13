@@ -4,7 +4,7 @@ description: Aborda o conceito de fusão nuclear e seu contexto como fonte de en
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
-image: /assets/img/tokamak-plasma-cropped.png
+image: /assets/img/tokamak-plasma-cropped.webp
 ---
 ## O que é Fusão Nuclear?
 Fusão nuclear é a reação em que dois núcleos atômicos colidem e se transformam em um único núcleo mais pesado. Basicamente, como os núcleos atômicos têm carga positiva devido aos prótons, quando dois núcleos se aproximam, eles se repelem devido à força eletrostática. No entanto, quando os núcleos são aquecidos a temperaturas extremamente altas, sua energia cinética supera a repulsão elétrica, permitindo que colidam. Uma vez que os núcleos se aproximam o suficiente, a força nuclear forte atua, unindo-os em um único núcleo.  

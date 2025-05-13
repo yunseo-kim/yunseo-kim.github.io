@@ -4,7 +4,7 @@ description: 세그레표와 여러 방사성 붕괴 유형, 베타붕괴에서 
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Prerequisites
 - [아원자 입자와 원자의 구성 요소](/posts/constituents-of-an-atom/)

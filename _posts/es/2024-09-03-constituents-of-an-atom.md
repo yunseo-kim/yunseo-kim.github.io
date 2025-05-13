@@ -4,7 +4,7 @@ description: Examinamos brevemente las partículas elementales importantes en la
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Atomic Structure]
 math: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Partículas subatómicas (subatomic particle)
 Las **partículas subatómicas (subatomic particle)** son partículas más pequeñas que el átomo. Entre las partículas subatómicas hay partículas compuestas formadas por partículas constituyentes más pequeñas, y partículas elementales que se consideran indivisibles.

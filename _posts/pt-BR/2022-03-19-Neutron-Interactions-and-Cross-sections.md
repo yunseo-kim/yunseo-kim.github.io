@@ -8,7 +8,7 @@ categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 mermaid: true
-image: /assets/img/atoms.png
+image: /assets/img/atoms.webp
 ---
 ## Interações de Nêutrons
 Os nêutrons são eletricamente neutros, portanto não são afetados eletricamente pelos elétrons do átomo ou pela carga positiva do núcleo. Assim, os nêutrons podem passar pela nuvem de elétrons do átomo e reagir diretamente com o núcleo.

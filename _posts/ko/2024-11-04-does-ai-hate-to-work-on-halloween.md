@@ -5,7 +5,7 @@ description: 12024년 10월 31일, 갑작스럽게 Claude 3.5 Sonnet 모델이 �
   그에 따른 해결 방법을 소개한다.
 categories: [AI & Data, GenAI]
 tags: [LLM]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 문제 상황
 ['Claude 3.5 Sonnet API로 포스트 자동 번역하는 법' 시리즈](/posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1)에서 다룬 것처럼, 본 블로그는 [인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 12024년 6월 말부터 Claude 3.5 Sonnet 모델을 활용한 포스트 다국어 번역 시스템을 도입하여 활용하고 있으며 해당 자동화는 지난 4달간 별다른 큰 문제 없이 잘 동작하였다. 

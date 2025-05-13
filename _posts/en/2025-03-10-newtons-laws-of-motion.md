@@ -4,7 +4,7 @@ description: We explore Newton's laws of motion, the meaning of these three laws
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **Newton's Laws of Motion**

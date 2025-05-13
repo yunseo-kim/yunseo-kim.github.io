@@ -3,7 +3,7 @@ title: Resumen del curso Kaggle-Pandas
 description: Se resume el contenido del mini curso de Pandas de los cursos abiertos de Kaggle.
 categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 
 # Pandas

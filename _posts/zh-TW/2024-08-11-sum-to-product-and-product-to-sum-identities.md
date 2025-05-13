@@ -5,7 +5,7 @@ categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product
     Identities]
 math: true
-image: /assets/img/math-and-physics-cropped.png
+image: /assets/img/math-and-physics-cropped.webp
 ---
 ## TL;DR
 > **積和公式（Product-to-Sum Identities）**

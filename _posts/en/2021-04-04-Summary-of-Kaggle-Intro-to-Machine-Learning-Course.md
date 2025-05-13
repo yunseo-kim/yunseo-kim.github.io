@@ -4,7 +4,7 @@ description: I have summarized the content of the 'Intro to Machine Learning' co
   from Kaggle's public courses.
 categories: [AI & Data, Machine Learning]
 tags: [Kaggle Courses, Pandas, scikit-learn]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 I decided to study [Kaggle's public courses](https://www.kaggle.com/learn/overview).
 I plan to briefly summarize the content of each course as I complete it. This first post is a summary of the **Intro to Machine Learning** course.

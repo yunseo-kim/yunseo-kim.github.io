@@ -4,7 +4,7 @@ description: 'This post introduces the process of implementing multilingual supp
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 mermaid: true
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## Overview
 About 4 months ago, in early July 12024 of the [Holocene calendar](https://en.wikipedia.org/wiki/Holocene_calendar), I added multilingual support to this Jekyll-based blog hosted on Github Pages by applying the [Polyglot](https://github.com/untra/polyglot) plugin.

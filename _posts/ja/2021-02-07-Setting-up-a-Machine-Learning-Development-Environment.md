@@ -3,7 +3,7 @@ title: 機械学習開発環境の構築方法
 description: この記事では、ローカルマシンで機械学習を学ぶための第一歩となる開発環境の構築方法について説明します。すべての内容はUbuntu 20.04 LTS上でNVIDIA Geforce RTX 3070グラフィックカードを基準に作成しました。
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, CUDA, PyTorch, TensorFlow]
-image: /assets/img/technology.jpg
+image: /assets/img/technology.webp
 ---
 ## 概要
 この記事では、ローカルマシンで機械学習を学ぶための第一歩となる開発環境の構築方法について説明します。すべての内容はUbuntu 20.04 LTS上でNVIDIA Geforce RTX 3070グラフィックカードを基準に作成しました。
