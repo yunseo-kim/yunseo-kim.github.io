@@ -47,8 +47,9 @@ export function loadImg() {
   });
 
   // Images loaded from the browser cache do not trigger the 'load' event
-  document.querySelectorAll('article img[loading="lazy"]').forEach((img) => {
-    if (img.complete) {
+  // Modified by Yunseo Kim: Images without both loading=“lazy” attribute and data-lqip attribute also do not trigger 'load' event
+  document.querySelectorAll('article img').forEach((img) => {
+    if (!img.hasAttribute(ATTR_DATA_LQIP) && img.complete) {
       removeCover.call(img, cover.SHIMMER);
     }
   });
