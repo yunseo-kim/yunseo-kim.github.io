@@ -31,7 +31,6 @@ package-lock.json
 
 # Misc
 _sass/vendors
-assets/js/dist
 
 # ignore .DS_Store of macOS
 .DS_Store
