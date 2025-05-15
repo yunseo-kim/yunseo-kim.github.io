@@ -1,5 +1,5 @@
 ---
-title: 중성자 감쇠와 평균 자유행정(Mean Free Path)
+title: 중성자 감쇠(Neutron Attenuation)와 평균 자유 거리(Mean Free Path)
 description: 단일 에너지 중성자 빔을 목표물에 조사했을 때 목표물 투과 거리에 따른 중성자 빔의 강도를 계산하고, 이로부터 중성자의 평균 자유행정을 유도한다.
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
@@ -21,7 +21,7 @@ $$ I(x) = I_0e^{-\Sigma_t x} \tag{2} $$
 
 따라서 중성자 빔의 강도는 목표물 통과 거리가 길어질수록 지수적으로 감소함을 알 수 있다.
 
-## 평균 자유행정(Mean Free Path)
+## 평균 자유 거리 (Mean Free Path)
 - 중성자가 핵과 한 번 충돌한 후 뒤이어 또 다른 핵과 충돌할 때까지의 평균 이동거리
 - 즉, 중성자가 충돌 없이 진행하는 평균 거리
 - 기호 $\lambda$로 표기
@@ -35,7 +35,7 @@ p(x)dx &= \frac{I(x)}{I_0} \Sigma_t dx
 \end{align*}
 $$
 
-이로부터 *평균 자유행정(mean free path)* $\lambda$를 다음과 같이 구할 수 있다.
+이로부터 *평균 자유 거리(mean free path)* $\lambda$를 다음과 같이 구할 수 있다.
 
 $$ \begin{align*}
 \lambda &= \int_0^\infty xp(x)dx

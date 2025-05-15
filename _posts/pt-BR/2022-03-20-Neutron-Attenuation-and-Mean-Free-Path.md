@@ -1,17 +1,15 @@
 ---
-title: Atenuação de Nêutrons e Livre Caminho Médio (Mean Free Path)
-description: Calcula-se a intensidade de um feixe de nêutrons de energia única quando
-  irradiado em um alvo em função da distância de penetração no alvo, e a partir disso,
-  deriva-se o livre caminho médio dos nêutrons.
+title: Atenuação de Nêutrons (Neutron Attenuation) e Caminho Livre Médio (Mean Free Path)
+description: Calculamos a intensidade de um feixe de nêutrons monoenergético ao atravessar um alvo em função da distância de penetração, e a partir disso derivamos o caminho livre médio dos nêutrons.
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.webp
 ---
 ## Atenuação de Nêutrons (Neutron Attenuation)
-Um feixe de nêutrons de energia única com intensidade $I_0$ está sendo irradiado em um alvo de espessura $X$, e um detector de nêutrons está posicionado a uma certa distância atrás do alvo. Vamos assumir que tanto o alvo quanto o detector são muito pequenos, e que o detector tem um ângulo sólido pequeno que pode detectar apenas uma parte dos nêutrons que passam pelo alvo. Então, todos os nêutrons que colidem com o alvo serão absorvidos ou espalhados em outras direções, e apenas os nêutrons que não interagiram com o alvo incidirão no detector.
+Um feixe de nêutrons monoenergético com intensidade $I_0$ está sendo irradiado em um alvo de espessura $X$, e um detector de nêutrons está posicionado a uma certa distância atrás do alvo. Vamos supor que tanto o alvo quanto o detector são muito pequenos, e que o detector possui um ângulo sólido pequeno, capaz de detectar apenas uma parte dos nêutrons que atravessam o alvo. Assim, todos os nêutrons que colidem com o alvo serão absorvidos ou espalhados em outras direções, e apenas os nêutrons que não interagiram com o alvo incidirão no detector.
 
-Vamos chamar de $I(x)$ a intensidade do feixe de nêutrons que permanece sem colidir após percorrer uma distância $x$ dentro do alvo. Quando o feixe de nêutrons passa por uma espessura suficientemente fina $\tau$ do alvo, o número de colisões por unidade de área é $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[nêutrons/cm}^2\cdot\text{s]}$ (consulte as equações (1) e (4) em [Interações de Nêutrons e Seções de Choque](/posts/Neutron-Interactions-and-Cross-sections/#seção-de-choque-cross-section-ou-seção-de-choque-microscópica-microscopic-cross-section)). Portanto, a diminuição na intensidade do feixe de nêutrons ao percorrer uma distância $dx$ dentro do alvo é dada por:
+Seja $I(x)$ a intensidade do feixe de nêutrons que permanece sem colisões após percorrer uma distância $x$ dentro do alvo. Quando o feixe de nêutrons atravessa um alvo de espessura muito fina $\tau$, o número de colisões por unidade de área é $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[neutrons/cm}^2\cdot\text{s]}$ (consulte as equações (1) e (4) em [Interações de Nêutrons e Seções de Choque](/posts/Neutron-Interactions-and-Cross-sections/#seção-de-choque-cross-section-ou-seção-de-choque-microscópica-microscopic-cross-section)). Portanto, a diminuição na intensidade do feixe de nêutrons ao percorrer uma distância $dx$ dentro do alvo é:
 
 $$ -dI = \sigma_t IN dx = \Sigma_t I dx \tag{1} $$
 
@@ -21,14 +19,14 @@ $$ \frac{dI}{I} = -\Sigma_t dx $$
 
 $$ I(x) = I_0e^{-\Sigma_t x} \tag{2} $$
 
-Assim, podemos ver que a intensidade do feixe de nêutrons diminui exponencialmente à medida que a distância de penetração no alvo aumenta.
+Portanto, podemos ver que a intensidade do feixe de nêutrons diminui exponencialmente à medida que a distância de penetração no alvo aumenta.
 
-## Livre Caminho Médio (Mean Free Path)
+## Caminho Livre Médio (Mean Free Path)
 - A distância média que um nêutron percorre após colidir com um núcleo até colidir com outro núcleo
 - Ou seja, a distância média que um nêutron percorre sem colisões
 - Representado pelo símbolo $\lambda$
 
-$I(x)/I_0=e^{-\Sigma_t x}$ representa a probabilidade de um nêutron não colidir com um núcleo ao percorrer uma distância $x$ dentro do meio. Portanto, a probabilidade $p(x)dx$ de um nêutron percorrer uma distância $x$ sem colisões e então colidir dentro de uma distância $dx$ é dada por:
+$I(x)/I_0=e^{-\Sigma_t x}$ representa a probabilidade de um nêutron não colidir com nenhum núcleo ao percorrer uma distância $x$ dentro do meio. Portanto, a probabilidade $p(x)dx$ de um nêutron percorrer uma distância $x$ sem colisões e então colidir dentro de uma distância $dx$ é:
 
 $$ \begin{align*}
 p(x)dx &= \frac{I(x)}{I_0} \Sigma_t dx
@@ -37,7 +35,7 @@ p(x)dx &= \frac{I(x)}{I_0} \Sigma_t dx
 \end{align*}
 $$
 
-A partir disso, podemos calcular o *livre caminho médio (mean free path)* $\lambda$ da seguinte forma:
+A partir disso, podemos calcular o *caminho livre médio (mean free path)* $\lambda$ da seguinte forma:
 
 $$ \begin{align*}
 \lambda &= \int_0^\infty xp(x)dx

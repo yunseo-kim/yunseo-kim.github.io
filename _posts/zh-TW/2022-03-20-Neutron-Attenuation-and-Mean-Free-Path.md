@@ -1,32 +1,32 @@
 ---
-title: 中子衰減和平均自由程（Mean Free Path）
-description: 計算單一能量中子束照射目標物時，中子束強度隨目標物穿透距離的變化，並由此推導中子的平均自由程。
+title: 中子衰減(Neutron Attenuation)與平均自由路徑(Mean Free Path)
+description: 計算單一能量中子束照射目標物時，隨著穿透距離變化的中子束強度，並從中推導中子的平均自由路徑。
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.webp
 ---
-## 中子衰減（Neutron Attenuation）
-假設我們將強度為 $I_0$ 的單一能量中子束照射到厚度為 $X$ 的目標物上，並在目標物後方的一定距離放置一個中子探測器。我們假設目標物和探測器都非常小，且探測器具有很小的立體角，只能探測到穿過目標物的部分中子。在這種情況下，所有與目標物發生碰撞的中子要麼被吸收，要麼被散射到其他方向，因此只有未與目標物發生反應的中子才能進入探測器。
+## 中子衰減(Neutron Attenuation)
+假設有強度為 $I_0$ 的單一能量中子束正照射在厚度為 $X$ 的目標物上，且在目標物後方的某處放置了一個中子探測器。假設目標物和探測器都非常小，且探測器具有很小的立體角，只能探測到穿過目標物的部分中子。在這種情況下，所有與目標物碰撞的中子都會被吸收或散射到其他方向，因此只有未與目標物發生反應的中子才會進入探測器。
 
-讓我們用 $I(x)$ 表示中子束在目標物內行進距離 $x$ 後，未發生碰撞而保留下來的中子束強度。當中子束通過一個足夠薄的厚度為 $\tau$ 的目標物時，每單位面積的碰撞數為 $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[neutrons/cm}^2\cdot\text{s]}$（參考[中子相互作用和反應截面](/posts/Neutron-Interactions-and-Cross-sections/#截面cross-section或微觀截面microscopic-cross-section)中的公式 (1) 和 (4)）。因此，中子束在目標物內行進 $dx$ 距離時，其強度的減少量可表示為：
+讓我們用 $I(x)$ 表示中子束在目標物內部行進距離 $x$ 後，仍未發生碰撞的中子束強度。當中子束通過厚度為 $\tau$ 的薄目標物時，每單位面積的碰撞數為 $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[neutrons/cm}^2\cdot\text{s]}$（參考[中子交互作用與反應截面](/posts/Neutron-Interactions-and-Cross-sections/#截面cross-section或微觀截面microscopic-cross-section)中的式 (1) 和 (4)），因此中子束在目標物內行進距離 $dx$ 時的強度減少量為：
 
 $$ -dI = \sigma_t IN dx = \Sigma_t I dx \tag{1} $$
 
-對上述方程進行積分，我們得到：
+對上式進行積分，可得：
 
 $$ \frac{dI}{I} = -\Sigma_t dx $$
 
 $$ I(x) = I_0e^{-\Sigma_t x} \tag{2} $$
 
-由此可見，中子束的強度隨著穿過目標物的距離增加而呈指數衰減。
+因此，我們可以看出中子束的強度會隨著穿過目標物的距離增加而呈指數衰減。
 
-## 平均自由程（Mean Free Path）
-- 中子與一個原子核發生碰撞後，到下一次與另一個原子核發生碰撞之前的平均移動距離
-- 即中子在不發生碰撞的情況下行進的平均距離
+## 平均自由路徑 (Mean Free Path)
+- 中子與一個原子核碰撞後，到下一次與另一個原子核碰撞之前的平均移動距離
+- 即中子在無碰撞情況下行進的平均距離
 - 用符號 $\lambda$ 表示
 
-$I(x)/I_0=e^{-\Sigma_t x}$ 表示中子在介質中行進距離 $x$ 而不與原子核發生碰撞的概率。因此，某個中子在介質中無碰撞地行進到距離 $x$，然後在 $dx$ 距離內發生碰撞的概率 $p(x)dx$ 可以表示為：
+$I(x)/I_0=e^{-\Sigma_t x}$ 表示中子在介質中行進距離 $x$ 而不與原子核碰撞的機率。因此，某個中子在介質中無碰撞地行進距離 $x$ 後，在距離 $dx$ 內發生碰撞的機率 $p(x)dx$ 為：
 
 $$ \begin{align*}
 p(x)dx &= \frac{I(x)}{I_0} \Sigma_t dx
@@ -35,7 +35,7 @@ p(x)dx &= \frac{I(x)}{I_0} \Sigma_t dx
 \end{align*}
 $$
 
-由此，我們可以計算出*平均自由程（mean free path）* $\lambda$ 如下：
+從這個機率分布，我們可以計算*平均自由路徑(mean free path)* $\lambda$ 如下：
 
 $$ \begin{align*}
 \lambda &= \int_0^\infty xp(x)dx

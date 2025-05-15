@@ -42,17 +42,20 @@ E_{\text{kinetic}} &= E_{\text{total}}-E_{\text{rest}}
 \end{align*}
 $$
 
-특히, $v\ll c$ 일 경우에 이항정리를 이용해 근사하면
+특히 $v\ll c$일 경우, $\cfrac{v^2}{c^2} = \epsilon$으로 놓고 $\epsilon = 0$ 근처에서 테일러 전개하여(즉, 매클로린 전개하여) 근사하면
 
 $$
 \begin{align*}
-E_{kinetic} &= m_0c^2\left[\frac {1}{\sqrt{1-v^2/c^2}} - 1\right]
-\\ &= m_0c^2\left[\left(1+\frac{1}{2}v^2/c^2\right)-1\right]
-\\ &= \frac {1}{2}m_0v^2 \tag{3}
+E_{kinetic} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
+&= m_0c^2\left[ (1-\epsilon)^{-\frac{1}{2}} - 1 \right] \\
+&= m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon + O(\epsilon^2) \right) - 1 \right] \\
+&\approx m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon \right) - 1 \right] \\
+&= \frac{1}{2}m_0c^2\epsilon \\
+&= \frac {1}{2}m_0v^2 \tag{3}
 \end{align*}
 $$
 
-로 고전역학에서의 운동에너지 공식과 같아진다. 실질적으로, $v\leq 0.2c$ 또는 $E_{\text{kinetic}} \leq 0.02E_{\text{rest}}$인 경우 $v\ll c$로 간주하고 이 근사식을 사용해도(즉, 상대성이론에 따른 효과를 무시해도) 충분히 정확한 값을 얻는다.
+으로 고전역학에서의 운동에너지 공식과 같아진다. 실질적으로, $v\leq 0.2c$ 또는 $E_{\text{kinetic}} \leq 0.02E_{\text{rest}}$인 경우 $v\ll c$로 간주하고 이 근사식을 사용해도(즉, 상대성이론에 따른 효과를 무시해도) 충분히 정확한 값을 얻는다.
 
 ### 전자
 전자의 정지질량 에너지 $E_{\text{rest}}=m_ec^2=0.511 \text{MeV}$이므로, 전자의 운동에너지가 $0.02\times 0.511 \text{MeV}=0.010 \text{MeV}=10 \text{keV}$ 초과일 경우 상대론적 운동에너지 공식을 적용해야 한다. 원자핵공학에서 다루는 전자들의 에너지는 많은 경우 10keV보다 크므로 대부분 식 (2)를 적용해야 한다.
