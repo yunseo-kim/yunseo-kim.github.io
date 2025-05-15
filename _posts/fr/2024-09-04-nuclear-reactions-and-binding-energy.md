@@ -42,7 +42,7 @@ $$ Q = [(M_a + M_b) - (M_c + M_d)]\cdot 931 \ \text{MeV}.\tag{3} $$
 - *Réaction exothermique* : réaction nucléaire où $Q>0$, une partie de la masse est convertie en énergie cinétique, augmentant l'énergie cinétique après la réaction
 - *Réaction endothermique* : réaction nucléaire où $Q<0$, une partie de l'énergie cinétique est convertie en masse, diminuant l'énergie cinétique après la réaction
 
-| Type de réaction nucléaire | Valeur Q | Changement de masse avant/après | Changement d'énergie cinétique avant/après |
+| Type de réaction nucléaire | Valeur Q | Changement de <br>masse avant/après | Changement d'énergie <br>cinétique avant/après |
 | :---: | :---: | :---: | :---: |
 | Réaction exothermique | $Q>0$ | $\Delta m<0$ (diminution) | $\Delta E>0$ (augmentation) |
 | Réaction endothermique | $Q<0$ | $\Delta m>0$ (augmentation) | $\Delta E<0$ (diminution) |

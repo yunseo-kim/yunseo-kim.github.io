@@ -42,7 +42,7 @@ $$ Q = [(M_a + M_b) - (M_c + M_d)]\cdot 931 \ \text{MeV}.\tag{3} $$
 - *Exotherme Reaktion (exothermic reaction)*: Kernreaktion mit $Q>0$, ein Teil der Masse wird in kinetische Energie umgewandelt, wodurch die kinetische Energie nach der Reaktion zunimmt
 - *Endotherme Reaktion (endothermic reaction)*: Kernreaktion mit $Q<0$, ein Teil der kinetischen Energie wird in Masse umgewandelt, wodurch die kinetische Energie nach der Reaktion abnimmt
 
-| Reaktionstyp | Q-Wert | Massenänderung vor/nach Reaktion | Änderung der kinetischen Energie vor/nach Reaktion |
+| Reaktionstyp | Q-Wert | Massenänderung <br>vor/nach Reaktion | Änderung der kinetischen <br>Energie vor/nach Reaktion |
 | :---: | :---: | :---: | :---: |
 | Exotherme Reaktion | $Q>0$ | $\Delta m<0$ (Abnahme) | $\Delta E>0$ (Zunahme) |
 | Endotherme Reaktion | $Q<0$ | $\Delta m>0$ (Zunahme) | $\Delta E<0$ (Abnahme) |

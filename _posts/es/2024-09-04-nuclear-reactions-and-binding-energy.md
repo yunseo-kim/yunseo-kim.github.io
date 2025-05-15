@@ -42,7 +42,7 @@ $$ Q = [(M_a + M_b) - (M_c + M_d)]\cdot 931 \ \text{MeV}.\tag{3} $$
 - *Reacción exotérmica (exothermic reaction)*: Reacción nuclear con $Q>0$, parte de la masa se convierte en energía cinética, aumentando la energía cinética después de la reacción
 - *Reacción endotérmica (endothermic reaction)*: Reacción nuclear con $Q<0$, parte de la energía cinética se convierte en masa, disminuyendo la energía cinética después de la reacción
 
-| Tipo de reacción nuclear | Valor Q | Cambio de masa antes y después | Cambio de energía cinética antes y después |
+| Tipo de reacción nuclear | Valor Q | Cambio de masa <br>antes y después | Cambio de energía cinética <br>antes y después |
 | :---: | :---: | :---: | :---: |
 | Reacción exotérmica | $Q>0$ | $\Delta m<0$ (disminución) | $\Delta E>0$ (aumento) |
 | Reacción endotérmica | $Q<0$ | $\Delta m>0$ (aumento) | $\Delta E<0$ (disminución) |
