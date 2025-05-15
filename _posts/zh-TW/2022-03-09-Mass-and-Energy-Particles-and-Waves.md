@@ -46,7 +46,7 @@ $$
 
 $$
 \begin{align*}
-E_{kinetic} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
+E_{\text{kinetic}} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
 &= m_0c^2\left[ (1-\epsilon)^{-\frac{1}{2}} - 1 \right] \\
 &= m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon + O(\epsilon^2) \right) - 1 \right] \\
 &\approx m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon \right) - 1 \right] \\
@@ -97,11 +97,11 @@ $$ \lambda = \frac {2.860 \times 10^{-9}}{\sqrt{E}} \tag{9}$$
 ### 考慮相對論效應的情況（例如，電子）
 直接解前面的相對論公式來計算動量 $p$。
 
-$$ p=\frac {1}{c} \sqrt{E^2_{total}-E^2_{rest}} \tag{10}$$
+$$ p=\frac {1}{c} \sqrt{E^2_{\text{total}}-E^2_{\text{rest}}} \tag{10}$$
 
 則德布羅意波長為：
 
-$$ \lambda = \frac {hc}{\sqrt{E_{total}-E_{rest}}} \tag{11} $$
+$$ \lambda = \frac {hc}{\sqrt{E_{\text{total}}-E_{\text{rest}}}} \tag{11} $$
 
 ### 靜止質量為零的粒子（例如，光子）
 靜止質量為零的粒子的動量不能用公式(6)計算，而是表示為：

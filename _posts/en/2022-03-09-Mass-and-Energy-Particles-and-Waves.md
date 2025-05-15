@@ -46,7 +46,7 @@ Particularly when $v\ll c$, if we set $\cfrac{v^2}{c^2} = \epsilon$ and approxim
 
 $$
 \begin{align*}
-E_{kinetic} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
+E_{\text{kinetic}} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
 &= m_0c^2\left[ (1-\epsilon)^{-\frac{1}{2}} - 1 \right] \\
 &= m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon + O(\epsilon^2) \right) - 1 \right] \\
 &\approx m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon \right) - 1 \right] \\
@@ -97,11 +97,11 @@ where $\lambda$ is in cm and $E$ is the neutron's kinetic energy expressed in eV
 ### Considering Relativistic Effects (e.g., Electrons)
 Calculate momentum $p$ by directly solving the relativistic equations:
 
-$$ p=\frac {1}{c} \sqrt{E^2_{total}-E^2_{rest}} \tag{10}$$
+$$ p=\frac {1}{c} \sqrt{E^2_{\text{total}}-E^2_{\text{rest}}} \tag{10}$$
 
 Then the de Broglie wavelength is:
 
-$$ \lambda = \frac {hc}{\sqrt{E_{total}-E_{rest}}} \tag{11} $$
+$$ \lambda = \frac {hc}{\sqrt{E_{\text{total}}-E_{\text{rest}}}} \tag{11} $$
 
 ### Particles with Zero Rest Mass (e.g., Photons)
 For particles with zero rest mass, momentum cannot be calculated using equation (6), so it is expressed as:

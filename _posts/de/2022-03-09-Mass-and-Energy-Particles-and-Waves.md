@@ -46,7 +46,7 @@ Insbesondere für den Fall $v\ll c$ können wir $\cfrac{v^2}{c^2} = \epsilon$ se
 
 $$
 \begin{align*}
-E_{kinetic} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
+E_{\text{kinetic}} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
 &= m_0c^2\left[ (1-\epsilon)^{-\frac{1}{2}} - 1 \right] \\
 &= m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon + O(\epsilon^2) \right) - 1 \right] \\
 &\approx m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon \right) - 1 \right] \\
@@ -97,11 +97,11 @@ Hier wird $\lambda$ in cm und $E$ in eV (kinetische Energie des Neutrons) angege
 ### Mit Berücksichtigung relativistischer Effekte (z.B. Elektronen)
 Der Impuls $p$ wird direkt aus den relativistischen Gleichungen berechnet:
 
-$$ p=\frac {1}{c} \sqrt{E^2_{total}-E^2_{rest}} \tag{10}$$
+$$ p=\frac {1}{c} \sqrt{E^2_{\text{total}}-E^2_{\text{rest}}} \tag{10}$$
 
 Damit ergibt sich für die de-Broglie-Wellenlänge:
 
-$$ \lambda = \frac {hc}{\sqrt{E_{total}-E_{rest}}} \tag{11} $$
+$$ \lambda = \frac {hc}{\sqrt{E_{\text{total}}-E_{\text{rest}}}} \tag{11} $$
 
 ### Teilchen mit Ruhemasse Null (z.B. Photonen)
 Für Teilchen mit Ruhemasse Null kann der Impuls nicht mit Gleichung (6) berechnet werden, sondern mit:

@@ -46,7 +46,7 @@ $$
 
 $$
 \begin{align*}
-E_{kinetic} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
+E_{\text{kinetic}} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
 &= m_0c^2\left[ (1-\epsilon)^{-\frac{1}{2}} - 1 \right] \\
 &= m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon + O(\epsilon^2) \right) - 1 \right] \\
 &\approx m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon \right) - 1 \right] \\
@@ -97,11 +97,11 @@ $$ \lambda = \frac {2.860 \times 10^{-9}}{\sqrt{E}} \tag{9}$$
 ### 相対論的効果を考慮する場合（例：電子）
 前述の相対性理論の式を直接解いて運動量$p$を計算する。
 
-$$ p=\frac {1}{c} \sqrt{E^2_{total}-E^2_{rest}} \tag{10}$$
+$$ p=\frac {1}{c} \sqrt{E^2_{\text{total}}-E^2_{\text{rest}}} \tag{10}$$
 
 するとドブロイ波長は次のようになる。
 
-$$ \lambda = \frac {hc}{\sqrt{E_{total}-E_{rest}}} \tag{11} $$
+$$ \lambda = \frac {hc}{\sqrt{E_{\text{total}}-E_{\text{rest}}}} \tag{11} $$
 
 ### 静止質量が0の粒子（例：光子）
 静止質量が0の粒子の運動量は式(6)で求めることができないため、

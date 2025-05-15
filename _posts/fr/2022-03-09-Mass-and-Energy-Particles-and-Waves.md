@@ -46,7 +46,7 @@ En particulier, lorsque $v\ll c$, en posant $\cfrac{v^2}{c^2} = \epsilon$ et en 
 
 $$
 \begin{align*}
-E_{cinétique} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
+E_{\text{cinétique}} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
 &= m_0c^2\left[ (1-\epsilon)^{-\frac{1}{2}} - 1 \right] \\
 &= m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon + O(\epsilon^2) \right) - 1 \right] \\
 &\approx m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon \right) - 1 \right] \\
@@ -97,11 +97,11 @@ où $\lambda$ est exprimé en cm et $E$ est l'énergie cinétique du neutron en 
 ### En tenant compte des effets relativistes (ex. : électron)
 On calcule directement la quantité de mouvement $p$ en utilisant les équations relativistes précédentes :
 
-$$ p=\frac {1}{c} \sqrt{E^2_{total}-E^2_{repos}} \tag{10}$$
+$$ p=\frac {1}{c} \sqrt{E^2_{\text{total}}-E^2_{\text{repos}}} \tag{10}$$
 
 La longueur d'onde de de Broglie est alors :
 
-$$ \lambda = \frac {hc}{\sqrt{E_{total}-E_{repos}}} \tag{11} $$
+$$ \lambda = \frac {hc}{\sqrt{E_{\text{total}}-E_{\text{repos}}}} \tag{11} $$
 
 ### Particules de masse au repos nulle (ex. : photon)
 Pour les particules de masse au repos nulle, la quantité de mouvement ne peut pas être calculée par l'équation (6), mais s'exprime par :

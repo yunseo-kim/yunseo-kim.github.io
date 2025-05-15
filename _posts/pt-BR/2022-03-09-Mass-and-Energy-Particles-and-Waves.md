@@ -46,7 +46,7 @@ Especialmente quando $v\ll c$, colocando $\cfrac{v^2}{c^2} = \epsilon$ e aproxim
 
 $$
 \begin{align*}
-E_{cinética} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
+E_{\text{cinética}} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
 &= m_0c^2\left[ (1-\epsilon)^{-\frac{1}{2}} - 1 \right] \\
 &= m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon + O(\epsilon^2) \right) - 1 \right] \\
 &\approx m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon \right) - 1 \right] \\
@@ -97,11 +97,11 @@ Onde $\lambda$ está em cm e $E$ é a energia cinética do nêutron em eV.
 ### Considerando efeitos relativísticos (ex.: elétron)
 Calculamos o momento $p$ diretamente a partir das equações relativísticas anteriores:
 
-$$ p=\frac {1}{c} \sqrt{E^2_{total}-E^2_{repouso}} \tag{10}$$
+$$ p=\frac {1}{c} \sqrt{E^2_{\text{total}}-E^2_{\text{repouso}}} \tag{10}$$
 
 Então o comprimento de onda de de Broglie é:
 
-$$ \lambda = \frac {hc}{\sqrt{E_{total}-E_{repouso}}} \tag{11} $$
+$$ \lambda = \frac {hc}{\sqrt{E_{\text{total}}-E_{\text{repouso}}}} \tag{11} $$
 
 ### Partículas com massa de repouso zero (ex.: fóton)
 Para partículas com massa de repouso zero, o momento não pode ser calculado pela equação (6), então usamos:

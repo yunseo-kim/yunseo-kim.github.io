@@ -46,7 +46,7 @@ $$
 
 $$
 \begin{align*}
-E_{kinetic} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
+E_{\text{kinetic}} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
 &= m_0c^2\left[ (1-\epsilon)^{-\frac{1}{2}} - 1 \right] \\
 &= m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon + O(\epsilon^2) \right) - 1 \right] \\
 &\approx m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon \right) - 1 \right] \\
@@ -97,11 +97,11 @@ $$ \lambda = \frac {2.860 \times 10^{-9}}{\sqrt{E}} \tag{9}$$
 ### 상대론적 효과를 고려할 경우(e.g., 전자)
 앞의 상대성이론 식들을 직접 풀어 운동량 $p$를 계산한다.
 
-$$ p=\frac {1}{c} \sqrt{E^2_{total}-E^2_{rest}} \tag{10}$$
+$$ p=\frac {1}{c} \sqrt{E^2_{\text{total}}-E^2_{\text{rest}}} \tag{10}$$
 
 그러면 드보로이 파장은 다음과 같다.
 
-$$ \lambda = \frac {hc}{\sqrt{E_{total}-E_{rest}}} \tag{11} $$
+$$ \lambda = \frac {hc}{\sqrt{E_{\text{total}}-E_{\text{rest}}}} \tag{11} $$
 
 ### 정지질량이 0인 입자(e.g., 광자)
 정지질량이 0인 입자의 운동량은 식 (6)으로 구할 수 없으므로 

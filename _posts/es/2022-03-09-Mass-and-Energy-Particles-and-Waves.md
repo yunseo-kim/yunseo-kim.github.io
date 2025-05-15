@@ -46,7 +46,7 @@ Especialmente cuando $v\ll c$, si establecemos $\cfrac{v^2}{c^2} = \epsilon$ y a
 
 $$
 \begin{align*}
-E_{kinetic} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
+E_{\text{kinetic}} &= m_0c^2\left[\frac {1}{\sqrt{1-\epsilon}} - 1\right] \\
 &= m_0c^2\left[ (1-\epsilon)^{-\frac{1}{2}} - 1 \right] \\
 &= m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon + O(\epsilon^2) \right) - 1 \right] \\
 &\approx m_0c^2\left[ \left( 1 + \frac{1}{2}\epsilon \right) - 1 \right] \\
@@ -97,11 +97,11 @@ donde $\lambda$ está en cm y $E$ es la energía cinética del neutrón expresad
 ### Cuando se consideran los efectos relativistas (p.ej., electrón)
 Se calcula el momento $p$ resolviendo directamente las ecuaciones relativistas anteriores.
 
-$$ p=\frac {1}{c} \sqrt{E^2_{total}-E^2_{rest}} \tag{10}$$
+$$ p=\frac {1}{c} \sqrt{E^2_{\text{total}}-E^2_{\text{rest}}} \tag{10}$$
 
 Entonces, la longitud de onda de de Broglie es:
 
-$$ \lambda = \frac {hc}{\sqrt{E_{total}-E_{rest}}} \tag{11} $$
+$$ \lambda = \frac {hc}{\sqrt{E_{\text{total}}-E_{\text{rest}}}} \tag{11} $$
 
 ### Partículas con masa en reposo cero (p.ej., fotón)
 El momento de una partícula con masa en reposo cero no se puede calcular con la ecuación (6), por lo que se expresa como:
