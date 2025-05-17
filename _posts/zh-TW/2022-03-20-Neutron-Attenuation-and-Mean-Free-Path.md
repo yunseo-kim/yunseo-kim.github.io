@@ -10,7 +10,7 @@ image: /assets/img/atoms.webp
 ## 中子衰減(Neutron Attenuation)
 強度為 $I_0$ 的單一能量中子束正照射在厚度為 $X$ 的目標物上，目標物後方一定距離處放置了中子探測器。假設目標物和探測器都非常小，且探測器具有很小的立體角，只能探測到穿過目標物的部分中子。在這種情況下，所有與目標物碰撞的中子都會被吸收或散射到其他方向，只有未與目標物發生反應的中子才會進入探測器。
 
-假設中子束在目標物內部行進距離 $x$ 後，未發生碰撞而保留下來的中子束強度為 $I(x)$。當中子束通過厚度為 $\tau$ 的薄目標物時，每單位面積的碰撞數為 $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[neutrons/cm}^2\cdot\text{s]}$（參考[中子交互作用與反應截面](/posts/Neutron-Interactions-and-Cross-sections/)中的式 [(1)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn%3Aeqn%3Amicroscopic_cross_section)和 [(8)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn%3Aeqn%3Areaction_rate)），因此中子束在目標物內行進距離 $dx$ 時，強度的減少量為：
+假設中子束在目標物內部行進距離 $x$ 後，未發生碰撞而保留下來的中子束強度為 $I(x)$。當中子束通過厚度為 $\tau$ 的薄目標物時，每單位面積的碰撞數為 $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[neutrons/cm}^2\cdot\text{s]}$（參考[中子交互作用與反應截面](/posts/Neutron-Interactions-and-Cross-sections/)中的式 [(1)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn:eqn:microscopic_cross_section)和 [(8)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn:eqn:reaction_rate)），因此中子束在目標物內行進距離 $dx$ 時，強度的減少量為：
 
 $$ -dI = \sigma_t IN dx = \Sigma_t I dx \tag{1} $$
 

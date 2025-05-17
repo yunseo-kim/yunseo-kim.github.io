@@ -10,7 +10,7 @@ image: /assets/img/atoms.webp
 ## 중성자 감쇠(Neutron Attenuation)
 강도 $I_0$의 단일 에너지 중성자 빔을 두께 $X$인 목표물에 조사하고 있으며, 목표물 뒤 얼마 떨어진 거리에 중성자 감지기가 놓여 있다. 목표물과 감지기는 둘 다 매우 작고, 감지기는 목표물을 통과하여 나오는 중성자의 일부만 감지할 수 있는 작은 입체각을 가진다고 가정하자. 그러면 목표물에 충돌하는 모든 중성자는 흡수되거나 산란되어 다른 방향으로 이탈할 것이므로, 목표물과 반응하지 않은 중성자들만 감지기로 입사한다.
 
-목표물 내에서 거리 $x$만큼 진행할 동안 충돌하지 않고 남아 있는 중성자 빔의 세기를 $I(x)$라 하자. 중성자 빔이 충분히 얇은 두께 $\tau$의 목표물을 통과할 때 단위면적당 충돌 수는 $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[neutrons/cm}^2\cdot\text{s]}$([중성자 상호작용과 반응단면적](/posts/Neutron-Interactions-and-Cross-sections/)의 식 [(1)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn%3Aeqn%3Amicroscopic_cross_section)과 [(8)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn%3Aeqn%3Areaction_rate) 참고)이므로, 목표물 내에서 $dx$만큼 진행하는 동안 중성자 빔 세기의 감소량은 다음과 같다.
+목표물 내에서 거리 $x$만큼 진행할 동안 충돌하지 않고 남아 있는 중성자 빔의 세기를 $I(x)$라 하자. 중성자 빔이 충분히 얇은 두께 $\tau$의 목표물을 통과할 때 단위면적당 충돌 수는 $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[neutrons/cm}^2\cdot\text{s]}$([중성자 상호작용과 반응단면적](/posts/Neutron-Interactions-and-Cross-sections/)의 식 [(1)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn:eqn:microscopic_cross_section)과 [(8)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn:eqn:reaction_rate) 참고)이므로, 목표물 내에서 $dx$만큼 진행하는 동안 중성자 빔 세기의 감소량은 다음과 같다.
 
 $$ -dI = \sigma_t IN dx = \Sigma_t I dx \tag{1} $$
 
