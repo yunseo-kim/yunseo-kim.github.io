@@ -10,7 +10,7 @@ image: /assets/img/atoms.webp
 ## 中性子減衰(Neutron Attenuation)
 強度 $I_0$の単一エネルギー中性子ビームを厚さ $X$の標的に照射しており、標的の後方にある距離に中性子検出器が置かれている。標的と検出器はどちらも非常に小さく、検出器は標的を通過して出てくる中性子の一部だけを検出できる小さな立体角を持つと仮定しよう。そうすると標的に衝突するすべての中性子は吸収されるか散乱されて別の方向に逸脱するため、標的と反応しなかった中性子だけが検出器に入射する。
 
-標的内で距離 $x$だけ進行する間に衝突せずに残っている中性子ビームの強度を $I(x)$とする。中性子ビームが十分に薄い厚さ $\tau$の標的を通過するとき、単位面積当たりの衝突数は $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[neutrons/cm}^2\cdot\text{s]}$([中性子相互作用と反応断面積](/posts/Neutron-Interactions-and-Cross-sections/)の式 [(1)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn:eqn:microscopic_cross_section)と [(8)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn:eqn:reaction_rate) 参照)となるため、標的内で $dx$だけ進行する間の中性子ビーム強度の減少量は次のようになる。
+標的内で距離 $x$だけ進行する間に衝突せずに残っている中性子ビームの強度を $I(x)$とする。中性子ビームが十分に薄い厚さ $\tau$の標的を通過するとき、単位面積当たりの衝突数は $\Delta I = \sigma_t I\tau N = \Sigma_t I\tau \ \text{[neutrons/cm}^2\cdot\text{s]}$([中性子相互作用と反応断面積](/posts/Neutron-Interactions-and-Cross-sections/)の式 [(1)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn%3Aeqn%3Amicroscopic_cross_section)と [(8)](/posts/Neutron-Interactions-and-Cross-sections/#mjx-eqn%3Aeqn%3Areaction_rate) 参照)となるため、標的内で $dx$だけ進行する間の中性子ビーム強度の減少量は次のようになる。
 
 $$ -dI = \sigma_t IN dx = \Sigma_t I dx \tag{1} $$
 
