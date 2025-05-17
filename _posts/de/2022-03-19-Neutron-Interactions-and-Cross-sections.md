@@ -203,7 +203,7 @@ Obwohl Reaktionen mit geladenen Teilchen eine Schwellenenergie benötigen und ge
 
 - Die Schwellenenergie von etwa 9 MeV ist deutlich höher als die durchschnittliche Energie der bei der Spaltung von Uran-235 entstehenden Neutronen (2-3 MeV), daher ist die Reaktionsrate relativ niedrig (etwa 1 von mehreren tausend Neutronen)
 - Trotz der geringen Häufigkeit ist diese Reaktion wichtig, da sie die Hauptursache für die Aktivierung des Wassers in Reaktoren mit Wasser als Kühlmittel und Moderator ist
-  - Das $^{16}\mathrm{O}$ im Wassermolekül wird durch diese Reaktion in $^{16}\mathrm{N}$ umgewandelt, das mit einer Halbwertszeit von etwa 7 Sekunden [beta-zerfällt](/posts/Nuclear-Stability-and-Radioactive-Decay/#beta-zerfall-β-zerfall) und dabei auch [hochenergetische Gammastrahlung von 6-7 MeV emittiert](/posts/Nuclear-Stability-and-Radioactive-Decay/#isomerer-übergang-isomeric-transition)
+  - Das $^{16}\mathrm{O}$ im Wassermolekül wird durch diese Reaktion in $^{16}\mathrm{N}$ umgewandelt, das mit einer Halbwertszeit von etwa 7 Sekunden [beta-zerfällt](/posts/Nuclear-Stability-and-Radioactive-Decay/#beta-zerfall-beta-zerfall) und dabei auch [hochenergetische Gammastrahlung von 6-7 MeV emittiert](/posts/Nuclear-Stability-and-Radioactive-Decay/#isomerer-übergang-isomeric-transition)
 
 ### Neutronenerzeugende Reaktionen (neutron-producing reactions)
 - Hochenergetische Neutronen kollidieren mit einem Atomkern und erzeugen zwei oder mehr neue Neutronen (endotherme Reaktion)

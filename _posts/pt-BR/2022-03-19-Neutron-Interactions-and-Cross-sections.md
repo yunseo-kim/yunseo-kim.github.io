@@ -205,7 +205,7 @@ Apesar de suas seções de choque geralmente pequenas e da necessidade de supera
 
 - Tem uma energia limiar de aproximadamente 9 MeV, significativamente maior que a energia média dos nêutrons produzidos na fissão do urânio-235 (2-3 MeV), resultando em uma frequência de reação relativamente baixa (aproximadamente 1 em milhares de nêutrons)
 - Apesar da baixa frequência, é importante por ser a principal causa da ativação da água em reatores que usam água como refrigerante e moderador
-  - O $^{16}\mathrm{O}$ nas moléculas de água é convertido em $^{16}\mathrm{N}$ através desta reação. O $^{16}\mathrm{N}$ tem uma meia-vida de aproximadamente 7 segundos, [decaindo por emissão beta](/posts/Nuclear-Stability-and-Radioactive-Decay/#decaimento-beta-β-decay) e [emitindo também raios gama de 6-7 MeV](/posts/Nuclear-Stability-and-Radioactive-Decay/#transição-isomérica-isomeric-transition)
+  - O $^{16}\mathrm{O}$ nas moléculas de água é convertido em $^{16}\mathrm{N}$ através desta reação. O $^{16}\mathrm{N}$ tem uma meia-vida de aproximadamente 7 segundos, [decaindo por emissão beta](/posts/Nuclear-Stability-and-Radioactive-Decay/#decaimento-beta-beta-decay) e [emitindo também raios gama de 6-7 MeV](/posts/Nuclear-Stability-and-Radioactive-Decay/#transição-isomérica-isomeric-transition)
 
 ### Reações Produtoras de Nêutrons (neutron-producing reactions)
 - Nêutrons de alta energia colidem com núcleos, resultando na emissão de dois ou mais nêutrons (reações endotérmicas)

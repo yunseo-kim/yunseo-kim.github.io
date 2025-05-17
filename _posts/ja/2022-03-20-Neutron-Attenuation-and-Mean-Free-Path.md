@@ -50,7 +50,7 @@ $$
 ## 均質混合物(Homogeneous Mixture)の巨視的断面積
 二種類の核種 $X$と $Y$が均一に混合している混合物を考えてみよう。各核種の原子密度はそれぞれ $N_X$と $N_Y$ $\text{atom/cm}^3$であり、中性子とこれらの核との特定反応に対する反応断面積はそれぞれ $\sigma_X$、$\sigma_Y$とする。
 
-すると中性子が原子核 $X$、$Y$と単位長さあたり衝突する確率はそれぞれ $\Sigma_X=N_X\sigma_X$、$\Sigma_Y=N_Y\sigma_Y$となるため([巨視的断面積](/posts/Neutron-Interactions-and-Cross-sections/#巨視的断面積macroscopic-cross-section) 参照)、中性子がこの二種類の原子核と単位長さあたり反応する総確率は次のようになる。
+すると中性子が原子核 $X$、$Y$と単位長さあたり衝突する確率はそれぞれ $\Sigma_X=N_X\sigma_X$、$\Sigma_Y=N_Y\sigma_Y$となるため([マクロ断面積](/posts/Neutron-Interactions-and-Cross-sections/#マクロ断面積macroscopic-cross-section) 参照)、中性子がこの二種類の原子核と単位長さあたり反応する総確率は次のようになる。
 
 $$ \Sigma = \Sigma_X + \Sigma_Y = N_X\sigma_X + N_Y\sigma_Y \label{eqn:cross_section_of_mixture}\tag{4}$$
 

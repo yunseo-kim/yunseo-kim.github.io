@@ -100,7 +100,7 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 >
 > $$ \sigma(E) \propto \left(R+\lambda(E)\right)^2. $$
 >
-> From [the de Broglie wavelength equation for neutrons](/posts/Mass-and-Energy-Particles-and-Waves/#neglecting-relativistic-effectseg-neutrons), $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. Typically, $\lambda(E) \ll R$, so we can approximate $\sigma(E) \propto R^2$. However, at very low energies, neutrons behave more like waves than particles, and the de Broglie wavelength becomes larger than the nuclear radius. In this case, $\lambda(E)$ becomes the dominant term, resulting in $\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$.
+> From [the de Broglie wavelength equation for neutrons](/posts/Mass-and-Energy-Particles-and-Waves/#neglecting-relativistic-effects-eg-neutrons), $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. Typically, $\lambda(E) \ll R$, so we can approximate $\sigma(E) \propto R^2$. However, at very low energies, neutrons behave more like waves than particles, and the de Broglie wavelength becomes larger than the nuclear radius. In this case, $\lambda(E)$ becomes the dominant term, resulting in $\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$.
 {: .prompt-info }
 
 #### Resonance Region

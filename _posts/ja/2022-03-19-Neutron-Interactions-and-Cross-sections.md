@@ -102,7 +102,7 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 >
 > $$ \sigma(E) \propto \left(R+\lambda(E)\right)^2. $$
 >
-> [中性子のドブロイ波長式](/posts/Mass-and-Energy-Particles-and-Waves/#相対論的効果を無視する場合（例：中性子）)により、ここで$\lambda(E) \propto \cfrac{1}{\sqrt{E}}$である。通常$\lambda(E) \ll R$なので$\lambda(E)$を無視して$\sigma(E) \propto R^2$と近似できるが、非常に低いエネルギー帯では中性子が粒子より波動に近い振る舞いをし、ドブロイ波長が原子半径より大きくなるにつれて$\lambda(E)$がむしろ支配的な項となり、$\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$となる。
+> [中性子のドブロイ波長式](/posts/Mass-and-Energy-Particles-and-Waves/#相対論的効果を無視する場合例中性子)により、ここで$\lambda(E) \propto \cfrac{1}{\sqrt{E}}$である。通常$\lambda(E) \ll R$なので$\lambda(E)$を無視して$\sigma(E) \propto R^2$と近似できるが、非常に低いエネルギー帯では中性子が粒子より波動に近い振る舞いをし、ドブロイ波長が原子半径より大きくなるにつれて$\lambda(E)$がむしろ支配的な項となり、$\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$となる。
 {: .prompt-info }
 
 #### 共鳴領域 (resonance region)
@@ -115,7 +115,7 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 
 ### 非弾性散乱(inelastic scattering)
 - 中性子が原子核に衝突後はじき返される
-- 弾性散乱と異なり、原子核が中性子のエネルギーの一部を吸収して励起状態になる([吸熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応（exothermic-reaction）＆吸熱反応（endothermic-reaction）))
+- 弾性散乱と異なり、原子核が中性子のエネルギーの一部を吸収して励起状態になる([吸熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応exothermic-reaction吸熱反応endothermic-reaction))
 - 原子核が取りうるエネルギー準位が量子化されているため、該当原子核の二つのエネルギー準位間の差以上のエネルギーを持つ中性子が衝突した場合に起こりうる
   - 重い核種ほどエネルギー準位が細分化されており容易に起こり、軽い核種では起こりにくい
   - 炭素の非弾性散乱閾値エネルギー(threshold energy)が4.80 MeVであるのに対し、ウラン-238の非弾性散乱閾値エネルギーは44 keVであることを下のグラフで確認できる
@@ -132,7 +132,7 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 > - グラフ提供：韓国原子力研究院核データセンター(Nuclear Data Center at KAERI)、核図表 (<https://atom.kaeri.re.kr/nuchart/>)
 
 ### 放射捕獲(radiative capture)
-- 原子核が中性子を捕獲して一つ以上のガンマ線を放出([発熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応（exothermic-reaction）＆吸熱反応（endothermic-reaction）))
+- 原子核が中性子を捕獲して一つ以上のガンマ線を放出([発熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応exothermic-reaction吸熱反応endothermic-reaction))
 - $(\mathrm{n}, \gamma)$と表記
 - このとき発生するガンマ線を*捕獲ガンマ線(capture $\gamma$-ray)*と呼ぶ
 - 衝突した中性子は原子核内部に吸収されるため、吸収反応の一種
@@ -153,7 +153,7 @@ $1/v$領域を超えると散乱反応と同じエネルギー領域で共鳴領
 
 $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + \Gamma^2/4} \label{eqn:breit_wigner}\tag{5}$$
 
-- $\gamma_r$：エネルギー$E_r$の中性子の[ドブロイ波長](/posts/Mass-and-Energy-Particles-and-Waves/#相対論的効果を無視する場合（例：中性子）)
+- $\gamma_r$：エネルギー$E_r$の中性子の[ドブロイ波長](/posts/Mass-and-Energy-Particles-and-Waves/#相対論的効果を無視する場合例中性子)
 - $g$：*統計的因子(statistical factor)*、定数
 - $\Gamma \ (=\Gamma_n + \Gamma_\gamma)$：*全幅(total width)*、定数
   - $\Gamma_n$：*中性子幅(neutron width)*、定数
@@ -168,7 +168,7 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 ### 荷電粒子反応 (charged-particle reactions)
 - 原子核が中性子を捕獲してアルファ粒子($\alpha$)や陽子($\mathrm{p}$)などの荷電粒子を放出
 - $(\mathrm{n}, \alpha)$、$(\mathrm{n}, \mathrm{p})$などと表記
-- 場合によっては[発熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応（exothermic-reaction）＆吸熱反応（endothermic-reaction）)の場合も、[吸熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応（exothermic-reaction）＆吸熱反応（endothermic-reaction）)の場合もあるが通常は[吸熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応（exothermic-reaction）＆吸熱反応（endothermic-reaction）)
+- 場合によっては[発熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応exothermic-reaction吸熱反応endothermic-reaction)の場合も、[吸熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応exothermic-reaction吸熱反応endothermic-reaction)の場合もあるが通常は[吸熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応exothermic-reaction吸熱反応endothermic-reaction)
 - 閾値エネルギー以下では発生せず、閾値エネルギー以上でも断面積は概して小さい（特に重い核ではこの傾向が顕著）
 
 このように荷電粒子反応は閾値エネルギーを超えなければ起こらず、断面積も概して小さい。しかし、軽い核で起こるいくつかの重要な荷電粒子反応がある。
@@ -205,7 +205,7 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 
 - ウラン-235の核分裂反応から発生する中性子の平均エネルギー(2-3 MeV)に比べて大幅に高い9 MeV程度の閾値エネルギーを持ち、したがって反応頻度は数千個の中性子につき1個程度と低い
 - それにもかかわらず、水を冷却材および減速材として使用する原子炉で水が放射化する主な原因であるため重要
-  - 水分子を構成する$^{16}\mathrm{O}$がこの反応を通じて$^{16}\mathrm{N}$に変わるが、$^{16}\mathrm{N}$は約7秒程度の半減期で[ベータ崩壊](/posts/Nuclear-Stability-and-Radioactive-Decay/#ベータ崩壊（$\beta$-decay）)し、6-7 MeVの[ガンマ線も放出する](/posts/Nuclear-Stability-and-Radioactive-Decay/#異性体転移（Isomeric-Transition）)
+  - 水分子を構成する$^{16}\mathrm{O}$がこの反応を通じて$^{16}\mathrm{N}$に変わるが、$^{16}\mathrm{N}$は約7秒程度の半減期で[ベータ崩壊](/posts/Nuclear-Stability-and-Radioactive-Decay/#ベータ崩壊beta-decay)し、6-7 MeVの[ガンマ線も放出する](/posts/Nuclear-Stability-and-Radioactive-Decay/#異性体転移isomeric-transition)
 
 ### 中性子生成反応 (neutron-producing reactions)
 - 高エネルギーの中性子と原子核が衝突して2個以上の中性子を新たに放出(吸熱反応)

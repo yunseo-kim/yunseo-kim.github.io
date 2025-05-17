@@ -102,7 +102,7 @@ où $R$ est le rayon atomique.
 >
 > $$ \sigma(E) \propto \left(R+\lambda(E)\right)^2. $$
 >
-> D'après [l'équation de la longueur d'onde de de Broglie des neutrons](/posts/Mass-and-Energy-Particles-and-Waves/#en-négligeant-les-effets-relativistes-ex-neutron), $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. Généralement, $\lambda(E) \ll R$, ce qui permet d'approximer $\sigma(E) \propto R^2$. Cependant, à très basse énergie, le neutron se comporte davantage comme une onde que comme une particule, et sa longueur d'onde de de Broglie devient plus grande que le rayon atomique. Dans ce cas, $\lambda(E)$ devient le terme dominant, et $\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$.
+> D'après [l'équation de la longueur d'onde de de Broglie des neutrons](/posts/Mass-and-Energy-Particles-and-Waves/#en-négligeant-les-effets-relativistes-ex--neutron), $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. Généralement, $\lambda(E) \ll R$, ce qui permet d'approximer $\sigma(E) \propto R^2$. Cependant, à très basse énergie, le neutron se comporte davantage comme une onde que comme une particule, et sa longueur d'onde de de Broglie devient plus grande que le rayon atomique. Dans ce cas, $\lambda(E)$ devient le terme dominant, et $\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$.
 {: .prompt-info }
 
 #### Région de résonance (resonance region)
@@ -206,7 +206,7 @@ Malgré ces caractéristiques, certaines réactions à particules chargées impl
 
 - Possède une énergie seuil d'environ 9 MeV, bien supérieure à l'énergie moyenne des neutrons issus de la fission de l'uranium-235 (2-3 MeV), ce qui rend cette réaction relativement rare (environ 1 neutron sur plusieurs milliers)
 - Malgré sa rareté, cette réaction est importante car elle constitue la principale source d'activation de l'eau dans les réacteurs utilisant l'eau comme caloporteur et modérateur
-  - L'$^{16}\mathrm{O}$ des molécules d'eau se transforme en $^{16}\mathrm{N}$ par cette réaction. Le $^{16}\mathrm{N}$ a une demi-vie d'environ 7 secondes et se désintègre par [désintégration bêta](/posts/Nuclear-Stability-and-Radioactive-Decay/#désintégration-bêta-β-decay) en émettant également des rayons gamma de 6-7 MeV par [transition isomérique](/posts/Nuclear-Stability-and-Radioactive-Decay/#transition-isomérique-isomeric-transition)
+  - L'$^{16}\mathrm{O}$ des molécules d'eau se transforme en $^{16}\mathrm{N}$ par cette réaction. Le $^{16}\mathrm{N}$ a une demi-vie d'environ 7 secondes et se désintègre par [désintégration bêta](/posts/Nuclear-Stability-and-Radioactive-Decay/#désintégration-bêta-beta-decay) en émettant également des rayons gamma de 6-7 MeV par [transition isomérique](/posts/Nuclear-Stability-and-Radioactive-Decay/#transition-isomérique-isomeric-transition)
 
 ### Réactions produisant des neutrons (neutron-producing reactions)
 - Collision entre un neutron de haute énergie et un noyau, produisant deux neutrons ou plus (réaction endothermique)
