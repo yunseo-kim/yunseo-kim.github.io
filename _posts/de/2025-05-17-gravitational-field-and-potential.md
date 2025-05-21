@@ -1,6 +1,6 @@
 ---
 title: Gravitationsfeld und Gravitationspotential
-description: Wir betrachten die Definition des Gravitationsfeldvektors und des Gravitationspotentials nach Newtons Gravitationsgesetz und behandeln zwei wichtige Beispiele dazu: den Schalentheorem und die galaktische Rotationskurve.
+description: "Wir betrachten die Definition des Gravitationsfeldvektors und des Gravitationspotentials nach Newtons Gravitationsgesetz und behandeln zwei wichtige Beispiele dazu: den Schalentheorem und die galaktische Rotationskurve."
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Gravitation]
 math: true

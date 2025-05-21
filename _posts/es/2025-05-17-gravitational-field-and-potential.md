@@ -1,6 +1,6 @@
 ---
 title: El campo gravitatorio y el potencial gravitatorio
-description: Exploramos la definición del vector de campo gravitatorio y el potencial gravitatorio según la ley de gravitación universal de Newton, y abordamos dos ejemplos importantes relacionados: el teorema de la cáscara esférica y las curvas de rotación galáctica.
+description: "Exploramos la definición del vector de campo gravitatorio y el potencial gravitatorio según la ley de gravitación universal de Newton, y abordamos dos ejemplos importantes relacionados: el teorema de la cáscara esférica y las curvas de rotación galáctica."
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Gravitation]
 math: true

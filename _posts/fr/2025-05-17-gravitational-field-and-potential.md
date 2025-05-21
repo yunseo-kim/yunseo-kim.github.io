@@ -1,6 +1,6 @@
 ---
 title: Champ gravitationnel et potentiel gravitationnel
-description: Découvrez les définitions du vecteur champ gravitationnel et du potentiel gravitationnel selon la loi de la gravitation universelle de Newton, et explorez deux exemples importants liés à ces concepts : le théorème de la coquille sphérique et les courbes de rotation galactique.
+description: "Découvrez les définitions du vecteur champ gravitationnel et du potentiel gravitationnel selon la loi de la gravitation universelle de Newton, et explorez deux exemples importants liés à ces concepts : le théorème de la coquille sphérique et les courbes de rotation galactique."
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Gravitation]
 math: true

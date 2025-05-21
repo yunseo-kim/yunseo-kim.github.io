@@ -1,6 +1,6 @@
 ---
 title: Campo Gravitacional e Potencial Gravitacional
-description: Exploramos as definições do vetor de campo gravitacional e do potencial gravitacional de acordo com a lei da gravitação universal de Newton, abordando dois exemplos importantes relacionados: o teorema da casca esférica e as curvas de rotação galáctica.
+description: "Exploramos as definições do vetor de campo gravitacional e do potencial gravitacional de acordo com a lei da gravitação universal de Newton, abordando dois exemplos importantes relacionados: o teorema da casca esférica e as curvas de rotação galáctica."
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Gravitation]
 math: true

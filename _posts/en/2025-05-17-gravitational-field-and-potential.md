@@ -1,6 +1,6 @@
 ---
 title: Gravitational Field and Gravitational Potential
-description: Explore the definitions of gravitational field vectors and gravitational potential according to Newton's law of universal gravitation, and examine two important related examples: the shell theorem and galactic rotation curves.
+description: "Explore the definitions of gravitational field vectors and gravitational potential according to Newton's law of universal gravitation, and examine two important related examples: the shell theorem and galactic rotation curves."
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Gravitation]
 math: true
