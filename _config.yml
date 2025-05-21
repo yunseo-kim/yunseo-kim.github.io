@@ -230,6 +230,7 @@ exclude: # https://github.com/untra/polyglot/issues/204 이슈 참고하여 수�
   - LICENSE
   - purgecss.config.js # - "*.config.js"
   - rollup.config.js
+  - eslint.config.js
   - "package*.json"
 
 jekyll-archives:
