@@ -125,7 +125,7 @@ def translate(filepath, source_lang, target_lang):
 
         - <condition>For the description tag, this is a meta tag that directly impacts SEO. 
           Keep it broadly consistent with the original description tag content and body content, 
-          but adjust the character count appropriately considering SEO. 
+          but adjust the character count appropriately considering SEO.</condition>
 
         - <condition>The original text provided may contain parts written in languages other than {source_lang}. This is one of two cases. 
           1. The term may be a technical term used in a specific field with a specific meaning, so a standard English expression is written along with it. 
@@ -162,8 +162,6 @@ def translate(filepath, source_lang, target_lang):
         <important>In any case, without exception, the output should contain only the translation results, without any text such as 
         "Here is the translation of the text provided, preserving the markdown format:" or something of that nature!!</important>"""
     system_prompt = system_prompt.replace("        ",'')
-    system_prompt = system_prompt.replace("      ",'')
-    system_prompt = system_prompt.replace("    ",'')
     
     with open(filepath, 'r') as f:
         prompt = f.read()
