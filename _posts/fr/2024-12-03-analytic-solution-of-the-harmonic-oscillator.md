@@ -221,14 +221,14 @@ Voici une visualisation réactive basée sur Plotly.js que j'ai créée moi-mêm
 
 <div class="plotly-iframe-container" style="position: relative; padding-bottom: 110%; overflow: hidden;">
     <iframe id="plotly-iframe"
-            src="/physics-visualization/quantum-harmonic-oscillator.html" 
+            src="/physics-visualizations/quantum-harmonic-oscillator.html"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 120%; border: none;" 
             allow="fullscreen">
     </iframe>
 </div>
 
-> - Page de visualisation originale : <{{site.url}}/physics-visualization/quantum-harmonic-oscillator>
-> - Code source : [Dépôt yunseo-kim/physics-visualization](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
-> - Licence : [Voir ici](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)
+> - Page de visualisation originale : <{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html>
+> - Code source : [Dépôt yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/quantum-harmonic-oscillator.html)
+> - Licence : [Voir ici](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 
-De plus, si vous pouvez utiliser Python sur votre propre ordinateur et que vous avez un environnement avec les bibliothèques Numpy, Plotly et Dash installées, vous pouvez également exécuter le script Python [`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum_oscillator.py) dans le même dépôt pour voir les résultats.
+De plus, si vous pouvez utiliser Python sur votre propre ordinateur et que vous avez un environnement avec les bibliothèques Numpy, Plotly et Dash installées, vous pouvez également exécuter le script Python [`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/quantum_oscillator.py) dans le même dépôt pour voir les résultats.

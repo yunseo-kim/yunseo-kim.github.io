@@ -225,14 +225,14 @@ $n$이 클수록 양자진동자는 고전적 진동자와 유사한 양상을 �
 
 <div class="plotly-iframe-container" style="position: relative; padding-bottom: 110%; overflow: hidden;">
     <iframe id="plotly-iframe"
-            src="/physics-visualization/quantum-harmonic-oscillator.html" 
+            src="/physics-visualizations/quantum-harmonic-oscillator.html"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 120%; border: none;" 
             allow="fullscreen">
     </iframe>
 </div>
 
-> - 원본 시각화 페이지: <{{site.url}}/physics-visualization/quantum-harmonic-oscillator>
-> - 소스코드: [yunseo-kim/physics-visualization 리포지터리](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
-> - 라이선스: [See here](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)
+> - 원본 시각화 페이지: <{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html>
+> - 소스코드: [yunseo-kim/physics-visualizations 리포지터리](https://github.com/yunseo-kim/physics-visualizations/blob/main/quantum-harmonic-oscillator.html)
+> - 라이선스: [See here](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 
-또한, 만약 본인 컴퓨터에서 Python을 사용할 수 있고 Numpy, Plotly, Dash 라이브러리가 설치된 환경이라면 동일한 리포지터리 내 [`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum_oscillator.py) Python 스크립트를 실행하여 결과를 볼 수도 있다.
+또한, 만약 본인 컴퓨터에서 Python을 사용할 수 있고 Numpy, Plotly, Dash 라이브러리가 설치된 환경이라면 동일한 리포지터리 내 [`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/quantum_oscillator.py) Python 스크립트를 실행하여 결과를 볼 수도 있다.

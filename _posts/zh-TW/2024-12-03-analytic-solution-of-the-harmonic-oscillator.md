@@ -218,14 +218,14 @@ $$ \psi_n(x) = \left(\frac{m\omega}{\pi\hbar} \right)^{1/4} \frac{1}{\sqrt{2^n n
 
 <div class="plotly-iframe-container" style="position: relative; padding-bottom: 110%; overflow: hidden;">
     <iframe id="plotly-iframe"
-            src="/physics-visualization/quantum-harmonic-oscillator.html" 
+            src="/physics-visualizations/quantum-harmonic-oscillator.html"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 120%; border: none;" 
             allow="fullscreen">
     </iframe>
 </div>
 
-> - 原始可視化頁面：<{{site.url}}/physics-visualization/quantum-harmonic-oscillator>
-> - 源代碼：[yunseo-kim/physics-visualization 倉庫](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
-> - 許可證：[見此處](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)
+> - 原始可視化頁面：<{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html>
+> - 源代碼：[yunseo-kim/physics-visualizations 倉庫](https://github.com/yunseo-kim/physics-visualizations/blob/main/quantum-harmonic-oscillator.html)
+> - 許可證：[見此處](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 
-此外，如果您的電腦上可以使用 Python，並且安裝了 Numpy、Plotly 和 Dash 庫，您也可以運行同一倉庫中的 [`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum_oscillator.py) Python 腳本來查看結果。
+此外，如果您的電腦上可以使用 Python，並且安裝了 Numpy、Plotly 和 Dash 庫，您也可以運行同一倉庫中的 [`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/quantum_oscillator.py) Python 腳本來查看結果。

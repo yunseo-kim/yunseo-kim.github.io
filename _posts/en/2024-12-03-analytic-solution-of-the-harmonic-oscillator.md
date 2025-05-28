@@ -221,14 +221,14 @@ The following is a responsive visualization based on Plotly.js that I created my
 
 <div class="plotly-iframe-container" style="position: relative; padding-bottom: 110%; overflow: hidden;">
     <iframe id="plotly-iframe"
-            src="/physics-visualization/quantum-harmonic-oscillator.html" 
+            src="/physics-visualizations/quantum-harmonic-oscillator.html"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 120%; border: none;" 
             allow="fullscreen">
     </iframe>
 </div>
 
-> - Original visualization page: <{{site.url}}/physics-visualization/quantum-harmonic-oscillator>
-> - Source code: [yunseo-kim/physics-visualization repository](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
-> - License: [See here](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)
+> - Original visualization page: <{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html>
+> - Source code: [yunseo-kim/physics-visualizations repository](https://github.com/yunseo-kim/physics-visualizations/blob/main/quantum-harmonic-oscillator.html)
+> - License: [See here](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 
-Also, if you can use Python on your computer and have the Numpy, Plotly, and Dash libraries installed, you can run the [`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum_oscillator.py) Python script in the same repository to see the results.
+Also, if you can use Python on your computer and have the Numpy, Plotly, and Dash libraries installed, you can run the [`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/quantum_oscillator.py) Python script in the same repository to see the results.

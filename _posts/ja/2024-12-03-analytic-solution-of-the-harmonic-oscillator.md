@@ -224,14 +224,14 @@ $n$が大きくなるほど、量子振動子は古典的振動子に類似し�
 
 <div class="plotly-iframe-container" style="position: relative; padding-bottom: 110%; overflow: hidden;">
     <iframe id="plotly-iframe"
-            src="/physics-visualization/quantum-harmonic-oscillator.html" 
+            src="/physics-visualizations/quantum-harmonic-oscillator.html"
             style="position: absolute; top: 0; left: 0; width: 100%; height: 120%; border: none;" 
             allow="fullscreen">
     </iframe>
 </div>
 
-> - オリジナルの可視化ページ：<{{site.url}}/physics-visualization/quantum-harmonic-oscillator>
-> - ソースコード：[yunseo-kim/physics-visualization リポジトリ](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum-harmonic-oscillator.html)
-> - ライセンス：[こちらを参照](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)
+> - オリジナルの可視化ページ：<{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html>
+> - ソースコード：[yunseo-kim/physics-visualizations リポジトリ](https://github.com/yunseo-kim/physics-visualizations/blob/main/quantum-harmonic-oscillator.html)
+> - ライセンス：[こちらを参照](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 
-また、もしご自身のコンピュータでPythonを使用でき、Numpy、Plotly、Dashライブラリがインストールされている環境であれば、同じリポジトリ内の[`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualization/blob/main/src/quantum_oscillator.py) Pythonスクリプトを実行して結果を見ることもできます。
+また、もしご自身のコンピュータでPythonを使用でき、Numpy、Plotly、Dashライブラリがインストールされている環境であれば、同じリポジトリ内の[`/src/quantum_oscillator.py`{: .filepath}](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/quantum_oscillator.py) Pythonスクリプトを実行して結果を見ることもできます。
