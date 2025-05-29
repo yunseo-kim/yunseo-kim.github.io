@@ -216,11 +216,12 @@ $$ \psi_n(x) = \left(\frac{m\omega}{\pi\hbar} \right)^{1/4} \frac{1}{\sqrt{2^n n
 ### 量子振盪子概率分布的互動可視化
 以下是我親自編寫的基於 Plotly.js 的響應式可視化。您可以通過滑塊調整 $n$ 值，查看位置 $x$ 的經典概率分布和 $\|\psi_n\|^2$ 的輪廓。
 
-<div class="plotly-iframe-container" style="position: relative; padding-bottom: 110%; overflow: hidden;">
+<div class="plotly-iframe-container" style="position: relative; padding-bottom: 105%; overflow: hidden;">
     <iframe id="plotly-iframe"
             src="/physics-visualizations/quantum-harmonic-oscillator.html"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 120%; border: none;" 
-            allow="fullscreen">
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; overflow:hidden" 
+            allow="fullscreen"
+            scrolling="no">
     </iframe>
 </div>
 

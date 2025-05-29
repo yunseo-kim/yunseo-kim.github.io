@@ -223,11 +223,12 @@ $n$이 클수록 양자진동자는 고전적 진동자와 유사한 양상을 �
 ### Interactive Visualization of Quantum Oscillator Probability Distributions
 다음은 내가 직접 작성한 Plotly.js 기반의 반응형 시각화이다. 슬라이더로 $n$값을 조절해 가며 위치 $x$에 대한 고전적인 확률분포 및 $\|\psi_n\|^2$의 개형을 확인할 수 있다.
 
-<div class="plotly-iframe-container" style="position: relative; padding-bottom: 110%; overflow: hidden;">
+<div class="plotly-iframe-container" style="position: relative; padding-bottom: 105%; overflow: hidden;">
     <iframe id="plotly-iframe"
             src="/physics-visualizations/quantum-harmonic-oscillator.html"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 120%; border: none;" 
-            allow="fullscreen">
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; overflow:hidden" 
+            allow="fullscreen"
+            scrolling="no">
     </iframe>
 </div>
 
