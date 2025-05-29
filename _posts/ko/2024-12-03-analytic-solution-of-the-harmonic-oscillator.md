@@ -232,7 +232,7 @@ $n$이 클수록 양자진동자는 고전적 진동자와 유사한 양상을 �
     </iframe>
 </div>
 
-> - 원본 시각화 페이지: {% static_href %}<{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html>{% endstatic_href %}
+> - 원본 시각화 페이지: <a {% static_href %}href="{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html"{% endstatic_href %}>{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html</a>
 > - 소스코드: [yunseo-kim/physics-visualizations 리포지터리](https://github.com/yunseo-kim/physics-visualizations/blob/main/quantum-harmonic-oscillator.html)
 > - 라이선스: [See here](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 

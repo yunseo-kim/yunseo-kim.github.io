@@ -230,7 +230,7 @@ Das Folgende ist eine reaktive Visualisierung basierend auf Plotly.js, die ich s
     </iframe>
 </div>
 
-> - Originalvisualisierung: {% static_href %}<{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html>{% endstatic_href %}
+> - Originalvisualisierung: <a {% static_href %}href="{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html"{% endstatic_href %}>{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html</a>
 > - Quellcode: [yunseo-kim/physics-visualizations Repository](https://github.com/yunseo-kim/physics-visualizations/blob/main/quantum-harmonic-oscillator.html)
 > - Lizenz: [Siehe hier](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 

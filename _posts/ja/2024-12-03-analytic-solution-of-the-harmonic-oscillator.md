@@ -231,7 +231,7 @@ $n$が大きくなるほど、量子振動子は古典的振動子に類似し�
     </iframe>
 </div>
 
-> - オリジナルの可視化ページ：{% static_href %}<{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html>{% endstatic_href %}
+> - オリジナルの可視化ページ：<a {% static_href %}href="{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html"{% endstatic_href %}>{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html</a>
 > - ソースコード：[yunseo-kim/physics-visualizations リポジトリ](https://github.com/yunseo-kim/physics-visualizations/blob/main/quantum-harmonic-oscillator.html)
 > - ライセンス：[こちらを参照](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 

@@ -228,7 +228,7 @@ Voici une visualisation réactive basée sur Plotly.js que j'ai créée moi-mêm
     </iframe>
 </div>
 
-> - Page de visualisation originale : {% static_href %}<{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html>{% endstatic_href %}
+> - Page de visualisation originale : <a {% static_href %}href="{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html"{% endstatic_href %}>{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html</a>
 > - Code source : [Dépôt yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/quantum-harmonic-oscillator.html)
 > - Licence : [Voir ici](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 
