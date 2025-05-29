@@ -17,7 +17,7 @@ client = anthropic.Anthropic(
 def submit_prompt(prompt, system_prompt):
     # print("- Submit prompt")
     with client.messages.stream(
-        model="claude-3-7-sonnet-20250219",
+        model="claude-sonnet-4-20250514",
         max_tokens=16384,
         temperature=0,
         system=system_prompt,
