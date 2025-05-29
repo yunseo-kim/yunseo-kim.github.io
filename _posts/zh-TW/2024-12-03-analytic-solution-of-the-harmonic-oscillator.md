@@ -225,7 +225,7 @@ $$ \psi_n(x) = \left(\frac{m\omega}{\pi\hbar} \right)^{1/4} \frac{1}{\sqrt{2^n n
     </iframe>
 </div>
 
-> - 原始可視化頁面：<{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html>
+> - 原始可視化頁面：{% static_href %}<{{site.url}}/physics-visualizations/quantum-harmonic-oscillator.html>{% endstatic_href %}
 > - 源代碼：[yunseo-kim/physics-visualizations 倉庫](https://github.com/yunseo-kim/physics-visualizations/blob/main/quantum-harmonic-oscillator.html)
 > - 許可證：[見此處](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 
