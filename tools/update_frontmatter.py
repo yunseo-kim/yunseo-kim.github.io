@@ -1,3 +1,11 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "python-frontmatter",
+#     "pyyaml",
+#     "tqdm",
+# ]
+# ///
 import sys
 import os
 from tqdm import tqdm

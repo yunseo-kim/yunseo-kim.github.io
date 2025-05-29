@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "python-frontmatter",
+#     "pyyaml",
+# ]
+# ///
 import os
 import sys
 import frontmatter

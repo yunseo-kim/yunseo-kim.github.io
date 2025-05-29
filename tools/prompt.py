@@ -1,3 +1,9 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "anthropic",
+# ]
+# ///
 import anthropic
 import os
 import argparse

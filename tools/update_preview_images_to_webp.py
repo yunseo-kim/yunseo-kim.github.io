@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "python-frontmatter",
+#     "tqdm",
+# ]
+# ///
 import sys
 import os
 import re

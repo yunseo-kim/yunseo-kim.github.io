@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "tqdm",
+# ]
+# ///
 import os
 import re
 from tqdm import tqdm

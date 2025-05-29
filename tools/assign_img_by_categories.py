@@ -1,3 +1,9 @@
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+#     "tqdm",
+# ]
+# ///
 import sys
 import os
 from tqdm import tqdm
