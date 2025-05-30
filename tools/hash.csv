@@ -18,7 +18,7 @@
 2022-03-20-Neutron-Attenuation-and-Mean-Free-Path.md,f775aa1bc309a8413031ba5b1196092a8fa672ed47e071438794683581ccdb05
 2024-04-14-Technical-debt.md,57cd9f9a6145ad9b8723d045d55300902199d7ac4f2e189524d5befc1a61ed8c
 2024-06-21-Principles-for-Writing-Clean-Code.md,6eb8a2ad0f9dfa97d29ae024095d9c1768123a38385ed4ea1b2d6694baea0a5b
-2024-06-29-how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1.md,1701251f160c2d61a916f96c154a46e82382d386094be8a0d69bdca4addf0893
+2024-06-29-how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1.md,e729492f6dbf00906830fbf8cd6b2398ed3276677c2301297b5385946a11d6d9
 2024-07-17-trigonometric-addition-formulas.md,bb21ee8e51ac1c3748958819292afbc5ff1f6ecb42127879119e3ece3e04a4ce
 2024-08-02-double-triple-and-half-angle-formulas.md,840db5a3c36103839f1a8f69bfc6a9d62e3d840b3377e6a8895f247ef1f4fffa
 2024-08-11-sum-to-product-and-product-to-sum-identities.md,a2c3d86daa209df12dfa4e5971e589181173986ed7910f46ee510a495e49307b
@@ -27,14 +27,14 @@
 2024-09-03-constituents-of-an-atom.md,2a2d5c542da2c2d2a7123cff73edbbe546a40c35eb004f51aaf92b2cd0d387dc
 2024-09-04-nuclear-reactions-and-binding-energy.md,2ed34d63f0b6db7b1376cc6c065c3a3b68dac26e163ef9b4e58381af2a17dd3b
 2024-09-06-how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-2.md,686f2c8aad1ecacd56bf1c2b7bf0b853443d33827aaaa72d3f45351b3a3ab429
-2024-09-09-how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-2.md,4bf407b387ef886218bb6f65933d1ef2225fa34d2afcd13ea4bbdcd9d1b321d6
+2024-09-09-how-to-auto-translate-posts-with-the-claude-sonnet-4-api-2.md,61cca881f5d32721ccb7b182f146f0498e4ed6f15857c248b2e7916ec8e5b9c9
 2024-09-10-principle-of-relativity-and-lorentz-transformation.md,dfdd425ffe001d0370ac23a7d190cea5f98ed19a479b0c4cd572fb8a1ce1bcac
 2024-10-08-schrodinger-equation-and-the-wave-function.md,e7970f27f0133d1b86072a330d57df7e78cce6928728f8e6d6afa6371f9d5f70
 2024-10-12-ehrenfest-theorem.md,a42d73fdf6ec1abf1bae07b175bd2f5a133058cdd8b3db62471d419a2e992a12
 2024-10-16-time-independent-schrodinger-equation.md,20c2a231db6587c34b42fa4680a81b958a57ccaee3edd9da0c97638a4988b832
 2024-10-18-the-infinite-square-well.md,41aca48b36a2e221e7275bfb8bbfb6bccba88101588095cf8f87ad16be6e7647
 2024-10-23-continuous-and-characteristic-x-rays.md,42511bf0bd42cbca150da9e251a701aeeea7756c3a6980b53832aa2cf7bc462e
-2024-10-30-the-free-particle.md,0d3127321f1dc90e2fb3ab8b6559cc79bfda567b501fd7b32c1b3a92d8da86eb
+2024-10-30-the-free-particle.md,b6124c3e4a38931c648cf6b0453e79150fc41836229e69ea1e52194a77275193
 2024-11-04-does-ai-hate-to-work-on-halloween.md,d011a25618ccad174d06bc5f0a7c48533edc8abf0572074b624e630d681b8794
 2024-11-11-definition-of-plasma-and-saha-equation.md,e1986ec2587e08507cca10f0b95ba0b800ea48fb105c91bc72af838201a4ce27
 2024-11-18-how-to-support-multi-language-on-jekyll-blog-with-polyglot-1.md,3b9a4560a758494b956ca817c4bb6baa128a04d5a52bbf6292e93c200b30bcb6
@@ -51,4 +51,4 @@
 2025-04-06-wronskian-existence-and-uniqueness-of-solutions.md,5020fe303c559eb24948912fe16b60b16ba867347dfabb8ea73200aba4b81594
 2025-04-16-nonhomogeneous-linear-odes-of-second-order.md,83f3188f206bbb1b0ba2660f85f1bdeb5cdfe6136ff21c954645045ef76945fe
 2025-04-20-method-of-undetermined-coefficients.md,966aadba5d8819a21f6ccd340668e4456b02318f351a27d2c7ce383de2f42699
-2025-05-17-gravitational-field-and-potential.md,62eab7d9092400be77408b0ddb2a05b231a1943b8fed21f505e25e25d0118f60
+2025-05-17-gravitational-field-and-potential.md,35440296114b3638ec8afd5cb56ee6034d1194407169b2e56e063c7702460b1e
