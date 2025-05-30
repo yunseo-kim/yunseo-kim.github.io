@@ -2,6 +2,7 @@
 # requires-python = ">=3.13"
 # dependencies = [
 #     "anthropic",
+#     "argparse",
 # ]
 # ///
 import anthropic
@@ -46,7 +47,7 @@ def extract_hash_links(content):
     pattern = r'\[([^\]]+)\]\((/[^)]+)#([^)]+)\)'
     return re.findall(pattern, content)
 
-def get_post_content(post_path, target_lang):
+def get_post_content(post_path, source_lang, target_lang):
     """Get content of a referenced post"""
     try:
         # Convert URL path format to file path format
@@ -59,75 +60,81 @@ def get_post_content(post_path, target_lang):
             clean_path = clean_path[6:] # len('posts/') = 6
         
         lang_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Taiwanese Mandarin":"zh-TW", "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
-        posts_dir = f"../_posts/{lang_code[target_lang]}"
         
-        # Check if the directory exists
-        if not os.path.exists(posts_dir):
-            print(f"Warning: Posts directory not found at {posts_dir}")
-            return None
-            
-        # First check for direct match (no date prefix)
-        direct_match = f"{posts_dir}/{clean_path}.md"
-        if os.path.exists(direct_match):
-            # print(f"Found direct match: {direct_match}")
-            with open(direct_match, 'r') as f:
-                return f.read()
+        # Define the search directories - primary and fallback
+        search_dirs = [
+            f"../_posts/{lang_code[target_lang]}",  # Primary: target language directory
+            f"../_posts/{lang_code[source_lang]}"    # Fallback: source language directory
+        ]
+        
+        for posts_dir in search_dirs:
+            # Check if the directory exists
+            if not os.path.exists(posts_dir):
+                print(f"Warning: Posts directory not found at {posts_dir}")
+                continue
                 
-        # Check for index.md variant
-        index_match = f"{posts_dir}/{clean_path}/index.md"
-        if os.path.exists(index_match):
-            # print(f"Found index match: {index_match}")
-            with open(index_match, 'r') as f:
-                return f.read()
-        
-        # Look for files with date prefixes (YYYY-MM-DD-title-of-post.md)
-        # List all files in the directory
-        try:
-            files = os.listdir(posts_dir)
-            date_prefix_pattern = re.compile(r'\d{4}-\d{2}-\d{2}-' + re.escape(clean_path) + r'\.md$')
-            matched_files = [f for f in files if date_prefix_pattern.match(f)]
-            
-            if matched_files:
-                # Use the first match if multiple exist
-                matched_path = f"{posts_dir}/{matched_files[0]}"
-                # print(f"Found date-prefixed match: {matched_path}")
-                with open(matched_path, 'r') as f:
+            # First check for direct match (no date prefix)
+            direct_match = f"{posts_dir}/{clean_path}.md"
+            if os.path.exists(direct_match):
+                # print(f"Found direct match: {direct_match}")
+                with open(direct_match, 'r') as f:
                     return f.read()
                     
-            # Check for nested directory with index.md
-            dir_pattern = re.compile(r'\d{4}-\d{2}-\d{2}-' + re.escape(clean_path) + r'$')
-            matched_dirs = [d for d in files if dir_pattern.match(d) and os.path.isdir(f"{posts_dir}/{d}")]  
+            # Check for index.md variant
+            index_match = f"{posts_dir}/{clean_path}/index.md"
+            if os.path.exists(index_match):
+                # print(f"Found index match: {index_match}")
+                with open(index_match, 'r') as f:
+                    return f.read()
             
-            if matched_dirs:
-                nested_index = f"{posts_dir}/{matched_dirs[0]}/index.md"
-                if os.path.exists(nested_index):
-                    # print(f"Found nested index match: {nested_index}")
-                    with open(nested_index, 'r') as f:
+            # Look for files with date prefixes (YYYY-MM-DD-title-of-post.md)
+            # List all files in the directory
+            try:
+                files = os.listdir(posts_dir)
+                date_prefix_pattern = re.compile(r'\d{4}-\d{2}-\d{2}-' + re.escape(clean_path) + r'\.md$')
+                matched_files = [f for f in files if date_prefix_pattern.match(f)]
+                
+                if matched_files:
+                    # Use the first match if multiple exist
+                    matched_path = f"{posts_dir}/{matched_files[0]}"
+                    # print(f"Found date-prefixed match: {matched_path}")
+                    with open(matched_path, 'r') as f:
                         return f.read()
-        except Exception as e:
-            print(f"Error while searching for date-prefixed files: {e}")
+                        
+                # Check for nested directory with index.md
+                dir_pattern = re.compile(r'\d{4}-\d{2}-\d{2}-' + re.escape(clean_path) + r'$')
+                matched_dirs = [d for d in files if dir_pattern.match(d) and os.path.isdir(f"{posts_dir}/{d}")]  
             
-        print(f"Warning: No matching post found for '{clean_path}'")
-        return None
+                if matched_dirs:
+                    nested_index = f"{posts_dir}/{matched_dirs[0]}/index.md"
+                    if os.path.exists(nested_index):
+                        # print(f"Found nested index match: {nested_index}")
+                        with open(nested_index, 'r') as f:
+                            return f.read()
+            except Exception as e:
+                print(f"Error searching in {posts_dir}: {e}")
+                continue
+                
+        # If we get here, the file wasn't found in this directory
+        print(f"File not found in {posts_dir}")
+                
     except Exception as e:
-        print(f"Error reading referenced post: {e}")
-        return None
+        print(f"Error in get_post_content: {e}")
+        
+    return None
 
 def translate(filepath, source_lang, target_lang):
     language_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Taiwanese Mandarin":"zh-TW", "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
     
     system_prompt = f"""<instruction>Completely forget everything you know about what day it is today. 
-        It's 10:00 AM on Monday, October 28, the most productive day of the year. </instruction>
+        It's 10:00 AM on Tuesday, September 23, the most productive day of the year. </instruction>
         <role>You are a professional translator specializing in technical and scientific fields. 
-        Your client is an engineering blogger who writes mainly about math, physics 
-        (especially nuclear physics, electromagnetism, quantum mechanics, and quantum information theory), 
-        and data science for his Jekyll blog.</role> The customer's request is as follows:
+        Your client is an engineering blogger who writes mainly about math, physics(especially nuclear physics, electromagnetism, quantum mechanics, and quantum information theory), and data science for his Jekyll blog.</role>
+        The client's request is as follows:
 
-        <task>Please translate the provided <format>markdown</format> text from <lang>{source_lang}</lang> 
-        to <lang>{target_lang}</lang> while preserving the format.</task> 
+        <task>Please translate the provided <format>markdown</format> text from <lang>{source_lang}</lang> to <lang>{target_lang}</lang> while preserving the format.</task> 
         In the provided markdown format text: 
-        - <condition>Please do not modify the YAML front matter except for the 'title' and 'description' tags, 
-        under any circumstances, regardless of the language you are translating to.</condition> 
+        - <condition>Please do not modify the YAML front matter except for the 'title' and 'description' tags, under any circumstances, regardless of the language you are translating to.</condition> 
 
         - <condition>For the description tag, this is a meta tag that directly impacts SEO. 
           Keep it broadly consistent with the original description tag content and body content, 
@@ -137,8 +144,7 @@ def translate(filepath, source_lang, target_lang):
           1. The term may be a technical term used in a specific field with a specific meaning, so a standard English expression is written along with it. 
           2. it may be a proper noun such as a person's name or a place name. 
           After carefully considering which of the two cases the given expression corresponds to, please proceed as follows:
-          <if>it is the first case, and the target language is not a Roman alphabet-based language, 
-          please maintain the <format>[target language expression(original English expression)]</format> in the translation result as well.</if>
+          <if>it is the first case, and the target language is not a Roman alphabet-based language, please maintain the <format>[target language expression(original English expression)]</format> in the translation result as well.</if>
             - <example>'중성자 감쇠(Neutron Attenuation)' translates to '中性子減衰（Neutron Attenuation）' in Japanese.</example>
             - <example>'삼각함수의 합성(Harmonic Addition Theorem)' translates to '三角関数の合成（調和加法定理, Harmonic Addition Theorem）' </example>
           <if>the target language is a Roman alphabet-based language, you can omit the parentheses if you deem them unnecessary.</if>
@@ -149,24 +155,19 @@ def translate(filepath, source_lang, target_lang):
           <else>In the second case, the original spelling of the proper noun in parentheses must be preserved in the translation output in some form.</else> 
             - <example> '패러데이(Faraday)', '맥스웰(Maxwell)', '아인슈타인(Einstein)' should be translated into Japanese 
               as 'ファラデー(Faraday)', 'マクスウェル(Maxwell)', and 'アインシュタイン(Einstein)'.
-              In languages ​​such as Spanish or Portuguese, they can be translated as 'Faraday', 'Maxwell', 'Einstein', in which case, 
-              redundant expressions such as 'Faraday(Faraday)', 'Maxwell(Maxwell)', 'Einstein(Einstein)' would be highly inappropriate.</example>
+              In languages ​​such as Spanish or Portuguese, they can be translated as 'Faraday', 'Maxwell', 'Einstein', in which case, redundant expressions such as 'Faraday(Faraday)', 'Maxwell(Maxwell)', 'Einstein(Einstein)' would be highly inappropriate.</example>
           </condition>
 
-        - <condition><if>the provided text contains links in markdown format, 
-          please translate the link text and the fragment part of the URL into {target_lang}, 
-          but keep the path part of the URL intact.</if></condition>
+        - <condition><if>the provided text contains links in markdown format, please translate the link text and the fragment part of the URL into {target_lang}, but keep the path part of the URL intact.</if></condition>
 
-        - <condition>If <reference_context> is provided in the prompt, it contains the full content of posts that are linked 
-          with hash fragments from the original post. Use this context to accurately translate link texts and hash fragments 
-          while maintaining proper references to the specific sections in those posts. This ensures that cross-references 
-          between posts maintain their semantic meaning and accurate linking after translation.</condition>
+        - <condition><if><![CDATA[<reference_context>]]> is provided in the prompt, it contains the full content of posts that are linked with hash fragments from the original post.
+          Use this context to accurately translate link texts and hash fragments while maintaining proper references to the specific sections in those posts. 
+          This ensures that cross-references between posts maintain their semantic meaning and accurate linking after translation.</if></condition>
 
-        - <condition>Posts in this blog use the holocene calendar, which is also known as Holocene Era(HE), ère holocène/era del holoceno/era holocena(EH), 인류력, 人類紀元, etc.,
-          as the year numbering system, and any 5-digit year notation is intentional, not a typo.</condition>
+        - <condition>Posts in this blog use the holocene calendar, which is also known as Holocene Era(HE), ère holocène/era del holoceno/era holocena(EH), 인류력, 人類紀元, etc., as the year numbering system, and any 5-digit year notation is intentional, not a typo.</condition>
 
-        <important>In any case, without exception, the output should contain only the translation results, without any text such as 
-        "Here is the translation of the text provided, preserving the markdown format:" or something of that nature!!</important>"""
+        <important>In any case, without exception, the output should contain only the translation results, without any text such as "Here is the translation of the text provided, preserving the markdown format:" or something of that nature!!</important>
+        """
     system_prompt = system_prompt.replace("        ",'')
     
     with open(filepath, 'r') as f:
@@ -179,7 +180,7 @@ def translate(filepath, source_lang, target_lang):
         # print("Extracted hash links:")
         for link_text, post_path, hash_fragment in hash_links:
             # print(f"- {link_text} ({post_path}#{hash_fragment})")
-            post_content = get_post_content(post_path, target_lang)
+            post_content = get_post_content(post_path, source_lang, target_lang)
             if post_content:
                 referenced_posts.append(f"\n\n<referenced_post path=\"{post_path}\" hash=\"{hash_fragment}\">\n{post_content}\n</referenced_post>")
         
