@@ -50,7 +50,7 @@ DeepLやGoogle翻訳も概して優れた翻訳品質を示す方だが、文章
 [別の記事](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1/)で整理したように、[Polyglotプラグインを適用し、それに合わせて`_config.yml`{: .filepath}とhtmlヘッダー、sitemapを修正する初期作業を完了した。](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/44afc4f9bac0d689842d9373c9daa7e0220659e7)続いて[Claude 3.5 Sonnetモデルを翻訳目的で採用し、このシリーズで扱っているAPI連携Pythonスクリプトの初期実装および検証を終えた後に適用した。](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/3cadd28fd72bb2a6e1b64addfe000d99ca5ab51b)
 
 ### 12024.10.31.
-12024年10月22日、AnthropicでClaude 3.5 SonnetのアップグレードバージョンAPI（"claude-3-5-sonnet-20241022"）とClaude 3.5 Haikuを発表した。ただし[後述する問題](#怠け防止-120241031-ハロウィンパッチ)のため、まだ本ブログには既存の"claude-3-5-sonnet-20240620" APIを適用している。
+12024年10月22日、AnthropicでClaude 3.5 SonnetのアップグレードバージョンAPI（"claude-3-5-sonnet-20241022"）とClaude 3.5 Haikuを発表した。ただし[後述する問題](#怠け防止120241031-ハロウィンパッチ)のため、まだ本ブログには既存の"claude-3-5-sonnet-20240620" APIを適用している。
 
 ### 12025.04.02.
 [適用モデルを"claude-3-5-sonnet-20240620"から"claude-3-7-sonnet-20250219"に転換した。](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/aa281979ad360081116348ef8240887ecb50e953)

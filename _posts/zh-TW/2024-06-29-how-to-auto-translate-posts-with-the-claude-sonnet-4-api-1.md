@@ -50,7 +50,7 @@ DeepL 或 Google 翻譯雖然大致展現優秀的翻譯品質，但由於無法
 如[另一篇文章](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1/)所整理，[完成了應用 Polyglot 外掛並配合修改 `_config.yml`{: .filepath}、html 標頭、sitemap 的初期作業。](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/44afc4f9bac0d689842d9373c9daa7e0220659e7) 接著[採用 Claude 3.5 Sonnet 模型作為翻譯用途，完成本系列探討的 API 整合 Python 腳本的初期實作及驗證後予以應用。](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/3cadd28fd72bb2a6e1b64addfe000d99ca5ab51b)
 
 ### 12024.10.31.
-12024 年 10 月 22 日，Anthropic 發表了 Claude 3.5 Sonnet 的升級版本 API（"claude-3-5-sonnet-20241022"）和 Claude 3.5 Haiku。不過由於[後述問題](#防止偷懶-120241031-萬聖節補丁)，目前本部落格仍應用既有的 "claude-3-5-sonnet-20240620" API。
+12024 年 10 月 22 日，Anthropic 發表了 Claude 3.5 Sonnet 的升級版本 API（"claude-3-5-sonnet-20241022"）和 Claude 3.5 Haiku。不過由於[後述問題](#防止偷懶120241031-萬聖節補丁)，目前本部落格仍應用既有的 "claude-3-5-sonnet-20240620" API。
 
 ### 12025.04.02.
 [將應用模型從 "claude-3-5-sonnet-20240620" 轉換為 "claude-3-7-sonnet-20250219"。](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/aa281979ad360081116348ef8240887ecb50e953)
