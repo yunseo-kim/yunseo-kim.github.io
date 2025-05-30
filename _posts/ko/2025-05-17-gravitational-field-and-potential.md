@@ -1,6 +1,6 @@
 ---
 title: 중력장과 중력 퍼텐셜
-description: 뉴턴의 만유인력 법칙에 따른 중력장 벡터와 중력 퍼텐셜의 정의를 알아보고, 이에 관련된 중요한 두 예제로 구각 정리와 은하 회전 곡선을 다룬다.
+description: "뉴턴의 만유인력 법칙에 따른 중력장 벡터와 중력 퍼텐셜의 정의를 알아보고, 이에 관련된 중요한 두 예제로 구각 정리와 은하 회전 곡선을 다룬다."
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Gravitation]
 math: true
@@ -199,10 +199,10 @@ $$\begin{align*}
 ### 결과
 앞서 구한 세 영역에서의 중력 퍼텐셜 $\Phi$, 그리고 그에 따른 중력장 벡터의 크기 $\|\mathbf{g}\|$를 거리 $R$의 함수로서 그래프로 나타내면 다음과 같다.
 
-![Gravitational Potential as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualization/refs/heads/main/figs/shell-theorem-gravitational-potential.png)
-![Magnitude of the Field Vector as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualization/refs/heads/main/figs/shell-theorem-field-vector.png)
-> - Python 시각화 코드: [yunseo-kim/physics-visualization 리포지터리](https://github.com/yunseo-kim/physics-visualization/blob/main/src/shell_theorem.py)
-> - 라이선스: [See here](https://github.com/yunseo-kim/physics-visualization?tab=readme-ov-file#license)
+![Gravitational Potential as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/shell-theorem-gravitational-potential.png)
+![Magnitude of the Field Vector as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/shell-theorem-field-vector.png)
+> - Python 시각화 코드: [yunseo-kim/physics-visualizations 리포지터리](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/shell_theorem.py)
+> - 라이선스: [See here](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 
 중력 퍼텐셜과 중력장 벡터의 크기는 연속적임을 알 수 있다. 만약 중력 퍼텐셜이 어떤 점에서 불연속이면 그 점에서 퍼텐셜의 기울기, 즉 중력의 크기가 그 점에서 무한대가 되는데, 이는 물리적으로 타당하지 않으므로 퍼텐셜 함수는 모든 점에서 연속이어야 한다. 그러나 중력장 벡터의 *미분계수*는 껍질의 안쪽 면과 바깥쪽 면에서 불연속이다.
 
