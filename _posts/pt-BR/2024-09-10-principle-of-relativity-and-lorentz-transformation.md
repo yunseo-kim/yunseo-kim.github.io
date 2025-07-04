@@ -61,7 +61,7 @@ Um dos principais conceitos e premissas fundamentais da física, o princípio da
 ### Transformação de Galileu (Galilean transformation)
 Consideremos dois sistemas inerciais $S$ e $S^{\prime}$, onde $S^{\prime}$ se move em relação a $S$ com uma velocidade constante $\vec{v}$ na direção $+x$. Um mesmo evento é observado no sistema $S$ nas coordenadas $(x, y, z)$ no tempo $t$, e no sistema $S^{\prime}$ nas coordenadas $(x^{\prime}, y^{\prime}, z^{\prime})$ no tempo $t^{\prime}$.
 
-Nesse caso, o valor do movimento na direção $x$ medido em $S^{\prime}$ será maior que o valor medido em $S$ pela distância que $S^{\prime}$ percorreu em relação a $S$ na direção $x$, que é $\vec{v}t$, portanto:
+Nesse caso, o valor do movimento na direção $x$ medido em $S^{\prime}$ será menor que o valor medido em $S$ pela distância que $S^{\prime}$ percorreu em relação a $S$ na direção $x$, que é $\vec{v}t$, portanto:
 
 $$ x^{\prime} = x - \vec{v}t \label{eqn:galilean_transform_x} \tag{1} $$
 

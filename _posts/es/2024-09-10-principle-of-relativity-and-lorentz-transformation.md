@@ -61,7 +61,7 @@ Es uno de los conceptos fundamentales y premisas básicas de la física, que est
 ### Transformación de Galileo (Galilean transformation)
 Supongamos que existen dos sistemas inerciales $S$ y $S^{\prime}$, donde $S^{\prime}$ se mueve respecto a $S$ con una velocidad constante $\vec{v}$ en la dirección $+x$. Un mismo evento es observado en $S$ en las coordenadas $(x, y, z)$ en el tiempo $t$, y en $S^{\prime}$ en las coordenadas $(x^{\prime}, y^{\prime}, z^{\prime})$ en el tiempo $t^{\prime}$.
 
-En este caso, el valor del movimiento en la dirección $x$ medido en $S^{\prime}$ será mayor que el medido en $S$ por la distancia que $S^{\prime}$ se ha movido respecto a $S$ en la dirección $x$, que es $\vec{v}t$, por lo tanto:
+En este caso, el valor del movimiento en la dirección $x$ medido en $S^{\prime}$ será menor que el medido en $S$ por la distancia que $S^{\prime}$ se ha movido respecto a $S$ en la dirección $x$, que es $\vec{v}t$, por lo tanto:
 
 $$ x^{\prime} = x - \vec{v}t \label{eqn:galilean_transform_x} \tag{1} $$
 

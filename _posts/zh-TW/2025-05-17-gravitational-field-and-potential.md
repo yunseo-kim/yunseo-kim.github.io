@@ -93,7 +93,7 @@ $$ \nabla\Phi = \frac{d\Phi}{dr}\mathbf{e}_r = G\frac{M}{r^2}\mathbf{e}_r $$
 
 $$ \boxed{\Phi = -G\frac{M}{r}} \label{eqn:g_potential}\tag{6}$$
 
-由於重力位勢只有相對差值才有意義，特定值本身沒有意義，所以可以省略積分常數。通常設定 $r \to \infty$ 時 $\Phi \to 0$ 的條件來消除不確定性（ambiguity），式 ($\ref{eqn:g_potential}$) 也滿足這個條件。
+由於重力位勢只有相對差值才有意義，絕對值的大小沒有意義，所以可以省略積分常數。通常設定 $r \to \infty$ 時 $\Phi \to 0$ 的條件來消除不確定性（ambiguity），式 ($\ref{eqn:g_potential}$) 也滿足這個條件。
 
 物質連續分布時的重力位勢如下：
 

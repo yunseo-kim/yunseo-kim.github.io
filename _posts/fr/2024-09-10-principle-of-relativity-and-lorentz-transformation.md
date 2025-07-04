@@ -61,7 +61,7 @@ C'est l'un des concepts fondamentaux de la physique, qui stipule que toutes les 
 ### Transformation de Galilée (Galilean transformation)
 Supposons qu'il existe deux référentiels inertiels $S$ et $S^{\prime}$, où $S^{\prime}$ se déplace par rapport à $S$ à une vitesse constante $\vec{v}$ dans la direction $+x$. Un même événement est observé dans $S$ aux coordonnées $(x, y, z)$ au temps $t$, et dans $S^{\prime}$ aux coordonnées $(x^{\prime}, y^{\prime}, z^{\prime})$ au temps $t^{\prime}$.
 
-Dans ce cas, la valeur du mouvement dans la direction $x$ mesurée dans $S^{\prime}$ sera supérieure à celle mesurée dans $S$ d'une distance $\vec{v}t$ correspondant au déplacement de $S^{\prime}$ par rapport à $S$ dans la direction $x$, donc :
+Dans ce cas, la valeur du mouvement dans la direction $x$ mesurée dans $S^{\prime}$ sera inférieure à celle mesurée dans $S$ d'une distance $\vec{v}t$ correspondant au déplacement de $S^{\prime}$ par rapport à $S$ dans la direction $x$, donc :
 
 $$ x^{\prime} = x - \vec{v}t \label{eqn:galilean_transform_x} \tag{1} $$
 

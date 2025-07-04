@@ -167,7 +167,7 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 - 原子核俘獲中子並釋放阿爾法粒子（$\alpha$）或質子（$\mathrm{p}$）等帶電粒子
 - 表示為 $(\mathrm{n}, \alpha)$、$(\mathrm{n}, \mathrm{p})$ 等
 - 根據情況可能是[放熱反應](/posts/nuclear-reactions-and-binding-energy/#放熱反應exothermic-reaction--吸熱反應endothermic-reaction)或[吸熱反應](/posts/nuclear-reactions-and-binding-energy/#放熱反應exothermic-reaction--吸熱反應endothermic-reaction)，但通常是[吸熱反應](/posts/nuclear-reactions-and-binding-energy/#放熱反應exothermic-reaction--吸熱反應endothermic-reaction)
-- 在閾能以下不會發生，即使在閾能以上，截面通常也很小（尤其對重核而言更明顯）
+- 在閾能未滿時不會發生，即使在閾能以上，截面通常也很小（尤其對重核而言更明顯）
 
 雖然帶電粒子反應需要超過閾能才能發生，且截面通常較小，但輕核中有幾個重要的帶電粒子反應：
 

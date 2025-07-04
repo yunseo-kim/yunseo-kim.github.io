@@ -61,7 +61,7 @@ Es ist eines der Hauptkonzepte und eine grundlegende Voraussetzung der Physik, d
 ### Galilei-Transformation (Galilean transformation)
 Angenommen, es gibt zwei Inertialsysteme $S$ und $S^{\prime}$, wobei sich $S^{\prime}$ relativ zu $S$ mit einer konstanten Geschwindigkeit $\vec{v}$ in Richtung $+x$ bewegt. Ein und dasselbe Ereignis wird in $S$ zum Zeitpunkt $t$ an den Koordinaten $(x, y, z)$ und in $S^{\prime}$ zum Zeitpunkt $t^{\prime}$ an den Koordinaten $(x^{\prime}, y^{\prime}, z^{\prime})$ beobachtet.
 
-In diesem Fall wird der in $S^{\prime}$ gemessene Wert der Bewegung in $x$-Richtung um die Strecke $\vec{v}t$ größer sein als der in $S$ gemessene Wert, da sich $S^{\prime}$ relativ zu $S$ in $x$-Richtung bewegt hat:
+In diesem Fall wird der in $S^{\prime}$ gemessene Wert der Bewegung in $x$-Richtung um die Strecke $\vec{v}t$ kleiner sein als der in $S$ gemessene Wert, da sich $S^{\prime}$ relativ zu $S$ in $x$-Richtung bewegt hat:
 
 $$ x^{\prime} = x - \vec{v}t \label{eqn:galilean_transform_x} \tag{1} $$
 

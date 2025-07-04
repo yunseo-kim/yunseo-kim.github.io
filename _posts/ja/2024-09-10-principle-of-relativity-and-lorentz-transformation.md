@@ -61,7 +61,7 @@ image: /assets/img/math-and-physics-cropped.webp
 ### ガリレイ変換 (Galilean transformation)
 二つの慣性系$S$と$S^{\prime}$が存在し、$S^{\prime}$は$S$に対して$+x$方向の一定速度$\vec{v}$で動いており、同一の一つの事象を$S$では時刻$t$のとき座標$(x, y, z)$で起こったものとして、$S^{\prime}$では時刻$t^{\prime}$のとき座標$(x^{\prime}, y^{\prime}, z^{\prime})$で起こったものとして観察したとしよう。
 
-このとき、$S^{\prime}$で測定した運動の$x$方向の値は$S$で測定した値より$S^{\prime}$が$S$に対して$x$方向に動いた距離である$\vec{v}t$だけ大きいはずなので
+このとき、$S^{\prime}$で測定した運動の$x$方向の値は$S$で測定した値より$S^{\prime}$が$S$に対して$x$方向に動いた距離である$\vec{v}t$だけ小さいはずなので
 
 $$ x^{\prime} = x - \vec{v}t \label{eqn:galilean_transform_x} \tag{1} $$
 

@@ -169,7 +169,7 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 - 원자핵이 중성자를 포획하여 알파입자($\alpha$)나 양성자($\mathrm{p}$) 같은 하전입자를 방출
 - $(\mathrm{n}, \alpha)$, $(\mathrm{n}, \mathrm{p})$ 등으로 표시
 - 경우에 따라 [발열반응](/posts/nuclear-reactions-and-binding-energy/#발열반응exothermic-reaction--흡열반응endothermic-reaction)일 수도, [흡열반응](/posts/nuclear-reactions-and-binding-energy/#발열반응exothermic-reaction--흡열반응endothermic-reaction)일 수도 있으나 보통 [흡열반응](/posts/nuclear-reactions-and-binding-energy/#발열반응exothermic-reaction--흡열반응endothermic-reaction)임
-- 문턱에너지 이하에서는 발생하지 않으며, 문턱에너지 이상에서도 단면적이 대체로 작음(특히 무거운 핵들에 대해 이러한 경향이 뚜렷해짐)
+- 문턱에너지 미만에서는 발생하지 않으며, 문턱에너지 이상에서도 단면적이 대체로 작음(특히 무거운 핵들에 대해 이러한 경향이 뚜렷해짐)
 
 이처럼 하전입자 반응은 문턱에너지를 넘겨야만 일어날 수 있고, 단면적도 대체로 작은 편이다. 그러나 가벼운 핵들에서 일어나는 몇몇 중요한 하전입자 반응들이 있다.
 

@@ -61,7 +61,7 @@ One of the key concepts and basic premises in physics, the principle states that
 ### Galilean Transformation
 Consider two inertial frames $S$ and $S^{\prime}$, where $S^{\prime}$ is moving at a constant velocity $\vec{v}$ in the $+x$ direction relative to $S$. Suppose the same event is observed in $S$ at coordinates $(x, y, z)$ at time $t$, and in $S^{\prime}$ at coordinates $(x^{\prime}, y^{\prime}, z^{\prime})$ at time $t^{\prime}$.
 
-In this case, the $x$ direction value measured in $S^{\prime}$ will be greater than the value measured in $S$ by the distance $\vec{v}t$ that $S^{\prime}$ has moved relative to $S$ in the $x$ direction, so
+In this case, the $x$ direction value measured in $S^{\prime}$ will be smaller than the value measured in $S$ by the distance $\vec{v}t$ that $S^{\prime}$ has moved relative to $S$ in the $x$ direction, so
 
 $$ x^{\prime} = x - \vec{v}t \label{eqn:galilean_transform_x} \tag{1} $$
 

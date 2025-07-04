@@ -93,7 +93,7 @@ $$ \nabla\Phi = \frac{d\Phi}{dr}\mathbf{e}_r = G\frac{M}{r^2}\mathbf{e}_r $$
 
 $$ \boxed{\Phi = -G\frac{M}{r}} \label{eqn:g_potential}\tag{6}$$
 
-을 얻는다. 중력 퍼텐셜은 그 상대적인 차이만이 의미가 있을 뿐, 특정한 값 자체는 의미가 없기 때문에 적분 상수는 생략할 수 있다. 보통 $r \to \infty$일 때 $\Phi \to 0$인 조건을 임의로 설정하여 불확실성(ambiguity)을 제거하며, 식 ($\ref{eqn:g_potential}$) 또한 이 조건을 만족한다.
+을 얻는다. 중력 퍼텐셜은 그 상대적인 차이만이 의미가 있을 뿐, 절대적인 값의 크기는 의미가 없기 때문에 적분 상수는 생략할 수 있다. 보통 $r \to \infty$일 때 $\Phi \to 0$인 조건을 임의로 설정하여 불확실성(ambiguity)을 제거하며, 식 ($\ref{eqn:g_potential}$) 또한 이 조건을 만족한다.
 
 물질이 연속적으로 분포할 경우의 중력 퍼텐셜은 다음과 같다.
 

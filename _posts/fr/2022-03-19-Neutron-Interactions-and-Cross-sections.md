@@ -170,7 +170,7 @@ Au-delà de la région de résonance, à plus haute énergie (généralement au-
 - Le noyau capture le neutron et émet une particule chargée comme une particule alpha ($\alpha$) ou un proton ($\mathrm{p}$)
 - Notées $(\mathrm{n}, \alpha)$, $(\mathrm{n}, \mathrm{p})$, etc.
 - Peuvent être [exothermiques ou endothermiques](/posts/nuclear-reactions-and-binding-energy/#réaction-exothermique--réaction-endothermique) selon les cas, mais sont généralement [endothermiques](/posts/nuclear-reactions-and-binding-energy/#réaction-exothermique--réaction-endothermique)
-- Ne se produisent pas en dessous de l'énergie seuil et ont généralement des sections efficaces faibles, surtout pour les noyaux lourds
+- Ne se produisent pas en deçà de l'énergie seuil et ont généralement des sections efficaces faibles, surtout pour les noyaux lourds
 
 Malgré ces caractéristiques, certaines réactions à particules chargées impliquant des noyaux légers sont importantes.
 

@@ -93,7 +93,7 @@ En intégrant, on obtient :
 
 $$ \boxed{\Phi = -G\frac{M}{r}} \label{eqn:g_potential}\tag{6}$$
 
-Puisque seule la différence relative du potentiel gravitationnel a un sens et non une valeur spécifique, on peut omettre la constante d'intégration. On fixe généralement la condition $\Phi \to 0$ quand $r \to \infty$ pour éliminer l'ambiguïté, et l'équation ($\ref{eqn:g_potential}$) satisfait également cette condition.
+Puisque seule la différence relative du potentiel gravitationnel a un sens et non la magnitude d'une valeur absolue, on peut omettre la constante d'intégration. On fixe généralement la condition $\Phi \to 0$ quand $r \to \infty$ pour éliminer l'ambiguïté, et l'équation ($\ref{eqn:g_potential}$) satisfait également cette condition.
 
 Le potentiel gravitationnel pour une distribution continue de matière est :
 

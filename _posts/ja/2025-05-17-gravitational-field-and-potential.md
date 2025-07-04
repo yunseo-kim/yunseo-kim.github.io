@@ -93,7 +93,7 @@ $$ \nabla\Phi = \frac{d\Phi}{dr}\mathbf{e}_r = G\frac{M}{r^2}\mathbf{e}_r $$
 
 $$ \boxed{\Phi = -G\frac{M}{r}} \label{eqn:g_potential}\tag{6}$$
 
-を得る。重力ポテンシャルはその相対的な差のみが意味を持ち、特定の値自体は意味がないため、積分定数は省略できる。通常 $r \to \infty$のとき $\Phi \to 0$の条件を任意に設定して不確実性（ambiguity）を除去し、式 ($\ref{eqn:g_potential}$) もこの条件を満たす。
+を得る。重力ポテンシャルはその相対的な差のみが意味を持ち、絶対的な値の大きさは意味がないため、積分定数は省略できる。通常 $r \to \infty$のとき $\Phi \to 0$の条件を任意に設定して不確実性（ambiguity）を除去し、式 ($\ref{eqn:g_potential}$) もこの条件を満たす。
 
 物質が連続的に分布する場合の重力ポテンシャルは次のようになる。
 

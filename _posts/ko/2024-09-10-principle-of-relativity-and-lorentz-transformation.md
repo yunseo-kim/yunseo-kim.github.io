@@ -62,7 +62,7 @@ image: /assets/img/math-and-physics-cropped.webp
 ### 갈릴레이 변환 (Galilean transformation)
 두 관성계 $S$와 $S^{\prime}$이 존재하고, $S^{\prime}$은 $S$에 대해 $+x$ 방향의 일정한 속도 $\vec{v}$로 움직이며, 동일한 한 사건을 $S$에서는 시각 $t$일 때 좌표 $(x, y, z)$에서 일어난 것으로, $S^{\prime}$에서는 시각 $t^{\prime}$일 때 좌표 $(x^{\prime}, y^{\prime}, z^{\prime})$에서 일어난 것으로 관찰했다고 하자.
 
-이때, $S^{\prime}$에서 측정한 운동의 $x$ 방향 값은 $S$에서 측정한 값보다 $S^{\prime}$이 $S$에 대해 $x$방향으로 움직인 거리인 $\vec{v}t$만큼 더 클 것이므로
+이때, $S^{\prime}$에서 측정한 운동의 $x$ 방향 값은 $S$에서 측정한 값보다 $S^{\prime}$이 $S$에 대해 $x$방향으로 움직인 거리인 $\vec{v}t$만큼 더 작을 것이므로
 
 $$ x^{\prime} = x - \vec{v}t \label{eqn:galilean_transform_x} \tag{1} $$
 

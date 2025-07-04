@@ -93,7 +93,7 @@ Integrating this gives:
 
 $$ \boxed{\Phi = -G\frac{M}{r}} \label{eqn:g_potential}\tag{6}$$
 
-Since only the relative difference in gravitational potential has meaning and the specific value itself is meaningless, we can omit the integration constant. Usually the condition $\Phi \to 0$ as $r \to \infty$ is arbitrarily set to remove ambiguity, and equation ($\ref{eqn:g_potential}$) satisfies this condition.
+Since only the relative difference in gravitational potential has meaning and the absolute magnitude of the value is meaningless, we can omit the integration constant. Usually the condition $\Phi \to 0$ as $r \to \infty$ is arbitrarily set to remove ambiguity, and equation ($\ref{eqn:g_potential}$) satisfies this condition.
 
 For continuous mass distributions, the gravitational potential is:
 

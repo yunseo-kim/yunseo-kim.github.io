@@ -169,7 +169,7 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 - 原子核が中性子を捕獲してアルファ粒子($\alpha$)や陽子($\mathrm{p}$)などの荷電粒子を放出
 - $(\mathrm{n}, \alpha)$、$(\mathrm{n}, \mathrm{p})$などと表記
 - 場合によっては[発熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応exothermic-reaction吸熱反応endothermic-reaction)の場合も、[吸熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応exothermic-reaction吸熱反応endothermic-reaction)の場合もあるが通常は[吸熱反応](/posts/nuclear-reactions-and-binding-energy/#発熱反応exothermic-reaction吸熱反応endothermic-reaction)
-- 閾値エネルギー以下では発生せず、閾値エネルギー以上でも断面積は概して小さい（特に重い核ではこの傾向が顕著）
+- 閾値エネルギー未満では発生せず、閾値エネルギー以上でも断面積は概して小さい（特に重い核ではこの傾向が顕著）
 
 このように荷電粒子反応は閾値エネルギーを超えなければ起こらず、断面積も概して小さい。しかし、軽い核で起こるいくつかの重要な荷電粒子反応がある。
 
