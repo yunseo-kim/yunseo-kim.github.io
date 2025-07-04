@@ -2,10 +2,12 @@
 # requires-python = ">=3.13"
 # dependencies = [
 #     "tqdm",
+#     "argparse",
 # ]
 # ///
 import sys
 import os
+import subprocess
 from tqdm import tqdm
 import compare_hash
 import prompt
@@ -31,28 +33,66 @@ target_langs = ["English", "Japanese", "Taiwanese Mandarin", "Spanish", "Brazili
 source_lang_code = "ko"
 target_lang_codes = ["en", "ja", "zh-TW", "es", "pt-BR", "fr", "de"]
 
+def get_git_diff(filepath):
+    """Get the diff of the file using git"""
+    try:
+        # Get the diff of the file
+        result = subprocess.run(
+            ['git', 'diff', '--unified=0', '--no-color', '--', filepath],
+            capture_output=True, text=True
+        )
+        return result.stdout.strip()
+    except Exception as e:
+        print(f"Error getting git diff: {e}")
+        return None
+
+def translate_incremental(filepath, source_lang, target_lang):
+    """Translate only the changed parts of a file using git diff"""
+    # Get the git diff
+    diff_output = get_git_diff(filepath)
+    # print(f"Diff output: {diff_output}")
+    if not diff_output:
+        print(f"No changes detected or error getting diff for {filepath}")
+        return
+    
+    # Call the translation function with the diff
+    prompt.translate_with_diff(filepath, source_lang, target_lang, diff_output)
+
 if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Translate markdown files with optional incremental updates')
+    parser.add_argument('--incremental', action='store_true', 
+                       help='Only translate changed parts of files using git diff')
+    args, _ = parser.parse_known_args()
+    
     initial_wd = os.getcwd()
     os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
     changed_files = compare_hash.changed_files(source_lang_code)
-    # 임시 파일 필터링
+    # Filter temporary files
     changed_files = [f for f in changed_files if is_valid_file(f)]
     
     if not changed_files:
         sys.exit("No files have changed.")
+        
     print("Changed files:")
     for file in changed_files:
         print(f"- {file}")
 
     print("")
     print("*** Translation start! ***")
-    # 외부 루프: 변경된 파일 진행상황
+    
+    # Outer loop: Progress through changed files
     for changed_file in tqdm(changed_files, desc="Files", position=0):
         filepath = os.path.join(posts_dir, source_lang_code, changed_file)
-        # 내부 루프: 각 파일의 언어별 번역 진행상황
+        
+        # Inner loop: Progress through target languages
         for target_lang in tqdm(target_langs, desc="Languages", position=1, leave=False):
-            prompt.translate(filepath, source_lang, target_lang)
+            if args.incremental:
+                translate_incremental(filepath, source_lang, target_lang)
+            else:
+                prompt.translate(filepath, source_lang, target_lang)
     
     print("\nTranslation completed!")
     os.chdir(initial_wd)
