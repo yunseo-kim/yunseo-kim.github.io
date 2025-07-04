@@ -61,7 +61,7 @@ image: /assets/img/math-and-physics-cropped.webp
 ### 伽利略變換 (Galilean transformation)
 假設有兩個慣性系 $S$ 和 $S^{\prime}$，其中 $S^{\prime}$ 相對於 $S$ 以恆定速度 $\vec{v}$ 沿 $+x$ 方向運動。同一事件在 $S$ 系統中被觀測為在時刻 $t$ 的座標 $(x, y, z)$ 處發生，而在 $S^{\prime}$ 系統中被觀測為在時刻 $t^{\prime}$ 的座標 $(x^{\prime}, y^{\prime}, z^{\prime})$ 處發生。
 
-此時，在 $S^{\prime}$ 中測量的運動 $x$ 方向值應比在 $S$ 中測量的值大 $\vec{v}t$，即 $S^{\prime}$ 相對於 $S$ 在 $x$ 方向上移動的距離，因此
+此時，$S^{\prime}$ 中測量的運動 $x$ 方向值應比在 $S$ 中測量的值小 $\vec{v}t$，即 $S^{\prime}$ 相對於 $S$ 在 $x$ 方向上移動的距離，因此
 
 $$ x^{\prime} = x - \vec{v}t \label{eqn:galilean_transform_x} \tag{1} $$
 
