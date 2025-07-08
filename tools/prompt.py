@@ -1,44 +1,58 @@
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
-#     "anthropic",
+#     "google-genai",
 #     "argparse",
 # ]
 # ///
-import anthropic
+
+# import anthropic
+from google import genai
+from google.genai import types
 import os
 import re
 from pathlib import Path
 
-client = anthropic.Anthropic(
-    api_key=os.environ.get("ANTHROPIC_API_KEY")
-)
+client = genai.Client() # anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+global_model = "gemini-2.5-pro"
 
 def submit_prompt(prompt, system_prompt, prefill):
     # print("- Submit prompt")
-    with client.messages.stream(
-        model="claude-sonnet-4-20250514",
-        max_tokens=16384,
-        temperature=0,
-        system=system_prompt,
-        messages=[
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": prompt
-                    }
-                ]
-            },
-            {"role": "assistant", "content": prefill} # Prefilling "---" forces Claude to skip the preamble
-        ]
-    ) as stream:
-        for event in stream:
-          if event.type == "message_stop":
-            return event.message.content[0].text
-    # print("- Get model response")
-    return stream.get_final_text()
+    if global_model[:6] == "claude":
+        with client.messages.stream(
+            model=global_model,
+            max_tokens=16384,
+            temperature=0.2,
+            system=system_prompt,
+            messages=[
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": prompt
+                        }
+                    ]
+                },
+                {"role": "assistant", "content": prefill} # Prefilling "---" forces Claude to skip the preamble
+            ]
+        ) as stream:
+            for event in stream:
+                if event.type == "message_stop":
+                    return event.message.content[0].text
+        # print("- Get model response")
+        return stream.get_final_text()
+    
+    if global_model[:6] == "gemini":
+        response = client.models.generate_content(
+            model=global_model,
+            config=types.GenerateContentConfig(
+                system_instruction=system_prompt,
+                temperature=0.2
+            ),
+            contents=prompt,
+        )
+        return response.text
 
 def extract_hash_links(content):
     """Extract links with hash fragments from markdown content"""
@@ -209,7 +223,7 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output):
     """
     
     # Get the translation from Claude
-    translated_diff = "```diff" + submit_prompt(prompt, system_prompt, "```diff")
+    translated_diff = submit_prompt(prompt, system_prompt) # "```diff" + submit_prompt(prompt, system_prompt, "```diff")
     # print(f"Translated diff:\n{translated_diff}")
     
     # Get the target file path
@@ -294,7 +308,7 @@ def translate(filepath, source_lang, target_lang):
 
         - <condition>Posts in this blog use the holocene calendar, which is also known as Holocene Era(HE), ère holocène/era del holoceno/era holocena(EH), 인류력, 人類紀元, etc., as the year numbering system, and any 5-digit year notation is intentional, not a typo.</condition>
 
-        <important>In any case, without exception, the output should contain only the translation results, without any text such as "Here is the translation of the text provided, preserving the markdown format:" or something of that nature!!</important>
+        <important>In any case, without exception, the output should contain only the translation results, without any text such as "Here is the translation of the text provided, preserving the markdown format:" or "```markdown" or something of that nature!!</important>
         """
     system_prompt = system_prompt.replace("        ",'')
     
@@ -315,10 +329,12 @@ def translate(filepath, source_lang, target_lang):
         if referenced_posts:
             prompt += "\n\n<reference_context>The following are contents of posts linked with hash fragments in the original post. Use these for context when translating links and references:\n" + "".join(referenced_posts) + "\n</reference_context>"
 
-    result_text = submit_prompt(prompt, system_prompt, "---")
-    # if not result_text[:3] == "---":
-    #     print("Warning: Invalid YAML front matter detected!")
-    result_text = "---"+result_text+'\n'
+    result_text = submit_prompt(prompt, system_prompt, "---")+'\n'
+    if global_model[:6] == "claude":
+        result_text = "---"+result_text
+    elif not result_text[:3] == "---":
+        print("Warning: Invalid YAML front matter detected!")
+    
     # print(language_code[target_lang])
     filename = os.path.relpath(filepath, start='../_posts/' + language_code[source_lang] + '/')
     # print(filename)
