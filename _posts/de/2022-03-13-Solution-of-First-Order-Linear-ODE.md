@@ -1,29 +1,28 @@
 ---
-title: Lösung von linearen Differentialgleichungen erster Ordnung
-description: Lasst uns die Lösungsmethode für lineare Differentialgleichungen erster
-  Ordnung betrachten.
+title: Lösung linearer GDGL erster Ordnung
+description: Wir untersuchen die Lösungsmethoden für lineare gewöhnliche Differentialgleichungen erster Ordnung.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
-## Lineare Differentialgleichung erster Ordnung
-Wenn eine Differentialgleichung erster Ordnung algebraisch in die Form
+## Lineare gewöhnliche Differentialgleichungen erster Ordnung
+Eine gewöhnliche Differentialgleichung erster Ordnung, die algebraisch in die Form
 
 $$ y'+p(x)y=r(x) \tag{1} $$
 
-gebracht werden kann, nennt man sie **linear**, andernfalls **nichtlinear**.
+gebracht werden kann, wird als **linear** bezeichnet, andernfalls als **nichtlinear**.
 
-Die Form der Gleichung (1) wird als **Standardform** einer linearen Differentialgleichung erster Ordnung bezeichnet. Wenn der erste Term einer gegebenen linearen Differentialgleichung erster Ordnung $f(x)y'$ ist, kann man die Standardform erhalten, indem man beide Seiten der Gleichung durch $f(x)$ teilt.
+Die Form von Gleichung (1) wird als **Standardform** einer linearen gewöhnlichen Differentialgleichung erster Ordnung bezeichnet. Wenn der erste Term einer gegebenen linearen DGL erster Ordnung $f(x)y'$ ist, kann die Standardform durch Division beider Seiten der Gleichung durch $f(x)$ erhalten werden.
 
-In der Ingenieurwissenschaft wird $r(x)$ oft als **Eingang (input)**, $y(x)$ als **Ausgang (output)** oder **Antwort (response)** auf den Eingang (und die Anfangsbedingung) bezeichnet.
+In der Ingenieurwissenschaft wird $r(x)$ oft als **Eingangssignal (Input)** und $y(x)$ als **Ausgangssignal (Output)** oder als **Antwort (Response)** auf den Eingang (und die Anfangsbedingungen) bezeichnet.
 
-## Homogene lineare Differentialgleichung
-Sei $J$ das Intervall $a<x<b$, in dem wir die Gleichung (1) lösen wollen. Wenn in Gleichung (1) $r(x)\equiv 0$ für das Intervall $J$ gilt, dann haben wir
+## Homogene lineare gewöhnliche Differentialgleichungen
+Sei $J$ ein Intervall $a<x<b$, in dem wir Gleichung (1) lösen wollen. Wenn für das Intervall $J$ in Gleichung (1) $r(x)\equiv 0$ gilt, dann haben wir
 
 $$ y'+p(x)y=0 \tag{2}$$
 
-und dies wird als **homogen** bezeichnet. In diesem Fall können wir die [Methode der Trennung der Variablen](/posts/Separation-of-Variables/) anwenden.
+und dies wird als **homogen** bezeichnet. In diesem Fall kann die [Trennung der Variablen](/posts/Separation-of-Variables/) angewendet werden.
 
 $$ \frac{dy}{y} = -p(x)dx $$
 
@@ -33,10 +32,10 @@ $$ y(x) = ce^{-\int p(x)dx} \tag{3}$$
 
 Für $c=0$ erhalten wir die **triviale Lösung** $y(x)=0$.
 
-## Inhomogene lineare Differentialgleichung
-Wenn $r(x)\not\equiv 0$ im Intervall $J$, nennen wir die Gleichung **inhomogen**. Es ist bekannt, dass die inhomogene lineare Differentialgleichung (1) einen Integrationsfaktor hat, der nur von $x$ abhängt. Dieser Integrationsfaktor $F(x)$ kann entweder mit der [Methode zur Bestimmung des Integrationsfaktors](/posts/Exact-Differential-Equation-and-Integrating-Factor/#methode-zur-bestimmung-des-integrierenden-faktors) aus Gleichung (11) oder direkt wie folgt bestimmt werden.
+## Inhomogene lineare gewöhnliche Differentialgleichungen
+Wenn im Intervall $J$ $r(x)\not\equiv 0$ gilt, wird dies als **inhomogen** bezeichnet. Es ist bekannt, dass die inhomogene lineare DGL (1) einen integrierenden Faktor besitzt, der nur von $x$ abhängt. Dieser integrierende Faktor $F(x)$ kann mit Gleichung (11) aus der [Methode zur Bestimmung des integrierenden Faktors](/posts/Exact-Differential-Equation-and-Integrating-Factor/#methode-zur-bestimmung-des-integrierenden-faktors) oder direkt wie folgt bestimmt werden.
 
-Multiplizieren wir Gleichung (1) mit $F(x)$, erhalten wir
+Multipliziert man Gleichung (1) mit $F(x)$, erhält man
 
 $$ Fy'+pFy=rF \tag{1*} $$
 
@@ -44,63 +43,63 @@ Wenn
 
 $$ pF=F' $$
 
-gilt, wird die linke Seite von Gleichung (1*) zur Ableitung $(Fy)'=F'y+Fy'$. Trennen wir die Variablen in $pF=F'$, erhalten wir $dF/F=p\ dx$, und nach Integration mit $h=\int p\ dx$ haben wir
+gilt, wird die linke Seite von Gleichung (1*) zur Ableitung $(Fy)'=F'y+Fy'$. Trennt man die Variablen in $pF=F'$, erhält man $dF/F=p\ dx$. Integriert man dies und setzt $h=\int p\ dx$, so ergibt sich
 
 $$ \log |F|=h=\int p\ dx $$
 
 $$ F = e^h $$
 
-Setzen wir dies in Gleichung (1*) ein, erhalten wir
+Setzt man dies in Gleichung (1*) ein, erhält man
 
 $$ e^hy'+h'e^hy=e^hy'+(e^h)'=(e^hy)'=re^h $$
 
-Nach Integration ergibt sich
+Durch Integration erhält man
 
 $$ e^hy=\int e^hr\ dx + c $$
-und durch Division durch $e^h$ erhalten wir die gewünschte Lösungsformel.
+und durch Division durch $e^h$ ergibt sich die gewünschte Lösungsformel.
 
 $$ y(x)=e^{-h}\left(\int e^hr\ dx + c\right),\qquad h=\int p(x)\ dx \tag{4} $$
 
 Hierbei spielt die Integrationskonstante in $h$ keine Rolle.
 
-In Gleichung (4) ist $c$ der einzige Wert, der von der gegebenen Anfangsbedingung abhängt. Wenn wir Gleichung (4) als Summe von zwei Termen schreiben
+Da in Gleichung (4) $c$ der einzige Wert ist, der von der gegebenen Anfangsbedingung abhängt, können wir, wenn wir Gleichung (4) als Summe von zwei Termen schreiben
 
 $$ y(x)=e^{-h}\int e^hr\ dx + ce^{-h} \tag{4*} $$
 
-können wir Folgendes erkennen:
+Folgendes erkennen:
 
-$$ \text{Gesamtausgang}=\text{Antwort auf den Eingang }r+\text{Antwort auf die Anfangsbedingung} \tag{5} $$
+$$ \text{Gesamtausgang}=\text{Antwort auf Eingang }r+\text{Antwort auf Anfangsbedingung} \tag{5} $$
 
 ## Beispiel: RL-Schaltkreis
-Ein RL-Schaltkreis besteht aus einer Batterie mit einer elektromotorischen Kraft von $E=48\textrm{V}$, einem Widerstand von $R=11\mathrm{\Omega}$ und einer Induktivität von $L=0.1\text{H}$. Der anfängliche Strom ist 0. Bestimme das Modell dieses RL-Schaltkreises und löse die resultierende Differentialgleichung für den Strom $I(t)$.
-> **Ohmsches Gesetz**  
+Angenommen, ein $RL$-Schaltkreis besteht aus einer Batterie mit einer elektromotorischen Kraft (EMK) von $E=48\textrm{V}$, einem Widerstand von $R=11\mathrm{\Omega}$ und einer Induktivität von $L=0.1\text{H}$. Der Anfangsstrom sei Null. Erstellen Sie das Modell für diesen $RL$-Schaltkreis und lösen Sie die resultierende gewöhnliche Differentialgleichung für den Strom $I(t)$.
+> **Ohmsches Gesetz (Ohm's law)**  
 > Der Strom $I$ im Schaltkreis verursacht einen Spannungsabfall $RI$ über dem Widerstand.
 {: .prompt-info }
 
-> **Faradaysches Induktionsgesetz**  
+> **Faradaysches Induktionsgesetz (Faraday's law of electromagnetic induction)**  
 > Der Strom $I$ im Schaltkreis verursacht einen Spannungsabfall $LI'=L\ dI/dt$ über der Induktivität.
 {: .prompt-info }
 
-> **Kirchhoffsches Spannungsgesetz (KSG)**  
-> Die in einem geschlossenen Schaltkreis angelegte elektromotorische Kraft ist gleich der Summe der Spannungsabfälle über allen anderen Elementen des Schaltkreises.
+> **Kirchhoffsche Maschenregel (Kirchhoff's Voltage Law; KVL)**  
+> Die in einer geschlossenen Masche angelegte elektromotorische Kraft ist gleich der Summe der Spannungsabfälle über allen anderen Elementen im Kreis.
 {: .prompt-info }
 
 ### Lösung
-Nach den obigen Gesetzen ist das Modell des RL-Schaltkreises $LI'+RI=E(t)$, und in Standardform geschrieben
+Nach den oben genannten Gesetzen lautet das Modell für den $RL$-Schaltkreis $LI'+RI=E(t)$. In Standardform geschrieben, ergibt sich:
 
 $$ I'+\frac{R}{L}I=\frac{E(t)}{L} \tag{6}$$
 
-Mit $x=t, y=I, p=R/L, h=(R/L)t$ in Gleichung (4) können wir diese lineare Differentialgleichung lösen.
+Diese lineare DGL kann gelöst werden, indem wir in Gleichung (4) $x=t, y=I, p=R/L, h=(R/L)t$ setzen.
 
 $$ I=e^{-(R/L)t}\left(\int e^{(R/L)t} \frac{E(t)}{L}dt+c\right) $$
 
 $$ I=e^{-(R/L)t}\left(\frac{E}{L}\frac{e^{(R/L)t}}{R/L}+c\right)=\frac{E}{R}+ce^{-(R/L)t} \tag{7} $$
 
-Dabei ist $R/L=11/0.1=110$ und $E(t)=48$, also
+Da $R/L=11/0.1=110$ und $E(t)=48$ ist, gilt:
 
 $$ I=\frac{48}{11}+ce^{-110t} $$
 
-Aus der Anfangsbedingung $I(0)=0$ erhalten wir $I(0)=E/R+c=0$, $c=-E/R$. Daraus können wir die folgende spezielle Lösung ableiten:
+Aus der Anfangsbedingung $I(0)=0$ erhalten wir $I(0)=E/R+c=0$, also $c=-E/R$. Daraus lässt sich die folgende partikuläre Lösung bestimmen:
 
 $$ I=\frac{E}{R}(1-e^{-(R/L)t}) \tag{8} $$
 
