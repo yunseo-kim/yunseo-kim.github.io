@@ -56,7 +56,8 @@ def changed_files(source_lang_code):
                 changed_files.append(relative_path)
 
     update_hash_csv(hash_csv_path, current_hashes)
-    return changed_files
+    # Sort the list of changed files alphabetically
+    return sorted(changed_files)
 
 if __name__ == "__main__":
     initial_wd = os.getcwd()
