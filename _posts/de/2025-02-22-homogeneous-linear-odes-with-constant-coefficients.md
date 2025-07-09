@@ -44,7 +44,7 @@ $$y=e^{\lambda x}\label{eqn:general_sol}\tag{2}$$
 versuchen.
 
 > Natürlich ist dies nur eine Vermutung, und es gibt keine Garantie, dass die allgemeine Lösung tatsächlich diese Form hat. Aber wenn wir erst einmal zwei linear unabhängige Lösungen gefunden haben, können wir, wie im Beitrag über [homogene lineare DGL zweiter Ordnung](/posts/homogeneous-linear-odes-of-second-order/#basis-und-allgemeine-lösung) gezeigt, die allgemeine Lösung mithilfe des [Superpositionsprinzips](/posts/homogeneous-linear-odes-of-second-order/#superpositionsprinzip) finden.  
-> Wie wir gleich sehen werden, gibt es auch Fälle, in denen wir eine [Lösung anderer Form finden müssen](#ii-reelle-doppelte-wurzel-lambda--cfraca2).
+> Wie wir gleich sehen werden, gibt es auch Fälle, in denen wir eine [Lösung anderer Form finden müssen](#ii-reelle-doppelte-wurzel-lambda---cfraca2).
 {: .prompt-info }
 
 Setzen wir Gleichung ($\ref{eqn:general_sol}$) und ihre Ableitungen

@@ -42,7 +42,7 @@ Por lo tanto, para la ecuación ($\ref{eqn:ode_with_constant_coefficients}$), qu
 $$y=e^{\lambda x}\label{eqn:general_sol}\tag{2}$$
 
 > Por supuesto, esto es solo una conjetura, y no hay garantía de que la solución general realmente tenga esta forma. Sin embargo, si logramos encontrar dos soluciones linealmente independientes, sin importar cuáles sean, podemos obtener la solución general mediante el [principio de superposición](/posts/homogeneous-linear-odes-of-second-order/#principio-de-superposición), como vimos en el artículo sobre [EDOs Lineales Homogéneas de Segundo Orden](/posts/homogeneous-linear-odes-of-second-order/#base-y-solución-general).  
-> Como veremos en breve, también hay casos en los que necesitamos encontrar [una solución de forma diferente](#ii-una-raíz-real-doble-lambda--cfraca2).
+> Como veremos en breve, también hay casos en los que necesitamos encontrar [una solución de forma diferente](#ii-una-raíz-real-doble-lambda---cfraca2).
 {: .prompt-info }
 
 Sustituyendo la ecuación ($\ref{eqn:general_sol}$) y sus derivadas

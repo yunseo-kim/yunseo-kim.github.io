@@ -1,5 +1,5 @@
 ---
-title: Lösung linearer GDGL erster Ordnung
+title: Lösung linearer DGL erster Ordnung
 description: Wir untersuchen die Lösungsmethoden für lineare gewöhnliche Differentialgleichungen erster Ordnung.
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]

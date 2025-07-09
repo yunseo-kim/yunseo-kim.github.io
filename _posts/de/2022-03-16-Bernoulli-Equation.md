@@ -47,7 +47,7 @@ Der letzte Term ist $-Ay^{-1}=-Au$, also erhalten wir die folgende lineare Diffe
 
 $$ u'+Au=B $$
 
-Gemäß der Lösungsformel für [inhomogene lineare Differentialgleichungen erster Ordnung](/posts/Solution-of-First-Order-Linear-ODE/#inhomogene-lineare-differentialgleichung) können wir die folgende allgemeine Lösung finden:
+Gemäß der Lösungsformel für [inhomogene lineare DGL erster Ordnung](/posts/Solution-of-First-Order-Linear-ODE/#inhomogene-lineare-gewöhnliche-differentialgleichungen) können wir die folgende allgemeine Lösung finden:
 
 $$ u=ce^{-At}+B/A $$
 
