@@ -1,6 +1,6 @@
 ---
-title: 미정계수법
-description: 특정한 형태의 상수계수 비동차 선형 상미분방정식에 대한 초기값 문제를 간단하게 풀 수 있어, 공학에서 진동계, RLC 전기회로 모델 등에 대해 유용하게 자주 사용하는 해법인 미정계수법을 알아보자.
+title: "미정계수법"
+description: "특정한 형태의 상수계수 비동차 선형 상미분방정식에 대한 초기값 문제를 간단하게 풀 수 있어, 공학에서 진동계, RLC 전기회로 모델 등에 대해 유용하게 자주 사용하는 해법인 미정계수법을 알아보자."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true

@@ -1,6 +1,6 @@
 ---
-title: 오일러-코시 방정식
-description: 보조방정식의 판별식의 부호에 따라, 각각의 경우에 오일러-코시 방정식의 일반해가 어떤 형태를 띄는지 살펴본다.
+title: "오일러-코시 방정식"
+description: "보조방정식의 판별식의 부호에 따라, 각각의 경우에 오일러-코시 방정식의 일반해가 어떤 형태를 띄는지 살펴본다."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true

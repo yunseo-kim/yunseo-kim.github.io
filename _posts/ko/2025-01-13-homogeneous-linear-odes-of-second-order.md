@@ -1,6 +1,6 @@
 ---
-title: 2계 동차 선형 상미분방정식 (Homogeneous Linear ODEs of Second Order)
-description: 2계 선형 상미분방정식의 정의와 특징을 알아보고, 특히 동차 선형 상미분방정식에서 성립하는 중요한 정리인 중첩의 원리와 이에 따른 기저(basis)의 개념을 이해한다.
+title: "2계 동차 선형 상미분방정식 (Homogeneous Linear ODEs of Second Order)"
+description: "2계 선형 상미분방정식의 정의와 특징을 알아보고, 특히 동차 선형 상미분방정식에서 성립하는 중요한 정리인 중첩의 원리와 이에 따른 기저(basis)의 개념을 이해한다."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true

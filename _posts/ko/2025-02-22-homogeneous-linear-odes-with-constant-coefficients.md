@@ -1,6 +1,6 @@
 ---
-title: 상수계수를 갖는 2계 동차 선형 상미분방정식
-description: 특성방정식의 판별식의 부호에 따라, 각각의 경우에 상수계수 동차 선형 상미분방정식의 일반해가 어떤 형태를 띄는지 살펴본다.
+title: "상수계수를 갖는 2계 동차 선형 상미분방정식"
+description: "특성방정식의 판별식의 부호에 따라, 각각의 경우에 상수계수 동차 선형 상미분방정식의 일반해가 어떤 형태를 띄는지 살펴본다."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true

@@ -1,6 +1,6 @@
 ---
-title: 브론스키언(Wronskian), 해의 존재와 유일성
-description: 연속인 임의의 변수계수를 갖는 2계 동차 선형 상미분방정식에 대하여, 초기값 문제의 해의 존재성과 유일성의 정리, 브론스키언(Wronskian)을 이용한 해의 선형종속/선형독립 판별법을 알아본다. 또한 이를 이용하여 이러한 형태의 방정식은 항상 일반해를 가지며, 이 일반해는 방정식의 모든 해를 포함함을 보인다.
+title: "브론스키언(Wronskian), 해의 존재와 유일성"
+description: "연속인 임의의 변수계수를 갖는 2계 동차 선형 상미분방정식에 대하여, 초기값 문제의 해의 존재성과 유일성의 정리, 브론스키언(Wronskian)을 이용한 해의 선형종속/선형독립 판별법을 알아본다. 또한 이를 이용하여 이러한 형태의 방정식은 항상 일반해를 가지며, 이 일반해는 방정식의 모든 해를 포함함을 보인다."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
@@ -62,7 +62,7 @@ $$ y(x) = y_1(x) - y_2(x) $$
 방정식 ($\ref{eqn:homogeneous_linear_ode_with_var_coefficients}$)이 동차 선형 상미분방정식이므로, $y_1$과 $y_2$의 선형결합인 $y$는 $I$에서 방정식의 해가 된다. $y_1$과 $y_2$가 동일한 초기조건 ($\ref{eqn:initial_conditions}$)를 만족하므로, $y$는 조건
 
 $$ \begin{align*}
-& y(x_0) = y_1(x_0) - y_1(x_0) = 0, \\
+& y(x_0) = y_1(x_0) - y_2(x_0) = 0, \\
 & y^{\prime}(x_0) = y_1^{\prime}(x_0) - y_2^{\prime}(x_0) = 0 
 \end{align*} \label{eqn:initial_conditions_*}\tag{3}$$
 

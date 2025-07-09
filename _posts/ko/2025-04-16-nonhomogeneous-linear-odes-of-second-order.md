@@ -1,6 +1,6 @@
 ---
-title: 2계 비동차 선형 상미분방정식 (Nonhomogeneous Linear ODEs of Second Order)
-description: 2계 비동차 선형 상미분방정식의 일반해의 형태를 대응하는 동차 선형 상미분방정식의 해와의 관계를 중심으로 살펴보고, 일반해의 존재와 특이해의 비존재를 보인다.
+title: "2계 비동차 선형 상미분방정식 (Nonhomogeneous Linear ODEs of Second Order)"
+description: "2계 비동차 선형 상미분방정식의 일반해의 형태를 대응하는 동차 선형 상미분방정식의 해와의 관계를 중심으로 살펴보고, 일반해의 존재와 특이해의 비존재를 보인다."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, Second-Order ODEs, Linear ODEs]
 math: true
