@@ -1,26 +1,32 @@
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
+#     "anthropic",
 #     "google-genai",
 #     "argparse",
 # ]
 # ///
 
-# import anthropic
+import anthropic
 from google import genai
 from google.genai import types
 import os
 import re
 from pathlib import Path
 
-client = genai.Client() # anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
-global_model = "gemini-2.5-pro"
+def init_client(model):
+    if model[:6] == "claude":
+        return anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+    if model[:6] == "gemini":
+        return genai.Client()
 
-def submit_prompt(prompt, system_prompt, prefill, temperature=0.0):
+def submit_prompt(model, prompt, system_prompt, prefill, temperature=0.0):
+    client = init_client(model)
+
     # print("- Submit prompt")
-    if global_model[:6] == "claude":
+    if model[:6] == "claude":
         with client.messages.stream(
-            model=global_model,
+            model=model,
             max_tokens=16384,
             temperature=temperature,
             system=system_prompt,
@@ -43,9 +49,9 @@ def submit_prompt(prompt, system_prompt, prefill, temperature=0.0):
         # print("- Get model response")
         return stream.get_final_text()
     
-    if global_model[:6] == "gemini":
+    if model[:6] == "gemini":
         response = client.models.generate_content(
-            model=global_model,
+            model=model,
             config=types.GenerateContentConfig(
                 system_instruction=system_prompt,
                 temperature=temperature
@@ -136,7 +142,7 @@ def get_post_content(post_path, source_lang, target_lang):
         
     return None
 
-def translate_with_diff(filepath, source_lang, target_lang, diff_output):
+def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
     """
     Translate only the changed parts of a file using the provided git diff output
     and apply the changes to the target language file.
@@ -223,8 +229,8 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output):
     """
     
     # Get the translation from Claude
-    translated_diff = submit_prompt(prompt, system_prompt, "```diff")
-    if global_model[:6] == "claude":
+    translated_diff = submit_prompt(model, prompt, system_prompt, "```diff")
+    if model[:6] == "claude":
         result_text = "```diff"+result_text
     # print(f"Translated diff:\n{translated_diff}")
     
@@ -265,7 +271,7 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output):
         except:
             pass
 
-def translate(filepath, source_lang, target_lang):
+def translate(filepath, source_lang, target_lang, model):
     language_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Taiwanese Mandarin":"zh-TW", 
                    "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
     
@@ -334,8 +340,8 @@ def translate(filepath, source_lang, target_lang):
         if referenced_posts:
             prompt += "\n\n<reference_context>The following are contents of posts linked with hash fragments in the original post. Use these for context when translating links and references:\n" + "".join(referenced_posts) + "\n</reference_context>"
 
-    result_text = submit_prompt(prompt, system_prompt, "---", temperature)+'\n'
-    if global_model[:6] == "claude":
+    result_text = submit_prompt(model, prompt, system_prompt, "---", temperature)+'\n'
+    if model[:6] == "claude":
         result_text = "---"+result_text
     elif not result_text[:3] == "---":
         print("Warning: Invalid YAML front matter detected!")
@@ -364,5 +370,5 @@ if __name__ == "__main__":
     
     print(f"Translating {args.file_path}")
     print(f"source_lang: {source_lang}, target_lang: {target_lang}:")
-    translate(args.file_path, source_lang, target_lang)
+    translate(args.file_path, source_lang, target_lang, "claude-sonnet-4-20250514")
     print("Completed the requested task.")

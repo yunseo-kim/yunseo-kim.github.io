@@ -46,7 +46,7 @@ def get_git_diff(filepath):
         print(f"Error getting git diff: {e}")
         return None
 
-def translate_incremental(filepath, source_lang, target_lang):
+def translate_incremental(filepath, source_lang, target_lang, model):
     """Translate only the changed parts of a file using git diff"""
     # Get the git diff
     diff_output = get_git_diff(filepath)
@@ -56,7 +56,7 @@ def translate_incremental(filepath, source_lang, target_lang):
         return
     
     # Call the translation function with the diff
-    prompt.translate_with_diff(filepath, source_lang, target_lang, diff_output)
+    prompt.translate_with_diff(filepath, source_lang, target_lang, diff_output, model)
 
 if __name__ == "__main__":
     import argparse
@@ -89,10 +89,11 @@ if __name__ == "__main__":
         
         # Inner loop: Progress through target languages
         for target_lang in tqdm(target_langs, desc="Languages", position=1, leave=False):
+            model = "gemini-2.5-pro" if target_lang in ["English", "Taiwanese Mandarin", "German"] else "claude-sonnet-4-20250514"
             if args.incremental:
-                translate_incremental(filepath, source_lang, target_lang)
+                translate_incremental(filepath, source_lang, target_lang, model)
             else:
-                prompt.translate(filepath, source_lang, target_lang)
+                prompt.translate(filepath, source_lang, target_lang, model)
     
     print("\nTranslation completed!")
     os.chdir(initial_wd)
