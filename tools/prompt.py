@@ -16,13 +16,13 @@ from pathlib import Path
 client = genai.Client() # anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 global_model = "gemini-2.5-pro"
 
-def submit_prompt(prompt, system_prompt, prefill):
+def submit_prompt(prompt, system_prompt, prefill, temperature=0.0):
     # print("- Submit prompt")
     if global_model[:6] == "claude":
         with client.messages.stream(
             model=global_model,
             max_tokens=16384,
-            temperature=0.2,
+            temperature=temperature,
             system=system_prompt,
             messages=[
                 {
@@ -48,7 +48,7 @@ def submit_prompt(prompt, system_prompt, prefill):
             model=global_model,
             config=types.GenerateContentConfig(
                 system_instruction=system_prompt,
-                temperature=0.2
+                temperature=temperature
             ),
             contents=prompt,
         )
@@ -223,7 +223,9 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output):
     """
     
     # Get the translation from Claude
-    translated_diff = submit_prompt(prompt, system_prompt) # "```diff" + submit_prompt(prompt, system_prompt, "```diff")
+    translated_diff = submit_prompt(prompt, system_prompt, "```diff")
+    if global_model[:6] == "claude":
+        result_text = "```diff"+result_text
     # print(f"Translated diff:\n{translated_diff}")
     
     # Get the target file path
@@ -314,10 +316,13 @@ def translate(filepath, source_lang, target_lang):
     
     with open(filepath, 'r') as f:
         prompt = f.read()
-        
+    
+    temperature = 0
+
     # Extract hash links and add referenced post content to the prompt
     hash_links = extract_hash_links(prompt)
     if hash_links:
+        temperature = 0
         referenced_posts = []
         # print("Extracted hash links:")
         for link_text, post_path, hash_fragment in hash_links:
@@ -329,7 +334,7 @@ def translate(filepath, source_lang, target_lang):
         if referenced_posts:
             prompt += "\n\n<reference_context>The following are contents of posts linked with hash fragments in the original post. Use these for context when translating links and references:\n" + "".join(referenced_posts) + "\n</reference_context>"
 
-    result_text = submit_prompt(prompt, system_prompt, "---")+'\n'
+    result_text = submit_prompt(prompt, system_prompt, "---", temperature)+'\n'
     if global_model[:6] == "claude":
         result_text = "---"+result_text
     elif not result_text[:3] == "---":
