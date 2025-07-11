@@ -1,7 +1,6 @@
 ---
-title: Equação de Bernoulli (Bernoulli Equation)
-description: Exploramos a equação de Bernoulli e o método de resolução da equação
-  logística, uma forma especial da equação de Bernoulli.
+title: "Equação de Bernoulli (Bernoulli Equation)"
+description: "Exploramos a equação de Bernoulli e o método de resolução da equação logística, uma forma especial da equação de Bernoulli."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true

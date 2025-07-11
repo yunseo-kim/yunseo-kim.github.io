@@ -1,7 +1,6 @@
 ---
-title: Équation de Bernoulli
-description: Nous examinons l'équation de Bernoulli et la méthode de résolution de
-  l'équation logistique, qui est une forme spéciale de l'équation de Bernoulli.
+title: "Équation de Bernoulli"
+description: "Nous examinons l'équation de Bernoulli et la méthode de résolution de l'équation logistique, qui est une forme spéciale de l'équation de Bernoulli."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
@@ -45,7 +44,7 @@ Le dernier terme est $-Ay^{-1}=-Au$, donc nous obtenons l'équation différentie
 
 $$ u'+Au=B $$
 
-Selon la formule de solution pour [l'équation différentielle linéaire non homogène](/posts/Solution-of-First-Order-Linear-ODE/#équation-différentielle-ordinaire-linéaire-non-homogène), nous pouvons obtenir la solution générale suivante :
+Selon la formule de solution pour [l'équation différentielle linéaire non homogène](/posts/Solution-of-First-Order-Linear-ODE/#équation-différentielle-linéaire-non-homogène), nous pouvons obtenir la solution générale suivante :
 
 $$ u=ce^{-At}+B/A $$
 
