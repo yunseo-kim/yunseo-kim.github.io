@@ -13,6 +13,7 @@ from google.genai import types
 import os
 import re
 from pathlib import Path
+import subprocess
 
 def init_client(model):
     if model[:6] == "claude":
@@ -243,21 +244,31 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
     with tempfile.NamedTemporaryFile(mode='w+', delete=False, suffix='.diff') as tmp_diff:
         tmp_diff.write(translated_diff)
         tmp_diff_path = tmp_diff.name
-    
+    # print(tmp_diff_path)
+    # print(f"patch --no-backup-if-mismatch -u {target_file} {tmp_diff_path}")
     try:
         # Apply the diff using the patch command
-        import subprocess
-        result = subprocess.run(
-            ['patch', '--verbose', '--no-backup-if-mismatch', '-u', target_file, tmp_diff_path],
-            capture_output=True, text=True
-        )
-        
-        if result.returncode != 0:
-            print(f"\n❌ Failed to apply changes to {target_file}")
-            print("Error output:")
-            print(result.stderr)
-            print("\nTranslated diff that caused the error:")
-            print(translated_diff)
+        try:
+            # Run the patch command non-interactively with a timeout
+            result = subprocess.run(
+                ['patch', '--no-backup-if-mismatch', '-u', target_file, tmp_diff_path],
+                capture_output=True, text=True, timeout=10, stdin=subprocess.DEVNULL
+            )
+
+            if result.returncode != 0:
+                print(f"\n❌ Failed to apply changes to {target_file}")
+                print(f"  - Return Code: {result.returncode}")
+                print(f"  - Stderr: {result.stderr}")
+                print(f"  - Problematic Diff:\n{translated_diff}")
+
+        except subprocess.TimeoutExpired:
+            print(f"\n❌ Patch command timed out for {target_file}")
+            print(f"  - The 'patch' command took more than 10 seconds to execute.")
+            print(f"  - This might be due to a complex or invalid diff.")
+            print(f"  - Make sure that uncommitted changes have not already been applied to the target file.")
+        except Exception as e:
+            print(f"\n❌ An unexpected error occurred while running patch for {target_file}")
+            print(f"  - Error: {e}")
             
     except Exception as e:
         print(f"\n❌ Error applying changes: {e}")
