@@ -44,7 +44,7 @@ $$y=e^{\lambda x}\label{eqn:general_sol}\tag{2}$$
 形式的解。
 
 > 當然，這純屬猜測，完全無法保證通解必定是這種形式。但無論如何，只要能先找到兩個線性獨立的解，就可以像在[二階齊次線性常微分方程式](/posts/homogeneous-linear-odes-of-second-order/#基底與通解)一文中所探討的，根據[疊加原理](/posts/homogeneous-linear-odes-of-second-order/#疊加原理)求出通解。  
-> 稍後將會看到，也有[需要求取其他形式解的情況](#ii-實重根-lambda--cfraca2)。
+> 稍後將會看到，也有[需要求取其他形式解的情況](#ii-實重根-lambda---cfraca2)。
 {: .prompt-info }
 
 將方程式 ($\ref{eqn:general_sol}$) 及其導數
