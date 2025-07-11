@@ -63,7 +63,7 @@ $$ \lambda^2 + a\lambda + b = 0 \label{eqn:characteristic_eqn}\tag{3}$$
 
 $$ \begin{align*}
 \lambda_1 &= \frac{1}{2}\left(-a + \sqrt{a^2 - 4b}\right), \\
-\lambda_2 &= \frac{1}{2}\left(-a - \sqrt{a^2 + 4b}\right)
+\lambda_2 &= \frac{1}{2}\left(-a - \sqrt{a^2 - 4b}\right)
 \end{align*}\label{eqn:lambdas}\tag{4} $$
 
 由此可知，兩個函數

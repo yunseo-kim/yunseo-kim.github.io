@@ -172,7 +172,7 @@ y_1^{\prime} & y_2^{\prime} \\
 > Mit anderen Worten, wenn es ein $x_1$ im Intervall $I$ gibt, für das $W\neq 0$ ist, dann sind $y_1$ und $y_2$ in diesem Intervall $I$ linear unabhängig.
 >
 > $$\begin{align*}
-> \exists x_1 \in I: W(x_0)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
+> \exists x_1 \in I: W(x_1)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
 > &\implies y_1 \text{ und } y_2 \text{ sind linear unabhängig}
 > \end{align*}$$
 >

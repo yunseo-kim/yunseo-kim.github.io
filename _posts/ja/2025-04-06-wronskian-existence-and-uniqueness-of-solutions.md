@@ -174,7 +174,7 @@ y_1^{\prime} & y_2^{\prime} \\
 > つまり、$W\neq 0$となる $x_1$が区間 $I$に存在するならば、その区間 $I$では $y_1$、$y_2$は線形独立である。
 >
 > $$\begin{align*}
-> \exists x_1 \in I: W(x_0)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
+> \exists x_1 \in I: W(x_1)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
 > &\implies y_1 \text{と } y_2 \text{は線形独立}
 > \end{align*}$$
 >

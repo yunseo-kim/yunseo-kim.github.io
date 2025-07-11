@@ -172,7 +172,7 @@ y_1^{\prime} & y_2^{\prime} \\
 > En otras palabras, si existe un $x_1$ en el intervalo $I$ donde $W\neq 0$, entonces $y_1$, $y_2$ son linealmente independientes en ese intervalo $I$.
 >
 > $$\begin{align*}
-> \exists x_1 \in I: W(x_0)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
+> \exists x_1 \in I: W(x_1)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
 > &\implies y_1 \text{ e } y_2 \text{ son linealmente independientes}
 > \end{align*}$$
 >

@@ -174,7 +174,7 @@ y_1^{\prime} & y_2^{\prime} \\
 > 換言之，若在區間 $I$ 中存在一點 $x_1$ 使得 $W\neq 0$，則在該區間 $I$ 上 $y_1$、$y_2$ 為線性獨立。
 >
 > $$\begin{align*}
-> \exists x_1 \in I: W(x_0)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
+> \exists x_1 \in I: W(x_1)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
 > &\implies y_1 \text{與 } y_2 \text{為線性獨立}
 > \end{align*}$$
 >

@@ -172,7 +172,7 @@ y_1^{\prime} & y_2^{\prime} \\
 > Em outras palavras, se existir um ponto $x_1$ no intervalo $I$ onde $W\neq 0$, então $y_1$ e $y_2$ são linearmente independentes no intervalo $I$.
 >
 > $$\begin{align*}
-> \exists x_1 \in I: W(x_0)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
+> \exists x_1 \in I: W(x_1)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
 > &\implies y_1 \text{ e } y_2 \text{ são linearmente independentes}
 > \end{align*}$$
 >

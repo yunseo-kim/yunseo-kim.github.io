@@ -61,7 +61,7 @@ then the exponential function ($\ref{eqn:general_sol}$) is a solution to the ord
 
 $$ \begin{align*}
 \lambda_1 &= \frac{1}{2}\left(-a + \sqrt{a^2 - 4b}\right), \\
-\lambda_2 &= \frac{1}{2}\left(-a - \sqrt{a^2 + 4b}\right)
+\lambda_2 &= \frac{1}{2}\left(-a - \sqrt{a^2 - 4b}\right)
 \end{align*}\label{eqn:lambdas}\tag{4} $$
 
 and from this, the two functions

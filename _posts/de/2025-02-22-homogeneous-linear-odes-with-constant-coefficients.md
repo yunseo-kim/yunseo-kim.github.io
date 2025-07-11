@@ -63,7 +63,7 @@ ist, dann ist die Exponentialfunktion ($\ref{eqn:general_sol}$) eine Lösung der
 
 $$ \begin{align*}
 \lambda_1 &= \frac{1}{2}\left(-a + \sqrt{a^2 - 4b}\right), \\
-\lambda_2 &= \frac{1}{2}\left(-a - \sqrt{a^2 + 4b}\right)
+\lambda_2 &= \frac{1}{2}\left(-a - \sqrt{a^2 - 4b}\right)
 \end{align*}\label{eqn:lambdas}\tag{4} $$
 
 und daraus ergeben sich die beiden Funktionen

@@ -174,7 +174,7 @@ y_1^{\prime} & y_2^{\prime} \\
 > 다시 말해, $W\neq 0$인 $x_1$이 구간 $I$에 존재한다면 해당 구간 $I$에서는 $y_1$, $y_2$는 선형독립이다.
 >
 > $$\begin{align*}
-> \exists x_1 \in I: W(x_0)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
+> \exists x_1 \in I: W(x_1)\neq 0 &\implies \forall x \in I: W(x)\neq 0 \\
 > &\implies y_1 \text{과 } y_2 \text{는 선형독립}
 > \end{align*}$$
 >

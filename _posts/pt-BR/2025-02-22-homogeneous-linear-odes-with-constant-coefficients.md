@@ -61,7 +61,7 @@ então a função exponencial ($\ref{eqn:general_sol}$) é uma solução da EDO 
 
 $$ \begin{align*}
 \lambda_1 &= \frac{1}{2}\left(-a + \sqrt{a^2 - 4b}\right), \\
-\lambda_2 &= \frac{1}{2}\left(-a - \sqrt{a^2 + 4b}\right)
+\lambda_2 &= \frac{1}{2}\left(-a - \sqrt{a^2 - 4b}\right)
 \end{align*}\label{eqn:lambdas}\tag{4} $$
 
 E a partir disso, as duas funções:
