@@ -231,7 +231,7 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
     # Get the translation from Claude
     translated_diff = submit_prompt(model, prompt, system_prompt, "```diff")
     if model[:6] == "claude":
-        result_text = "```diff"+result_text
+        translated_diff = "```diff"+translated_diff
     # print(f"Translated diff:\n{translated_diff}")
     
     # Get the target file path
