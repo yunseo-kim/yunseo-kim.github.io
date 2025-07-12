@@ -177,9 +177,9 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
         <task>Translate the changed parts in the provided git diff from <lang>{source_lang}</lang> to <lang>{target_lang}</lang>.</task>
         
         <context>
-        - The full translation of this document before changes already exists and will be provided in <![CDATA[<existing_translation>]]> for context.
-        - Git diff of the original <lang>{source_lang}</lang> post is provided in <![CDATA[<diff>]]>.
-        - The changes in the diff should be translated in a way that's consistent with the existing translation.
+        - The full <lang>{target_lang}</lang> translation of this document before changes already exists and will be provided in <![CDATA[<existing_translation_to_apply_diff_patch>]]> for context.
+        - Git diff of the original <lang>{source_lang}</lang> post is provided in <![CDATA[<diff_in_{source_lang}_text>]]>.
+        - The changes in the diff should be translated in a way that's consistent with the existing <lang>{target_lang}</lang> translated text.
         - Pay special attention to maintaining consistent terminology with the existing translation.
         </context>
         
@@ -215,18 +215,18 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
         - Return the diff patch output containing only the lines with changes, translated into {target_lang}
         - Maintain all original line numbers and diff markers
         - Do not include any additional text or explanations
-        - Ensure the output is a valid diff patch that can be applied
+        - Ensure the output is a valid diff patch that can be applied to existing {target_lang} translation
         </output_format>
         """
     
     # Prepare the prompt with the diff and existing translation
     prompt = f"""
-    <existing_translation>
+    <existing_translation_to_apply_diff_patch>
     {existing_translation}
-    </existing_translation>
-    <diff>
+    </existing_translation_to_apply_diff_patch>
+    <diff_in_{source_lang}_text>
     {diff_output}
-    </diff>
+    </diff_in_{source_lang}_text>
     """
     
     # Get the translation from Claude
