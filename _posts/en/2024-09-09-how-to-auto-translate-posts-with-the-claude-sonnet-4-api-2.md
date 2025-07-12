@@ -1,21 +1,22 @@
 ---
-title: How to Auto-Translate Posts with Claude Sonnet 4 API (2) - Writing and Applying Automation Scripts
-description: "Covers the process of designing prompts for multilingual translation of markdown text files and automating the work with Python using API keys from Anthropic and the designed prompts. This post is the second in the series, introducing API integration and Python script writing methods."
+title: "How to Auto-Translate Posts with the Claude Sonnet 4 API (2) - Writing and Applying Automation Scripts"
+description: "Learn how to design prompts for multilingual translation of Markdown files and automate the process with Python using Anthropic/Gemini API keys. This second post in the series covers API key issuance, integration, and how to write the automation script."
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
 image: /assets/img/technology.webp
 ---
+
 ## Introduction
-Since introducing Anthropic's Claude 3.5 Sonnet API for multilingual translation of blog posts in June 12024, I have been satisfactorily operating this translation system for nearly a year through several improvements to prompts and automation scripts, as well as model version upgrades. In this series, I aim to cover the reasons for choosing the Claude Sonnet model during the introduction process, prompt design methods, and how to implement API integration and automation through Python scripts.  
-The series consists of 2 posts, and this post you are reading is the second in the series.
-- Part 1: [Introduction to Claude Sonnet model and selection reasons, prompt engineering](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1)
-- Part 2: Writing and applying Python automation scripts using the API (this post)
+Since introducing Anthropic's Claude 3.5 Sonnet API in June 12024 for multilingual translation of my blog posts, I have been successfully operating the translation system for nearly a year, following several improvements to the prompts and automation scripts, as well as model version upgrades. In this series, I will discuss why I chose the Claude Sonnet model and later added Gemini 2.5 Pro, how I designed the prompts, and how I implemented API integration and automation using a Python script.  
+The series consists of two posts, and you are currently reading the second one.
+- Part 1: [Introduction to Claude Sonnet/Gemini 2.5 Models, Reasons for Selection, and Prompt Engineering](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1)
+- Part 2: Writing and Applying Python Automation Scripts Using the API (This Post)
 
-## Before Starting
-This post continues from [Part 1](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1), so if you haven't read it yet, I recommend reading the previous post first.
+## Before We Begin
+This post is a continuation of [Part 1](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1). If you haven't read it yet, I recommend starting with the previous post.
 
-## Completed System Prompt
-The prompt design result from [the process introduced in Part 1](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1/#prompt-design) is as follows.
+## The Completed System Prompt
+The final prompt design, resulting from [the process introduced in Part 1](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1/#prompt-design), is as follows.
 
 ```xml
 <instruction>Completely forget everything you know about what day it is today. 
@@ -80,51 +81,75 @@ In the provided markdown format text:
 
 <important>In any case, without exception, the output should contain only the translation results, \
 without any text such as "Here is the translation of the text provided, preserving the markdown format:" \
-or something of that nature!!</important>
+or "```markdown" or something of that nature!!</important>
 ```
 
-## Claude API Integration
-### Issuing Claude API Key
-
-> This section explains how to issue a new Claude API key. If you already have an API key to use, you can skip this step.
+> [The newly added incremental translation feature](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1/#12025.07.04.) uses a slightly different system prompt. Since there is a lot of overlap, I won't include it here. If needed, please check the contents of [`prompt.py`{: .filepath } in the GitHub repository](https://github.com/yunseo-kim/yunseo-kim.github.io/blob/main/tools/prompt.py) directly.
 {: .prompt-tip }
 
-Access <https://console.anthropic.com> and log in. If you don't have an account yet, you need to register first. After logging in, you'll see a dashboard screen like the one below.  
+## API Integration
+### Issuing API Keys
+
+> This section explains how to issue new Anthropic or Gemini API keys. If you already have an API key you wish to use, you can skip this step.
+{: .prompt-tip }
+
+#### Anthropic Claude
+Go to <https://console.anthropic.com> and log in with your Anthropic Console account. If you don't have an Anthropic Console account yet, you'll need to sign up first. After logging in, you will see a dashboard like the one below.  
 ![Anthropic Console Dashboard](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/Anthropic_Console.png)
 
-Click the 'Get API keys' button on this screen to see the following screen.  
-![API Keys](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/api-keys.png) I already have a key created, so a key named `yunseo-secret-key` is displayed, but if you've just created an account and haven't issued an API key yet, you probably won't have any keys. Click the 'Create Key' button in the upper right to issue a new key.
+On this screen, click the 'Get API keys' button to see the following screen.  
+![API Keys](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/api-keys.png)
+Since I have already created a key, a key named `yunseo-secret-key` is displayed. If you have just created your account and have not yet issued an API key, you probably won't have any keys. Click the 'Create Key' button in the upper right corner to issue a new key.
 
-> Once you complete key issuance, your API key will be displayed on the screen, but this key cannot be checked again later, so you must record it safely in a separate location.
+> Once you complete the key issuance, your API key will be displayed on the screen. This key cannot be viewed again later, so you must record it somewhere safe.
 {: .prompt-warning }
 
-### (Recommended) Registering Claude API Key in Environment Variables
-To use the Claude API in Python or Shell scripts, you need to load the API key. While you could record the API key directly in the script, this method cannot be used if the script needs to be uploaded to GitHub or shared with others in any other way. Also, even if you had no intention of sharing the script file, there's a risk that the script file could be leaked due to unintended mistakes, and if the API key is recorded in the script file, there's a risk of the API key being leaked as well. Therefore, it's recommended to register the API key in the environment variables of a system that only you use and have the script load that environment variable. Below, I'll introduce how to register an API key in system environment variables based on UNIX systems. For Windows, please refer to other articles on the web.
+#### Google Gemini
+The Gemini API can be managed in Google AI Studio. Go to <https://aistudio.google.com/apikey> and log in with your Google account to see the following dashboard screen.  
+![Google AI Studio Dashboard](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/get-api-key-google-ai-studio.png)
 
-1. In the terminal, run `nano ~/.bashrc` or `nano ~/.zshrc` according to the shell type you're using to launch the editor.
-2. Add `export ANTHROPIC_API_KEY='your-api-key-here'` to the file content. Replace 'your-api-key-here' with your API key, and note that you must enclose it with single quotes.
+On this screen, click the 'Create API key' button and follow the instructions. You will need to create and link a Google Cloud project and a billing account to use it. The process is a bit more complex than for the Anthropic API, but it should not be too difficult.
+
+> Unlike the Anthropic Console, you can view your own API keys on the dashboard at any time. ~~After all, if your Anthropic Console account is compromised, you can limit the damage by protecting the API key, but if your Google account is compromised, the Gemini API key will be the least of your worries.~~  
+> Therefore, there is no need to record the API key separately. Instead, make sure to maintain the security of your Google account.
+{: .prompt-tip }
+
+### (Recommended) Registering API Key in Environment Variables
+To use the Claude API in a Python or Shell script, you need to load the API key. While you can hardcode the API key directly into the script, this method is not viable if the script needs to be uploaded to GitHub or shared with others. Even if you don't plan to share the script file, there's a risk of accidental leakage. If the API key is recorded in the script, it will be leaked along with the file. Therefore, it is recommended to register the API key as an environment variable on your system and have the script load that variable. Below are the steps to register an API key as a system environment variable on a UNIX system. For Windows, please refer to other articles on the web.
+
+1. In the terminal, run `nano ~/.bashrc` or `nano ~/.zshrc` depending on your shell to open the editor.
+2. If you are using the Anthropic API, add `export ANTHROPIC_API_KEY=your-api-key-here` to the file. Replace 'your-api-key-here' with your actual API key. If you are using the Gemini API, add `export GEMINI_API_KEY=your-api-key-here` in the same way.
 3. Save the changes and exit the editor.
-4. Run `source ~/.bashrc` or `source ~/.zshrc` in the terminal to apply the changes.
+4. In the terminal, run `source ~/.bashrc` or `source ~/.zshrc` to apply the changes.
 
 ### Installing Required Python Packages
-If the anthropic package is not installed in your Python environment, install it with the following command.
+If the API library is not installed in your Python environment, install it with the following command.
+
+#### Anthropic Claude
 ```bash
 pip3 install anthropic
 ```
-Also, the following packages are needed to use the post translation script introduced later, so install or update them with the following command.
+
+#### Google Gemini
+```bash
+pip3 install google-genai
+```
+
+#### Common
+The following packages are also required to use the post translation script introduced later, so install or update them with the following command.
 ```bash
 pip3 install -U argparse tqdm
 ```
 
-### Writing Python Scripts
-The post translation script introduced in this article consists of the following 3 Python script files and 1 CSV file.
+### Writing the Python Script
+The post translation script introduced in this article consists of the following three Python script files and one CSV file.
 
-- `compare_hash.py`{: .filepath}: Calculates SHA256 hash values of Korean original posts in the `_posts/ko`{: .filepath} directory, compares them with existing hash values recorded in the `hash.csv`{: .filepath} file, and returns a list of filenames that have been changed or newly added
-- `hash.csv`{: .filepath}: CSV file that records SHA256 hash values of existing post files
-- `prompt.py`{: .filepath}: Takes filepath, source_lang, target_lang values as input, loads the Claude API key value from system environment variables, calls the API with the previously written prompt as the system prompt and the content of the post to be translated at 'filepath' as the user prompt. Then receives a response (translation result) from the Claude Sonnet 4 model and outputs it as a text file at the path `'../_posts/' + language_code[target_lang] + '/' + filename`{: .filepath}
-- `translate_changes.py`{: .filepath}: Contains source_lang string variable and 'target_langs' list variable, calls the `changed_files()` function in `compare_hash.py`{: .filepath} to receive the changed_files list variable. If there are changed files, executes a double loop for all files in the changed_files list and all elements in the target_langs list, calling the `translate(filepath, source_lang, target_lang)` function in `prompt.py`{: .filepath} within that loop to perform translation work.
+- `compare_hash.py`{: .filepath}: Calculates the SHA256 hash values of the original Korean posts in the `_posts/ko`{: .filepath} directory, compares them with the existing hash values recorded in the `hash.csv`{: .filepath} file, and returns a list of changed or newly added filenames.
+- `hash.csv`{: .filepath}: A CSV file that records the SHA256 hash values of existing post files.
+- `prompt.py`{: .filepath}: Takes filepath, source_lang, and target_lang as input, loads the Claude API key from the system environment variables, calls the API, and submits the previously created prompt as the system prompt and the content of the post to be translated at 'filepath' as the user prompt. It then receives the response (translation result) from the Claude Sonnet 4 model and outputs it as a text file to the path `'../_posts/' + language_code[target_lang] + '/' + filename`{: .filepath}.
+- `translate_changes.py`{: .filepath}: Contains a `source_lang` string variable and a 'target_langs' list variable. It calls the `changed_files()` function in `compare_hash.py`{: .filepath} to get a `changed_files` list variable. If there are changed files, it runs a nested loop for all files in the `changed_files` list and all elements in the `target_langs` list. Inside this loop, it calls the `translate(filepath, source_lang, target_lang)` function in `prompt.py`{: .filepath} to perform the translation task.
 
-The completed script file contents can also be found in the GitHub repository [yunseo-kim/yunseo-kim.github.io](https://github.com/yunseo-kim/yunseo-kim.github.io/tree/main/tools).
+The content of the completed script files can also be found in the [yunseo-kim/yunseo-kim.github.io](https://github.com/yunseo-kim/yunseo-kim.github.io/tree/main/tools) repository on GitHub.
 
 #### compare_hash.py
 
@@ -205,10 +230,13 @@ if __name__ == "__main__":
 ```
 
 #### prompt.py
-Since the file content is quite long due to including the prompt content written earlier, I'll replace it with a link to the source file in the GitHub repository.  
+Since this file is quite long as it includes the content of the previously written prompt, I will replace it with a link to the source file in the GitHub repository.  
 <https://github.com/yunseo-kim/yunseo-kim.github.io/blob/main/tools/prompt.py>
 
-> In the `prompt.py`{: .filepath} file at the above link, `max_tokens` is a variable that specifies the maximum output length separately from the Context window size. When using the Claude API, the Context window size that can be input at once is 200k tokens (about 680,000 characters), but separately from that, the maximum number of output tokens supported by each model is determined, so it's recommended to check the [Anthropic official documentation](https://docs.anthropic.com/en/docs/about-claude/models) in advance before using the API. The existing Claude 3 series models could output up to 4096 tokens, but when I experimented with posts from this blog, for Korean posts of somewhat long length (roughly 8000 characters or more), some output languages exceeded 4096 tokens, causing the latter part of the translation to be cut off. In the case of Claude 3.5 Sonnet, the maximum number of output tokens doubled to 8192, so there were rarely cases where this maximum output token count was exceeded and caused problems, and from Claude 3.7 onwards, it was upgraded to support much longer output lengths. In the `prompt.py`{: .filepath} in the above GitHub repository, `max_tokens=16384` is specified.
+> In the `prompt.py`{: .filepath} file linked above, `max_tokens` is a variable that specifies the maximum output length, separate from the context window size. The context window size for the Claude API is 200k tokens (about 680,000 characters), but each model has a separate maximum output token limit. It's recommended to check the [Anthropic official documentation](https://docs.anthropic.com/en/docs/about-claude/models) before using the API. The previous Claude 3 series models could output up to 4096 tokens. When experimenting with posts on this blog, some longer posts (over 8000 Korean characters) exceeded 4096 tokens in certain output languages, causing the end of the translation to be cut off. With Claude 3.5 Sonnet, the maximum output token count has doubled to 8192, so exceeding this limit is rarely an issue. Starting with Claude 3.7, even longer outputs are supported. The `prompt.py`{: .filepath} in the GitHub repository sets `max_tokens=16384`.
+{: .prompt-tip }
+
+> Gemini has long had a generous maximum output token count. For Gemini 2.5 Pro, it's up to 65536 tokens, so it's highly unlikely to exceed this limit. According to the [Gemini API official documentation](https://ai.google.dev/gemini-api/docs/models#token-size), 1 token in Gemini models is about 4 characters in English, and 100 tokens are about 60-80 English words.
 {: .prompt-tip }
 
 #### translate_changes.py
@@ -218,27 +246,29 @@ Since the file content is quite long due to including the prompt content written
 # requires-python = ">=3.13"
 # dependencies = [
 #     "tqdm",
+#     "argparse",
 # ]
 # ///
 import sys
 import os
+import subprocess
 from tqdm import tqdm
 import compare_hash
 import prompt
 
 def is_valid_file(filename):
-    # File patterns to exclude
+    # Patterns of files to exclude
     excluded_patterns = [
         '.DS_Store',  # macOS system file
-        '~',          # temporary file
-        '.tmp',       # temporary file
-        '.temp',      # temporary file
-        '.bak',       # backup file
+        '~',          # Temporary file
+        '.tmp',       # Temporary file
+        '.temp',      # Temporary file
+        '.bak',       # Backup file
         '.swp',       # vim temporary file
         '.swo'        # vim temporary file
     ]
     
-    # Return False if filename contains any excluded pattern
+    # Return False if the filename contains any of the excluded patterns
     return not any(pattern in filename for pattern in excluded_patterns)
 
 posts_dir = '../_posts/'
@@ -247,7 +277,39 @@ target_langs = ["English", "Japanese", "Taiwanese Mandarin", "Spanish", "Brazili
 source_lang_code = "ko"
 target_lang_codes = ["en", "ja", "zh-TW", "es", "pt-BR", "fr", "de"]
 
+def get_git_diff(filepath):
+    """Get the diff of the file using git"""
+    try:
+        # Get the diff of the file
+        result = subprocess.run(
+            ['git', 'diff', '--unified=0', '--no-color', '--', filepath],
+            capture_output=True, text=True
+        )
+        return result.stdout.strip()
+    except Exception as e:
+        print(f"Error getting git diff: {e}")
+        return None
+
+def translate_incremental(filepath, source_lang, target_lang, model):
+    """Translate only the changed parts of a file using git diff"""
+    # Get the git diff
+    diff_output = get_git_diff(filepath)
+    # print(f"Diff output: {diff_output}")
+    if not diff_output:
+        print(f"No changes detected or error getting diff for {filepath}")
+        return
+    
+    # Call the translation function with the diff
+    prompt.translate_with_diff(filepath, source_lang, target_lang, diff_output, model)
+
 if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Translate markdown files with optional incremental updates')
+    parser.add_argument('--incremental', action='store_true', 
+                       help='Only translate changed parts of files using git diff')
+    args, _ = parser.parse_known_args()
+    
     initial_wd = os.getcwd()
     os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
@@ -257,35 +319,46 @@ if __name__ == "__main__":
     
     if not changed_files:
         sys.exit("No files have changed.")
+        
     print("Changed files:")
     for file in changed_files:
         print(f"- {file}")
 
     print("")
     print("*** Translation start! ***")
-    # Outer loop: progress of changed files
+    
+    # Outer loop: Progress through changed files
     for changed_file in tqdm(changed_files, desc="Files", position=0):
         filepath = os.path.join(posts_dir, source_lang_code, changed_file)
-        # Inner loop: progress of translation by language for each file
+        
+        # Inner loop: Progress through target languages
         for target_lang in tqdm(target_langs, desc="Languages", position=1, leave=False):
-            prompt.translate(filepath, source_lang, target_lang)
+            model = "gemini-2.5-pro" if target_lang in ["English", "Taiwanese Mandarin", "German"] else "claude-sonnet-4-20250514"
+            if args.incremental:
+                translate_incremental(filepath, source_lang, target_lang, model)
+            else:
+                prompt.translate(filepath, source_lang, target_lang, model)
     
     print("\nTranslation completed!")
     os.chdir(initial_wd)
 ```
 
-### How to Use Python Scripts
-Based on Jekyll blogs, create subdirectories by [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) language codes within the `/_posts`{: .filepath} directory, such as `/_posts/ko`{: .filepath}, `/_posts/en`{: .filepath}, `/_posts/pt-BR`{: .filepath}. Place Korean originals in the `/_posts/ko`{: .filepath} directory (or modify the `source_lang` variable in the Python script as needed and place originals in the corresponding language in the corresponding directory), place the Python scripts and `hash.csv`{: .filepath} file introduced above in the `/tools`{: .filepath} directory, then open a terminal at that location and run the following command.
+### How to Use the Python Script
+For a Jekyll blog, create subdirectories in the `/_posts`{: .filepath} directory for each [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) language code, such as `/_posts/ko`{: .filepath}, `/_posts/en`{: .filepath}, `/_posts/pt-BR`{: .filepath}. Then, place the original Korean texts in the `/_posts/ko`{: .filepath} directory (or modify the `source_lang` variable in the Python script as needed and place the original texts in the corresponding directory). Place the Python scripts mentioned above and the `hash.csv`{: .filepath} file in a `/tools`{: .filepath} directory. Open a terminal at that location and run the command below.
 
 ```bash
 python3 translate_changes.py
 ```
 
-Then the script will run and display a screen like the one below.  
+The script will run, and you will see an output like the one below.  
 ![Screenshot of running script 1](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/translating-screen-1.png)  
 ![Screenshot of running script 2](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/translating-screen-2.png)
 
-## Real Usage Experience
-As mentioned earlier, I introduced Claude Sonnet API-based automatic post translation to this blog at the end of June 12024 and have been using it with continuous improvements. In most cases, I can receive natural translations without additional human intervention, and after posting translated posts in multiple languages, I confirmed that organic search traffic from regions outside Korea such as Brazil, Canada, the United States, France, and Japan actually increased significantly. Moreover, when checking recorded sessions, many visitors who came through translated versions stayed for several minutes to even tens of minutes, which suggests that the translation quality is not awkward even by native speaker standards, considering that people usually press the back button or look for English versions when webpage content obviously shows signs of machine translation.
+If no options are specified, it will run in the default full translation mode. You can use the incremental translation feature by specifying the `--incremental` option.
 
-Additionally, beyond blog traffic inflow, there were incidental benefits from a learning perspective for me as the author. Since Claude writes quite smooth English text, during the review process before committing and pushing posts to the GitHub Pages repository, I have opportunities to see how specific terms or expressions from my Korean originals can be naturally expressed in English. While this alone may not be sufficient for complete English learning, being able to frequently encounter natural English expressions for not only everyday expressions but also academic expressions and terminology through examples from my own familiar writing without any additional effort seems to work quite well as an advantage for an undergraduate engineering student in a non-English speaking country like Korea.
+```bash
+python3 translate_changes.py --incremental
+```
+
+## User Experience
+As mentioned earlier, I introduced automated post translation using the Claude Sonnet API to this blog at the end of June 12024 and have been using it with continuous improvements since then. In most cases, it provides natural translations without the need for additional human intervention. After translating and posting articles in multiple languages, I have confirmed a significant influx of organic search traffic from regions outside of Korea, such as Brazil, Canada, the US, France, and Japan. Furthermore, session recordings show that many of these visitors who arrive via translated versions stay for several minutes, sometimes even tens of minutes. Considering that people usually hit the back button or look for an English version when a webpage's content is awkwardly machine-translated, this suggests that the quality of the translations is not very awkward even by native speaker standards. In addition to the blog's traffic, there was an additional learning benefit for me as the author. Since LLMs like Claude or Gemini produce very smooth English text, I have the opportunity to see how certain terms or expressions from my original Korean text can be naturally expressed in English during the review process before committing and pushing the post to the GitHub Pages repository. While this alone may not be sufficient for comprehensive English learning, being frequently exposed to natural English expressions for both everyday and academic terms, using my own familiar writing as examples and without any extra effort, seems to be quite an advantage for an engineering undergraduate student from a non-English speaking country like Korea.

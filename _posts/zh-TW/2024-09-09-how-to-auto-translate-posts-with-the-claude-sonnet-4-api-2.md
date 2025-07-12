@@ -1,21 +1,22 @@
 ---
-title: 使用 Claude Sonnet 4 API 自動翻譯文章的方法 (2) - 自動化腳本撰寫及應用
-description: "設計用於 Markdown 文字檔案多語言翻譯的提示詞，並運用從 Anthropic 取得的 API 金鑰和撰寫的提示詞，透過 Python 自動化作業流程。本文是該系列的第二篇文章，介紹 API 發放及整合與 Python 腳本撰寫方法。"
+title: "如何使用 Claude Sonnet 4 API 自動翻譯文章 (2) - 編寫與應用自動化腳本"
+description: "本文將探討如何為 Markdown 文件的多語言翻譯設計提示詞，並使用 Anthropic/Gemini API 金鑰與設計好的提示詞，透過 Python 將翻譯工作自動化。本文為系列第二篇，將介紹 API 金鑰的申請與串接，以及 Python 腳本的編寫方法。"
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
 image: /assets/img/technology.webp
 ---
+
 ## 前言
-自 12024 年 6 月導入 Anthropic 的 Claude 3.5 Sonnet API 用於部落格文章的多語言翻譯以來，經過數次提示詞及自動化腳本改進，以及模型版本升級，在將近一年的期間內滿意地運用該翻譯系統。因此在這個系列中，將探討導入過程中選擇 Claude Sonnet 模型的原因、提示詞設計方法，以及透過 Python 腳本進行 API 整合及自動化實作的方法。  
-系列共由 2 篇文章組成，您正在閱讀的這篇是該系列的第二篇文章。
-- 第 1 篇：[Claude Sonnet 模型介紹及選定理由、提示詞工程](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1)
-- 第 2 篇：運用 API 撰寫 Python 自動化腳本及應用（本文）
+自從 12024 年 6 月為了部落格文章的多語言翻譯而導入 Anthropic 的 Claude 3.5 Sonnet API 後，經過數次提示詞及自動化腳本的改善，以及模型版本的升級，這套翻譯系統已經穩定運作了將近一年，成果令人滿意。因此，本系列文章將探討當初選擇 Claude Sonnet 模型，以及後來追加導入 Gemini 2.5 Pro 的原因、提示詞的設計方法，還有如何透過 Python 腳本與 API 串接，實現自動化。
+本系列共分為兩篇文章，您正在閱讀的是系列的第二篇。
+- 第 1 篇：[Claude Sonnet/Gemini 2.5 模型介紹與選擇原因、提示詞工程](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1)
+- 第 2 篇：運用 API 編寫 Python 自動化腳本及應用（本文）
 
 ## 開始之前
-本文是接續[第 1 篇](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1)的文章，因此如果尚未閱讀，建議先閱讀前一篇文章。
+本文接續[第 1 篇](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1)，如果您尚未閱讀，建議先從前一篇文章開始。
 
 ## 完成的系統提示詞
-經過前述[第 1 篇介紹的過程](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1/#提示詞設計)完成的提示詞設計結果如下。
+經過[在第 1 篇中介紹的過程](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1/#提示詞設計)後，完成的提示詞設計成果如下。
 
 ```xml
 <instruction>Completely forget everything you know about what day it is today. 
@@ -80,51 +81,74 @@ In the provided markdown format text:
 
 <important>In any case, without exception, the output should contain only the translation results, \
 without any text such as "Here is the translation of the text provided, preserving the markdown format:" \
-or something of that nature!!</important>
+or "```markdown" or something of that nature!!</important>
 ```
 
-## Claude API 整合
-### Claude API 金鑰發放
-
-> 這裡說明如何新發放 Claude API 金鑰。如果已經有可使用的 API 金鑰，可以跳過這個步驟。
+> [新增加的增量翻譯功能](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1/#120250704)使用了稍微不同的系統提示詞。由於重複部分較多，此處不再贅述，如有需要，請直接參考 [GitHub 儲存庫中的 `prompt.py`{: .filepath }](https://github.com/yunseo-kim/yunseo-kim.github.io/blob/main/tools/prompt.py) 的內容。
 {: .prompt-tip }
 
-前往 <https://console.anthropic.com> 並登入。如果尚未有帳號，需要先進行會員註冊。登入後會看到如下的儀表板畫面。  
-![Anthropic Console Dashboard](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/Anthropic_Console.png)
+## API 串接
+### API 金鑰申請
 
-在該畫面點擊 'Get API keys' 按鈕，可以看到如下畫面。  
-![API Keys](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/api-keys.png) 我已經有建立好的金鑰，所以顯示名為 `yunseo-secret-key` 的金鑰，但如果是剛建立帳號且尚未發放 API 金鑰的狀態，應該沒有持有的金鑰。點擊右上角的 'Create Key' 按鈕即可發放新金鑰。
+> 這裡將說明如何申請新的 Anthropic 或 Gemini API 金鑰。如果您已經有可用的 API 金鑰，可以跳過此步驟。
+{: .prompt-tip }
 
-> 完成金鑰發放後，畫面會顯示您的 API 金鑰，該金鑰之後無法再次確認，因此務必記錄在安全的地方。
+#### Anthropic Claude
+請前往 <https://console.anthropic.com> 並以您的 Anthropic Console 帳號登入。若您尚未擁有 Anthropic Console 帳號，請先進行註冊。登入後，您會看到如下的儀表板畫面。
+![Anthropic Console 儀表板](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/Anthropic_Console.png)
+
+在該畫面點擊 'Get API keys' 按鈕，即可看到以下畫面。
+![API 金鑰](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/api-keys.png) 因為我已經建立過金鑰，所以畫面上會顯示名為 `yunseo-secret-key` 的金鑰。如果您是初次建立帳號且尚未申請 API 金鑰，這裡應該是空的。點擊右上角的 'Create Key' 按鈕即可申請新的金鑰。
+
+> 完成金鑰申請後，您的 API 金鑰會顯示在畫面上。此金鑰之後將無法再次查看，請務必將其妥善記錄並保存在安全的地方。
 {: .prompt-warning }
 
-### （建議）在環境變數中註冊 Claude API 金鑰
-要在 Python 或 Shell 腳本中使用 Claude API，需要載入 API 金鑰。雖然可以直接在腳本中記錄 API 金鑰，但如果是需要上傳到 GitHub 等或以其他方式與他人分享的腳本，就無法使用這種方法。此外，即使沒有分享腳本檔案的打算，也可能因意外失誤導致腳本檔案外洩，如果腳本檔案中記錄了 API 金鑰，就有 API 金鑰一併外洩的風險。因此建議將 API 金鑰註冊在只有本人使用的系統環境變數中，在腳本中載入該環境變數的方式使用。以下以 UNIX 系統為基準，介紹在系統環境變數中註冊 API 金鑰的方法。Windows 的情況請參考網路上的其他文章。
+#### Google Gemini
+Gemini API 可在 Google AI Studio 中進行管理。請前往 <https://aistudio.google.com/apikey> 並以您的 Google 帳號登入，即可看到如下的儀表板畫面。
+![Google AI Studio 儀表板](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/get-api-key-google-ai-studio.png)
 
-1. 在終端機中根據您使用的 shell 類型，輸入 `nano ~/.bashrc` 或 `nano ~/.zshrc` 執行編輯器。
-2. 在該檔案內容中新增 `export ANTHROPIC_API_KEY='your-api-key-here'`。將 'your-api-key-here' 部分替換為您的 API 金鑰，注意必須用 ' 包圍。
-3. 儲存變更並退出編輯器。
+在該畫面點擊「建立 API 金鑰」按鈕，並依照指示進行即可。建立並連結 Google Cloud 專案及其使用的付款帳戶後，API 金鑰即可準備就緒。雖然程序比 Anthropic API 稍嫌複雜，但應該不會有太大的困難。
+
+> 與 Anthropic Console 不同，您隨時可以在儀表板上查看自己擁有的 API 金鑰。~~畢竟，就算 Anthropic Console 帳號被盜，只要守住 API 金鑰就能限制損失；但如果 Google 帳號被盜，那除了 Gemini API 金鑰之外，恐怕還有更多更緊急的問題要處理。~~
+> 因此，您不需要另外記錄 API 金鑰，但請務必維護好您 Google 帳號的安全性。
+{: .prompt-tip }
+
+### (建議) 將 API 金鑰註冊至環境變數
+若要在 Python 或 Shell 腳本中使用 Claude API，需要載入 API 金鑰。雖然可以直接將 API 金鑰寫死（hardcode）在腳本中，但如果該腳本需要上傳至 GitHub 或以其他方式與他人共享，這種方法便不可行。此外，即使您無意共享腳本檔案，也可能因意外失誤導致檔案外洩。若腳本中記錄了 API 金鑰，便會引發金鑰一同外洩的風險。因此，建議將 API 金鑰註冊在您個人使用的系統環境變數中，並在腳本中透過讀取該環境變數的方式來使用。以下將以 UNIX 系統為例，介紹如何將 API 金鑰註冊至系統環境變數。Windows 使用者請參考網路上的其他教學文章。
+
+1. 在終端機中，根據您使用的 shell 類型，輸入 `nano ~/.bashrc` 或 `nano ~/.zshrc` 來執行編輯器。
+2. 若使用 Anthropic API，請在該檔案內容中加入 `export ANTHROPIC_API_KEY=your-api-key-here`。請將 'your-api-key-here' 部分替換為您自己的 API 金鑰。若使用 Gemini API，則以同樣方式加入 `export GEMINI_API_KEY=your-api-key-here`。
+3. 儲存變更內容並關閉編輯器。
 4. 在終端機中執行 `source ~/.bashrc` 或 `source ~/.zshrc` 以套用變更。
 
 ### 安裝必要的 Python 套件
-如果您使用的 Python 環境中尚未安裝 anthropic 套件，請使用以下命令安裝。
+如果您使用的 Python 環境中尚未安裝 API 函式庫，請使用以下指令進行安裝。
+
+#### Anthropic Claude
 ```bash
 pip3 install anthropic
 ```
-此外，以下套件也是後面介紹的文章翻譯腳本所需要的，請使用以下命令安裝或更新。
+
+#### Google Gemini
+```bash
+pip3 install google-genai
+```
+
+#### 共用
+此外，後續介紹的文章翻譯腳本也需要以下套件，請使用以下指令進行安裝或更新。
 ```bash
 pip3 install -U argparse tqdm
 ```
 
-### 撰寫 Python 腳本
-本文介紹的文章翻譯腳本由以下 3 個 Python 腳本檔案和 1 個 CSV 檔案組成。
+### 編寫 Python 腳本
+本文將介紹的文章翻譯腳本由以下 3 個 Python 腳本檔案和 1 個 CSV 檔案組成。
 
-- `compare_hash.py`{: .filepath}：計算 `_posts/ko`{: .filepath} 目錄中韓文原文文章的 SHA256 雜湊值，與 `hash.csv`{: .filepath} 檔案中記錄的既有雜湊值比較，回傳變更或新增檔案名稱的清單
-- `hash.csv`{: .filepath}：記錄既有文章檔案 SHA256 雜湊值的 CSV 檔案
-- `prompt.py`{: .filepath}：接收 filepath、source_lang、target_lang 值，從系統環境變數載入 Claude API 金鑰值後呼叫 API，以系統提示詞提交前述撰寫的提示詞，以使用者提示詞提交 'filepath' 中要翻譯文章的內容。之後從 Claude Sonnet 4 模型接收回應（翻譯結果），輸出為 `'../_posts/' + language_code[target_lang] + '/' + filename`{: .filepath} 路徑的文字檔案
-- `translate_changes.py`{: .filepath}：擁有 source_lang 字串變數和 'target_langs' 清單變數，呼叫 `compare_hash.py`{: .filepath} 中的 `changed_files()` 函數回傳 changed_files 清單變數。如果有變更的檔案，對 changed_files 清單中的所有檔案和 target_langs 清單中的所有元素執行雙重迴圈，在該迴圈中呼叫 `prompt.py`{: .filepath} 中的 `translate(filepath, source_lang, target_lang)` 函數執行翻譯作業。
+- `compare_hash.py`{: .filepath}: 計算 `_posts/ko`{: .filepath} 目錄下韓文原文文章的 SHA256 雜湊值，並與記錄在 `hash.csv`{: .filepath} 檔案中的既有雜湊值進行比較，回傳已變更或新增的檔案名稱列表。
+- `hash.csv`{: .filepath}: 記錄既有文章檔案 SHA256 雜湊值的 CSV 檔案。
+- `prompt.py`{: .filepath}: 接收 filepath、source_lang、target_lang 作為輸入，從系統環境變數中讀取 Claude API 金鑰，然後呼叫 API。系統提示詞使用先前編寫的提示詞，使用者提示詞則提交 'filepath' 中待翻譯文章的內容。之後，從 Claude Sonnet 4 模型接收回應（翻譯結果），並將其以文字檔形式輸出至 `'../_posts/' + language_code[target_lang] + '/' + filename`{: .filepath} 路徑。
+- `translate_changes.py`{: .filepath}: 包含 source_lang 字串變數和 'target_langs' 列表變數。它會呼叫 `compare_hash.py`{: .filepath} 中的 `changed_files()` 函式，以取得 changed_files 列表變數。若有變更的檔案，則會對 changed_files 列表中的所有檔案以及 target_langs 列表中的所有元素執行雙重迴圈，並在迴圈內呼叫 `prompt.py`{: .filepath} 中的 `translate(filepath, source_lang, target_lang)` 函式來執行翻譯工作。
 
-完成的腳本檔案內容也可以在 GitHub 的 [yunseo-kim/yunseo-kim.github.io](https://github.com/yunseo-kim/yunseo-kim.github.io/tree/main/tools) 儲存庫中確認。
+完整的腳本檔案內容也可以在 GitHub 的 [yunseo-kim/yunseo-kim.github.io](https://github.com/yunseo-kim/yunseo-kim.github.io/tree/main/tools) 儲存庫中查看。
 
 #### compare_hash.py
 
@@ -205,10 +229,13 @@ if __name__ == "__main__":
 ```
 
 #### prompt.py
-由於包含前述撰寫的提示詞內容，檔案內容較長，因此以 GitHub 儲存庫中原始檔案的連結代替。  
+由於該檔案包含了先前編寫的提示詞內容，篇幅較長，因此在此以 GitHub 儲存庫中的原始碼檔案連結代替。
 <https://github.com/yunseo-kim/yunseo-kim.github.io/blob/main/tools/prompt.py>
 
-> 上述連結中的 `prompt.py`{: .filepath} 檔案中，`max_tokens` 是與 Context window 大小無關，指定最大輸出長度的變數。使用 Claude API 時，一次可輸入的 Context window 大小為 200k 個 token（約 68 萬字的分量），但與此無關，各模型支援的最大輸出 token 數是固定的，建議在使用 API 前先在 [Anthropic 官方文件](https://docs.anthropic.com/en/docs/about-claude/models)中確認。既有的 Claude 3 系列模型最多可輸出 4096 個 token，以這個部落格的文章實驗時，韓文約 8000 字以上較長分量的文章，在某些輸出語言中會超過 4096 個 token，導致翻譯文後半部被截斷的問題。Claude 3.5 Sonnet 的最大輸出 token 數增加到 2 倍的 8192，因此通常不會因超過最大輸出 token 數而產生問題，從 Claude 3.7 開始更支援更長的輸出。上述 GitHub 儲存庫的 `prompt.py`{: .filepath} 中設定為 `max_tokens=16384`。
+> 上述連結中的 `prompt.py`{: .filepath} 檔案裡，`max_tokens` 是用來指定最大輸出長度的變數，與 Context window 大小無關。使用 Claude API 時，單次可輸入的 Context window 大小為 200k token（約 68 萬字），但除此之外，各模型支援的最大輸出 token 數是固定的，建議在使用 API 前先至 [Anthropic 官方文件](https://docs.anthropic.com/en/docs/about-claude/models)確認。既有的 Claude 3 系列模型最大可輸出 4096 token，根據本部落格文章的實驗，當韓文原文篇幅較長（約 8000 字以上）時，部分目標語言的翻譯結果會因超過 4096 token 而導致後段內容被截斷。Claude 3.5 Sonnet 的最大輸出 token 數增加了一倍，達到 8192，因此幾乎不會再發生因超過最大輸出 token 數而產生的問題。而從 Claude 3.7 開始，更支援了遠比此更長的輸出。上述 GitHub 儲存庫的 `prompt.py`{: .filepath} 中，`max_tokens` 設定為 `16384`。
+{: .prompt-tip }
+
+> Gemini 的最大輸出 token 數向來相當充裕，以 Gemini 2.5 Pro 為例，最大可輸出 65536 token，因此幾乎不會發生超過此限制的情況。根據 [Gemini API 官方文件](https://ai.google.dev/gemini-api/docs/models#token-size)，在 Gemini 模型中，1 token 約等於 4 個英文字母，100 token 約等於 60-80 個英文單字。
 {: .prompt-tip }
 
 #### translate_changes.py
@@ -218,27 +245,29 @@ if __name__ == "__main__":
 # requires-python = ">=3.13"
 # dependencies = [
 #     "tqdm",
+#     "argparse",
 # ]
 # ///
 import sys
 import os
+import subprocess
 from tqdm import tqdm
 import compare_hash
 import prompt
 
 def is_valid_file(filename):
-    # 要排除的檔案模式
+    # 제외할 파일 패턴들
     excluded_patterns = [
-        '.DS_Store',  # macOS 系統檔案
-        '~',          # 暫存檔案
-        '.tmp',       # 暫存檔案
-        '.temp',      # 暫存檔案
-        '.bak',       # 備份檔案
-        '.swp',       # vim 暫存檔案
-        '.swo'        # vim 暫存檔案
+        '.DS_Store',  # macOS 시스템 파일
+        '~',          # 임시 파일
+        '.tmp',       # 임시 파일
+        '.temp',      # 임시 파일
+        '.bak',       # 백업 파일
+        '.swp',       # vim 임시 파일
+        '.swo'        # vim 임시 파일
     ]
     
-    # 如果檔案名稱包含任一排除模式則回傳 False
+    # 파일명이 제외 패턴 중 하나라도 포함하면 False 반환
     return not any(pattern in filename for pattern in excluded_patterns)
 
 posts_dir = '../_posts/'
@@ -247,43 +276,88 @@ target_langs = ["English", "Japanese", "Taiwanese Mandarin", "Spanish", "Brazili
 source_lang_code = "ko"
 target_lang_codes = ["en", "ja", "zh-TW", "es", "pt-BR", "fr", "de"]
 
+def get_git_diff(filepath):
+    """Get the diff of the file using git"""
+    try:
+        # Get the diff of the file
+        result = subprocess.run(
+            ['git', 'diff', '--unified=0', '--no-color', '--', filepath],
+            capture_output=True, text=True
+        )
+        return result.stdout.strip()
+    except Exception as e:
+        print(f"Error getting git diff: {e}")
+        return None
+
+def translate_incremental(filepath, source_lang, target_lang, model):
+    """Translate only the changed parts of a file using git diff"""
+    # Get the git diff
+    diff_output = get_git_diff(filepath)
+    # print(f"Diff output: {diff_output}")
+    if not diff_output:
+        print(f"No changes detected or error getting diff for {filepath}")
+        return
+    
+    # Call the translation function with the diff
+    prompt.translate_with_diff(filepath, source_lang, target_lang, diff_output, model)
+
 if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Translate markdown files with optional incremental updates')
+    parser.add_argument('--incremental', action='store_true', 
+                       help='Only translate changed parts of files using git diff')
+    args, _ = parser.parse_known_args()
+    
     initial_wd = os.getcwd()
     os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
     changed_files = compare_hash.changed_files(source_lang_code)
-    # 過濾暫存檔案
+    # Filter temporary files
     changed_files = [f for f in changed_files if is_valid_file(f)]
     
     if not changed_files:
         sys.exit("No files have changed.")
+        
     print("Changed files:")
     for file in changed_files:
         print(f"- {file}")
 
     print("")
     print("*** Translation start! ***")
-    # 外部迴圈：變更檔案進度
+    
+    # Outer loop: Progress through changed files
     for changed_file in tqdm(changed_files, desc="Files", position=0):
         filepath = os.path.join(posts_dir, source_lang_code, changed_file)
-        # 內部迴圈：各檔案的語言別翻譯進度
+        
+        # Inner loop: Progress through target languages
         for target_lang in tqdm(target_langs, desc="Languages", position=1, leave=False):
-            prompt.translate(filepath, source_lang, target_lang)
+            model = "gemini-2.5-pro" if target_lang in ["English", "Taiwanese Mandarin", "German"] else "claude-sonnet-4-20250514"
+            if args.incremental:
+                translate_incremental(filepath, source_lang, target_lang, model)
+            else:
+                prompt.translate(filepath, source_lang, target_lang, model)
     
     print("\nTranslation completed!")
     os.chdir(initial_wd)
 ```
 
-### Python 腳本使用方法
-以 Jekyll 部落格為基準，在 `/_posts`{: .filepath} 目錄中按 [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) 語言代碼設置 `/_posts/ko`{: .filepath}、`/_posts/en`{: .filepath}、`/_posts/pt-BR`{: .filepath} 等子目錄。然後在 `/_posts/ko`{: .filepath} 目錄中放置韓文原文（或在 Python 腳本中根據需要修改 `source_lang` 變數後，在對應目錄中放置該語言的原文），在 `/tools`{: .filepath} 目錄中放置上述介紹的 Python 腳本和 `hash.csv`{: .filepath} 檔案，然後在該位置開啟終端機並執行以下命令。
+### 如何使用 Python 腳本
+以 Jekyll 部落格為例，在 `/_posts`{: .filepath} 目錄下，根據 [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) 語言代碼建立子目錄，例如 `/_posts/ko`{: .filepath}、`/_posts/en`{: .filepath}、`/_posts/pt-BR`{: .filepath}。然後，將韓文原文放置於 `/_posts/ko`{: .filepath} 目錄中（或者，在 Python 腳本中根據需要修改 `source_lang` 變數，並將對應語言的原文放置於相應目錄中）。將前面介紹的 Python 腳本和 `hash.csv`{: .filepath} 檔案放置於 `/tools`{: .filepath} 目錄下，然後在該位置開啟終端機並執行以下指令。
 
 ```bash
 python3 translate_changes.py
 ```
 
-腳本執行後會輸出如下畫面。  
-![執行腳本截圖 1](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/translating-screen-1.png)  
-![執行腳本截圖 2](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/translating-screen-2.png)
+執行腳本後，將會輸出如下畫面。
+![腳本執行畫面截圖 1](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/translating-screen-1.png)
+![腳本執行畫面截圖 2](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/translating-screen-2.png)
 
-## 實際使用心得
-如前所述，自 12024 年 6 月底在這個部落格導入使用 Claude Sonnet API 的文章自動翻譯後，持續改進並使用中。大部分情況下無需額外人工介入即可獲得自然的翻譯文，上傳多語言翻譯文章後，確實有來自巴西、加拿大、美國、法國、日本等韓國以外地區的 Organic Search 流量大量流入。而且查看錄製的 session 時，透過翻譯版本流入的訪客中，停留數分鐘到數十分鐘以上的情況也不少，考慮到網頁內容明顯使用機器翻譯的尷尬文章時，通常會按返回鍵離開或尋找英文版本，這表示翻譯版本的品質即使以母語使用者的標準來看也不會太尷尬。此外，除了部落格流量流入外，對於撰寫文章的我本人的學習方面也有附加優點，由於 Claude 以英文為基準撰寫相當流暢的文章，在 Commit & Push 文章到 GitHub Pages 儲存庫前的檢視過程中，可以確認我撰寫的韓文原文中特定術語或表達在英文中如何表達才自然。雖然僅憑這點無法說是充分的英語學習，但對於像韓國這樣的非英語圈國家的工科大學生來說，能夠以最熟悉的我親自撰寫的文章為例文，無需額外努力就能經常接觸日常表達以及學術表達或術語的自然英文表達，這也是相當大的優點。
+若未指定任何選項，將以預設的全文翻譯模式運作；若指定 `--incremental` 選項，則可使用增量翻譯功能。
+
+```bash
+python3 translate_changes.py --incremental
+```
+
+## 使用心得
+如前所述，自 12024 年 6 月底在本部落格導入使用 Claude Sonnet API 的文章自動翻譯功能後，我持續進行改善並加以運用。在大多數情況下，無需額外的人工介入即可獲得自然的譯文。將文章翻譯成多國語言並發布後，我確認到來自巴西、加拿大、美國、法國、日本等韓國以外地區的自然搜尋（Organic Search）流量確實有顯著增加。此外，從錄製的瀏覽工作階段（session）中發現，透過譯文進入的訪客中，不少人停留時間長達數分鐘，甚至數十分鐘以上。考量到一般使用者若遇到明顯是機器翻譯的生硬文章，通常會直接返回或尋找英文版本，這點間接說明了譯文品質即使對母語人士而言也並無太大問題。除了部落格的流量增長外，對身為作者的我個人而言，在學習方面也有額外的好處。由於像 Claude 或 Gemini 這類 LLM 能產出相當流暢的英文文本，因此在將文章 Commit & Push 到 GitHub Pages 儲存庫前進行審閱時，我便有機會確認自己所寫的韓文原文中的特定術語或表達方式，在英文中如何自然地呈現。雖然單靠這個還不足以構成充分的英語學習，但能夠以自己最熟悉、親手撰寫的文章為例，無需額外努力就能頻繁接觸到日常及學術表達的自然英文用法，這對於像我這樣身處韓國等非英語系國家的工學院學生來說，也算是一個不小的優點。

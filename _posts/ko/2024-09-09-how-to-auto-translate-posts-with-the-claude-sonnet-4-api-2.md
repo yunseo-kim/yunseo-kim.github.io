@@ -1,14 +1,15 @@
 ---
-title: Claude Sonnet 4 API로 포스트 자동 번역하는 법 (2) - 자동화 스크립트 작성 및 적용
-description: "마크다운 텍스트 파일의 다국어 번역을 위한 프롬프트를 디자인하고, Anthropic으로부터 발급받은 API 키와 작성한 프롬프트를 적용하여 Python으로 작업을 자동화하는 과정을 다룬다. 이 포스트는 해당 시리즈의 두 번째 글로, API 발급 및 연동과 Python 스크립트 작성 방법을 소개한다."
+title: "Claude Sonnet 4 API로 포스트 자동 번역하는 법 (2) - 자동화 스크립트 작성 및 적용"
+description: "마크다운 텍스트 파일의 다국어 번역을 위한 프롬프트를 디자인하고, Anthropic/Gemini API 키와 작성한 프롬프트를 적용하여 Python으로 작업을 자동화하는 과정을 다룬다. 이 포스트는 해당 시리즈의 두 번째 글로, API 발급 및 연동과 Python 스크립트 작성 방법을 소개한다."
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
 image: /assets/img/technology.webp
 ---
+
 ## 들어가며
-12024년 6월에 블로그 포스트의 다국어 번역을 위해 Anthropic의 Claude 3.5 Sonnet API를 도입한 이후, 수 차례의 프롬프트 및 자동화 스크립트 개선, 그리고 모델 버전 업그레이드를 거쳐 약 1년에 가까운 기간 동안 해당 번역 시스템을 만족스럽게 운용하고 있다. 이에 이 시리즈에서는 도입 과정에서 Claude Sonnet 모델을 선택한 이유와 프롬프트 디자인 방법, 그리고 Python 스크립트를 통한 API 연동 및 자동화 구현 방법을 다루고자 한다.  
+12024년 6월에 블로그 포스트의 다국어 번역을 위해 Anthropic의 Claude 3.5 Sonnet API를 도입한 이후, 수 차례의 프롬프트 및 자동화 스크립트 개선, 그리고 모델 버전 업그레이드를 거쳐 약 1년에 가까운 기간 동안 해당 번역 시스템을 만족스럽게 운용하고 있다. 이에 이 시리즈에서는 도입 과정에서 Claude Sonnet 모델을 선택하고 이후 Gemini 2.5 Pro를 추가 도입한 이유와 프롬프트 디자인 방법, 그리고 Python 스크립트를 통한 API 연동 및 자동화 구현 방법을 다루고자 한다.  
 시리즈는 2개의 글로 이루어져 있으며, 읽고 있는 이 글은 해당 시리즈의 두 번째 글이다.
-- 1편: [Claude Sonnet 모델 소개 및 선정 이유, 프롬프트 엔지니어링](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1)
+- 1편: [Claude Sonnet/Gemini 2.5 모델 소개 및 선정 이유, 프롬프트 엔지니어링](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1)
 - 2편: API를 활용한 Python 자동화 스크립트 작성 및 적용 (본문)
 
 ## 시작하기 전에
@@ -80,16 +81,20 @@ In the provided markdown format text:
 
 <important>In any case, without exception, the output should contain only the translation results, \
 without any text such as "Here is the translation of the text provided, preserving the markdown format:" \
-or something of that nature!!</important>
+or "```markdown" or something of that nature!!</important>
 ```
 
-## Claude API 연동
-### Claude API 키 발급
-
-> 여기서는 Claude API 키를 새로 발급받는 방법을 설명한다. 이미 사용할 API 키를 가지고 있다면 이 단계는 건너뛰어도 좋다.
+> [새로 추가한 증분 번역 기능](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1/#120250704)의 경우 약간 다른 시스템 프롬프트를 사용한다. 중복되는 부분이 많아서 여기에 적지는 않을 테니, 필요하다면 [GitHub 리포지터리의 `prompt.py`{: .filepath }](https://github.com/yunseo-kim/yunseo-kim.github.io/blob/main/tools/prompt.py)의 내용을 직접 확인하기 바란다.
 {: .prompt-tip }
 
-<https://console.anthropic.com>에 접속하여 로그인한다. 만약 아직 계정이 없다면 회원가입을 먼저 진행해야 한다. 로그인하면 아래와 같은 대시보드 화면이 뜰 것이다.  
+## API 연동
+### API 키 발급
+
+> 여기서는 Anthropic 또는 Gemini API 키를 새로 발급받는 방법을 설명한다. 이미 사용할 API 키를 가지고 있다면 이 단계는 건너뛰어도 좋다.
+{: .prompt-tip }
+
+#### Anthropic Claude
+<https://console.anthropic.com>에 접속하여 Anthropic Console 계정으로 로그인한다. 만약 아직 Anthropic Console 계정이 없다면 회원가입을 먼저 진행해야 한다. 로그인하면 아래와 같은 대시보드 화면이 뜰 것이다.  
 ![Anthropic Console Dashboard](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/Anthropic_Console.png)
 
 해당 화면에서 'Get API keys' 버튼을 클릭하면 다음과 같은 화면을 볼 수 있다.  
@@ -98,19 +103,38 @@ or something of that nature!!</important>
 > 키 발급을 완료하면 화면에 본인의 API 키가 표시되는데, 해당 키는 이후 다시 확인할 수 없으므로 반드시 안전한 곳에 따로 잘 기록해 두어야 한다.
 {: .prompt-warning }
 
-### (권장) 환경 변수에 Claude API 키 등록
-Python이나 Shell 스크립트에서 Claude API를 활용하려면 API 키를 불러와야 한다. 스크립트 자체에 API 키를 기록하는 방법도 있지만, GitHub 등에 업로드하거나 그 이외의 방법으로 다른 사람들과 공유해야 하는 스크립트라면 이 방법은 쓸 수 없다. 또한 스크립트 파일을 공유할 생각이 없었더라도, 의도치 않은 실수로 스크립트 파일이 유출될 수 있는데 만약 스크립트 파일에 API 키가 기록되어 있다면 API 키까지 같이 유출되는 사고가 발생할 위험이 있다. 따라서 API 키를 본인만이 사용하는 시스템의 환경변수에 등록해 두고 스크립트에서는 해당 환경변수를 불러오는 방식으로 활용하는 것을 권장한다. 아래에서는 UNIX 시스템 기준으로 시스템 환경 변수에 API 키를 등록하는 방법을 소개한다. Windows의 경우 웹 상에 다른 글을 참고하기 바란다.
+#### Google Gemini
+Gemini API는 Google AI Studio에서 관리할 수 있다. <https://aistudio.google.com/apikey>에 접속하여 구글 계정으로 로그인하면 다음과 같은 대시보드 화면이 표시된다.  
+![Google AI Studio Dashboard](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/get-api-key-google-ai-studio.png)
+
+해당 화면에서 'API 키 만들기' 버튼을 클릭하고 안내를 따라 진행하면 된다. Google Cloud 프로젝트 및 그에 사용할 결제 계정을 생성하고 연결하면 API 키를 사용할 준비가 완료되며, Anthropic API보다는 절차가 좀 더 복잡하지만 그래도 큰 어려움은 없을 것이다.
+
+> Anthropic Console과 달리 본인 소유의 API 키를 언제든 대시보드에서 확인할 수 있다. ~~하긴 Anthropic Console 계정이야 털리더라도 API 키만 지키면 피해를 제한할 수 있겠지만, 구글 계정을 털리면 어차피 Gemini API 키 말고도 급한 문제가 한둘이 아닐 것이다~~  
+> 따라서 API 키를 따로 기록해 둘 필요는 없고, 대신 본인 구글 계정의 보안을 잘 유지하도록 하자.
+{: .prompt-tip }
+
+### (권장) 환경 변수에 API 키 등록
+Python이나 Shell 스크립트에서 Claude API를 활용하려면 API 키를 불러와야 한다. 스크립트 자체에 API 키를 하드코딩하는 방법도 있지만, GitHub 등에 업로드하거나 그 이외의 방법으로 다른 사람들과 공유해야 하는 스크립트라면 이 방법은 쓸 수 없다. 또한 스크립트 파일을 공유할 생각이 없었더라도, 의도치 않은 실수로 스크립트 파일이 유출될 수 있는데 만약 스크립트 파일에 API 키가 기록되어 있다면 API 키까지 같이 유출되는 사고가 발생할 위험이 있다. 따라서 API 키를 본인만이 사용하는 시스템의 환경변수에 등록해 두고 스크립트에서는 해당 환경변수를 불러오는 방식으로 활용하는 것을 권장한다. 아래에서는 UNIX 시스템 기준으로 시스템 환경 변수에 API 키를 등록하는 방법을 소개한다. Windows의 경우 웹 상에 다른 글을 참고하기 바란다.
 
 1. 터미널에서 본인이 사용하는 쉘 종류에 맞게 `nano ~/.bashrc` 또는 `nano ~/.zshrc`를 입력하여 편집기를 실행한다.
-2. 해당 파일 내용에 `export ANTHROPIC_API_KEY='your-api-key-here'`를 추가한다. 'your-api-key-here' 부분에 본인의 API 키를 대신 넣으면 되며, 반드시 '를 이용하여 감싸 주어야 함에 유의한다.
+2. Anthropic API를 사용하는 경우 해당 파일 내용에 `export ANTHROPIC_API_KEY=your-api-key-here`를 추가한다. 'your-api-key-here' 부분에 본인의 API 키를 대신 넣으면 된다. Gemini API를 사용하는 경우에는 `export GEMINI_API_KEY=your-api-key-here`를 같은 방법으로 추가하면 된다.
 3. 변경 내용을 저장하고 편집기를 종료한다.
 4. 터미널에서 `source ~/.bashrc` 또는 `source ~/.zshrc`를 실행하여 변경사항을 반영한다.
 
 ### 필요한 Python 패키지 설치
-본인이 사용하는 Python 환경에 anthropic 패키지가 설치되어 있지 않다면 다음 명령으로 설치한다.
+본인이 사용하는 Python 환경에 API 라이브러리가 설치되어 있지 않다면 다음 명령으로 설치한다.
+
+#### Anthropic Claude
 ```bash
 pip3 install anthropic
 ```
+
+#### Google Gemini
+```bash
+pip3 install google-genai
+```
+
+#### 공통
 또한 다음 패키지들도 뒤에서 소개할 포스트 번역 스크립트를 사용하려면 필요하니, 다음 명령으로 설치 또는 업데이트한다.
 ```bash
 pip3 install -U argparse tqdm
@@ -211,6 +235,9 @@ if __name__ == "__main__":
 > 위의 링크에 있는 `prompt.py`{: .filepath} 파일에서 `max_tokens`는 Context window 크기와 별개로 최대 출력 길이를 지정하는 변수이다. Claude API 사용 시 한번에 입력할 수 있는 Context window의 크기는 200k 토큰(약 68만 글자 정도의 분량)이지만, 그와 별개로 각 모델별로 지원하는 최대 출력 토큰 수가 정해져 있으니 API 활용 전에 [Anthropic 공식 문서](https://docs.anthropic.com/en/docs/about-claude/models)에서 미리 확인해 보는 것을 권장한다. 기존의 Claude 3 시리즈 모델들은 최대 4096토큰까지 출력이 가능했는데, 이 블로그의 글로 실험해 봤을 때 한글로 대략 8000자 이상의 좀 긴 분량의 포스트의 경우 몇몇 출력 언어에서 4096토큰을 초과하여 번역문 뒷부분이 잘리는 문제가 발생하였다. Claude 3.5 Sonnet의 경우 최대 출력 토큰 수가 2배인 8192로 늘었기 때문에 어지간해서는 이 최대 출력 토큰 수를 초과하여 문제가 되는 경우는 없었으며, Claude 3.7부터는 그보다도 훨씬 긴 길이의 출력도 지원하도록 업그레이드되었다. 위 GitHub 리포지터리의 `prompt.py`{: .filepath}에서는 `max_tokens=16384`로 지정해 두었다.
 {: .prompt-tip }
 
+> Gemini의 경우 예전부터 최대 출력 토큰 수가 상당히 넉넉하던 편으로, Gemini 2.5 Pro 기준 최대 65536토큰까지 출력 가능하기 때문에 어지간해서는 이 최대 출력 토큰 수를 초과할 일은 없다. [Gemini API 공식 문서](https://ai.google.dev/gemini-api/docs/models#token-size)에 따르면 Gemini 모델에서 1 토큰은 영문 기준 4자로, 100 토큰이 영단어 약 60-80개 정도 분량이다.
+{: .prompt-tip }
+
 #### translate_changes.py
 
 ```python
@@ -218,10 +245,12 @@ if __name__ == "__main__":
 # requires-python = ">=3.13"
 # dependencies = [
 #     "tqdm",
+#     "argparse",
 # ]
 # ///
 import sys
 import os
+import subprocess
 from tqdm import tqdm
 import compare_hash
 import prompt
@@ -247,28 +276,67 @@ target_langs = ["English", "Japanese", "Taiwanese Mandarin", "Spanish", "Brazili
 source_lang_code = "ko"
 target_lang_codes = ["en", "ja", "zh-TW", "es", "pt-BR", "fr", "de"]
 
+def get_git_diff(filepath):
+    """Get the diff of the file using git"""
+    try:
+        # Get the diff of the file
+        result = subprocess.run(
+            ['git', 'diff', '--unified=0', '--no-color', '--', filepath],
+            capture_output=True, text=True
+        )
+        return result.stdout.strip()
+    except Exception as e:
+        print(f"Error getting git diff: {e}")
+        return None
+
+def translate_incremental(filepath, source_lang, target_lang, model):
+    """Translate only the changed parts of a file using git diff"""
+    # Get the git diff
+    diff_output = get_git_diff(filepath)
+    # print(f"Diff output: {diff_output}")
+    if not diff_output:
+        print(f"No changes detected or error getting diff for {filepath}")
+        return
+    
+    # Call the translation function with the diff
+    prompt.translate_with_diff(filepath, source_lang, target_lang, diff_output, model)
+
 if __name__ == "__main__":
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Translate markdown files with optional incremental updates')
+    parser.add_argument('--incremental', action='store_true', 
+                       help='Only translate changed parts of files using git diff')
+    args, _ = parser.parse_known_args()
+    
     initial_wd = os.getcwd()
     os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
     changed_files = compare_hash.changed_files(source_lang_code)
-    # 임시 파일 필터링
+    # Filter temporary files
     changed_files = [f for f in changed_files if is_valid_file(f)]
     
     if not changed_files:
         sys.exit("No files have changed.")
+        
     print("Changed files:")
     for file in changed_files:
         print(f"- {file}")
 
     print("")
     print("*** Translation start! ***")
-    # 외부 루프: 변경된 파일 진행상황
+    
+    # Outer loop: Progress through changed files
     for changed_file in tqdm(changed_files, desc="Files", position=0):
         filepath = os.path.join(posts_dir, source_lang_code, changed_file)
-        # 내부 루프: 각 파일의 언어별 번역 진행상황
+        
+        # Inner loop: Progress through target languages
         for target_lang in tqdm(target_langs, desc="Languages", position=1, leave=False):
-            prompt.translate(filepath, source_lang, target_lang)
+            model = "gemini-2.5-pro" if target_lang in ["English", "Taiwanese Mandarin", "German"] else "claude-sonnet-4-20250514"
+            if args.incremental:
+                translate_incremental(filepath, source_lang, target_lang, model)
+            else:
+                prompt.translate(filepath, source_lang, target_lang, model)
     
     print("\nTranslation completed!")
     os.chdir(initial_wd)
@@ -285,5 +353,11 @@ python3 translate_changes.py
 ![Screenshot of running script 1](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/translating-screen-1.png)  
 ![Screenshot of running script 2](/assets/img/how-to-auto-translate-posts-with-the-claude-sonnet-4-api/translating-screen-2.png)
 
+따로 옵션을 지정하지 않을 경우 기본값인 전문 번역 모드로 동작하며, `--incremental` 옵션을 지정하면 증분 번역 기능을 사용할 수 있다.
+
+```bash
+python3 translate_changes.py --incremental
+```
+
 ## 실사용기
-앞서 언급한 것과 같이 Claude Sonnet API를 이용한 포스트 자동 번역을 12024년 6월 말에 이 블로그에 도입하고 나서 지속적으로 개선을 거치며 활용 중이다. 대부분의 경우에는 따로 사람이 추가 개입할 필요 없이 자연스러운 번역문을 제공받을 수 있으며, 포스트를 다국어로 번역하여 올리고 나서 브라질이나 캐나다, 미국, 프랑스, 일본 등 한국 이외의 지역에서의 검색을 통한 Organic Search 트래픽이 실제로 상당히 유입되는 것을 확인하였다. 게다가 녹화된 세션을 확인해 보면 그렇게 번역본으로 유입된 방문자 중 수 분에서 길게는 수십 분 이상 오래 머무르는 경우도 적지 않은데, 보통 웹페이지의 내용이 기계번역을 쓴 티가 대놓고 나는 어색한 글일 경우 뒤로가기를 눌러 나가거나 차라리 영문 버전을 찾는다는 점을 생각해 보면 이는 번역본의 품질이 원어민 화자 기준으로도 크게 어색하진 않음을 시사한다. 또한 블로그의 트래픽 유입뿐만 아니라 글 작성자인 나 자신의 학습 측면에서 부가적인 장점도 있었는데, Claude가 영문 기준으로 상당히 매끄러운 글을 작성해 주기 때문에 GitHub Pages 리포지터리에 포스트를 Commit & Push하기 전 검토하는 과정에서 내가 작성한 한국어 원문의 특정 용어나 표현을 영어로는 어떤 식으로 표현하면 자연스러운지 확인할 수 있는 기회가 있다. 오직 이것만으로 충분한 영어 학습이 된다고 말하기엔 부족하겠지만, 일상적인 표현뿐만 아니라 학술적인 표현이나 용어에 대한 자연스러운 영문 표현을, 그 어떤 글보다도 익숙한 내가 직접 작성한 글을 예문 삼아, 별다른 추가적인 노력 없이도 자주 접할 수 있다는 것 또한 한국과 같은 비 영미권 지역 국가의 공대 학부생에게는 제법 장점으로 작용하는 듯 싶다.
+앞서 언급한 것과 같이 Claude Sonnet API를 이용한 포스트 자동 번역을 12024년 6월 말에 이 블로그에 도입하고 나서 지속적으로 개선을 거치며 활용 중이다. 대부분의 경우에는 따로 사람이 추가 개입할 필요 없이 자연스러운 번역문을 제공받을 수 있으며, 포스트를 다국어로 번역하여 올리고 나서 브라질이나 캐나다, 미국, 프랑스, 일본 등 한국 이외의 지역에서의 검색을 통한 Organic Search 트래픽이 실제로 상당히 유입되는 것을 확인하였다. 게다가 녹화된 세션을 확인해 보면 그렇게 번역본으로 유입된 방문자 중 수 분에서 길게는 수십 분 이상 오래 머무르는 경우도 적지 않은데, 보통 웹페이지의 내용이 기계번역을 쓴 티가 대놓고 나는 어색한 글일 경우 뒤로가기를 눌러 나가거나 차라리 영문 버전을 찾는다는 점을 생각해 보면 이는 번역본의 품질이 원어민 화자 기준으로도 크게 어색하진 않음을 시사한다. 또한 블로그의 트래픽 유입뿐만 아니라 글 작성자인 나 자신의 학습 측면에서 부가적인 장점도 있었는데, Claude나 Gemini와 같은 LLM이 영문 기준으로 상당히 매끄러운 글을 작성해 주기 때문에 GitHub Pages 리포지터리에 포스트를 Commit & Push하기 전 검토하는 과정에서 내가 작성한 한국어 원문의 특정 용어나 표현을 영어로는 어떤 식으로 표현하면 자연스러운지 확인할 수 있는 기회가 있다. 오직 이것만으로 충분한 영어 학습이 된다고 말하기엔 부족하겠지만, 일상적인 표현뿐만 아니라 학술적인 표현이나 용어에 대한 자연스러운 영문 표현을, 그 어떤 글보다도 익숙한 내가 직접 작성한 글을 예문 삼아, 별다른 추가적인 노력 없이도 자주 접할 수 있다는 것 또한 한국과 같은 비 영미권 지역 국가의 공대 학부생에게는 제법 장점으로 작용하는 듯 싶다.

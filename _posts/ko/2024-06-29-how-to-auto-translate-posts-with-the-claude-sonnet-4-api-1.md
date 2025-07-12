@@ -1,15 +1,15 @@
 ---
-title: Claude Sonnet 4 API로 포스트 자동 번역하는 법 (1) - 프롬프트 디자인
-description: "마크다운 텍스트 파일의 다국어 번역을 위한 프롬프트를 디자인하고, Anthropic으로부터 발급받은 API 키와 작성한 프롬프트를 적용하여 Python으로 작업을 자동화하는 과정을 다룬다. 이 포스트는 해당 시리즈의 첫 번째 글로, 프롬프트 디자인 방법과 과정을 소개한다."
+title: "Claude Sonnet 4 API로 포스트 자동 번역하는 법 (1) - 프롬프트 디자인"
+description: "마크다운 텍스트 파일의 다국어 번역을 위한 프롬프트를 디자인하고, Anthropic/Gemini API 키와 작성한 프롬프트를 적용하여 Python으로 작업을 자동화하는 과정을 다룬다. 이 포스트는 해당 시리즈의 첫 번째 글로, 프롬프트 디자인 방법과 과정을 소개한다."
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
 image: /assets/img/technology.webp
 ---
 
 ## 들어가며
-12024년 6월에 블로그 포스트의 다국어 번역을 위해 Anthropic의 Claude 3.5 Sonnet API를 도입한 이후, 수 차례의 프롬프트 및 자동화 스크립트 개선, 그리고 모델 버전 업그레이드를 거쳐 약 1년에 가까운 기간 동안 해당 번역 시스템을 만족스럽게 운용하고 있다. 이에 이 시리즈에서는 도입 과정에서 Claude Sonnet 모델을 선택한 이유와 프롬프트 디자인 방법, 그리고 Python 스크립트를 통한 API 연동 및 자동화 구현 방법을 다루고자 한다.  
+12024년 6월에 블로그 포스트의 다국어 번역을 위해 Anthropic의 Claude 3.5 Sonnet API를 도입한 이후, 수 차례의 프롬프트 및 자동화 스크립트 개선, 그리고 모델 버전 업그레이드를 거쳐 약 1년에 가까운 기간 동안 해당 번역 시스템을 만족스럽게 운용하고 있다. 이에 이 시리즈에서는 도입 과정에서 Claude Sonnet 모델을 선택하고 이후 Gemini 2.5 Pro를 추가 도입한 이유와 프롬프트 디자인 방법, 그리고 Python 스크립트를 통한 API 연동 및 자동화 구현 방법을 다루고자 한다.  
 시리즈는 2개의 글로 이루어져 있으며, 읽고 있는 이 글은 해당 시리즈의 첫 번째 글이다.
-- 1편: Claude Sonnet 모델 소개 및 선정 이유, 프롬프트 엔지니어링 (본문)
+- 1편: Claude Sonnet/Gemini 2.5 모델 소개 및 선정 이유, 프롬프트 엔지니어링 (본문)
 - 2편: [API를 활용한 Python 자동화 스크립트 작성 및 적용](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-2)
 
 ## About Claude Sonnet
@@ -45,7 +45,7 @@ DeepL이나 구글 번역도 대체로 뛰어난 번역 품질을 보이는 편�
 
 특히나 Claude는 상술하였듯 경쟁 모델인 GPT-4 대비 작문, 언어 추론, 다국어 이해 및 번역 분야에서는 상대적으로 더 뛰어나다는 평이 많았고 직접 간단히 테스트해 보았을 때도 GPT-4보다 좀 더 매끄러운 번역 품질을 보였기에, 도입을 고려하던 12024년 6월 당시 이 블로그에 기재하는 공학 관련 글들을 여러 언어로 번역하는 작업에 적합하다고 판단하였다.
 
-## 모델 채택 이력 및 현황
+## 업데이트 이력
 ### 12024.07.01.
 [별도의 글](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1/)로 정리했다시피, [Polyglot 플러그인을 적용하고 그에 맞춰 `_config.yml`{: .filepath}과 html 헤더, sitemap을 수정하는 초기 작업을 완료하였다.](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/44afc4f9bac0d689842d9373c9daa7e0220659e7) 뒤이어 [Claude 3.5 Sonnet 모델을 번역 목적으로 채택하고, 이 시리즈에서 다루고 있는 API 연동 파이썬 스크립트의 초기 구현 및 검증을 마친 후에 적용하였다.](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/3cadd28fd72bb2a6e1b64addfe000d99ca5ab51b)
 
@@ -65,10 +65,43 @@ DeepL이나 구글 번역도 대체로 뛰어난 번역 품질을 보이는 편�
 
 물론 공개한 벤치마크 결과를 보면 코딩 이외의 항목에서도 전반적으로 개선이 이루어졌으며, 이 글에서 다루는 번역 작업의 경우에는 다국어 질의응답(MMMLU)이나 수학 문제풀이(AIME 2025) 부문의 성능 향상이 특히 유효하게 작용할 것으로 보인다. 직접 간단히 테스트 해 본 결과, 이전 모델인 Claude 3.7 Sonnet 대비 Claude Sonnet 4의 번역 결과물이 표현의 자연스러움이나 전문성, 용어 사용의 일관성 등에서 더 뛰어난 것을 확인할 수 있었다.
 
-> 현 시점에서, 적어도 이 블로그에서 다루는 것과 같이 기술적인 성격의 한국어로 쓰인 글을 다국어로 번역하는 작업에서는 Claude 모델이 여전히 가장 뛰어나다 생각한다. 다만 최근 들어 Google의 Gemini 모델의 성능이 눈에 띄게 향상되고 있고, 올해 5월 들어서는 아직 Preview 단계이긴 하나 Gemini 2.5 모델까지 공개한 상황이다.  
-> Gemini 2.0 Flash 모델과 Claude 3.7 Sonnet, Claude Sonnet 4 모델을 비교했을 때는 Claude의 번역 성능이 더 우수하다고 판단하였으나, Gemini의 다국어 성능도 상당히 훌륭한 편인데다 수학, 물리 문제풀이 및 서술 능력은 오히려 Gemini 2.5 Preview 05-06 쪽이 Claude Opus 4보다도 더 뛰어난 상황이라 해당 모델이 정식 공개되고 다시 비교해보면 어떨지는 장담할 수 없다.  
-> Claude 대비 다소 저렴한 API 요금을 고려하면 Gemini 쪽의 가격 경쟁력이 월등하기 때문에, 어느 정도 대등한 성능만 나오더라도 Gemini가 합리적인 대안이 될 수 있다. Gemini 2.5는 아직 Preview 단계이니만큼 실제 자동화에 적용하기엔 이르다 판단하여 당장은 고려하고 있지 않으나, 추후 정식 버전이 공개되면 테스트를 해 볼 계획이다.
+> 현 시점에서, 적어도 이 블로그에서 다루는 것과 같이 기술적인 성격의 한국어로 쓰인 글을 다국어로 번역하는 작업에서는 Claude 모델이 여전히 가장 뛰어나다 생각한다. 다만 최근 들어 Google의 Gemini 모델의 성능이 눈에 띄게 좋아지고 있고, 올해 5월 들어서는 아직 Preview 단계이긴 하나 Gemini 2.5 모델까지 공개한 상황이다.  
+> Gemini 2.0 Flash 모델과 Claude 3.7 Sonnet, Claude Sonnet 4 모델을 비교했을 때는 Claude의 번역 성능이 더 우수하다고 판단하였으나, Gemini의 다국어 성능도 상당히 훌륭한 편인데다 Preview 단계임에도 불구하고 Gemini 2.5 Preview 05-06의 수학, 물리 문제풀이 및 서술 능력은 오히려 Claude Opus 4보다도 더 뛰어난 상황이라 해당 모델이 정식 공개되고 다시 비교해보면 어떨지는 장담할 수 없다.  
+> 일정 사용량까지는 [무료 등급(Free Tier)](https://ai.google.dev/gemini-api/docs/rate-limits#current-rate-limits)으로 사용이 가능한 데다 유료 등급(Paid Tier) 기준으로도 Claude 대비 저렴한 API 요금을 고려하면 Gemini 쪽의 가격 경쟁력이 월등하기 때문에, 어느 정도 대등한 성능만 나오더라도 Gemini가 합리적인 대안이 될 수 있다. Gemini 2.5는 아직 Preview 단계이니만큼 실제 자동화에 적용하기엔 이르다 판단하여 당장은 고려하고 있지 않으나, 추후 정식 버전이 공개되면 테스트를 해 볼 계획이다.
 {: .prompt-tip }
+
+### 12025.07.04.
+- [증분 번역 기능 추가](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/978032f52c7d85ecb6b213233d5404d844402965)
+- 번역 도착 언어에 따른 적용 모델 이원화([Commit 3890c82](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/3890c820c1f3df34f8e4686b8903ca4ee770ba15), [Commit fe0fc63](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/fe0fc63ae4e2764f3dfe24ff259b4477f120b9ed))
+  - 영어, 대만 중국어, 독일어로 번역 시 "gemini-2.5-pro" 사용
+  - 일본어, 에스파냐어, 포르투갈어, 프랑스어로 번역 시 기존의 "claude-sonnet-4-20250514"를 계속 사용
+- `temperature` 값을 `0.0`에서 `0.2`로 상향 조정하는 안을 고려하였으나 원래대로 롤백함
+
+12025년 7월 4일, 마침내 Gemini 2.5 Pro 및 Gemini 2.5 Flash 모델이 Preview 단계를 벗어나 정식 공개되었다. 사용한 예문 수가 한정적이긴 하나, 개인적으로 테스트해 보니 영문 번역 기준으로는 Gemini 2.5 Flash만 해도 기존 Claude Sonnet 4보다 더 자연스럽게 처리하는 부분도 제법 있었다. Gemini 2.5 Pro와 Flash 모델의 출력 토큰당 요금이 유료 등급 기준으로도 Claude Sonnet 4보다 각각 1.5배, 6배 저렴하다는 점을 고려하면 영문 기준으로는 사실상 12025년 7월 현 시점에서 제일 경쟁력 있는 모델이라고 할 수 있다. 다만 Gemini 2.5 Flash 모델의 경우 소형 모델의 한계인지 출력 결과물이 대체로 뛰어나긴 하지만, 일부 마크다운 문서 형식이나 내부 링크가 깨지는 등의 문제가 있어 복잡한 문서 번역 및 가공 작업에는 적합하지 않았다. 또한 영문에 대해서는 Gemini 2.5 Pro가 확실히 뛰어난 성능을 보이나, **대부분의 포르투갈어(pt-BR) 포스트**, 그리고 일부 에스파냐어 포스트에 대한 처리는 학습된 데이터의 양이 부족한 것인지 어려워하는 모습을 보였다. 발생한 오류들을 살펴보면 대부분 'í'와 'i', 'ó'와 'o', 'ç'와 'c', 그리고 'ã'와 'a' 등 비슷한 문자들을 혼동하여 발생한 문제들이었다. 또한 프랑스어에 대해서는 상술한 것과 같은 문제는 없었지만 종종 문장이 지나치게 장황하여 Claude Sonnet 4에 비해 가독성이 떨어지는 경우가 있었다.
+
+내가 영어 외의 언어는 잘은 몰라서 상세하고 정확한 비교는 어려우나, 개략적인 언어별 응답 품질을 비교해 보면 다음과 같았다.
+- 영어, 독일어, 대만 중국어: Gemini가 우수함
+- 일본어, 프랑스어, 에스파냐어, 포르투갈어: Claude가 우수함
+
+또한 포스트 번역 스크립트에 증분 번역(Incremental Translation) 기능을 추가하였다. 글을 처음 작성할 때 꼼꼼하게 검토하려 노력하지만 그럼에도 글을 올리고 나서 뒤늦게 오탈자 등 사소한 오류를 발견하거나, 혹은 추가/수정하면 좋을 내용이 떠오를 때가 있다. 그런데 이런 경우에 전체 글 중 수정한 분량은 제한적임에도 불구하고, 기존 스크립트는 전체 글을 처음부터 끝까지 다시 번역하고 출력해야 해서 API 사용량 측면에서 다소 비효율적인 문제가 있었다. 이에 git과 연동하여 한국어 원문의 버전 비교를 수행하고, 원문의 변경된 부분을 diff 형식으로 추출하여 변경 이전의 번역문 전문과 함께 프롬프트로 입력한 뒤 번역문에 대한 diff 패치를 출력으로 받아서 필요한 부분만 선택적으로 수정하는 기능을 추가하였다. 입력 토큰당 요금이 출력 토큰당 요금보다 크게 저렴하기 때문에 유의미한 비용 절감 효과를 기대할 수 있고, 따라서 앞으로는 글을 일부분만 수정한 경우에도 각 언어별 번역문을 직접 수정하지 않고 부담 없이 자동 번역 스크립트를 적용할 수 있을 것이다.
+
+한편, `temperature`란 언어 모델이 응답을 출력하는 과정에서 각 단어에 대해 그 다음에 올 단어를 선택할 때 어느 정도의 무작위성을 부여할 것인지 조정하는 매개변수이다. 음이 아닌 실수(\*후술하겠지만 보통 $[0,1]$ 내지 $[0,2]$의 범위)의 값을 갖는데, 0에 가까운 작은 값일수록 더 결정론적이고 일관적인 응답을 생성하고 값이 커질수록 보다 다양하고 창의적인 응답을 생성한다.  
+번역의 목적은 원문의 의미, 어조를 다른 언어로 최대한 정확하고 일관적이게 전달하는 것이지 창의적으로 새로운 내용을 만들어 내는 것이 아니므로, 번역의 정확성, 일관성, 그리고 예측 가능성을 확보하기 위해서는 낮은 `temperature` 값을 사용해야 한다. 다만 `temperature`를 `0.0`으로 설정하면 모델이 항상 가장 확률이 높은 단어만을 선택하게 되는데, 경우에 따라선 번역을 너무 직역에 가깝게 만들거나 부자연스럽고 뻣뻣한 문장을 생성할 수 있어서 응답이 지나치게 경직되는 것을 막고 어느 정도는 유연성을 부여하기 위해 `temperature` 값을 `0.2`로 약간 상향 조정하는 안을 고려하였으나 부분 식별자(Fragment identifier)를 포함하는 복잡한 링크에 대한 처리 정확도가 급감하는 문제가 있어 적용하지 않기로 하였다.
+
+> \* 대부분의 경우 실용적으로 사용되는 `temperature` 값은 0 이상 1 이하의 범위이며, Anthropic API에서의 허용 범위 또한 $[0,1]$이다. OpenAI API나 Gemini API에서는 보다 넓은 $[0,2]$의 `temperature` 값을 허용하지만, `temperature` 범위가 $[0,2]$로 확장되었다고 해서 스케일도 2배가 되는 것은 아니며 $T=1$의 의미는 $[0,1]$ 범위를 쓰는 모델과 동일하다. 
+>
+> 언어모델이 출력을 생성할 때 내부적으로는 프롬프트 및 이전까지의 출력 토큰들을 입력으로 받아 다음에 나올 토큰의 확률 분포를 응답으로 내놓는 일종의 함수로 동작하며, 그 확률분포에 따른 시행의 결과가 다음 토큰으로 결정되어 출력된다. 해당 확률분포를 그대로 사용하는 기준값이 $T=1$로, $T<1$일 경우에는 확률분포를 좁고 뾰족하게 만들어 가장 확률이 높은 단어들 위주로만 보다 일관적인 선택을 하게 되는 반면 $T>1$일 경우 반대로 확률 분포를 평탄화하여 나올 확률이 낮은, 원래라면 거의 선택하지 않을 단어의 선택 확률을 인위적으로 끌어올리는 식으로 동작한다.
+>
+> $T>1$ 영역에서는 응답에 문맥을 벗어난 토큰들이 포함되거나, 말이 되지 않는 문법적으로 틀린 문장을 생성하는 등 출력 품질이 저하되고 예측 불가능해질 수 있다. 대부분의 작업, 특히 현업(production) 환경에서는 $[0,1]$ 범위 내로 `temperature` 값을 설정하는 것이 좋으며, 1보다 큰 값은 브레인스토밍, 창작 보조(시나리오 초안 생성 등)와 같은 목적으로 다채로운 출력을 원할 때 실험적으로 사용하되 환각(hallucination)이나 문법적, 논리적 오류의 위험성도 높아지므로 자동화보다는 사람의 개입과 검수를 전제로 하는 것이 바람직하다.
+>
+> 언어 모델의 `temperature`에 대한 보다 자세한 내용은 다음 글들을 참고하면 좋다.
+> - [Tamanna, *Understanding LLM Temperature* (2025).](https://medium.com/@tam.tamanna18/understanding-llm-temperature-7d838277a7d9)
+> - [Tickr Data, *The Impact of Temperature on LLM Performance* (2023).](https://www.tickr.com/blog/posts/impact-of-temperature-on-llms/)
+> - [Anik Das, *Temperature in Prompt Engineering* (2025).](https://peerlist.io/anikdas/articles/temperature-in-prompt-engineering)
+> - [Peeperkorn et al., *Is Temperature the Creativity Parameter of LLMs?*, arXiv:2405.00492 (2024).](https://arxiv.org/abs/2405.00492)
+> - [Colt Steele, *Understanding OpenAI’s Temperature Parameter* (2023).](https://www.coltsteele.com/tips/understanding-openai-s-temperature-parameter)
+> - [Damon Garn, *Understanding the role of temperature settings in AI output*, TechTarget (2025).](https://www.techtarget.com/searchenterpriseai/tip/Understanding-the-role-of-temperature-settings-in-AI-output)
+{: .prompt-info }
 
 ## 프롬프트 디자인
 ### 뭔가를 요청할 때의 기본 원칙
@@ -78,7 +111,7 @@ DeepL이나 구글 번역도 대체로 뛰어난 번역 품질을 보이는 편�
 고압적인 명령조보다는 정중하게 요청하는 어조로 프롬프트를 작성하고 입력하였을 때 언어모델이 보다 높은 품질의 응답을 출력한다는 보고가 많이 있다. 보통 사회에서 다른 사람에게 뭔가 요청할 때도 고압적으로 명령하기보단 정중히 요청했을 때 상대방이 더 성의 있게 부탁한 작업을 수행할 확률이 높아지는데, 언어모델도 이와 같은 사람들의 응답 패턴을 학습하여 모방하는 것으로 보인다.
 
 #### 역할 부여 및 상황 설명(누가, 왜)
-제일 먼저 Claude 4에게 *'기술 분야 전문 번역가(professional technical translator)'* 라는 역할을 부여하고, *"주로 수학이나 물리학, 데이터 과학에 관한 글을 기고하는 공학 블로거"* 라는 사용자에 관한 맥락 정보를 제공하였다.
+제일 먼저 *'기술 분야 전문 번역가(professional technical translator)'* 라는 역할을 부여하고, *"주로 수학이나 물리학, 데이터 과학에 관한 글을 기고하는 공학 블로거"* 라는 사용자에 관한 맥락 정보를 제공하였다.
 
 ```xml
 <role>You are a professional translator specializing in technical and scientific fields. 
@@ -110,18 +143,15 @@ Jekyll 블로그에 업로드하기 위해 markdown으로 작성한 포스트의
 
 ```yaml
 ---
-title: Claude Sonnet 4 API로 포스트 자동 번역하는 법 (1) - 프롬프트 디자인
-description: >-
-  마크다운 텍스트 파일의 다국어 번역을 위한 프롬프트를 디자인하고, Anthropic으로부터 발급받은
-  API 키와 작성한 프롬프트를 적용하여 Python으로 작업을 자동화하는 과정을 다룬다. 
-  이 포스트는 해당 시리즈의 첫 번째 글로, 프롬프트 디자인 방법과 과정을 소개한다."
+title: "Claude Sonnet 4 API로 포스트 자동 번역하는 법 (1) - 프롬프트 디자인"
+description: "마크다운 텍스트 파일의 다국어 번역을 위한 프롬프트를 디자인하고, Anthropic/Gemini API 키와 작성한 프롬프트를 적용하여 Python으로 작업을 자동화하는 과정을 다룬다. 이 포스트는 해당 시리즈의 첫 번째 글로, 프롬프트 디자인 방법과 과정을 소개한다."
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
 image: /assets/img/technology.webp
 ---
 ```
 
-그런데 포스트를 번역할 때 제목(title)과 설명(description) 태그는 다국어로 번역해야 하나, 포스트 URL의 일관성을 위해서는 카테고리(categories)와 태그(tags) 이름은 번역하지 않고 영문 그대로 놔두는 것이 유지관리에 용이하다. 따라서 아래와 같은 지시를 내려서 'title'과 'description' 이외의 태그는 번역하지 않도록 하였다. Claude가 YAML front matter에 관한 정보는 이미 학습하여 알고 있을 것이므로, 이 정도만 설명해도 대부분의 경우 충분하다.
+그런데 포스트를 번역할 때 제목(title)과 설명(description) 태그는 다국어로 번역해야 하나, 포스트 URL의 일관성을 위해서는 카테고리(categories)와 태그(tags) 이름은 번역하지 않고 영문 그대로 놔두는 것이 유지관리에 용이하다. 따라서 아래와 같은 지시를 내려서 'title'과 'description' 이외의 태그는 번역하지 않도록 하였다. 모델이 YAML front matter에 관한 정보는 이미 학습하여 알고 있을 것이므로, 이 정도만 설명해도 대부분의 경우 충분하다.
 
 ```xml
 - <condition>please do not modify the YAML front matter except for the 'title' and 'description' tags, \
@@ -144,7 +174,7 @@ image: /assets/img/technology.webp
 한국어로 원문을 작성할 때, 어떤 개념의 정의를 처음 소개하거나 몇몇 전문용어를 사용하는 경우 '*중성자 감쇠 (Neutron Attenuation)*'와 같이 괄호 안에 영문 표현을 같이 기재하는 경우가 종종 있다. 이러한 표현을 번역하는 경우 어떨 땐 괄호를 살리고, 또 어떨 땐 괄호 안에 기재된 영문을 누락하는 등 번역 방식이 일관되지 않은 문제가 있어 아래와 같은 세부 지침을 정하였다.
 - 전문용어의 경우,
   - 일본어와 같이 로마자 기반이 아닌 언어로 번역할 때는 '번역 표현(영어 표현)'의 형식을 유지한다.
-  - 스페인어, 포르투갈어, 프랑스어와 같은 로마자 기반의 언어로 번역할 때에는 '번역 표현' 단독 표기와 '번역 표현(영어 표현)' 병행 표기를 둘 다 허용하며, Claude가 둘 중 더 적절한 것을 자율적으로 선택하도록 한다.
+  - 스페인어, 포르투갈어, 프랑스어와 같은 로마자 기반의 언어로 번역할 때에는 '번역 표현' 단독 표기와 '번역 표현(영어 표현)' 병행 표기를 둘 다 허용하며, 모델이 둘 중 더 적절한 것을 자율적으로 선택하도록 한다.
 - 고유명사의 경우, 어떠한 형태로든 원문 철자가 번역 결과물에도 보존되어야 한다.
 
 ```xml
@@ -216,8 +246,9 @@ Use these for context when translating links and references:
 마지막으로, 응답 시 다른 말을 덧붙이지 않고 오직 번역 결과물만을 출력하도록 다음 문장을 제시한다.
 
 ```xml
-<important>In any case, without exception, the output should contain only the translation results, without any text such as \
-“Here is the translation of the text provided, preserving the markdown format:” or something of that nature!!</important>
+<important>In any case, without exception, the output should contain only the translation results, \
+without any text such as "Here is the translation of the text provided, preserving the markdown format:" \
+or "```markdown" or something of that nature!!</important>
 ```
 
 ### 추가적인 프롬프트 디자인 기법
@@ -228,14 +259,14 @@ Use these for context when translating links and references:
 #### XML 태그를 활용하여 구조화
 사실 이는 지금껏 앞에서 이미 사용해 오고 있었다. 여러 맥락과 지시사항, 형식, 예시들을 포함하는 복잡한 프롬프트의 경우 `<instructions>`, `<example>`, `<format>` 등의 XML 태그를 적절히 활용하면 언어모델이 프롬프트를 정확히 해석하고 의도에 부합하는 높은 품질의 출력을 내놓는 데 도움이 된다. [GENEXIS-AI/prompt-gallery](https://github.com/GENEXIS-AI/prompt-gallery/blob/main/prompt_xml.md) GitHub 리포지터리에 프롬프트 작성 시 유용한 XML 태그들이 잘 정리되어 있으니 참고해보는 것을 추천한다.
 
-#### 단계별 추론 (CoT, chain of thinking) 기법
+#### 단계별 추론 (CoT, Chain-of-Thought) 기법
 수학 문제 풀이나 복잡한 문서 작성과 같이 상당한 수준의 추론을 필요로 하는 작업의 경우에 언어모델이 문제를 단계별로 나누어 생각하도록 유도하면 성능을 크게 끌어올릴 수 있다. 다만 이 경우 응답 지연 시간이 길어질 수 있으며, 모든 작업에 대해 항상 이러한 기법이 유용한 것은 아니므로 주의한다. 
 
 #### 프롬프트 체이닝 (prompt chaining) 기법
 복잡한 작업을 수행해야 하는 경우 단일 프롬프트로는 대응에 한계가 있을 수 있다. 이 경우 처음부터 전체 작업 흐름을 여러 단계로 나눠서 단계별로 그에 특화된 프롬프트를 제시하고 앞 단계에서 얻은 응답을 그 다음 단계의 입력으로 전달하는 방식을 사용하는 것도 고려해 볼 수 있다. 이러한 기법을 프롬프트 체이닝(prompt chaining)이라고 한다.
 
 #### 응답 첫 부분 미리 채워 놓기
-프롬프트를 입력할 때, 응답할 내용의 첫 부분을 미리 제시하고 그 뒤에 이어질 답변을 작성하도록 함으로써 불필요한 인삿말 등의 서두를 건너뛰게 하거나, XML, JSON과 같은 특정 형식으로 응답하게끔 강제할 수 있다. [Claude API의 경우 호출 시에 `User` 메시지뿐만 아니라 `Assistant` 메시지를 함께 제출하면 이 기법을 사용할 수 있다.](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prefill-claudes-response)
+프롬프트를 입력할 때, 응답할 내용의 첫 부분을 미리 제시하고 그 뒤에 이어질 답변을 작성하도록 함으로써 불필요한 인삿말 등의 서두를 건너뛰게 하거나, XML, JSON과 같은 특정 형식으로 응답하게끔 강제할 수 있다. [Anthropic API의 경우 호출 시에 `User` 메시지뿐만 아니라 `Assistant` 메시지를 함께 제출하면 이 기법을 사용할 수 있다.](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prefill-claudes-response)
 
 #### 게으름 피우기 방지 (12024.10.31. 할로윈 패치)
 이 글을 처음 작성한 이후 중간에 한두 차례 약간의 프롬프트 개선 및 지시사항 구체화를 추가로 거치긴 했지만, 어쨌든 4달간 본 자동화 시스템을 적용하면서 별다른 큰 문제는 없었다.
