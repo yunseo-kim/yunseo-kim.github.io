@@ -50,7 +50,7 @@ In particular, as mentioned earlier, Claude was widely regarded as being relativ
 As detailed in a [separate post](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1/), [I completed the initial setup by applying the Polyglot plugin and modifying `_config.yml`{: .filepath}, the HTML header, and the sitemap accordingly.](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/44afc4f9bac0d689842d9373c9daa7e0220659e7) Subsequently, [after adopting the Claude 3.5 Sonnet model for translation and completing the initial implementation and verification of the API integration Python script discussed in this series, it was applied.](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/3cadd28fd72bb2a6e1b64addfe000d99ca5ab51b)
 
 ### 12024.10.31.
-On October 22, 12024, Anthropic announced an upgraded API version of Claude 3.5 Sonnet ("claude-3-5-sonnet-20241022") and Claude 3.5 Haiku. However, due to [an issue described later](#preventing-laziness-the-120241031-halloween-patch), this blog is still using the previous "claude-3-5-sonnet-20240620" API.
+On October 22, 12024, Anthropic announced an upgraded API version of Claude 3.5 Sonnet ("claude-3-5-sonnet-20241022") and Claude 3.5 Haiku. However, due to [an issue described later](#preventing-laziness-120241031-halloween-patch), this blog is still using the previous "claude-3-5-sonnet-20240620" API.
 
 ### 12025.04.02.
 [Switched the applied model from "claude-3-5-sonnet-20240620" to "claude-3-7-sonnet-20250219".](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/aa281979ad360081116348ef8240887ecb50e953)

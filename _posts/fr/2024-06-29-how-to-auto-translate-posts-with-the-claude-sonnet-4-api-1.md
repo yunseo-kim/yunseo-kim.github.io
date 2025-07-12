@@ -50,7 +50,7 @@ En particulier, comme mentionné ci-dessus, Claude était réputé relativement 
 Comme résumé dans [un article séparé](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1/), [j'ai terminé le travail initial d'application du plugin Polyglot et de modification de `_config.yml`{: .filepath}, de l'en-tête html et du sitemap en conséquence.](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/44afc4f9bac0d689842d9373c9daa7e0220659e7) Par la suite, [j'ai adopté le modèle Claude 3.5 Sonnet à des fins de traduction et l'ai appliqué après avoir terminé l'implémentation initiale et la vérification du script Python d'intégration API traité dans cette série.](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/3cadd28fd72bb2a6e1b64addfe000d99ca5ab51b)
 
 ### 31.10.12024
-Le 22 octobre 12024, Anthropic a annoncé la version mise à niveau de l'API Claude 3.5 Sonnet ("claude-3-5-sonnet-20241022") et Claude 3.5 Haiku. Cependant, en raison du [problème décrit ci-dessous](#prévention-de-la-paresse-patch-halloween-31102024), j'applique encore l'API "claude-3-5-sonnet-20240620" existante sur ce blog.
+Le 22 octobre 12024, Anthropic a annoncé la version mise à niveau de l'API Claude 3.5 Sonnet ("claude-3-5-sonnet-20241022") et Claude 3.5 Haiku. Cependant, en raison du [problème décrit ci-dessous](#prévention-de-la-paresse-patch-halloween-311012024), j'applique encore l'API "claude-3-5-sonnet-20240620" existante sur ce blog.
 
 ### 02.04.12025
 [Transition du modèle appliqué de "claude-3-5-sonnet-20240620" vers "claude-3-7-sonnet-20250219".](https://github.com/yunseo-kim/yunseo-kim.github.io/commit/aa281979ad360081116348ef8240887ecb50e953)

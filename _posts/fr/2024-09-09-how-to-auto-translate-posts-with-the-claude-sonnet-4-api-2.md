@@ -84,7 +84,7 @@ without any text such as "Here is the translation of the text provided, preservi
 or "```markdown" or something of that nature!!</important>
 ```
 
-> Pour la [fonction de traduction incrémentale nouvellement ajoutée](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1/#120250704), un prompt système légèrement différent est utilisé. Comme il y a beaucoup de parties qui se chevauchent, je ne l'écrirai pas ici, donc si nécessaire, veuillez consulter directement le contenu de [`prompt.py`{: .filepath } dans le dépôt GitHub](https://github.com/yunseo-kim/yunseo-kim.github.io/blob/main/tools/prompt.py).
+> Pour la [fonction de traduction incrémentale nouvellement ajoutée](/posts/how-to-auto-translate-posts-with-the-claude-sonnet-4-api-1/#040712025), un prompt système légèrement différent est utilisé. Comme il y a beaucoup de parties qui se chevauchent, je ne l'écrirai pas ici, donc si nécessaire, veuillez consulter directement le contenu de [`prompt.py`{: .filepath } dans le dépôt GitHub](https://github.com/yunseo-kim/yunseo-kim.github.io/blob/main/tools/prompt.py).
 {: .prompt-tip }
 
 ## Intégration API
