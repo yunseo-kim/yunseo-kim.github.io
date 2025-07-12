@@ -1,6 +1,6 @@
 ---
-title: 碰撞引起的能量傳遞
-description: 分別計算彈性碰撞和非彈性碰撞兩種情況下粒子間碰撞的能量傳遞率， 並比較碰撞的兩個粒子質量相近和相差很大時各種情況下的能量傳遞率大小。
+title: 電漿中碰撞引起的能量傳遞
+description: 分別計算彈性碰撞和非彈性碰撞兩種情況下電漿內粒子間碰撞的能量傳遞率， 並比較碰撞的兩個粒子質量相近和相差很大時各種情況下的能量傳遞率大小。
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true

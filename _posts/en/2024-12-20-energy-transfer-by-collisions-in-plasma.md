@@ -1,9 +1,6 @@
 ---
-title: Energy Transfer by Collisions
-description: Calculate the energy transfer rate due to particle collisions for both
-  elastic and inelastic collisions, and compare the magnitude of energy transfer rates
-  for cases when the masses of the two colliding particles are similar and when they
-  are significantly different.
+title: Energy Transfer by Collisions in Plasma
+description: Calculate the energy transfer rate due to particle collisions in plasma for both elastic and inelastic collisions, and compare the magnitude of energy transfer rates for cases when the masses of the two colliding particles are similar and when they are significantly different.
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true

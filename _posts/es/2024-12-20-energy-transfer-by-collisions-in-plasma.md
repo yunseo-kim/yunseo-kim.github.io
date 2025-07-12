@@ -1,9 +1,6 @@
 ---
-title: Transferencia de energía por colisión
-description: Calculamos la tasa de transferencia de energía por colisiones entre partículas,
-  dividiendo en colisiones elásticas e inelásticas, y comparamos la magnitud de la
-  tasa de transferencia de energía para los casos en que las masas de las dos partículas
-  que colisionan son similares y muy diferentes.
+title: Transferencia de energía por colisión en plasma
+description: Calculamos la tasa de transferencia de energía por colisiones entre partículas en plasma, dividiendo en colisiones elásticas e inelásticas, y comparamos la magnitud de la tasa de transferencia de energía para los casos en que las masas de las dos partículas que colisionan son similares y muy diferentes.
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true

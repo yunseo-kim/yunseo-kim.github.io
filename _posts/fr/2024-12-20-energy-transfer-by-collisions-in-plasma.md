@@ -1,9 +1,6 @@
 ---
-title: Transfert d'énergie par collision
-description: Calcul du taux de transfert d'énergie par collision entre particules
-  pour les collisions élastiques et inélastiques, et comparaison de l'ampleur du taux
-  de transfert d'énergie dans les cas où les masses des deux particules en collision
-  sont similaires ou très différentes.
+title: Transfert d'énergie par collision dans un plasma
+description: Calcul du taux de transfert d'énergie par collision entre particules dans un plasma pour les collisions élastiques et inélastiques, et comparaison de l'ampleur du taux de transfert d'énergie dans les cas où les masses des deux particules en collision sont similaires ou très différentes.
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true

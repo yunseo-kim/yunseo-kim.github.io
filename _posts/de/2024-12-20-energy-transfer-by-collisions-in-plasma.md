@@ -1,9 +1,6 @@
 ---
-title: Energieübertragung durch Kollisionen
-description: Berechnung der Energieübertragungsrate durch Teilchenkollisionen für
-  elastische und inelastische Stöße, und Vergleich der Energieübertragungsraten für
-  Fälle, in denen die Massen der kollidierenden Teilchen ähnlich oder sehr unterschiedlich
-  sind.
+title: Energieübertragung durch Kollisionen in Plasmen
+description: Berechnung der Energieübertragungsrate durch Teilchenkollisionen in Plasmen für elastische und inelastische Stöße, und Vergleich der Energieübertragungsraten für Fälle, in denen die Massen der kollidierenden Teilchen ähnlich oder sehr unterschiedlich sind.
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
