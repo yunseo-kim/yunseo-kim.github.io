@@ -5,6 +5,8 @@ categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.webp
+redirect_from:
+  - /posts/energy-transfer-by-collisions/
 ---
 ## TL;DR
 > - La energía total y el momento se conservan durante la colisión

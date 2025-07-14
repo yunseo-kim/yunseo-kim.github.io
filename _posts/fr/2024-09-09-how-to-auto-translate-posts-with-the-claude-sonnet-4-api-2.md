@@ -4,6 +4,8 @@ description: "Conception d'un prompt pour la traduction multilingue de fichiers 
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
 image: /assets/img/technology.webp
+redirect_from:
+  - /posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-2/
 ---
 
 ## Introduction

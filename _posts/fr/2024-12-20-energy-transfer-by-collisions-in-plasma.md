@@ -5,6 +5,8 @@ categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.webp
+redirect_from:
+  - /posts/energy-transfer-by-collisions/
 ---
 ## TL;DR
 > - L'énergie totale et la quantité de mouvement sont conservées lors des collisions

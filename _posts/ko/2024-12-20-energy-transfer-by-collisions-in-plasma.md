@@ -5,6 +5,8 @@ categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.webp
+redirect_from:
+  - /posts/energy-transfer-by-collisions/
 ---
 ## TL;DR
 > - 충돌 시 총 에너지와 운동량은 보존됨

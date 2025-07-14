@@ -4,6 +4,9 @@ description: "Learn how to design effective prompts for multilingual translation
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
 image: /assets/img/technology.webp
+redirect_from:
+  - /posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api/
+  - /posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1/
 ---
 
 ## Introduction

@@ -4,6 +4,9 @@ description: "마크다운 텍스트 파일의 다국어 번역을 위한 프롬
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
 image: /assets/img/technology.webp
+redirect_from:
+  - /posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api/
+  - /posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-1/
 ---
 
 ## 들어가며

@@ -4,6 +4,8 @@ description: 'Apresento o processo de implementação de suporte multilíngue em
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
+redirect_from:
+  - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/
 ---
 ## Visão geral
 Cerca de 4 meses atrás, no início de julho do [calendário holocene](https://en.wikipedia.org/wiki/Holocene_calendar) 12024, adicionei suporte multilíngue ao meu blog baseado em Jekyll hospedado no Github Pages aplicando o plugin [Polyglot](https://github.com/untra/polyglot).

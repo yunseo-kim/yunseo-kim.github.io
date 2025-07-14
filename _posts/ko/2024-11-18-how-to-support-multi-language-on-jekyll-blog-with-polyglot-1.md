@@ -1,12 +1,11 @@
 ---
-title: Polyglot으로 Jekyll 블로그에서 다국어 지원하는 방법 (1) - Polyglot 플러그인 적용 & hreflang alt 태그
-  및 sitemap, 언어 선택 버튼 구현
-description: '''jekyll-theme-chirpy'' 기반의 Jekyll 블로그에 Polyglot 플러그인을 적용하여 다국어 지원을
-  구현한 과정을 소개한다. 이 포스트는 해당 시리즈의 첫 번째 글로, Polyglot 플러그인을 적용하고 html 헤더와 sitemap을 수정하는
-  부분을 다룬다.'
+title: Polyglot으로 Jekyll 블로그에서 다국어 지원하는 방법 (1) - Polyglot 플러그인 적용 & hreflang alt 태그 및 sitemap, 언어 선택 버튼 구현
+description: '''jekyll-theme-chirpy'' 기반의 Jekyll 블로그에 Polyglot 플러그인을 적용하여 다국어 지원을 구현한 과정을 소개한다. 이 포스트는 해당 시리즈의 첫 번째 글로, Polyglot 플러그인을 적용하고 html 헤더와 sitemap을 수정하는 부분을 다룬다.'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
+redirect_from:
+  - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/
 ---
 ## 개요
 약 4달 전인 [인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 12024년 7월 초, Jekyll 기반으로 Github Pages를 통해 호스팅 중인 본 블로그에 [Polyglot](https://github.com/untra/polyglot) 플러그인을 적용하여 다국어 지원 구현을 추가하였다.

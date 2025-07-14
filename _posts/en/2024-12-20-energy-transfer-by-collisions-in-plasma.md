@@ -5,6 +5,8 @@ categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics]
 math: true
 image: /assets/img/tokamak-plasma-cropped.webp
+redirect_from:
+  - /posts/energy-transfer-by-collisions/
 ---
 ## TL;DR
 > - Total energy and momentum are conserved during collisions

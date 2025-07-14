@@ -4,6 +4,8 @@ description: "本文將探討如何為 Markdown 文件的多語言翻譯設計�
 categories: [AI & Data, GenAI]
 tags: [Jekyll, Markdown, LLM]
 image: /assets/img/technology.webp
+redirect_from:
+  - /posts/how-to-auto-translate-posts-with-the-claude-3.5-sonnet-api-2/
 ---
 
 ## 前言

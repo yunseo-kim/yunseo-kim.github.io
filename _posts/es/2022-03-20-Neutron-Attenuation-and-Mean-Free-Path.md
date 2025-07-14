@@ -5,6 +5,8 @@ categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter]
 math: true
 image: /assets/img/atoms.webp
+redirect_from:
+  - /posts/Homogeneous-Mixtures-and-Molecular-Cross-sections/
 ---
 
 ## Atenuación de neutrones (Neutron Attenuation)
