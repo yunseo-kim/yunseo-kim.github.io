@@ -208,7 +208,8 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
               In languages ​​such as Spanish or Portuguese, they can be translated as 'Faraday', 'Maxwell', 'Einstein', in which case, redundant expressions such as 'Faraday(Faraday)', 'Maxwell(Maxwell)', 'Einstein(Einstein)' would be highly inappropriate.</example>
            </condition>
         8. Posts in this blog use the holocene calendar, which is also known as Holocene Era(HE), ère holocène/era del holoceno/era holocena(EH), 인류력, 人類紀元, etc., as the year numbering system, and any 5-digit year notation is intentional, not a typo.
-           So preserve the Holocene calendar year notation (HE).
+           So preserve the Holocene calendar year notation (HE, EH, etc.).
+        9. **CRITICAL**: Line numbers in the source diff are NOT directly transferable to the translated file. The number of lines can change during translation. You MUST locate the correct position in the existing translation by matching the CONTEXT lines from the source diff, and then generate a NEW, correct hunk header for the target file.
         </important_instructions>
         
         <output_format>
