@@ -3,7 +3,7 @@ title: Continuous and Characteristic X Rays
 description: Exploring the two generation principles of X-rays as atomic radiation,
   and the respective characteristics of bremsstrahlung and characteristic X-rays.
 categories: [Nuclear Engineering, Radiation]
-tags: [Atomic Radiation, Atomic Structure]
+tags: [Nuclear Physics, Atomic Radiation, Atomic Structure]
 math: true
 image: /assets/img/atoms.webp
 ---

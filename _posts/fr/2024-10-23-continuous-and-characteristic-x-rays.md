@@ -4,7 +4,7 @@ description: Découvrons les deux principes de génération des rayons X en tant
   rayonnement atomique, ainsi que les caractéristiques respectives du rayonnement
   de freinage et des rayons X caractéristiques.
 categories: [Nuclear Engineering, Radiation]
-tags: [Atomic Radiation, Atomic Structure]
+tags: [Nuclear Physics, Atomic Radiation, Atomic Structure]
 math: true
 image: /assets/img/atoms.webp
 ---

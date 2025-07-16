@@ -4,7 +4,7 @@ description: Exploramos los dos principios de generación de rayos X como radiac
   atómica, y las características respectivas de la radiación de frenado y los rayos
   X característicos.
 categories: [Nuclear Engineering, Radiation]
-tags: [Atomic Radiation, Atomic Structure]
+tags: [Nuclear Physics, Atomic Radiation, Atomic Structure]
 math: true
 image: /assets/img/atoms.webp
 ---
