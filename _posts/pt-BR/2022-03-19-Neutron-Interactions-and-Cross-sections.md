@@ -2,7 +2,7 @@
 title: Interações de Nêutrons e Seção de Choque
 description: Exploramos os conceitos de seção de choque microscópica e macroscópica, os tipos de interações entre nêutrons e núcleos atômicos, e analisamos dados reais de seções de choque fornecidos pelo Instituto Coreano de Pesquisa em Energia Atômica para entender o comportamento de espalhamento e absorção de nêutrons em diferentes faixas de energia.
 categories: [Nuclear Engineering, Basis]
-tags: [Nuclear Physics, Interaction of Radiation with Matter]
+tags: [Nuclear Physics, Interaction of Radiation with Matter, Nuclear Reaction]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
@@ -96,13 +96,13 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 onde $R$ é o raio do átomo.
 
 > **Por que a seção de choque de espalhamento não é constante na região de energia extremamente baixa**  
-> A aproximação acima é válida para o carbono-12 na faixa de energia de aproximadamente 0,02eV a 0,01MeV. Em energias extremamente baixas, podemos observar nos dados reais que $\sigma_e \propto 1/E$.
+> A aproximação acima é válida para o carbono-12 na faixa de energia de aproximadamente 0,02eV a 0,01MeV. Em energias extremamente baixas, podemos observar nos dados reais que isso não se aplica.
 >
 > De acordo com o **modelo de Ramsauer (Ramsauer model)**, a relação entre a seção de choque de espalhamento e a energia do nêutron em baixas energias é:
 >
-> $$ \sigma(E) \propto \left(R+\lambda(E)\right)^2. $$
+> $$ \sigma(E) = 2\pi \left(R+\lambda(E)\right)^2(1-\alpha \cos\beta). $$
 >
-> Pela [equação do comprimento de onda de de Broglie para nêutrons](/posts/Mass-and-Energy-Particles-and-Waves/#ignorando-efeitos-relativísticos-ex-nêutron), temos $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. Geralmente, $\lambda(E) \ll R$, então podemos aproximar $\sigma(E) \propto R^2$, mas em energias muito baixas, o nêutron se comporta mais como onda do que como partícula, e o comprimento de onda de de Broglie se torna maior que o raio atômico. Nesse caso, $\lambda(E)$ se torna o termo dominante, resultando em $\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$.
+> Pela [equação do comprimento de onda de de Broglie para nêutrons](/posts/Mass-and-Energy-Particles-and-Waves/#ignorando-efeitos-relativísticos-ex-nêutron), temos $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. Geralmente, $\lambda(E) \ll R$, então podemos ignorar $\lambda(E)$ no termo $\left(R+\lambda(E)\right)^2$ e aproximar $\sigma(E) \propto R^2$, mas em energias muito baixas, o nêutron se comporta mais como onda do que como partícula, e o comprimento de onda de de Broglie se torna maior que o raio atômico. Nesse caso, $\lambda(E)$ se torna o termo dominante e tal aproximação não é válida.
 {: .prompt-info }
 
 #### Região de Ressonância (resonance region)

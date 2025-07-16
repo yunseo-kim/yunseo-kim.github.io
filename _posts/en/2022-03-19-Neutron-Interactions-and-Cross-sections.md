@@ -2,7 +2,7 @@
 title: Neutron Interactions and Cross-Sections
 description: Explore the concepts of microscopic and macroscopic cross-sections and types of neutron interactions with nuclei, examining actual cross-section data from the Korea Atomic Energy Research Institute to understand neutron scattering and absorption behavior across energy regions.
 categories: [Nuclear Engineering, Basis]
-tags: [Nuclear Physics, Interaction of Radiation with Matter]
+tags: [Nuclear Physics, Interaction of Radiation with Matter, Nuclear Reaction]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
@@ -94,13 +94,13 @@ In this region, the elastic scattering cross-section is approximately constant. 
 $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 
 > **Why Scattering Cross-Section is Not Constant in the Ultra-Low Energy Region**  
-> The approximation above is valid for carbon-12 in the energy range from about 0.02eV to 0.01MeV. In the ultra-low energy region, we can observe from the actual data that $\sigma_e \propto 1/E$.
+> The approximation above is valid for carbon-12 in the energy range from about 0.02eV to 0.01MeV. In the ultra-low energy region, we can observe from the actual data that this approximation does not hold.
 >
 > According to the **Ramsauer model**, the relationship between scattering cross-section and neutron energy in the low-energy region is:
 >
-> $$ \sigma(E) \propto \left(R+\lambda(E)\right)^2. $$
+> $$ \sigma(E) = 2\pi \left(R+\lambda(E)\right)^2(1-\alpha \cos\beta). $$
 >
-> From [the de Broglie wavelength equation for neutrons](/posts/Mass-and-Energy-Particles-and-Waves/#neglecting-relativistic-effects-eg-neutrons), $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. Typically, $\lambda(E) \ll R$, so we can approximate $\sigma(E) \propto R^2$. However, at very low energies, neutrons behave more like waves than particles, and the de Broglie wavelength becomes larger than the nuclear radius. In this case, $\lambda(E)$ becomes the dominant term, resulting in $\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$.
+> From [the de Broglie wavelength equation for neutrons](/posts/Mass-and-Energy-Particles-and-Waves/#neglecting-relativistic-effects-eg-neutrons), $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. Typically, $\lambda(E) \ll R$, so we can ignore $\lambda(E)$ in the $\left(R+\lambda(E)\right)^2$ term and approximate $\sigma(E) \propto R^2$. However, at very low energies, neutrons behave more like waves than particles, and the de Broglie wavelength becomes larger than the nuclear radius. In this case, $\lambda(E)$ becomes the dominant term, and that approximation is no longer valid.
 {: .prompt-info }
 
 #### Resonance Region

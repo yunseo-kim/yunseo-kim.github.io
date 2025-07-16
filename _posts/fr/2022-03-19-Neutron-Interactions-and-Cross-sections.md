@@ -2,7 +2,7 @@
 title: Interactions des neutrons et sections efficaces
 description: Exploration des concepts de sections efficaces microscopiques et macroscopiques, des types d'interactions entre neutrons et noyaux atomiques, et analyse du comportement des neutrons selon leur énergie à travers les données réelles fournies par l'Institut de Recherche sur l'Énergie Atomique de Corée.
 categories: [Nuclear Engineering, Basis]
-tags: [Nuclear Physics, Interaction of Radiation with Matter]
+tags: [Nuclear Physics, Interaction of Radiation with Matter, Nuclear Reaction]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
@@ -96,13 +96,13 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 où $R$ est le rayon atomique.
 
 > **Pourquoi la section efficace de diffusion n'est pas constante aux très basses énergies**  
-> L'approximation ci-dessus est valable pour le carbone-12 dans la plage d'énergie d'environ 0,02 eV à 0,01 MeV. À des énergies encore plus basses, on observe que $\sigma_e \propto 1/E$ dans les données réelles.
+> L'approximation ci-dessus est valable pour le carbone-12 dans la plage d'énergie d'environ 0,02 eV à 0,01 MeV. À des énergies encore plus basses, on peut constater dans les données réelles que cette approximation n'est plus valide.
 >
 > Selon le **modèle de Ramsauer**, la relation entre la section efficace de diffusion et l'énergie des neutrons à basse énergie est :
 >
-> $$ \sigma(E) \propto \left(R+\lambda(E)\right)^2. $$
+> $$ \sigma(E) = 2\pi \left(R+\lambda(E)\right)^2(1-\alpha \cos\beta). $$
 >
-> D'après [l'équation de la longueur d'onde de de Broglie des neutrons](/posts/Mass-and-Energy-Particles-and-Waves/#en-négligeant-les-effets-relativistes-ex--neutron), $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. Généralement, $\lambda(E) \ll R$, ce qui permet d'approximer $\sigma(E) \propto R^2$. Cependant, à très basse énergie, le neutron se comporte davantage comme une onde que comme une particule, et sa longueur d'onde de de Broglie devient plus grande que le rayon atomique. Dans ce cas, $\lambda(E)$ devient le terme dominant, et $\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$.
+> D'après [l'équation de la longueur d'onde de de Broglie des neutrons](/posts/Mass-and-Energy-Particles-and-Waves/#en-négligeant-les-effets-relativistes-ex--neutron), $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. Généralement, $\lambda(E) \ll R$, ce qui permet de négliger $\lambda(E)$ dans le terme $\left(R+\lambda(E)\right)^2$ et d'approximer $\sigma(E) \propto R^2$. Cependant, à très basse énergie, le neutron se comporte davantage comme une onde que comme une particule, et sa longueur d'onde de de Broglie devient plus grande que le rayon atomique. Dans ce cas, $\lambda(E)$ devient le terme dominant et cette approximation n'est plus valide.
 {: .prompt-info }
 
 #### Région de résonance (resonance region)

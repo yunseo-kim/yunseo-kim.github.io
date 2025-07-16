@@ -2,7 +2,7 @@
 title: 중성자 상호작용과 반응단면적
 description: 미시적·거시적 단면적의 개념 및 원자핵과 중성자 간 상호작용 유형을 알아보고, 한국원자력연구원에서 제공하는 실제 단면적 데이터를 통해 중성자의 에너지 영역별 산란·흡수 거동을 살펴본다.
 categories: [Nuclear Engineering, Basis]
-tags: [Nuclear Physics, Interaction of Radiation with Matter]
+tags: [Nuclear Physics, Interaction of Radiation with Matter, Nuclear Reaction]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
@@ -96,13 +96,13 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 으로 주어진다.
 
 > **극저에너지 대역에서 산란 단면적이 상수가 아닌 이유**  
-> 위의 근사식은 탄소-12 기준 약 0.02eV에서 0.01MeV의 에너지 영역에서 유효하며, 그보다 더 낮은 극저에너지 대역에서는 $\sigma_e \propto 1/E$임을 위의 실제 데이터로부터 확인할 수 있다.
+> 위의 근사식은 탄소-12 기준 약 0.02eV에서 0.01MeV의 에너지 영역에서 유효하며, 그보다 더 낮은 극저에너지 대역에서는 맞지 않음을 위의 실제 데이터로부터 확인할 수 있다.
 >
 > **람사우어 모델(Ramsauer model)**에 따르면 저에너지 대역에서의 산란 단면적과 중성자 에너지 간에는 다음의 관계식이 성립한다.
 >
-> $$ \sigma(E) \propto \left(R+\lambda(E)\right)^2. $$
+> $$ \sigma(E) = 2\pi \left(R+\lambda(E)\right)^2(1-\alpha \cos\beta). $$
 >
-> [중성자의 드보로이 파장 식](/posts/Mass-and-Energy-Particles-and-Waves/#상대론적-효과를-무시할-경우eg-중성자)에 의해, 여기서 $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$이다. 대개의 경우 $\lambda(E) \ll R$이므로 $\lambda(E)$를 무시하고 $\sigma(E) \propto R^2$으로 근사할 수 있지만, 매우 낮은 에너지 대역에서는 중성자가 입자보다 파동에 더 가깝게 행동하며 드보로이 파장이 원자 반지름보다 커짐에 따라 $\lambda(E)$가 오히려 지배적인 항이 되어 $\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$이 된다.
+> [중성자의 드보로이 파장 식](/posts/Mass-and-Energy-Particles-and-Waves/#상대론적-효과를-무시할-경우eg-중성자)에 의해, 여기서 $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$이다. 대개의 경우 $\lambda(E) \ll R$이므로 $\left(R+\lambda(E)\right)^2$항에서 $\lambda(E)$를 무시하고 $\sigma(E) \propto R^2$으로 근사할 수 있지만, 매우 낮은 에너지 대역에서는 중성자가 입자보다 파동에 더 가깝게 행동하며 드보로이 파장이 원자 반지름보다 커짐에 따라 $\lambda(E)$가 오히려 지배적인 항이 되어 그러한 근사가 성립하지 않는다.
 {: .prompt-info }
 
 #### 공명 영역 (resonance region)

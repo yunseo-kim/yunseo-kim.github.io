@@ -2,7 +2,7 @@
 title: Neutronenwechselwirkungen und Wirkungsquerschnitte
 description: Wir untersuchen die Konzepte des mikroskopischen und makroskopischen Wirkungsquerschnitts sowie die Arten der Wechselwirkung zwischen Neutronen und Atomkernen, und analysieren das Streu- und Absorptionsverhalten von Neutronen in verschiedenen Energiebereichen anhand realer Daten des Korea Atomic Energy Research Institute.
 categories: [Nuclear Engineering, Basis]
-tags: [Nuclear Physics, Interaction of Radiation with Matter]
+tags: [Nuclear Physics, Interaction of Radiation with Matter, Nuclear Reaction]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
@@ -94,13 +94,13 @@ In diesem Bereich ist der elastische Streuungs-Wirkungsquerschnitt näherungswei
 $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 
 > **Warum der Streuungs-Wirkungsquerschnitt im extrem niedrigen Energiebereich nicht konstant ist**  
-> Die obige Näherungsformel gilt für Kohlenstoff-12 etwa im Bereich von 0,02 eV bis 0,01 MeV. In noch niedrigeren Energiebereichen zeigen die realen Daten, dass $\sigma_e \propto 1/E$ gilt.
+> Die obige Näherungsformel gilt für Kohlenstoff-12 etwa im Bereich von 0,02 eV bis 0,01 MeV. In noch niedrigeren Energiebereichen zeigen die realen Daten, dass diese Näherung nicht mehr zutrifft.
 >
 > Nach dem **Ramsauer-Modell (Ramsauer model)** besteht im niedrigen Energiebereich folgende Beziehung zwischen dem Streuungs-Wirkungsquerschnitt und der Neutronenenergie:
 >
-> $$ \sigma(E) \propto \left(R+\lambda(E)\right)^2. $$
+> $$ \sigma(E) = 2\pi \left(R+\lambda(E)\right)^2(1-\alpha \cos\beta). $$
 >
-> Gemäß der [de-Broglie-Wellenlängenformel für Neutronen](/posts/Mass-and-Energy-Particles-and-Waves/#ohne-berücksichtigung-relativistischer-effekte-zb-neutronen) gilt hier $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. In den meisten Fällen ist $\lambda(E) \ll R$, sodass $\lambda(E)$ vernachlässigt und $\sigma(E) \propto R^2$ angenommen werden kann. Bei sehr niedrigen Energien verhält sich das Neutron jedoch eher wie eine Welle als wie ein Teilchen, und die de-Broglie-Wellenlänge wird größer als der Atomradius. Dann wird $\lambda(E)$ zum dominierenden Term, und es gilt $\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$.
+> Gemäß der [de-Broglie-Wellenlängenformel für Neutronen](/posts/Mass-and-Energy-Particles-and-Waves/#ohne-berücksichtigung-relativistischer-effekte-zb-neutronen) gilt hier $\lambda(E) \propto \cfrac{1}{\sqrt{E}}$. In den meisten Fällen ist $\lambda(E) \ll R$, sodass im Term $\left(R+\lambda(E)\right)^2$ der Wert $\lambda(E)$ vernachlässigt und $\sigma(E) \propto R^2$ angenommen werden kann. Bei sehr niedrigen Energien verhält sich das Neutron jedoch eher wie eine Welle als wie ein Teilchen, und die de-Broglie-Wellenlänge wird größer als der Atomradius. Dann wird $\lambda(E)$ zum dominierenden Term, sodass diese Näherung nicht mehr gilt.
 {: .prompt-info }
 
 #### Resonanzbereich (resonance region)

@@ -2,7 +2,7 @@
 title: 中子交互作用與反應截面
 description: 探討微觀與宏觀截面的概念及原子核與中子間的交互作用類型，並透過韓國原子能研究院提供的實際截面數據，分析中子在不同能量區域的散射與吸收行為。
 categories: [Nuclear Engineering, Basis]
-tags: [Nuclear Physics, Interaction of Radiation with Matter]
+tags: [Nuclear Physics, Interaction of Radiation with Matter, Nuclear Reaction]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
@@ -94,13 +94,13 @@ $$ \begin{align*}
 $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 
 > **極低能量區域散射截面非常數的原因**  
-> 上述近似公式在碳-12約0.02eV到0.01MeV的能量範圍內有效，但在更低的極低能量區域，$\sigma_e \propto 1/E$，這可從上面的實際數據中確認。
+> 上述近似公式在碳-12約0.02eV到0.01MeV的能量範圍內有效，但在更低的極低能量區域，此公式不再適用，這可從上面的實際數據中確認。
 >
 > 根據**拉姆薩爾模型（Ramsauer model）**，低能區的散射截面與中子能量之間有以下關係：
 >
-> $$ \sigma(E) \propto \left(R+\lambda(E)\right)^2. $$
+> $$ \sigma(E) = 2\pi \left(R+\lambda(E)\right)^2(1-\alpha \cos\beta). $$
 >
-> 根據[中子的德布羅意波長公式](/posts/Mass-and-Energy-Particles-and-Waves/#忽略相對論效應的情況例如中子)，$\lambda(E) \propto \cfrac{1}{\sqrt{E}}$。通常 $\lambda(E) \ll R$，因此可忽略 $\lambda(E)$ 並近似為 $\sigma(E) \propto R^2$，但在極低能量區域，中子的行為更像波而非粒子，德布羅意波長大於原子半徑，使 $\lambda(E)$ 成為主導項，因此 $\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$。
+> 根據[中子的德布羅意波長公式](/posts/Mass-and-Energy-Particles-and-Waves/#忽略相對論效應的情況例如中子)，$\lambda(E) \propto \cfrac{1}{\sqrt{E}}$。通常 $\lambda(E) \ll R$，因此可在 $\left(R+\lambda(E)\right)^2$ 項中忽略 $\lambda(E)$ 並近似為 $\sigma(E) \propto R^2$，但在極低能量區域，中子的行為更像波而非粒子，德布羅意波長大於原子半徑，使 $\lambda(E)$ 成為主導項，因此該近似不再成立。
 {: .prompt-info }
 
 #### 共振區（resonance region）

@@ -2,7 +2,7 @@
 title: 中性子相互作用と反応断面積
 description: ミクロ・マクロ断面積の概念と原子核と中性子間の相互作用タイプを学び、韓国原子力研究院が提供する実際の断面積データを通じて中性子のエネルギー領域別散乱・吸収挙動を考察する。
 categories: [Nuclear Engineering, Basis]
-tags: [Nuclear Physics, Interaction of Radiation with Matter]
+tags: [Nuclear Physics, Interaction of Radiation with Matter, Nuclear Reaction]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
@@ -96,13 +96,13 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 で与えられる。
 
 > **極低エネルギー帯で散乱断面積が定数でない理由**  
-> 上記の近似式は炭素-12基準で約0.02eVから0.01MeVのエネルギー領域で有効であり、それより低い極低エネルギー帯では$\sigma_e \propto 1/E$であることを上記の実際のデータから確認できる。
+> 上記の近似式は炭素-12基準で約0.02eVから0.01MeVのエネルギー領域で有効であり、それより低い極低エネルギー帯では成立しないことを上記の実際のデータから確認できる。
 >
 > **ラムザウアーモデル(Ramsauer model)**によれば低エネルギー帯での散乱断面積と中性子エネルギー間には次の関係式が成立する。
 >
-> $$ \sigma(E) \propto \left(R+\lambda(E)\right)^2. $$
+> $$ \sigma(E) = 2\pi \left(R+\lambda(E)\right)^2(1-\alpha \cos\beta). $$
 >
-> [中性子のドブロイ波長式](/posts/Mass-and-Energy-Particles-and-Waves/#相対論的効果を無視する場合例中性子)により、ここで$\lambda(E) \propto \cfrac{1}{\sqrt{E}}$である。通常$\lambda(E) \ll R$なので$\lambda(E)$を無視して$\sigma(E) \propto R^2$と近似できるが、非常に低いエネルギー帯では中性子が粒子より波動に近い振る舞いをし、ドブロイ波長が原子半径より大きくなるにつれて$\lambda(E)$がむしろ支配的な項となり、$\sigma(E) \propto \lambda(E)^2 \propto \cfrac{1}{E}$となる。
+> [中性子のドブロイ波長式](/posts/Mass-and-Energy-Particles-and-Waves/#相対論的効果を無視する場合例中性子)により、ここで$\lambda(E) \propto \cfrac{1}{\sqrt{E}}$である。通常$\lambda(E) \ll R$なので$\left(R+\lambda(E)\right)^2$項で$\lambda(E)$を無視して$\sigma(E) \propto R^2$と近似できるが、非常に低いエネルギー帯では中性子が粒子より波動に近い振る舞いをし、ドブロイ波長が原子半径より大きくなるにつれて$\lambda(E)$がむしろ支配的な項となり、そのような近似が成立しない。
 {: .prompt-info }
 
 #### 共鳴領域 (resonance region)
