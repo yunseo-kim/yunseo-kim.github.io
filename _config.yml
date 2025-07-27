@@ -159,7 +159,7 @@ baseurl: ""
 # Polyglot Settings
 languages: ["en", "ko", "ja", "zh-TW", "es", "pt-BR", "fr", "de"]
 default_lang: "en"
-exclude_from_localization: ["javascript", "images", "css", "public", "assets", "sitemap"]
+exclude_from_localization: ["javascript", "images", "css", "public", "assets", "sitemap.xml"]
 parallel_localization: false
 lang_from_path: true
 
