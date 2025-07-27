@@ -38,6 +38,15 @@ layout: content
           {%- endfor %}
         </url>
       {% endif %}
+    {%- elsif site.default_lang -%}
+        <url>
+          <loc>{{ node.url | absolute_url }}</loc>
+      {% if node.last_modified_at and node.last_modified_at != node.date -%}
+          <lastmod>{{ node.last_modified_at | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+      {%- elsif node.date -%}
+          <lastmod>{{ node.date | date: '%Y-%m-%dT%H:%M:%S%:z' }}</lastmod>
+      {% endif -%}
+        </url>
     {%- endunless -%}
   {% endfor %}
 
