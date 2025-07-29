@@ -11,14 +11,6 @@
 
   <meta http-equiv="Content-Language" content="{{site.active_lang}}">
 
-  {% if site.active_lang == site.default_lang -%}
-  <link rel="canonical"
-    href="{{site.url}}{{page.url}}" />
-  {%- else -%}
-  <link rel="canonical"
-    href="{{site.url}}/{{site.active_lang}}{{page.url}}" />
-  {%- endif %}
-
   {% if site.default_lang -%}
   <link rel="alternate" hreflang="{{site.default_lang}}" href="{{site.url}}{{page.url}}" />
   {%- endif -%}
@@ -38,10 +30,10 @@
 
   <!-- Setup Open Graph image -->
 
-  {%- if page.image -%}
-    {%- assign src = page.image.path | default: page.image -%}
+  {% if page.image -%}
+    {% assign src = page.image.path | default: page.image %}
 
-    {%- unless src contains '://' -%}
+    {% unless src contains '://' -%}
       {%- capture img_url -%}
         {% include media-url.html src=src subpath=page.media_subpath absolute=true %}
       {%- endcapture -%}
@@ -49,12 +41,12 @@
       {%- capture old_url -%}{{ src | absolute_url }}{%- endcapture -%}
       {%- capture new_url -%}{{ img_url }}{%- endcapture -%}
 
-      {%- assign seo_tags = seo_tags | replace: old_url, new_url -%}
-    {%- endunless -%}
+      {% assign seo_tags = seo_tags | replace: old_url, new_url %}
+    {%- endunless %}
 
-  {%- elsif site.social_preview_image -%}
+  {% elsif site.social_preview_image %}
     {%- capture img_url -%}
-      {%- include media-url.html src=site.social_preview_image absolute=true -%}
+      {% include media-url.html src=site.social_preview_image absolute=true %}
     {%- endcapture -%}
 
     {%- capture og_image -%}
@@ -66,10 +58,41 @@
       <meta property="twitter:image" content="{{ img_url }}" />
     {%- endcapture -%}
 
-    {%- assign old_meta_clip = '<meta name="twitter:card" content="summary" />' -%}
-    {%- assign new_meta_clip = og_image | append: twitter_image -%}
-    {%- assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip -%}
-  {%- endif %}
+    {% assign old_meta_clip = '<meta name="twitter:card" content="summary" />' %}
+    {% assign new_meta_clip = og_image | append: twitter_image %}
+    {% assign seo_tags = seo_tags | replace: old_meta_clip, new_meta_clip %}
+  {% endif %}
+
+  {%- capture old_og_locale -%}
+    <meta property="og:locale" content="{{site.lang}}" />
+  {%- endcapture -%}
+  {%- capture new_og_locale -%}
+    <meta property="og:locale" content="{{site.active_lang}}" />
+    {% for lang in site.languages -%}
+      {%- if lang == site.active_lang -%}
+        {%- continue -%}
+      {%- endif %}
+    <meta property="og:locale:alternate" content="{{lang}}" />
+    {%- endfor %}
+  {%- endcapture -%}
+  {% assign seo_tags = seo_tags | replace: old_og_locale, new_og_locale %}
+  
+  {% unless site.active_lang == site.default_lang -%}
+    {%- capture old_canonical_link -%}
+      <link rel="canonical" href="{{site.url}}{{page.url}}" />
+    {%- endcapture -%}
+    {%- capture old_og_url -%}
+      <meta property="og:url" content="{{site.url}}{{page.url}}" />
+    {%- endcapture -%}
+    {%- capture new_canonical_link -%}
+      <link rel="canonical" href="{{site.url}}/{{site.active_lang}}{{page.url}}" />
+    {%- endcapture -%}
+    {%- capture new_og_url -%}
+      <meta property="og:url" content="{{site.url}}/{{site.active_lang}}{{page.url}}" />
+    {%- endcapture -%}
+    {% assign seo_tags = seo_tags | replace: old_canonical_link, new_canonical_link %}
+    {% assign seo_tags = seo_tags | replace: old_og_url, new_og_url %}
+  {%- endunless %}
 
   {{ seo_tags }}
 
@@ -84,12 +107,12 @@
 
   <!-- Resource Hints -->
   {% unless site.assets.self_host.enabled -%}
-    {%- for hint in site.data.origin.cors.resource_hints -%}
-      {%- for link in hint.links -%}
+    {% for hint in site.data.origin.cors.resource_hints %}
+      {% for link in hint.links %}
         <link rel="{{ link.rel }}" href="{{ hint.url }}" {{ link.opts | join: ' ' }}>
-      {%- endfor -%}
-    {%- endfor -%}
-  {%- endunless %}
+      {% endfor %}
+    {% endfor %}
+  {% endunless %}
 
   <!-- Bootstrap -->
   {% unless jekyll.environment == 'production' -%}
@@ -113,7 +136,7 @@
 
   <!-- 3rd-party Dependencies -->
 
-  {%- if site.toc and page.toc -%}
+  {% if site.toc and page.toc -%}
     <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | relative_url }}">
   {%- endif %}
 
@@ -123,7 +146,7 @@
 
   {% if page.layout == 'page' or page.layout == 'post' -%}
     <!-- Image Popup -->
-    <link rel="stylesheet" href="{{ site.data.origin[type].glightbox.css | relative_url }}">
+  <link rel="stylesheet" href="{{ site.data.origin[type].glightbox.css | relative_url }}">
   {%- endif %}
 
   <!-- Scripts -->
@@ -145,9 +168,9 @@
     {% for analytics in site.analytics -%}
       {%- capture str -%}{{ analytics }}{%- endcapture -%}
       {%- assign platform = str | split: '{' | first -%}
-      {%- if site.analytics[platform].id and site.analytics[platform].id != empty -%}
+      {% if site.analytics[platform].id and site.analytics[platform].id != empty -%}
         {% include analytics/{{ platform }}.html %}
-      {%- endif -%}
+      {%- endif %}
     {%- endfor %}
   {%- endif %}
 
