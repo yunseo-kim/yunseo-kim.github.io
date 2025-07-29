@@ -9,17 +9,17 @@ mermaid: true
 image: /assets/img/technology.webp
 ---
 ## 개요
-약 4달 전인 [인류력](https://en.wikipedia.org/wiki/Holocene_calendar) 12024년 7월 초, Jekyll 기반으로 Github Pages를 통해 호스팅 중인 본 블로그에 [Polyglot](https://github.com/untra/polyglot) 플러그인을 적용하여 다국어 지원 구현을 추가하였다.
+약 4달 전인 12024년 7월 초, Jekyll 기반으로 Github Pages를 통해 호스팅 중인 본 블로그에 [Polyglot](https://github.com/untra/polyglot) 플러그인을 적용하여 다국어 지원 구현을 추가하였다.
 이 시리즈는 Chirpy 테마에 Polyglot 플러그인을 적용하는 과정에서 발생한 버그와 그 해결 과정, 그리고 SEO를 고려한 html 헤더와 sitemap.xml 작성법을 공유한다.
 시리즈는 2개의 글로 이루어져 있으며, 읽고 있는 이 글은 해당 시리즈의 두 번째 글이다.
 - 1편: [Polyglot 플러그인 적용 & hreflang alt 태그 및 sitemap, 언어 선택 버튼 구현](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
 - 2편: Chirpy 테마 빌드 실패 및 검색 기능 오류 트러블슈팅 (본문)
 
-## 요구사항
+## 요구조건
 - [x] 빌드한 결과물(웹페이지)을 언어별 경로(ex. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath})로 구분하여 제공할 수 있어야 한다.
 - [x] 다국어 지원에 추가적으로 소요되는 시간과 노력을 가능한 최소화하기 위해, 작성한 원본 마크다운 파일의 YAML front matter에 'lang' 및 'permalink' 태그를 일일이 지정해 주지 않아도 빌드 시 해당 파일이 위치한 로컬 경로(ex. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath})에 따라 자동으로 언어를 인식할 수 있어야 한다.
-- [x] 사이트 내 각 페이지의 헤더 부분은 적절한 Content-Language 메타 태그와 hreflang 대체 태그를 포함하여 구글 다국어 검색을 위한 SEO 가이드라인을 충족해야 한다.
-- [x] 사이트 내에서 각 언어를 지원하는 모든 페이지 링크를 누락 없이 `sitemap.xml`{: .filepath}에서 제공할 수 있어야 하며, `sitemap.xml`{: .filepath} 자체는 중복 없이 루트 경로에 하나만 존재하여야 한다.
+- [x] 사이트 내 각 페이지의 헤더 부분은 적절한 Content-Language 메타 태그와 hreflang 대체 태그, canonical 링크를 포함하여 다국어 검색을 위한 Google SEO 가이드라인을 충족해야 한다.
+- [x] 사이트 내에서 각 언어 버전별 페이지 링크를 누락 없이 `sitemap.xml`{: .filepath}로 제공할 수 있어야 하며, `sitemap.xml`{: .filepath} 자체는 중복 없이 루트 경로에 하나만 존재하여야 한다.
 - [x] [Chirpy 테마](https://github.com/cotes2020/jekyll-theme-chirpy)에서 제공하는 모든 기능은 각 언어 페이지에서 정상 작동해야 하며, 그렇지 않다면 정상 작동하게끔 수정해야 한다.
   - [x] 'Recently Updated', 'Trending Tags' 기능 정상 작동
   - [x] GitHub Actions를 이용한 빌드 과정에서 에러가 발생하지 않을 것

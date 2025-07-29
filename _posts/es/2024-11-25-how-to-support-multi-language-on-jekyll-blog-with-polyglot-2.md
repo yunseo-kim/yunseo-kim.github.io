@@ -7,17 +7,17 @@ mermaid: true
 image: /assets/img/technology.webp
 ---
 ## Introducción
-Hace aproximadamente 4 meses, a principios de julio del [calendario holóceno](https://en.wikipedia.org/wiki/Holocene_calendar) 12024, implementé soporte multilingüe en este blog basado en Jekyll y alojado a través de Github Pages utilizando el plugin [Polyglot](https://github.com/untra/polyglot).
+Hace aproximadamente 4 meses, a principios de julio de 12024, implementé soporte multilingüe en este blog basado en Jekyll y alojado a través de Github Pages utilizando el plugin [Polyglot](https://github.com/untra/polyglot).
 Esta serie comparte los errores encontrados durante el proceso de aplicación del plugin Polyglot al tema Chirpy, sus soluciones, y cómo escribir encabezados html y sitemap.xml considerando el SEO.
 La serie consta de 2 artículos, y este es el segundo artículo de la serie.
 - Parte 1: [Aplicación del plugin Polyglot e implementación de etiquetas hreflang alt, sitemap y botón de selección de idioma](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
 - Parte 2: Solución de problemas de fallos en la compilación del tema Chirpy y errores en la función de búsqueda (este artículo)
 
-## Requisitos
+## Requisitos previos
 - [x] El resultado de la compilación (página web) debe proporcionar contenido separado por rutas de idioma (ej. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
 - [x] Para minimizar el tiempo y esfuerzo adicional requerido para el soporte multilingüe, el sistema debe reconocer automáticamente el idioma según la ruta local donde se encuentra el archivo markdown original (ej. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}), sin necesidad de especificar manualmente las etiquetas 'lang' y 'permalink' en el YAML front matter.
-- [x] El encabezado de cada página del sitio debe incluir las etiquetas meta Content-Language y hreflang alternativas adecuadas para cumplir con las directrices de SEO para búsquedas multilingües de Google.
-- [x] El `sitemap.xml`{: .filepath} debe incluir enlaces a todas las páginas en todos los idiomas soportados sin omisiones, y debe existir un único archivo `sitemap.xml`{: .filepath} en la ruta raíz sin duplicados.
+- [x] El encabezado de cada página del sitio debe incluir las etiquetas meta Content-Language y hreflang alternativas adecuadas, así como enlaces canonical para cumplir con las directrices de SEO de Google para búsquedas multilingües.
+- [x] El `sitemap.xml`{: .filepath} debe incluir enlaces a todas las páginas de cada versión de idioma sin omisiones, y debe existir un único archivo `sitemap.xml`{: .filepath} en la ruta raíz sin duplicados.
 - [x] Todas las funcionalidades proporcionadas por el [tema Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) deben funcionar correctamente en las páginas de cada idioma, o deben modificarse para que funcionen correctamente.
   - [x] Funcionamiento correcto de 'Recently Updated' y 'Trending Tags'
   - [x] Sin errores durante el proceso de compilación utilizando GitHub Actions

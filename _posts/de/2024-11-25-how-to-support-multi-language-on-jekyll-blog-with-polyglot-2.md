@@ -7,17 +7,17 @@ mermaid: true
 image: /assets/img/technology.webp
 ---
 ## Übersicht
-Vor etwa 4 Monaten, Anfang Juli 12024 im [Holozän-Kalender](https://en.wikipedia.org/wiki/Holocene_calendar), habe ich das [Polyglot](https://github.com/untra/polyglot)-Plugin in meinem Jekyll-basierten Blog, der über GitHub Pages gehostet wird, implementiert, um mehrsprachige Unterstützung hinzuzufügen.
+Vor etwa 4 Monaten, Anfang Juli 12024, habe ich das [Polyglot](https://github.com/untra/polyglot)-Plugin in meinem Jekyll-basierten Blog, der über GitHub Pages gehostet wird, implementiert, um mehrsprachige Unterstützung hinzuzufügen.
 Diese Serie teilt den Prozess der Implementierung des Polyglot-Plugins im Chirpy-Theme, die dabei aufgetretenen Bugs und deren Lösungen sowie die Erstellung von HTML-Headern und sitemap.xml unter Berücksichtigung von SEO.
 Die Serie besteht aus zwei Beiträgen, und dieser Beitrag ist der zweite Teil.
 - Teil 1: [Anwendung des Polyglot-Plugins & Implementierung von hreflang-Alt-Tags, Sitemap und Sprachauswahl-Button](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
 - Teil 2: Fehlerbehebung bei Build-Fehlern und Suchfunktionsproblemen im Chirpy-Theme (dieser Beitrag)
 
-## Anforderungen
+## Bedingungen
 - [x] Die gebaute Website sollte Inhalte in sprachspezifischen Pfaden (z.B. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}) bereitstellen können.
 - [x] Um den zusätzlichen Zeit- und Arbeitsaufwand für die mehrsprachige Unterstützung zu minimieren, sollte das System automatisch die Sprache basierend auf dem lokalen Pfad der Markdown-Dateien (z.B. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) erkennen können, ohne dass 'lang' und 'permalink' Tags im YAML-Front-Matter jeder Datei manuell angegeben werden müssen.
-- [x] Der Header jeder Seite sollte geeignete Content-Language-Meta-Tags und hreflang-Alternativ-Tags enthalten, um die SEO-Richtlinien von Google für mehrsprachige Suche zu erfüllen.
-- [x] Die `sitemap.xml`{: .filepath} sollte alle Links zu allen sprachunterstützten Seiten ohne Auslassungen enthalten und sollte selbst nur einmal im Root-Verzeichnis existieren, ohne Duplikate.
+- [x] Der Header jeder Seite sollte geeignete Content-Language-Meta-Tags, hreflang-Alternativ-Tags und kanonische Links enthalten, um die SEO-Richtlinien von Google für mehrsprachige Suche zu erfüllen.
+- [x] Die `sitemap.xml`{: .filepath} sollte die Links zu den Seiten in jeder Sprachversion ohne Auslassungen enthalten und sollte selbst nur einmal im Root-Verzeichnis existieren, ohne Duplikate.
 - [x] Alle Funktionen des [Chirpy-Themes](https://github.com/cotes2020/jekyll-theme-chirpy) sollten auf jeder Sprachseite normal funktionieren, oder andernfalls entsprechend angepasst werden.
   - [x] 'Recently Updated', 'Trending Tags' Funktionen funktionieren normal
   - [x] Keine Fehler während des Build-Prozesses mit GitHub Actions

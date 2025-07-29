@@ -7,17 +7,17 @@ mermaid: true
 image: /assets/img/technology.webp
 ---
 ## 概述
-大約4個月前，也就是[人類紀元](https://en.wikipedia.org/wiki/Holocene_calendar) 12024年7月初，我在透過Github Pages託管的Jekyll部落格上應用了[Polyglot](https://github.com/untra/polyglot)外掛來實現多語言支援。
+大約4個月前，也就是 12024年7月初，我在透過Github Pages託管的Jekyll部落格上應用了[Polyglot](https://github.com/untra/polyglot)外掛來實現多語言支援。
 這個系列分享了在Chirpy主題上應用Polyglot外掛過程中遇到的錯誤及其解決方法，以及考慮SEO的html標頭和sitemap.xml編寫方法。
 本系列共有兩篇文章，您正在閱讀的是系列中的第二篇。
 - 第1篇：[Polyglot外掛程式應用 & 實現hreflang alt標籤、sitemap及語言選擇按鈕](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
 - 第2篇：Chirpy主題構建失敗及搜尋功能錯誤故障排除（本文）
 
-## 需求
+## 需求條件
 - [x] 構建的結果（網頁）應按語言路徑（例如 `/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）分類提供。
 - [x] 為了盡量減少多語言支援所需的額外時間和精力，不必在原始markdown文件的YAML front matter中逐一指定'lang'和'permalink'標籤，而是在構建時根據文件所在的本地路徑（例如 `/_posts/ko/`{: .filepath}、`/_posts/ja/`{: .filepath}）自動識別語言。
-- [x] 網站中每個頁面的標頭部分應包含適當的Content-Language元標籤和hreflang替代標籤，以滿足Google多語言搜尋的SEO指南。
-- [x] 網站中支援每種語言的所有頁面連結應完整地在`sitemap.xml`{: .filepath}中提供，而`sitemap.xml`{: .filepath}本身應只存在於根路徑中，不得重複。
+- [x] 網站中每個頁面的標頭部分應包含適當的Content-Language元標籤、hreflang替代標籤和canonical連結，以滿足Google多語言搜尋的SEO指南。
+- [x] 網站中每個語言版本的頁面連結應完整地在`sitemap.xml`{: .filepath}中提供，而`sitemap.xml`{: .filepath}本身應只存在於根路徑中，不得重複。
 - [x] [Chirpy主題](https://github.com/cotes2020/jekyll-theme-chirpy)提供的所有功能應在各語言頁面中正常運作，如果不正常，則需進行修改使其正常運作。
   - [x] 'Recently Updated'、'Trending Tags'功能正常運作
   - [x] 使用GitHub Actions構建過程中不出現錯誤
