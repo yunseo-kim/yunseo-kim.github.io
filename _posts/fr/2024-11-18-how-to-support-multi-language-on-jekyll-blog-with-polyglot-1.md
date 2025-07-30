@@ -1,6 +1,6 @@
 ---
 title: Comment prendre en charge plusieurs langues sur un blog Jekyll avec Polyglot (1) - Application du plugin Polyglot & implémentation des balises alt hreflang, sitemap et bouton de sélection de langue
-description: Présentation du processus d'implémentation du support multilingue en appliquant le plugin Polyglot à un blog Jekyll basé sur le thème 'jekyll-theme-chirpy'. Ce post est le premier article de cette série, couvrant l'application du plugin Polyglot et la modification des en-têtes HTML et du sitemap.
+description: 'Présentation du processus d''implémentation du support multilingue en appliquant le plugin Polyglot à un blog Jekyll basé sur le thème ''jekyll-theme-chirpy''. Ce post est le premier article de cette série, couvrant l''application du plugin Polyglot et la modification des en-têtes HTML et du sitemap.'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
@@ -12,7 +12,7 @@ Il y a environ 4 mois, début juillet 12024, j'ai ajouté l'implémentation du s
 Cette série partage les bugs rencontrés lors de l'application du plugin Polyglot au thème Chirpy et leur processus de résolution, ainsi que les méthodes de rédaction des en-têtes HTML et du sitemap.xml en tenant compte du SEO.
 La série se compose de 2 articles, et cet article que vous lisez est le premier de cette série.
 - Partie 1 : Application du plugin Polyglot & implémentation des balises alt hreflang, sitemap et bouton de sélection de langue (cet article)
-- Partie 2 : [Dépannage des échecs de build du thème Chirpy et des erreurs de fonction de recherche](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+- Partie 2 : [Résolution des problèmes de compilation du thème Chirpy et des erreurs de recherche](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
 
 ## Exigences
 - [x] Le résultat du build (page web) doit pouvoir être fourni en séparant les chemins par langue (ex. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).

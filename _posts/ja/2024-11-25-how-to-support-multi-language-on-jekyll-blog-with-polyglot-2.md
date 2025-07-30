@@ -1,24 +1,24 @@
 ---
-title: Polyglotを使用してJekyllブログで多言語サポートを実装する方法（2）- Chirpyテーマのビルド失敗と検索機能エラーのトラブルシューティング
-description: '''jekyll-theme-chirpy''ベースのJekyllブログにPolyglotプラグインを適用して多言語サポートを実装した過程を紹介します。この投稿はシリーズの2番目の記事で、Chirpyテーマに Polyglot適用時に発生したエラーの原因を特定し解決する部分を扱います。'
+title: PolyglotでJekyllブログの多言語対応を実現する方法 （2）- Chirpyテーマのビルド失敗と検索機能エラーのトラブルシューティング
+description: '''jekyll-theme-chirpy''ベースのJekyllブログにPolyglotプラグインを適用して多言語対応を実装した過程を紹介する。この投稿はシリーズの2番目の記事で、Chirpyテーマに Polyglot適用時に発生したエラーの原因を特定し解決する部分を扱います。'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 mermaid: true
 image: /assets/img/technology.webp
 ---
 ## 概要
-約4ヶ月前の12024年7月初め、Jekyll基盤でGithub Pagesを通じてホスティングしているこのブログに[Polyglot](https://github.com/untra/polyglot)プラグインを適用して多言語サポートを実装しました。
-このシリーズでは、Chirpyテーマにポリグロットプラグインを適用する過程で発生したバグとその解決過程、そしてSEOを考慮したHTMLヘッダーとsitemap.xmlの作成方法を共有します。
-シリーズは2つの記事で構成されており、現在読んでいるこの記事はそのシリーズの2番目の記事です。
-- 第1回：[Polyglotプラグインの適用 & hreflang altタグおよびsitemap、言語選択ボタンの実装](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
-- 第2回：Chirpyテーマのビルド失敗と検索機能エラーのトラブルシューティング（本文）
+約4ヶ月前の12024年7月初旬、Jekyll基盤でGitHub Pagesを通じてホスティング中の本ブログに[Polyglot](https://github.com/untra/polyglot)プラグインを適用して多言語対応実装を追加した。
+このシリーズはChirpyテーマにPolyglotプラグインを適用する過程で発生したバグとその解決過程、そしてSEOを考慮したhtmlヘッダーとsitemap.xmlの作成法を共有する。
+シリーズは2つの記事で構成されており、現在読んでいるこの記事はそのシリーズの2番目の記事である。
+- 1編：[Polyglotプラグインの適用 & hreflang altタグ及びsitemap、言語選択ボタンの実装](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
+- 2編：Chirpyテーマビルド失敗及び検索機能エラーのトラブルシューティング（本文）
 
 ## 要求条件
-- [x] ビルドした結果（ウェブページ）を言語別のパス（例：`/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）で区分して提供できること。
-- [x] 多言語サポートに追加的に必要な時間と労力を可能な限り最小化するために、作成したオリジナルのマークダウンファイルのYAML front matterに'lang'および'permalink'タグを一つ一つ指定しなくても、ビルド時にそのファイルが位置するローカルパス（例：`/_posts/ko/`{: .filepath}、`/_posts/ja/`{: .filepath}）に応じて自動的に言語を認識できること。
-- [x] サイト内の各ページのヘッダー部分は適切なContent-Languageメタタグとhreflang代替タグ、canonical リンクを含め、多言語検索のためのGoogle SEOガイドラインを満たすこと。
-- [x] サイト内で各言語バージョン別のページリンクを漏れなく`sitemap.xml`{: .filepath}で提供でき、`sitemap.xml`{: .filepath}自体は重複なくルートパスに一つだけ存在すること。
-- [x] [Chirpyテーマ](https://github.com/cotes2020/jekyll-theme-chirpy)で提供するすべての機能が各言語ページで正常に動作すること。そうでない場合は正常に動作するように修正すること。
+- [x] ビルドした結果物（ウェブページ）を言語別パス（例：`/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）で区分して提供できなければならない。
+- [x] 多言語対応に追加的に要する時間と労力を可能な限り最小化するため、作成した原本マークダウンファイルのYAML front matterに'lang'及び'permalink'タグを一々指定しなくても、ビルド時に該当ファイルが位置するローカルパス（例：`/_posts/ko/`{: .filepath}、`/_posts/ja/`{: .filepath}）に応じて自動的に言語を認識できなければならない。
+- [x] サイト内各ページのヘッダー部分は適切なContent-Languageメタタグとhreflang代替タグ、canonical linkを含んで多言語検索のためのGoogle SEOガイドラインを満たさなければならない。
+- [x] サイト内で各言語バージョン別ページリンクを漏れなく`sitemap.xml`{: .filepath}で提供できなければならず、`sitemap.xml`{: .filepath}自体は重複なくルートパスに一つだけ存在しなければならない。
+- [x] [Chirpyテーマ](https://github.com/cotes2020/jekyll-theme-chirpy)で提供するすべての機能は各言語ページで正常動作しなければならず、そうでなければ正常動作するよう修正しなければならない。
   - [x] 'Recently Updated'、'Trending Tags'機能の正常動作
   - [x] GitHub Actionsを利用したビルド過程でエラーが発生しないこと
   - [x] ブログ右上の投稿検索機能の正常動作

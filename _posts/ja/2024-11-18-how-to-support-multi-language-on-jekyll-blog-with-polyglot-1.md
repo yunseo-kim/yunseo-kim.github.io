@@ -1,6 +1,6 @@
 ---
 title: PolyglotでJekyllブログの多言語対応を実現する方法 (1) - Polyglotプラグインの適用 & hreflang altタグ及びsitemap、言語選択ボタンの実装
-description: '''jekyll-theme-chirpy''ベースのJekyllブログにPolyglotプラグインを適用して多言語対応を実装した過程を紹介する。この投稿は該当シリーズの最初の記事として、Polyglotプラグインを適用し、htmlヘッダーとsitemapを修正する部分を扱う。
+description: '''jekyll-theme-chirpy''ベースのJekyllブログにPolyglotプラグインを適用して多言語対応を実装した過程を紹介する。この投稿は該当シリーズの最初の記事として、Polyglotプラグインを適用し、htmlヘッダーとsitemapを修正する部分を扱う。'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp

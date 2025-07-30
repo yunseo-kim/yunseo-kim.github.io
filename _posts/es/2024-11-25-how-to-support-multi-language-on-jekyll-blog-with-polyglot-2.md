@@ -1,27 +1,27 @@
 ---
 title: Cómo implementar soporte multilingüe en un blog Jekyll con Polyglot (2) - Solución de problemas de fallos en la compilación del tema Chirpy y errores en la función de búsqueda
-description: 'Presentamos el proceso de implementación del soporte multilingüe en un blog Jekyll basado en ''jekyll-theme-chirpy'' utilizando el plugin Polyglot. Esta entrada es la segunda parte de la serie, que aborda la identificación y resolución de errores que surgen al aplicar Polyglot al tema Chirpy.'
+description: 'Presenta el proceso de implementación de soporte multilingüe aplicando el plugin Polyglot a un blog Jekyll basado en ''jekyll-theme-chirpy''. Esta entrada es la segunda parte de la serie, que aborda la identificación y resolución de errores que surgen al aplicar Polyglot al tema Chirpy.'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 mermaid: true
 image: /assets/img/technology.webp
 ---
 ## Introducción
-Hace aproximadamente 4 meses, a principios de julio de 12024, implementé soporte multilingüe en este blog basado en Jekyll y alojado a través de Github Pages utilizando el plugin [Polyglot](https://github.com/untra/polyglot).
-Esta serie comparte los errores encontrados durante el proceso de aplicación del plugin Polyglot al tema Chirpy, sus soluciones, y cómo escribir encabezados html y sitemap.xml considerando el SEO.
+Hace aproximadamente 4 meses, a principios de julio de 12024, implementé soporte multilingüe en este blog basado en Jekyll y alojado en GitHub Pages aplicando el plugin [Polyglot](https://github.com/untra/polyglot).
+Esta serie comparte los bugs encontrados durante el proceso de aplicación del plugin Polyglot al tema Chirpy y su proceso de resolución, así como métodos para escribir headers HTML y sitemap.xml considerando SEO.
 La serie consta de 2 artículos, y este es el segundo artículo de la serie.
-- Parte 1: [Aplicación del plugin Polyglot e implementación de etiquetas hreflang alt, sitemap y botón de selección de idioma](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
-- Parte 2: Solución de problemas de fallos en la compilación del tema Chirpy y errores en la función de búsqueda (este artículo)
+- Parte 1: [Aplicación del plugin Polyglot e implementación de etiquetas alt hreflang, sitemap y botón de selección de idioma](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)
+- Parte 2: Solución de problemas de fallo de compilación del tema Chirpy y errores en la función de búsqueda (este artículo)
 
-## Requisitos previos
-- [x] El resultado de la compilación (página web) debe proporcionar contenido separado por rutas de idioma (ej. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
-- [x] Para minimizar el tiempo y esfuerzo adicional requerido para el soporte multilingüe, el sistema debe reconocer automáticamente el idioma según la ruta local donde se encuentra el archivo markdown original (ej. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}), sin necesidad de especificar manualmente las etiquetas 'lang' y 'permalink' en el YAML front matter.
-- [x] El encabezado de cada página del sitio debe incluir las etiquetas meta Content-Language y hreflang alternativas adecuadas, así como enlaces canonical para cumplir con las directrices de SEO de Google para búsquedas multilingües.
-- [x] El `sitemap.xml`{: .filepath} debe incluir enlaces a todas las páginas de cada versión de idioma sin omisiones, y debe existir un único archivo `sitemap.xml`{: .filepath} en la ruta raíz sin duplicados.
-- [x] Todas las funcionalidades proporcionadas por el [tema Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) deben funcionar correctamente en las páginas de cada idioma, o deben modificarse para que funcionen correctamente.
-  - [x] Funcionamiento correcto de 'Recently Updated' y 'Trending Tags'
-  - [x] Sin errores durante el proceso de compilación utilizando GitHub Actions
-  - [x] Funcionamiento correcto de la función de búsqueda en la esquina superior derecha del blog
+## Requisitos
+- [x] Debe poder proporcionar el resultado de la compilación (páginas web) separado por rutas de idioma (ej. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
+- [x] Para minimizar el tiempo y esfuerzo adicional requerido para el soporte multiidioma, debe poder reconocer automáticamente el idioma según la ruta local donde se encuentra el archivo (ej. `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}) durante la compilación, sin necesidad de especificar manualmente las etiquetas 'lang' y 'permalink' en el YAML front matter de cada archivo markdown original.
+- [x] La sección header de cada página del sitio debe incluir etiquetas meta Content-Language apropiadas, etiquetas alternativas hreflang y enlaces canónicos para cumplir con las directrices SEO de Google para búsquedas multiidioma.
+- [x] Debe poder proporcionar enlaces de páginas para cada versión de idioma del sitio sin omisiones en `sitemap.xml`{: .filepath}, y el propio `sitemap.xml`{: .filepath} debe existir solo uno en la ruta raíz sin duplicados.
+- [x] Todas las funciones proporcionadas por el [tema Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) deben funcionar normalmente en cada página de idioma, y si no es así, deben ser corregidas para funcionar normalmente.
+  - [x] Funcionamiento normal de las funciones 'Recently Updated' y 'Trending Tags'
+  - [x] No debe ocurrir errores durante el proceso de compilación usando GitHub Actions
+  - [x] Funcionamiento normal de la función de búsqueda de posts en la esquina superior derecha del blog
 
 ## Antes de empezar
 Este artículo es una continuación de la [Parte 1](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1), por lo que se recomienda leer el artículo anterior primero si aún no lo has hecho.

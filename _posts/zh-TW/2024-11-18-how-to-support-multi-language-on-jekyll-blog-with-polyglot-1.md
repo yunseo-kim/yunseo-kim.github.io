@@ -1,6 +1,6 @@
 ---
-title: 如何使用 Polyglot 為 Jekyll 部落格提供多語言支援 (1) - 應用 Polyglot 外掛與實作 hreflang alt 標籤、sitemap 及語言選擇按鈕
-description: '本文介紹如何在基於 ''jekyll-theme-chirpy'' 的 Jekyll 部落格中，應用 Polyglot 外掛來實現多語言支援。此為系列第一篇文章，主要探討 Polyglot 外掛的應用、HTML 標頭與 sitemap 的修改方法。'
+title: 使用Polyglot在Jekyll部落格實現多語言支援 (1) - Polyglot外掛程式應用 & 實現hreflang alt標籤、sitemap及語言選擇按鈕
+description: '介紹在基於''jekyll-theme-chirpy''的Jekyll部落格中應用Polyglot外掛實現多語言支援的過程。此為系列第一篇文章，主要探討 Polyglot 外掛的應用、HTML 標頭與 sitemap 的修改方法。'
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
@@ -11,17 +11,17 @@ redirect_from:
 大約在四個月前，也就是 12024 年 7 月初，我為這個透過 Github Pages 託管、基於 Jekyll 的部落格，應用了 [Polyglot](https://github.com/untra/polyglot) 外掛，新增了多語言支援功能。
 本系列文章將分享在 Chirpy 主題上應用 Polyglot 外掛時遇到的錯誤及其解決過程，以及考量到 SEO 的 HTML 標頭和 sitemap.xml 的撰寫方法。
 此系列共有兩篇文章，您正在閱讀的是第一篇。
-- 第 1 篇：應用 Polyglot 外掛與實作 hreflang alt 標籤、sitemap 及語言選擇按鈕 (本文)
-- 第 2 篇：[Chirpy 主題建置失敗與搜尋功能錯誤的故障排除](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+- 第1篇：Polyglot外掛程式應用 & 實現hreflang alt標籤、sitemap及語言選擇按鈕 (本文)
+- 第2篇：[Chirpy主題構建失敗及搜尋功能錯誤故障排除](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
 
 ## 需求條件
-- [x] 建置後的成果（網頁）必須能按語言區分路徑（例如 `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}）來提供。
-- [x] 為了盡可能減少多語言支援所需的額外時間與精力，即使不在原始 Markdown 檔案的 YAML front matter 中逐一指定 'lang' 和 'permalink' 標籤，建置時也應能根據檔案所在的本地路徑（例如 `/_posts/ko/`{: .filepath}, `/_posts/ja/`{: .filepath}）自動識別語言。
-- [x] 網站內各頁面的標頭部分應包含適當的 Content-Language 元標籤、hreflang 替代標籤及 canonical 連結，以符合 Google 針對多語言搜尋的 SEO 指南。
-- [x] 網站內各語言版本的頁面連結必須能無遺漏地提供於 `sitemap.xml`{: .filepath} 中，且 `sitemap.xml`{: .filepath} 本身應無重複，僅存在於根目錄下。
-- [x] [Chirpy 主題](https://github.com/cotes2020/jekyll-theme-chirpy)提供的所有功能在各語言頁面中都必須正常運作，若否，則需修改以使其正常運作。
-  - [x] 'Recently Updated'、'Trending Tags' 功能正常運作
-  - [x] 使用 GitHub Actions 的建置過程中不得發生錯誤
+- [x] 構建的結果（網頁）應按語言路徑（例如 `/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）分類提供。
+- [x] 為了盡量減少多語言支援所需的額外時間和精力，不必在原始markdown文件的YAML front matter中逐一指定'lang'和'permalink'標籤，而是在構建時根據文件所在的本地路徑（例如 `/_posts/ko/`{: .filepath}、`/_posts/ja/`{: .filepath}）自動識別語言。
+- [x] 網站中每個頁面的標頭部分應包含適當的Content-Language元標籤、hreflang替代標籤和canonical連結，以滿足Google多語言搜尋的SEO指南。
+- [x] 網站中每個語言版本的頁面連結應完整地在`sitemap.xml`{: .filepath}中提供，而`sitemap.xml`{: .filepath}本身應只存在於根路徑中，不得重複。
+- [x] [Chirpy主題](https://github.com/cotes2020/jekyll-theme-chirpy)提供的所有功能應在各語言頁面中正常運作，如果不正常，則需進行修改使其正常運作。
+  - [x] 'Recently Updated'、'Trending Tags'功能正常運作
+  - [x] 使用GitHub Actions構建過程中不出現錯誤
   - [x] 部落格右上角的文章搜尋功能正常運作
 
 ## 應用 Polyglot 外掛
