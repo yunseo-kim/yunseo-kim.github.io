@@ -14,7 +14,7 @@ tabs:
   categories: 카테고리
   tags: 태그
   archives: 아카이브
-  about: 정보
+  about: About
 
 # the text displayed in the search bar & search results
 search:
@@ -23,14 +23,14 @@ search:
   no_results: 검색 결과가 없습니다.
 
 panel:
-  lastmod: 최근 업데이트
+  lastmod: 최종 업데이트
   trending_tags: 인기 태그
   toc: 바로가기
 
 copyright:
   # Shown at the bottom of the post
   license:
-    template: 이 기사는 저작권자의 :LICENSE_NAME 라이센스를 따릅니다.
+    template: 이 게시물은 저작권자의 :LICENSE_NAME 라이센스를 따릅니다.
     name: CC BY-NC 4.0
     link: https://creativecommons.org/licenses/by-nc/4.0/
 
