@@ -3,7 +3,7 @@
 icon: fas fa-info-circle
 order: 4
 seo:
-  type: Person
+  type: ProfilePage
 ---
 
 ## 김윤서 (Yunseo Kim)
