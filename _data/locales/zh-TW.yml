@@ -76,6 +76,9 @@ df:
   post:
     strftime: "1%Y/%m/%d HE"
     dayjs: "[1]YYYY/MM/DD [HE]"
+  archives:
+    strftime: "%m /"
+    dayjs: "MM /"
 
 # categories page
 categories:

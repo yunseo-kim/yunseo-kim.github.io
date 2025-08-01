@@ -23,10 +23,17 @@ layout: page
 
     <li>
       {% assign ts = post.date | date: '%s' %}
+      {% if lang == "ko" or lang == "ja" or lang == "zh-TW" %}
+      <span class="date month small text-muted" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
+        {{ post.date | date: df_strftime_m }}
+      </span>
+      <span class="date day ms-1" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: '%d' }}</span>
+      {% else %}
       <span class="date day" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: '%d' }}</span>
       <span class="date month small text-muted ms-1" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
         {{ post.date | date: df_strftime_m }}
       </span>
+      {% endif %}
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
 
