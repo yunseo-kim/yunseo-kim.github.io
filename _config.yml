@@ -31,6 +31,11 @@ github:
 twitter:
   username: yunse0_kim                 # change to your Twitter username
 
+author:
+  name: Yunseo Kim
+  twitter: yunse0_kim
+  url: https://www.yunseo.kim/
+
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
