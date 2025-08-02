@@ -37,13 +37,13 @@ copyright:
   # Displayed in the footer
   brief: 일부 권리 보유
   verbose: >-
-    명시되지 않는 한 이 사이트의 블로그 게시물은 작성자의
+    따로 명시하지 않는 한 이 사이트의 블로그 게시물은 작성자의
     Creative Commons Attribution-NonCommercial 4.0 International(CC BY-NC 4.0) 라이선스에 따라 사용을 허가합니다.
 
 meta: Powered by :PLATFORM with :THEME theme
 
 not_found:
-  statment: 해당 URL은 존재하지 않습니다.
+  statement: 해당 URL은 존재하지 않습니다.
 
 notification:
   update_found: 새 버전의 콘텐츠를 사용할 수 있습니다.
