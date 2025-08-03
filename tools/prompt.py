@@ -267,6 +267,7 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
             print(f"  - The 'patch' command took more than 10 seconds to execute.")
             print(f"  - This might be due to a complex or invalid diff.")
             print(f"  - Make sure that uncommitted changes have not already been applied to the target file.")
+            print(f"  - Problematic Diff:\n{translated_diff}")
         except Exception as e:
             print(f"\n❌ An unexpected error occurred while running patch for {target_file}")
             print(f"  - Error: {e}")
