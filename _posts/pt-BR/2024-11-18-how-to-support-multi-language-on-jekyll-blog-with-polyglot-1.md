@@ -1,18 +1,23 @@
 ---
-title: Como implementar suporte multilíngue em blog Jekyll com Polyglot (1) - Aplicação do plugin Polyglot & implementação de tags alt hreflang, sitemap e botão de seleção de idioma
-description: 'Apresenta o processo de implementação de suporte multilíngue aplicando o plugin Polyglot em um blog Jekyll baseado no tema ''jekyll-theme-chirpy''. Este post é o primeiro da série, abordando a aplicação do plugin Polyglot e a modificação do cabeçalho html e sitemap.'
+title: "Como implementar suporte multilíngue em blog Jekyll com Polyglot (1) - Aplicação do plugin Polyglot & modificação do cabeçalho html e sitemap"
+description: "Apresenta o processo de implementação de suporte multilíngue aplicando o plugin Polyglot em um blog Jekyll baseado no tema 'jekyll-theme-chirpy'. Este post é o primeiro da série, abordando a aplicação do plugin Polyglot e a modificação do cabeçalho html e sitemap."
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 redirect_from:
   - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/
 ---
+
 ## Visão Geral
-Cerca de 4 meses atrás, no início de julho de 12024, implementei suporte multilíngue neste blog hospedado no Github Pages baseado em Jekyll aplicando o plugin [Polyglot](https://github.com/untra/polyglot).
+No início de julho de 12024, implementei suporte multilíngue neste blog hospedado no Github Pages baseado em Jekyll aplicando o plugin [Polyglot](https://github.com/untra/polyglot).
 Esta série compartilha os bugs que ocorreram durante o processo de aplicação do plugin Polyglot ao tema Chirpy e seus processos de resolução, além de como escrever cabeçalhos html e sitemap.xml considerando SEO.
-A série consiste em 2 posts, e este post que você está lendo é o primeiro da série.
-- Parte 1: Aplicação do plugin Polyglot & implementação de tags alt hreflang, sitemap e botão de seleção de idioma (este post)
-- Parte 2: [Solução de problemas de falha de build do tema Chirpy e erro na função de busca](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+A série consiste em 3 posts, e este post que você está lendo é o primeiro da série.
+- Parte 1: Aplicação do plugin Polyglot & modificação do cabeçalho html e sitemap (este post)
+- Parte 2: [Implementação do botão de seleção de idioma & localização do idioma do layout](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+- Parte 3: [Solução de problemas de falha de build do tema Chirpy e erro na função de busca](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-3)
+
+> Originalmente foi composta por 2 partes, mas posteriormente foi reorganizada em 3 partes devido ao aumento significativo do conteúdo após várias melhorias.
+{: .prompt-info }
 
 ## Requisitos
 - [x] Deve ser possível fornecer o resultado do build (páginas web) separado por caminhos de idioma (ex. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
@@ -60,11 +65,11 @@ lang_from_path: true
 ```
 {: file='_config.yml'}
 
-- languages: Lista de idiomas que você deseja suportar
-- default_lang: Idioma padrão de fallback
-- exclude_from_localization: Especifica expressões regulares de strings de caminho de arquivos/pastas raiz para excluir da localização de idioma
-- parallel_localization: Valor booleano que especifica se deve paralelizar o processamento multilíngue durante o build
-- lang_from_path: Valor booleano, quando definido como 'true', reconhece e usa automaticamente se a string do caminho do arquivo markdown contém um código de idioma, mesmo sem especificar separadamente a propriedade 'lang' como YAML front matter no arquivo markdown do post
+- `languages`: Lista de idiomas que você deseja suportar
+- `default_lang`: Idioma padrão de fallback
+- `exclude_from_localization`: Especifica expressões regulares de strings de caminho de arquivos/pastas raiz para excluir da localização de idioma
+- `parallel_localization`: Valor booleano que especifica se deve paralelizar o processamento multilíngue durante o build
+- `lang_from_path`: Valor booleano, quando definido como 'true', reconhece e usa automaticamente se a string do caminho do arquivo markdown contém um código de idioma, mesmo sem especificar separadamente a propriedade 'lang' como YAML front matter no arquivo markdown do post
 
 > A [documentação oficial do protocolo Sitemap](https://www.sitemaps.org/protocol.html#location) especifica o seguinte:
 >
@@ -280,167 +285,6 @@ layout: content
 </urlset>
 ```
 {: file='sitemap.xml'}
-{% endraw %}
-
-## Adicionando botão de seleção de idioma na barra lateral
-(Atualização em 05.02.12025) Melhorei o botão de seleção de idioma para o formato de lista suspensa.  
-Criei o arquivo `_includes/lang-selector.html`{: .filepath} e inseri o seguinte conteúdo.
-
-{% raw %}
-```liquid
-<link rel="stylesheet" href="{{ '/assets/css/lang-selector.css' | relative_url }}">
-
-<div class="lang-dropdown">
-    <select class="lang-select" onchange="changeLang(this.value)" aria-label="Select Language">
-    {%- for lang in site.languages -%}
-        <option value="{% if lang == site.default_lang %}{{ page.url }}{% else %}/{{ lang }}{{ page.url }}{% endif %}"
-                {% if lang == site.active_lang %}selected{% endif %}>
-            {% case lang %}
-            {% when 'ko' %}🇰🇷 한국어
-            {% when 'en' %}🇺🇸 English
-            {% when 'ja' %}🇯🇵 日本語
-            {% when 'zh-TW' %}🇹🇼 正體中文
-            {% when 'es' %}🇪🇸 Español
-            {% when 'pt-BR' %}🇧🇷 Português
-            {% when 'fr' %}🇫🇷 Français
-            {% when 'de' %}🇩🇪 Deutsch
-            {% else %}{{ lang }}
-            {% endcase %}
-        </option>
-    {%- endfor -%}
-    </select>
-</div>
-
-<script>
-function changeLang(url) {
-    window.location.href = url;
-}
-</script>
-```
-{: file='_includes/lang-selector.html'}
-{% endraw %}
-
-Também criei o arquivo `assets/css/lang-selector.css`{: .filepath} e inseri o seguinte conteúdo.
-
-```css
-/**
- * 언어 선택기 스타일
- * 
- * 사이드바에 위치한 언어 선택 드롭다운의 스타일을 정의합니다.
- * 테마의 다크 모드를 지원하며, 모바일 환경에서도 최적화되어 있습니다.
- */
-
-/* 언어 선택기 컨테이너 */
-.lang-selector-wrapper {
-    padding: 0.35rem;
-    margin: 0.15rem 0;
-    text-align: center;
-}
-
-/* 드롭다운 컨테이너 */
-.lang-dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto;
-    min-width: 120px;
-    max-width: 80%;
-}
-
-/* 선택 입력 요소 */
-.lang-select {
-    /* 기본 스타일 */
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 100%;
-    padding: 0.5rem 2rem 0.5rem 1rem;
-    
-    /* 폰트 및 색상 */
-    font-family: Lato, "Pretendard JP Variable", "Pretendard Variable", sans-serif;
-    font-size: 0.95rem;
-    color: var(--sidebar-muted);
-    background-color: var(--sidebar-bg);
-    
-    /* 모양 및 상호작용 */
-    border-radius: var(--bs-border-radius, 0.375rem);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    
-    /* 화살표 아이콘 추가 */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-    background-size: 1rem;
-}
-
-/* 국기 이모지 스타일 */
-.lang-select option {
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-    padding: 0.35rem;
-    font-size: 1rem;
-}
-
-.lang-flag {
-    display: inline-block;
-    margin-right: 0.5rem;
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-}
-
-/* 호버 상태 */
-.lang-select:hover {
-    color: var(--sidebar-active);
-    background-color: var(--sidebar-hover);
-}
-
-/* 포커스 상태 */
-.lang-select:focus {
-    outline: 2px solid var(--sidebar-active);
-    outline-offset: 2px;
-    color: var(--sidebar-active);
-}
-
-/* Firefox 브라우저 대응 */
-.lang-select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 var(--sidebar-muted);
-}
-
-/* IE 브라우저 대응 */
-.lang-select::-ms-expand {
-    display: none;
-}
-
-/* 다크 모드 대응 */
-[data-mode="dark"] .lang-select {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-}
-
-/* 모바일 환경 최적화 */
-@media (max-width: 768px) {
-    .lang-select {
-        padding: 0.75rem 2rem 0.75rem 1rem;  /* 더 큰 터치 영역 */
-    }
-    
-    .lang-dropdown {
-        min-width: 140px;  /* 모바일에서 더 넓은 선택 영역 */
-    }
-}
-```
-{: file='assets/css/lang-selector.css'}
-
-Em seguida, no [`_includes/sidebar.html`{: .filepath} do tema Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html), adicionei três linhas logo antes da classe "sidebar-bottom" da seguinte forma para que o Jekyll carregue o conteúdo do `_includes/lang-selector.html`{: .filepath} que escrevi anteriormente durante o build da página.
-
-{% raw %}
-```liquid
-  (전략)...
-  <div class="lang-selector-wrapper w-100">
-    {%- include lang-selector.html -%}
-  </div>
-
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-    ...(후략)
-```
-{: file='_includes/sidebar.html'}
 {% endraw %}
 
 ## Leitura Adicional

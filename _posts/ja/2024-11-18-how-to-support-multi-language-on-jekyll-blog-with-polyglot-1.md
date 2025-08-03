@@ -1,18 +1,23 @@
 ---
-title: PolyglotでJekyllブログの多言語対応を実現する方法 (1) - Polyglotプラグインの適用 & hreflang altタグ及びsitemap、言語選択ボタンの実装
-description: '''jekyll-theme-chirpy''ベースのJekyllブログにPolyglotプラグインを適用して多言語対応を実装した過程を紹介する。この投稿は該当シリーズの最初の記事として、Polyglotプラグインを適用し、htmlヘッダーとsitemapを修正する部分を扱う。'
+title: "PolyglotでJekyllブログの多言語対応を実現する方法 (1) - Polyglotプラグインの適用 & htmlヘッダー及びsitemapの修正"
+description: "'jekyll-theme-chirpy'ベースのJekyllブログにPolyglotプラグインを適用して多言語対応を実装した過程を紹介する。この投稿は該当シリーズの最初の記事として、Polyglotプラグインを適用し、htmlヘッダーとsitemapを修正する部分を扱う。"
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 redirect_from:
   - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/
 ---
+
 ## 概要
-約4ヶ月前の12024年7月初旬、Jekyll基盤でGitHub Pagesを通じてホスティング中の本ブログに[Polyglot](https://github.com/untra/polyglot)プラグインを適用して多言語対応実装を追加した。
+12024年7月初旬、Jekyll基盤でGitHub Pagesを通じてホスティング中の本ブログに[Polyglot](https://github.com/untra/polyglot)プラグインを適用して多言語対応実装を追加した。
 このシリーズはChirpyテーマにPolyglotプラグインを適用する過程で発生したバグとその解決過程、そしてSEOを考慮したhtmlヘッダーとsitemap.xmlの作成法を共有する。
-シリーズは2つの記事で構成されており、読んでいるこの記事は該当シリーズの最初の記事である。
-- 1編：Polyglotプラグインの適用 & hreflang altタグ及びsitemap、言語選択ボタンの実装（本文）
-- 2編：[Chirpyテーマビルド失敗及び検索機能エラーのトラブルシューティング](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+シリーズは3つの記事で構成されており、読んでいるこの記事は該当シリーズの最初の記事である。
+- 1編：Polyglotプラグインの適用 & htmlヘッダー及びsitemapの修正（本文）
+- 2編：[言語選択ボタンの実装 & レイアウト言語の現地化](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+- 3編：[Chirpyテーマビルド失敗及び検索機能エラーのトラブルシューティング](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-3)
+
+> 元々は全2編で構成していたが、その後数回にわたって内容を補強したことにより分量が大幅に増加したため、3編に改編した。
+{: .prompt-info }
 
 ## 要求条件
 - [x] ビルドした結果物（ウェブページ）を言語別パス（例：`/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）で区分して提供できなければならない。
@@ -60,11 +65,11 @@ lang_from_path: true
 ```
 {: file='_config.yml'}
 
-- languages：サポートしたい言語リスト
-- default_lang：基本fallback言語
-- exclude_from_localization：言語ローカライゼーション対象から除外するルートファイル/フォルダパス文字列正規表現指定
-- parallel_localization：ビルド過程で多言語処理を並列化するかどうかを指定するboolean値
-- lang_from_path：boolean値で、'true'に設定すると投稿マークダウンファイル内にYAML front matterで'lang'属性を別途明示しなくても、該当マークダウンファイルのパス文字列が言語コードを含んでいればこれを自動的に認識して使用する
+- `languages`：サポートしたい言語リスト
+- `default_lang`：基本fallback言語
+- `exclude_from_localization`：言語ローカライゼーション対象から除外するルートファイル/フォルダパス文字列正規表現指定
+- `parallel_localization`：ビルド過程で多言語処理を並列化するかどうかを指定するboolean値
+- `lang_from_path`：boolean値で、'true'に設定すると投稿マークダウンファイル内にYAML front matterで'lang'属性を別途明示しなくても、該当マークダウンファイルのパス文字列が言語コードを含んでいればこれを自動的に認識して使用する
 
 > [Sitemapプロトコル公式文書](https://www.sitemaps.org/protocol.html#location)では次のように明示している。
 >
@@ -280,167 +285,6 @@ layout: content
 </urlset>
 ```
 {: file='sitemap.xml'}
-{% endraw %}
-
-## サイドバーに言語選択ボタンを追加
-（12025.02.05. アップデート）言語選択ボタンをドロップダウンリスト形式に改善した。  
-`_includes/lang-selector.html`{: .filepath}ファイルを生成し、次のように内容を入力した。
-
-{% raw %}
-```liquid
-<link rel="stylesheet" href="{{ '/assets/css/lang-selector.css' | relative_url }}">
-
-<div class="lang-dropdown">
-    <select class="lang-select" onchange="changeLang(this.value)" aria-label="Select Language">
-    {%- for lang in site.languages -%}
-        <option value="{% if lang == site.default_lang %}{{ page.url }}{% else %}/{{ lang }}{{ page.url }}{% endif %}"
-                {% if lang == site.active_lang %}selected{% endif %}>
-            {% case lang %}
-            {% when 'ko' %}🇰🇷 한국어
-            {% when 'en' %}🇺🇸 English
-            {% when 'ja' %}🇯🇵 日本語
-            {% when 'zh-TW' %}🇹🇼 正體中文
-            {% when 'es' %}🇪🇸 Español
-            {% when 'pt-BR' %}🇧🇷 Português
-            {% when 'fr' %}🇫🇷 Français
-            {% when 'de' %}🇩🇪 Deutsch
-            {% else %}{{ lang }}
-            {% endcase %}
-        </option>
-    {%- endfor -%}
-    </select>
-</div>
-
-<script>
-function changeLang(url) {
-    window.location.href = url;
-}
-</script>
-```
-{: file='_includes/lang-selector.html'}
-{% endraw %}
-
-また`assets/css/lang-selector.css`{: .filepath}ファイルを生成し、次のように内容を入力した。
-
-```css
-/**
- * 言語選択器スタイル
- * 
- * サイドバーに位置する言語選択ドロップダウンのスタイルを定義します。
- * テーマのダークモードをサポートし、モバイル環境でも最適化されています。
- */
-
-/* 言語選択器コンテナ */
-.lang-selector-wrapper {
-    padding: 0.35rem;
-    margin: 0.15rem 0;
-    text-align: center;
-}
-
-/* ドロップダウンコンテナ */
-.lang-dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto;
-    min-width: 120px;
-    max-width: 80%;
-}
-
-/* 選択入力要素 */
-.lang-select {
-    /* 基本スタイル */
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 100%;
-    padding: 0.5rem 2rem 0.5rem 1rem;
-    
-    /* フォント及び色彩 */
-    font-family: Lato, "Pretendard JP Variable", "Pretendard Variable", sans-serif;
-    font-size: 0.95rem;
-    color: var(--sidebar-muted);
-    background-color: var(--sidebar-bg);
-    
-    /* 形状及び相互作用 */
-    border-radius: var(--bs-border-radius, 0.375rem);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    
-    /* 矢印アイコン追加 */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-    background-size: 1rem;
-}
-
-/* 国旗絵文字スタイル */
-.lang-select option {
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-    padding: 0.35rem;
-    font-size: 1rem;
-}
-
-.lang-flag {
-    display: inline-block;
-    margin-right: 0.5rem;
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-}
-
-/* ホバー状態 */
-.lang-select:hover {
-    color: var(--sidebar-active);
-    background-color: var(--sidebar-hover);
-}
-
-/* フォーカス状態 */
-.lang-select:focus {
-    outline: 2px solid var(--sidebar-active);
-    outline-offset: 2px;
-    color: var(--sidebar-active);
-}
-
-/* Firefoxブラウザ対応 */
-.lang-select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 var(--sidebar-muted);
-}
-
-/* IEブラウザ対応 */
-.lang-select::-ms-expand {
-    display: none;
-}
-
-/* ダークモード対応 */
-[data-mode="dark"] .lang-select {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-}
-
-/* モバイル環境最適化 */
-@media (max-width: 768px) {
-    .lang-select {
-        padding: 0.75rem 2rem 0.75rem 1rem;  /* より大きなタッチ領域 */
-    }
-    
-    .lang-dropdown {
-        min-width: 140px;  /* モバイルでより広い選択領域 */
-    }
-}
-```
-{: file='assets/css/lang-selector.css'}
-
-その次、[Chirpyテーマの`_includes/sidebar.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html)中「sidebar-bottom」クラスの直前に次のように3行を追加して、先ほど作成した`_includes/lang-selector.html`{: .filepath}の内容をJekyllがページビルド時に読み込むようにした。
-
-{% raw %}
-```liquid
-  (前略)...
-  <div class="lang-selector-wrapper w-100">
-    {%- include lang-selector.html -%}
-  </div>
-
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-    ...(後略)
-```
-{: file='_includes/sidebar.html'}
 {% endraw %}
 
 ## Further Reading

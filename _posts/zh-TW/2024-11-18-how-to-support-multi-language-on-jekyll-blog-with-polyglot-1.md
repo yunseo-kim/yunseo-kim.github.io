@@ -1,18 +1,23 @@
 ---
-title: 使用Polyglot在Jekyll部落格實現多語言支援 (1) - Polyglot外掛程式應用 & 實現hreflang alt標籤、sitemap及語言選擇按鈕
-description: '介紹在基於''jekyll-theme-chirpy''的Jekyll部落格中應用Polyglot外掛實現多語言支援的過程。此為系列第一篇文章，主要探討 Polyglot 外掛的應用、HTML 標頭與 sitemap 的修改方法。'
+title: "使用Polyglot在Jekyll部落格實現多語言支援 (1) - Polyglot外掛程式應用 & html標頭及sitemap修改"
+description: "介紹在基於'jekyll-theme-chirpy'的Jekyll部落格中應用Polyglot外掛實現多語言支援的過程。此為系列第一篇文章，主要探討 Polyglot 外掛的應用、HTML 標頭與 sitemap 的修改方法。"
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 redirect_from:
   - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/
 ---
+
 ## 概要
-大約在四個月前，也就是 12024 年 7 月初，我為這個透過 Github Pages 託管、基於 Jekyll 的部落格，應用了 [Polyglot](https://github.com/untra/polyglot) 外掛，新增了多語言支援功能。
+12024 年 7 月初，我為這個透過 Github Pages 託管、基於 Jekyll 的部落格，應用了 [Polyglot](https://github.com/untra/polyglot) 外掛，新增了多語言支援功能。
 本系列文章將分享在 Chirpy 主題上應用 Polyglot 外掛時遇到的錯誤及其解決過程，以及考量到 SEO 的 HTML 標頭和 sitemap.xml 的撰寫方法。
-此系列共有兩篇文章，您正在閱讀的是第一篇。
-- 第1篇：Polyglot外掛程式應用 & 實現hreflang alt標籤、sitemap及語言選擇按鈕 (本文)
-- 第2篇：[Chirpy主題構建失敗及搜尋功能錯誤故障排除](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+此系列共有三篇文章，您正在閱讀的是第一篇。
+- 第1篇：Polyglot外掛程式應用 & html標頭及sitemap修改 (本文)
+- 第2篇：[實現語言選擇按鈕 & 版面配置語言本地化](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+- 第3篇：[Chirpy主題構建失敗及搜尋功能錯誤故障排除](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-3)
+
+> 原本此系列為兩篇文章，但經過數次內容補充後，篇幅大幅增加，因此改為三篇文章。
+{: .prompt-info }
 
 ## 需求條件
 - [x] 構建的結果（網頁）應按語言路徑（例如 `/posts/ko/`{: .filepath}、`/posts/ja/`{: .filepath}）分類提供。
@@ -60,11 +65,11 @@ lang_from_path: true
 ```
 {: file='_config.yml'}
 
-- languages: 想要支援的語言列表
-- default_lang: 預設的備用語言
-- exclude_from_localization: 指定要從本地化對象中排除的根目錄檔案/資料夾路徑字串正規表示式
-- parallel_localization: 一個布林值，指定在建置過程中是否要並行處理多語言
-- lang_from_path: 一個布林值，設為 'true' 時，即使文章的 Markdown 檔案內未透過 YAML front matter 明確指定 'lang' 屬性，只要該 Markdown 檔案的路徑字串包含語言代碼，就會自動識別並使用
+- `languages`: 想要支援的語言列表
+- `default_lang`: 預設的備用語言
+- `exclude_from_localization`: 指定要從本地化對象中排除的根目錄檔案/資料夾路徑字串正規表示式
+- `parallel_localization`: 一個布林值，指定在建置過程中是否要並行處理多語言
+- `lang_from_path`: 一個布林值，設為 'true' 時，即使文章的 Markdown 檔案內未透過 YAML front matter 明確指定 'lang' 屬性，只要該 Markdown 檔案的路徑字串包含語言代碼，就會自動識別並使用
 
 > [Sitemap 協定官方文件](https://www.sitemaps.org/protocol.html#location)中明確指出：
 >
@@ -280,167 +285,6 @@ layout: content
 </urlset>
 ```
 {: file='sitemap.xml'}
-{% endraw %}
-
-## 在側邊欄新增語言選擇按鈕
-(12025.02.05. 更新) 我將語言選擇按鈕改進為下拉式選單的形式。
-我建立了 `_includes/lang-selector.html`{: .filepath} 檔案，並輸入了以下內容。
-
-{% raw %}
-```liquid
-<link rel="stylesheet" href="{{ '/assets/css/lang-selector.css' | relative_url }}">
-
-<div class="lang-dropdown">
-    <select class="lang-select" onchange="changeLang(this.value)" aria-label="Select Language">
-    {%- for lang in site.languages -%}
-        <option value="{% if lang == site.default_lang %}{{ page.url }}{% else %}/{{ lang }}{{ page.url }}{% endif %}"
-                {% if lang == site.active_lang %}selected{% endif %}>
-            {% case lang %}
-            {% when 'ko' %}🇰🇷 韓國語
-            {% when 'en' %}🇺🇸 English
-            {% when 'ja' %}🇯🇵 日本語
-            {% when 'zh-TW' %}🇹🇼 正體中文
-            {% when 'es' %}🇪🇸 Español
-            {% when 'pt-BR' %}🇧🇷 Português
-            {% when 'fr' %}🇫🇷 Français
-            {% when 'de' %}🇩🇪 Deutsch
-            {% else %}{{ lang }}
-            {% endcase %}
-        </option>
-    {%- endfor -%}
-    </select>
-</div>
-
-<script>
-function changeLang(url) {
-    window.location.href = url;
-}
-</script>
-```
-{: file='_includes/lang-selector.html'}
-{% endraw %}
-
-此外，我建立了 `assets/css/lang-selector.css`{: .filepath} 檔案，並輸入了以下內容。
-
-```css
-/**
- * 語言選擇器樣式
- * 
- * 定義側邊欄中語言選擇下拉選單的樣式。
- * 支援主題的深色模式，並針對行動裝置環境進行了最佳化。
- */
-
-/* 語言選擇器容器 */
-.lang-selector-wrapper {
-    padding: 0.35rem;
-    margin: 0.15rem 0;
-    text-align: center;
-}
-
-/* 下拉選單容器 */
-.lang-dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto;
-    min-width: 120px;
-    max-width: 80%;
-}
-
-/* 選擇輸入元素 */
-.lang-select {
-    /* 基本樣式 */
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 100%;
-    padding: 0.5rem 2rem 0.5rem 1rem;
-    
-    /* 字體與顏色 */
-    font-family: Lato, "Pretendard JP Variable", "Pretendard Variable", sans-serif;
-    font-size: 0.95rem;
-    color: var(--sidebar-muted);
-    background-color: var(--sidebar-bg);
-    
-    /* 外觀與互動 */
-    border-radius: var(--bs-border-radius, 0.375rem);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    
-    /* 新增箭頭圖示 */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-    background-size: 1rem;
-}
-
-/* 國旗表情符號樣式 */
-.lang-select option {
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-    padding: 0.35rem;
-    font-size: 1rem;
-}
-
-.lang-flag {
-    display: inline-block;
-    margin-right: 0.5rem;
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-}
-
-/* 懸停狀態 */
-.lang-select:hover {
-    color: var(--sidebar-active);
-    background-color: var(--sidebar-hover);
-}
-
-/* 焦點狀態 */
-.lang-select:focus {
-    outline: 2px solid var(--sidebar-active);
-    outline-offset: 2px;
-    color: var(--sidebar-active);
-}
-
-/* Firefox 瀏覽器相容性 */
-.lang-select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 var(--sidebar-muted);
-}
-
-/* IE 瀏覽器相容性 */
-.lang-select::-ms-expand {
-    display: none;
-}
-
-/* 深色模式相容性 */
-[data-mode="dark"] .lang-select {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-}
-
-/* 行動裝置環境最佳化 */
-@media (max-width: 768px) {
-    .lang-select {
-        padding: 0.75rem 2rem 0.75rem 1rem;  /* 更大的觸控區域 */
-    }
-    
-    .lang-dropdown {
-        min-width: 140px;  /* 在行動裝置上提供更寬的選擇區域 */
-    }
-}
-```
-{: file='assets/css/lang-selector.css'}
-
-接著，在 [Chirpy 主題的 `_includes/sidebar.html`{: .filepath}](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html) 中，緊接在 "sidebar-bottom" class 前面，我加入了以下三行，讓 Jekyll 在建置頁面時能載入先前撰寫的 `_includes/lang-selector.html`{: .filepath} 的內容。
-
-{% raw %}
-```liquid
-  (前略)...
-  <div class="lang-selector-wrapper w-100">
-    {%- include lang-selector.html -%}
-  </div>
-
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-    ...(後略)
-```
-{: file='_includes/sidebar.html'}
 {% endraw %}
 
 ## 延伸閱讀

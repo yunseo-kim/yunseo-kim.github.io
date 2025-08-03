@@ -1,18 +1,23 @@
 ---
-title: Comment prendre en charge plusieurs langues sur un blog Jekyll avec Polyglot (1) - Application du plugin Polyglot & implémentation des balises alt hreflang, sitemap et bouton de sélection de langue
-description: 'Présentation du processus d''implémentation du support multilingue en appliquant le plugin Polyglot à un blog Jekyll basé sur le thème ''jekyll-theme-chirpy''. Ce post est le premier article de cette série, couvrant l''application du plugin Polyglot et la modification des en-têtes HTML et du sitemap.'
+title: "Comment prendre en charge plusieurs langues sur un blog Jekyll avec Polyglot (1) - Application du plugin Polyglot & modification des en-têtes HTML et du sitemap"
+description: "Présentation du processus d'implémentation du support multilingue en appliquant le plugin Polyglot à un blog Jekyll basé sur le thème 'jekyll-theme-chirpy'. Ce post est le premier article de cette série, couvrant l'application du plugin Polyglot et la modification des en-têtes HTML et du sitemap."
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 redirect_from:
   - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/
 ---
+
 ## Aperçu
-Il y a environ 4 mois, début juillet 12024, j'ai ajouté l'implémentation du support multilingue en appliquant le plugin [Polyglot](https://github.com/untra/polyglot) à ce blog basé sur Jekyll et hébergé via GitHub Pages.
+Début juillet 12024, j'ai ajouté l'implémentation du support multilingue en appliquant le plugin [Polyglot](https://github.com/untra/polyglot) à ce blog basé sur Jekyll et hébergé via GitHub Pages.
 Cette série partage les bugs rencontrés lors de l'application du plugin Polyglot au thème Chirpy et leur processus de résolution, ainsi que les méthodes de rédaction des en-têtes HTML et du sitemap.xml en tenant compte du SEO.
-La série se compose de 2 articles, et cet article que vous lisez est le premier de cette série.
-- Partie 1 : Application du plugin Polyglot & implémentation des balises alt hreflang, sitemap et bouton de sélection de langue (cet article)
-- Partie 2 : [Résolution des problèmes de compilation du thème Chirpy et des erreurs de recherche](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+La série se compose de 3 articles, et cet article que vous lisez est le premier de cette série.
+- Partie 1 : Application du plugin Polyglot & modification des en-têtes HTML et du sitemap (cet article)
+- Partie 2 : [Implémentation du bouton de sélection de langue & localisation de la langue de mise en page](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+- Partie 3 : [Résolution des problèmes de compilation du thème Chirpy et des erreurs de recherche](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-3)
+
+> À l'origine composée de 2 parties au total, la série a été réorganisée en 3 parties suite à plusieurs enrichissements de contenu qui ont considérablement augmenté le volume.
+{: .prompt-info }
 
 ## Exigences
 - [x] Le résultat du build (page web) doit pouvoir être fourni en séparant les chemins par langue (ex. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
@@ -60,11 +65,11 @@ lang_from_path: true
 ```
 {: file='_config.yml'}
 
-- languages : Liste des langues à prendre en charge
-- default_lang : Langue de fallback par défaut
-- exclude_from_localization : Spécification des expressions régulières de chaînes de chemins de fichiers/dossiers racine à exclure de la localisation linguistique
-- parallel_localization : Valeur booléenne spécifiant s'il faut paralléliser le traitement multilingue lors du processus de build
-- lang_from_path : Valeur booléenne, si définie sur 'true', même sans spécifier séparément l'attribut 'lang' comme YAML front matter dans le fichier markdown du post, si la chaîne de chemin du fichier markdown contient un code de langue, elle sera automatiquement reconnue et utilisée
+- `languages` : Liste des langues à prendre en charge
+- `default_lang` : Langue de fallback par défaut
+- `exclude_from_localization` : Spécification des expressions régulières de chaînes de chemins de fichiers/dossiers racine à exclure de la localisation linguistique
+- `parallel_localization` : Valeur booléenne spécifiant s'il faut paralléliser le traitement multilingue lors du processus de build
+- `lang_from_path` : Valeur booléenne, si définie sur 'true', même sans spécifier séparément l'attribut 'lang' comme YAML front matter dans le fichier markdown du post, si la chaîne de chemin du fichier markdown contient un code de langue, elle sera automatiquement reconnue et utilisée
 
 > La [documentation officielle du protocole Sitemap](https://www.sitemaps.org/protocol.html#location) stipule ce qui suit :
 >
@@ -280,167 +285,6 @@ layout: content
 </urlset>
 ```
 {: file='sitemap.xml'}
-{% endraw %}
-
-## Ajout d'un bouton de sélection de langue dans la barre latérale
-(Mise à jour du 05.02.12025) J'ai amélioré le bouton de sélection de langue sous forme de liste déroulante.  
-J'ai créé le fichier `_includes/lang-selector.html`{: .filepath} et saisi le contenu comme suit.
-
-{% raw %}
-```liquid
-<link rel="stylesheet" href="{{ '/assets/css/lang-selector.css' | relative_url }}">
-
-<div class="lang-dropdown">
-    <select class="lang-select" onchange="changeLang(this.value)" aria-label="Select Language">
-    {%- for lang in site.languages -%}
-        <option value="{% if lang == site.default_lang %}{{ page.url }}{% else %}/{{ lang }}{{ page.url }}{% endif %}"
-                {% if lang == site.active_lang %}selected{% endif %}>
-            {% case lang %}
-            {% when 'ko' %}🇰🇷 한국어
-            {% when 'en' %}🇺🇸 English
-            {% when 'ja' %}🇯🇵 日本語
-            {% when 'zh-TW' %}🇹🇼 正體中文
-            {% when 'es' %}🇪🇸 Español
-            {% when 'pt-BR' %}🇧🇷 Português
-            {% when 'fr' %}🇫🇷 Français
-            {% when 'de' %}🇩🇪 Deutsch
-            {% else %}{{ lang }}
-            {% endcase %}
-        </option>
-    {%- endfor -%}
-    </select>
-</div>
-
-<script>
-function changeLang(url) {
-    window.location.href = url;
-}
-</script>
-```
-{: file='_includes/lang-selector.html'}
-{% endraw %}
-
-J'ai également créé le fichier `assets/css/lang-selector.css`{: .filepath} et saisi le contenu comme suit.
-
-```css
-/**
- * Styles du sélecteur de langue
- * 
- * Définit les styles du menu déroulant de sélection de langue situé dans la barre latérale.
- * Prend en charge le mode sombre du thème et est optimisé pour les environnements mobiles.
- */
-
-/* Conteneur du sélecteur de langue */
-.lang-selector-wrapper {
-    padding: 0.35rem;
-    margin: 0.15rem 0;
-    text-align: center;
-}
-
-/* Conteneur du menu déroulant */
-.lang-dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto;
-    min-width: 120px;
-    max-width: 80%;
-}
-
-/* Élément d'entrée de sélection */
-.lang-select {
-    /* Styles de base */
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 100%;
-    padding: 0.5rem 2rem 0.5rem 1rem;
-    
-    /* Police et couleurs */
-    font-family: Lato, "Pretendard JP Variable", "Pretendard Variable", sans-serif;
-    font-size: 0.95rem;
-    color: var(--sidebar-muted);
-    background-color: var(--sidebar-bg);
-    
-    /* Forme et interaction */
-    border-radius: var(--bs-border-radius, 0.375rem);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    
-    /* Ajout d'icône de flèche */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-    background-size: 1rem;
-}
-
-/* Styles des emojis de drapeaux */
-.lang-select option {
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-    padding: 0.35rem;
-    font-size: 1rem;
-}
-
-.lang-flag {
-    display: inline-block;
-    margin-right: 0.5rem;
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-}
-
-/* État de survol */
-.lang-select:hover {
-    color: var(--sidebar-active);
-    background-color: var(--sidebar-hover);
-}
-
-/* État de focus */
-.lang-select:focus {
-    outline: 2px solid var(--sidebar-active);
-    outline-offset: 2px;
-    color: var(--sidebar-active);
-}
-
-/* Prise en charge du navigateur Firefox */
-.lang-select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 var(--sidebar-muted);
-}
-
-/* Prise en charge du navigateur IE */
-.lang-select::-ms-expand {
-    display: none;
-}
-
-/* Prise en charge du mode sombre */
-[data-mode="dark"] .lang-select {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-}
-
-/* Optimisation pour environnement mobile */
-@media (max-width: 768px) {
-    .lang-select {
-        padding: 0.75rem 2rem 0.75rem 1rem;  /* Zone tactile plus grande */
-    }
-    
-    .lang-dropdown {
-        min-width: 140px;  /* Zone de sélection plus large sur mobile */
-    }
-}
-```
-{: file='assets/css/lang-selector.css'}
-
-Ensuite, dans le [`_includes/sidebar.html`{: .filepath} du thème Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html), j'ai ajouté trois lignes juste avant la classe "sidebar-bottom" comme suit pour que Jekyll charge le contenu du `_includes/lang-selector.html`{: .filepath} précédemment écrit lors du build de la page.
-
-{% raw %}
-```liquid
-  (précédent)...
-  <div class="lang-selector-wrapper w-100">
-    {%- include lang-selector.html -%}
-  </div>
-
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-    ...(suite)
-```
-{: file='_includes/sidebar.html'}
 {% endraw %}
 
 ## Lecture complémentaire

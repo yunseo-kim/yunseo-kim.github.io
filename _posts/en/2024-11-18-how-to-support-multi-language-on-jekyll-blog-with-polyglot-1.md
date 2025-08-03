@@ -1,18 +1,23 @@
 ---
-title: How to Support Multiple Languages on a Jekyll Blog with Polyglot (1) - Applying the Polyglot Plugin & Implementing hreflang alt Tags, Sitemap, and a Language Selector Button
-description: 'This post introduces the process of implementing multi-language support on a Jekyll blog based on the ''jekyll-theme-chirpy'' by applying the Polyglot plugin. This is the first part of the series, covering the application of the Polyglot plugin and modifications to the HTML header and sitemap.'
+title: "How to Support Multiple Languages on a Jekyll Blog with Polyglot (1) - Applying the Polyglot Plugin & Modifying the HTML Header and Sitemap"
+description: "This post introduces the process of implementing multi-language support on a Jekyll blog based on the 'jekyll-theme-chirpy' by applying the Polyglot plugin. This is the first part of the series, covering the application of the Polyglot plugin and modifications to the HTML header and sitemap."
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 redirect_from:
   - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/
 ---
+
 ## Overview
-About four months ago, in early July 12024, I added multi-language support to this blog, which is hosted on GitHub Pages with Jekyll, by applying the [Polyglot](https://github.com/untra/polyglot) plugin.
+In early July 12024, I added multi-language support to this blog, which is hosted on GitHub Pages with Jekyll, by applying the [Polyglot](https://github.com/untra/polyglot) plugin.
 This series shares the bugs encountered while applying the Polyglot plugin to the Chirpy theme, their solutions, and how to write the HTML header and sitemap.xml with SEO in mind.
-The series consists of two posts, and the one you are reading is the first.
-- Part 1: Applying the Polyglot Plugin & Implementing hreflang alt Tags, Sitemap, and a Language Selector Button (This Post)
-- Part 2: [Troubleshooting Chirpy Theme Build Failures and Search Function Errors](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+The series consists of three posts, and the one you are reading is the first.
+- Part 1: Applying the Polyglot Plugin & Modifying the HTML Header and Sitemap (This Post)
+- Part 2: [Implementing the Language Selector Button & Localizing the Layout Language](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+- Part 3: [Troubleshooting Chirpy Theme Build Failures and Search Function Errors](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-3)
+
+> This series was originally planned as two parts. However, it has been expanded to three parts after significant content additions and revisions.
+{: .prompt-info }
 
 ## Requirements
 - [x] The built result (web pages) must be served under language-specific paths (e.g., `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}).
@@ -60,11 +65,11 @@ lang_from_path: true
 ```
 {: file='_config.yml'}
 
-- languages: A list of languages you want to support.
-- default_lang: The default fallback language.
-- exclude_from_localization: Specifies a regex string for root files/folders to exclude from localization.
-- parallel_localization: A boolean value that specifies whether to parallelize multilingual processing during the build process.
-- lang_from_path: A boolean value. If set to 'true', it automatically recognizes and uses the language code from the path string of a post's Markdown file, even if the 'lang' attribute is not specified in the YAML front matter.
+- `languages`: A list of languages you want to support.
+- `default_lang`: The default fallback language.
+- `exclude_from_localization`: Specifies a regex string for root files/folders to exclude from localization.
+- `parallel_localization`: A boolean value that specifies whether to parallelize multilingual processing during the build process.
+- `lang_from_path`: A boolean value. If set to 'true', it automatically recognizes and uses the language code from the path string of a post's Markdown file, even if the 'lang' attribute is not specified in the YAML front matter.
 
 > The [official Sitemap protocol documentation](https://www.sitemaps.org/protocol.html#location) states the following:
 >
@@ -280,167 +285,6 @@ layout: content
 </urlset>
 ```
 {: file='sitemap.xml'}
-{% endraw %}
-
-## Adding a Language Selector Button to the Sidebar
-(Updated 12025.02.05.) The language selector button has been improved to a dropdown list format.
-Create the file `_includes/lang-selector.html`{: .filepath} and enter the following content.
-
-{% raw %}
-```liquid
-<link rel="stylesheet" href="{{ '/assets/css/lang-selector.css' | relative_url }}">
-
-<div class="lang-dropdown">
-    <select class="lang-select" onchange="changeLang(this.value)" aria-label="Select Language">
-    {%- for lang in site.languages -%}
-        <option value="{% if lang == site.default_lang %}{{ page.url }}{% else %}/{{ lang }}{{ page.url }}{% endif %}"
-                {% if lang == site.active_lang %}selected{% endif %}>
-            {% case lang %}
-            {% when 'ko' %}🇰🇷 한국어
-            {% when 'en' %}🇺🇸 English
-            {% when 'ja' %}🇯🇵 日本語
-            {% when 'zh-TW' %}🇹🇼 正體中文
-            {% when 'es' %}🇪🇸 Español
-            {% when 'pt-BR' %}🇧🇷 Português
-            {% when 'fr' %}🇫🇷 Français
-            {% when 'de' %}🇩🇪 Deutsch
-            {% else %}{{ lang }}
-            {% endcase %}
-        </option>
-    {%- endfor -%}
-    </select>
-</div>
-
-<script>
-function changeLang(url) {
-    window.location.href = url;
-}
-</script>
-```
-{: file='_includes/lang-selector.html'}
-{% endraw %}
-
-Also, create the file `assets/css/lang-selector.css`{: .filepath} and enter the following content.
-
-```css
-/**
- * Language Selector Styles
- * 
- * Defines the styles for the language selection dropdown located in the sidebar.
- * It supports the theme's dark mode and is optimized for mobile environments.
- */
-
-/* Language selector container */
-.lang-selector-wrapper {
-    padding: 0.35rem;
-    margin: 0.15rem 0;
-    text-align: center;
-}
-
-/* Dropdown container */
-.lang-dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto;
-    min-width: 120px;
-    max-width: 80%;
-}
-
-/* Select input element */
-.lang-select {
-    /* Basic styles */
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 100%;
-    padding: 0.5rem 2rem 0.5rem 1rem;
-    
-    /* Font and color */
-    font-family: Lato, "Pretendard JP Variable", "Pretendard Variable", sans-serif;
-    font-size: 0.95rem;
-    color: var(--sidebar-muted);
-    background-color: var(--sidebar-bg);
-    
-    /* Shape and interaction */
-    border-radius: var(--bs-border-radius, 0.375rem);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    
-    /* Add arrow icon */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-    background-size: 1rem;
-}
-
-/* Flag emoji style */
-.lang-select option {
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-    padding: 0.35rem;
-    font-size: 1rem;
-}
-
-.lang-flag {
-    display: inline-block;
-    margin-right: 0.5rem;
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-}
-
-/* Hover state */
-.lang-select:hover {
-    color: var(--sidebar-active);
-    background-color: var(--sidebar-hover);
-}
-
-/* Focus state */
-.lang-select:focus {
-    outline: 2px solid var(--sidebar-active);
-    outline-offset: 2px;
-    color: var(--sidebar-active);
-}
-
-/* Firefox browser compatibility */
-.lang-select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 var(--sidebar-muted);
-}
-
-/* IE browser compatibility */
-.lang-select::-ms-expand {
-    display: none;
-}
-
-/* Dark mode compatibility */
-[data-mode="dark"] .lang-select {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-}
-
-/* Mobile environment optimization */
-@media (max-width: 768px) {
-    .lang-select {
-        padding: 0.75rem 2rem 0.75rem 1rem;  /* Larger touch area */
-    }
-    
-    .lang-dropdown {
-        min-width: 140px;  /* Wider selection area on mobile */
-    }
-}
-```
-{: file='assets/css/lang-selector.css'}
-
-Next, in the Chirpy theme's `_includes/sidebar.html`{: .filepath} file ([link](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html)), add the following three lines just before the "sidebar-bottom" class to have Jekyll include the content of `_includes/lang-selector.html`{: .filepath} during the page build.
-
-{% raw %}
-```liquid
-  (omitted)...
-  <div class="lang-selector-wrapper w-100">
-    {%- include lang-selector.html -%}
-  </div>
-
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-    ...(omitted)
-```
-{: file='_includes/sidebar.html'}
 {% endraw %}
 
 ## Further Reading

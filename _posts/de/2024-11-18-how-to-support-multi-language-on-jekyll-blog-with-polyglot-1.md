@@ -1,18 +1,23 @@
 ---
-title: Mehrsprachige Unterstützung für einen Jekyll-Blog mit Polyglot (1) - Anwendung des Polyglot-Plugins & Implementierung von hreflang-alt-Tags, Sitemap und Sprachauswahl-Button
-description: 'Eine Anleitung zur Implementierung mehrsprachiger Unterstützung in einem Jekyll-Blog mit dem ''jekyll-theme-chirpy''-Theme durch das Polyglot-Plugin. Dieser erste Teil der Serie behandelt die Plugin-Anwendung, Anpassungen am HTML-Header und der Sitemap für SEO.'
+title: "Mehrsprachige Unterstützung für einen Jekyll-Blog mit Polyglot (1) - Anwendung des Polyglot-Plugins & Anpassung von HTML-Header und Sitemap"
+description: "Eine Anleitung zur Implementierung mehrsprachiger Unterstützung in einem Jekyll-Blog mit dem 'jekyll-theme-chirpy'-Theme durch das Polyglot-Plugin. Dieser erste Teil der Serie behandelt die Anwendung des Polyglot-Plugins und die Anpassung des HTML-Headers und der Sitemap."
 categories: [AI & Data, Blogging]
 tags: [Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 redirect_from:
   - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/
 ---
+
 ## Übersicht
-Anfang Juli 12024, vor etwa vier Monaten, habe ich meinem auf Jekyll basierenden und über Github Pages gehosteten Blog mit dem [Polyglot](https://github.com/untra/polyglot)-Plugin eine mehrsprachige Unterstützung hinzugefügt.
+Anfang Juli 12024, habe ich meinem auf Jekyll basierenden und über Github Pages gehosteten Blog mit dem [Polyglot](https://github.com/untra/polyglot)-Plugin eine mehrsprachige Unterstützung hinzugefügt.
 Diese Serie teilt den Prozess der Behebung von Fehlern, die bei der Anwendung des Polyglot-Plugins auf das Chirpy-Theme auftraten, sowie Anleitungen zur Erstellung von HTML-Headern und sitemap.xml unter Berücksichtigung von SEO.
-Die Serie besteht aus zwei Beiträgen, und dieser hier ist der erste Teil.
-- Teil 1: Anwendung des Polyglot-Plugins & Implementierung von hreflang-alt-Tags, Sitemap und Sprachauswahl-Button (Dieser Beitrag)
-- Teil 2: [Fehlerbehebung bei Build-Fehlern und Suchfunktionsproblemen im Chirpy-Theme](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+Die Serie besteht aus drei Beiträgen, und dieser hier ist der erste Teil.
+- Teil 1: Anwendung des Polyglot-Plugins & Anpassung von HTML-Header und Sitemap (Dieser Beitrag)
+- Teil 2: [Implementierung des Sprachauswahl-Buttons & Lokalisierung der Layout-Sprache](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)
+- Teil 3: [Fehlerbehebung bei Build-Fehlern und Suchfunktionsproblemen im Chirpy-Theme](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-3)
+
+> Ursprünglich bestand die Serie aus zwei Teilen, wurde aber nach mehreren inhaltlichen Erweiterungen, die den Umfang erheblich vergrößerten, auf drei Teile umstrukturiert.
+{: .prompt-info }
 
 ## Anforderungen
 - [x] Die erstellten Ergebnisse (Webseiten) müssen nach Sprachen in separaten Pfaden (z.B. `/posts/ko/`{: .filepath}, `/posts/ja/`{: .filepath}) bereitgestellt werden können.
@@ -60,11 +65,11 @@ lang_from_path: true
 ```
 {: file='_config.yml'}
 
-- languages: Liste der zu unterstützenden Sprachen
-- default_lang: Standard-Fallback-Sprache
-- exclude_from_localization: Gibt einen regulären Ausdruck für Pfadzeichenfolgen von Stammdateien/-ordnern an, die von der Lokalisierung ausgeschlossen werden sollen
-- parallel_localization: Ein boolescher Wert, der angibt, ob die mehrsprachige Verarbeitung während des Build-Prozesses parallelisiert werden soll
-- lang_from_path: Ein boolescher Wert. Bei 'true' wird die Sprache automatisch aus dem Pfad der Markdown-Datei erkannt, wenn die Pfadzeichenfolge einen Sprachcode enthält, auch wenn das 'lang'-Attribut nicht explizit im YAML-Frontmatter angegeben ist.
+- `languages`: Liste der zu unterstützenden Sprachen
+- `default_lang`: Standard-Fallback-Sprache
+- `exclude_from_localization`: Gibt einen regulären Ausdruck für Pfadzeichenfolgen von Stammdateien/-ordnern an, die von der Lokalisierung ausgeschlossen werden sollen
+- `parallel_localization`: Ein boolescher Wert, der angibt, ob die mehrsprachige Verarbeitung während des Build-Prozesses parallelisiert werden soll
+- `lang_from_path`: Ein boolescher Wert. Bei 'true' wird die Sprache automatisch aus dem Pfad der Markdown-Datei erkannt, wenn die Pfadzeichenfolge einen Sprachcode enthält, auch wenn das 'lang'-Attribut nicht explizit im YAML-Frontmatter angegeben ist.
 
 > Die [offizielle Dokumentation des Sitemap-Protokolls](https://www.sitemaps.org/protocol.html#location) besagt Folgendes:
 >
@@ -280,167 +285,6 @@ layout: content
 </urlset>
 ```
 {: file='sitemap.xml'}
-{% endraw %}
-
-## Hinzufügen eines Sprachauswahl-Buttons zur Seitenleiste
-(Update 05.02.12025) Der Sprachauswahl-Button wurde zu einer Dropdown-Liste verbessert.
-Erstellen Sie die Datei `_includes/lang-selector.html`{: .filepath} und geben Sie den folgenden Inhalt ein.
-
-{% raw %}
-```liquid
-<link rel="stylesheet" href="{{ '/assets/css/lang-selector.css' | relative_url }}">
-
-<div class="lang-dropdown">
-    <select class="lang-select" onchange="changeLang(this.value)" aria-label="Sprache auswählen">
-    {%- for lang in site.languages -%}
-        <option value="{% if lang == site.default_lang %}{{ page.url }}{% else %}/{{ lang }}{{ page.url }}{% endif %}"
-                {% if lang == site.active_lang %}selected{% endif %}>
-            {% case lang %}
-            {% when 'ko' %}🇰🇷 Koreanisch
-            {% when 'en' %}🇺🇸 Englisch
-            {% when 'ja' %}🇯🇵 Japanisch
-            {% when 'zh-TW' %}🇹🇼 Traditionelles Chinesisch
-            {% when 'es' %}🇪🇸 Spanisch
-            {% when 'pt-BR' %}🇧🇷 Portugiesisch
-            {% when 'fr' %}🇫🇷 Französisch
-            {% when 'de' %}🇩🇪 Deutsch
-            {% else %}{{ lang }}
-            {% endcase %}
-        </option>
-    {%- endfor -%}
-    </select>
-</div>
-
-<script>
-function changeLang(url) {
-    window.location.href = url;
-}
-</script>
-```
-{: file='_includes/lang-selector.html'}
-{% endraw %}
-
-Erstellen Sie außerdem die Datei `assets/css/lang-selector.css`{: .filepath} und geben Sie den folgenden Inhalt ein.
-
-```css
-/**
- * Stile für den Sprachwähler
- * 
- * Definiert die Stile für das Sprachauswahl-Dropdown in der Seitenleiste.
- * Unterstützt den Dunkelmodus des Themes und ist für mobile Umgebungen optimiert.
- */
-
-/* Container für den Sprachwähler */
-.lang-selector-wrapper {
-    padding: 0.35rem;
-    margin: 0.15rem 0;
-    text-align: center;
-}
-
-/* Dropdown-Container */
-.lang-dropdown {
-    position: relative;
-    display: inline-block;
-    width: auto;
-    min-width: 120px;
-    max-width: 80%;
-}
-
-/* Select-Input-Element */
-.lang-select {
-    /* Grundstile */
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 100%;
-    padding: 0.5rem 2rem 0.5rem 1rem;
-    
-    /* Schriftart und Farbe */
-    font-family: Lato, "Pretendard JP Variable", "Pretendard Variable", sans-serif;
-    font-size: 0.95rem;
-    color: var(--sidebar-muted);
-    background-color: var(--sidebar-bg);
-    
-    /* Aussehen und Interaktion */
-    border-radius: var(--bs-border-radius, 0.375rem);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    
-    /* Pfeil-Icon hinzufügen */
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 0.75rem center;
-    background-size: 1rem;
-}
-
-/* Stil für Flaggen-Emojis */
-.lang-select option {
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-    padding: 0.35rem;
-    font-size: 1rem;
-}
-
-.lang-flag {
-    display: inline-block;
-    margin-right: 0.5rem;
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
-}
-
-/* Hover-Zustand */
-.lang-select:hover {
-    color: var(--sidebar-active);
-    background-color: var(--sidebar-hover);
-}
-
-/* Fokus-Zustand */
-.lang-select:focus {
-    outline: 2px solid var(--sidebar-active);
-    outline-offset: 2px;
-    color: var(--sidebar-active);
-}
-
-/* Anpassung für Firefox-Browser */
-.lang-select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 var(--sidebar-muted);
-}
-
-/* Anpassung für IE-Browser */
-.lang-select::-ms-expand {
-    display: none;
-}
-
-/* Anpassung für den Dunkelmodus */
-[data-mode="dark"] .lang-select {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-}
-
-/* Optimierung für mobile Umgebungen */
-@media (max-width: 768px) {
-    .lang-select {
-        padding: 0.75rem 2rem 0.75rem 1rem;  /* Größerer Touch-Bereich */
-    }
-    
-    .lang-dropdown {
-        min-width: 140px;  /* Breiterer Auswahlbereich auf Mobilgeräten */
-    }
-}
-```
-{: file='assets/css/lang-selector.css'}
-
-Fügen Sie als Nächstes die folgenden drei Zeilen direkt vor der Klasse "sidebar-bottom" in der Datei [`_includes/sidebar.html`{: .filepath} des Chirpy-Themes](https://github.com/cotes2020/jekyll-theme-chirpy/blob/v7.1.1/_includes/sidebar.html) hinzu, damit Jekyll den Inhalt der zuvor erstellten `_includes/lang-selector.html`{: .filepath} beim Erstellen der Seite lädt.
-
-{% raw %}
-```liquid
-  (vorheriger Teil)...
-  <div class="lang-selector-wrapper w-100">
-    {%- include lang-selector.html -%}
-  </div>
-
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-    ...(nachfolgender Teil)
-```
-{: file='_includes/sidebar.html'}
 {% endraw %}
 
 ## Weiterführende Lektüre
