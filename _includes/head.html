@@ -1,4 +1,15 @@
 <head>
+  {% if jekyll.environment == 'production' -%}
+    <!-- Web Analytics -->
+    {% for analytics in site.analytics -%}
+      {%- capture str -%}{{ analytics }}{%- endcapture -%}
+      {%- assign platform = str | split: '{' | first -%}
+      {% if site.analytics[platform].id and site.analytics[platform].id != empty -%}
+        {% include analytics/{{ platform }}.html %}
+      {%- endif %}
+    {%- endfor %}
+  {%- endif %}
+
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e">
@@ -163,29 +174,9 @@
         src="{{ '/app.min.js' | relative_url }}?baseurl={{ site.baseurl | default: '' }}&register={{ site.pwa.cache.enabled }}"
       ></script>
     {%- endif %}
-
-    <!-- Web Analytics -->
-    {% for analytics in site.analytics -%}
-      {%- capture str -%}{{ analytics }}{%- endcapture -%}
-      {%- assign platform = str | split: '{' | first -%}
-      {% if site.analytics[platform].id and site.analytics[platform].id != empty -%}
-        {% include analytics/{{ platform }}.html %}
-      {%- endif %}
-    {%- endfor %}
   {%- endif %}
 
   {% include metadata-hook.html %}
-
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBSWTJ27CE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-FBSWTJ27CE');
-  </script>
 
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8691553075583022"
