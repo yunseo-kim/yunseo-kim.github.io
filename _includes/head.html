@@ -1,13 +1,9 @@
 <head>
   {% if jekyll.environment == 'production' -%}
-    <!-- Web Analytics -->
-    {% for analytics in site.analytics -%}
-      {%- capture str -%}{{ analytics }}{%- endcapture -%}
-      {%- assign platform = str | split: '{' | first -%}
-      {% if site.analytics[platform].id and site.analytics[platform].id != empty -%}
-        {% include analytics/{{ platform }}.html %}
-      {%- endif %}
-    {%- endfor %}
+    <!-- Google Analytics -->
+    {% if site.analytics.google.id and site.analytics.google.id != empty -%}
+      {% include analytics/google.html %}
+    {%- endif %}
   {%- endif %}
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -35,9 +31,6 @@
   {% capture seo_tags -%}
     {% seo title=false %}
   {%- endcapture %}
-
-  <!-- CDN Preconnect -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
 
   <!-- Setup Open Graph image -->
 
@@ -168,27 +161,41 @@
 
   {% if jekyll.environment == 'production' -%}
     <!-- PWA -->
-    {%- if site.pwa.enabled -%}
+    {% if site.pwa.enabled -%}
       <script
         defer
         src="{{ '/app.min.js' | relative_url }}?baseurl={{ site.baseurl | default: '' }}&register={{ site.pwa.cache.enabled }}"
       ></script>
     {%- endif %}
-  {%- endif %}
+
+    <!-- Web Analytics other than Google Analytics -->
+    {% for analytics in site.analytics -%}
+      {% capture str %}{{ analytics }}{% endcapture %}
+      {% assign platform = str | split: '{' | first %}
+      {% if platform == "google" -%}
+        {%- continue -%}
+      {%- endif %}
+      {% if site.analytics[platform].id and site.analytics[platform].id != empty -%}
+        {% include analytics/{{ platform }}.html %}
+      {%- endif %}
+    {%- endfor %}
+
+    <!-- Session Recordings -->
+    {% for session_recordings in site.session_recordings -%}
+      {% capture str %}{{ session_recordings }}{% endcapture %}
+      {% assign platform = str | split: '{' | first %}
+      {% if site.session_recordings[platform].id and site.session_recordings[platform].id != empty -%}
+        {% include session-recordings/{{ platform }}.html %}
+      {%- endif %}
+    {%- endfor %}
+
+    <!-- Ad Network Integrations -->
+    {% for ad_network in site.ad_networks -%}
+      {% if site.ad_networks[ad_network] and site.ad_networks[ad_network] != empty -%}
+        {% include ad-networks/{{ ad_network }}.html %}
+      {%- endif %}
+    {%- endfor %}
+  {% endif %}
 
   {% include metadata-hook.html %}
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8691553075583022"
-    crossorigin="anonymous">
-  </script>
-
-  <!-- Clarity tracking code for https://www.yunseo.kim/ -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "nbxyh17xog");
-  </script>
 </head>

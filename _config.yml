@@ -66,7 +66,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: 'G-FBSWTJ27CE' # fill in your Google Analytics ID
+    id: G-FBSWTJ27CE # fill in your Google Analytics ID
   goatcounter:
     id: yunseo # fill in your GoatCounter ID
   umami:
@@ -83,6 +83,21 @@ analytics:
 # Page views settings
 pageviews:
   provider: goatcounter # now only supports 'goatcounter'
+
+# --------------------------
+# Features not included in the original Chirpy theme, customized by the site author Yunseo Kim (https://github.com/yunseo-kim).
+
+# Session Recordings Settings
+session_recordings:
+  clarity:
+    id: nbxyh17xog  # fill in your Microsoft Clarity ID
+
+# Ad Networks Settings
+ad_networks:
+  adsense: pub-8691553075583022  # fill in your Google AdSense publisher ID (It looks like pub-1234567890123456)
+
+# ↑ --------------------------
+# The end of customized settings by Yunseo Kim
 
 # Prefer color scheme setting.
 #

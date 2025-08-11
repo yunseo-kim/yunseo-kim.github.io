@@ -12,6 +12,7 @@ resource_hints:
   - url: https://cdn.jsdelivr.net
     links:
       - rel: preconnect
+        opts: [crossorigin]  # Assign the crossorigin="anonymous" attribute to load the Pretendard web font
       - rel: dns-prefetch
 
 # Web Fonts
