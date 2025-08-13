@@ -79,7 +79,7 @@ def get_post_content(post_path, source_lang, target_lang):
         if clean_path.startswith('posts/'):
             clean_path = clean_path[6:] # len('posts/') = 6
         
-        lang_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Taiwanese Mandarin":"zh-TW", "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
+        lang_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Traditional Chinese (Taiwan)":"zh-TW", "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
         
         # Define the search directories - primary and fallback
         search_dirs = [
@@ -154,7 +154,7 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
         target_lang: Target language
         diff_output: Git diff output showing the changes
     """
-    language_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Taiwanese Mandarin":"zh-TW", 
+    language_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Traditional Chinese (Taiwan)":"zh-TW", 
                    "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
     
     # Get the target file path
@@ -285,7 +285,7 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
             pass
 
 def translate(filepath, source_lang, target_lang, model):
-    language_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Taiwanese Mandarin":"zh-TW", 
+    language_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Traditional Chinese (Taiwan)":"zh-TW", 
                    "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
     
     system_prompt = f"""<instruction>Completely forget everything you know about what day it is today. 
