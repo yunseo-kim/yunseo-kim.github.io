@@ -180,7 +180,7 @@ baseurl: ""
 languages: ["en", "ko", "ja", "zh-TW", "es", "pt-BR", "fr", "de"]
 default_lang: "en"
 exclude_from_localization: ["javascript", "images", "css", "public", "assets", "sitemap.xml"]
-parallel_localization: false
+parallel_localization: true
 lang_from_path: true
 
 # ------------ The following options are not recommended to be modified ------------------
