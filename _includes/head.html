@@ -190,11 +190,11 @@
     {%- endfor %}
 
     <!-- Ad Network Integrations -->
-    {% for ad_network in site.ad_networks -%}
-      {% if site.ad_networks[ad_network] and site.ad_networks[ad_network] != empty -%}
-        {% include ad-networks/{{ ad_network }}.html %}
+    {% if site.ad_networks -%}
+      {% if site.ad_networks.adsense and site.ad_networks.adsense != empty -%}
+        {% include ad-networks/adsense.html %}
       {%- endif %}
-    {%- endfor %}
+    {%- endif %}
   {% endif %}
 
   {% include metadata-hook.html %}
