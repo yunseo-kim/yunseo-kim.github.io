@@ -187,7 +187,7 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
         1. Maintain the exact same diff format, including line numbers and markers (+, -, @@ etc.)
         2. Only translate the actual content, not the diff structure or metadata
         3. Keep YAML front matter as is, except for 'title' and 'description' tags which should be translated
-        4. For markdown links, translate the link text and the fragment part of the URL into {target_lang}, not the path part of the URL.
+        4. For markdown internal links, translate the link text and the fragment part of the URL into {target_lang}, not the path part of the URL. For external links, the URL of the link is not subject to translation, so do not modify it in any way.
         5. Preserve any special formatting or placeholders
         6. Ensure the translated changes are consistent with the existing translation style and terminology
         7. <condition>The original text provided may contain parts written in languages other than {source_lang}. This is one of two cases. 
@@ -321,7 +321,10 @@ def translate(filepath, source_lang, target_lang, model):
               In languages ​​such as Spanish or Portuguese, they can be translated as 'Faraday', 'Maxwell', 'Einstein', in which case, redundant expressions such as 'Faraday(Faraday)', 'Maxwell(Maxwell)', 'Einstein(Einstein)' would be highly inappropriate.</example>
           </condition>
 
-        - <condition><if>the provided text contains links in markdown format, please translate the link text and the fragment part of the URL into {target_lang}, but keep the path part of the URL intact.</if></condition>
+        - <condition>
+            <if>the provided text contains internal links in markdown format, please translate the link text and the fragment part of the URL into {target_lang}, but keep the path part of the URL intact.</if>
+            <if>it's external link, the URL of the link is not subject to translation, so do not modify it in any way.</if>
+          </condition>
 
         - <condition><if><![CDATA[<reference_context>]]> is provided in the prompt, it contains the full content of posts that are linked with hash fragments from the original post.
           Use this context to accurately translate link texts and hash fragments while maintaining proper references to the specific sections in those posts. 
