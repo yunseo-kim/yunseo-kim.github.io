@@ -117,7 +117,7 @@ theme_mode:   # [light|dark]
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-cdn:
+cdn: 'https://cdn.jsdelivr.net/gh/yunseo-kim/yunseo-kim.github.io/'
 
 # the avatar on sidebar, support local or CORS resources
 avatar: 'https://avatars.githubusercontent.com/u/65203374' # '/assets/img/profile.tiff'
