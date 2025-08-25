@@ -1,24 +1,27 @@
 ---
-title: Resumo da sintaxe Markdown do GitHub
-description: Aprenda o que é Markdown e resuma as principais sintaxes do GitHub Flavored Markdown para hospedar blogs no GitHub Pages.
-categories: [AI & Data, Blogging]
+title: Resumo da Sintaxe Markdown do GitHub
+description: Aprenda o que é Markdown e explore a sintaxe principal do GitHub Flavored Markdown para hospedagem de blogs no GitHub Pages.
+categories: [AI & Data, Knowledge Management]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.webp
+redirect_from:
+  - /posts/GitHub-Markdown-Syntax-Summary/
 ---
-Para utilizar o GitHub Pages, é necessário conhecer a sintaxe **markdown**.
-Este texto foi escrito com base nos documentos oficiais do GitHub [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) e [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+
+Para utilizar o GitHub Pages, é necessário conhecer a sintaxe do **markdown**.
+Este artigo foi escrito com base na documentação oficial do GitHub: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) e [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ## 1. O que é Markdown
-> **Markdown** é uma linguagem de marcação leve baseada em texto simples. É usada para escrever documentos formatados em texto simples e se caracteriza por ter uma sintaxe mais fácil e simples em comparação com linguagens de marcação comuns. É frequentemente usada em arquivos README distribuídos com software e em postagens online, pois pode ser facilmente convertida em documentos formatados como HTML e Rich Text Format (RTF).  
-> John Gruber criou a linguagem Markdown em 12004 do [calendário holoceno](https://en.wikipedia.org/wiki/Holocene_calendar), com significativa colaboração de Aaron Swartz na parte sintática, com o objetivo de permitir que as pessoas escrevam usando um formato de texto simples fácil de ler e escrever, com a opção de convertê-lo em XHTML (ou HTML) estruturalmente válido.
+> **Markdown** é uma linguagem de marcação leve baseada em texto simples. É usada para escrever documentos formatados em texto simples e se caracteriza por ter uma sintaxe mais fácil e simples em comparação com linguagens de marcação gerais. Como pode ser facilmente convertido para documentos formatados como HTML e Rich Text Format (RTF), é amplamente usado em arquivos README distribuídos com software aplicativo e postagens online.  
+> John Gruber criou a linguagem Markdown no ano 12004 do [calendário holoceno](https://en.wikipedia.org/wiki/Holocene_calendar) através de uma colaboração significativa com Aaron Swartz em termos de sintaxe, com o objetivo de permitir que as pessoas escrevam usando um formato de texto simples que seja fácil de ler e escrever, e que possa ser opcionalmente convertido para XHTML (ou HTML) estruturalmente válido.
 
--[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
+\- [Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. Sintaxe Markdown
-Como não há um padrão definido para Markdown, a sintaxe detalhada pode variar um pouco dependendo de onde é usada. A sintaxe Markdown resumida aqui é baseada no [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+Como o Markdown não possui um padrão definido, a sintaxe detalhada pode variar ligeiramente dependendo do local de uso. A sintaxe Markdown resumida aqui é baseada no [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
-### 2.1. Quebra de linha, separação de parágrafos
-No Markdown, pressionar Enter uma vez não é reconhecido como uma quebra de linha.
+### 2.1. Quebras de linha, separação de parágrafos
+No Markdown, pressionar Enter uma vez não é reconhecido como quebra de linha.
 ~~~
 Primeira frase.
 Segunda frase.
@@ -49,7 +52,7 @@ Um parágrafo.
 Outro parágrafo.
 
 ### 2.2. Cabeçalhos
-Existem seis níveis no total.
+Existem 6 níveis no total.
 ```
 # This is an H1
 ## This is an H2
@@ -58,7 +61,7 @@ Existem seis níveis no total.
 ##### This is an H5
 ###### This is an H6
 ```
-Em princípio, deve haver apenas uma tag H1 por página, então geralmente não há necessidade de escrevê-la diretamente ao criar posts ou documentos.
+A tag H1 deve, em princípio, aparecer apenas uma vez por página, então geralmente não há necessidade de usá-la diretamente ao escrever posts ou documentos.
 
 ### 2.3. Ênfase
 ```
@@ -112,7 +115,7 @@ git add
 git commit
 ```
 
-Você também pode especificar a linguagem de programação para ativar o realce de sintaxe.
+Você também pode especificar uma linguagem de programação para ativar o destaque de sintaxe.
 ~~~
 ```ruby
 require 'redcarpet'
@@ -134,7 +137,7 @@ puts markdown.to_html
 [GitHub Pages](https://pages.github.com/)  
 <https://pages.github.com/>
 
-Você também pode usar links de caminho relativo para apontar para outros arquivos dentro do repositório. O uso é o mesmo que no terminal.
+Você também pode usar links de caminho relativo que apontam para outros arquivos dentro do repositório. O uso é o mesmo que no terminal.
 ```
 [README](../README.md)
 ```
@@ -185,18 +188,18 @@ Para marcar uma tarefa como concluída, use \[x].
 
 ### 2.11. Anexar imagens
 ```
-Método: ![(opcional)descrição da imagem](url){(opcional)opções adicionais}
+Método: ![(opcional, recomendado)descrição da imagem](url){(opcional)opções adicionais}
 ![GitHub Logo](/images/logo.png)
 ![GitHub Logo](/images/logo.png){: .align-center}
 ![GitHub Logo](/images/logo.png){: width="50%" height="50%"}
 ```
 
-### 2.12. Criar tabelas
+### 2.12. Criação de tabelas
 Você pode criar tabelas usando | e -.
-Deve haver uma linha em branco antes da tabela para que seja exibida corretamente.
-É necessário usar pelo menos três - para que seja reconhecido corretamente.
+Deve deixar uma linha em branco antes da tabela para que seja exibida corretamente.
+Você deve usar pelo menos 3 - para que seja reconhecido corretamente.
 ```
-
+ 
 | Left-aligned | Center-aligned | Right-aligned |
 | :---         |     :---:      |          ---: |
 | git status   | git status     | git status    |

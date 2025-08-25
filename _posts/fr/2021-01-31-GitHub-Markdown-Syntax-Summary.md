@@ -1,24 +1,27 @@
 ---
 title: Résumé de la syntaxe Markdown de GitHub
-description: Nous avons examiné ce qu'est Markdown et résumé les principales syntaxes Markdown basées sur GitHub Flavored Markdown pour l'hébergement de blogs GitHub Pages.
-categories: [AI & Data, Blogging]
+description: Découvrez ce qu'est Markdown et apprenez la syntaxe principale de GitHub Flavored Markdown pour l'hébergement de blogs GitHub Pages.
+categories: [AI & Data, Knowledge Management]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.webp
+redirect_from:
+  - /posts/GitHub-Markdown-Syntax-Summary/
 ---
+
 Pour utiliser GitHub Pages, il est nécessaire de connaître la syntaxe **markdown**.
-Cet article a été rédigé en se référant aux documents officiels de GitHub [Maîtriser Markdown](https://guides.github.com/features/mastering-markdown/) et [Syntaxe de base pour l'écriture et la mise en forme](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+Cet article a été rédigé en référence aux documents officiels de GitHub : [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) et [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 ## 1. Qu'est-ce que Markdown
-> **Markdown** est un langage de balisage léger basé sur du texte brut. Il est utilisé pour créer des documents formatés en texte brut et se caractérise par une syntaxe plus simple et plus facile que les langages de balisage ordinaires. Comme il peut être facilement converti en documents formatés tels que HTML et Rich Text Format (RTF), il est largement utilisé pour les fichiers README distribués avec les logiciels d'application et les publications en ligne.  
-> John Gruber a créé le langage Markdown en [12004 de l'ère humaine](https://en.wikipedia.org/wiki/Holocene_calendar) en collaboration significative avec Aaron Swartz sur le plan grammatical, avec pour objectif de permettre aux gens d'écrire en utilisant un format de texte brut facile à lire et à écrire, tout en permettant une conversion optionnelle en XHTML (ou HTML) structurellement valide.
+> **Markdown** est un langage de balisage léger basé sur du texte brut. Il est utilisé pour créer des documents formatés en texte brut et se caractérise par une syntaxe facile et simple par rapport aux langages de balisage généraux. Comme il peut être facilement converti en documents formatés tels que HTML et RTF (Rich Text Format), il est largement utilisé dans les fichiers README distribués avec les logiciels d'application et les publications en ligne.  
+> John Gruber a créé le langage Markdown en 12004 de l'ère holocène grâce à une collaboration importante avec Aaron Swartz sur la syntaxe, avec pour objectif de permettre aux gens d'écrire en utilisant un format de texte brut facile à lire et à écrire, tout en permettant une conversion optionnelle vers du XHTML (ou HTML) structurellement valide.
 
--[Wikipédia, Markdown](https://en.wikipedia.org/wiki/Markdown)
+\- [Wikipédia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. Syntaxe Markdown
-Comme il n'existe pas de norme établie pour Markdown, la syntaxe détaillée peut varier légèrement selon l'utilisation. La syntaxe Markdown résumée ici est basée sur [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+Comme Markdown n'a pas de standard défini, la syntaxe détaillée peut varier légèrement selon l'usage. La syntaxe Markdown résumée ici est basée sur [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
-### 2.1. Saut de ligne, séparation de paragraphe
-Dans Markdown, une seule pression de la touche Entrée n'est pas reconnue comme un saut de ligne.
+### 2.1. Saut de ligne, séparation de paragraphes
+Dans Markdown, une seule pression sur Entrée n'est pas reconnue comme un saut de ligne.
 ~~~
 Première phrase.
 Deuxième phrase.
@@ -28,7 +31,7 @@ Première phrase.
 Deuxième phrase.
 Troisième phrase.
 
-Un saut de ligne est appliqué en entrant deux espaces consécutifs ou plus.
+Le saut de ligne s'applique en saisissant deux espaces consécutifs ou plus.
 ~~~
 Première phrase.  
 Deuxième phrase.  
@@ -38,7 +41,7 @@ Première phrase.
 Deuxième phrase.  
 Troisième phrase.
 
-Les paragraphes sont séparés par une ligne vide (deux pressions de la touche Entrée).
+Les paragraphes sont séparés par une ligne vide (deux pressions sur Entrée).
 ~~~
 Un paragraphe.
 
@@ -49,56 +52,56 @@ Un paragraphe.
 Un autre paragraphe.
 
 ### 2.2. En-têtes
-Il y a six niveaux au total.
+Il y a 6 niveaux au total.
 ```
-# Ceci est un H1
-## Ceci est un H2
-### Ceci est un H3
-#### Ceci est un H4
-##### Ceci est un H5
-###### Ceci est un H6
+# This is an H1
+## This is an H2
+### This is an H3
+#### This is an H4
+##### This is an H5
+###### This is an H6
 ```
-En principe, il ne devrait y avoir qu'une seule balise H1 par page, donc on n'a généralement pas besoin de l'écrire directement lors de la rédaction d'un article ou d'un document.
+En principe, il ne devrait y avoir qu'une seule balise H1 par page, donc lors de la rédaction d'articles ou de documents, il est rare de l'utiliser directement.
 
 ### 2.3. Emphase
 ```
-*Ce texte est en italique*
-_Ceci est aussi en italique_
+*This text is italicized*
+_This is italicized too_
 
-**Ce texte est en gras**
-__Ce texte est aussi en gras__
+**This is bold text**
+__This is bold text too__
 
-~~Ce texte était une erreur~~
+~~This was mistaken text~~
 
-_Vous **pouvez** les combiner_
+_You **can** combine them_
 
-***Tout ce texte est important***
+***All this text is important***
 ```
-*Ce texte est en italique*  
-_Ceci est aussi en italique_
+*This text is italicized*  
+_This is italicized too_
 
-**Ce texte est en gras**  
-__Ce texte est aussi en gras__
+**This is bold text**  
+__This is bold text too__
 
-~~Ce texte était une erreur~~
+~~This was mistaken text~~
 
-_Vous **pouvez** les combiner_
+_You **can** combine them_
 
-***Tout ce texte est important***
+***All this text is important***
 
 ### 2.4. Citation de texte
-On utilise \>.
+Utilisez \>.
 ```
-> Ceci est une première citation.
->> Ceci est une deuxième citation.
->>> Ceci est une troisième citation.
+> This is a first blockquote.
+>> This is a second blockquote.
+>>> This is a third blockquote.
 ```
-> Ceci est une première citation.
->> Ceci est une deuxième citation.
->>> Ceci est une troisième citation.
+> This is a first blockquote.
+>> This is a second blockquote.
+>>> This is a third blockquote.
 
 ### 2.5. Citation de code
-On utilise \``` ou \~~~.
+Utilisez \``` ou \~~~.
 ~~~
 ```
 git status
@@ -112,7 +115,7 @@ git add
 git commit
 ```
 
-On peut également activer la coloration syntaxique en spécifiant le langage de programmation.
+Vous pouvez également spécifier un langage de programmation pour activer la coloration syntaxique.
 ~~~
 ```ruby
 require 'redcarpet'
@@ -134,13 +137,13 @@ puts markdown.to_html
 [GitHub Pages](https://pages.github.com/)  
 <https://pages.github.com/>
 
-On peut également utiliser des liens relatifs pointant vers d'autres fichiers du dépôt. L'utilisation est la même que dans le terminal.
+Vous pouvez également utiliser des liens de chemin relatif pointant vers d'autres fichiers dans le référentiel. L'utilisation est la même que dans le terminal.
 ```
 [README](../README.md)
 ```
 
 ### 2.7. Liste non ordonnée
-On utilise \- ou \*.
+Utilisez \- ou \*.
 ```
 - George Washington
 - John Adams
@@ -151,7 +154,7 @@ On utilise \- ou \*.
 - Thomas Jefferson
 
 ### 2.8. Liste ordonnée
-On utilise des chiffres.
+Utilisez des chiffres.
 ```
 1. James Madison
 2. James Monroe
@@ -163,47 +166,47 @@ On utilise des chiffres.
 
 ### 2.9. Liste imbriquée
 ```
-1. Premier élément de liste
-   - Premier élément de liste imbriquée
-     - Deuxième élément de liste imbriquée
+1. First list item
+   - First nested list item
+     - Second nested list item
 ```
-1. Premier élément de liste
-   - Premier élément de liste imbriquée
-     - Deuxième élément de liste imbriquée
+1. First list item
+   - First nested list item
+     - Second nested list item
 
 ### 2.10. Liste de tâches
 Pour créer une liste de tâches, ajoutez \[ ] devant chaque élément.
 Pour marquer une tâche comme terminée, utilisez \[x].
 ```
-- [x] Terminer mes modifications
-- [ ] Pousser mes commits vers GitHub
-- [ ] Ouvrir une pull request
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
 ```
-- [x] Terminer mes modifications
-- [ ] Pousser mes commits vers GitHub
-- [ ] Ouvrir une pull request
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
 
-### 2.11. Insertion d'image
+### 2.11. Insertion d'images
 ```
-Méthode : ![(optionnel)description de l'image](url){(optionnel)options supplémentaires}
-![Logo GitHub](/images/logo.png)
-![Logo GitHub](/images/logo.png){: .align-center}
-![Logo GitHub](/images/logo.png){: width="50%" height="50%"}
+Méthode : ![(optionnel, recommandé)description de l'image](url){(optionnel)options supplémentaires}
+![GitHub Logo](/images/logo.png)
+![GitHub Logo](/images/logo.png){: .align-center}
+![GitHub Logo](/images/logo.png){: width="50%" height="50%"}
 ```
 
-### 2.12. Création de tableau
-On peut créer un tableau en utilisant | et -.
+### 2.12. Création de tableaux
+Vous pouvez créer des tableaux en utilisant | et -.
 Il faut laisser une ligne vide avant le tableau pour qu'il s'affiche correctement.
-Il faut utiliser au moins trois - pour que le tableau soit correctement reconnu.
+Il faut utiliser au moins 3 - pour qu'il soit reconnu correctement.
 ```
-
-| Aligné à gauche | Centré | Aligné à droite |
+ 
+| Left-aligned | Center-aligned | Right-aligned |
 | :---         |     :---:      |          ---: |
 | git status   | git status     | git status    |
 | git diff     | git diff       | git diff      |
 ```
 
-| Aligné à gauche | Centré | Aligné à droite |
+| Left-aligned | Center-aligned | Right-aligned |
 | :---         |     :---:      |          ---: |
 | git status   | git status     | git status    |
 | git diff     | git diff       | git diff      |

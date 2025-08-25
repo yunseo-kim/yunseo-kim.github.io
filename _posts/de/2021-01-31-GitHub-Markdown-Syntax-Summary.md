@@ -1,25 +1,27 @@
 ---
-title: GitHub Markdown-Syntax Zusammenfassung
-description: Wir erklären, was Markdown ist und fassen die wichtigsten Markdown-Syntaxregeln
-  basierend auf GitHub Flavored Markdown für das Hosting von GitHub Pages Blogs zusammen.
-categories: [AI & Data, Blogging]
+title: Zusammenfassung der GitHub Markdown-Syntax
+description: Was ist Markdown? Eine Zusammenfassung der wichtigsten GitHub Flavored Markdown-Syntax für das Hosten von Blogs mit GitHub Pages.
+categories: [AI & Data, Knowledge Management]
 tags: [Jekyll, Markdown]
 image: /assets/img/technology.webp
+redirect_from:
+  - /posts/GitHub-Markdown-Syntax-Summary/
 ---
-Für die Nutzung von GitHub Pages ist es notwendig, die **Markdown**-Syntax zu kennen.
+
+Um GitHub Pages zu nutzen, ist es notwendig, die **Markdown**-Syntax zu kennen.
 Dieser Beitrag wurde unter Bezugnahme auf die offiziellen GitHub-Dokumente [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) und [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) verfasst.
 
 ## 1. Was ist Markdown?
-> **Markdown** ist eine leichtgewichtige Auszeichnungssprache, die auf normalem Text basiert. Sie wird verwendet, um formatierte Dokumente mit einfachem Text zu erstellen und zeichnet sich durch eine einfachere und unkompliziertere Syntax im Vergleich zu herkömmlichen Auszeichnungssprachen aus. Da sie leicht in HTML und Rich Text Format (RTF) konvertiert werden kann, wird sie häufig für README-Dateien, die mit Anwendungssoftware verteilt werden, oder für Online-Beiträge verwendet.  
-> John Gruber entwickelte die Markdown-Sprache im Jahr 12004 [HE](https://en.wikipedia.org/wiki/Holocene_calendar) in bedeutender Zusammenarbeit mit Aaron Swartz in Bezug auf die Grammatik. Das Ziel war es, Menschen die Möglichkeit zu geben, in einem leicht lesbaren und schreibbaren Klartext-Format zu schreiben, das optional in strukturell gültiges XHTML (oder HTML) umgewandelt werden kann.
+> **Markdown** ist eine leichtgewichtige Auszeichnungssprache, die auf reinem Text basiert. Sie wird verwendet, um formatierte Dokumente mit einfachem Text zu erstellen, und zeichnet sich durch eine einfachere und unkompliziertere Syntax im Vergleich zu herkömmlichen Auszeichnungssprachen aus. Da sie leicht in formatierte Dokumente wie HTML und Rich-Text-Format (RTF) umgewandelt werden kann, wird sie häufig für README-Dateien, die mit Anwendungssoftware verteilt werden, oder für Online-Beiträge verwendet.  
+> John Gruber hat im Jahr 12004 des [Holozän-Kalenders](https://en.wikipedia.org/wiki/Holocene_calendar) in bedeutender Zusammenarbeit mit Aaron Swartz bezüglich der Syntax die Sprache Markdown entwickelt. Das Ziel war es, den Menschen zu ermöglichen, in einem leicht les- und schreibbaren reinen Textformat zu schreiben, das optional in strukturell gültiges XHTML (oder HTML) umgewandelt werden kann.
 
--[Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
+\- [Wikipedia, Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## 2. Markdown-Syntax
-Da es keinen festgelegten Standard für Markdown gibt, können sich die detaillierten Syntaxregeln je nach Anwendung leicht unterscheiden. Die hier zusammengefasste Markdown-Syntax basiert auf [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+Da es keinen festgelegten Standard für Markdown gibt, kann die detaillierte Syntax je nach Anwendungsfall leicht variieren. Die hier zusammengefasste Markdown-Syntax basiert auf [GitHub Flavored Markdown](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
-### 2.1. Zeilenumbruch, Absatztrennung
-In Markdown wird ein einmaliges Drücken der Eingabetaste nicht als Zeilenumbruch erkannt.
+### 2.1. Zeilenumbrüche und Absätze
+In Markdown wird ein einfacher Zeilenumbruch (einmaliges Drücken der Eingabetaste) nicht als Zeilenumbruch interpretiert.
 ~~~
 Erster Satz.
 Zweiter Satz.
@@ -29,7 +31,7 @@ Erster Satz.
 Zweiter Satz.
 Dritter Satz.
 
-Ein Zeilenumbruch wird angewendet, wenn zwei oder mehr aufeinanderfolgende Leerzeichen eingegeben werden.
+Ein Zeilenumbruch wird durch die Eingabe von zwei oder mehr Leerzeichen am Ende einer Zeile erzeugt.
 ~~~
 Erster Satz.  
 Zweiter Satz.  
@@ -39,7 +41,7 @@ Erster Satz.
 Zweiter Satz.  
 Dritter Satz.
 
-Absätze werden durch eine Leerzeile (zweimaliges Drücken der Eingabetaste) getrennt.
+Absätze werden durch eine Leerzeile (zweimaliges Drücken der Eingabetaste) voneinander getrennt.
 ~~~
 Ein Absatz.
 
@@ -50,56 +52,56 @@ Ein Absatz.
 Ein anderer Absatz.
 
 ### 2.2. Überschriften (Headers)
-Es gibt insgesamt 6 Ebenen.
+Es gibt insgesamt sechs Ebenen.
 ```
-# Dies ist eine H1
-## Dies ist eine H2
-### Dies ist eine H3
-#### Dies ist eine H4
-##### Dies ist eine H5
-###### Dies ist eine H6
+# This is an H1
+## This is an H2
+### This is an H3
+#### This is an H4
+##### This is an H5
+###### This is an H6
 ```
-Das H1-Tag sollte prinzipiell nur einmal pro Seite verwendet werden, daher wird es beim Verfassen von Beiträgen oder Dokumenten normalerweise nicht direkt verwendet.
+Das H1-Tag sollte prinzipiell nur einmal pro Seite verwendet werden, daher wird es beim Verfassen von Beiträgen oder Dokumenten selten direkt geschrieben.
 
 ### 2.3. Hervorhebung
 ```
-*Dieser Text ist kursiv*
-_Dieser Text ist auch kursiv_
+*This text is italicized*
+_This is italicized too_
 
-**Dieser Text ist fett**
-__Dieser Text ist auch fett__
+**This is bold text**
+__This is bold text too__
 
-~~Dieser Text war ein Fehler~~
+~~This was mistaken text~~
 
-_Du **kannst** sie kombinieren_
+_You **can** combine them_
 
-***Dieser gesamte Text ist wichtig***
+***All this text is important***
 ```
-*Dieser Text ist kursiv*  
-_Dieser Text ist auch kursiv_
+*This text is italicized*  
+_This is italicized too_
 
-**Dieser Text ist fett**  
-__Dieser Text ist auch fett__
+**This is bold text**  
+__This is bold text too__
 
-~~Dieser Text war ein Fehler~~
+~~This was mistaken text~~
 
-_Du **kannst** sie kombinieren_
+_You **can** combine them_
 
-***Dieser gesamte Text ist wichtig***
+***All this text is important***
 
-### 2.4. Textzitate
-Man verwendet \>.
+### 2.4. Zitate
+Wird mit \> erstellt.
 ```
-> Dies ist ein erstes Blockzitat.
->> Dies ist ein zweites Blockzitat.
->>> Dies ist ein drittes Blockzitat.
+> This is a first blockquote.
+>> This is a second blockquote.
+>>> This is a third blockquote.
 ```
-> Dies ist ein erstes Blockzitat.
->> Dies ist ein zweites Blockzitat.
->>> Dies ist ein drittes Blockzitat.
+> This is a first blockquote.
+>> This is a second blockquote.
+>>> This is a third blockquote.
 
-### 2.5. Code-Zitate
-Man verwendet \``` oder \~~~.
+### 2.5. Code-Blöcke
+Wird mit \``` oder \~~~ erstellt.
 ~~~
 ```
 git status
@@ -113,7 +115,7 @@ git add
 git commit
 ```
 
-Man kann auch eine Programmiersprache angeben, um die Syntaxhervorhebung zu aktivieren.
+Man kann auch die Programmiersprache angeben, um die Syntaxhervorhebung zu aktivieren.
 ~~~
 ```ruby
 require 'redcarpet'
@@ -135,13 +137,13 @@ puts markdown.to_html
 [GitHub Pages](https://pages.github.com/)  
 <https://pages.github.com/>
 
-Man kann auch relative Pfad-Links verwenden, die auf andere Dateien im Repository verweisen. Die Verwendung ist die gleiche wie im Terminal.
+Es können auch relative Links verwendet werden, die auf andere Dateien im Repository verweisen. Die Verwendung ist die gleiche wie im Terminal.
 ```
 [README](../README.md)
 ```
 
-### 2.7. Ungeordnete Liste
-Man verwendet \- oder \*.
+### 2.7. Ungeordnete Listen
+Wird mit \- oder \* erstellt.
 ```
 - George Washington
 - John Adams
@@ -151,8 +153,8 @@ Man verwendet \- oder \*.
 - John Adams
 - Thomas Jefferson
 
-### 2.8. Geordnete Liste
-Man verwendet Zahlen.
+### 2.8. Geordnete Listen
+Wird mit Zahlen erstellt.
 ```
 1. James Madison
 2. James Monroe
@@ -162,49 +164,49 @@ Man verwendet Zahlen.
 2. James Monroe
 3. John Quincy Adams
 
-### 2.9. Verschachtelte Liste
+### 2.9. Verschachtelte Listen
 ```
-1. Erster Listenpunkt
-   - Erster verschachtelter Listenpunkt
-     - Zweiter verschachtelter Listenpunkt
+1. First list item
+   - First nested list item
+     - Second nested list item
 ```
-1. Erster Listenpunkt
-   - Erster verschachtelter Listenpunkt
-     - Zweiter verschachtelter Listenpunkt
+1. First list item
+   - First nested list item
+     - Second nested list item
 
-### 2.10. Aufgabenliste
-Um eine Aufgabenliste zu erstellen, fügt man \[ ] vor jedem Element hinzu.
-Um eine erledigte Aufgabe anzuzeigen, verwendet man \[x].
+### 2.10. Aufgabenlisten
+Um eine Aufgabenliste zu erstellen, fügen Sie \[ ] vor jeden Punkt hinzu.
+Um eine erledigte Aufgabe zu markieren, verwenden Sie \[x].
 ```
-- [x] Meine Änderungen abschließen
-- [ ] Meine Commits auf GitHub pushen
-- [ ] Einen Pull Request öffnen
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
 ```
-- [x] Meine Änderungen abschließen
-- [ ] Meine Commits auf GitHub pushen
-- [ ] Einen Pull Request öffnen
+- [x] Finish my changes
+- [ ] Push my commits to GitHub
+- [ ] Open a pull request
 
 ### 2.11. Bilder einfügen
 ```
-Methode: ![(Optional)Bildbeschreibung](url){(Optional)Zusatzoptionen}
+Syntax: ![(optional, empfohlen)Bildbeschreibung](URL){(optional)Zusatzoptionen}
 ![GitHub Logo](/images/logo.png)
 ![GitHub Logo](/images/logo.png){: .align-center}
 ![GitHub Logo](/images/logo.png){: width="50%" height="50%"}
 ```
 
 ### 2.12. Tabellen erstellen
-Man kann Tabellen mit | und - erstellen.
-Es muss eine leere Zeile vor der Tabelle gelassen werden, damit sie korrekt angezeigt wird.
+Tabellen können mit | und - erstellt werden.
+Vor der Tabelle muss eine Leerzeile stehen, damit sie korrekt angezeigt wird.
 Es müssen mindestens drei - verwendet werden, damit sie korrekt erkannt wird.
 ```
-
-| Linksbündig | Zentriert | Rechtsbündig |
-| :---        |   :---:   |         ---: |
-| git status  | git status| git status   |
-| git diff    | git diff  | git diff     |
+ 
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
 ```
 
-| Linksbündig | Zentriert | Rechtsbündig |
-| :---        |   :---:   |         ---: |
-| git status  | git status| git status   |
-| git diff    | git diff  | git diff     |
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
