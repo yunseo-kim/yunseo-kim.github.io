@@ -1,15 +1,15 @@
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
-#     "anthropic",
-#     "google-genai",
+#     "openai",
 #     "argparse",
 # ]
 # ///
 
-import anthropic
-from google import genai
-from google.genai import types
+#import anthropic
+#from google import genai
+#from google.genai import types
+from openai import OpenAI
 import os
 import re
 from pathlib import Path
@@ -20,8 +20,10 @@ def init_client(model):
         return anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
     if model[:6] == "gemini":
         return genai.Client()
+    if model[:3] == "gpt":
+        return OpenAI()
 
-def submit_prompt(model, prompt, system_prompt, prefill, temperature=0.0):
+def submit_prompt(model, prompt, system_prompt, prefill, temperature=0.0, verbosity="medium"):
     client = init_client(model)
 
     # print("- Submit prompt")
@@ -60,6 +62,17 @@ def submit_prompt(model, prompt, system_prompt, prefill, temperature=0.0):
             contents=prompt,
         )
         return response.text
+    
+    if model[:3] == "gpt":
+        response = client.responses.create(
+            model=model,
+            instructions=system_prompt,
+            input=prompt,
+            text={
+                "verbosity": verbosity
+                }
+        )
+        return response.output_text
 
 def extract_hash_links(content):
     """Extract links with hash fragments from markdown content"""
@@ -231,7 +244,7 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
     """
     
     # Get the translation from Claude
-    translated_diff = submit_prompt(model, prompt, system_prompt, "```diff")
+    translated_diff = submit_prompt(model, prompt, system_prompt, "```diff", verbosity="low")
     if model[:6] == "claude":
         translated_diff = "```diff"+translated_diff
     # print(f"Translated diff:\n{translated_diff}")
@@ -386,5 +399,5 @@ if __name__ == "__main__":
     
     print(f"Translating {args.file_path}")
     print(f"source_lang: {source_lang}, target_lang: {target_lang}:")
-    translate(args.file_path, source_lang, target_lang, "claude-sonnet-4-20250514")
+    translate(args.file_path, source_lang, target_lang, "gpt-5")
     print("Completed the requested task.")
