@@ -62,7 +62,7 @@ Segundo a [Documentação para desenvolvedores do Chrome](https://developer.chro
 - Quanto maior a área ocupada na tela, maior a chance de o usuário percebê-lo como conteúdo principal
 - Quando o LCP é uma imagem, o tempo pode ser decomposto em quatro subintervalos; é importante identificar onde está o gargalo:
   1. Time to first byte (TTFB): tempo do início do carregamento da página até o recebimento do primeiro byte da resposta HTML
-  2. Atraso de carregamento (Load delay): diferença entre o momento em que o navegador inicia o carregamento do recurso LCP e o TTTB
+  2. Atraso de carregamento (Load delay): diferença entre o momento em que o navegador inicia o carregamento do recurso LCP e o TTFB
   3. Tempo de carregamento (Load time): tempo para carregar o recurso LCP em si
   4. Atraso de renderização (Render delay): tempo do fim do carregamento do recurso LCP até a renderização completa do elemento LCP
 
