@@ -1,124 +1,124 @@
 ---
-title: ウェブパフォーマンス指標（Web Vitals）
-description: ウェブパフォーマンス指標（Web Vitals）とLighthouseの測定・評価基準をまとめ、各パフォーマンス指標が何を意味するのかを理解する。
+title: ウェブ性能指標（Web Vitals）
+description: Web Vitals（ウェブ性能指標）と Lighthouse の測定・評価基準を整理。FCP・LCP・TBT・CLS・SI など各指標の意味と改善ポイントをわかりやすく解説します。
 categories: [Dev, Web Dev]
 tags: [Web Performance, Web Vitals]
 image: /assets/img/technology.webp
 ---
 
-## ウェブパフォーマンスを決定する要素
-ウェブパフォーマンス最適化時に考慮すべきウェブパフォーマンスを決定する要素は、大きくローディングパフォーマンス、レンダリングパフォーマンスの2つに分類できる。
+## ウェブ性能を決定する要素
+ウェブ性能最適化で考慮すべき要素は、大きく読み込み性能とレンダリング性能の2つに分類できる。
 
-### HTMLローディングパフォーマンス
-- ネットワークを通じてサーバーに最初にウェブページを要求した後、HTML文書を受け取ってブラウザがレンダリングを開始するまでの時間
-- どれだけ早くページが表示され始めるかを決定
-- リダイレクトの最小化、HTML応答キャッシング、リソース圧縮、適切なCDN活用などの方法で最適化
+### HTML ロード性能
+- ネットワーク経由でサーバーへ最初の Web ページをリクエストしてから、HTML ドキュメントを受け取りブラウザがレンダリングを開始するまでの時間
+- ページがどれだけ早く描画され始めるかを決定
+- リダイレクトの最小化、HTML 応答のキャッシュ、リソース圧縮、適切な CDN 活用などで最適化
 
-### レンダリングパフォーマンス
-- ブラウザがユーザーが見る画面を描画し、インタラクション可能にするのにかかる時間
-- どれだけスムーズで高速に画面が描画されるかを決定
-- 不要なCSSおよびJSの削除、フォントおよびサムネイルの遅延ローディング防止、重い演算は別のWeb Workerに分離してメインスレッドの占有を最小化、アニメーション最適化などの方法で最適化
+### レンダリング性能
+- ブラウザがユーザーの見る画面を描き、かつインタラクション可能にするまでにかかる時間
+- どれだけ滑らかかつ速く画面が描かれるかを決定
+- 不要な CSS と JS の削減、フォントやサムネイルの不適切な遅延読み込みの回避、重い計算は別の Web Worker に分離してメインスレッドの占有を最小化、アニメーション最適化などで最適化
 
-## ウェブパフォーマンス指標（Web Vitals）
-Googleの[web.dev](https://web.dev/performance?hl={{ site.active_lang }})と[Chrome開発者文書](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring?hl={{ site.active_lang }})を基準に記述する。特別な理由がない限り、どれか一つのパフォーマンス指標にのみ集中するよりは全体的な改善を目標とするのが良く、最適化したいウェブページでどの部分がパフォーマンスのボトルネックとなっているかを把握することが重要である。また、実際のユーザーデータ統計がある場合、上位や平均に該当する値よりはQ1程度の下位値に注目して、その場合でも目標基準を達成するかを確認し改善するのが良い。
+## ウェブ性能指標（Web Vitals）
+Google の [web.dev](https://web.dev/performance?hl={{ site.active_lang }}) と [Chrome デベロッパー ドキュメント](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring?hl={{ site.active_lang }})を基準に記述する。特別な理由がない限り、どれか一つの指標だけに注力するよりも全体的な改善を目標にするのがよい。また、最適化対象の Web ページでどこがボトルネックになっているかを把握することが重要である。実ユーザーデータの統計がある場合は、上位や平均ではなく第1四分位（Q1）程度の下位値に注目し、その場合でも目標基準を満たすかを確認して改善するのがよい。
 
-### 主要ウェブパフォーマンス指標（Core Web Vitals）
-後ほど扱うが、ウェブパフォーマンス指標（Web Vitals）には様々なものがある。しかし、その中でも特にユーザーエクスペリエンスに密接に関連し、模擬環境ではなく実際の環境で測定可能な次の3つの指標をGoogleでは特に重要視しており、これを[主要ウェブパフォーマンス指標（Core Web Vitals）](https://web.dev/articles/vitals?hl={{ site.active_lang }}#core-web-vitals)と呼ぶ。Googleは自社検索エンジンの検索結果順序にも対象サイトの主要ウェブパフォーマンス指標を反映するため、サイト運営者の立場でもこれらの指標は検索エンジン最適化（SEO）の観点から注意深く見る必要がある。
-- [Large Contentful Paint (LCP)](#lcp-largest-contentful-paint): *ローディングパフォーマンス*を反映、2.5秒以内である必要がある
-- [Interaction to Next Paint (INP)](https://web.dev/articles/inp?hl={{ site.active_lang }}): *応答性*を反映、200ms以下である必要がある
-- [Cummulative Layout Shift (CLS)](#cls-cumulative-layout-shift): *視覚的安定性*を反映、0.1以下に維持する必要がある
+### 主要ウェブ性能指標（Core Web Vitals）
+後述するが、Web Vitals には複数の指標がある。その中でも特にユーザー体験に密接に関係し、ラボではなく実環境で測定できる次の3指標を Google は特に重視しており、これを[主要ウェブ性能指標（Core Web Vitals）](https://web.dev/articles/vitals?hl={{ site.active_lang }}#core-web-vitals)と呼ぶ。Google は自社検索エンジンの順位にも対象サイトの Core Web Vitals を反映しているため、サイト運営者にとっても SEO の観点からこれらの指標を重視すべきである。
+- [最大コンテンツ描画（Largest Contentful Paint, LCP）](#lcp-最大コンテンツ描画): 読み込み性能を反映、2.5秒以内であること
+- [次のペイントまでのインタラクション（Interaction to Next Paint, INP）](https://web.dev/articles/inp?hl={{ site.active_lang }}): 応答性を反映、200ms 以下であること
+- [累積レイアウトシフト（Cumulative Layout Shift, CLS）](#cls-累積レイアウトシフト): 視覚的安定性を反映、0.1 以下に維持
 
-主要ウェブパフォーマンス指標は基本的に実際の環境で測定するためのものだが、INPを除く残りの2つはChrome開発者ツールやLighthouseのような模擬環境でも測定できる。INPの場合は実際のユーザー入力が与えられなければ測定不可能なため模擬環境では測定できないが、この場合[TBT](#tbt-total-blocking-time)がINPと非常に相関関係が高く類似したパフォーマンス指標なので代わりに参考でき、[通常はTBTを改善すればINPも一緒に改善される](https://web.dev/articles/vitals?hl={{ site.active_lang }}#lab_tools_to_measure_core_web_vitals)。
+Core Web Vitals は基本的に実環境で測定するためのものだが、INP を除く2つは Chrome DevTools や Lighthouse といったラボ環境でも測定できる。INP は実際のユーザー入力が必要なためラボ環境では測れないが、この場合は [TBT](#tbt-合計ブロッキング時間) が INP と非常に高い相関を持つ類似指標として参照でき、[多くの場合 TBT を改善すると INP も改善する](https://web.dev/articles/vitals?hl={{ site.active_lang }}#lab_tools_to_measure_core_web_vitals)。
 
-### Lighthouse 10のパフォーマンススコア重み
-[Lighthouseのパフォーマンススコアは各測定項目スコアの重み付き平均で計算し、この時次の表の重みに従う](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring?hl={{ site.active_lang }})。
+### Lighthouse 10 の性能スコアの重み付け
+[Lighthouse の性能スコアは各測定項目スコアの加重平均で計算され、その際は次の表の重み付けに従う](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring?hl={{ site.active_lang }})。
 
 | 測定項目 | 重み |
 | --- | --- |
-| [First Contentful Paint](#fcp-first-contentful-paint) | 10% |
-| [Speed Index](#si-speed-index) | 10% |
-| [Largest Contentful Paint](#lcp-largest-contentful-paint) | 25% |
-| [Total Blocking Time](#tbt-total-blocking-time) | 30% |
-| [Cumulative Layout Shift](#cls-cumulative-layout-shift) | 25% |
+| [初回コンテンツフルペイント（First Contentful Paint）](#fcp-初回コンテンツフルペイント) | 10% |
+| [スピードインデックス（Speed Index）](#si-スピードインデックス) | 10% |
+| [最大コンテンツ描画（Largest Contentful Paint）](#lcp-最大コンテンツ描画) | 25% |
+| [合計ブロッキング時間（Total Blocking Time）](#tbt-合計ブロッキング時間) | 30% |
+| [累積レイアウトシフト（Cumulative Layout Shift）](#cls-累積レイアウトシフト) | 25% |
 
-### FCP (First Contentful Paint)
-- ページ要求後、最初のDOMコンテンツをレンダリングするまでの所要時間を測定
-- ページ内の画像、白色でない`<canvas>`要素、SVGなどをDOMコンテンツと見なし、`iframe`内のコンテンツは考慮しない
+### FCP（初回コンテンツフルペイント, First Contentful Paint） {#fcp-初回コンテンツフルペイント}
+- ページ要求後、最初の DOM コンテンツをレンダリングするまでの所要時間を測定
+- ページ内の画像、白以外の `<canvas>` 要素、SVG などを DOM コンテンツと見なし、`iframe` 内コンテンツは考慮しない
 
-> FCPに特に重要な影響を与える要素の一つはフォントローディング時間で、これに関する最適化は[関連ポスト](https://developer.chrome.com/docs/lighthouse/performance/font-display?hl={{ site.active_lang }})を参考することを[Chrome開発者文書](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/?hl={{ site.active_lang }})では推奨している。
+> FCP に特に大きく影響する要因の一つはフォントの読み込み時間であり、これに関する最適化は[関連記事](https://developer.chrome.com/docs/lighthouse/performance/font-display?hl={{ site.active_lang }})を参照することを[Chrome デベロッパー ドキュメント](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/?hl={{ site.active_lang }})は推奨している。
 {: .prompt-tip }
 
-#### Lighthouse評価基準
-[Chrome開発者文書](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/?hl={{ site.active_lang }})によると、Lighthouseの評価基準は次の表の通りである。
+#### Lighthouse の評価基準
+[Chrome デベロッパー ドキュメント](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/?hl={{ site.active_lang }})によると、Lighthouse の評価基準は次の表のとおり。
 
-| 色等級 | モバイルFCP（秒） | デスクトップFCP（秒） |
+| 色の等級 | モバイル FCP（秒） | デスクトップ FCP（秒） |
 | --- | --- | --- |
-| 緑（高速） | 0-1.8 | 0-0.9 |
-| オレンジ（中間） | 1.8-3 | 0.9-1.6 |
-| 赤（低速） | 3超過 | 1.6超過 |
+| 緑（速い） | 0-1.8 | 0-0.9 |
+| 橙（中間） | 1.8-3 | 0.9-1.6 |
+| 赤（遅い） | 3 超過 | 1.6 超過 |
 
-### LCP (Largest Contentful Paint)
-- ウェブページを最初に開いた時、最初に画面に見える表示領域（viewport）を基準に、該当領域内で最も大きく表示される要素（画像、テキストブロック、動画など）をレンダリングするまでの所要時間を測定
-- 画面上で占める面積が広いほどユーザーの立場で主要コンテンツとして体感する可能性が高いだろう
-- LCPが画像の場合、所要時間を4つの下位区間に分けることができ、この中でボトルネックが発生する部分がどこかを把握することが重要
-  1. Time to first byte (TTFB): ページロード開始時点からHTML文書応答の最初のバイトを受信した時点までの時間
-  2. ロード遅延（Load delay）: ブラウザがLCPリソースのロードを開始した時点とTTTBの間の差
-  3. ロード時間（Load time）: LCPリソース自体をロードするのにかかった時間
-  4. レンダリング遅延（Render delay）: LCPリソースロードを完了した時点からLCP要素を完全にレンダリング完了するまでの時間
+### LCP（最大コンテンツ描画, Largest Contentful Paint） {#lcp-最大コンテンツ描画}
+- Web ページを初めて開いたときに最初に見える表示領域（ビューポート）を基準とし、その領域内で最も大きく表示される要素（画像、テキストブロック、動画など）をレンダリング完了するまでの時間を測定
+- 画面上で占める面積が広いほど、ユーザーにとって主要コンテンツだと感じられる可能性が高い
+- LCP が画像の場合、所要時間は4つの下位区間に分けられ、どこでボトルネックが発生しているかを把握することが重要
+  1. 最初のバイトまでの時間（Time to First Byte, TTFB）: ページロード開始から HTML 応答の最初のバイトを受信するまでの時間
+  2. 読み込み遅延（Load delay）: ブラウザが LCP リソースの読み込みを開始した時点と TTTB の差
+  3. 読み込み時間（Load time）: LCP リソース自体の読み込みに要した時間
+  4. レンダリング遅延（Render delay）: LCP リソースの読み込み完了から LCP 要素のレンダリング完了までの時間
 
-#### Lighthouse評価基準
-[Chrome開発者文書](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/?hl={{ site.active_lang }})によると、Lighthouseの評価基準は次の表の通りである。
+#### Lighthouse の評価基準
+[Chrome デベロッパー ドキュメント](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/?hl={{ site.active_lang }})によると、Lighthouse の評価基準は次の表のとおり。
 
-| 色等級 | モバイルFCP（秒） | デスクトップFCP（秒） |
+| 色の等級 | モバイル FCP（秒） | デスクトップ FCP（秒） |
 | --- | --- | --- |
-| 緑（高速） | 0-2.5 | 0-1.2 |
-| オレンジ（中間） | 2.5-4 | 1.2-2.4 |
-| 赤（低速） | 4超過 | 2.4超過 |
+| 緑（速い） | 0-2.5 | 0-1.2 |
+| 橙（中間） | 2.5-4 | 1.2-2.4 |
+| 赤（遅い） | 4 超過 | 2.4 超過 |
 
-### TBT (Total Blocking Time)
-- ウェブページがマウスクリック、画面タッチ、キーボード入力のようなユーザー入力に反応できない総時間を測定
-- FCPと[TTI（インタラクション開始時点、Time to Interactive）](https://developer.chrome.com/docs/lighthouse/performance/interactive?hl={{ site.active_lang }})\*の間のタスクのうち50ms以上実行されたタスクを[長いタスク](https://web.dev/articles/long-tasks-devtools?hl={{ site.active_lang }})と見なし、このような長いタスクそれぞれにかかった時間から50msを引いた超過分を*ブロッキング部分（blocking portion）*と呼び、すべてのブロッキング部分の合計をTBTと定義
+### TBT（合計ブロッキング時間, Total Blocking Time） {#tbt-合計ブロッキング時間}
+- Web ページがマウスクリック、タッチ、キーボード入力などのユーザー入力に反応できない合計時間を測定
+- FCP と [TTI（対話可能になるまでの時間, Time to Interactive）](https://developer.chrome.com/docs/lighthouse/performance/interactive?hl={{ site.active_lang }})\* の間に実行された作業のうち、50ms 以上実行された作業を[長いタスク](https://web.dev/articles/long-tasks-devtools?hl={{ site.active_lang }})とみなし、各長いタスクの実行時間から 50ms を引いた超過分をブロッキング部分（blocking portion）とし、これらの合計を TBT と定義する
 
-> \* TTI自体はネットワーク応答異常値と長いタスクに過度に敏感で一貫性が低く高い変動性を持ち、これにより[Lighthouse 10からはパフォーマンス評価項目から除外された](https://developer.chrome.com/blog/lighthouse-10-0#scoring-changes)。
+> \* TTI 自体はネットワーク応答の外れ値や長いタスクに過度に敏感で一貫性が低く変動性が高いため、[Lighthouse 10 から性能評価項目から除外された](https://developer.chrome.com/blog/lighthouse-10-0#scoring-changes)。
 {: .prompt-info }
 
-> 一般的に長いタスクを引き起こす最も一般的な原因は不要または非効率的なJavaScriptのローディング、パースおよび実行であり、[コード分割](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting?hl={{ site.active_lang }})を通じてそれぞれが50ms以内に実行可能になるようJavaScriptペイロードサイズを減らし、必要であればメインスレッドではなく別のサービスワーカーに分離してマルチスレッドで実行することを検討するよう[Chrome開発者文書](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/?hl={{ site.active_lang }})と[Googleのweb.dev](https://web.dev/articles/long-tasks-devtools#what_is_causing_my_long_tasks?hl={{ site.active_lang }})は推奨している。
+> 一般に長いタスクを引き起こす最も一般的な原因は、不要または非効率な JavaScript の読み込み・パース・実行である。[コード分割](https://web.dev/articles/reduce-javascript-payloads-with-code-splitting?hl={{ site.active_lang }})により、各チャンクが 50ms 以内に実行できるよう JS ペイロードを減らし、必要に応じてメインスレッドではなく別の service worker に分離してマルチスレッドで実行することを、[Chrome デベロッパー ドキュメント](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/?hl={{ site.active_lang }})や [Google の web.dev](https://web.dev/articles/long-tasks-devtools#what_is_causing_my_long_tasks?hl={{ site.active_lang }})は推奨している。
 {: .prompt-tip }
 
-#### Lighthouse評価基準
-[Chrome開発者文書](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/?hl={{ site.active_lang }})によると、Lighthouseの評価基準は次の表の通りである。
+#### Lighthouse の評価基準
+[Chrome デベロッパー ドキュメント](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/?hl={{ site.active_lang }})によると、Lighthouse の評価基準は次の表のとおり。
 
-| 色等級 | モバイルFCP（ミリ秒） | デスクトップFCP（ミリ秒） |
+| 色の等級 | モバイル FCP（ミリ秒） | デスクトップ FCP（ミリ秒） |
 | --- | --- | --- |
-| 緑（高速） | 0-200 | 0-150 |
-| オレンジ（中間） | 200-600 | 150-350 |
-| 赤（低速） | 600超過 | 350超過 |
+| 緑（速い） | 0-200 | 0-150 |
+| 橙（中間） | 200-600 | 150-350 |
+| 赤（遅い） | 600 超過 | 350 超過 |
 
-### CLS (Cumulative Layout Shift)
+### CLS（累積レイアウトシフト, Cumulative Layout Shift） {#cls-累積レイアウトシフト}
 {% include embed/video.html src='https://web.dev/static/articles/cls/video/web-dev-assets/layout-instability-api/layout-instability2.webm' title="突然のレイアウト変更の例" autoplay=true loop=true %}
-> 動画出典: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
+> 動画出典: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
 
-~~カーソルの動きから深い怒りが感じられる~~
+~~カーソルの動きから深い怒りが伝わってくる~~
 
-- 予期しないレイアウト変更はテキストが突然移動して読んでいた位置を見失ったり、リンクやボタンを間違ってクリックさせるなど様々な方式でユーザーエクスペリエンスを阻害する
-- CLSスコアを算定する具体的な方式は[Googleのweb.dev](https://web.dev/articles/cls)に記述されている
-- 下の画像で確認できるように、0.1以下を目標にする必要がある
+- 予期せぬレイアウトの変化は、テキストが突然移動して読んでいた位置を見失わせたり、リンクやボタンを誤クリックさせるなど、さまざまな形でユーザー体験を損なう
+- CLS スコアの算定方法の詳細は [Google の web.dev](https://web.dev/articles/cls) に記載されている
+- 下の画像のとおり、0.1 以下を目標にするべき
 
-![What is a good CLS score?](/assets/img/about-web-vitals/good-cls-values.svg)
-> 画像出典: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
+![良い CLS スコアとは？](/assets/img/about-web-vitals/good-cls-values.svg)
+> 画像出典: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
 
-### SI (Speed Index)
-- ページをロードする間にコンテンツがどれだけ早く視覚的に表示されるかを測定
-- Lighthouseはブラウザでページをロードする過程を動画で録画し、該当動画を分析してフレーム間の進行を計算した後、[Speedline Node.jsモジュール](https://github.com/paulirish/speedline)を使用してSIスコアを算定
+### SI（スピードインデックス, Speed Index） {#si-スピードインデックス}
+- ページの読み込み中にコンテンツがどれだけ速く視覚的に表示されるかを測定
+- Lighthouse はブラウザでのページ読み込み過程を動画として記録し、その動画を分析してフレーム間の進行を計算したうえで、[Speedline Node.js モジュール](https://github.com/paulirish/speedline)を使って SI スコアを算出する
 
-> 先ほど[FCP](#fcp-first-contentful-paint)、[LCP](#lcp-largest-contentful-paint)、[TBT](#tbt-total-blocking-time)についてまとめる際に言及したことを含め、ページローディング速度を改善する措置であれば何でもSIスコアにも肯定的に作用する。ページローディングのどれか一つの過程だけを代表するよりは全体のローディング過程を一定レベル反映するパフォーマンス指標と見ることができる。
+> 先にまとめた [FCP](#fcp-初回コンテンツフルペイント)、[LCP](#lcp-最大コンテンツ描画)、[TBT](#tbt-合計ブロッキング時間) への対策を含め、ページ読み込み速度を改善する施策は SI スコアにも概ね好影響を与える。ページ読み込みの特定の一工程だけを代表するというより、全体の読み込み過程を一定程度反映する指標といえる。
 {: .prompt-tip }
 
-#### Lighthouse評価基準
-[Chrome開発者文書](https://developer.chrome.com/docs/lighthouse/performance/speed-index/?hl={{ site.active_lang }})によると、Lighthouseの評価基準は次の表の通りである。
+#### Lighthouse の評価基準
+[Chrome デベロッパー ドキュメント](https://developer.chrome.com/docs/lighthouse/performance/speed-index/?hl={{ site.active_lang }})によると、Lighthouse の評価基準は次の表のとおり。
 
-| 色等級 | モバイルSI（秒） | デスクトップSI（秒） |
+| 色の等級 | モバイル SI（秒） | デスクトップ SI（秒） |
 | --- | --- | --- |
-| 緑（高速） | 0-3.4 | 0-1.3 |
-| オレンジ（中間） | 3.4-5.8 | 1.3-2.3 |
-| 赤（低速） | 5.8超過 | 2.3超過 |
+| 緑（速い） | 0-3.4 | 0-1.3 |
+| 橙（中間） | 3.4-5.8 | 1.3-2.3 |
+| 赤（遅い） | 5.8 超過 | 2.3 超過 |
