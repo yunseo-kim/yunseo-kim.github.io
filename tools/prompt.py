@@ -199,11 +199,12 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
         <important_instructions>
         1. Maintain the exact same diff format, including line numbers and markers (+, -, @@ etc.)
         2. Only translate the actual content, not the diff structure or metadata
-        3. Keep YAML front matter as is, except for 'title' and 'description' tags which should be translated
-        4. For markdown internal links, translate the link text and the fragment part of the URL into {target_lang}, not the path part of the URL. For external links, the URL of the link is not subject to translation, so do not modify it in any way.
-        5. Preserve any special formatting or placeholders
-        6. Ensure the translated changes are consistent with the existing translation style and terminology
-        7. <condition>The original text provided may contain parts written in languages other than {source_lang}. This is one of two cases. 
+        3. Translate in a way that respects the original text's *italics*, **bold**, and ***emphasis*** expressions.
+        4. Keep YAML front matter as is, except for 'title' and 'description' tags which should be translated
+        5. For markdown internal links, translate the link text and the fragment part of the URL into {target_lang}, not the path part of the URL. For external links, the URL of the link is not subject to translation, so do not modify it in any way.
+        6. Preserve any special formatting or placeholders
+        7. Ensure the translated changes are consistent with the existing translation style and terminology
+        8. <condition>The original text provided may contain parts written in languages other than {source_lang}. This is one of two cases. 
            - The term may be a technical term used in a specific field with a specific meaning, so a standard English expression is written along with it. 
            - It may be a proper noun such as a person's name or a place name. 
            After carefully considering which of the two cases the given expression corresponds to, please proceed as follows:
@@ -220,9 +221,9 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
               as 'ファラデー(Faraday)', 'マクスウェル(Maxwell)', and 'アインシュタイン(Einstein)'.
               In languages ​​such as Spanish or Portuguese, they can be translated as 'Faraday', 'Maxwell', 'Einstein', in which case, redundant expressions such as 'Faraday(Faraday)', 'Maxwell(Maxwell)', 'Einstein(Einstein)' would be highly inappropriate.</example>
            </condition>
-        8. Posts in this blog use the holocene calendar, which is also known as Holocene Era(HE), ère holocène/era del holoceno/era holocena(EH), 인류력, 人類紀元, etc., as the year numbering system, and any 5-digit year notation is intentional, not a typo.
+        9. Posts in this blog use the holocene calendar, which is also known as Holocene Era(HE), ère holocène/era del holoceno/era holocena(EH), 인류력, 人類紀元, etc., as the year numbering system, and any 5-digit year notation is intentional, not a typo.
            So preserve the Holocene calendar year notation (HE, EH, etc.).
-        9. **CRITICAL**: Line numbers in the source diff are NOT directly transferable to the translated file. The number of lines can change during translation. You MUST locate the correct position in the existing translation by matching the CONTEXT lines from the source diff, and then generate a NEW, correct hunk header for the target file.
+        10. **CRITICAL**: Line numbers in the source diff are NOT directly transferable to the translated file. The number of lines can change during translation. You MUST locate the correct position in the existing translation by matching the CONTEXT lines from the source diff, and then generate a NEW, correct hunk header for the target file.
         </important_instructions>
         
         <output_format>
@@ -310,6 +311,9 @@ def translate(filepath, source_lang, target_lang, model):
 
         <task>Please translate the provided <format>markdown</format> text from <lang>{source_lang}</lang> to <lang>{target_lang}</lang> while preserving the format.</task> 
         In the provided markdown format text: 
+
+        - <condition>Translate in a way that respects the original text's *italics*, **bold**, and ***emphasis*** expressions.</condition>
+
         - <condition>Keep YAML front matter as is, except for 'title' and 'description' tags which should be translated</condition>
 
         - <condition>For the description tag, this is a meta tag that directly impacts SEO. 
