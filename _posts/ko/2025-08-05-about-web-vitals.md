@@ -1,6 +1,6 @@
 ---
 title: 웹 성능 지표 (Web Vitals)
-description: 웹 성능 지표(Web Vitals)와 Lighthouse 측정 및 평가 기준을 정리하고, 각 성능 지표가 무엇을 의미하는지 알아본다.
+description: "웹 성능 지표(Web Vitals)와 Lighthouse 측정 및 평가 기준을 정리하고, 각 성능 지표가 무엇을 의미하는지 알아본다."
 categories: [Dev, Web Dev]
 tags: [Web Performance, Web Vitals]
 image: /assets/img/technology.webp
@@ -69,7 +69,7 @@ image: /assets/img/technology.webp
 #### Lighthouse 평가 기준
 [Chrome 개발자 문서](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/?hl={{ site.active_lang }})에 따르면, Lighthouse의 평가 기준은 다음 표와 같다.
 
-| 색상 등급 | 모바일 FCP (초) | 데스크탑 FCP (초) |
+| 색상 등급 | 모바일 LCP (초) | 데스크탑 LCP (초) |
 | --- | --- | --- |
 | 녹색 (빠름) | 0-2.5 | 0-1.2 |
 | 주황색 (중간) | 2.5-4 | 1.2-2.4 |
@@ -88,7 +88,7 @@ image: /assets/img/technology.webp
 #### Lighthouse 평가 기준
 [Chrome 개발자 문서](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/?hl={{ site.active_lang }})에 따르면, Lighthouse의 평가 기준은 다음 표와 같다.
 
-| 색상 등급 | 모바일 FCP (밀리초) | 데스크탑 FCP (밀리초) |
+| 색상 등급 | 모바일 TBT (밀리초) | 데스크탑 TBT (밀리초) |
 | --- | --- | --- |
 | 녹색 (빠름) | 0-200 | 0-150 |
 | 주황색 (중간) | 200-600 | 150-350 |
