@@ -37,7 +37,7 @@ def get_git_diff(filepath):
     try:
         # Get the diff of the file
         result = subprocess.run(
-            ['git', 'diff', '--unified=0', '--no-color', '--', filepath],
+            ['git', 'diff', '--no-color', '--', filepath],
             capture_output=True, text=True
         )
         return result.stdout.strip()
