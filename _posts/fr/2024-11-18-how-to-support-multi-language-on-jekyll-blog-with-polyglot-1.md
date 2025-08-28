@@ -1,9 +1,8 @@
 ---
 title: "Comment prendre en charge plusieurs langues sur un blog Jekyll avec Polyglot (1) - Application du plugin Polyglot & modification des en-têtes HTML et du sitemap"
 description: "Présentation du processus d'implémentation du support multilingue en appliquant le plugin Polyglot à un blog Jekyll basé sur le thème 'jekyll-theme-chirpy'. Ce post est le premier article de cette série, couvrant l'application du plugin Polyglot et la modification des en-têtes HTML et du sitemap."
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
-image: /assets/img/technology.webp
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]image: /assets/img/technology.webp
 redirect_from:
   - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/
 ---

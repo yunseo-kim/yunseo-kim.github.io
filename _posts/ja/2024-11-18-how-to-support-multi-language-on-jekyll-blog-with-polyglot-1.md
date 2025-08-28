@@ -1,8 +1,8 @@
 ---
 title: "PolyglotでJekyllブログの多言語対応を実現する方法 (1) - Polyglotプラグインの適用 & htmlヘッダー及びsitemapの修正"
 description: "'jekyll-theme-chirpy'ベースのJekyllブログにPolyglotプラグインを適用して多言語対応を実装した過程を紹介する。この投稿は該当シリーズの最初の記事として、Polyglotプラグインを適用し、htmlヘッダーとsitemapを修正する部分を扱う。"
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 redirect_from:
   - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/

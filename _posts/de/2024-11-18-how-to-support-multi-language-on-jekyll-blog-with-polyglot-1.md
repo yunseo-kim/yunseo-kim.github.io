@@ -1,8 +1,8 @@
 ---
 title: "Mehrsprachige Unterstützung für einen Jekyll-Blog mit Polyglot (1) - Anwendung des Polyglot-Plugins & Anpassung von HTML-Header und Sitemap"
 description: "Eine Anleitung zur Implementierung mehrsprachiger Unterstützung in einem Jekyll-Blog mit dem 'jekyll-theme-chirpy'-Theme durch das Polyglot-Plugin. Dieser erste Teil der Serie behandelt die Anwendung des Polyglot-Plugins und die Anpassung des HTML-Headers und der Sitemap."
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 redirect_from:
   - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/

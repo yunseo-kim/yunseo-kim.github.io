@@ -1,8 +1,8 @@
 ---
 title: "使用Polyglot在Jekyll部落格實現多語言支援 (1) - Polyglot外掛程式應用 & html標頭及sitemap修改"
 description: "介紹在基於'jekyll-theme-chirpy'的Jekyll部落格中應用Polyglot外掛實現多語言支援的過程。此為系列第一篇文章，主要探討 Polyglot 外掛的應用、HTML 標頭與 sitemap 的修改方法。"
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 redirect_from:
   - /posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot/
