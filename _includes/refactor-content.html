@@ -4,7 +4,7 @@
 
 <!--
   In order to allow a wide table to scroll horizontally,
-  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+  we surround the markdown table with `<div class="table-wrapper">` and `</div>`
 -->
 
 {% if _content contains '<table' %}
@@ -84,8 +84,6 @@
           {% assign _lqip = _value %}
         {% when 'class' %}
           {% assign _class = _value %}
-        {% when 'alt' %}
-          {% assign _alt = _value %}
       {% endcase %}
     {% endfor %}
 
@@ -158,9 +156,19 @@
       {% assign _wrapper_class = _wrapper_class | append: ' shimmer' %}
     {% endif %}
 
+    {% if _wrapper_class contains 'preview-img' -%}
+      {% assign _lazyload = false %}
+      {% assign _fetch_priority = '"high"' %}
+    {%- endif %}
+    
     <!-- lazy-load images -->
-    {% if _lazyload and _alt != "Preview Image" %}
+    {% if _lazyload %}
       {% assign _left = _left | append: ' loading="lazy"' %}
+    {% endif %}
+
+    <!-- fetch priority -->
+    {% if _fetch_priority %}
+      {% assign _left = _left | append: ' fetchpriority=' | append: _fetch_priority %}
     {% endif %}
 
     {% if page.layout == 'home' %}
