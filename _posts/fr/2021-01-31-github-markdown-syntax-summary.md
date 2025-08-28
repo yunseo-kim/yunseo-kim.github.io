@@ -1,5 +1,5 @@
 ---
-title: Résumé de la syntaxe Markdown GitHub
+title: "Résumé de la syntaxe Markdown GitHub"
 description: "Qu’est-ce que Markdown ? Guide concis des principales syntaxes selon GitHub Flavored Markdown (GFM) pour écrire et publier un blog avec GitHub Pages."
 categories: [AI & Data, Knowledge Management]
 tags: [Jekyll, Markdown]

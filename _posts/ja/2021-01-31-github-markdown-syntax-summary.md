@@ -1,5 +1,5 @@
 ---
-title: GitHub マークダウン記法まとめ
+title: "GitHub マークダウン記法まとめ"
 description: "マークダウン（markdown）の概要を説明し、GitHub Pagesのブログ運用に向けて、GitHub フレーバード・マークダウン（GitHub Flavored Markdown）を基準に主要な記法を整理します。"
 categories: [AI & Data, Knowledge Management]
 tags: [Jekyll, Markdown]

@@ -1,5 +1,5 @@
 ---
-title: GitHub Markdown 語法整理
+title: "GitHub Markdown 語法整理"
 description: "介紹什麼是 Markdown，並依 GitHub Flavored Markdown 彙整 GitHub Pages 部落格常用的 Markdown 語法與範例。"
 categories: [AI & Data, Knowledge Management]
 tags: [Jekyll, Markdown]

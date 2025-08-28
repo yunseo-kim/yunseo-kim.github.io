@@ -1,5 +1,5 @@
 ---
-title: GitHub Markdown: Syntax-Überblick
+title: "GitHub Markdown: Syntax-Überblick"
 description: "Was ist Markdown? Überblick über die wichtigsten Syntaxelemente nach GitHub Flavored Markdown (GFM) – mit Tipps für GitHub Pages und Blog-Hosting."
 categories: [AI & Data, Knowledge Management]
 tags: [Jekyll, Markdown]

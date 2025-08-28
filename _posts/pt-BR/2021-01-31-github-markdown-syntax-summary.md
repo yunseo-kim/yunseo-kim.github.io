@@ -1,5 +1,5 @@
 ---
-title: Resumo da sintaxe do Markdown no GitHub
+title: "Resumo da sintaxe do Markdown no GitHub"
 description: "O que é Markdown? Veja um guia conciso da sintaxe, baseado no GitHub Flavored Markdown, para escrever e hospedar posts no GitHub Pages."
 categories: [AI & Data, Knowledge Management]
 tags: [Jekyll, Markdown]

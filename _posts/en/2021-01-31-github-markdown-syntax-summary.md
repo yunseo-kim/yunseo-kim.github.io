@@ -1,5 +1,5 @@
 ---
-title: GitHub Markdown Syntax Summary
+title: "GitHub Markdown Syntax Summary"
 description: "Learn what Markdown is and see a concise GitHub Flavored Markdown (GFM) syntax guide for GitHub Pages: headings, emphasis, links, code blocks, lists, images, and tables."
 categories: [AI & Data, Knowledge Management]
 tags: [Jekyll, Markdown]
