@@ -24,22 +24,22 @@ image: /assets/img/technology.webp
 
 ### 核心網頁生命力（Core Web Vitals）
 稍後會介紹 Web Vitals 中的多個指標；其中與使用者體驗最為密切、且可於真實環境量測的三項指標，Google 特別重視，稱為[核心網頁生命力（Core Web Vitals）](https://web.dev/articles/vitals?hl={{ site.active_lang }}#core-web-vitals)。由於 Google 也會在自家搜尋引擎的排名中納入目標網站的核心網頁生命力，對站點經營者而言，這些指標在搜尋引擎最佳化（SEO）上亦須特別留意。
-- [最大內容繪製（Largest Contentful Paint, LCP）](#lcp-最大內容繪製-largest-contentful-paint)：反映*載入效能*，應在 2.5 秒以內
+- [最大內容繪製（Largest Contentful Paint, LCP）](#lcp最大內容繪製-largest-contentful-paint)：反映*載入效能*，應在 2.5 秒以內
 - [互動到下一次繪製（Interaction to Next Paint, INP）](https://web.dev/articles/inp?hl={{ site.active_lang }})：反映*回應性*，應在 200ms 以內
-- [累積版面位移（Cumulative Layout Shift, CLS）](#cls-累積版面位移-cumulative-layout-shift)：反映*視覺穩定性*，應維持在 0.1 以下
+- [累積版面位移（Cumulative Layout Shift, CLS）](#cls累積版面位移-cumulative-layout-shift)：反映*視覺穩定性*，應維持在 0.1 以下
 
-核心網頁生命力基本上是為真實環境量測而設計，但除了 INP 外，其餘兩者也能在 Chrome 開發人員工具或 Lighthouse 等模擬環境中量測。INP 需要真實使用者輸入才可量測，故無法於模擬環境取得；此時可改參考與 INP 高度相關且類似的指標 [TBT](#tbt-總封鎖時間-total-blocking-time)，[通常改善 TBT 也會同時改善 INP](https://web.dev/articles/vitals?hl={{ site.active_lang }}#lab_tools_to_measure_core_web_vitals)。
+核心網頁生命力基本上是為真實環境量測而設計，但除了 INP 外，其餘兩者也能在 Chrome 開發人員工具或 Lighthouse 等模擬環境中量測。INP 需要真實使用者輸入才可量測，故無法於模擬環境取得；此時可改參考與 INP 高度相關且類似的指標 [TBT](#tbt總封鎖時間-total-blocking-time)，[通常改善 TBT 也會同時改善 INP](https://web.dev/articles/vitals?hl={{ site.active_lang }}#lab_tools_to_measure_core_web_vitals)。
 
 ### Lighthouse 10 的效能分數權重
 [Lighthouse 的效能分數是各量測項目分數的加權平均，權重如下表所示](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring?hl={{ site.active_lang }})。
 
 | 量測項目 | 權重 |
 | --- | --- |
-| [首次內容繪製](#fcp-首次內容繪製-first-contentful-paint) | 10% |
-| [速度指數](#si-速度指數-speed-index) | 10% |
-| [最大內容繪製](#lcp-最大內容繪製-largest-contentful-paint) | 25% |
-| [總封鎖時間](#tbt-總封鎖時間-total-blocking-time) | 30% |
-| [累積版面位移](#cls-累積版面位移-cumulative-layout-shift) | 25% |
+| [首次內容繪製](#fcp首次內容繪製-first-contentful-paint) | 10% |
+| [速度指數](#si速度指數-speed-index) | 10% |
+| [最大內容繪製](#lcp最大內容繪製-largest-contentful-paint) | 25% |
+| [總封鎖時間](#tbt總封鎖時間-total-blocking-time) | 30% |
+| [累積版面位移](#cls累積版面位移-cumulative-layout-shift) | 25% |
 
 ### FCP（首次內容繪製, First Contentful Paint）
 - 量測自頁面請求後，至首次繪製 DOM 內容的時間
@@ -111,7 +111,7 @@ image: /assets/img/technology.webp
 - 量測在頁面載入過程中，內容被視覺化呈現的速度
 - Lighthouse 會錄下瀏覽器載入頁面的過程影片，分析各影格的進度，並使用 [Speedline Node.js 模組](https://github.com/paulirish/speedline)計算 SI 分數
 
-> 先前整理[ FCP](#fcp-首次內容繪製-first-contentful-paint)、[LCP](#lcp-最大內容繪製-largest-contentful-paint)、[TBT](#tbt-總封鎖時間-total-blocking-time)時提到的作法在內，只要能提升頁面載入速度，通常也會正向影響 SI 分數。此指標較偏向反映整體載入過程，而非代表載入中的某個單一步驟。
+> 先前整理[ FCP](#fcp首次內容繪製-first-contentful-paint)、[LCP](#lcp最大內容繪製-largest-contentful-paint)、[TBT](#tbt總封鎖時間-total-blocking-time)時提到的作法在內，只要能提升頁面載入速度，通常也會正向影響 SI 分數。此指標較偏向反映整體載入過程，而非代表載入中的某個單一步驟。
 {: .prompt-tip }
 
 #### Lighthouse 評分基準

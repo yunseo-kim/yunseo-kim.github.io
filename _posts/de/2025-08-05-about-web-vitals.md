@@ -24,11 +24,11 @@ Die Beschreibung folgt den Leitlinien von [web.dev](https://web.dev/performance?
 
 ### Zentrale Web-Performance-Kennzahlen (Core Web Vitals)
 Es gibt mehrere Web-Performance-Kennzahlen (Web Vitals). Unter ihnen betrachtet Google die folgenden drei, die besonders eng mit der User Experience verknüpft sind und in realen Umgebungen (nicht nur im Labor) messbar sind, als besonders wichtig – die [Core Web Vitals](https://web.dev/articles/vitals?hl={{ site.active_lang }}#core-web-vitals). Da Google diese Kennzahlen auch in die Reihenfolge der Suchergebnisse seiner Suchmaschine einfließen lässt, sollten Website-Betreiber sie auch im Hinblick auf Suchmaschinenoptimierung (SEO) sorgfältig beobachten.
-- [Largest Contentful Paint (LCP)](#lcp-groesste-inhaltliche-darstellung): spiegelt die *Ladeleistung* wider, Zielwert ≤ 2,5 s
+- [Largest Contentful Paint (LCP)](#lcp-largest-contentful-paint): spiegelt die *Ladeleistung* wider, Zielwert ≤ 2,5 s
 - [Interaction to Next Paint (INP)](https://web.dev/articles/inp?hl={{ site.active_lang }}): spiegelt die *Reaktionsfähigkeit* wider, Zielwert ≤ 200 ms
-- [Cumulative Layout Shift (CLS)](#cls-kumulative-layoutverschiebung): spiegelt die *visuelle Stabilität* wider, Zielwert ≤ 0,1
+- [Cumulative Layout Shift (CLS)](#cls-cumulative-layout-shift): spiegelt die *visuelle Stabilität* wider, Zielwert ≤ 0,1
 
-Core Web Vitals sind grundsätzlich für Messungen in realen Umgebungen konzipiert. Zwei davon (außer INP) lassen sich aber auch in Laborumgebungen wie den Chrome DevTools oder Lighthouse messen. INP erfordert reale Nutzereingaben und kann deshalb nicht im Labor gemessen werden; in solchen Fällen kann [TBT](#tbt-gesamte-blockierzeit) als nahe korrelierende, ähnliche Metrik herangezogen werden – [in der Regel verbessert sich INP, wenn man TBT verbessert](https://web.dev/articles/vitals?hl={{ site.active_lang }}#lab_tools_to_measure_core_web_vitals).
+Core Web Vitals sind grundsätzlich für Messungen in realen Umgebungen konzipiert. Zwei davon (außer INP) lassen sich aber auch in Laborumgebungen wie den Chrome DevTools oder Lighthouse messen. INP erfordert reale Nutzereingaben und kann deshalb nicht im Labor gemessen werden; in solchen Fällen kann [TBT](#tbt-total-blocking-time) als nahe korrelierende, ähnliche Metrik herangezogen werden – [in der Regel verbessert sich INP, wenn man TBT verbessert](https://web.dev/articles/vitals?hl={{ site.active_lang }}#lab_tools_to_measure_core_web_vitals).
 
 ### Gewichtung der Leistungsbewertung in Lighthouse 10
 [Die Lighthouse-Leistungsbewertung ist ein gewogener Durchschnitt der Teilmetriken; die folgenden Gewichte werden verwendet](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring?hl={{ site.active_lang }}).
@@ -111,7 +111,7 @@ Core Web Vitals sind grundsätzlich für Messungen in realen Umgebungen konzipie
 - Misst, wie schnell während des Ladens einer Seite Inhalte sichtbar werden
 - Lighthouse zeichnet den Ladevorgang als Video auf, analysiert die Fortschritte zwischen den Frames und berechnet daraus mithilfe des [Speedline-Node.js-Moduls](https://github.com/paulirish/speedline) den SI-Score
 
-> Maßnahmen zur Beschleunigung des Seitenladens – einschließlich dessen, was wir bei [FCP](#fcp-erste-inhaltliche-darstellung), [LCP](#lcp-groesste-inhaltliche-darstellung) und [TBT](#tbt-gesamte-blockierzeit) besprochen haben – wirken sich in der Regel auch positiv auf den SI aus. Der SI ist weniger Repräsentant eines einzelnen Teilschritts als vielmehr eine Metrik, die den gesamten Ladeprozess in gewissem Maß abbildet.
+> Maßnahmen zur Beschleunigung des Seitenladens – einschließlich dessen, was wir bei [FCP](#fcp-first-contentful-paint), [LCP](#lcp-largest-contentful-paint) und [TBT](#tbt-total-blocking-time) besprochen haben – wirken sich in der Regel auch positiv auf den SI aus. Der SI ist weniger Repräsentant eines einzelnen Teilschritts als vielmehr eine Metrik, die den gesamten Ladeprozess in gewissem Maß abbildet.
 {: .prompt-tip }
 
 #### Lighthouse-Bewertungskriterien

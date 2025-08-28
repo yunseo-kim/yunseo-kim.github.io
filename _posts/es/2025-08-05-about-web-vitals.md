@@ -24,9 +24,9 @@ Se describe con base en [web.dev de Google](https://web.dev/performance?hl={{ si
 
 ### Métricas esenciales de la web (Core Web Vitals)
 Como veremos enseguida, existen varias Web Vitals. Entre ellas, Google considera especialmente importantes tres que se relacionan estrechamente con la experiencia de usuario y que se pueden medir en condiciones reales (no solo de laboratorio); a estas se las denomina [métricas esenciales de la web (Core Web Vitals)](https://web.dev/articles/vitals?hl={{ site.active_lang }}#core-web-vitals). Google también incorpora estas métricas en el orden de resultados de su buscador, por lo que, desde la perspectiva del SEO, los administradores de sitios deben prestarles especial atención.
-- [Pintura con contenido más grande (LCP)](#lcp-pintura-con-contenido-mas-grande): refleja el rendimiento de carga; debe ser ≤ 2,5 s
+- [Pintura con contenido más grande (LCP)](#lcp-pintura-con-contenido-más-grande): refleja el rendimiento de carga; debe ser ≤ 2,5 s
 - [Interacción hasta la siguiente pintura (INP)](https://web.dev/articles/inp?hl={{ site.active_lang }}): refleja la capacidad de respuesta; debe ser ≤ 200 ms
-- [Cambio de diseño acumulado (CLS)](#cls-cambio-de-diseno-acumulado): refleja la estabilidad visual; debe mantenerse ≤ 0,1
+- [Cambio de diseño acumulado (CLS)](#cls-cambio-de-diseño-acumulado): refleja la estabilidad visual; debe mantenerse ≤ 0,1
 
 Aunque las Core Web Vitals están pensadas para medirse en el entorno real, dos de ellas (excepto INP) pueden medirse también en entornos de laboratorio como DevTools de Chrome o Lighthouse. INP requiere una entrada real del usuario y no puede medirse en laboratorio; en ese caso, [TBT](#tbt-tiempo-total-de-bloqueo) es una métrica muy correlacionada y similar, y puede usarse como referencia; [normalmente, al mejorar TBT también mejora INP](https://web.dev/articles/vitals?hl={{ site.active_lang }}#lab_tools_to_measure_core_web_vitals).
 
@@ -36,10 +36,10 @@ Aunque las Core Web Vitals están pensadas para medirse en el entorno real, dos 
 | Métrica | Peso |
 | --- | --- |
 | [Primera pintura con contenido](#fcp-primera-pintura-con-contenido) | 10% |
-| [Índice de velocidad](#si-indice-de-velocidad) | 10% |
-| [Pintura con contenido más grande](#lcp-pintura-con-contenido-mas-grande) | 25% |
+| [Índice de velocidad](#si-índice-de-velocidad) | 10% |
+| [Pintura con contenido más grande](#lcp-pintura-con-contenido-más-grande) | 25% |
 | [Tiempo total de bloqueo](#tbt-tiempo-total-de-bloqueo) | 30% |
-| [Cambio de diseño acumulado](#cls-cambio-de-diseno-acumulado) | 25% |
+| [Cambio de diseño acumulado](#cls-cambio-de-diseño-acumulado) | 25% |
 
 ### FCP (Primera pintura con contenido)
 - Mide el tiempo que tarda en renderizarse el primer contenido del DOM tras solicitar la página
@@ -111,7 +111,7 @@ Según la [documentación para desarrolladores de Chrome](https://developer.chro
 - Mide cuán rápido se muestra visualmente el contenido durante la carga de la página
 - Lighthouse graba en video el proceso de carga en el navegador, analiza el video para calcular el progreso entre frames y usa el [módulo Speedline de Node.js](https://github.com/paulirish/speedline) para calcular la puntuación de SI
 
-> Además de lo mencionado en [FCP](#fcp-primera-pintura-con-contenido), [LCP](#lcp-pintura-con-contenido-mas-grande) y [TBT](#tbt-tiempo-total-de-bloqueo), cualquier medida que mejore la velocidad de carga de la página también repercute positivamente en el SI. Más que representar una sola fase del proceso, esta métrica refleja el avance visual a lo largo de la carga completa.
+> Además de lo mencionado en [FCP](#fcp-primera-pintura-con-contenido), [LCP](#lcp-pintura-con-contenido-más-grande) y [TBT](#tbt-tiempo-total-de-bloqueo), cualquier medida que mejore la velocidad de carga de la página también repercute positivamente en el SI. Más que representar una sola fase del proceso, esta métrica refleja el avance visual a lo largo de la carga completa.
 {: .prompt-tip }
 
 #### Criterios de evaluación de Lighthouse

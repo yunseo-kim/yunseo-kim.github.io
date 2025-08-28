@@ -162,7 +162,7 @@ mermaid: true
 
 ## 5. Atualização
 
-Parto do princípio de que você escolheu a opção 1 em [3-2](#3-2-criar-repositorio-do-github). Se tiver escolhido a 2, como dito, será preciso fazer merge com a tag upstream mais recente.
+Parto do princípio de que você escolheu a opção 1 em [3-2](#3-2-criar-repositório-do-github). Se tiver escolhido a 2, como dito, será preciso fazer merge com a tag upstream mais recente.
 
 1. Edite o `Gemfile`{: .filepath} e defina a nova versão do gem "jekyll-theme-chirpy".
 2. Em upgrades maiores, arquivos centrais e opções de configuração fora do gem "jekyll-theme-chirpy" podem ter mudado. Nesse caso, verifique as diferenças pela API do GitHub abaixo e aplique-as manualmente:
