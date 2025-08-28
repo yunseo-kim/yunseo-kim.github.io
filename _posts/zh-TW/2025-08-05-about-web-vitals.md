@@ -96,7 +96,7 @@ image: /assets/img/technology.webp
 
 ### CLS（累積版面位移, Cumulative Layout Shift）
 {% include embed/video.html src='https://web.dev/static/articles/cls/video/web-dev-assets/layout-instability-api/layout-instability2.webm' title="突發版面變動的範例" autoplay=true loop=true %}
-> 影片來源：[Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
+> 影片來源：[Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
 
 ~~從游標的動作中感受到滿滿的憤怒~~
 
@@ -104,8 +104,8 @@ image: /assets/img/technology.webp
 - CLS 分數的具體計算方式已記載於 [Google 的 web.dev](https://web.dev/articles/cls)
 - 如下圖所示，應以 0.1 以下為目標
 
-![何謂良好的 CLS 分數？](/assets/img/about-web-vitals/good-cls-values.svg)
-> 圖片來源：[Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
+![何謂良好的 CLS 分數？](https://web.dev/static/articles/cls/image/good-cls-values.svg){: width="640" height="480" }
+> 圖片來源：[Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
 
 ### SI（速度指數, Speed Index）
 - 量測在頁面載入過程中，內容被視覺化呈現的速度

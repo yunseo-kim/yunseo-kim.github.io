@@ -96,7 +96,7 @@ Core Web Vitals sind grundsätzlich für Messungen in realen Umgebungen konzipie
 
 ### CLS (Cumulative Layout Shift)
 {% include embed/video.html src='https://web.dev/static/articles/cls/video/web-dev-assets/layout-instability-api/layout-instability2.webm' title="Beispiel für eine plötzliche Layoutänderung" autoplay=true loop=true %}
-> Videoquelle: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
+> Videoquelle: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
 
 ~~In der Bewegung des Cursors spürt man tiefe Wut.~~
 
@@ -104,8 +104,8 @@ Core Web Vitals sind grundsätzlich für Messungen in realen Umgebungen konzipie
 - Die genaue Berechnung des CLS-Scores ist auf [web.dev](https://web.dev/articles/cls) beschrieben.
 - Wie in der folgenden Grafik ersichtlich, sollte der Zielwert ≤ 0,1 sein.
 
-![Was ist ein guter CLS-Wert?](/assets/img/about-web-vitals/good-cls-values.svg)
-> Bildquelle: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
+![Was ist ein guter CLS-Wert?](https://web.dev/static/articles/cls/image/good-cls-values.svg){: width="640" height="480" }
+> Bildquelle: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
 
 ### SI (Speed Index)
 - Misst, wie schnell während des Ladens einer Seite Inhalte sichtbar werden

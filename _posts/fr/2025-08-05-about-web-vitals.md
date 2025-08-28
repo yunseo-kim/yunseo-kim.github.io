@@ -96,7 +96,7 @@ Selon la [documentation des développeurs Chrome](https://developer.chrome.com/d
 
 ### CLS (Cumulative Layout Shift)
 {% include embed/video.html src='https://web.dev/static/articles/cls/video/web-dev-assets/layout-instability-api/layout-instability2.webm' title="Exemple de changement de mise en page soudain" autoplay=true loop=true %}
-> Source de la vidéo: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
+> Source de la vidéo: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
 
 ~~On sent une profonde colère dans le mouvement du curseur~~
 
@@ -104,8 +104,8 @@ Selon la [documentation des développeurs Chrome](https://developer.chrome.com/d
 - La méthode détaillée de calcul du score CLS est décrite sur [web.dev de Google](https://web.dev/articles/cls)
 - Comme l’illustre l’image ci-dessous, il faut viser ≤ 0,1
 
-![Quel est un bon score CLS ?](/assets/img/about-web-vitals/good-cls-values.svg)
-> Source de l’image: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
+![Quel est un bon score CLS ?](https://web.dev/static/articles/cls/image/good-cls-values.svg){: width="640" height="480" }
+> Source de l’image: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
 
 ### SI (Speed Index)
 - Mesure la vitesse à laquelle le contenu devient visuellement disponible pendant le chargement de la page

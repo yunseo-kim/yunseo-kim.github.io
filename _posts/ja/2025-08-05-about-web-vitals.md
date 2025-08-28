@@ -96,7 +96,7 @@ Google の [web.dev](https://web.dev/performance?hl={{ site.active_lang }}) と 
 
 ### CLS (Cumulative Layout Shift)
 {% include embed/video.html src='https://web.dev/static/articles/cls/video/web-dev-assets/layout-instability-api/layout-instability2.webm' title="予期しないレイアウト変更の例" autoplay=true loop=true %}
-> 動画出典: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
+> 動画出典: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
 
 ~~カーソルの動きから深い怒りを感じる~~
 
@@ -104,8 +104,8 @@ Google の [web.dev](https://web.dev/performance?hl={{ site.active_lang }}) と 
 - CLS スコアの算出方法の詳細は[Google の web.dev](https://web.dev/articles/cls)に記載されている
 - 下図のとおり、0.1 以下を目標にする
 
-![良いCLSスコアとは？](/assets/img/about-web-vitals/good-cls-values.svg)
-> 画像出典: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
+![良いCLSスコアとは？](https://web.dev/static/articles/cls/image/good-cls-values.svg){: width="640" height="480" }
+> 画像出典: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
 
 ### SI (Speed Index)
 - ページのロード中にコンテンツがどれだけ早く視覚的に表示されるかを測定

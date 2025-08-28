@@ -104,7 +104,7 @@ image: /assets/img/technology.webp
 - CLS 점수를 산정하는 구체적인 방식은 [구글의 web.dev](https://web.dev/articles/cls)에 기술되어 있음
 - 아래 이미지에서 확인할 수 있듯, 0.1 이하를 목표로 해야 함
 
-![What is a good CLS score?](/assets/img/about-web-vitals/good-cls-values.svg)
+![What is a good CLS score?](https://web.dev/static/articles/cls/image/good-cls-values.svg){: width="640" height="480" }
 > 이미지 출처: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
 
 ### SI (Speed Index)

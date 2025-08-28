@@ -96,7 +96,7 @@ According to the [Chrome Developers docs](https://developer.chrome.com/docs/ligh
 
 ### CLS (Cumulative Layout Shift)
 {% include embed/video.html src='https://web.dev/static/articles/cls/video/web-dev-assets/layout-instability-api/layout-instability2.webm' title="An example of an unexpected layout shift" autoplay=true loop=true %}
-> Video source: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
+> Video source: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
 
 ~~I sense deep rage in that cursor movement~~
 
@@ -104,8 +104,8 @@ According to the [Chrome Developers docs](https://developer.chrome.com/docs/ligh
 - The exact method for calculating the CLS score is described on [Google’s web.dev](https://web.dev/articles/cls)
 - As shown in the image below, you should target ≤ 0.1
 
-![What is a good CLS score?](/assets/img/about-web-vitals/good-cls-values.svg)
-> Image source: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
+![What is a good CLS score?](https://web.dev/static/articles/cls/image/good-cls-values.svg){: width="640" height="480" }
+> Image source: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
 
 ### SI (Speed Index)
 - Measures how quickly content is visually displayed during page load

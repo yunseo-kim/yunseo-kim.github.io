@@ -96,7 +96,7 @@ De acordo com a [documentação do Chrome para desenvolvedores](https://develope
 
 ### CLS (Mudança cumulativa de layout) {#cls-mudanca-de-layout-cumulativa}
 {% include embed/video.html src='https://web.dev/static/articles/cls/video/web-dev-assets/layout-instability-api/layout-instability2.webm' title="Exemplo de mudança inesperada de layout" autoplay=true loop=true %}
-> Fonte do vídeo: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
+> Fonte do vídeo: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
 
 ~~Sinto uma fúria profunda no movimento do cursor~~
 
@@ -104,8 +104,8 @@ De acordo com a [documentação do Chrome para desenvolvedores](https://develope
 - O cálculo detalhado da pontuação de CLS está descrito no [web.dev do Google](https://web.dev/articles/cls)
 - Como se vê na imagem abaixo, a meta deve ser ≤ 0,1
 
-![Qual é uma boa pontuação de CLS?](/assets/img/about-web-vitals/good-cls-values.svg)
-> Fonte da imagem: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
+![Qual é uma boa pontuação de CLS?](https://web.dev/static/articles/cls/image/good-cls-values.svg){: width="640" height="480" }
+> Fonte da imagem: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
 
 ### SI (Índice de Velocidade) {#si-indice-de-velocidade}
 - Mede quão rapidamente o conteúdo é exibido visualmente durante o carregamento da página

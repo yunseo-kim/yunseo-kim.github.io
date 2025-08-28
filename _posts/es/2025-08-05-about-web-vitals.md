@@ -96,7 +96,7 @@ Según la [documentación para desarrolladores de Chrome](https://developer.chro
 
 ### CLS (Cambio de diseño acumulado)
 {% include embed/video.html src='https://web.dev/static/articles/cls/video/web-dev-assets/layout-instability-api/layout-instability2.webm' title="Ejemplo de cambio de diseño repentino" autoplay=true loop=true %}
-> Fuente del video: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
+> Fuente del video: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls?hl={{ site.active_lang }})
 
 ~~Se percibe una profunda ira en el movimiento del cursor~~
 
@@ -104,8 +104,8 @@ Según la [documentación para desarrolladores de Chrome](https://developer.chro
 - El método exacto de cálculo del CLS está descrito en [web.dev de Google](https://web.dev/articles/cls)
 - Como se ve en la imagen inferior, conviene apuntar a ≤ 0.1
 
-![¿Cuál es una buena puntuación de CLS?](/assets/img/about-web-vitals/good-cls-values.svg)
-> Fuente de la imagen: [Cumulative Layout Shift (CLS) | Articles | web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
+![¿Cuál es una buena puntuación de CLS?](https://web.dev/static/articles/cls/image/good-cls-values.svg){: width="640" height="480" }
+> Fuente de la imagen: [Cumulative Layout Shift (CLS) \| Articles \| web.dev](https://web.dev/articles/cls#what-is-a-good-cls-score?hl={{ site.active_lang }})
 
 ### SI (Índice de velocidad)
 - Mide cuán rápido se muestra visualmente el contenido durante la carga de la página
