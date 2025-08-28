@@ -1,8 +1,8 @@
 ---
 title: "PolyglotでJekyllブログの多言語対応を実現する方法 (2) - 言語選択ボタンの実装 & レイアウト言語の現地化"
 description: "'jekyll-theme-chirpy'ベースのJekyllブログにPolyglotプラグインを適用して多言語対応を実装した過程を紹介する。この投稿は該当シリーズの2番目の記事として、言語選択ボタンの実装とレイアウト言語の現地化部分を扱う。"
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 ---
 

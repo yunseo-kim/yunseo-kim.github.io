@@ -1,8 +1,8 @@
 ---
 title: "使用Polyglot在Jekyll部落格實現多語言支援 (2) - 實現語言選擇按鈕 & 版面配置語言本地化"
 description: "介紹在基於'jekyll-theme-chirpy'的Jekyll部落格中，應用Polyglot外掛實現多語言支援的過程。此為系列第二篇文章，主要探討如何實現語言選擇按鈕及將版面配置語言本地化。"
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 ---
 

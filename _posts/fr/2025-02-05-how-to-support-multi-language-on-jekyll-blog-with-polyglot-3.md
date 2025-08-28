@@ -1,8 +1,8 @@
 ---
 title: "Comment prendre en charge plusieurs langues sur un blog Jekyll avec Polyglot (3) - Résolution des problèmes de compilation du thème Chirpy et des erreurs de recherche"
 description: "Présentation du processus d'implémentation du support multilingue en appliquant le plugin Polyglot à un blog Jekyll basé sur le thème 'jekyll-theme-chirpy'. Ce billet est le troisième de la série, traitant de l'identification et de la résolution des erreurs survenues lors de l'application de Polyglot au thème Chirpy."
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 mermaid: true
 image: /assets/img/technology.webp
 ---

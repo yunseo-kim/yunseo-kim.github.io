@@ -1,8 +1,8 @@
 ---
 title: "Mehrsprachige Unterstützung für einen Jekyll-Blog mit Polyglot (2) - Implementierung eines Sprachauswahl-Buttons & Lokalisierung der Layout-Sprache"
 description: "Anleitung zur Implementierung eines Sprachauswahl-Buttons und zur Lokalisierung der Layout-Sprache in einem Jekyll-Blog mit dem Polyglot-Plugin. Dieser zweite Teil der Serie behandelt die Anpassung der Benutzeroberfläche für eine mehrsprachige Website auf Basis des 'jekyll-theme-chirpy'."
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 ---
 

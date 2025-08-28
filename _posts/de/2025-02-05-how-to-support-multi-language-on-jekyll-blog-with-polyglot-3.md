@@ -1,8 +1,8 @@
 ---
 title: "Mehrsprachige Unterstützung für einen Jekyll-Blog mit Polyglot (3) – Fehlerbehebung bei Build-Fehlern und Suchfunktion im Chirpy-Theme"
 description: "Eine Anleitung zur Implementierung mehrsprachiger Unterstützung in einem Jekyll-Blog mit dem 'jekyll-theme-chirpy'-Theme durch das Polyglot-Plugin. Als dritter Teil der Serie befasst er sich mit der Identifizierung und Behebung von Fehlern, die bei der Anwendung von Polyglot auf das Chirpy-Theme auftraten."
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 mermaid: true
 image: /assets/img/technology.webp
 ---

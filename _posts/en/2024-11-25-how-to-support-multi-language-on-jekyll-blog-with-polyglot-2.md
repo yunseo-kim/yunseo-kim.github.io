@@ -1,8 +1,8 @@
 ---
 title: "How to Support Multiple Languages on a Jekyll Blog with Polyglot (2) - Implementing a Language Selector Button & Localizing the Layout Language"
 description: "Part two of our series on implementing multi-language support for a Jekyll blog with the Polyglot plugin. Learn how to add a language selector button and localize the Chirpy theme's layout for a seamless user experience."
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 ---
 

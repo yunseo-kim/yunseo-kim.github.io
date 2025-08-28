@@ -1,8 +1,8 @@
 ---
-title: "PolyglotでJekyllブログの多言語対応を実現する方法 （3）- Chirpyテーマのビルド失敗と検索機能エラーのトラブルシューティング"
+title: "PolyglotでJekyllブログの多言語対応を実現する方法 (3) - Chirpyテーマのビルド失敗と検索機能エラーのトラブルシューティング"
 description: "'jekyll-theme-chirpy'ベースのJekyllブログにPolyglotプラグインを適用して多言語対応を実装した過程を紹介する。この投稿はシリーズの3番目の記事で、Chirpyテーマに Polyglot適用時に発生したエラーの原因を特定し解決する部分を扱います。"
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 mermaid: true
 image: /assets/img/technology.webp
 ---

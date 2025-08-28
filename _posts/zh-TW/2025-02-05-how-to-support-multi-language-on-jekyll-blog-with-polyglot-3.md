@@ -1,8 +1,8 @@
 ---
 title: "使用Polyglot在Jekyll部落格實現多語言支援 (3) - Chirpy 主題建置失敗與搜尋功能錯誤的疑難排解"
 description: "介紹在基於'jekyll-theme-chirpy'的Jekyll部落格中應用Polyglot外掛實現多語言支援的過程。本文為系列第三篇，主要探討在Chirpy主題上應用Polyglot時所發生的錯誤，並說明如何識別問題原因及解決方法。"
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 mermaid: true
 image: /assets/img/technology.webp
 ---

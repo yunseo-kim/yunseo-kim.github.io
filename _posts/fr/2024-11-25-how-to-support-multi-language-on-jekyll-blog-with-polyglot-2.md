@@ -1,8 +1,8 @@
 ---
 title: "Comment prendre en charge plusieurs langues sur un blog Jekyll avec Polyglot (2) - Implémentation du bouton de sélection de langue & localisation de la langue de mise en page"
 description: "Présentation du processus d'implémentation du support multilingue en appliquant le plugin Polyglot à un blog Jekyll basé sur le thème 'jekyll-theme-chirpy'. Ce post est le deuxième article de cette série, couvrant l'implémentation du bouton de sélection de langue et la localisation de la langue de mise en page."
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 ---
 

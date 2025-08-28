@@ -1,8 +1,8 @@
 ---
 title: "Cómo implementar soporte multilingüe en un blog Jekyll con Polyglot (2) - Implementación del botón de selección de idioma y localización del idioma del layout"
 description: "Presenta el proceso de implementación de soporte multilingüe aplicando el plugin Polyglot a un blog Jekyll basado en 'jekyll-theme-chirpy'. Este post es el segundo de la serie, cubriendo la implementación del botón de selección de idioma y la localización del idioma del layout."
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 image: /assets/img/technology.webp
 ---
 

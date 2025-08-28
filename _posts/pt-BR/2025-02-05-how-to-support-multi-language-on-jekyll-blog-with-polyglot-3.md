@@ -1,8 +1,8 @@
 ---
 title: "Como implementar suporte multilíngue em blog Jekyll com Polyglot (3) - Solução de problemas de falha de compilação e erros na função de busca do tema Chirpy"
 description: "Apresenta o processo de implementação de suporte multilíngue aplicando o plugin Polyglot em um blog Jekyll baseado no tema 'jekyll-theme-chirpy'. Este post é o terceiro da série e aborda a identificação e resolução de erros que ocorrem ao aplicar o Polyglot ao tema Chirpy."
-categories: [AI & Data, Blogging]
-tags: [Jekyll, Polyglot, Markdown]
+categories: [Dev, Web Dev]
+tags: [Static Site, Jekyll, Polyglot, Markdown]
 mermaid: true
 image: /assets/img/technology.webp
 ---
