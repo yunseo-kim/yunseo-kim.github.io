@@ -23,7 +23,7 @@ def init_client(model):
     if model[:3] == "gpt":
         return OpenAI()
 
-def submit_prompt(model, prompt, system_prompt, prefill, temperature=0.0, verbosity="medium"):
+def submit_prompt(model, prompt, system_prompt, prefill, temperature=0.0, reasoning_level="medium", verbosity="medium"):
     client = init_client(model)
 
     # print("- Submit prompt")
@@ -68,9 +68,8 @@ def submit_prompt(model, prompt, system_prompt, prefill, temperature=0.0, verbos
             model=model,
             instructions=system_prompt,
             input=prompt,
-            text={
-                "verbosity": verbosity
-                }
+            reasoning={ "effort": reasoning_level },
+            text={ "verbosity": verbosity }
         )
         return response.output_text
 
@@ -245,7 +244,7 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
     """
     
     # Get the translation from Claude
-    translated_diff = submit_prompt(model, prompt, system_prompt, "```diff", verbosity="low")
+    translated_diff = submit_prompt(model, prompt, system_prompt, "```diff", reasoning_level="low", verbosity="low")
     if model[:6] == "claude":
         translated_diff = "```diff"+translated_diff
     # print(f"Translated diff:\n{translated_diff}")
