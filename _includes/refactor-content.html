@@ -127,6 +127,7 @@
 
     {% assign _final_src = null %}
     {% assign _lazyload = true %}
+    {% assign _fetch_priority = nil %}
 
     {%- capture _img_url -%}
       {% include media-url.html src=_src subpath=page.media_subpath %}
