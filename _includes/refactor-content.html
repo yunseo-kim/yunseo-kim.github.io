@@ -153,8 +153,13 @@
       <!-- add image placeholder -->
       {% assign _left = _left | replace: 'src=', 'data-src=' | replace: ' lqip=', ' data-lqip="true" src=' %}
 
-    {% else %}
+    <!-- Modified by Yunseo Kim: do not append 'shimmer' class for preview images in ‘post’ layout -->
+    {% elsif page.layout != 'post' %}
       {% assign _wrapper_class = _wrapper_class | append: ' shimmer' %}
+    {% else %}
+      {% unless _wrapper_class contains 'preview-img' %}
+        {% assign _wrapper_class = _wrapper_class | append: ' shimmer' %}
+      {% endunless %}
     {% endif %}
 
     {% if _wrapper_class contains 'preview-img' -%}
