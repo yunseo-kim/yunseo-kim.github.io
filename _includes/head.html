@@ -148,10 +148,6 @@
     <link rel="stylesheet" href="{{ site.data.origin[type].toc.css | relative_url }}">
   {%- endif %}
 
-  {% if page.layout == 'post' or page.layout == 'page' or page.layout == 'home' -%}
-    <link rel="stylesheet" href="{{ site.data.origin[type]['lazy-polyfill'].css | relative_url }}">
-  {%- endif %}
-
   {% if page.layout == 'page' or page.layout == 'post' -%}
     <!-- Image Popup -->
   <link rel="stylesheet" href="{{ site.data.origin[type].glightbox.css | relative_url }}">

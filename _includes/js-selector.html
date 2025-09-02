@@ -6,18 +6,14 @@
 
 <!-- layout specified -->
 
-{% if page.layout == 'post' or page.layout == 'page' or page.layout == 'home' %}
-  {% assign urls = urls | append: ',' | append: site.data.origin[type]['lazy-polyfill'].js %}
-
-  {% unless page.layout == 'home' %}
-    <!-- image lazy-loading & popup & clipboard -->
-    {% assign urls = urls
-      | append: ','
-      | append: site.data.origin[type].glightbox.js
-      | append: ','
-      | append: site.data.origin[type].clipboard.js
-    %}
-  {% endunless %}
+{% if page.layout == 'post' or page.layout == 'page' %}
+  <!-- image popup & clipboard -->
+  {% assign urls = urls
+    | append: ','
+    | append: site.data.origin[type].glightbox.js
+    | append: ','
+    | append: site.data.origin[type].clipboard.js
+  %}
 {% endif %}
 
 {% if page.layout == 'home'
