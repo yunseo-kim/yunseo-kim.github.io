@@ -63,11 +63,20 @@ refactor: true
 
           {% if post.image.lqip %}
             {% capture lqip_url %}{% include media-url.html src=post.image.lqip subpath=post.media_subpath %}{% endcapture %}
-            {% assign lqip = 'lqip="' | append: lqip_url | append: '"' %}
+            {% assign lqip = ' lqip="' | append: lqip_url | append: '"' %}
           {% endif %}
 
+          <!-- Modified by Yunseo Kim: do not lazy load preview images for the first three posts on each page (initial viewport) -->
+          {% if forloop.index <= 3 -%}
+            {% assign loading_attribute = ' loading="eager"' %}
+            {% assign fetchpriority = ' fetchpriority="high"' %}
+          {%- else -%}
+            {% assign loading_attribute = ' loading="lazy"' %}
+            {% assign fetchpriority = nil %}
+          {%- endif %}
+
           <div class="col-md-5">
-            <img src="{{ src }}" alt="{{ alt }}" {{ lqip }}>
+            <img src="{{ src }}" alt="{{ alt }}"{{ lqip }}{{ loading_attribute }}{{ fetchpriority}}>
           </div>
 
           {% assign card_body_col = '7' %}
