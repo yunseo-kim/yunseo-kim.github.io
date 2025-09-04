@@ -68,6 +68,9 @@
     {% assign _lqip = null %}
     {% assign _class = null %}
 
+    {% assign _append_lazyload = true %}
+    {% assign _append_fetch_priority = true %}
+
     {% for _attr in _attrs %}
       {% unless _attr contains '=' %}
         {% continue %}
@@ -84,6 +87,10 @@
           {% assign _lqip = _value %}
         {% when 'class' %}
           {% assign _class = _value %}
+        {% when 'loading' %}
+          {% assign _append_lazyload = false %}
+        {% when 'fetchpriority' %}
+          {% assign _append_fetch_priority = false %}
       {% endcase %}
     {% endfor %}
 
@@ -126,8 +133,6 @@
     {% endif %}
 
     {% assign _final_src = null %}
-    {% assign _lazyload = true %}
-    {% assign _fetch_priority = nil %}
 
     {%- capture _img_url -%}
       {% include media-url.html src=_src subpath=page.media_subpath %}
@@ -142,7 +147,7 @@
     {% endunless %}
 
     {% if _lqip %}
-      {% assign _lazyload = false %}
+      {% assign _append_lazyload = false %}
       {% assign _wrapper_class = _wrapper_class | append: ' blur' %}
 
       {% unless _lqip contains 'data:' %}
@@ -162,18 +167,19 @@
       {% endunless %}
     {% endif %}
 
+    {% assign _fetch_priority = nil %}
     {% if _wrapper_class contains 'preview-img' -%}
-      {% assign _lazyload = false %}
+      {% assign _append_lazyload = false %}
       {% assign _fetch_priority = '"high"' %}
     {%- endif %}
     
     <!-- lazy-load images -->
-    {% if _lazyload %}
+    {% if _append_lazyload %}
       {% assign _left = _left | append: ' loading="lazy"' %}
     {% endif %}
 
     <!-- fetch priority -->
-    {% if _fetch_priority %}
+    {% if _fetch_priority and _append_fetch_priority %}
       {% assign _left = _left | append: ' fetchpriority=' | append: _fetch_priority %}
     {% endif %}
 
