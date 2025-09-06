@@ -1,0 +1,12 @@
+---
+---
+
+/* prettier-ignore */
+@use '
+{%- if jekyll.environment == "production" -%}
+  bundles/category-tag.bundle
+{%- else -%}
+  entries/category-tag
+{%- endif -%}';
+
+/* append your custom style below */

@@ -1,0 +1,12 @@
+---
+---
+
+/* prettier-ignore */
+@use '
+{%- if jekyll.environment == "production" -%}
+  bundles/post.bundle
+{%- else -%}
+  entries/post
+{%- endif -%}';
+
+/* append your custom style below */
