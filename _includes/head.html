@@ -145,12 +145,19 @@
   {% if site.active_lang == 'ko' -%}
     <link rel="preload" as="style" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
     <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-  {%- elsif site.active_lang == 'ja' -%}
+  {%- elsif site.active_lang == 'ja' or site.active_lang == 'zh-TW' -%}
     <link rel="preload" as="style" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp-dynamic-subset.min.css">
     <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp-dynamic-subset.min.css" />
   {%- else -%}
     <link rel="preload" as="style" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-std-dynamic-subset.min.css">
     <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-std-dynamic-subset.min.css" />
+  {%- endif %}
+  {% if site.active_lang == 'zh-TW' -%}
+    <style>
+      body {
+        font-feature-settings: "ss05";
+      }
+    </style>
   {%- endif %}
 
   <!-- Font Awesome Icons -->
