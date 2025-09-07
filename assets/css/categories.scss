@@ -1,12 +1,6 @@
 ---
 ---
 
-/* prettier-ignore */
-@use '
-{%- if jekyll.environment == "production" -%}
-  bundles/categories.bundle
-{%- else -%}
-  entries/categories
-{%- endif -%}';
+@use 'pages/categories';
 
 /* append your custom style below */
