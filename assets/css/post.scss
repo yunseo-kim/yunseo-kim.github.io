@@ -4,3 +4,34 @@
 @use 'pages/post';
 
 /* append your custom style below */
+
+/* abstracts/_variables.scss */
+// $font-family-base: 'Source Sans Pro', 'Microsoft Yahei', sans-serif !default;
+// $font-family-heading: Lato, 'Microsoft Yahei', sans-serif !default;
+$font-family-base: 'Source Sans Pro', 'Pretendard JP Variable', 'Pretendard Variable', 'Microsoft Jhenghei', 'Microsoft Yahei', sans-serif !default;
+$font-family-heading: Lato, 'Pretendard JP Variable', 'Pretendard Variable', 'Microsoft Jhenghei', 'Microsoft Yahei', sans-serif !default;
+
+/* abstracts/_placeholders.scss */
+// %heading {
+//   font-family: $font-family-heading;
+// }
+
+/* pages/_post.scss */
+header .post-desc {
+  // @extend %heading;
+  font-family: $font-family-heading;
+}
+
+.share-mastodon {
+  /* See: https://github.com/justinribeiro/share-to-mastodon#properties */
+  --wc-stm-font-family: $font-family-base;
+}
+
+#toc-bar .label {
+  // @extend %heading;
+  font-family: $font-family-heading;
+}
+
+#toc-solo-trigger .label {
+  font-family: $font-family-heading;
+}

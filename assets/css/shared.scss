@@ -10,3 +10,73 @@
 @use 'pages/search';
 
 /* append your custom style below */
+
+/* Bootstrap */
+:root {
+  // --bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --bs-font-sans-serif:"Pretendard Std Variable","Pretendard JP Variable","Pretendard Variable",-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue","Segoe UI","Hiragino Sans","Apple SD Gothic Neo",Meiryo,"Noto Sans","Noto Sans JP","Noto Sans KR","Liberation Sans",Arial,"Malgun Gothic",Osaka,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  // 맑은 고딕/Segoe UI의 경우, 국/영문을 한 줄에 혼용 시 영문에 비해 국문 폰트의 크기가 약간 더 크기 때문에 상단 정렬이 맞지 않아 심미성이 저해됨 (https://www.samsungsds.com/kr/insights/enterprise_ux_fonts.html 참고)
+  // 본고딕/Roboto의 경우에도 비슷한 문제 발생
+  // 맑은 고딕이나 JhengHei(정체자 한자)/YaHei(간체자 한자)의 경우 가나 문자의 자형이 좋지 못하므로, 'Segoe UI - Meiryo/Yu Gothic(일본 가나 문자) - JhengHei/YaHei - 맑은 고딕' 순으로 배치
+  }
+
+/* abstracts/_variables.scss */
+// $font-family-base: 'Source Sans Pro', 'Microsoft Yahei', sans-serif !default;
+// $font-family-heading: Lato, 'Microsoft Yahei', sans-serif !default;
+$font-family-base: 'Source Sans Pro', 'Pretendard JP Variable', 'Pretendard Variable', 'Microsoft Jhenghei', 'Microsoft Yahei', sans-serif !default;
+$font-family-heading: Lato, 'Pretendard JP Variable', 'Pretendard Variable', 'Microsoft Jhenghei', 'Microsoft Yahei', sans-serif !default;
+
+/* abstracts/_placeholders.scss */
+// %heading {
+//   font-family: $font-family-heading;
+// }
+
+/* base/_base.scss */
+body {
+  font-family: $font-family-base;
+}
+
+/* base/_typography.scss */
+@for $i from 1 through 5 {
+  h#{$i} {
+    // @extend %heading;
+    font-family: $font-family-heading;
+  }
+}
+
+kbd {
+  // font-family: Lato, sans-serif;
+  font-family: Lato, 'Pretendard JP Variable', 'Pretendard Variable', sans-serif;
+}
+
+/* components/_popups.scss */
+/* PWA update popup */
+#notification .toast-body {
+  // font-family: Lato, sans-serif;
+  font-family: Lato, 'Pretendard JP Variable', 'Pretendard Variable', sans-serif;
+}
+
+#toc-popup {
+  .header .label {
+    font-family: $font-family-heading;
+  }
+
+  #toc-popup-content {
+    font-family: $font-family-heading;
+  }
+}
+
+/* pages/_search.scss */
+#search-results a {
+  // @extend %heading;
+  font-family: $font-family-heading;
+}
+
+/* Custom styles (not in the original Chirpy theme) */
+.content, #toc {
+  font-family: 'Pretendard Std Variable', 'Pretendard JP Variable', 'Pretendard Variable', 'Microsoft Jhenghei', 'Microsoft Yahei', sans-serif
+}
+
+.categories, .tag, #archives {
+  font-family: $font-family-base
+}
