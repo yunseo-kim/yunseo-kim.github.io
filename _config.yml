@@ -266,7 +266,11 @@ jekyll-archives:
     category: /categories/:name/
 
 plugins:
+  - jekyll-polyglot
   - jekyll-redirect-from
+  - jekyll-email-protect
 
 whitelist:
+  - jekyll-polyglot
   - jekyll-redirect-from
+  - jekyll-email-protect

@@ -63,9 +63,9 @@
             https://{{ entry.type }}.com/{{ site[entry.type].username }}
           {%- endcapture -%}
         {% when 'email' %}
-          {% assign email = site.social.email | split: '@' %}
+          {% assign obfs_email = site.social.email | encode_email | split: '@' %}
           {%- capture url -%}
-            javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
+            javascript:location.href = 'mailto:' + ['{{ obfs_email[0] }}','{{ obfs_email[1] }}'].join('@')
           {%- endcapture -%}
         {% when 'rss' %}
           {% assign url = '/feed.xml' | relative_url %}
