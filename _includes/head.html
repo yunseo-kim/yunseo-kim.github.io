@@ -128,16 +128,28 @@
   {% case page.layout -%}
     {%- when "archives" -%}
       <link rel="stylesheet" href="{{ '/assets/css/archives.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/post.css' | relative_url }}">
     {%- when "categories" -%}
       <link rel="stylesheet" href="{{ '/assets/css/categories.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/category-tag.css' | relative_url }}">
     {%- when "home" -%}
       <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/post.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/archives.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/categories.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/tags.css' | relative_url }}">
     {%- when "post" -%}
       <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/home.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/archives.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/categories.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/tags.css' | relative_url }}">
     {%- when "tags" -%}
       <link rel="stylesheet" href="{{ '/assets/css/tags.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/category-tag.css' | relative_url }}">
     {%- when "category", "tag" -%}
       <link rel="stylesheet" href="{{ '/assets/css/category-tag.css' | relative_url }}">
+      <link rel="prefetch" href="{{ '/assets/css/post.css' | relative_url }}">
   {% endcase %}
 
   <!-- Web Font -->
