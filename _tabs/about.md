@@ -30,6 +30,12 @@ I agree with *[Lev Artsimovich](https://en.wikipedia.org/wiki/Lev_Artsimovich)*:
 B.S. in Nuclear Engineering
 - - -
 
+### Military Service <img src = https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanlseDZnOXdpaTA2dDM5ZmcyZDVzdXBhdXpqZGhnOXFseDNiMjh2YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/HL6atEC0FTza78wCLu/giphy.gif width=32>
+Republic of Korea Air Force, Sergeant(OR-5), Squad Leader
+Oct 12022 – Jul 12024
+Completed mandatory military service.
+- - -
+
 ### Badges <img src = "https://media.giphy.com/media/oUhQb6SSMXEDnvBnbJ/giphy.gif" width=32 alt="">
 <!--START_SECTION:badges-->
 [![Qiskit Global Summer School 2022 - Quantum Excellence](https://images.credly.com/images/36d21fa5-2f19-4cdc-a80d-29488161b6cd/image.png){: width="150" }](https://www.credly.com/badges/0a42bffd-1d2e-49ec-ab59-f8a150cec992)
