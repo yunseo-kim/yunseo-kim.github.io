@@ -22,8 +22,6 @@ tools/__pycache__
 
 # NPM dependencies
 node_modules
-package-lock.json
-
 
 # IDE configurations
 .idea
