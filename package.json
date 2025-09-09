@@ -3,7 +3,7 @@
     "@divriots/jampack": "^0.33.1"
   },
   "scripts": {
-    "optimize": "jampack _site${{ steps.pages.outputs.base_path }}",
+    "optimize": "jampack _site",
     "cleanAllDotJampack": "find -s . | grep '.jampack$' | xargs rm -fr"
   },
   "engines": {
