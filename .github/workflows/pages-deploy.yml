@@ -100,6 +100,7 @@ jobs:
         with:
           node-version: '22'
           cache: 'npm'
+      - run: npm ci
       
       - name: Cache Jampack
         uses: actions/cache@v4
