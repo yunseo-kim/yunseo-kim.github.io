@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@divriots/jampack": "^0.33.1"
+  },
+  "scripts": {
+    "optimize": "jampack _site${{ steps.pages.outputs.base_path }}",
+    "cleanAllDotJampack": "find -s . | grep '.jampack$' | xargs rm -fr"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

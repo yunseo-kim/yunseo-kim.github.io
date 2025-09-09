@@ -256,6 +256,7 @@ exclude: # https://github.com/untra/polyglot/issues/204 이슈 참고하여 수�
   - eslint.config.js
   - "package*.json"
   - assets/img/0-uncompressed-originals/
+  - jampack.config.mjs
 
 jekyll-archives:
   enabled: [categories, tags]

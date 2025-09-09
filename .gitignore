@@ -11,6 +11,9 @@ Gemfile.lock
 .jekyll-metadate
 _site
 
+# Jampack cache
+.jampack
+
 # Python cache
 tools/__pycache__
 
