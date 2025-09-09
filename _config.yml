@@ -255,6 +255,7 @@ exclude: # https://github.com/untra/polyglot/issues/204 이슈 참고하여 수�
   - rollup.config.js
   - eslint.config.js
   - "package*.json"
+  - assets/img/0-uncompressed-originals/
 
 jekyll-archives:
   enabled: [categories, tags]
