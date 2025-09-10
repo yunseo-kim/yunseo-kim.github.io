@@ -111,7 +111,7 @@ jobs:
             jampack
 
       - name: Optimize site
-        run: npm run optimize
+        run: npm run optimize -- --onlyoptim
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
