@@ -32,45 +32,48 @@ $font-family-heading: Lato, 'Pretendard JP Variable', 'Pretendard Variable', 'Mi
 // }
 
 /* base/_base.scss */
-body {
-  font-family: $font-family-base;
-}
+// body {
+//   // font-family: v.$font-family-base;
+//   font-family: $font-family-base;
+// }
 
 /* base/_typography.scss */
-@for $i from 1 through 5 {
-  h#{$i} {
-    // @extend %heading;
-    font-family: $font-family-heading;
-  }
-}
+// @for $i from 1 through 5 {
+//   h#{$i} {
+//     // @extend %heading;
+//    font-family: $font-family-heading;
+//   }
+// }
 
-kbd {
-  // font-family: Lato, sans-serif;
-  font-family: Lato, 'Pretendard JP Variable', 'Pretendard Variable', sans-serif;
-}
+// kbd {
+//   // font-family: Lato, sans-serif;
+//  font-family: Lato, 'Pretendard JP Variable', 'Pretendard Variable', sans-serif;
+// }
 
 /* components/_popups.scss */
 /* PWA update popup */
-#notification .toast-body {
-  // font-family: Lato, sans-serif;
-  font-family: Lato, 'Pretendard JP Variable', 'Pretendard Variable', sans-serif;
-}
+// #notification .toast-body {
+//   // font-family: Lato, sans-serif;
+//   font-family: Lato, 'Pretendard JP Variable', 'Pretendard Variable', sans-serif;
+// }
 
-#toc-popup {
-  .header .label {
-    font-family: $font-family-heading;
-  }
-
-  #toc-popup-content {
-    font-family: $font-family-heading;
-  }
-}
+// #toc-popup {
+//   .header .label {
+//     // font-family: v.$font-family-heading;
+//     font-family: $font-family-heading;
+//   }
+// 
+//   #toc-popup-content {
+//     // font-family: v.$font-family-heading;
+//     font-family: $font-family-heading;
+//   }
+// }
 
 /* pages/_search.scss */
-#search-results a {
-  // @extend %heading;
-  font-family: $font-family-heading;
-}
+// #search-results a {
+//   // @extend %heading;
+//   font-family: $font-family-heading;
+// }
 
 /* Custom styles (not in the original Chirpy theme) */
 .content, #toc {
