@@ -106,7 +106,7 @@
 
 .pagination {
   color: var(--text-color);
-  font-family: Lato, 'Pretendard JP Variable', 'Pretendard Variable', sans-serif; // Lato, sans-serif;
+  font-family: Lato, sans-serif;
   justify-content: space-evenly;
 
   @include bp.lg {
