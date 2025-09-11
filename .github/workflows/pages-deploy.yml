@@ -95,24 +95,6 @@ jobs:
             echo "No changes to commit."
           fi
       
-      - name: Setup Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version: '22'
-          cache: 'npm'
-      - run: npm ci
-      
-      - name: Cache Jampack
-        uses: actions/cache@v4
-        with:
-          path: '.jampack'
-          key: jampack-${{ github.run_id }}
-          restore-keys: |
-            jampack
-
-      - name: Optimize site
-        run: npm run optimize -- --onlyoptim
-
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
         with:
