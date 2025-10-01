@@ -17,6 +17,7 @@ I agree with *[Lev Artsimovich](https://en.wikipedia.org/wiki/Lev_Artsimovich)*:
 - - -
 
 ### Social Links <img src = "https://media.giphy.com/media/pLo39nQ9yGahnDFbay/giphy.gif" width=32 alt="">
+
 [![Blog Badge](https://img.shields.io/badge/-Blog-3884FF?style=flat-square&logo=Gitbook&logoColor=white&link=https://www.yunseo.kim/)](https://www.yunseo.kim)
 [![Personal Email Badge](https://img.shields.io/badge/-Personal_email:_%63%6F%6E%74%61%63%74%40%79%75%6E%73%65%6F%2E%6B%69%6D-8B89CC?style=flat-square&logo=Mail.Ru&logoColor=white&link=mailto:%63%6F%6E%74%61%63%74%40%79%75%6E%73%65%6F%2E%6B%69%6D)](mailto:%63%6F%6E%74%61%63%74%40%79%75%6E%73%65%6F%2E%6B%69%6D)
 [![Academic Email Badge](https://img.shields.io/badge/-Academic_email:_%79%75%6E%73%65%6F%40%73%6E%75%2E%61%63%2E%6B%72-0F0F70?style=flat-square&logo=Mail.Ru&logoColor=white&labelColor=15%2C15%2C112&link=mailto:%79%75%6E%73%65%6F%40%73%6E%75%2E%61%63%2E%6B%72)](mailto:%79%75%6E%73%65%6F%40%73%6E%75%2E%61%63%2E%6B%72)
@@ -28,7 +29,8 @@ I agree with *[Lev Artsimovich](https://en.wikipedia.org/wiki/Lev_Artsimovich)*:
 - - -
 
 ### Education <img src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTgzYnlsaGZwZWhqajI5ZzR2d3I0b2NrbTYxZTdtZXR1Zmp2NXg5biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dBrXAuiJQpBTgFhHFH/giphy.gif" width=32 alt="">
-12021 - Present | **Seoul National University**  
+
+12021 - Present \| **Seoul National University**  
 B.S. in Nuclear Engineering (Minor in Physics)
 - - -
 
@@ -36,7 +38,7 @@ B.S. in Nuclear Engineering (Minor in Physics)
 
 #### HANARO SFT (Static-Fire Toolkit)
 
-<img src="https://raw.githubusercontent.com/snu-hanaro/static-fire-toolkit/refs/heads/main/docs/logo-banner.png" width="440" alt="HANARO SFT Logo">
+<img src="https://raw.githubusercontent.com/snu-hanaro/static-fire-toolkit/refs/heads/main/docs/logo-banner.png" align="left" width="440" alt="HANARO SFT Logo">
 
 [![PyPI Version](https://img.shields.io/pypi/v/static-fire-toolkit)](https://pypi.org/project/static-fire-toolkit/)
 [![Pepy Total Downloads](https://img.shields.io/pepy/dt/static-fire-toolkit?label=Downloads%20from%20PyPI)](https://pepy.tech/projects/static-fire-toolkit?timeRange=threeMonths&category=version&includeCIDownloads=true&granularity=daily&viewType=line&versions=1.0.1%2C1.0.0)
@@ -50,7 +52,7 @@ B.S. in Nuclear Engineering (Minor in Physics)
 <a href="https://github.com/yunseo-kim/Qlassifier"><img src="https://gh-card.dev/repos/yunseo-kim/Qlassifier.svg" width="440" alt="Qlassifier repo card"></a>
 
 #### [Qiskit Hackathon Korea 2021](https://www.hackerearth.com/challenges/hackathon/qiskit-hackathon-korea/)
-<img src="https://raw.githubusercontent.com/yunseo-kim/quantum-neural-network/master/images/prize.jpg" width="600" alt="Qiskit Hackathon Korea 2021 Community Choice Award">  
+<img src="https://raw.githubusercontent.com/yunseo-kim/quantum-neural-network/master/images/prize.jpg" align="left" width="600" alt="Qiskit Hackathon Korea 2021 Community Choice Award">  
 <a href="https://github.com/yunseo-kim/quantum-neural-network"><img src="https://gh-card.dev/repos/yunseo-kim/quantum-neural-network.svg" width="440" alt="quantum-neural-network repo card"></a>
 - - -
 
@@ -67,14 +69,15 @@ B.S. in Nuclear Engineering (Minor in Physics)
 
 <!--START_SECTION:badges-->
 <a href="https://www.credly.com/badges/0a42bffd-1d2e-49ec-ab59-f8a150cec992" target="_blank" rel="noopener noreferrer">
-  <img src="https://images.credly.com/images/36d21fa5-2f19-4cdc-a80d-29488161b6cd/image.png" alt="Qiskit Global Summer School 2022 - Quantum Excellence" width="150">
+  <img src="https://images.credly.com/images/36d21fa5-2f19-4cdc-a80d-29488161b6cd/image.png" alt="Qiskit Global Summer School 2022 - Quantum Excellence" align="left" width="150">
 </a>
 <!--END_SECTION:badges-->
 
-- 12024.04.18. | 1st Class Amateur Radio Operator(제1급아마추어무선기사)
+- 12024.04.18. \| 1st Class Amateur Radio Operator(제1급아마추어무선기사)
   - License No.: 24051300018
   - Issued by: [Korea Communications Agency(한국방송통신전파진흥원)](https://www.kca.kr/)
-- 12021.02.20. | TEPS 310
+- 12021.02.20. \| TEPS 310
+
 - - -
 
 ### Skills & Favorite Tools <img src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnQ0cGM1Nmcxb2VyaXJtNXUwd282bTh1MGFyODkwNndtb3V1cnJuOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/0jtgsIH0QYSzpUqaQy/giphy.gif" width="32" alt="">
@@ -145,7 +148,8 @@ B.S. in Nuclear Engineering (Minor in Physics)
   ![Proton VPN](https://img.shields.io/badge/-Proton%20VPN-66DEB1?style=flat-square&logo=protonvpn&logoColor=white){: .normal }
   ![WireGuard](https://img.shields.io/badge/-WireGuard-88171A?style=flat-square&logo=wireguard&logoColor=white){: .normal }
   ![LibreOffice](https://img.shields.io/badge/-LibreOffice-18A303?style=flat-square&logo=libreoffice&logoColor=white){: .normal }
-  ![ONLYOFFICE](https://img.shields.io/badge/-ONLYOFFICE-444444?style=flat-square&logo=onlyoffice&logoColor=white){: .normal }  
+  ![ONLYOFFICE](https://img.shields.io/badge/-ONLYOFFICE-444444?style=flat-square&logo=onlyoffice&logoColor=white){: .normal }
+
 - - -
 
 ### Military Service <img src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanlseDZnOXdpaTA2dDM5ZmcyZDVzdXBhdXpqZGhnOXFseDNiMjh2YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/HL6atEC0FTza78wCLu/giphy.gif" width=32 alt="">
