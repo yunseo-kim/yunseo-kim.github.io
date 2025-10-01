@@ -38,8 +38,7 @@ B.S. in Nuclear Engineering (Minor in Physics)
 
 #### HANARO SFT (Static-Fire Toolkit)
 
-<img src="https://raw.githubusercontent.com/snu-hanaro/static-fire-toolkit/refs/heads/main/docs/logo-banner.png" width="440" alt="HANARO SFT Logo" style="display: block; margin-left: 0; margin-right: auto;">
-
+![HANARO SFT Logo](https://raw.githubusercontent.com/snu-hanaro/static-fire-toolkit/refs/heads/main/docs/logo-banner.png){: width="440" .normal }  
 [![PyPI Version](https://img.shields.io/pypi/v/static-fire-toolkit)](https://pypi.org/project/static-fire-toolkit/)
 [![Pepy Total Downloads](https://img.shields.io/pepy/dt/static-fire-toolkit?label=Downloads%20from%20PyPI)](https://pepy.tech/projects/static-fire-toolkit?timeRange=threeMonths&category=version&includeCIDownloads=true&granularity=daily&viewType=line&versions=1.0.1%2C1.0.0)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17218595.svg)](https://doi.org/10.5281/zenodo.17218595)  
@@ -52,7 +51,7 @@ B.S. in Nuclear Engineering (Minor in Physics)
 <a href="https://github.com/yunseo-kim/Qlassifier"><img src="https://gh-card.dev/repos/yunseo-kim/Qlassifier.svg" width="440" alt="Qlassifier repo card"></a>
 
 #### [Qiskit Hackathon Korea 2021](https://www.hackerearth.com/challenges/hackathon/qiskit-hackathon-korea/)
-<img src="https://raw.githubusercontent.com/yunseo-kim/quantum-neural-network/master/images/prize.jpg" width="600" alt="Qiskit Hackathon Korea 2021 Community Choice Award" style="display: block; margin-left: 0; margin-right: auto;">  
+![Qiskit Hackathon Korea 2021 Community Choice Award](https://raw.githubusercontent.com/yunseo-kim/quantum-neural-network/master/images/prize.jpg){: width="600" .normal }  
 <a href="https://github.com/yunseo-kim/quantum-neural-network"><img src="https://gh-card.dev/repos/yunseo-kim/quantum-neural-network.svg" width="440" alt="quantum-neural-network repo card"></a>
 - - -
 
@@ -68,9 +67,7 @@ B.S. in Nuclear Engineering (Minor in Physics)
 ### Certificates <img src = "https://media.giphy.com/media/oUhQb6SSMXEDnvBnbJ/giphy.gif" width=32 alt="">
 
 <!--START_SECTION:badges-->
-<a href="https://www.credly.com/badges/0a42bffd-1d2e-49ec-ab59-f8a150cec992" target="_blank" rel="noopener noreferrer">
-  <img src="https://images.credly.com/images/36d21fa5-2f19-4cdc-a80d-29488161b6cd/image.png" alt="Qiskit Global Summer School 2022 - Quantum Excellence" width="150" style="display: block; margin-left: 0; margin-right: auto;">
-</a>
+[![Qiskit Global Summer School 2022 - Quantum Excellence](https://images.credly.com/images/36d21fa5-2f19-4cdc-a80d-29488161b6cd/image.png){: width="150" .normal }](https://www.credly.com/badges/0a42bffd-1d2e-49ec-ab59-f8a150cec992)
 <!--END_SECTION:badges-->
 
 - 12024.04.18. \| 1st Class Amateur Radio Operator(제1급아마추어무선기사)
