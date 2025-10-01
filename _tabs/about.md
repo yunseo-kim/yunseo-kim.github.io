@@ -19,9 +19,10 @@ I agree with *[Lev Artsimovich](https://en.wikipedia.org/wiki/Lev_Artsimovich)*:
 ### Social Links <img src = "https://media.giphy.com/media/pLo39nQ9yGahnDFbay/giphy.gif" width=32 alt="">
 
 [![Blog Badge](https://img.shields.io/badge/-Blog-3884FF?style=flat-square&logo=Gitbook&logoColor=white&link=https://www.yunseo.kim/)](https://www.yunseo.kim)
+[![ORCID Badge](https://img.shields.io/badge/-ORCID-A6CE39?style=flat-square&logo=orcid&logoColor=white&link=https://orcid.org/0009-0003-6462-6600)](https://orcid.org/0009-0003-6462-6600)
+[![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white&link=https://github.com/yunseo-kim)](https://github.com/yunseo-kim)
 [![Personal Email Badge](https://img.shields.io/badge/-Personal_email:_%63%6F%6E%74%61%63%74%40%79%75%6E%73%65%6F%2E%6B%69%6D-8B89CC?style=flat-square&logo=Mail.Ru&logoColor=white&link=mailto:%63%6F%6E%74%61%63%74%40%79%75%6E%73%65%6F%2E%6B%69%6D)](mailto:%63%6F%6E%74%61%63%74%40%79%75%6E%73%65%6F%2E%6B%69%6D)
 [![Academic Email Badge](https://img.shields.io/badge/-Academic_email:_%79%75%6E%73%65%6F%40%73%6E%75%2E%61%63%2E%6B%72-0F0F70?style=flat-square&logo=Mail.Ru&logoColor=white&labelColor=15%2C15%2C112&link=mailto:%79%75%6E%73%65%6F%40%73%6E%75%2E%61%63%2E%6B%72)](mailto:%79%75%6E%73%65%6F%40%73%6E%75%2E%61%63%2E%6B%72)
-[![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white&link=https://github.com/yunseo-kim)](https://github.com/yunseo-kim)
 [![LinkedIn Badge](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&link=https://www.linkedin.com/in/yunseo-kim/)](https://www.linkedin.com/in/yunseo-kim/)
 [![X Follow](https://img.shields.io/twitter/follow/yunse0_kim?label=%40yunse0_kim&logo=x&style=flat-square&labelColor=000000)](https://x.com/yunse0_kim)
 [![Facebook Badge](https://img.shields.io/badge/-Facebook-1877F2?style=flat-square&logo=facebook&logoColor=white&link=https://www.facebook.com/yunse0-kim/)](https://www.facebook.com/yunse0-kim/)
