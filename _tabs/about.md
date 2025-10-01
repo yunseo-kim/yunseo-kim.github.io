@@ -110,7 +110,6 @@ B.S. in Nuclear Engineering (Minor in Physics)
 - Web:  
   ![Jekyll](https://img.shields.io/badge/-Jekyll-CC0000?style=flat-square&logo=jekyll&logoColor=white){: .normal }
   ![Cloudflare](https://img.shields.io/badge/-Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white){: .normal }
-  ![Proxmox](https://img.shields.io/badge/-Proxmox-E57000?style=flat-square&logo=proxmox&logoColor=white){: .normal }
   ![openmediavault](https://img.shields.io/badge/-openmediavault-5DACDF?style=flat-square&logo=openmediavault&logoColor=white){: .normal }
   ![OPNSense](https://img.shields.io/badge/-OPNSense-D94F00?style=flat-square&logo=opnsense&logoColor=white){: .normal }
   ![Nginx Proxy Manager](https://img.shields.io/badge/-Nginx%20Proxy%20Manager-F15833?style=flat-square&logo=nginxproxymanager&logoColor=white){: .normal }
@@ -121,6 +120,7 @@ B.S. in Nuclear Engineering (Minor in Physics)
   ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white){: .normal }
   ![Podman](https://img.shields.io/badge/-Podman-892CA0?style=flat-square&logo=podman&logoColor=white){: .normal }
   ![Portainer](https://img.shields.io/badge/-Portainer-13BEF9?style=flat-square&logo=portainer&logoColor=white){: .normal }
+  ![Proxmox](https://img.shields.io/badge/-Proxmox-E57000?style=flat-square&logo=proxmox&logoColor=white){: .normal }
   ![Fedora](https://img.shields.io/badge/-Fedora-51A2DA?style=flat-square&logo=fedora&logoColor=white){: .normal }
   ![macOS](https://img.shields.io/badge/-macOS-000000?style=flat-square&logo=Apple&logoColor=white){: .normal }  
 - Embedded:  
