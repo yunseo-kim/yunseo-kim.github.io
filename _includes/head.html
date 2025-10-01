@@ -1,11 +1,4 @@
 <head>
-  {% if jekyll.environment == 'production' -%}
-    <!-- Google Analytics -->
-    {% if site.analytics.google.id and site.analytics.google.id != empty -%}
-      {% include analytics/google.html %}
-    {%- endif %}
-  {%- endif %}
-
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7">
@@ -18,6 +11,13 @@
   >
 
   <meta http-equiv="Content-Language" content="{{site.active_lang}}">
+
+  {% if jekyll.environment == 'production' -%}
+    <!-- Google Analytics -->
+    {% if site.analytics.google.id and site.analytics.google.id != empty -%}
+      {% include analytics/google.html %}
+    {%- endif %}
+  {%- endif %}
 
   {% if site.default_lang -%}
   <link rel="alternate" hreflang="{{site.default_lang}}" href="{{site.url}}{{page.url}}" />
