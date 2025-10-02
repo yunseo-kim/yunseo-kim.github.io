@@ -3,8 +3,9 @@
 - type: github
   icon: "fa-brands fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+- type: orcid
+  icon: "fa-brands fa-orcid"
+  url: 'https://orcid.org/0009-0003-6462-6600'
 
 - type: email
   icon: "fa-solid fa-envelope"
@@ -23,6 +24,9 @@
 - type: linkedin
   icon: "fa-brands fa-linkedin"  # icons powered by <https://fontawesome.com/>
   url:  'https://www.linkedin.com/in/yunseo-kim'   # Fill with your Linkedin homepage
+
+- type: twitter
+  icon: "fa-brands fa-x-twitter"
 # 
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'
