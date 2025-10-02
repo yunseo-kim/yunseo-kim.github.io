@@ -141,7 +141,7 @@ B.S. in Nuclear Engineering (Minor in Physics)
   ![Bitwarden](https://img.shields.io/badge/-Bitwarden-175DDC?style=flat-square&logo=bitwarden&logoColor=white){: .normal }
   ![WebAuthn](https://img.shields.io/badge/-WebAuthn-3423A6?style=flat-square&logo=webauthn&logoColor=white){: .normal }
   ![YubiKey](https://img.shields.io/badge/-YubiKey-84BD00?style=flat-square&logo=yubico&logoColor=white){: .normal }
-  ![Ente Auth](https://img.shields.io/badge/-Ente%20Auth-9610D6?style=flat-square){: .normal }
+  ![Ente Auth](https://img.shields.io/badge/-Ente%20Auth-9610D6?style=flat-square&logo=ente){: .normal }
   ![Tor Project](https://img.shields.io/badge/-Tor%20Project-7D4698?style=flat-square&logo=torproject&logoColor=white){: .normal }
   ![Proton VPN](https://img.shields.io/badge/-Proton%20VPN-66DEB1?style=flat-square&logo=protonvpn&logoColor=white){: .normal }
   ![WireGuard](https://img.shields.io/badge/-WireGuard-88171A?style=flat-square&logo=wireguard&logoColor=white){: .normal }
