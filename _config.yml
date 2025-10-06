@@ -117,7 +117,7 @@ theme_mode:   # [light|dark]
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-cdn: 'https://cdn.jsdelivr.net/gh/yunseo-kim/yunseo-kim.github.io/'
+cdn: 'https://yunseo.kim/cdn-cgi/image/background=white,fit=scale-down,format=auto,onerror=redirect/'
 
 # the avatar on sidebar, support local or CORS resources
 avatar: 'https://avatars.githubusercontent.com/u/65203374' # '/assets/img/profile.tiff'
@@ -255,8 +255,6 @@ exclude: # https://github.com/untra/polyglot/issues/204 이슈 참고하여 수�
   - rollup.config.js
   - eslint.config.js
   - "package*.json"
-  - assets/img/0-uncompressed-originals/
-  - jampack.config.mjs
 
 jekyll-archives:
   enabled: [categories, tags]
