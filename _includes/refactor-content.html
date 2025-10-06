@@ -183,6 +183,87 @@
       {% assign _left = _left | append: ' fetchpriority=' | append: _fetch_priority %}
     {% endif %}
 
+    {%- comment -%}
+    Cloudflare Images (/cdn-cgi/image/(options)/...)용 srcset/sizes 지정:
+    - (options)에서 width/height 제거 후, 고정 폭 목록으로 srcset 생성
+    - sizes="100vw"
+    - 기본 src는 720px 버전으로 지정
+    - 반응형 이미지는 Cloudflare Images만 지원(/cdn-cgi/image/가 없는 경우엔 변경하지 않음)
+    {%- endcomment -%}
+    {%- assign _current_src_for_cf = _final_src | default: _src -%}
+    {%- if _current_src_for_cf contains '/cdn-cgi/image/' -%}
+      {%- assign _cf_split_1 = _current_src_for_cf | split: '/cdn-cgi/image/' -%}
+      {%- assign _cf_image_zone  = _cf_split_1[0] -%}
+      {%- assign _cf_after   = _cf_split_1[1] -%}
+
+      {%- assign _cf_segments = _cf_after | split: '/' -%}
+      {%- assign _cf_options = _cf_segments[0] | strip -%}
+      {%- assign _cf_rest = "" -%}
+      {%- for _seg in _cf_segments offset:1 -%}
+        {%- assign _cf_rest = _cf_rest | append: "/" | append: _seg -%}
+      {%- endfor -%}
+
+      {%- comment -%} 기존 옵션에서 width/height 제거 {%- endcomment -%}
+      {%- assign _cf_base_opts = "" -%}
+      {%- if _cf_options != "" -%}
+        {%- assign _cf_opts_list = _cf_options | split: "," -%}
+        {%- for _opt in _cf_opts_list -%}
+          {%- assign _kv = _opt | split: "=" -%}
+          {%- assign _key = _kv[0] | strip -%}
+          {%- if _key != "width" and _key != "height" and _key != "" -%}
+            {%- if _cf_base_opts != "" -%}{%- assign _cf_base_opts = _cf_base_opts | append: "," -%}{%- endif -%}
+            {%- assign _cf_base_opts = _cf_base_opts | append: _opt | strip -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- comment -%}
+      고정 width 목록 및 srcset 생성
+      기본 src는 720px로 설정
+      {%- endcomment -%}
+      {%- assign _cf_widths_str = "1920,1600,1440,1280,1024,960,800,720,640,512,480,400,320" -%}
+      {%- assign _cf_widths = _cf_widths_str | split: "," -%}
+
+      {%- assign _cf_srcset = "" -%}
+      {%- assign _cf_src_720 = "" -%}
+
+      {%- for _w in _cf_widths -%}
+        {%- assign _w_clean = _w | strip -%}
+        {%- if _w_clean != "" -%}
+          {%- assign _per_opts = _cf_base_opts -%}
+          {%- if _per_opts != "" -%}{%- assign _per_opts = _per_opts | append: "," -%}{%- endif -%}
+          {%- assign _per_opts = _per_opts | append: "width=" | append: _w_clean -%}
+
+          {%- assign _per_url = _cf_image_zone | append: "/cdn-cgi/image/" | append: _per_opts | append: _cf_rest -%}
+
+          {%- if _cf_srcset != "" -%}{%- assign _cf_srcset = _cf_srcset | append: ", " -%}{%- endif -%}
+          {%- assign _cf_srcset = _cf_srcset | append: _per_url | append: " " | append: _w_clean | append: "w" -%}
+
+          {%- if _w_clean == "720" -%}
+            {%- assign _cf_src_720 = _per_url -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if _cf_src_720 == "" -%}
+        {%- comment -%} 혹시 목록에 720이 없다면 첫 항목으로 대체 {%- endcomment -%}
+        {%- assign _cf_src_720 = _cf_before | append: "/cdn-cgi/image/" | append: _cf_base_opts | append: "," | append: "width=" | append: _cf_widths[0] | append: _cf_rest -%}
+      {%- endif -%}
+
+      {%- comment -%}
+      _left (img 속성 문자열)에서 src URL 교체 및 srcset/sizes 추가
+      - 이미 srcset/sizes가 있으면 중복 추가 방지
+      {%- endcomment -%}
+      {%- assign _left = _left | replace_first: _current_src_for_cf, _cf_src_720 -%}
+
+      {%- unless _left contains ' srcset=' -%}
+        {%- assign _left = _left | append: ' srcset="' | append: _cf_srcset | append: '"' -%}
+      {%- endunless -%}
+      {%- unless _left contains ' sizes=' -%}
+        {%- assign _left = _left | append: ' sizes="(min-width: 1400px) 800px, (min-width: 850px) 720px, 92vw"' -%}
+      {%- endunless -%}
+    {%- endif -%}
+
     {% if page.layout == 'home' %}
       <!-- create the image wrapper -->
       {% assign _wrapper_start = '<div class="preview-img ' | append: _class | append: '">' %}
