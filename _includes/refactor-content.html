@@ -221,7 +221,7 @@
       고정 width 목록 및 srcset 생성
       기본 src는 720px로 설정
       {%- endcomment -%}
-      {%- assign _cf_widths_str = "1920,1600,1440,1280,1024,960,800,720,640,512,480,400,320" -%}
+      {%- assign _cf_widths_str = "1920,1600,1440,1280,1024,960,800,720,640,512,480,400,320,240" -%}
       {%- assign _cf_widths = _cf_widths_str | split: "," -%}
 
       {%- assign _cf_srcset = "" -%}
@@ -260,7 +260,11 @@
         {%- assign _left = _left | append: ' srcset="' | append: _cf_srcset | append: '"' -%}
       {%- endunless -%}
       {%- unless _left contains ' sizes=' -%}
-        {%- assign _left = _left | append: ' sizes="(min-width: 1400px) 800px, (min-width: 850px) 720px, 92vw"' -%}
+        {%- if page.layout == 'home' -%} {%- comment -%} 홈 레이아웃의 포스트 카드의 경우 보다 작은 별도의 슬롯 폭 적용 {%- endcomment -%}
+          {%- assign _left = _left | append: ' sizes="(min-width: 1200px) 22vw, (min-width: 850px) 25vw, (min-width: 770px) 37vw, 92vw"' -%}
+        {%- else -%}
+          {%- assign _left = _left | append: ' sizes="(min-width: 1400px) 800px, (min-width: 850px) 720px, 92vw"' -%}
+        {%- endif -%}
       {%- endunless -%}
     {%- endif -%}
 
