@@ -153,8 +153,9 @@ $$ \phi(k) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\Psi(x,0)e^{-ikx}dx \la
 
 Essentiellement, un paquet d'ondes est la superposition de nombreuses fonctions sinus dont l'amplitude est déterminée par $\phi$. Autrement dit, il y a des « ondulations (ripples) » à l'intérieur de l'« enveloppe » qui forme le paquet d'ondes.
 
-![Un paquet d'ondes avec une vitesse de groupe plus grande (5x) que la vitesse de phase](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/wave_packet.gif)
+![Un paquet d'ondes avec une vitesse de groupe plus grande (5x) que la vitesse de phase](/physics-visualizations/figs/wave_packet.webp)
 > *Licence d'image et attribution de la source originale*
+> - Code source de génération d'image (Python3) : [yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/wave_packet.py)
 > - Code source de génération d'image (gnuplot) : [yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/wave_packet.plt)
 > - Licence : [Mozilla Public License 2.0](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 > - Auteur original : [Ph.D. Youjun Hu](https://github.com/youjunhu)

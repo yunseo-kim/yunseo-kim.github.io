@@ -199,8 +199,8 @@ $$\begin{align*}
 ### Resultados
 Los potenciales gravitacionales $\Phi$ en las tres regiones calculadas anteriormente, y la magnitud correspondiente del vector de campo gravitacional $\|\mathbf{g}\|$ como función de la distancia $R$ se muestran gráficamente a continuación.
 
-![Gravitational Potential as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/shell-theorem-gravitational-potential.png)
-![Magnitude of the Field Vector as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/shell-theorem-field-vector.png)
+![Gravitational Potential as a Function of R](/physics-visualizations/figs/shell-theorem-gravitational-potential.png)  
+![Magnitude of the Field Vector as a Function of R](/physics-visualizations/figs/shell-theorem-field-vector.png)  
 > - Código de visualización en Python: [repositorio yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/shell_theorem.py)
 > - Licencia: [Ver aquí](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 

@@ -199,8 +199,8 @@ $$\begin{align*}
 ### 結果
 將前面求得的三個區域的重力位勢 $\Phi$ 以及相應的重力場向量大小 $\|\mathbf{g}\|$ 作為距離 $R$ 的函數用圖表示如下：
 
-![Gravitational Potential as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/shell-theorem-gravitational-potential.png)
-![Magnitude of the Field Vector as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/shell-theorem-field-vector.png)
+![Gravitational Potential as a Function of R](/physics-visualizations/figs/shell-theorem-gravitational-potential.png)  
+![Magnitude of the Field Vector as a Function of R](/physics-visualizations/figs/shell-theorem-field-vector.png)  
 > - Python 視覺化程式碼：[yunseo-kim/physics-visualizations 儲存庫](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/shell_theorem.py)
 > - 授權：[見此處](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 

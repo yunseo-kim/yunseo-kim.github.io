@@ -17,7 +17,7 @@ Cada vez que termine un curso, pienso resumir brevemente lo que he aprendido. Es
 ## Lesson 1. How Models Work
 Empezamos de forma ligera y sin presión. Trata de cómo funcionan y cómo se usan los modelos de aprendizaje automático. Partiendo del supuesto de que hay que predecir precios inmobiliarios, se explica con un ejemplo sencillo de un modelo de clasificación de árbol de decisión (Decision Tree).
 
-Encontrar patrones a partir de los datos se denomina **entrenar** el modelo (**fitting** o **training** the model). Los datos usados para entrenar el modelo se llaman **datos de entrenamiento (training data)**. Una vez entrenado, se puede aplicar el modelo a nuevos datos para **predecir (predict)**.
+Encontrar patrones a partir de los datos se denomina **ajustar (fitting)** o **entrenar (training)** el modelo. Los datos usados para entrenar el modelo se llaman **datos de entrenamiento (training data)**. Una vez entrenado, se puede aplicar el modelo a nuevos datos para **predecir (predict)**.
 
 ## Lesson 2. Basic Data Exploration
 En cualquier proyecto de aprendizaje automático, lo primero es familiarizarse con los datos. Hay que entender sus características para diseñar un modelo adecuado. Para explorar y manipular datos suele usarse la biblioteca [Pandas](https://pandas.pydata.org/).
@@ -72,7 +72,7 @@ Index(['Suburb', 'Address', 'Rooms', 'Type', 'Price', 'Method', 'SellerG',
       dtype='object')
 ```
 
-Hay varias formas de seleccionar las partes necesarias del conjunto de datos; Kaggle lo trata con más detalle en el [Microcurso de Pandas](https://www.kaggle.com/learn/pandas) (este contenido también lo resumiré más adelante). Aquí usamos dos métodos:
+Hay varias formas de seleccionar las partes necesarias del conjunto de datos; Kaggle lo trata con más detalle en el [Microcurso de Pandas](https://www.kaggle.com/learn/pandas) (este contenido lo he resumido en [una entrada aparte](/posts/summary-of-kaggle-pandas-course/)). Aquí usamos dos métodos:
 1. Notación por punto
 2. Uso de listas
 

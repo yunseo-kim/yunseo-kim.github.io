@@ -10,14 +10,14 @@ redirect_from:
 ---
 
 [Kaggle 공개 교육과정들](https://www.kaggle.com/learn)을 공부하기로 했다.
-각 교육과정을 수료할 때마다 해당 과정을 통해 공부한 내용을 간단히 정리할 계획이다. 첫 번째 글은 [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) 코스의 요약이다.
+각 교육과정을 수료할 때마다 해당 과정을 통해 공부한 내용을 간단히 정리할 계획이다. 첫 번째 글은 [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) 과정의 요약이다.
 
 ![Certificate of Completion](/assets/img/kaggle-intro-to-machine-learning/certificate.png)
 
 ## Lesson 1. How Models Work
 처음에는 부담 없이 가볍게 시작한다. 머신러닝 모델들이 어떻게 작동하고, 어떻게 사용되는지에 관한 내용이다. 부동산 가격 예측을 해야 하는 상황을 가정하면서 간단한 결정 트리(Decision Tree) 분류 모델을 예로 들어 설명하고 있다.
 
-데이터로부터 패턴을 찾아내는 것을 모델을 **훈련**한다고 한다(**fitting** or **training** the model). 모델을 훈련할 때 사용하는 데이터를 **훈련 데이터(training data)**라고 한다. 훈련을 마치면 이 모델을 새로운 데이터에 적용해서 **예측(predict)**할 수 있다.
+데이터로부터 패턴을 찾아내는 것을 모델을 **적합시킨다(fitting)** 또는 **훈련한다(training)**고 한다. 모델을 훈련할 때 사용하는 데이터를 **훈련 데이터(training data)**라고 한다. 훈련을 마치면 이 모델을 새로운 데이터에 적용해서 **예측(predict)**할 수 있다.
 
 ## Lesson 2. Basic Data Exploration
 어떤 머신러닝 프로젝트에서든 가장 먼저 해야 할 일은 개발자 본인이 그 데이터에 익숙해지는 것이다. 데이터가 어떤 특성을 지니는지를 먼저 파악해야 그에 적합한 모델을 설계할 수 있다. 데이터를 탐색하고 조작하는 용도로 보통 [판다스(Pandas)](https://pandas.pydata.org/) 라이브러리를 사용한다.
@@ -71,7 +71,7 @@ Index(['Suburb', 'Address', 'Rooms', 'Type', 'Price', 'Method', 'SellerG',
       dtype='object')
 ```
 
-주어진 데이터에서 필요한 부분을 골라내는 방법은 여러 가지인데, Kaggle의 [Pandas Micro-Course](https://www.kaggle.com/learn/pandas)에서 보다 깊이 다루고 있다(이 내용도 나중에 정리할 것이다). 여기서는 다음의 두 가지 방법을 사용한다.
+주어진 데이터에서 필요한 부분을 골라내는 방법은 여러 가지인데, Kaggle의 [Pandas Micro-Course](https://www.kaggle.com/learn/pandas)에서 보다 깊이 다루고 있다(이 내용은 [별도의 글](/posts/summary-of-kaggle-pandas-course/)로 정리하였다). 여기서는 다음의 두 가지 방법을 사용한다.
 1. Dot notation
 2. 리스트 사용
 

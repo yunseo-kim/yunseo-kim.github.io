@@ -202,8 +202,8 @@ $$\begin{align*}
 ### 결과
 앞서 구한 세 영역에서의 중력 퍼텐셜 $\Phi$, 그리고 그에 따른 중력장 벡터의 크기 $\|\mathbf{g}\|$를 거리 $R$의 함수로서 그래프로 나타내면 다음과 같다.
 
-![Gravitational Potential as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/shell-theorem-gravitational-potential.png)
-![Magnitude of the Field Vector as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/shell-theorem-field-vector.png)
+![Gravitational Potential as a Function of R](/physics-visualizations/figs/shell-theorem-gravitational-potential.png)  
+![Magnitude of the Field Vector as a Function of R](/physics-visualizations/figs/shell-theorem-field-vector.png)  
 > - Python 시각화 코드: [yunseo-kim/physics-visualizations 리포지터리](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/shell_theorem.py)
 > - 라이선스: [See here](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 

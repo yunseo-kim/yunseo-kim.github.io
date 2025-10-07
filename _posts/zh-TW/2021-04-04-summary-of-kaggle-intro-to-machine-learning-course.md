@@ -17,7 +17,7 @@ redirect_from:
 ## Lesson 1. 模型如何運作（How Models Work）
 先從輕鬆的內容開始：機器學習模型如何運作、如何被使用。以需要預測不動產價格為例，說明簡單的決策樹（Decision Tree）分類模型。
 
-從資料找出模式的過程稱為對模型進行**訓練**（**fitting** or **training** the model）。用於訓練模型的資料稱為**訓練資料（training data）**。訓練完成後，便可將模型套用到新資料進行**預測（predict）**。
+從資料找出模式的過程，稱為將模型**擬合（fitting）**或**訓練（training）**。用於訓練模型的資料稱為**訓練資料（training data）**。訓練完成後，便可將模型套用到新資料進行**預測（predict）**。
 
 ## Lesson 2. 基礎資料探索（Basic Data Exploration）
 在任何機器學習專案中，第一步是讓自己熟悉資料。先掌握資料的特性，才能設計合適的模型。用於探索與操作資料通常會使用 [Pandas（Pandas）](https://pandas.pydata.org/) 函式庫。
@@ -71,7 +71,7 @@ Index(['Suburb', 'Address', 'Rooms', 'Type', 'Price', 'Method', 'SellerG',
       dtype='object')
 ```
 
-從給定資料中挑選所需部分的方法很多，Kaggle 的 [Pandas Micro-Course](https://www.kaggle.com/learn/pandas) 有更深入的說明（之後也會整理）。此處用兩種方法：
+從給定資料中挑選所需部分的方法很多，Kaggle 的 [Pandas Micro-Course](https://www.kaggle.com/learn/pandas) 有更深入的說明（此內容已整理為[另一篇文章](/posts/summary-of-kaggle-pandas-course/)）。此處用兩種方法：
 1. Dot notation
 2. 使用清單（list）
 

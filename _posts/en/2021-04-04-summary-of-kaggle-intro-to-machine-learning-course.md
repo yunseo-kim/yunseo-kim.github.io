@@ -72,7 +72,7 @@ Index(['Suburb', 'Address', 'Rooms', 'Type', 'Price', 'Method', 'SellerG',
       dtype='object')
 ```
 
-There are many ways to select relevant parts of a dataset; Kaggle’s [Pandas Micro-Course](https://www.kaggle.com/learn/pandas) covers them in more depth (I’ll summarize that later as well). Here we’ll use two:
+There are many ways to select relevant parts of a dataset; Kaggle’s [Pandas Micro-Course](https://www.kaggle.com/learn/pandas) covers them in more depth (I summarized this in [a separate post](/posts/summary-of-kaggle-pandas-course/)). Here we’ll use two:
 1. Dot notation
 2. Using a list
 

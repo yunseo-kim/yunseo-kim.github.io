@@ -153,8 +153,9 @@ $$ \phi(k) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\Psi(x,0)e^{-ikx}dx \la
 
 Im Wesentlichen ist ein Wellenpaket eine Überlagerung zahlreicher Sinusfunktionen, deren Amplituden durch $\phi$ bestimmt werden. Das heißt, das Wellenpaket hat eine 'Einhüllende' mit 'Kräuselungen' darin.
 
-![A wave packet with the group velocity larger(5x) than phase velocity](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/wave_packet.gif)
+![A wave packet with the group velocity larger(5x) than phase velocity](/physics-visualizations/figs/wave_packet.webp)
 > *Bildlizenz und Quellenangabe*
+> - Quellcode zur Bilderzeugung (Python3): [yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/wave_packet.py)
 > - Quellcode zur Bilderzeugung (gnuplot): [yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/wave_packet.plt)
 > - Lizenz: [Mozilla Public License 2.0](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 > - Originalautor: [Ph.D. Youjun Hu](https://github.com/youjunhu)

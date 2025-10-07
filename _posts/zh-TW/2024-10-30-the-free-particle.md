@@ -153,8 +153,9 @@ $$ \phi(k) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\Psi(x,0)e^{-ikx}dx \la
 
 本質上波包是由 $\phi$ 決定振幅的無數正弦函數的疊加。即波包由「包絡線(envelope)」內的「漣漪(ripples)」組成。
 
-![A wave packet with the group velocity larger(5x) than phase velocity](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/wave_packet.gif)
+![A wave packet with the group velocity larger(5x) than phase velocity](/physics-visualizations/figs/wave_packet.webp)
 > *圖片授權及原作來源聲明*
+> - 圖片生成原始碼(Python3)：[yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/wave_packet.py)
 > - 圖片生成原始碼(gnuplot)：[yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/wave_packet.plt)
 > - 授權：[Mozilla Public License 2.0](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 > - 原作者：[Ph.D. Youjun Hu](https://github.com/youjunhu)

@@ -3,7 +3,7 @@
 2019-05-10-The-Role-of-Quantum-Computers-in-Future-and-Challenges-to-Overcome.md,2f110a1f818315b31e04f5325e1e5c6321529dda78ff2a83ce96eeb86037ea0c
 2021-01-31-github-markdown-syntax-summary.md,d9decb03b660729311bdcc9d5697bd4056ce6a83a9b8048ebc26c8fc2b4ff890
 2021-02-07-Setting-up-a-Machine-Learning-Development-Environment.md,19139a5b811ed346e007036a817a1471852377207e8959ff44d0662304894a8d
-2021-04-04-summary-of-kaggle-intro-to-machine-learning-course.md,a7366cf4d6013950c76cc6f226a4e32d4a65f595faf738c0e410eb5f9c4b4b98
+2021-04-04-summary-of-kaggle-intro-to-machine-learning-course.md,250ce22ba85633cdcb063298a7dddba577bdf180291b6db8c1c713ea22f6fe04
 2021-04-10-Summary-of-Kaggle-Pandas-Course.md,5bb0f7382875a017a23772ce74594ead058fb46ac369837981ded3405de91736
 2021-08-31-creating-and-managing-a-github-pages-blog.md,53744246985d55303752d3d8f273eeefad971221e87adbafc8392dacc076e0e3
 2022-03-03-Basic-Concepts-of-Modeling.md,5b4c5f5faec3bd5d87c072b77f7d1f80e378edda2a35821731e54cdfec3ded27
@@ -34,7 +34,7 @@
 2024-10-16-time-independent-schrodinger-equation.md,20c2a231db6587c34b42fa4680a81b958a57ccaee3edd9da0c97638a4988b832
 2024-10-18-the-infinite-square-well.md,41aca48b36a2e221e7275bfb8bbfb6bccba88101588095cf8f87ad16be6e7647
 2024-10-23-continuous-and-characteristic-x-rays.md,1a090c5f15def7168092f6ecce31829241df3bd516248b8c9d3da1866ea563bf
-2024-10-30-the-free-particle.md,b6124c3e4a38931c648cf6b0453e79150fc41836229e69ea1e52194a77275193
+2024-10-30-the-free-particle.md,b5e9af20b2976af47725bc8085a45192951ade6cb7f8d17197648e231731ce0d
 2024-11-04-does-ai-hate-to-work-on-halloween.md,d011a25618ccad174d06bc5f0a7c48533edc8abf0572074b624e630d681b8794
 2024-11-11-definition-of-plasma-and-saha-equation.md,e1986ec2587e08507cca10f0b95ba0b800ea48fb105c91bc72af838201a4ce27
 2024-11-18-how-to-support-multi-language-on-jekyll-blog-with-polyglot-1.md,7a536ed134d7c21737a7ceccb894b9d1dc9229f0a2bc98794a746a7d02131517
@@ -52,5 +52,5 @@
 2025-04-06-wronskian-existence-and-uniqueness-of-solutions.md,1099aef7187bd8c20c3cf9c21351507cfc8a3c7bea136420944767d2879f4335
 2025-04-16-nonhomogeneous-linear-odes-of-second-order.md,0385664b91dd3cb6cb1c95735d4b879d742fe236c5927f61413eea6059709c1b
 2025-04-20-method-of-undetermined-coefficients.md,bf727cf3837d1658952b58a44a318468a3cbc45676d0f0068e8968f0cbc772d2
-2025-05-17-gravitational-field-and-potential.md,da358dfb87ee8441dd050e86c763c90f0b06905d824d0e0663b4855ac2fd58db
+2025-05-17-gravitational-field-and-potential.md,3df714ae714194db7b30ed0793d1ac13efa889fd0ad9ee51e963eb1acae8bcd2
 2025-08-05-about-web-vitals.md,fc41a5d8797a96e937e34feaa5ffcaeccda6b13062ac93515453f0b126b5fd64

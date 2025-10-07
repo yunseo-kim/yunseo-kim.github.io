@@ -10,14 +10,14 @@ redirect_from:
 ---
 
 [Kaggle 公開コース](https://www.kaggle.com/learn)を学ぶことにした。
-各コースを修了するたびに、その過程で学んだ内容を簡単にまとめる予定だ。最初の記事は [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) コースの要約である。
+各コースを修了するたびに、その過程で学んだ内容を簡単にまとめる予定だ。最初の記事は [Intro to Machine Learning](https://www.kaggle.com/learn/intro-to-machine-learning) 講座の要約である。
 
 ![修了証明書](/assets/img/kaggle-intro-to-machine-learning/certificate.png)
 
 ## Lesson 1. How Models Work
 まずは肩慣らしとして、機械学習モデルがどのように動作し、どのように使われるかを概観する。住宅価格予測を行う状況を仮定し、簡単な決定木（Decision Tree）分類モデルを例に説明している。
 
-データから規則性を見つけ出すことをモデルを**訓練**する（**fitting** or **training** the model）という。モデルの訓練に用いるデータを**訓練データ（training data）**と呼ぶ。訓練が終わると、このモデルを新しいデータに適用して**予測（predict）**できる。
+データから規則性を見つけ出すことをモデルを**適合させる（fitting）**または**訓練する（training）**という。モデルの訓練に用いるデータを**訓練データ（training data）**と呼ぶ。訓練が終わると、このモデルを新しいデータに適用して**予測（predict）**できる。
 
 ## Lesson 2. Basic Data Exploration
 どんな機械学習プロジェクトでも、最初にすべきことは、開発者自身がそのデータに慣れることだ。データの特性を把握してこそ、適切なモデルを設計できる。データの探索や加工には、通常 [パンダス（Pandas）](https://pandas.pydata.org/) ライブラリを用いる。
@@ -71,7 +71,7 @@ Index(['Suburb', 'Address', 'Rooms', 'Type', 'Price', 'Method', 'SellerG',
       dtype='object')
 ```
 
-必要な部分を抽出する方法は複数あるが、Kaggle の [Pandas マイクロコース](https://www.kaggle.com/learn/pandas)でより深く扱われている（これも後日まとめる予定）。ここでは次の2つを使う。
+必要な部分を抽出する方法は複数あるが、Kaggle の [Pandas マイクロコース](https://www.kaggle.com/learn/pandas)でより深く扱われている（この内容は[別記事](/posts/summary-of-kaggle-pandas-course/)でまとめた）。ここでは次の2つを使う。
 1. ドット表記
 2. リストの使用
 

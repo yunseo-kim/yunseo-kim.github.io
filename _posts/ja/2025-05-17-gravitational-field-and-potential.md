@@ -199,8 +199,8 @@ $$\begin{align*}
 ### 結果
 先ほど求めた三つの領域での重力ポテンシャル $\Phi$、そしてそれに伴う重力場ベクトルの大きさ $\|\mathbf{g}\|$を距離 $R$の関数としてグラフで表すと次のようになる。
 
-![Gravitational Potential as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/shell-theorem-gravitational-potential.png)
-![Magnitude of the Field Vector as a Function of R](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/shell-theorem-field-vector.png)
+![Gravitational Potential as a Function of R](/physics-visualizations/figs/shell-theorem-gravitational-potential.png)  
+![Magnitude of the Field Vector as a Function of R](/physics-visualizations/figs/shell-theorem-field-vector.png)  
 > - Python可視化コード: [yunseo-kim/physics-visualizations リポジトリ](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/shell_theorem.py)
 > - ライセンス: [See here](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 

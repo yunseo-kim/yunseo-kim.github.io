@@ -17,7 +17,7 @@ J’ai décidé d’étudier les [cours publics de Kaggle](https://www.kaggle.co
 ## Leçon 1. How Models Work
 On commence en douceur. Il s’agit de comprendre comment les modèles de machine learning fonctionnent et comment ils s’emploient. En partant d’un scénario d’estimation de prix immobiliers, le cours prend l’exemple d’un simple modèle de classification par arbre de décision.
 
-Apprendre des motifs à partir des données s’appelle **entraîner** le modèle (**fitting** ou **training** du modèle). Les données utilisées pendant l’entraînement sont appelées **données d’entraînement (training data)**. Une fois l’entraînement terminé, on peut appliquer le modèle à de nouvelles données pour **prédire (predict)**.
+Apprendre des motifs à partir des données revient à dire qu’on **ajuste (fitting)** ou qu’on **entraîne (training)** le modèle. Les données utilisées pendant l’entraînement sont appelées **données d’entraînement (training data)**. Une fois l’entraînement terminé, on peut appliquer le modèle à de nouvelles données pour **prédire (predict)**.
 
 ## Leçon 2. Basic Data Exploration
 Dans tout projet de machine learning, la première étape consiste à se familiariser avec les données. Il faut en comprendre les caractéristiques pour concevoir un modèle adapté. Pour explorer et manipuler les données, on utilise généralement la bibliothèque [pandas](https://pandas.pydata.org/).
@@ -73,7 +73,7 @@ Index(['Suburb', 'Address', 'Rooms', 'Type', 'Price', 'Method', 'SellerG',
       dtype='object')
 ```
 
-Il existe plusieurs façons de sélectionner des sous-ensembles des données; le [Micro-cours Pandas](https://www.kaggle.com/learn/pandas) de Kaggle les explore en détail (je le résumerai plus tard). Ici, nous en utilisons deux:
+Il existe plusieurs façons de sélectionner des sous-ensembles des données; le [Micro-cours Pandas](https://www.kaggle.com/learn/pandas) de Kaggle les explore en détail (j’en ai fait un [billet séparé](/posts/summary-of-kaggle-pandas-course/)). Ici, nous en utilisons deux:
 1. Dot notation
 2. Utiliser une liste
 

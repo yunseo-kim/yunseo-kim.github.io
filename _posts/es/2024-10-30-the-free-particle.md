@@ -153,8 +153,9 @@ $$ \phi(k) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\Psi(x,0)e^{-ikx}dx \la
 
 Esencialmente, un paquete de ondas es una superposición de numerosas funciones seno cuyas amplitudes están determinadas por $\phi$. Es decir, dentro de la 'envolvente' que forma el paquete de ondas hay 'ondulaciones'.
 
-![A wave packet with the group velocity larger(5x) than phase velocity](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/wave_packet.gif)
+![A wave packet with the group velocity larger(5x) than phase velocity](/physics-visualizations/figs/wave_packet.webp)
 > *Licencia de imagen y atribución de fuente original*
+> - Código fuente de generación de imagen (Python3): [yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/wave_packet.py)
 > - Código fuente de generación de imagen (gnuplot): [yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/wave_packet.plt)
 > - Licencia: [Mozilla Public License 2.0](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 > - Autor original: [Ph.D. Youjun Hu](https://github.com/youjunhu)

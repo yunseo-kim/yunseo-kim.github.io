@@ -17,7 +17,7 @@ A cada curso concluído, pretendo resumir brevemente o que aprendi. O primeiro p
 ## Lição 1. Como os Modelos Funcionam
 Começamos de forma leve. Trata de como os modelos de machine learning funcionam e como são usados. Assumindo um cenário de previsão de preços de imóveis, o curso explica usando como exemplo um modelo de classificação por árvore de decisão.
 
-Extrair padrões a partir de dados é o que chamamos de **treinar** o modelo (fitting ou training). Os dados usados no treino são chamados de **dados de treino (training data)**. Após o treino, você aplica o modelo a novos dados para **prever (predict)**.
+Extrair padrões a partir de dados é **ajustar (fitting)** ou **treinar (training)** o modelo. Os dados usados no treino são chamados de **dados de treino (training data)**. Após o treino, você aplica o modelo a novos dados para **prever (predict)**.
 
 ## Lição 2. Exploração Básica de Dados
 Em qualquer projeto de machine learning, a primeira tarefa é você se familiarizar com os dados. Entender suas características é essencial para desenhar um modelo adequado. Para explorar e manipular dados, normalmente usamos a biblioteca [Pandas](https://pandas.pydata.org/).
@@ -71,7 +71,7 @@ Index(['Suburb', 'Address', 'Rooms', 'Type', 'Price', 'Method', 'SellerG',
       dtype='object')
 ```
 
-Há várias maneiras de selecionar partes relevantes dos dados; o Kaggle aprofunda isso no [Pandas Micro-Course](https://www.kaggle.com/learn/pandas) (que também pretendo resumir depois). Aqui usaremos duas:
+Há várias maneiras de selecionar partes relevantes dos dados; o Kaggle aprofunda isso no [Pandas Micro-Course](https://www.kaggle.com/learn/pandas) (que resumi em um [post separado](/posts/summary-of-kaggle-pandas-course/)). Aqui usaremos duas:
 1. Dot notation
 2. Lista
 

@@ -158,8 +158,9 @@ $$ \phi(k) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\Psi(x,0)e^{-ikx}dx \la
 
 본질적으로 파동묶음은 $\phi$에 의해 진폭이 결정되는 수많은 사인함수들의 중첩이다. 즉, 파동묶음을 이루는 '포락선(envelope)' 안에 '잔물결(ripples)'이 있다.
 
-![A wave packet with the group velocity larger(5x) than phase velocity](https://raw.githubusercontent.com/yunseo-kim/physics-visualizations/refs/heads/main/figs/wave_packet.gif)
+![A wave packet with the group velocity larger(5x) than phase velocity](/physics-visualizations/figs/wave_packet.webp)
 > *이미지 라이선스 및 원작 출처 고지*
+> - 이미지 생성 소스코드(Python3): [yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/wave_packet.py)
 > - 이미지 생성 소스코드(gnuplot): [yunseo-kim/physics-visualizations](https://github.com/yunseo-kim/physics-visualizations/blob/main/src/wave_packet.plt)
 > - 라이선스: [Mozilla Public License 2.0](https://github.com/yunseo-kim/physics-visualizations?tab=readme-ov-file#license)
 > - 원작자: [Ph.D. Youjun Hu](https://github.com/youjunhu)

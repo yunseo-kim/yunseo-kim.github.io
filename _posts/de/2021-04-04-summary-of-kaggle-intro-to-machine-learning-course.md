@@ -17,7 +17,7 @@ Nach jedem abgeschlossenen Kurs werde ich die wichtigsten Inhalte kurz zusammenf
 ## Lesson 1. How Models Work
 Zum Einstieg beginnen wir ganz entspannt. Es geht darum, wie Machine-Learning-Modelle funktionieren und wofür sie verwendet werden. Anhand der Aufgabe, Immobilienpreise vorherzusagen, wird ein einfaches Entscheidungsbaum-Klassifikationsmodell (Decision Tree) als Beispiel erläutert.
 
-Das Auffinden von Mustern in Daten nennt man ein Modell **trainieren** (**fitting** oder **training** the model). Die Daten, mit denen das Modell trainiert wird, heißen **Trainingsdaten (training data)**. Nach dem Training kann man das Modell auf neue Daten anwenden und **vorhersagen (predict)**.
+Das Auffinden von Mustern in Daten nennt man ein Modell **anpassen (fitting)** oder **trainieren (training)**. Die Daten, mit denen das Modell trainiert wird, heißen **Trainingsdaten (training data)**. Nach dem Training kann man das Modell auf neue Daten anwenden und **vorhersagen (predict)**.
 
 ## Lesson 2. Basic Data Exploration
 In jedem Machine-Learning-Projekt steht am Anfang, dass man sich selbst mit den Daten vertraut macht. Nur wenn man die Eigenschaften der Daten versteht, kann man ein geeignetes Modell entwerfen. Zum Erkunden und Transformieren von Daten verwendet man in der Regel die Bibliothek [Pandas](https://pandas.pydata.org/).
@@ -72,7 +72,7 @@ Index(['Suburb', 'Address', 'Rooms', 'Type', 'Price', 'Method', 'SellerG',
       dtype='object')
 ```
 
-Es gibt verschiedene Wege, die benötigten Teile aus den Daten auszuwählen; ausführlicher behandelt das der [Pandas Micro-Course](https://www.kaggle.com/learn/pandas) von Kaggle (den ich später ebenfalls zusammenfassen werde). Hier verwenden wir zwei Methoden:
+Es gibt verschiedene Wege, die benötigten Teile aus den Daten auszuwählen; ausführlicher behandelt das der [Pandas Micro-Course](https://www.kaggle.com/learn/pandas) von Kaggle (das habe ich in [einem separaten Beitrag](/posts/summary-of-kaggle-pandas-course/) zusammengefasst). Hier verwenden wir zwei Methoden:
 1. Dot-Notation
 2. Verwendung einer Liste
 
