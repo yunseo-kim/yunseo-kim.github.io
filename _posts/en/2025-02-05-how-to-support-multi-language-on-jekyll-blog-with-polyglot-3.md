@@ -32,6 +32,9 @@ The series consists of 3 posts, and this is the third post in the series.
 This post is a continuation of [Part 1](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1) and [Part 2](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2), so if you haven't read them yet, I recommend reading the previous posts first.
 
 ## Troubleshooting ('relative_url_regex': target of repeat operator is not specified)
+
+(+ 12025.10.08. Update) [This bug was fixed in Polyglot version 1.11](https://polyglot.untra.io/2025/09/20/polyglot.1.11.0/).
+
 After completing the previous steps, when I ran the `bundle exec jekyll serve` command to test the build, it failed with the error `'relative_url_regex': target of repeat operator is not specified`.
 
 ```shell
@@ -121,7 +124,7 @@ As of the time of writing this post (11.12024), the [Jekyll official documentati
 
 In other words, the root cause is not in the Chirpy theme but in Polyglot's `relative_url_regex()` and `absolute_url_regex()` functions, so the fundamental solution is to modify them to prevent the problem.
 
-Since this bug has not yet been fixed in Polyglot, you can fork the Polyglot repository with reference to ~~[this blog post](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)(site is gone) and~~ [the answer to the previous GitHub issue](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322), modify the problematic parts as follows, and use it instead of the original Polyglot.
+~~Since this bug has not yet been fixed in Polyglot,~~ As described above, [this issue has been fixed since Polyglot version 1.11](https://polyglot.untra.io/2025/09/20/polyglot.1.11.0/). At the time the problem occurred, it could be worked around by forking the Polyglot repository with reference to ~~[this blog post](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)(site is gone) and~~ [the answer to the previous GitHub issue](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322), modifying the problematic parts as follows, and using it in place of the original Polyglot.
 
 {% raw %}
 ```ruby

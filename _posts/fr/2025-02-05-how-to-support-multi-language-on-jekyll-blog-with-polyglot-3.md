@@ -32,6 +32,9 @@ La série se compose de 3 articles, et celui que vous lisez est le troisième.
 Cet article fait suite à la [première partie](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1) et à la [deuxième partie](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2), donc si vous ne les avez pas encore lues, je vous recommande de les lire d'abord.
 
 ## Résolution de problèmes ('relative_url_regex': target of repeat operator is not specified)
+
+(+ 12025.10.08. Mise à jour) [Ce bug a été corrigé dans Polyglot 1.11](https://polyglot.untra.io/2025/09/20/polyglot.1.11.0/).
+
 Après avoir terminé les étapes précédentes, j'ai exécuté la commande `bundle exec jekyll serve` pour tester la compilation, mais elle a échoué avec l'erreur `'relative_url_regex': target of repeat operator is not specified`.
 
 ```shell
@@ -121,7 +124,7 @@ Au moment de la rédaction de cet article (11.12024), la [documentation officiel
 
 Le problème ne vient donc pas du thème Chirpy mais des fonctions `relative_url_regex()` et `absolute_url_regex()` de Polyglot, donc la solution fondamentale est de les modifier pour éviter ce problème.
 
-Comme ce bug n'est pas encore résolu dans Polyglot, vous pouvez forker le dépôt Polyglot en vous référant ~~à [ce billet de blog](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)(site supprimé) et~~ à [la réponse dans l'issue GitHub mentionnée](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322), puis modifier les parties problématiques comme suit et utiliser cette version au lieu de Polyglot original.
+~~Comme ce bug n'est pas encore résolu dans Polyglot,~~ comme indiqué ci-dessus, [ce problème a été résolu à partir de la version 1.11 de Polyglot](https://polyglot.untra.io/2025/09/20/polyglot.1.11.0/). À l'époque où le problème survenait, on pouvait le résoudre en forquant le dépôt Polyglot en se référant ~~à [ce billet de blog](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)(site supprimé) et~~ à [la réponse dans l'issue GitHub mentionnée](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322), puis en modifiant les parties problématiques comme suit pour utiliser cette version à la place de l'original.
 
 {% raw %}
 ```ruby

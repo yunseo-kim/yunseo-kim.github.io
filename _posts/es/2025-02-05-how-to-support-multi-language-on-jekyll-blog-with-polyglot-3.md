@@ -32,6 +32,9 @@ La serie consta de 3 artículos, y este es el tercer artículo de la serie.
 Este artículo es una continuación de la [Parte 1](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1) y la [Parte 2](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2), por lo que se recomienda leer los artículos anteriores primero si aún no lo has hecho.
 
 ## Solución de problemas ('relative_url_regex': target of repeat operator is not specified)
+
+(+ 12025.10.08. Actualización) [Este bug se solucionó en Polyglot 1.11](https://polyglot.untra.io/2025/09/20/polyglot.1.11.0/).
+
 Después de completar los pasos anteriores, al ejecutar el comando `bundle exec jekyll serve` para probar la compilación, apareció un error que decía `'relative_url_regex': target of repeat operator is not specified` y la compilación falló.
 
 ```shell
@@ -121,7 +124,7 @@ En el momento de escribir este artículo (noviembre de 12024), la [documentació
 
 Es decir, el problema no está en el tema Chirpy sino en las funciones `relative_url_regex()` y `absolute_url_regex()` de Polyglot, por lo que la solución fundamental es modificarlas para que no generen errores.
 
-Como este error aún no ha sido resuelto en Polyglot, siguiendo ~~[este artículo de blog](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)(sitio desaparecido) y~~ [la respuesta en el problema de GitHub mencionado](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322), se puede hacer un fork del repositorio de Polyglot y modificar las partes problemáticas de la siguiente manera:
+~~Como este error aún no ha sido resuelto en Polyglot,~~ como se ha indicado arriba, [a partir de la versión 1.11 de Polyglot el problema quedó resuelto](https://polyglot.untra.io/2025/09/20/polyglot.1.11.0/). En el momento en que se producía el problema, ~~[esta entrada de blog](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)(sitio desaparecido) y~~ [la respuesta en el problema de GitHub mencionado](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322) se tomaron como referencia para hacer un fork del repositorio de Polyglot y modificar las partes problemáticas como sigue, pudiendo así usarlo en lugar del Polyglot original para solucionarlo.
 
 {% raw %}
 ```ruby

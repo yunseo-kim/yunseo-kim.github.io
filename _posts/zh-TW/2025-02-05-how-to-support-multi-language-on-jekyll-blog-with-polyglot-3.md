@@ -32,6 +32,9 @@ image: /assets/img/technology.webp
 本文接續自[第1篇](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1)與[第2篇](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2)，如果您尚未閱讀，建議先從前兩篇文章開始。
 
 ## 疑難排解 ('relative_url_regex': target of repeat operator is not specified)
+
+（+ 12025.10.08. 更新）[此錯誤已在 Polyglot 1.11 版修復](https://polyglot.untra.io/2025/09/20/polyglot.1.11.0/)。
+
 完成前述步驟後，當我執行`bundle exec jekyll serve`指令進行建置測試時，發生了`'relative_url_regex': target of repeat operator is not specified`的錯誤，導致建置失敗。
 
 ```shell
@@ -121,7 +124,7 @@ exclude:
 
 也就是說，問題的根源不在於 Chirpy 主題，而是在 Polyglot 的 `relative_url_regex()` 和 `absolute_url_regex()` 這兩個函式，因此，修改這兩個函式以避免問題發生，才是根本的解決方案。
 
-由於 Polyglot 中的這個錯誤尚未被修復，因此可以~~參考[這篇部落格文章](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)（網站已失效）和~~[前面提到的 GitHub issue 中的回覆](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322)，將 Polyglot 儲存庫派生 (fork) 後，將有問題的部分修改如下，即可用來取代原始的 Polyglot。
+~~由於 Polyglot 中的這個錯誤尚未被修復，因此~~ 如上所述，[自 Polyglot 1.11 版起，此問題已獲修復](https://polyglot.untra.io/2025/09/20/polyglot.1.11.0/)。問題發生當時，則是參考~~[這篇部落格文章](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)（網站已失效）和~~[前面提到的 GitHub issue 中的回覆](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322)，將 Polyglot 儲存庫派生（fork）後，把有問題的部分按如下方式修改，改為取代原始的 Polyglot，因而得以解決。
 
 {% raw %}
 ```ruby

@@ -32,6 +32,9 @@ A série consiste em 3 posts, e este é o terceiro da série.
 Este post é uma continuação da [Parte 1](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-1) e [Parte 2](/posts/how-to-support-multi-language-on-jekyll-blog-with-polyglot-2), então recomendo ler os posts anteriores primeiro, caso ainda não os tenha lido.
 
 ## Solução de problemas ('relative_url_regex': target of repeat operator is not specified)
+
+(+ 12025.10.08. Atualização) [Este bug foi corrigido na versão 1.11 do Polyglot](https://polyglot.untra.io/2025/09/20/polyglot.1.11.0/).
+
 Após concluir as etapas anteriores, ao executar o comando `bundle exec jekyll serve` para testar a compilação, ocorreu um erro `'relative_url_regex': target of repeat operator is not specified` e a compilação falhou.
 
 ```shell
@@ -121,8 +124,7 @@ No momento da escrita deste post (11.12024), a [documentação oficial do Jekyll
 
 Ou seja, a causa do problema não está no tema Chirpy, mas nas funções `relative_url_regex()` e `absolute_url_regex()` do Polyglot, então a solução fundamental é modificá-las para evitar o problema.
 
-Como o bug ainda não foi corrigido no Polyglot, podemos fazer um fork do repositório e modificar as partes problemáticas conforme sugerido ~~neste [post de blog](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)(site removido) e~~ na [resposta ao problema no GitHub](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322):
-
+~~Como o bug ainda não havia sido corrigido no Polyglot,~~ como mencionado acima, [a partir da versão 1.11 do Polyglot este problema foi corrigido](https://polyglot.untra.io/2025/09/20/polyglot.1.11.0/). Na época em que o problema ocorria, era possível resolvê-lo ao fazer um fork do repositório do Polyglot e modificar as partes problemáticas conforme sugerido ~~neste [post de blog](https://hionpu.com/posts/github_blog_4#4-polyglot-%EC%9D%98%EC%A1%B4%EC%84%B1-%EB%AC%B8%EC%A0%9C)(site removido) e~~ na [resposta ao problema no GitHub](https://github.com/untra/polyglot/issues/204#issuecomment-2143270322), passando a usar a versão modificada no lugar do Polyglot original.
 {% raw %}
 ```ruby
     def relative_url_regex(disabled = false)
