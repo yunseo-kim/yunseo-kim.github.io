@@ -92,6 +92,8 @@ lang_from_path: true
 {: .prompt-tip }
 
 > 'parallel_localization'을 'true'로 지정하면 빌드 시간이 상당히 단축되는 장점이 있으나, 12024년 7월 시점 기준으로 본 블로그에 대해 해당 기능을 활성화했을 때 페이지 오른쪽 사이드바의 'Recently Updated'와 'Trending Tags' 부분 링크 제목이 정상적으로 처리되지 않고 다른 언어와 뒤섞이는 버그가 있었다. 아직 안정화가 덜 된 것 같으니 사이트에 적용하려면 미리 정상 작동하는지 테스트를 거칠 필요가 있다. 또한 [Windows를 사용하는 경우에도 해당 기능이 지원되지 않으므로 비활성화해야 한다](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
+>
+> (12025.09 업데이트) 12025년 여름에 지금 이 블로그를 기준으로 'parallel_localization' 기능을 다시 테스트해 보았을 때는 문제 없이 정상 작동하였다. 이에 현재는 해당 기능을 활성화해 둔 상황이며, 덕분에 빌드 시간을 크게 단축하였다.
 {: .prompt-warning }
 
 또한 [Jekyll 4.0에서는 다음과 같이 CSS sourcemaps 생성을 비활성화해야 한다](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).

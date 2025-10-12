@@ -92,6 +92,8 @@ lang_from_path: true
 {: .prompt-tip }
 
 > Das Setzen von 'parallel_localization' auf 'true' hat den Vorteil, die Build-Zeit erheblich zu verkürzen. Als ich diese Funktion jedoch im Juli 12024 für meinen Blog aktivierte, trat ein Fehler auf, bei dem die Link-Titel in den Abschnitten 'Kürzlich aktualisiert' und 'Trend-Tags' in der rechten Seitenleiste nicht korrekt verarbeitet wurden und mit anderen Sprachen vermischt waren. Es scheint, dass die Funktion noch nicht stabil ist, daher ist es notwendig, vor der Anwendung auf Ihrer Website zu testen, ob sie ordnungsgemäß funktioniert. Außerdem [wird diese Funktion unter Windows nicht unterstützt und sollte daher deaktiviert werden](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).
+>
+> (Update 09.12025) Im Sommer 12025 habe ich die Funktion 'parallel_localization' auf Basis dieses Blogs erneut getestet; sie funktionierte ohne Probleme einwandfrei. Daher ist sie derzeit aktiviert, was die Build-Zeit deutlich verkürzt hat.
 {: .prompt-warning }
 
 Außerdem [muss bei Jekyll 4.0 die Erstellung von CSS-Sourcemaps wie folgt deaktiviert werden](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility).

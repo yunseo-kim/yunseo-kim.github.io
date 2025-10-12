@@ -92,6 +92,8 @@ lang_from_path: true
 {: .prompt-tip }
 
 > 將 'parallel_localization' 設為 'true' 的優點是能大幅縮短建置時間，但截至 12024 年 7 月，當我在本部落格啟用此功能時，頁面右側邊欄的 'Recently Updated' 和 'Trending Tags' 部分的連結標題無法正常處理，會與其他語言混雜在一起。此功能似乎尚未完全穩定，若要在網站上應用，需要事先測試是否能正常運作。此外，[Windows 使用者也應停用此功能，因為它不被支援](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility)。
+>
+> (12025.09. 更新) 在 12025 年夏季，以本部落格為準重新測試 'parallel_localization' 功能時，已可正常運作且無問題。因此目前我已啟用該功能，並藉此大幅縮短建置時間。
 {: .prompt-warning }
 
 此外，[在 Jekyll 4.0 中，需要停用 CSS sourcemaps 的生成](https://github.com/untra/polyglot?tab=readme-ov-file#compatibility)。
