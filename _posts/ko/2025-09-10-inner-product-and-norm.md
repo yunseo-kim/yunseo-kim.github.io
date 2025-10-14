@@ -45,7 +45,7 @@ image: /assets/img/math-and-physics-cropped.webp
 > 
 {: .prompt-info }
 
-> 여기서 말하는 '스칼라곱(**scalar product**)'은 벡터와 벡터 간의 연산으로, [벡터와 선형결합](/posts/vectors-and-linear-combinations/)에서 다뤘던 벡터의 상수배, '스칼라곱(**scalar multiplication**)'과는 별개의 연산이다. 영문 표현도 비슷한 편인 데다, <u>한글 번역명은 아예 동일하기 때문에</u> 혼동하지 않도록 주의하자.
+> 여기서 말하는 '스칼라곱(**scalar product**)'은 벡터와 벡터 간의 연산으로, [벡터와 선형결합](/posts/vectors-and-linear-combinations/)에서 다뤘던 스칼라와 벡터 간 연산인 '스칼라배(**scalar multiplication**)'과는 별개의 연산이다. 영문 표현도 비슷한 편인 데다, [대한수학회 기준 한국어 번역 표현은 아예 동일하기 때문에](https://www.kms.or.kr/mathdict/list.html?key=kname&keyword=%EC%8A%A4%EC%B9%BC%EB%9D%BC%EA%B3%B1) 혼동하지 않도록 주의하자.
 >
 > 혼동을 방지하기 위해, 앞으로는 가급적 **점곱(dot product)**으로 지칭하겠다.
 {: .prompt-warning }

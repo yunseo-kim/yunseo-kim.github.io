@@ -45,7 +45,7 @@ When $F=\mathbb{R}$, complex conjugation is trivial, so the standard inner produ
 > 
 {: .prompt-info }
 
-> The “scalar product” mentioned here is an operation between two vectors and is distinct from the scalar multiplication of a vector by a constant discussed in [Vectors and Linear Combinations](/posts/vectors-and-linear-combinations/). The English terms are similar, and <u>the Korean translations are identical</u>, so be careful not to confuse them.
+> The “scalar product” mentioned here is an operation between two vectors and is distinct from the operation between a scalar and a vector, “scalar multiplication,” discussed in [Vectors and Linear Combinations](/posts/vectors-and-linear-combinations/). The English terms are similar, and [per the Korean Mathematical Society’s standard terminology the Korean translations are identical](https://www.kms.or.kr/mathdict/list.html?key=kname&keyword=%EC%8A%A4%EC%B9%BC%EB%9D%BC%EA%B3%B1), so be careful not to confuse them.
 >
 > To avoid confusion, I will refer to it as the **dot product** whenever possible.
 {: .prompt-warning }

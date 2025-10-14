@@ -45,7 +45,7 @@ Se $F=\mathbb{R}$, como o conjugado de um número real é ele próprio, o produt
 > 
 {: .prompt-info }
 
-> Aqui, “produto escalar (**scalar product**)” é uma operação entre vetores, distinta da “multiplicação por escalar (**scalar multiplication**)” — a multiplicação de um vetor por um número — tratada em [Vetores e combinações lineares](/posts/vectors-and-linear-combinations/). Em inglês os termos são parecidos e, <u>em coreano a tradução é até idêntica</u>; portanto, cuidado para não confundir.
+> Aqui, “produto escalar (**scalar product**)” é uma operação entre vetores, distinta da “multiplicação por escalar (**scalar multiplication**)” — a multiplicação de um vetor por um número — tratada em [Vetores e combinações lineares](/posts/vectors-and-linear-combinations/). Em inglês os termos são parecidos e, [de acordo com o padrão de tradução da Sociedade Matemática da Coreia, em coreano são de fato idênticos](https://www.kms.or.kr/mathdict/list.html?key=kname&keyword=%EC%8A%A4%EC%B9%BC%EB%9D%BC%EA%B3%B1); portanto, cuidado para não confundir.
 >
 > Para evitar confusões, doravante usaremos preferencialmente o termo produto escalar (**dot product**).
 {: .prompt-warning }

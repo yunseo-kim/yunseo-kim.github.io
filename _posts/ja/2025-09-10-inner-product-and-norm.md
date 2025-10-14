@@ -45,7 +45,7 @@ image: /assets/img/math-and-physics-cropped.webp
 > 
 {: .prompt-info }
 
-> ここでいう「スカラー積（scalar product）」はベクトルどうしの演算であり、[ベクトルと線形結合](/posts/vectors-and-linear-combinations/)で扱ったベクトルのスカラー倍、「スカラー倍（scalar multiplication）」とは別の演算である。英語表現も似ているうえに、<u>韓国語では訳語がまったく同じなので</u>混同しないよう注意しよう。
+> ここでいう「スカラー積（scalar product）」はベクトルどうしの演算であり、[ベクトルと線形結合](/posts/vectors-and-linear-combinations/)で扱ったスカラーとベクトルの間の演算である「スカラー倍（scalar multiplication）」とは別の演算である。英語表現も似ているうえに、[大韓数学会の韓国語訳語基準では表記がまったく同一であるため](https://www.kms.or.kr/mathdict/list.html?key=kname&keyword=%EC%8A%A4%EC%B9%BC%EB%9D%BC%EA%B3%B1)混同しないよう注意しよう。
 >
 > 混同を避けるため、以後は可能なかぎり**ドット積（dot product）**と呼ぶことにする。
 {: .prompt-warning }

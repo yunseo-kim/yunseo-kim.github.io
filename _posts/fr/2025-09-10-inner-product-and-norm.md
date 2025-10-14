@@ -45,7 +45,7 @@ Si $F=\mathbb{R}$, le conjugué d’un réel étant lui-même, le produit scalai
 > 
 {: .prompt-info }
 
-> Ici, le « produit scalaire » est une opération entre vecteurs, distincte de la « multiplication scalaire » (produit d’un vecteur par un scalaire) abordée dans [Vecteurs et combinaisons linéaires](/posts/vectors-and-linear-combinations/). Les expressions anglaises se ressemblent, et <u>en coréen le nom est même identique</u>; attention à ne pas les confondre.
+> Ici, le « produit scalaire » est une opération entre vecteurs, distincte de l’« opération entre un scalaire et un vecteur » traitée dans [Vecteurs et combinaisons linéaires](/posts/vectors-and-linear-combinations/), à savoir la « multiplication scalaire (scalar multiplication) ». Les expressions anglaises se ressemblent et, [selon la terminologie coréenne normalisée par la Société mathématique de Corée, elles portent exactement le même nom](https://www.kms.or.kr/mathdict/list.html?key=kname&keyword=%EC%8A%A4%EC%B9%BC%EB%9D%BC%EA%B3%B1); attention à ne pas les confondre.
 >
 > Pour éviter toute confusion, nous emploierons autant que possible le terme **dot product**.
 {: .prompt-warning }

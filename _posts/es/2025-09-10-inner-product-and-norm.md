@@ -45,7 +45,7 @@ Si aquí $F=\mathbb{R}$, como el conjugado complejo de un número real es él mi
 > 
 {: .prompt-info }
 
-> El 'producto escalar (**scalar product**)' aquí mencionado es una operación entre vectores, distinta de la 'multiplicación escalar (**scalar multiplication**)' (multiplicación por un escalar) tratada en [Vectores y combinaciones lineales](/posts/vectors-and-linear-combinations/). Dado que en inglés las expresiones son similares y en español <u>la traducción puede ser ambigua</u>, conviene evitar confusiones.
+> El 'producto escalar (**scalar product**)' aquí mencionado es una operación entre vectores, distinta de la operación entre un escalar y un vector, la 'multiplicación escalar (**scalar multiplication**)', tratada en [Vectores y combinaciones lineales](/posts/vectors-and-linear-combinations/). Dado que en inglés las expresiones son parecidas y, según el estándar de la Sociedad Matemática de Corea, [las denominaciones en coreano son idénticas](https://www.kms.or.kr/mathdict/list.html?key=kname&keyword=%EC%8A%A4%EC%B9%BC%EB%9D%BC%EA%B3%B1), conviene evitar confusiones.
 >
 > Para minimizar la ambigüedad, en lo sucesivo nos referiremos preferentemente a esta operación como **producto punto (dot product)**.
 {: .prompt-warning }

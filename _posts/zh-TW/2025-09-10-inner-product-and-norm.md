@@ -45,7 +45,7 @@ image: /assets/img/math-and-physics-cropped.webp
 > 
 {: .prompt-info }
 
-> 此處所稱的「純量積（scalar product）」是向量與向量之間的運算；而在[向量與線性組合](/posts/vectors-and-linear-combinations/)中討論的向量之純量倍，是「純量乘法（scalar multiplication）」這個不同的運算。由於英文表述也相近，且<u>韓文譯名甚至完全相同</u>，因此請留意不要混淆。
+> 此處所稱的「純量積（scalar product）」是向量與向量之間的運算；而在[向量與線性組合](/posts/vectors-and-linear-combinations/)中討論的、標量與向量之間的運算「純量乘法（scalar multiplication）」則是另一種不同的運算。由於英文表述也相近，且[依據大韓數學會的韓語術語標準，兩者的韓文譯名甚至完全相同](https://www.kms.or.kr/mathdict/list.html?key=kname&keyword=%EC%8A%A4%EC%B9%BC%EB%9D%BC%EA%B3%B1)，因此請留意不要混淆。
 >
 > 為避免混淆，下文將儘量以**點積(dot product)**稱呼之。
 {: .prompt-warning }

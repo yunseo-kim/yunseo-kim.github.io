@@ -45,7 +45,7 @@ Ist hier $F=\mathbb{R}$, so ist die konjugiert komplexe Zahl einer reellen Zahl 
 > 
 {: .prompt-info }
 
-> Das hier gemeinte „**Skalarprodukt (scalar product)**“ ist eine Operation zwischen zwei Vektoren und unterscheidet sich von der Skalarmultiplikation, also der Multiplikation eines Vektors mit einem Skalar, wie in [Vektoren und Linearkombinationen](/posts/vectors-and-linear-combinations/) behandelt. Da die englischen Bezeichnungen ähnlich sind, ist Verwechslungsgefahr gegeben.
+> Das hier gemeinte „**Skalarprodukt (scalar product)**“ ist eine Operation zwischen zwei Vektoren und unterscheidet sich von der Skalarmultiplikation, also der Operation zwischen Skalar und Vektor, wie in [Vektoren und Linearkombinationen](/posts/vectors-and-linear-combinations/) behandelt. Da die englischen Bezeichnungen ähnlich sind und die [koreanische Standardübersetzung nach der Korean Mathematical Society](https://www.kms.or.kr/mathdict/list.html?key=kname&keyword=%EC%8A%A4%EC%B9%BC%EB%9D%BC%EA%B3%B1) sogar identisch ist, ist Verwechslungsgefahr gegeben.
 >
 > Zur Vermeidung von Missverständnissen werde ich nach Möglichkeit den Begriff **Punktprodukt (dot product)** verwenden.
 {: .prompt-warning }
