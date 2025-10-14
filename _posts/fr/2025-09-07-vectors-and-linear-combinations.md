@@ -40,19 +40,19 @@ La définition ci-dessus est celle des vecteurs en mécanique ou au niveau lycé
 En algèbre linéaire, on adopte une définition plus générale et plus abstraite d’un vecteur comme structure algébrique.
 
 > **Définition**  
-> Un **espace vectoriel** (ou **espace linéaire**) $V$ sur un corps $F$ est un ensemble muni de deux opérations, la **somme** et la **multiplication scalaire**, qui satisfont les huit axiomes suivants. Les éléments de $F$ sont des **scalaires** et les éléments de $V$ sont des **vecteurs**.
+> Un **espace vectoriel** (ou **espace linéaire**) $\mathbb{V}$ sur un corps $F$ est un ensemble muni de deux opérations, la **somme** et la **multiplication scalaire**, qui satisfont les huit axiomes suivants. Les éléments de $F$ sont des **scalaires** et les éléments de $\mathbb{V}$ sont des **vecteurs**.
 >
-> - **Somme**: pour $x, y \in V$, l’opération associe un unique élément $x + y \in V$. On appelle $x + y$ la **somme** de $x$ et $y$.
-> - **Multiplication scalaire**: pour $a \in F$ et $x \in V$, l’opération associe un unique élément $ax \in V$. On appelle $ax$ le **produit** de $a$ et $x$.
+> - **Somme**: pour $\mathbf{x}, \mathbf{y} \in \mathbb{V}$, l’opération associe un unique élément $\mathbf{x} + \mathbf{y} \in \mathbb{V}$. On appelle $\mathbf{x} + \mathbf{y}$ la **somme** de $\mathbf{x}$ et $\mathbf{y}$.
+> - **Multiplication scalaire**: pour $a \in F$ et $\mathbf{x} \in \mathbb{V}$, l’opération associe un unique élément $a\mathbf{x} \in \mathbb{V}$. On appelle $a\mathbf{x}$ le **multiple scalaire** de $\mathbf{x}$.
 >
-> 1. Pour tous $x,y \in V$, $x + y = y + x$. (commutativité de l’addition)
-> 2. Pour tous $x,y,z \in V$, $(x+y)+z = x+(y+z)$. (associativité de l’addition)
-> 3. Pour tout $x \in V$, il existe $0 \in V$ tel que $x + 0 = x$. (vecteur nul, élément neutre pour l’addition)
-> 4. Pour chaque $x \in V$, il existe $y \in V$ tel que $x+y=0$. (inverse additif)
-> 5. Pour tout $x \in V$, $1x = x$. (élément neutre pour la multiplication)
-> 6. Pour tous $a,b \in F$ et tout $x \in V$, $(ab)x = a(bx)$. (associativité de la multiplication scalaire)
-> 7. Pour tout $a \in F$ et tous $x,y \in V$, $a(x+y) = ax + ay$. (distributivité de la multiplication scalaire par rapport à l’addition 1)
-> 8. Pour tous $a,b \in F$ et tout $x \in V$, $(a+b)x = ax + bx$. (distributivité de la multiplication scalaire par rapport à l’addition 2)
+> 1. Pour tous $\mathbf{x},\mathbf{y} \in \mathbb{V}$, $\mathbf{x} + \mathbf{y} = \mathbf{y} + \mathbf{x}$. (commutativité de l’addition)
+> 2. Pour tous $\mathbf{x},\mathbf{y},\mathbf{z} \in \mathbb{V}$, $(\mathbf{x}+\mathbf{y})+\mathbf{z} = \mathbf{x}+(\mathbf{y}+\mathbf{z})$. (associativité de l’addition)
+> 3. Pour tout $\mathbf{x} \in \mathbb{V}$, il existe $\mathbf{0} \in \mathbb{V}$ tel que $\mathbf{x} + \mathbf{0} = \mathbf{x}$. (vecteur nul, élément neutre pour l’addition)
+> 4. Pour chaque $\mathbf{x} \in \mathbb{V}$, il existe $\mathbf{y} \in \mathbb{V}$ tel que $\mathbf{x}+\mathbf{y}=\mathbf{0}$. (inverse additif)
+> 5. Pour tout $\mathbf{x} \in \mathbb{V}$, $1\mathbf{x} = \mathbf{x}$. (élément neutre pour la multiplication)
+> 6. Pour tous $a,b \in F$ et tout $\mathbf{x} \in \mathbb{V}$, $(ab)\mathbf{x} = a(b\mathbf{x})$. (associativité de la multiplication scalaire)
+> 7. Pour tout $a \in F$ et tous $\mathbf{x},\mathbf{y} \in \mathbb{V}$, $a(\mathbf{x}+\mathbf{y}) = a\mathbf{x} + a\mathbf{y}$. (distributivité de la multiplication scalaire par rapport à l’addition 1)
+> 8. Pour tous $a,b \in F$ et tout $\mathbf{x} \in \mathbb{V}$, $(a+b)\mathbf{x} = a\mathbf{x} + b\mathbf{x}$. (distributivité de la multiplication scalaire par rapport à l’addition 2)
 {: .prompt-info }
 
 Cette définition en algèbre linéaire englobe une portée plus large, incluant le [vecteur euclidien](#vecteur-au-sens-étroit-vecteur-euclidien). On peut vérifier que les [vecteurs euclidiens](#vecteur-au-sens-étroit-vecteur-euclidien) satisfont aussi les huit axiomes ci-dessus.
@@ -147,4 +147,14 @@ Si un second vecteur $\mathbf{w}$ n’est pas sur cette droite (i.e. $\mathbf{v}
 > - Auteur: utilisateur Wikimédia [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
 
-Ainsi, les combinaisons linéaires de vecteurs engendrent un espace; c’est la notion d’**engendrement**. Même si nous n’avons pas encore défini précisément les espaces vectoriels, garder cet exemple en tête aidera à en comprendre le concept par la suite.
+Ainsi, les combinaisons linéaires de vecteurs engendrent un espace; on parle de **sous-espace engendré (span)**.
+
+> **Définition**  
+> Soit $S$ un sous-ensemble non vide de l’espace vectoriel $\mathbb{V}$. L’ensemble de toutes les combinaisons linéaires formées avec les vecteurs de $S$ s’appelle le **sous-espace engendré** de $S$ (span) et se note $\mathrm{span}(S)$. Par convention, $\mathrm{span}(\emptyset)=\{0\}$.
+{: .prompt-info }
+
+> **Définition**  
+> Pour un sous-ensemble $S$ de l’espace vectoriel $\mathbb{V}$, si $\mathrm{span}(S)=\mathbb{V}$, on dit que $S$ **engendre** $\mathbb{V}$ (génère, span).
+{: .prompt-info }
+
+Bien que nous n’ayons pas encore présenté des notions comme sous-espace ou base, garder cet exemple en tête aidera à comprendre la notion d’espace vectoriel.

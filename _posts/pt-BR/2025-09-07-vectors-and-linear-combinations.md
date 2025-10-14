@@ -40,19 +40,19 @@ Essa é a definição de vetor adotada em mecânica e na matemática do ensino m
 Na Álgebra Linear, adota-se uma noção mais ampla e abstrata de vetor, como uma estrutura algébrica, definida assim:
 
 > **Definição**  
-> Um **espaço vetorial** (ou **espaço linear**) $V$ sobre um corpo $F$ é um conjunto equipado com duas operações, **soma** e **multiplicação por escalar**, que satisfazem as 8 condições abaixo. Os elementos de $F$ são chamados de **escalares**, e os elementos de $V$ são chamados de **vetores**.
+> Um **espaço vetorial** (ou **espaço linear**) $\mathbb{V}$ sobre um corpo $F$ é um conjunto equipado com duas operações, **soma** e **multiplicação por escalar**, que satisfazem as 8 condições abaixo. Os elementos de $F$ são chamados de **escalares**, e os elementos de $\mathbb{V}$ são chamados de **vetores**.
 >
-> - **Soma**: para quaisquer $x, y \in V$, existe um único elemento $x + y \in V$. Chamamos $x + y$ de **soma** de $x$ e $y$.
-> - **Multiplicação por escalar**: para cada $a \in F$ e $x \in V$, existe um único elemento $ax \in V$. Chamamos $ax$ de **produto** de $a$ por $x$.
+> - **Soma**: para quaisquer $\mathbf{x}, \mathbf{y} \in \mathbb{V}$, existe um único elemento $\mathbf{x} + \mathbf{y} \in \mathbb{V}$. Chamamos $\mathbf{x} + \mathbf{y}$ de **soma** de $\mathbf{x}$ e $\mathbf{y}$.
+> - **Multiplicação por escalar**: para cada $a \in F$ e $\mathbf{x} \in \mathbb{V}$, existe um único elemento $a\mathbf{x} \in \mathbb{V}$. Chamamos $a\mathbf{x}$ de **múltiplo escalar** de $\mathbf{x}$.
 >
-> 1. Para todos $x,y \in V$, $x + y = y + x$. (comutatividade da adição)
-> 2. Para todos $x,y,z \in V$, $(x+y)+z = x+(y+z)$. (associatividade da adição)
-> 3. Existe $0 \in V$ tal que, para todo $x \in V$, $x + 0 = x$. (vetor zero, elemento neutro da adição)
-> 4. Para cada $x \in V$, existe $y \in V$ tal que $x+y=0$. (inverso aditivo)
-> 5. Para todo $x \in V$, $1x = x$. (identidade multiplicativa)
-> 6. Para todos $a,b \in F$ e todo $x \in V$, $(ab)x = a(bx)$. (associatividade da multiplicação por escalar)
-> 7. Para todo $a \in F$ e todos $x,y \in V$, $a(x+y) = ax + ay$. (distributividade da multiplicação por escalar sobre a adição 1)
-> 8. Para todos $a,b \in F$ e todo $x \in V$, $(a+b)x = ax + bx$. (distributividade da multiplicação por escalar sobre a adição 2)
+> 1. Para todos $\mathbf{x},\mathbf{y} \in \mathbb{V}$, $\mathbf{x} + \mathbf{y} = \mathbf{y} + \mathbf{x}$. (comutatividade da adição)
+> 2. Para todos $\mathbf{x},\mathbf{y},\mathbf{z} \in \mathbb{V}$, $(\mathbf{x}+\mathbf{y})+\mathbf{z} = \mathbf{x}+(\mathbf{y}+\mathbf{z})$. (associatividade da adição)
+> 3. Existe $\mathbf{0} \in \mathbb{V}$ tal que, para todo $\mathbf{x} \in \mathbb{V}$, $\mathbf{x} + \mathbf{0} = \mathbf{x}$. (vetor zero, elemento neutro da adição)
+> 4. Para cada $\mathbf{x} \in \mathbb{V}$, existe $\mathbf{y} \in \mathbb{V}$ tal que $\mathbf{x}+\mathbf{y}=\mathbf{0}$. (inverso aditivo)
+> 5. Para todo $\mathbf{x} \in \mathbb{V}$, $1\mathbf{x} = \mathbf{x}$. (identidade multiplicativa)
+> 6. Para todos $a,b \in F$ e todo $\mathbf{x} \in \mathbb{V}$, $(ab)\mathbf{x} = a(b\mathbf{x})$. (associatividade da multiplicação por escalar)
+> 7. Para todo $a \in F$ e todos $\mathbf{x},\mathbf{y} \in \mathbb{V}$, $a(\mathbf{x}+\mathbf{y}) = a\mathbf{x} + a\mathbf{y}$. (distributividade da multiplicação por escalar sobre a adição 1)
+> 8. Para todos $a,b \in F$ e todo $\mathbf{x} \in \mathbb{V}$, $(a+b)\mathbf{x} = a\mathbf{x} + b\mathbf{x}$. (distributividade da multiplicação por escalar sobre a adição 2)
 {: .prompt-info }
 
 Essa definição de vetor na Álgebra Linear é mais geral e inclui o [vetor euclidiano](#vetor-em-sentido-estrito-vetor-euclidiano). Pode-se verificar que o [vetor euclidiano](#vetor-em-sentido-estrito-vetor-euclidiano) satisfaz as 8 propriedades acima.
@@ -134,7 +134,7 @@ Os pontos essenciais são dois:
 1. **Expresse todas as combinações lineares possíveis $Ax = x_1\mathbf{v}_1 + x_2\mathbf{v}_2 + \cdots + x_n\mathbf{v}_n$. O que elas formam?**
 2. Dado um vetor de saída desejado $Ax = b$, **encontre os números $x_1, x_2, \dots, x_n$** que o produzem.
 
-Responderemos ao segundo ponto depois; por enquanto, foquemos no primeiro. Para simplificar, considere o caso de 2 vetores ($n=2$) em 2 dimensões ($m=2$), distintos do vetor zero.
+Responderemos ao segundo ponto depois; por enquanto, foquemos no primeiro. Para simplificar, considere o caso de 2 vetores ($n=2$) em 2 dimensões ($m=2$), distintos de $\mathbf{0}$.
 
 ### Combinação linear $c\mathbf{v} + d\mathbf{w}$
 
@@ -147,4 +147,14 @@ Se um segundo vetor $\mathbf{w}$ não está sobre essa reta (isto é, se $\mathb
 > - Autor: usuário da Wikimedia [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - Licença: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
 
-Assim, as combinações lineares de vetores formam um espaço vetorial; a isso chamamos de **geração** do espaço (span). Mesmo sem dominarmos ainda a definição formal de espaço vetorial, este exemplo será útil para entendê-la depois.
+Assim, as combinações lineares de vetores formam um espaço vetorial; a isso chamamos de **geração** do espaço (span).
+
+> **Definição**  
+> Dado um subconjunto não vazio $S$ de um espaço vetorial $\mathbb{V}$, o conjunto de todas as combinações lineares feitas com vetores de $S$ é chamado de **espaço gerado (span)** de $S$ e é denotado por $\mathrm{span}(S)$. Define-se $\mathrm{span}(\emptyset) = \{0\}$.
+{: .prompt-info }
+
+> **Definição**  
+> Para um subconjunto $S$ de $\mathbb{V}$, se $\mathrm{span}(S) = \mathbb{V}$, então diz-se que $S$ **gera** $\mathbb{V}$ (generate, span).
+{: .prompt-info }
+
+Ainda não estudamos conceitos como subespaço e base, mas ter em mente este exemplo ajudará a entender a noção de espaço vetorial mais adiante.

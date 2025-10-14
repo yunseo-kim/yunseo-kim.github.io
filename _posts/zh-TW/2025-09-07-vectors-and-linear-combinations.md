@@ -40,19 +40,19 @@ image: /assets/img/math-and-physics-cropped.webp
 在線性代數中，向量被定義為較上述歐幾里得向量更廣、更抽象的代數結構，如下所示。
 
 > **定義**  
-> 定義在體 $F$ 上的**向量空間（vector space）**或**線性空間（linear space）** $V$ 是一個集合，配備兩種運算：**加法**與**純量乘法**，並滿足下列八個條件。體 $F$ 的元素稱為**純量（scalar）**，向量空間 $V$ 的元素稱為**向量（vector）**。
+> 定義在體 $F$ 上的**向量空間（vector space）**或**線性空間（linear space）** $\mathbb{V}$ 是一個集合，配備兩種運算：**加法**與**純量乘法**，並滿足下列八個條件。體 $F$ 的元素稱為**純量（scalar）**，向量空間 $\mathbb{V}$ 的元素稱為**向量（vector）**。
 >
-> - **加法（sum）**：對 $V$ 的任意兩元素 $x, y$，對應到唯一的元素 $x + y \in V$。此時 $x + y$ 稱為 $x$ 與 $y$ 的**和**。
-> - **純量乘法（scalar multiplication）**：對體 $F$ 的元素 $a$ 與向量空間 $V$ 的元素 $x$，對應到唯一的元素 $ax \in V$。此時 $ax$ 稱為 $a$ 與 $x$ 的**乘積（product）**。
+> - **加法（sum）**：對 $\mathbb{V}$ 的任意兩元素 $\mathbf{x}, \mathbf{y}$，對應到唯一的元素 $\mathbf{x} + \mathbf{y} \in \mathbb{V}$。此時 $\mathbf{x} + \mathbf{y}$ 稱為 $\mathbf{x}$ 與 $\mathbf{y}$ 的**和**。
+> - **純量乘法（scalar multiplication）**：對體 $F$ 的元素 $a$ 與向量空間 $\mathbb{V}$ 的元素 $\mathbf{x}$，對應到唯一的元素 $a\mathbf{x} \in \mathbb{V}$。此時 $a\mathbf{x}$ 稱為 $\mathbf{x}$ 的**純量倍（scalar multiple）**。
 >
-> 1. 對所有 $x,y \in V$，有 $x + y = y + x$。（加法的交換律）
-> 2. 對所有 $x,y,z \in V$，有 $(x+y)+z = x+(y+z)$。（加法的結合律）
-> 3. 對所有 $x \in V$，存在 $0 \in V$ 使得 $x + 0 = x$。（零向量，加法的單位元）
-> 4. 對每個 $x \in V$，存在 $y \in V$ 使得 $x+y=0$。（加法的逆元）
-> 5. 對每個 $x \in V$，有 $1x = x$。（乘法的單位元）
-> 6. 對所有 $a,b \in F$ 與所有 $x \in V$，有 $(ab)x = a(bx)$。（純量乘法的結合律）
-> 7. 對所有 $a \in F$ 與所有 $x,y \in V$，有 $a(x+y) = ax + ay$。（對加法的純量乘法分配律 1）
-> 8. 對所有 $a,b \in F$ 與所有 $x,y \in V$，有 $(a+b)x = ax + bx$。（對加法的純量乘法分配律 2）
+> 1. 對所有 $\mathbf{x},\mathbf{y} \in \mathbb{V}$，有 $\mathbf{x} + \mathbf{y} = \mathbf{y} + \mathbf{x}$。（加法的交換律）
+> 2. 對所有 $\mathbf{x},\mathbf{y},\mathbf{z} \in \mathbb{V}$，有 $(\mathbf{x}+\mathbf{y})+\mathbf{z} = \mathbf{x}+(\mathbf{y}+\mathbf{z})$。（加法的結合律）
+> 3. 對所有 $\mathbf{x} \in \mathbb{V}$，存在 $\mathbf{0} \in \mathbb{V}$ 使得 $\mathbf{x} + \mathbf{0} = \mathbf{x}$。（零向量，加法的單位元）
+> 4. 對每個 $\mathbf{x} \in \mathbb{V}$，存在 $\mathbf{y} \in \mathbb{V}$ 使得 $\mathbf{x}+\mathbf{y}=\mathbf{0}$。（加法的逆元）
+> 5. 對每個 $\mathbf{x} \in \mathbb{V}$，有 $1\mathbf{x} = \mathbf{x}$。（乘法的單位元）
+> 6. 對所有 $a,b \in F$ 與所有 $\mathbf{x} \in \mathbb{V}$，有 $(ab)\mathbf{x} = a(b\mathbf{x})$。（純量乘法的結合律）
+> 7. 對所有 $a \in F$ 與所有 $\mathbf{x},\mathbf{y} \in \mathbb{V}$，有 $a(\mathbf{x}+\mathbf{y}) = a\mathbf{x} + a\mathbf{y}$。（對加法的純量乘法分配律 1）
+> 8. 對所有 $a,b \in F$ 與所有 $\mathbf{x},\mathbf{y} \in \mathbb{V}$，有 $(a+b)\mathbf{x} = a\mathbf{x} + b\mathbf{x}$。（對加法的純量乘法分配律 2）
 {: .prompt-info }
 
 此線性代數中的向量定義涵蓋了先前提及的[歐幾里得向量](#狹義的向量-歐幾里得向量)，屬於更廣的範疇。[歐幾里得向量](#狹義的向量-歐幾里得向量)亦可驗證滿足上述八項性質。
@@ -147,4 +147,14 @@ A = \Bigg[ \mathbf{v}_1 \quad \mathbf{v}_2 \quad \cdots \quad \mathbf{v}_n \Bigg
 > - 作者：維基共享資源用戶 [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - 授權條款：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
 
-如此，向量們的線性組合便構成向量空間，這稱為空間的**生成（span）**。雖然我們尚未正式定義向量空間，但記住此例，有助於日後理解向量空間的概念。
+如此，向量們的線性組合便構成向量空間，這稱為空間的**生成（span）**。
+
+> **定義**  
+> 對於向量空間 $\mathbb{V}$ 的非空子集 $S$，由 $S$ 中向量所有線性組合所成的集合稱為 $S$ 的**生成空間（span）**，記為 $\mathrm{span}(S)$。但定義 $\mathrm{span}(\emptyset) = \{ \mathbf{0} \}$。
+{: .prompt-info }
+
+> **定義**  
+> 若向量空間 $\mathbb{V}$ 的子集 $S$ 滿足 $\mathrm{span}(S) = \mathbb{V}$，則稱 $S$**生成（generate 或 span）**$\mathbb{V}$。
+{: .prompt-info }
+
+雖然我們尚未探討子空間、基底等概念，但記住此例，有助於理解向量空間的概念。

@@ -40,19 +40,19 @@ image: /assets/img/math-and-physics-cropped.webp
 선형대수학에서는 위의 유클리드 벡터의 정의보다 넓은 의미를 지닌, 보다 추상적인 대수적 구조로서 벡터를 다음과 같이 정의한다.
 
 > **정의**  
-> 체 $F$에서의 **벡터공간(vector space)** 또는 **선형공간(linear space)** $V$는 다음 8가지 조건을 만족하는 두 연산, **합**과 **스칼라 곱**을 가지는 집합이다. 체 $F$의 원소를 **스칼라(scalar)**, 벡터공간 $V$의 원소를 **벡터(vector)**라 한다.
+> 체 $F$에서의 **벡터공간(vector space)** 또는 **선형공간(linear space)** $\mathbb{V}$는 다음 8가지 조건을 만족하는 두 연산, **합**과 **스칼라배**를 가지는 집합이다. 체 $F$의 원소를 **스칼라(scalar)**, 벡터공간 $\mathbb{V}$의 원소를 **벡터(vector)**라 한다.
 >
-> - **합(sum)**: $V$의 두 원소 $x, y$에 대하여 유일한 원소 $x + y \in V$를 대응하는 연산이다. 이때 $x + y$를 $x$와 $y$의 **합**이라 한다.
-> - **스칼라 곱(scalar multiplication)**: 체 $F$의 원소 $a$와 벡터공간 $V$의 원소 $x$마다 유일한 원소 $ax \in V$를 대응하는 연산이다. 이때 $ax$를 $a$와 $x$의 스칼라 **곱(product)**이라 한다.
+> - **합(sum)**: $\mathbb{V}$의 두 원소 $\mathbf{x}, \mathbf{y}$에 대하여 유일한 원소 $\mathbf{x} + \mathbf{y} \in \mathbb{V}$를 대응하는 연산이다. 이때 $\mathbf{x} + \mathbf{y}$를 $\mathbf{x}$와 $\mathbf{y}$의 **합**이라 한다.
+> - **스칼라배(scalar multiplication)**: 체 $F$의 원소 $a$와 벡터공간 $\mathbb{V}$의 원소 $\mathbf{x}$마다 유일한 원소 $a\mathbf{x} \in \mathbb{V}$를 대응하는 연산이다. 이때 $a\mathbf{x}$를 $\mathbf{x}$의 **스칼라배(scalar multiple)**라 한다.
 >
-> 1. 모든 $x,y \in V$에 대하여 $x + y = y + x$이다. (덧셈에 대한 교환법칙)
-> 2. 모든 $x,y,z \in V$에 대하여 $(x+y)+z = x+(y+z)$이다. (덧셈에 대한 결합법칙)
-> 3. 모든 $x \in V$에 대하여 $x + 0 = x$인 $0 \in V$가 존재한다. (영벡터, 덧셈에 대한 항등원)
-> 4. 각 $x \in V$마다 $x+y=0$인 $y \in V$가 존재한다. (덧셈에 대한 역원)
-> 5. 각 $x \in V$에 대하여 $1x = x$이다. (곱셈에 대한 항등원)
-> 6. 모든 $a,b \in F$와 모든 $x \in V$에 대하여 $(ab)x = a(bx)$이다. (스칼라 곱에 대한 결합법칙)
-> 7. 모든 $a \in F$와 모든 $x,y \in V$에 대하여 $a(x+y) = ax + ay$이다. (덧셈에 대한 스칼라 곱의 분배법칙 1)
-> 8. 모든 $a,b \in F$와 모든 $x,y \in V$에 대하여 $(a+b)x = ax + bx$이다. (덧셈에 대한 스칼라 곱의 분배법칙 2)
+> 1. 모든 $\mathbf{x},\mathbf{y} \in \mathbb{V}$에 대하여 $\mathbf{x} + \mathbf{y} = \mathbf{y} + \mathbf{x}$이다. (덧셈에 대한 교환법칙)
+> 2. 모든 $\mathbf{x},\mathbf{y},\mathbf{z} \in \mathbb{V}$에 대하여 $(\mathbf{x}+\mathbf{y})+\mathbf{z} = \mathbf{x}+(\mathbf{y}+\mathbf{z})$이다. (덧셈에 대한 결합법칙)
+> 3. 모든 $\mathbf{x} \in \mathbb{V}$에 대하여 $\mathbf{x} + \mathbf{0} = \mathbf{x}$인 $\mathbf{0} \in \mathbb{V}$가 존재한다. (영벡터, 덧셈에 대한 항등원)
+> 4. 각 $\mathbf{x} \in \mathbb{V}$마다 $\mathbf{x}+\mathbf{y}=\mathbf{0}$인 $\mathbf{y} \in \mathbb{V}$가 존재한다. (덧셈에 대한 역원)
+> 5. 각 $\mathbf{x} \in \mathbb{V}$에 대하여 $1\mathbf{x} = \mathbf{x}$이다. (곱셈에 대한 항등원)
+> 6. 모든 $a,b \in F$와 모든 $\mathbf{x} \in \mathbb{V}$에 대하여 $(ab)\mathbf{x} = a(b\mathbf{x})$이다. (스칼라배에 대한 결합법칙)
+> 7. 모든 $a \in F$와 모든 $\mathbf{x},\mathbf{y} \in \mathbb{V}$에 대하여 $a(\mathbf{x}+\mathbf{y}) = a\mathbf{x} + a\mathbf{y}$이다. (덧셈에 대한 스칼라배의 분배법칙 1)
+> 8. 모든 $a,b \in F$와 모든 $\mathbf{x},\mathbf{y} \in \mathbb{V}$에 대하여 $(a+b)\mathbf{x} = a\mathbf{x} + b\mathbf{x}$이다. (덧셈에 대한 스칼라배의 분배법칙 2)
 {: .prompt-info }
 
 이러한 선형대수학에서의 벡터의 정의는 앞서 언급한 [유클리드 벡터](#좁은-의미의-벡터-유클리드-벡터)까지 포괄하는 보다 넓은 범위의 정의이다. [유클리드 벡터](#좁은-의미의-벡터-유클리드-벡터)도 위의 8가지 성질을 만족함을 확인할 수 있다.
@@ -88,7 +88,7 @@ $$ (a_1, a_2, \cdots, a_n) \in \mathbb{R}^n \text{ or } \mathbb{C}^n $$
 
 ## 벡터의 기본 연산
 
-벡터의 기본 연산은 **합**과 **스칼라곱** 두 가지이다. 모든 벡터 연산은 이 두 가지 기본 연산의 조합으로 표현할 수 있다.
+벡터의 기본 연산은 **합**과 **스칼라배** 두 가지이다. 모든 벡터 연산은 이 두 가지 기본 연산의 조합으로 표현할 수 있다.
 
 ### 벡터의 합
 
@@ -96,9 +96,9 @@ $$ (a_1, a_2, \cdots, a_n) \in \mathbb{R}^n \text{ or } \mathbb{C}^n $$
 
 $$ (a_1, a_2, \cdots, a_n) + (b_1, b_2, \cdots, b_n) := (a_1+b_1, a_2+b_2, \cdots, a_n+b_n) $$
 
-### 벡터의 스칼라곱
+### 벡터의 스칼라배
 
-벡터는 크기를 확대하거나 축소할 수 있으며, 이를 벡터에 상수(스칼라)를 곱하는 스칼라 곱이라는 연산으로 나타낸다. 어떤 벡터에 상수배를 한 결과물은 각각의 성분에 상수배를 한 것과 같다.
+벡터는 크기를 확대하거나 축소할 수 있으며, 이를 벡터에 상수(스칼라)를 곱하는 스칼라배라는 연산으로 나타낸다. 어떤 벡터에 스칼라배를 한 결과물은 각각의 성분에 스칼라배를 한 것과 같다.
 
 $$ c(a_1, a_2, \cdots, a_n) := (ca_1, ca_2, \cdots, ca_n) $$
 
@@ -109,7 +109,7 @@ $$ c(a_1, a_2, \cdots, a_n) := (ca_1, ca_2, \cdots, ca_n) $$
 
 ## 벡터의 선형 결합
 
-미적분학이 수 $x$와 함수 $f(x)$로부터 출발하듯, 선형대수학은 벡터 $\mathbf{v}, \mathbf{w}, \dots$와 선형 결합 $c\mathbf{v} + d\mathbf{w} + \cdots$로부터 출발한다. 그리고 벡터들의 모든 선형 결합은 위의 두 기본 연산, [합](#벡터의-합)과 [스칼라곱](#벡터의-스칼라곱)의 조합으로 구성된다.
+미적분학이 수 $x$와 함수 $f(x)$로부터 출발하듯, 선형대수학은 벡터 $\mathbf{v}, \mathbf{w}, \dots$와 선형 결합 $c\mathbf{v} + d\mathbf{w} + \cdots$로부터 출발한다. 그리고 벡터들의 모든 선형 결합은 위의 두 기본 연산, [합](#벡터의-합)과 [스칼라배](#벡터의-스칼라배)의 조합으로 구성된다.
 
 > 유한 개의 벡터 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$과 스칼라 $a_1, a_2, \dots, a_n$에 대하여 다음을 만족하는 벡터 $\mathbf{v}$는 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$의 **선형 결합(linear combination)**이라 한다.
 > 
@@ -134,7 +134,7 @@ A = \Bigg[ \mathbf{v}_1 \quad \mathbf{v}_2 \quad \cdots \quad \mathbf{v}_n \Bigg
 1. **모든 가능한 선형 결합 $Ax = x_1\mathbf{v}_1 + x_2\mathbf{v}_2 + \cdots x_n\mathbf{v}_n$을 표현해 보라.** 무엇을 이루는가?
 2. 원하는 출력 벡터 $Ax = b$를 만들어 내는 **수 $x_1, x_2, \dots, x_n$을 찾아라.**
 
-두 번째 질문에 대한 답은 나중에 다시 알아볼 것이며, 일단 지금은 첫 번째 질문에 집중하자. 논의를 간단하게 하기 위해, $0$벡터가 아닌 2차원($m=2$) 벡터 2개($n=2$)의 경우를 예시로 살펴보자. 
+두 번째 질문에 대한 답은 나중에 다시 알아볼 것이며, 일단 지금은 첫 번째 질문에 집중하자. 논의를 간단하게 하기 위해, $\mathbf{0}$이 아닌 2차원($m=2$) 벡터 2개($n=2$)의 경우를 예시로 살펴보자. 
 
 ### 선형 결합 $c\mathbf{v} + d\mathbf{w}$
 
@@ -147,4 +147,14 @@ A = \Bigg[ \mathbf{v}_1 \quad \mathbf{v}_2 \quad \cdots \quad \mathbf{v}_n \Bigg
 > - 저작자: 위키미디어 유저 [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - 라이선스: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
 
-이처럼 벡터들의 선형 결합은 곧 벡터공간을 이루며, 이를 공간 **생성(span)**이라고 한다. 아직 벡터공간의 개념을 정확히 알아보지는 않았으나, 지금의 이 예시를 떠올리면 추후 벡터공간의 개념을 이해하는 데도 도움이 된다.
+이처럼 벡터들의 선형 결합은 곧 벡터공간을 이루며, 이를 공간 **생성(span)**이라고 한다.
+
+> **정의**  
+> 벡터공간 $\mathbb{V}$의 공집합이 아닌 부분집합 $S$에 대하여, $S$의 벡터를 사용하여 만든 모든 선형결합의 집합을 $S$의 **생성공간(span)**이라 하며 $\mathrm{span}(S)$라 표기한다. 단, $\mathrm{span}(\emptyset) = \\{0\\}$으로 정의한다.
+{: .prompt-info }
+
+> **정의**  
+> 벡터공간 $\mathbb{V}$의 부분집합 $S$에 대하여 $\mathrm{span}(S) = \mathbb{V}$이면 $S$가 $\mathbb{V}$를 생성한다(generate 또는 span)고 한다.
+{: .prompt-info }
+
+아직 부분공간, 기저와 같은 개념들은 알아보지 않았으나, 지금의 이 예시를 떠올리면 벡터공간의 개념을 이해하는 데 도움이 된다.

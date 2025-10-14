@@ -40,19 +40,19 @@ Die obige Definition ist diejenige, die in der Mechanik der Physik oder in der S
 In der Linearen Algebra definiert man Vektoren als eine abstraktere algebraische Struktur mit weiter gefasstem Bedeutungsumfang als die euklidischen Vektoren:
 
 > **Definition**  
-> Ein **Vektorraum** (auch: **linearer Raum**) $V$ über einem Körper $F$ ist eine Menge mit zwei Operationen, **Addition** und **Skalarmultiplikation**, die die folgenden 8 Bedingungen erfüllen. Elemente von $F$ heißen **Skalare**, Elemente von $V$ heißen **Vektoren**.
+> Ein **Vektorraum** (auch: **linearer Raum**) $\mathbb{V}$ über einem Körper $F$ ist eine Menge mit zwei Operationen, **Addition** und **Skalarmultiplikation**, die die folgenden 8 Bedingungen erfüllen. Elemente von $F$ heißen **Skalare**, Elemente von $\mathbb{V}$ heißen **Vektoren**.
 >
-> - **Addition (Summe)**: Jedem Paar $x, y \in V$ wird ein eindeutiges Element $x + y \in V$ zugeordnet. $x + y$ heißt die **Summe** von $x$ und $y$.
-> - **Skalarmultiplikation**: Jedem $a \in F$ und $x \in V$ wird ein eindeutiges Element $ax \in V$ zugeordnet. $ax$ heißt die **Skalarmultiplikation** von $a$ und $x$.
+> - **Addition (Summe)**: Jedem Paar $\mathbf{x}, \mathbf{y} \in \mathbb{V}$ wird ein eindeutiges Element $\mathbf{x} + \mathbf{y} \in \mathbb{V}$ zugeordnet. $\mathbf{x} + \mathbf{y}$ heißt die **Summe** von $\mathbf{x}$ und $\mathbf{y}$.
+> - **Skalarmultiplikation**: Jedem $a \in F$ und $\mathbf{x} \in \mathbb{V}$ wird ein eindeutiges Element $a\mathbf{x} \in \mathbb{V}$ zugeordnet. $a\mathbf{x}$ heißt das **Skalarvielfache** von $\mathbf{x}$.
 >
-> 1. Für alle $x,y \in V$ gilt $x + y = y + x$. (Kommutativgesetz der Addition)
-> 2. Für alle $x,y,z \in V$ gilt $(x+y)+z = x+(y+z)$. (Assoziativgesetz der Addition)
-> 3. Es existiert ein $0 \in V$ mit $x + 0 = x$ für alle $x \in V$. (**Nullvektor**, neutrales Element der Addition)
-> 4. Zu jedem $x \in V$ existiert ein $y \in V$ mit $x+y=0$. (additives inverses Element)
-> 5. Für alle $x \in V$ gilt $1x = x$. (neutrales Element der Multiplikation)
-> 6. Für alle $a,b \in F$ und alle $x \in V$ gilt $(ab)x = a(bx)$. (Assoziativität der Skalarmultiplikation)
-> 7. Für alle $a \in F$ und alle $x,y \in V$ gilt $a(x+y) = ax + ay$. (Distributivgesetz der Skalarmultiplikation über der Addition 1)
-> 8. Für alle $a,b \in F$ und alle $x \in V$ gilt $(a+b)x = ax + bx$. (Distributivgesetz der Skalarmultiplikation über der Addition 2)
+> 1. Für alle $\mathbf{x},\mathbf{y} \in \mathbb{V}$ gilt $\mathbf{x} + \mathbf{y} = \mathbf{y} + \mathbf{x}$. (Kommutativgesetz der Addition)
+> 2. Für alle $\mathbf{x},\mathbf{y},\mathbf{z} \in \mathbb{V}$ gilt $(\mathbf{x}+\mathbf{y})+\mathbf{z} = \mathbf{x}+(\mathbf{y}+\mathbf{z})$. (Assoziativgesetz der Addition)
+> 3. Es existiert ein $\mathbf{0} \in \mathbb{V}$ mit $\mathbf{x} + \mathbf{0} = \mathbf{x}$ für alle $\mathbf{x} \in \mathbb{V}$. (**Nullvektor**, neutrales Element der Addition)
+> 4. Zu jedem $\mathbf{x} \in \mathbb{V}$ existiert ein $\mathbf{y} \in \mathbb{V}$ mit $\mathbf{x}+\mathbf{y}=\mathbf{0}$. (additives inverses Element)
+> 5. Für alle $\mathbf{x} \in \mathbb{V}$ gilt $1\mathbf{x} = \mathbf{x}$. (neutrales Element der Multiplikation)
+> 6. Für alle $a,b \in F$ und alle $\mathbf{x} \in \mathbb{V}$ gilt $(ab)\mathbf{x} = a(b\mathbf{x})$. (Assoziativität der Skalarmultiplikation)
+> 7. Für alle $a \in F$ und alle $\mathbf{x},\mathbf{y} \in \mathbb{V}$ gilt $a(\mathbf{x}+\mathbf{y}) = a\mathbf{x} + a\mathbf{y}$. (Distributivgesetz der Skalarmultiplikation über der Addition 1)
+> 8. Für alle $a,b \in F$ und alle $\mathbf{x} \in \mathbb{V}$ gilt $(a+b)\mathbf{x} = a\mathbf{x} + b\mathbf{x}$. (Distributivgesetz der Skalarmultiplikation über der Addition 2)
 {: .prompt-info }
 
 Diese vektoralgebraische Definition umfasst einen größeren Bereich und schließt den zuvor erwähnten [euklidischen Vektor](#vektor-im-engen-sinn-euklidischer-vektor) mit ein. Man kann überprüfen, dass auch der [euklidische Vektor](#vektor-im-engen-sinn-euklidischer-vektor) die acht Eigenschaften erfüllt.
@@ -135,7 +135,7 @@ Zentral sind zwei Fragen:
 1. **Beschreibe alle möglichen linearen Kombinationen $Ax = x_1\mathbf{v}_1 + x_2\mathbf{v}_2 + \cdots + x_n\mathbf{v}_n$.** Welche Menge bilden sie?
 2. Finde **Zahlen $x_1, x_2, \dots, x_n$**, die einen gewünschten Ausgabeverktor $Ax = b$ ergeben.
 
-Die Antwort auf die zweite Frage betrachten wir später; zunächst konzentrieren wir uns auf die erste. Zur Vereinfachung nehmen wir als Beispiel zwei 2D-Vektoren ($m=2$, $n=2$), die beide nicht der Nullvektor sind.
+Die Antwort auf die zweite Frage betrachten wir später; zunächst konzentrieren wir uns auf die erste. Zur Vereinfachung nehmen wir als Beispiel zwei 2D-Vektoren ($m=2$, $n=2$), die beide nicht der Nullvektor $\mathbf{0}$ sind.
 
 ### Lineare Kombination $c\mathbf{v} + d\mathbf{w}$
 
@@ -148,4 +148,14 @@ Liegt ein zweiter Vektor $\mathbf{w}$ nicht auf dieser Geraden (d. h. $\mathbf{v
 > - Urheber: Wikimedia-Nutzer [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
 
-Lineare Kombinationen von Vektoren erzeugen somit einen Vektorraum; dies nennt man die **lineare Hülle (span)**. Auch ohne die Begriffe des Vektorraums bereits formal eingeführt zu haben, hilft dieses Beispiel, das Konzept später besser zu verstehen.
+Lineare Kombinationen von Vektoren erzeugen somit einen Vektorraum; dies nennt man die **lineare Hülle (span)**.
+
+> **Definition**  
+> Ist $S$ eine nichtleere Teilmenge des Vektorraums $\mathbb{V}$, so heißt die Menge aller aus Vektoren von $S$ gebildeten linearen Kombinationen die **lineare Hülle** von $S$ und wird mit $\mathrm{span}(S)$ bezeichnet. Dabei wird $\mathrm{span}(\emptyset) = \{0\}$ definiert.
+{: .prompt-info }
+
+> **Definition**  
+> Für eine Teilmenge $S$ des Vektorraums $\mathbb{V}$ gilt: Wenn $\mathrm{span}(S) = \mathbb{V}$, dann sagt man, dass $S$ $\mathbb{V}$ erzeugt (generate bzw. spannt auf).
+{: .prompt-info }
+
+Auch wenn wir Begriffe wie Unterraum und Basis noch nicht behandelt haben, hilft das obige Beispiel, den Begriff des Vektorraums zu verstehen.

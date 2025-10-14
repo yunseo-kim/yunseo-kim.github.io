@@ -40,19 +40,19 @@ image: /assets/img/math-and-physics-cropped.webp
 線形代数では、上のユークリッド・ベクトルの定義より広い意味を持つ、より抽象的な代数的構造として次のようにベクトルを定義する。
 
 > **定義**  
-> 体 $F$ 上の**ベクトル空間（vector space）**または**線形空間（linear space）** $V$ とは、次の 8 条件を満たす 2 つの演算、**和**と**スカラー乗法**を持つ集合である。体 $F$ の元を**スカラー（scalar）**、ベクトル空間 $V$ の元を**ベクトル（vector）**という。
+> 体 $F$ 上の**ベクトル空間（vector space）**または**線形空間（linear space）** $\mathbb{V}$ とは、次の 8 条件を満たす 2 つの演算、**和**と**スカラー乗法**を持つ集合である。体 $F$ の元を**スカラー（scalar）**、ベクトル空間 $\mathbb{V}$ の元を**ベクトル（vector）**という。
 >
-> - **和（sum）**: $V$ の 2 つの元 $x, y$ に対し、一意の元 $x + y \in V$ を対応させる演算。このとき $x + y$ を $x$ と $y$ の**和**という。
-> - **スカラー乗法（scalar multiplication）**: 体 $F$ の元 $a$ とベクトル空間 $V$ の元 $x$ ごとに一意の元 $ax \in V$ を対応させる演算。このとき $ax$ を $a$ と $x$ のスカラー**積（product）**という。
+> - **和（sum）**: $\mathbb{V}$ の 2 つの元 $\mathbf{x}, \mathbf{y}$ に対し、一意の元 $\mathbf{x} + \mathbf{y} \in \mathbb{V}$ を対応させる演算。このとき $\mathbf{x} + \mathbf{y}$ を $\mathbf{x}$ と $\mathbf{y}$ の**和**という。
+> - **スカラー乗法（scalar multiplication）**: 体 $F$ の元 $a$ とベクトル空間 $\mathbb{V}$ の元 $\mathbf{x}$ ごとに一意の元 $a\mathbf{x} \in \mathbb{V}$ を対応させる演算。このとき $a\mathbf{x}$ を $\mathbf{x}$ の**スカラー倍（scalar multiple）**という。
 >
-> 1. すべての $x,y \in V$ に対して $x + y = y + x$（加法の交換法則）
-> 2. すべての $x,y,z \in V$ に対して $(x+y)+z = x+(y+z)$（加法の結合法則）
-> 3. すべての $x \in V$ に対して $x + 0 = x$ となる $0 \in V$ が存在する（零ベクトル、加法に関する単位元）
-> 4. 各 $x \in V$ について、$x+y=0$ を満たす $y \in V$ が存在する（加法に関する逆元）
-> 5. 各 $x \in V$ に対して $1x = x$（乗法に関する単位元）
-> 6. すべての $a,b \in F$ とすべての $x \in V$ に対して $(ab)x = a(bx)$（スカラー乗法の結合法則）
-> 7. すべての $a \in F$ とすべての $x,y \in V$ に対して $a(x+y) = ax + ay$（加法に関するスカラー乗法の分配法則 1）
-> 8. すべての $a,b \in F$ とすべての $x,y \in V$ に対して $(a+b)x = ax + bx$（加法に関するスカラー乗法の分配法則 2）
+> 1. すべての $\mathbf{x},\mathbf{y} \in \mathbb{V}$ に対して $\mathbf{x} + \mathbf{y} = \mathbf{y} + \mathbf{x}$（加法の交換法則）
+> 2. すべての $\mathbf{x},\mathbf{y},\mathbf{z} \in \mathbb{V}$ に対して $(\mathbf{x}+\mathbf{y})+\mathbf{z} = \mathbf{x}+(\mathbf{y}+\mathbf{z})$（加法の結合法則）
+> 3. すべての $\mathbf{x} \in \mathbb{V}$ に対して $\mathbf{x} + \mathbf{0} = \mathbf{x}$ となる $\mathbf{0} \in \mathbb{V}$ が存在する（零ベクトル、加法に関する単位元）
+> 4. 各 $\mathbf{x} \in \mathbb{V}$ について、$\mathbf{x}+\mathbf{y}=\mathbf{0}$ を満たす $\mathbf{y} \in \mathbb{V}$ が存在する（加法に関する逆元）
+> 5. 各 $\mathbf{x} \in \mathbb{V}$ に対して $1\mathbf{x} = \mathbf{x}$（乗法に関する単位元）
+> 6. すべての $a,b \in F$ とすべての $\mathbf{x} \in \mathbb{V}$ に対して $(ab)\mathbf{x} = a(b\mathbf{x})$（スカラー乗法の結合法則）
+> 7. すべての $a \in F$ とすべての $\mathbf{x},\mathbf{y} \in \mathbb{V}$ に対して $a(\mathbf{x}+\mathbf{y}) = a\mathbf{x} + a\mathbf{y}$（加法に関するスカラー乗法の分配法則 1）
+> 8. すべての $a,b \in F$ とすべての $\mathbf{x},\mathbf{y} \in \mathbb{V}$ に対して $(a+b)\mathbf{x} = a\mathbf{x} + b\mathbf{x}$（加法に関するスカラー乗法の分配法則 2）
 {: .prompt-info }
 
 この線形代数におけるベクトルの定義は、前述の[ユークリッド・ベクトル](#狭い-意味-の-ベクトル-ユークリッド-ベクトル)まで包含する、より広い範囲の定義である。[ユークリッド・ベクトル](#狭い-意味-の-ベクトル-ユークリッド-ベクトル)も上の 8 つの性質を満たすことを確認できる。
@@ -134,7 +134,7 @@ A = \Bigg[ \mathbf{v}_1 \quad \mathbf{v}_2 \quad \cdots \quad \mathbf{v}_n \Bigg
 1. **あらゆる可能な線形結合 $Ax = x_1\mathbf{v}_1 + x_2\mathbf{v}_2 + \cdots x_n\mathbf{v}_n$ を表してみよ。** それは何を成すか？
 2. 望む出力ベクトル $Ax = b$ を作り出す**数 $x_1, x_2, \dots, x_n$ を求めよ。**
 
-二つ目の問いへの答えは後で改めて扱うとして、いったん今は一つ目の問いに集中しよう。議論を簡単にするため、ゼロベクトルでない 2 次元（$m=2$）のベクトル 2 本（$n=2$）の場合を例に見てみる。 
+二つ目の問いへの答えは後で改めて扱うとして、いったん今は一つ目の問いに集中しよう。議論を簡単にするため、$\mathbf{0}$ でない 2 次元（$m=2$）のベクトル 2 本（$n=2$）の場合を例に見てみる。 
 
 ### 線形結合 $c\mathbf{v} + d\mathbf{w}$
 
@@ -147,4 +147,14 @@ A = \Bigg[ \mathbf{v}_1 \quad \mathbf{v}_2 \quad \cdots \quad \mathbf{v}_n \Bigg
 > - 作者: ウィキメディアユーザー [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - ライセンス: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
 
-このようにベクトルの線形結合はすなわちベクトル空間を成し、これを空間の**生成（span）**という。まだベクトル空間の概念を厳密に見てはいないが、今のこの例を思い出せば、後にベクトル空間の概念を理解する際にも助けになる。
+このようにベクトルの線形結合はすなわちベクトル空間を成し、これを空間の**生成（span）**という。
+
+> **定義**  
+> ベクトル空間 $\mathbb{V}$ の空でない部分集合 $S$ に対して、$S$ のベクトルを用いて作られるすべての線形結合の集合を $S$ の**生成空間（span）**といい、$\mathrm{span}(S)$ と表記する。ただし、$\mathrm{span}(\emptyset) = \{0\}$ と定義する。
+{: .prompt-info }
+
+> **定義**  
+> ベクトル空間 $\mathbb{V}$ の部分集合 $S$ に対して $\mathrm{span}(S) = \mathbb{V}$ なら、$S$ が $\mathbb{V}$ を生成する（generate または span）という。
+{: .prompt-info }
+
+まだ部分空間や基底といった概念は見ていないが、今のこの例を思い出せばベクトル空間の概念を理解する助けになる。

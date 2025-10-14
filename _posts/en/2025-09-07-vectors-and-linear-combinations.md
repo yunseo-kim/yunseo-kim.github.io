@@ -40,19 +40,19 @@ The definition above is the one used in mechanics in physics and in high-school-
 In linear algebra, vectors are defined more broadly than Euclidean vectors, as an abstract algebraic structure:
 
 > **Definition**  
-> A **vector space** (or **linear space**) $V$ over a field $F$ is a set equipped with two operations, **sum** and **scalar multiplication**, satisfying the following eight axioms. Elements of the field $F$ are called **scalars**, and elements of the vector space $V$ are called **vectors**.
+> A **vector space** (or **linear space**) $\mathbb{V}$ over a field $F$ is a set equipped with two operations, **sum** and **scalar multiplication**, satisfying the following eight axioms. Elements of the field $F$ are called **scalars**, and elements of the vector space $\mathbb{V}$ are called **vectors**.
 >
-> - **Sum**: For any $x, y \in V$, there exists a unique element $x + y \in V$. We call $x + y$ the **sum** of $x$ and $y$.
-> - **Scalar multiplication**: For any $a \in F$ and $x \in V$, there exists a unique element $ax \in V$. In this case, $ax$ is called the scalar **product** of $a$ and $x$.
+> - **Sum**: For any $\mathbf{x}, \mathbf{y} \in \mathbb{V}$, there exists a unique element $\mathbf{x} + \mathbf{y} \in \mathbb{V}$. We call $\mathbf{x} + \mathbf{y}$ the **sum** of $\mathbf{x}$ and $\mathbf{y}$.
+> - **Scalar multiplication**: For any $a \in F$ and $\mathbf{x} \in \mathbb{V}$, there exists a unique element $a\mathbf{x} \in \mathbb{V}$. In this case, $a\mathbf{x}$ is called the **scalar multiple** of $\mathbf{x}$.
 >
-> 1. For all $x,y \in V$, $x + y = y + x$. (commutativity of addition)
-> 2. For all $x,y,z \in V$, $(x+y)+z = x+(y+z)$. (associativity of addition)
-> 3. There exists $0 \in V$ such that $x + 0 = x$ for all $x \in V$. (zero vector, additive identity)
-> 4. For each $x \in V$, there exists $y \in V$ such that $x + y = 0$. (additive inverse)
-> 5. For each $x \in V$, $1x = x$. (multiplicative identity)
-> 6. For all $a,b \in F$ and $x \in V$, $(ab)x = a(bx)$. (associativity of scalar multiplication)
-> 7. For all $a \in F$ and $x,y \in V$, $a(x+y) = ax + ay$. (distributivity of scalar multiplication over vector addition)
-> 8. For all $a,b \in F$ and $x \in V$, $(a+b)x = ax + bx$. (distributivity of scalar multiplication over field addition)
+> 1. For all $\mathbf{x},\mathbf{y} \in \mathbb{V}$, $\mathbf{x} + \mathbf{y} = \mathbf{y} + \mathbf{x}$. (commutativity of addition)
+> 2. For all $\mathbf{x},\mathbf{y},\mathbf{z} \in \mathbb{V}$, $(\mathbf{x}+\mathbf{y})+\mathbf{z} = \mathbf{x}+(\mathbf{y}+\mathbf{z})$. (associativity of addition)
+> 3. There exists $\mathbf{0} \in \mathbb{V}$ such that $\mathbf{x} + \mathbf{0} = \mathbf{x}$ for all $\mathbf{x} \in \mathbb{V}$. (zero vector, additive identity)
+> 4. For each $\mathbf{x} \in \mathbb{V}$, there exists $\mathbf{y} \in \mathbb{V}$ such that $\mathbf{x} + \mathbf{y} = \mathbf{0}$. (additive inverse)
+> 5. For each $\mathbf{x} \in \mathbb{V}$, $1\mathbf{x} = \mathbf{x}$. (multiplicative identity)
+> 6. For all $a,b \in F$ and $\mathbf{x} \in \mathbb{V}$, $(ab)\mathbf{x} = a(b\mathbf{x})$. (associativity of scalar multiplication)
+> 7. For all $a \in F$ and $\mathbf{x},\mathbf{y} \in \mathbb{V}$, $a(\mathbf{x}+\mathbf{y}) = a\mathbf{x} + a\mathbf{y}$. (distributivity of scalar multiplication over vector addition)
+> 8. For all $a,b \in F$ and $\mathbf{x} \in \mathbb{V}$, $(a+b)\mathbf{x} = a\mathbf{x} + b\mathbf{x}$. (distributivity of scalar multiplication over field addition)
 {: .prompt-info }
 
 This definition of a vector in linear algebra encompasses a broader class than the previously mentioned [Euclidean vector](#vector-in-the-narrow-sense-euclidean-vector). You can verify that [Euclidean vectors](#vector-in-the-narrow-sense-euclidean-vector) satisfy these eight properties.
@@ -148,4 +148,14 @@ If the given second vector $\mathbf{w}$ is not on this line (i.e., $\mathbf{v}$ 
 > - Author: Wikimedia user [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
 
-In this way, linear combinations of vectors form a vector space, a process called **spanning**. Although we have not yet defined vector spaces rigorously in this post, recalling this example will help you understand the concept of a vector space later on.
+In this way, linear combinations of vectors form a vector space, a process called **spanning**.
+
+> **Definition**  
+> For a nonempty subset $S$ of a vector space $\mathbb{V}$, the set of all linear combinations formed from vectors in $S$ is called the **span** of $S$ and is denoted by $\mathrm{span}(S)$. By definition, $\mathrm{span}(\emptyset) = \\{0\\}$.
+{: .prompt-info }
+
+> **Definition**  
+> For a subset $S$ of a vector space $\mathbb{V}$, if $\mathrm{span}(S) = \mathbb{V}$, then $S$ is said to generate (or span) $\mathbb{V}$.
+{: .prompt-info }
+
+Although we have not yet introduced concepts such as subspaces and bases, recalling this example will help you understand the concept of a vector space.
