@@ -54,19 +54,19 @@ jobs:
       - name: Setup IndexNow
         # Generate files dynamically to prevent them from being leaked in public repositories.
         # This example will put the file in the root directory of the site.You may change the location by yourself.
-        run: echo ${{ secrets.INDEXNOW_KEY }} > ./_site/${{ secrets.INDEXNOW_KEY }}.txt
+        run: echo ${{ secrets.INDEXNOW_KEY }} > _site/${{ secrets.INDEXNOW_KEY }}.txt
       
       - name: Setup Naver Site Verification
         run: |
-          echo naver-site-verification: ${{ secrets.NAVER_SITE_VERIFICATION }} > ./_site/${{ secrets.NAVER_SITE_VERIFICATION }}
+          echo naver-site-verification: ${{ secrets.NAVER_SITE_VERIFICATION }} > _site/${{ secrets.NAVER_SITE_VERIFICATION }}
       
       - name: Setup Ads.txt
         run: |
-          echo google.com, pub-8691553075583022, DIRECT, f08c47fec0942fa0 > ./_site/ads.txt
+          echo google.com, pub-8691553075583022, DIRECT, f08c47fec0942fa0 > _site/ads.txt
       
       - name: Create CNAME file
         run: |
-          echo www.yunseo.kim > ./_site/CNAME
+          echo www.yunseo.kim > _site/CNAME
 
       - name: Test site
         run: |
