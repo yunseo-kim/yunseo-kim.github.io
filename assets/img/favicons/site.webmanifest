@@ -1,6 +1,13 @@
+---
+Layout: compress
+---
+
+{% assign favicon_path = "/assets/img/favicons" | relative_url %}
+
 {
-  "name": "Yunseo Kim's Study Notes",
+  "name": "{{ site.title }}",
   "short_name": "Y.K.'s Study Notes",
+  "description": "{{ site.description }}",
   "icons": [
     {
       "src": "/assets/img/favicons/web-app-manifest-192x192.png",
@@ -15,6 +22,7 @@
       "purpose": "maskable"
     }
   ],
+  "start_url": "{{ '/index.html' | relative_url }}",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "display": "standalone"
