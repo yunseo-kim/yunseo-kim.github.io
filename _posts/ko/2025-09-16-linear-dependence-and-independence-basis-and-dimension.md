@@ -28,7 +28,7 @@ $$ a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + a_3\mathbf{u}_3 + a_4\mathbf{u}_4 = \math
 이를 일반화하여, 다음과 같이 **선형종속**과 **선형독립**을 정의한다.
 
 > **정의**  
-> 벡터공간 $\mathbb{V}$의 부분집합 $S$에 대하여 $a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$을 만족하는 유한개의 서로 다른 벡터 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n \in S$와 적어도 하나가 0이 아닌 스칼라 $a_1, a_2, \dots, a_n$이 존재하면 집합 $S$ 및 그 벡터들은 **선형종속(linearly dependent)**이라 한다. 그렇지 않은 경우는 **선형독립(linearly independent)**이라 한다.
+> 벡터공간 $\mathbb{V}$의 부분집합 $S$에 대하여 $a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$을 만족하는 유한개의 서로 다른 벡터 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n \in S$와 적어도 하나가 $0$이 아닌 스칼라 $a_1, a_2, \dots, a_n$이 존재하면 집합 $S$ 및 그 벡터들은 **선형종속(linearly dependent)**이라 한다. 그렇지 않은 경우는 **선형독립(linearly independent)**이라 한다.
 {: .prompt-info }
 
 임의의 벡터 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$에 대하여 $a_1 = a_2 = \cdots = a_n = 0$이면 $a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$이며, 이를 **영벡터의 자명한 표현(trivial representation of $\mathbf{0}$)**이라 한다.
@@ -85,13 +85,13 @@ $$ a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + a_3\mathbf{u}_3 + a_4\mathbf{u}_4 = \math
 >
 {: .prompt-info }
 
-**정리 3**에 따르면, 서로 다른 $n$개의 벡터 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$가 벡터공간 $\mathbb{V}$의 기저를 형성할 경우 해당 벡터공간 안에서는 벡터 $\mathbf{v}$가 주어지면 그에 대응하는 스칼라 $n$순서쌍 $(a_1, a_2, \dots, a_n)$이 결정되고, 반대로 스칼라 $n$순서쌍이 주어지면 그에 대응하는 벡터 $\mathbf{v}$를 얻을 수 있다. 나중에 **가역성**과 **동형사상**에 대해 공부할 떄 다시 정리하겠지만, 이 경우 벡터공간 $\mathbb{V}$와 $F^n$은 <u>본질적으로 같다</u>.
+**정리 3**에 따르면, 서로 다른 $n$개의 벡터 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$가 벡터공간 $\mathbb{V}$의 기저를 형성할 경우 해당 벡터공간 안에서는 벡터 $\mathbf{v}$가 주어지면 그에 대응하는 스칼라 $n$순서쌍 $(a_1, a_2, \dots, a_n)$이 결정되고, 반대로 스칼라 $n$순서쌍이 주어지면 그에 대응하는 벡터 $\mathbf{v}$를 얻을 수 있다. 나중에 **가역성**과 **동형사상**에 대해 공부할 때 다시 정리하겠지만, 이 경우 벡터공간 $\mathbb{V}$와 $F^n$은 <u>본질적으로 같다</u>.
 
 > **정리 4**  
 > 유한집합 $S$에 대해 $\mathrm{span}(S) = \mathbb{V}$이면, $S$의 부분집합 중 $\mathbb{V}$의 기저가 존재한다. 즉, 이 경우 $\mathbb{V}$의 기저는 유한집합이다.
 {: .prompt-info }
 
-> 벡터공간의 상당수가 **정리 4**에 해당하지만, 반드시 그런 것은 아니다. <u>기저는 유한집합이 아닐 수도 있다</u>.
+> 벡터공간의 상당수가 **정리 4**의 적용 대상에 해당하지만, 반드시 그런 것은 아니다. <u>기저는 유한집합이 아닐 수도 있다</u>.
 {: .prompt-tip }
 
 ### 차원

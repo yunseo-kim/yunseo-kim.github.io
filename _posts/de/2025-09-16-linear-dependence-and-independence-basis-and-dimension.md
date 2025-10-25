@@ -91,7 +91,7 @@ Nach **Satz 3** gilt: Bilden $n$ verschiedene Vektoren $\mathbf{u}_1, \mathbf{u}
 > Sei $S$ eine endliche Menge mit $\mathrm{span}(S) = \mathbb{V}$. Dann enthält $S$ eine Teilmenge, die eine Basis von $\mathbb{V}$ ist. Insbesondere hat $\mathbb{V}$ in diesem Fall eine endliche Basis.
 {: .prompt-info }
 
-> Viele Vektorräume erfüllen **Satz 4**, aber nicht alle. <u>Eine Basis kann auch unendlich sein</u>.
+> Viele Vektorräume fallen in den Anwendungsbereich von **Satz 4**, aber nicht zwingend alle. <u>Eine Basis kann auch unendlich sein</u>.
 {: .prompt-tip }
 
 ### Dimension

@@ -26,7 +26,7 @@ $$ a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + a_3\mathbf{u}_3 + a_4\mathbf{u}_4 = \math
 推而廣之，定義如下的**線性相依**與**線性獨立**。
 
 > **定義**  
-> 對向量空間 $\mathbb{V}$ 的子集 $S$，若存在有限多個彼此不同的向量 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n \in S$ 與至少一個不為 0 的純量 $a_1, a_2, \dots, a_n$，使 $a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$，則稱集合 $S$ 與其中向量**線性相依（linearly dependent）**。否則稱為**線性獨立（linearly independent）**。
+> 對向量空間 $\mathbb{V}$ 的子集 $S$，若存在有限多個彼此不同的向量 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n \in S$ 與至少一個不為 $0$ 的純量 $a_1, a_2, \dots, a_n$，使 $a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$，則稱集合 $S$ 與其中向量**線性相依（linearly dependent）**。否則稱為**線性獨立（linearly independent）**。
 {: .prompt-info }
 
 對任意向量 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$，當 $a_1 = a_2 = \cdots = a_n = 0$ 時，必有 $a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$。此稱為**零向量的平凡表示（trivial representation of $\mathbf{0}$）**。
@@ -89,8 +89,7 @@ $$ a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + a_3\mathbf{u}_3 + a_4\mathbf{u}_4 = \math
 > 若有限集合 $S$ 滿足 $\mathrm{span}(S) = \mathbb{V}$，則 $S$ 的某個子集是 $\mathbb{V}$ 的基底。亦即，此時 $\mathbb{V}$ 的基底為有限集。
 {: .prompt-info }
 
-> 許多向量空間符合**定理 4**，但未必一概如此。<u>基底也可能不是有限集</u>。
-{: .prompt-tip }
+> 許多向量空間屬於**定理 4**的適用對象，但未必一概如此。<u>基底也可能不是有限集</u>。{: .prompt-tip }
 
 ### 維度
 

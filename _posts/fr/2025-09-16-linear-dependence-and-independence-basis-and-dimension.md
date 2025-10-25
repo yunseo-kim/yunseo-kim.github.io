@@ -91,7 +91,7 @@ D’après le **Théorème 3**, lorsque $\mathbf{u}_1, \mathbf{u}_2, \dots, \mat
 > Si $S$ est un ensemble fini tel que $\mathrm{span}(S) = \mathbb{V}$, alors $S$ possède un sous-ensemble qui est une base de $\mathbb{V}$. En particulier, $\mathbb{V}$ admet une base finie dans ce cas.
 {: .prompt-info }
 
-> Un grand nombre d’espaces vectoriels satisfont le **Théorème 4**, mais pas tous. <u>Une base peut être infinie</u>.
+> Un grand nombre d’espaces vectoriels entrent dans le champ d’application du **Théorème 4**, mais pas tous. <u>Une base peut être infinie</u>.
 {: .prompt-tip }
 
 ### Dimension

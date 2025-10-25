@@ -28,7 +28,7 @@ $$ a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + a_3\mathbf{u}_3 + a_4\mathbf{u}_4 = \math
 これを一般化して、次のように**線形従属**と**線形独立**を定義する。
 
 > **定義**  
-> ベクトル空間 $\mathbb{V}$ の部分集合 $S$ について、$a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$ を満たす有限個の互いに異なるベクトル $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n \in S$ と、少なくとも 1 つが 0 でないスカラー $a_1, a_2, \dots, a_n$ が存在すれば、集合 $S$ およびそのベクトルは**線形従属（linearly dependent）**であるという。そうでない場合は**線形独立（linearly independent）**という。
+> ベクトル空間 $\mathbb{V}$ の部分集合 $S$ について、$a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$ を満たす有限個の互いに異なるベクトル $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n \in S$ と、少なくとも 1 つが $0$ でないスカラー $a_1, a_2, \dots, a_n$ が存在すれば、集合 $S$ およびそのベクトルは**線形従属（linearly dependent）**であるという。そうでない場合は**線形独立（linearly independent）**という。
 {: .prompt-info }
 
 任意のベクトル $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$ に対し $a_1 = a_2 = \cdots = a_n = 0$ なら $a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$ であり、これを**零ベクトルの自明な表現（trivial representation of $\mathbf{0}$）**という。
@@ -91,8 +91,7 @@ $$ a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + a_3\mathbf{u}_3 + a_4\mathbf{u}_4 = \math
 > 有限集合 $S$ について $\mathrm{span}(S) = \mathbb{V}$ なら、$S$ の部分集合の中に $\mathbb{V}$ の基底が存在する。すなわち、この場合 $\mathbb{V}$ の基底は有限集合である。
 {: .prompt-info }
 
-> 多くのベクトル空間が**定理 4**に当てはまるが、必ずしもそうとは限らない。<u>基底は有限集合でない場合もある</u>。
-{: .prompt-tip }
+> 多くのベクトル空間が**定理 4**の適用対象に該当するが、必ずしもそうとは限らない。<u>基底は有限集合でない場合もある</u>。{: .prompt-tip }
 
 ### 次元
 

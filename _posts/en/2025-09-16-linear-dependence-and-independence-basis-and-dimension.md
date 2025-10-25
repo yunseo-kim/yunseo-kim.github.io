@@ -28,7 +28,7 @@ If some vector in $S$ is a linear combination of the others, then there exists a
 Generalizing this, we define **linear dependence** and **linear independence** as follows.
 
 > **Definition**  
-> For a subset $S$ of a vector space $\mathbb{V}$, if there exist finitely many distinct vectors $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n \in S$ and scalars $a_1, a_2, \dots, a_n$, not all zero, such that $a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$, then the set $S$ (and those vectors) is called **linearly dependent**. Otherwise, it is called **linearly independent**.
+> For a subset $S$ of a vector space $\mathbb{V}$, if there exist finitely many distinct vectors $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n \in S$ and scalars $a_1, a_2, \dots, a_n$, not all $0$, such that $a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$, then the set $S$ (and those vectors) is called **linearly dependent**. Otherwise, it is called **linearly independent**.
 {: .prompt-info }
 
 For any vectors $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$, if $a_1 = a_2 = \cdots = a_n = 0$ then $a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n = \mathbf{0}$; this is called the **trivial representation of the zero vector**.
@@ -91,8 +91,7 @@ By **Theorem 3**, if the distinct vectors $\mathbf{u}_1, \mathbf{u}_2, \dots, \m
 > If $S$ is a finite set with $\mathrm{span}(S) = \mathbb{V}$, then some subset of $S$ is a basis of $\mathbb{V}$. In particular, in this case every basis of $\mathbb{V}$ is finite.
 {: .prompt-info }
 
-> Many vector spaces satisfy **Theorem 4**, but not all do. <u>A basis need not be finite</u>.
-{: .prompt-tip }
+> Many vector spaces fall under the scope of **Theorem 4**, but not all do. <u>A basis need not be finite</u>.{: .prompt-tip }
 
 ### Dimension
 

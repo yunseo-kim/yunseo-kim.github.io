@@ -91,7 +91,7 @@ Pelo **Teorema 3**, quando vetores distintos $\mathbf{u}_1, \mathbf{u}_2, \dots,
 > Se $S$ é um conjunto finito tal que $\mathrm{span}(S) = \mathbb{V}$, então algum subconjunto de $S$ é uma base de $\mathbb{V}$. Portanto, nesse caso, $\mathbb{V}$ admite uma base finita.
 {: .prompt-info }
 
-> Muitos espaços vetoriais satisfazem o **Teorema 4**, mas não todos. <u>Uma base pode ser infinita</u>.
+> Muitos espaços vetoriais se enquadram no escopo de aplicação do **Teorema 4**, mas nem todos. <u>Uma base pode ser infinita</u>.
 {: .prompt-tip }
 
 ### Dimensão
