@@ -1,6 +1,6 @@
 ---
 title: "벡터와 선형결합"
-description: "벡터란 무엇인지와 기본 연산(상수배, 덧셈)을 알아보고, 이를 바탕으로 벡터의 선형 결합을 이해한다."
+description: "벡터란 무엇인지와 기본 연산(상수배, 덧셈)을 알아보고, 이를 바탕으로 벡터의 선형 결합과 생성공간의 개념을 이해한다."
 categories: [Mathematics, Linear Algebra]
 tags: [Vector, Vector Operations, Linear Combinations]
 math: true
@@ -20,6 +20,10 @@ image: /assets/img/math-and-physics-cropped.webp
 > - **벡터의 선형 결합**
 >   - 유한 개의 벡터 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$과 스칼라 $a_1, a_2, \dots, a_n$에 대하여, $\mathbf{v} = a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n$인 벡터 $\mathbf{v}$를 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$의 **선형 결합(linear combination)**이라고 함
 >   - 이때 $a_1, a_2, \dots, a_n$을 이 선형 결합의 **계수(coefficient)**라고 함
+> - **생성공간**
+>   - 벡터공간 $\mathbb{V}$의 공집합이 아닌 부분집합 $S$에 대하여, $S$의 벡터를 사용하여 만든 모든 선형결합의 집합 $\mathrm{span}(S)$
+>   - $\mathrm{span}(\emptyset) = \\{0\\}$으로 정의
+>   - 벡터공간 $\mathbb{V}$의 부분집합 $S$에 대하여 $\mathrm{span}(S) = \mathbb{V}$이면 $S$가 $\mathbb{V}$를 생성한다(generate 또는 span)고 함
 {: .prompt-info }
 
 ## Prerequisites
@@ -146,6 +150,8 @@ A = \Bigg[ \mathbf{v}_1 \quad \mathbf{v}_2 \quad \cdots \quad \mathbf{v}_n \Bigg
 > *이미지 출처*
 > - 저작자: 위키미디어 유저 [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - 라이선스: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+
+### 생성
 
 이처럼 벡터들의 선형 결합은 곧 벡터공간을 이루며, 이를 공간 **생성(span)**이라고 한다.
 

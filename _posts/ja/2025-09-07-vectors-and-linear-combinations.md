@@ -1,6 +1,6 @@
 ---
 title: "ベクトルと線形結合"
-description: "ベクトルの定義と表現（矢印・成分表示）、基本演算（和・スカラー乗法）を整理し、線形結合と係数の意味をベクトル空間の観点から解説します."
+description: "ベクトルの定義と表現（矢印・成分表示）、基本演算（和・スカラー乗法）を整理し、線形結合と生成空間の概念をベクトル空間の観点から解説します."
 categories: [Mathematics, Linear Algebra]
 tags: [Vector, Vector Operations, Linear Combinations]
 math: true
@@ -21,6 +21,10 @@ image: /assets/img/math-and-physics-cropped.webp
 >   - 有限個のベクトル $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$ とスカラー $a_1, a_2, \dots, a_n$ に対して、$\mathbf{v} = a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n$ となるベクトル $\mathbf{v}$ を $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$ の**線形結合（linear combination）**という
 >   - このとき $a_1, a_2, \dots, a_n$ をこの線形結合の**係数（coefficient）**という
 {: .prompt-info }
+> - **生成空間（span）**
+>   - ベクトル空間 $\mathbb{V}$ の空でない部分集合 $S$ に対して、$S$ のベクトルを用いて作られるすべての線形結合の集合 $\mathrm{span}(S)$
+>   - $\mathrm{span}(\emptyset) = \{0\}$ と定義
+>   - ベクトル空間 $\mathbb{V}$ の部分集合 $S$ に対して $\mathrm{span}(S) = \mathbb{V}$ なら、$S$ が $\mathbb{V}$ を生成する（generate または span）という
 
 ## Prerequisites
 - 座標平面／座標空間
@@ -146,6 +150,8 @@ A = \Bigg[ \mathbf{v}_1 \quad \mathbf{v}_2 \quad \cdots \quad \mathbf{v}_n \Bigg
 > *画像の出典*
 > - 作者: ウィキメディアユーザー [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - ライセンス: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+
+### 生成
 
 このようにベクトルの線形結合はすなわちベクトル空間を成し、これを空間の**生成（span）**という。
 

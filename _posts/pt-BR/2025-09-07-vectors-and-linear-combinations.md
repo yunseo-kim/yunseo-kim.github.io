@@ -1,6 +1,6 @@
 ---
 title: "Vetores e combinações lineares"
-description: "O que é um vetor, as operações básicas (soma e multiplicação por escalar) e como entender combinações lineares. Introdução prática à Álgebra Linear."
+description: "O que é um vetor, as operações básicas (soma e multiplicação por escalar) e, com isso, entender combinações lineares de vetores e o conceito de espaço gerado. Introdução prática à Álgebra Linear."
 categories: [Mathematics, Linear Algebra]
 tags: [Vector, Vector Operations, Linear Combinations]
 math: true
@@ -20,6 +20,10 @@ image: /assets/img/math-and-physics-cropped.webp
 > - **Combinação linear de vetores**
 >   - Dado um número finito de vetores $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$ e escalares $a_1, a_2, \dots, a_n$, um vetor $\mathbf{v}$ da forma $\mathbf{v} = a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n$ é chamado de **combinação linear** de $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$
 >   - Nesse caso, $a_1, a_2, \dots, a_n$ são os **coeficientes** dessa combinação linear
+> - **Espaço gerado**
+>   - Para um subconjunto não vazio $S$ de um espaço vetorial $\mathbb{V}$, o conjunto de todas as combinações lineares feitas com vetores de $S$, denotado por $\mathrm{span}(S)$
+>   - Define-se $\mathrm{span}(\emptyset) = \{0\}$
+>   - Para um subconjunto $S$ de $\mathbb{V}$, se $\mathrm{span}(S) = \mathbb{V}$, então diz-se que $S$ gera $\mathbb{V}$ (generate, span)
 {: .prompt-info }
 
 ## Pré-requisitos
@@ -146,6 +150,8 @@ Se um segundo vetor $\mathbf{w}$ não está sobre essa reta (isto é, se $\mathb
 > *Fonte da imagem*
 > - Autor: usuário da Wikimedia [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - Licença: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+
+### Geração
 
 Assim, as combinações lineares de vetores formam um espaço vetorial; a isso chamamos de **geração** do espaço (span).
 

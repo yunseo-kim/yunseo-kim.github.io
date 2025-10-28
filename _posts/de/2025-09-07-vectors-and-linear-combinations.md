@@ -1,6 +1,6 @@
 ---
 title: "Vektoren und lineare Kombinationen"
-description: "Einführung in Vektoren: Definition, Darstellung, Grundoperationen (Addition, Skalarmultiplikation) und das Konzept der linearen Kombination im Vektorraum."
+description: "Einführung in Vektoren: Definition, Darstellung, Grundoperationen (Addition, Skalarmultiplikation) und das Konzept der linearen Kombination und der linearen Hülle im Vektorraum."
 categories: [Mathematics, Linear Algebra]
 tags: [Vector, Vector Operations, Linear Combinations]
 math: true
@@ -20,6 +20,10 @@ image: /assets/img/math-and-physics-cropped.webp
 > - **Lineare Kombination von Vektoren**
 >   - Für endlich viele Vektoren $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$ und Skalare $a_1, a_2, \dots, a_n$ heißt ein Vektor $\mathbf{v}$ mit $\mathbf{v} = a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n$ eine **lineare Kombination** von $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$.
 >   - Dabei heißen $a_1, a_2, \dots, a_n$ die **Koeffizienten** der linearen Kombination.
+> - **Lineare Hülle**
+>   - Für eine nichtleere Teilmenge $S$ des Vektorraums $\mathbb{V}$ ist $\mathrm{span}(S)$ die Menge aller unter Verwendung der Vektoren aus $S$ gebildeten linearen Kombinationen.
+>   - Es gilt $\mathrm{span}(\emptyset) = \{0\}$.
+>   - Für eine Teilmenge $S$ des Vektorraums $\mathbb{V}$ gilt: Wenn $\mathrm{span}(S) = \mathbb{V}$, dann erzeugt $S$ $\mathbb{V}$ (generate bzw. spannt auf).
 {: .prompt-info }
 
 ## Prerequisites
@@ -147,6 +151,8 @@ Liegt ein zweiter Vektor $\mathbf{w}$ nicht auf dieser Geraden (d. h. $\mathbf{v
 > *Bildquelle*
 > - Urheber: Wikimedia-Nutzer [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+
+### Erzeugung
 
 Lineare Kombinationen von Vektoren erzeugen somit einen Vektorraum; dies nennt man die **lineare Hülle (span)**.
 

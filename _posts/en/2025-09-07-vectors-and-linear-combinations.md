@@ -20,6 +20,10 @@ image: /assets/img/math-and-physics-cropped.webp
 > - **Linear combination of vectors**
 >   - For finitely many vectors $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$ and scalars $a_1, a_2, \dots, a_n$, a vector $\mathbf{v}$ satisfying $\mathbf{v} = a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n$ is called a **linear combination** of $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$.
 >   - The numbers $a_1, a_2, \dots, a_n$ are called the **coefficients** of this linear combination.
+> - **Span**
+>   - For a nonempty subset $S$ of a vector space $\mathbb{V}$, the set of all linear combinations formed from vectors in $S$, denoted $\mathrm{span}(S)$.
+>   - By definition, $\mathrm{span}(\emptyset) = \\{0\\}$.
+>   - For a subset $S$ of a vector space $\mathbb{V}$, if $\mathrm{span}(S) = \mathbb{V}$, then $S$ is said to generate (or span) $\mathbb{V}$.
 {: .prompt-info }
 
 ## Prerequisites
@@ -147,6 +151,8 @@ If the given second vector $\mathbf{w}$ is not on this line (i.e., $\mathbf{v}$ 
 > *Image credits*
 > - Author: Wikimedia user [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+
+### Span
 
 In this way, linear combinations of vectors form a vector space, a process called **spanning**.
 

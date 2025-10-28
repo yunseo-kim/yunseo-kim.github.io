@@ -1,6 +1,6 @@
 ---
 title: "Vectores y combinaciones lineales"
-description: "Qué es un vector, cómo se representa y sus operaciones básicas (suma y multiplicación por un escalar); con ello entendemos la combinación lineal en álgebra lineal."
+description: "Qué es un vector, cómo se representa y sus operaciones básicas (suma y multiplicación por un escalar); con ello entendemos la combinación lineal y el concepto de espacio generado (span) en álgebra lineal."
 categories: [Mathematics, Linear Algebra]
 tags: [Vector, Vector Operations, Linear Combinations]
 math: true
@@ -20,6 +20,10 @@ image: /assets/img/math-and-physics-cropped.webp
 > - **Combinación lineal de vectores**
 >   - Dado un número finito de vectores $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$ y escalares $a_1, a_2, \dots, a_n$, se llama **combinación lineal** de $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$ a cualquier vector $\mathbf{v}$ tal que $\mathbf{v} = a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n$.
 >   - En tal caso, a $a_1, a_2, \dots, a_n$ se les llama **coeficientes** de la combinación lineal.
+> - **Espacio generado**
+>   - Para un subconjunto no vacío $S$ de un espacio vectorial $\mathbb{V}$, el conjunto de todas las combinaciones lineales formadas con vectores de $S$ se llama el **espacio generado (span)** de $S$ y se denota por $\mathrm{span}(S)$.
+>   - Se define $\mathrm{span}(\emptyset) = \\{0\\}$.
+>   - Para un subconjunto $S$ de un espacio vectorial $\mathbb{V}$, si $\mathrm{span}(S) = \mathbb{V}$, se dice que $S$ **genera** $\mathbb{V}$ (generate o span).
 {: .prompt-info }
 
 ## Prerequisites
@@ -146,6 +150,8 @@ Si un segundo vector $\mathbf{w}$ no está sobre esa recta (es decir, si $\mathb
 > *Fuente de la imagen*
 > - Autor: usuario de Wikimedia [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - Licencia: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+
+### Generación
 
 Así, las combinaciones lineales de vectores generan un espacio vectorial; a esto se le llama **generación (span)**.
 

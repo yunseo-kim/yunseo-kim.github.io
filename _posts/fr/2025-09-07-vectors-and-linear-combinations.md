@@ -1,6 +1,6 @@
 ---
 title: "Vecteurs et combinaisons linéaires"
-description: "Qu’est-ce qu’un vecteur ? Représentations (flèche, composantes), opérations de base (addition, multiplication scalaire) et définition des combinaisons linéaires en R^n."
+description: "Qu’est-ce qu’un vecteur ? Représentations (flèche, composantes), opérations de base (addition, multiplication scalaire), définition des combinaisons linéaires en R^n et notion de sous-espace engendré (span)."
 categories: [Mathematics, Linear Algebra]
 tags: [Vector, Vector Operations, Linear Combinations]
 math: true
@@ -20,6 +20,10 @@ image: /assets/img/math-and-physics-cropped.webp
 > - **Combinaison linéaire de vecteurs**
 >   - Pour des vecteurs $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$ et des scalaires $a_1, a_2, \dots, a_n$, un vecteur $\mathbf{v} = a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n$ est appelé une **combinaison linéaire** de $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$.
 >   - Les nombres $a_1, a_2, \dots, a_n$ sont les **coefficients** de cette combinaison linéaire.
+> - **Sous-espace engendré**
+>   - Pour un sous-ensemble non vide $S$ de l’espace vectoriel $\mathbb{V}$, l’ensemble de toutes les combinaisons linéaires formées avec les vecteurs de $S$, $\mathrm{span}(S)$.
+>   - Par convention, $\mathrm{span}(\emptyset) = \{0\}$.
+>   - Pour un sous-ensemble $S$ de l’espace vectoriel $\mathbb{V}$, si $\mathrm{span}(S) = \mathbb{V}$, on dit que $S$ **engendre** $\mathbb{V}$ (génère, span).
 {: .prompt-info }
 
 ## Prerequisites
@@ -146,6 +150,8 @@ Si un second vecteur $\mathbf{w}$ n’est pas sur cette droite (i.e. $\mathbf{v}
 > *Source de l’image*
 > - Auteur: utilisateur Wikimédia [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - Licence: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+
+### Engendrement
 
 Ainsi, les combinaisons linéaires de vecteurs engendrent un espace; on parle de **sous-espace engendré (span)**.
 

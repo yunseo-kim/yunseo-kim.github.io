@@ -1,6 +1,6 @@
 ---
 title: "向量與線性組合"
-description: "從幾何直觀到線性代數，介紹向量的定義、表示法（箭號與分量）、基本運算（加法、純量乘法），以及線性組合的意義與範例，協助建立進階學習基礎。"
+description: "認識什麼是向量與其基本運算（純量乘法、加法），並在此基礎上理解向量的線性組合與生成空間（span）的概念。"
 categories: [Mathematics, Linear Algebra]
 tags: [Vector, Vector Operations, Linear Combinations]
 math: true
@@ -21,6 +21,10 @@ image: /assets/img/math-and-physics-cropped.webp
 >   - 對有限個向量 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$ 與純量 $a_1, a_2, \dots, a_n$，若 $\mathbf{v} = a_1\mathbf{u}_1 + a_2\mathbf{u}_2 + \cdots + a_n\mathbf{u}_n$，則稱向量 $\mathbf{v}$ 為 $\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_n$ 的**線性組合（linear combination）**
 >   - 此時 $a_1, a_2, \dots, a_n$ 稱為此線性組合的**係數（coefficient）**
 {: .prompt-info }
+> - **生成空間（span）**
+>   - 對向量空間 $\mathbb{V}$ 的非空子集 $S$，由 $S$ 中的向量所作的所有線性組合所成的集合 $\mathrm{span}(S)$
+>   - 定義 $\mathrm{span}(\emptyset) = \{ \mathbf{0} \}$
+>   - 若向量空間 $\mathbb{V}$ 的子集 $S$ 滿足 $\mathrm{span}(S) = \mathbb{V}$，則稱 $S$ 生成（generate 或 span）$\mathbb{V}$
 
 ## Prerequisites
 - 座標平面／座標空間
@@ -146,6 +150,8 @@ A = \Bigg[ \mathbf{v}_1 \quad \mathbf{v}_2 \quad \cdots \quad \mathbf{v}_n \Bigg
 > *圖片來源*
 > - 作者：維基共享資源用戶 [Svjo](https://commons.wikimedia.org/wiki/User:Svjo)
 > - 授權條款：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+
+### 生成
 
 如此，向量們的線性組合便構成向量空間，這稱為空間的**生成（span）**。
 
