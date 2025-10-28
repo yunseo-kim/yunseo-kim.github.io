@@ -139,7 +139,7 @@ $$ \begin{align*}
 
 ある部分集合が部分空間であるかどうかは、次の定理で確認できる。
 
-> **定理**  
+> **定理 1**  
 > ベクトル空間 $\mathbb{V}$ と部分集合 $\mathbb{W}$ について、$\mathbb{W}$ が $\mathbb{V}$ の部分空間であるための必要十分条件は、次の 3 条件を満たすことである。このとき演算は $\mathbb{V}$ で定義したものと同じである。
 > 1. $\mathbf{0} \in \mathbb{W}$
 > 2. $\mathbf{x}+\mathbf{y} \in \mathbb{W} \quad \forall\ \mathbf{x} \in \mathbb{W},\ \mathbf{y} \in \mathbb{W}$
@@ -150,7 +150,7 @@ $$ \begin{align*}
 
 また、次の定理が成り立つ。
 
-> **定理**  
+> **定理 2**  
 > - ベクトル空間 $\mathbb{V}$ の任意の部分集合 $S$ の生成空間 $\mathrm{span}(S)$ は、$S$ を含む $\mathbb{V}$ の部分空間である。
 >
 >   $$ S \subset \mathrm{span}(S) \leq \mathbb{V} \quad \forall\ S \subset \mathbb{V}. $$
@@ -161,7 +161,7 @@ $$ \begin{align*}
 >
 {: .prompt-info }
 
-> **定理**  
+> **定理 3**  
 > ベクトル空間 $\mathbb{V}$ の部分空間について、それらの任意の共通部分（交わり）は同様に $\mathbb{V}$ の部分空間である。
 {: .prompt-info }
 

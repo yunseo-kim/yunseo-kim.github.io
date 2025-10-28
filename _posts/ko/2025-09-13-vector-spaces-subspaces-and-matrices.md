@@ -139,7 +139,7 @@ $$ \begin{align*}
 
 어떤 부분집합이 부분공간인지는 다음 정리를 이용해 확인할 수 있다.
 
-> **정리**  
+> **정리 1**  
 > 벡터공간 $\mathbb{V}$와 부분집합 $\mathbb{W}$에 대해, $\mathbb{W}$가 $\mathbb{V}$의 부분공간이기 위한 필요충분조건은 다음 3가지 조건을 만족하는 것이다. 이때 연산은 $\mathbb{V}$에서 정의한 것과 같다.
 > 1. $\mathbf{0} \in \mathbb{W}$
 > 2. $\mathbf{x}+\mathbf{y} \in \mathbb{W} \quad \forall\ \mathbf{x} \in \mathbb{W},\ \mathbf{y} \in \mathbb{W}$
@@ -150,7 +150,7 @@ $$ \begin{align*}
 
 또한 다음의 정리들이 성립한다.
 
-> **정리**  
+> **정리 2**  
 > - 벡터공간 $\mathbb{V}$의 임의의 부분집합 $S$의 생성공간 $\mathrm{span}(S)$는 $S$를 포함하는 $\mathbb{V}$의 부분공간이다.
 >
 >   $$ S \subset \mathrm{span}(S) \leq \mathbb{V} \quad \forall\ S \subset \mathbb{V}. $$
@@ -161,7 +161,7 @@ $$ \begin{align*}
 >
 {: .prompt-info }
 
-> **정리**  
+> **정리 3**  
 > 벡터공간 $\mathbb{V}$의 부분공간들에 대해, 이 부분공간들의 임의의 교집합은 마찬가지로 $\mathbb{V}$의 부분공간이다.
 {: .prompt-info }
 

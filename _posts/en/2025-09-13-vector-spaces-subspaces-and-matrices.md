@@ -143,7 +143,7 @@ For every vector space $\mathbb{V}$, both $\mathbb{V}$ itself and $\\{0\\}$ are 
 
 Whether a subset is a subspace can be checked using the following theorem.
 
-> **Theorem**  
+> **Theorem 1**  
 > For a vector space $\mathbb{V}$ and a subset $\mathbb{W}$, $\mathbb{W}$ is a subspace of $\mathbb{V}$ if and only if the following three conditions hold (with the operations inherited from $\mathbb{V}$):
 > 1. $\mathbf{0} \in \mathbb{W}$
 > 2. $\mathbf{x}+\mathbf{y} \in \mathbb{W} \quad \forall\ \mathbf{x} \in \mathbb{W},\ \mathbf{y} \in \mathbb{W}$
@@ -154,7 +154,7 @@ Whether a subset is a subspace can be checked using the following theorem.
 
 The following theorems also hold.
 
-> **Theorem**  
+> **Theorem 2**  
 > - For any subset $S$ of a vector space $\mathbb{V}$, the span $\mathrm{span}(S)$ is a subspace of $\mathbb{V}$ containing $S$.
 >
 >   $$ S \subset \mathrm{span}(S) \leq \mathbb{V} \quad \forall\ S \subset \mathbb{V}. $$
@@ -165,7 +165,7 @@ The following theorems also hold.
 >
 {: .prompt-info }
 
-> **Theorem**  
+> **Theorem 3**  
 > For subspaces of a vector space $\mathbb{V}$, the intersection of any collection of such subspaces is again a subspace of $\mathbb{V}$.
 {: .prompt-info }
 

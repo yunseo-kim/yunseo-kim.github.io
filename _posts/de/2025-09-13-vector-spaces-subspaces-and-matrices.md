@@ -139,7 +139,7 @@ Für jeden Vektorraum $\mathbb{V}$ sind $\mathbb{V}$ selbst und $\\{0\\}$ Unterr
 
 Ob eine Teilmenge ein Unterraum ist, lässt sich mit dem folgenden Satz prüfen.
 
-> **Satz**  
+> **Satz 1**  
 > Für einen Vektorraum $\mathbb{V}$ und eine Teilmenge $\mathbb{W}$ ist $\mathbb{W}$ genau dann ein Unterraum von $\mathbb{V}$, wenn die folgenden drei Bedingungen erfüllt sind. Die Operationen sind dabei diejenigen von $\mathbb{V}$.
 > 1. $\mathbf{0} \in \mathbb{W}$
 > 2. $\mathbf{x}+\mathbf{y} \in \mathbb{W} \quad \forall\ \mathbf{x} \in \mathbb{W},\ \mathbf{y} \in \mathbb{W}$
@@ -150,7 +150,7 @@ Ob eine Teilmenge ein Unterraum ist, lässt sich mit dem folgenden Satz prüfen.
 
 Außerdem gelten die folgenden Sätze.
 
-> **Satz**  
+> **Satz 2**  
 > - Für jede Teilmenge $S$ eines Vektorraums $\mathbb{V}$ ist der von $S$ erzeugte Raum $\mathrm{span}(S)$ ein Unterraum von $\mathbb{V}$, der $S$ enthält.
 >
 >   $$ S \subset \mathrm{span}(S) \leq \mathbb{V} \quad \forall\ S \subset \mathbb{V}. $$
@@ -161,7 +161,7 @@ Außerdem gelten die folgenden Sätze.
 >
 {: .prompt-info }
 
-> **Satz**  
+> **Satz 3**  
 > Für Unterräume eines Vektorraums $\mathbb{V}$ ist der beliebige Durchschnitt solcher Unterräume wiederum ein Unterraum von $\mathbb{V}$.
 {: .prompt-info }
 

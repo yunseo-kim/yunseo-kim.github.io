@@ -137,7 +137,7 @@ Pour tout espace vectoriel $\mathbb{V}$, $\mathbb{V}$ lui-même et $\\{0\\}$ son
 
 On peut vérifier qu’un sous-ensemble est un sous-espace à l’aide du théorème suivant.
 
-> **Théorème**  
+> **Théorème 1**  
 > Pour un espace vectoriel $\mathbb{V}$ et un sous-ensemble $\mathbb{W}$, $\mathbb{W}$ est un sous-espace de $\mathbb{V}$ si et seulement s’il satisfait les trois conditions suivantes, les opérations étant celles définies dans $\mathbb{V}$.
 > 1. $\mathbf{0} \in \mathbb{W}$
 > 2. $\mathbf{x}+\mathbf{y} \in \mathbb{W} \quad \forall\ \mathbf{x} \in \mathbb{W},\ \mathbf{y} \in \mathbb{W}$
@@ -148,7 +148,7 @@ On peut vérifier qu’un sous-ensemble est un sous-espace à l’aide du théor
 
 On a également les résultats suivants.
 
-> **Théorème**  
+> **Théorème 2**  
 > - Pour tout sous-ensemble $S$ d’un espace vectoriel $\mathbb{V}$, l’espace engendré $\mathrm{span}(S)$ est un sous-espace de $\mathbb{V}$ contenant $S$.
 >
 >   $$ S \subset \mathrm{span}(S) \leq \mathbb{V} \quad \forall\ S \subset \mathbb{V}. $$
@@ -159,7 +159,7 @@ On a également les résultats suivants.
 >
 {: .prompt-info }
 
-> **Théorème**  
+> **Théorème 3**  
 > Pour les sous-espaces d’un espace vectoriel $\mathbb{V}$, l’intersection arbitraire de tels sous-espaces est à son tour un sous-espace de $\mathbb{V}$.
 {: .prompt-info }
 

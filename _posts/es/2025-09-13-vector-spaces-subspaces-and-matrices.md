@@ -137,7 +137,7 @@ Para todo espacio vectorial $\mathbb{V}$, $\mathbb{V}$ mismo y $\\{0\\}$ son sub
 
 Podemos verificar que un subconjunto es un subespacio usando el siguiente teorema.
 
-> **Teorema**  
+> **Teorema 1**  
 > Dado un espacio vectorial $\mathbb{V}$ y un subconjunto $\mathbb{W}$, $\mathbb{W}$ es un subespacio de $\mathbb{V}$ si y solo si satisface las siguientes tres condiciones (con las operaciones heredadas de $\mathbb{V}$):
 > 1. $\mathbf{0} \in \mathbb{W}$
 > 2. $\mathbf{x}+\mathbf{y} \in \mathbb{W} \quad \forall\ \mathbf{x} \in \mathbb{W},\ \mathbf{y} \in \mathbb{W}$
@@ -148,7 +148,7 @@ Podemos verificar que un subconjunto es un subespacio usando el siguiente teorem
 
 Además, valen los siguientes resultados.
 
-> **Teorema**  
+> **Teorema 2**  
 > - Para cualquier subconjunto $S$ de un espacio vectorial $\mathbb{V}$, el subespacio generado $\mathrm{span}(S)$ es un subespacio de $\mathbb{V}$ que contiene a $S$.
 >
 >   $$ S \subset \mathrm{span}(S) \leq \mathbb{V} \quad \forall\ S \subset \mathbb{V}. $$
@@ -159,7 +159,7 @@ Además, valen los siguientes resultados.
 >
 {: .prompt-info }
 
-> **Teorema**  
+> **Teorema 3**  
 > Dado un conjunto de subespacios de un espacio vectorial $\mathbb{V}$, su intersección arbitraria es también un subespacio de $\mathbb{V}$.
 {: .prompt-info }
 

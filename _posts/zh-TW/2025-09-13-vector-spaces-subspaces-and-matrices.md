@@ -137,7 +137,7 @@ $$ \begin{align*}
 
 判別某子集是否為子空間，可用下述定理。
 
-> **定理**  
+> **定理 1**  
 > 對向量空間 $\mathbb{V}$ 與其子集 $\mathbb{W}$，$\mathbb{W}$ 為 $\mathbb{V}$ 的子空間之必要且充分條件，是滿足下列三項（運算沿用 $\mathbb{V}$ 的定義）：
 > 1. $\mathbf{0} \in \mathbb{W}$
 > 2. $\mathbf{x}+\mathbf{y} \in \mathbb{W} \quad \forall\ \mathbf{x} \in \mathbb{W},\ \mathbf{y} \in \mathbb{W}$
@@ -148,7 +148,7 @@ $$ \begin{align*}
 
 此外，下列定理亦成立。
 
-> **定理**  
+> **定理 2**  
 > - 對向量空間 $\mathbb{V}$ 的任意子集 $S$，其生成空間 $\mathrm{span}(S)$ 是包含 $S$ 的 $\mathbb{V}$ 的子空間。
 >
 >   $$ S \subset \mathrm{span}(S) \leq \mathbb{V} \quad \forall\ S \subset \mathbb{V}. $$
@@ -159,7 +159,7 @@ $$ \begin{align*}
 >
 {: .prompt-info }
 
-> **定理**  
+> **定理 3**  
 > 對向量空間 $\mathbb{V}$ 的諸子空間，其任意交集仍為 $\mathbb{V}$ 的子空間。
 {: .prompt-info }
 
