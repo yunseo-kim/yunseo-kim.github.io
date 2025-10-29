@@ -214,10 +214,22 @@ According to astronomical observations, in many spiral galaxies that rotate abou
 > - Author: Wikipedia user [PhilHibbs](https://en.wikipedia.org/wiki/User:PhilHibbs)
 > - License: Public Domain
 
-![Rotation Curve of Spiral Galaxy M33](https://upload.wikimedia.org/wikipedia/commons/c/cd/Rotation_curve_of_spiral_galaxy_Messier_33_%28Triangulum%29.png)
-> **Rotation curve of spiral galaxy M33 (Triangulum Galaxy)**
-> - Author: Wikimedia user [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama)
-> - License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+{% 
+  include embed/video.html 
+  src='https://cdn.jsdelivr.net/gh/yunseo-kim/yunseo-kim.github.io/assets/video/gravitational-field-and-potential/Galaxy_rotation_under_the_influence_of_dark_matter.webm' 
+  title="Left: Predicted galactic rotation from observable mass | Right: Actual observed galactic rotation." 
+  types='ogg'
+  autoplay=true 
+  loop=true 
+%}
+> *Video source*
+> - Original file (Ogg Theora video) link: <https://commons.wikimedia.org/wiki/File:Galaxy_rotation_under_the_influence_of_dark_matter.ogv>
+> - Author: [Ingo Berg](https://beltoforion.de/en/index.php)
+> - License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by/3.0/deed.en)
+> - Simulation method and code used: <https://beltoforion.de/en/spiral_galaxy_renderer/>
+
+> The image file previously embedded on this page, `Rotation curve of spiral galaxy Messier 33 (Triangulum).png`, was [deleted from Wikimedia Commons](https://commons.wikimedia.org/wiki/Commons:Deletion_requests/File:Rotation_curve_of_spiral_galaxy_Messier_33_(Triangulum).png) after it was determined to be a derivative work by Wikimedia user [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama) that plagiarized [Prof. Mark Whittle](https://markwhittle.uvacreate.virginia.edu/) of the University of Virginia’s non-free work without proper citation. Accordingly, it has also been removed from this page.
+{: .prompt-danger }
 
 Let's predict the orbital velocity as a function of distance when the galaxy's mass is concentrated at the center, confirm that this prediction does not match the observational results, and show that the mass $M(R)$ distributed within distance $R$ from the galactic center must be proportional to $R$ to explain the observations.
 

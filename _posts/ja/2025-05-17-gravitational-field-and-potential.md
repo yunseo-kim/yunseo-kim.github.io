@@ -214,10 +214,22 @@ $$\begin{align*}
 > - 作者: ウィキペディアユーザー [PhilHibbs](https://en.wikipedia.org/wiki/User:PhilHibbs)
 > - ライセンス: Public Domain
 
-![Rotation Curve of Spiral Galaxy M33](https://upload.wikimedia.org/wikipedia/commons/c/cd/Rotation_curve_of_spiral_galaxy_Messier_33_%28Triangulum%29.png)
-> **渦巻銀河M33（さんかく座銀河）の回転曲線**
-> - 作者: ウィキメディアユーザー [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama)
-> - ライセンス: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+{% 
+  include embed/video.html 
+  src='https://cdn.jsdelivr.net/gh/yunseo-kim/yunseo-kim.github.io/assets/video/gravitational-field-and-potential/Galaxy_rotation_under_the_influence_of_dark_matter.webm' 
+  title="左: 観測可能な質量から予測した銀河の回転 | 右: 実際に観測された銀河の回転。" 
+  types='ogg'
+  autoplay=true 
+  loop=true 
+%}
+> *動画出典*
+> - 元ファイル（Ogg Theora video）へのリンク: <https://commons.wikimedia.org/wiki/File:Galaxy_rotation_under_the_influence_of_dark_matter.ogv>
+> - 作者: [Ingo Berg](https://beltoforion.de/en/index.php)
+> - ライセンス: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
+> - 使用されたシミュレーション手法およびコード: <https://beltoforion.de/en/spiral_galaxy_renderer/>
+
+> 以前このページに挿入していた `Rotation curve of spiral galaxy Messier 33 (Triangulum).png` 画像ファイルは、[バージニア大学の Mark Whittle 教授](https://markwhittle.uvacreate.virginia.edu/)の非フリー著作物をウィキメディアユーザー [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama)が[適切な出典表記なく盗用した派生著作物であることが判明したためウィキメディア・コモンズから削除されており](https://commons.wikimedia.org/wiki/Commons:Deletion_requests/File:Rotation_curve_of_spiral_galaxy_Messier_33_(Triangulum).png)、本ページからも削除したことをここに記す。
+{: .prompt-danger }
 
 銀河の質量が中心部に集中している場合の距離による軌道速度を予測して、該当予測値はこのような観測結果と一致しないことを確認し、銀河中心からの距離 $R$ 以内に分布する質量 $M(R)$が $R$に比例しなければ観測結果を説明できないことを示そう。
 

@@ -214,10 +214,22 @@ $$\begin{align*}
 > - 作者：維基百科用戶 [PhilHibbs](https://en.wikipedia.org/wiki/User:PhilHibbs)
 > - 授權：Public Domain
 
-![Rotation Curve of Spiral Galaxy M33](https://upload.wikimedia.org/wikipedia/commons/c/cd/Rotation_curve_of_spiral_galaxy_Messier_33_%28Triangulum%29.png)
-> **螺旋星系 M33（三角座星系）的旋轉曲線**
-> - 作者：維基媒體用戶 [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama)
-> - 授權：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+{% 
+  include embed/video.html 
+  src='https://cdn.jsdelivr.net/gh/yunseo-kim/yunseo-kim.github.io/assets/video/gravitational-field-and-potential/Galaxy_rotation_under_the_influence_of_dark_matter.webm' 
+  title="左：由可觀測質量所預測的星系旋轉 | 右：實際觀測到的星系旋轉。" 
+  types='ogg'
+  autoplay=true 
+  loop=true 
+%}
+> *影片來源*
+> - 原始檔案（Ogg Theora 影片）連結：<https://commons.wikimedia.org/wiki/File:Galaxy_rotation_under_the_influence_of_dark_matter.ogv>
+> - 作者：[Ingo Berg](https://beltoforion.de/en/index.php)
+> - 授權：[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
+> - 所使用的模擬方法與程式碼：<https://beltoforion.de/en/spiral_galaxy_renderer/>
+
+> 先前嵌入於本頁的圖檔 `Rotation curve of spiral galaxy Messier 33 (Triangulum).png`，因被判定為維基媒體用戶 [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama)未適當引用而抄襲[維吉尼亞大學 Mark Whittle 教授](https://markwhittle.uvacreate.virginia.edu/)之非自由著作的衍生作品，[已自維基共享資源刪除](https://commons.wikimedia.org/wiki/Commons:Deletion_requests/File:Rotation_curve_of_spiral_galaxy_Messier_33_(Triangulum).png)，因此本頁亦已將其移除，特此說明。
+{: .prompt-danger }
 
 讓我們預測星系質量集中在中心部時隨距離變化的軌道速度，確認該預測值與這種觀測結果不一致，並證明只有當星系中心距離 $R$ 內分布的質量 $M(R)$ 與 $R$ 成正比時才能解釋觀測結果。
 

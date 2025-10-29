@@ -214,10 +214,22 @@ Astronomischen Beobachtungen zufolge ist die meiste beobachtbare Masse in vielen
 > - Autor: Wikipedia-Benutzer [PhilHibbs](https://en.wikipedia.org/wiki/User:PhilHibbs)
 > - Lizenz: Public Domain
 
-![Rotation Curve of Spiral Galaxy M33](https://upload.wikimedia.org/wikipedia/commons/c/cd/Rotation_curve_of_spiral_galaxy_Messier_33_%28Triangulum%29.png)
-> **Rotationskurve der Spiralgalaxie M33 (Dreiecksgalaxie)**
-> - Autor: Wikimedia-Benutzer [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama)
-> - Lizenz: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+{%
+  include embed/video.html
+  src='https://cdn.jsdelivr.net/gh/yunseo-kim/yunseo-kim.github.io/assets/video/gravitational-field-and-potential/Galaxy_rotation_under_the_influence_of_dark_matter.webm'
+  title="Links: Aus der beobachtbaren Masse vorhergesagte Galaxienrotation | Rechts: Tatsächlich beobachtete Galaxienrotation."
+  types='ogg'
+  autoplay=true
+  loop=true
+%}
+> *Videoquelle*
+> - Link zur Originaldatei (Ogg-Theora-Video): <https://commons.wikimedia.org/wiki/File:Galaxy_rotation_under_the_influence_of_dark_matter.ogv>
+> - Autor: [Ingo Berg](https://beltoforion.de/en/index.php)
+> - Lizenz: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
+> - Verwendete Simulationsmethode und Code: <https://beltoforion.de/en/spiral_galaxy_renderer/>
+
+> Die auf dieser Seite zuvor eingebettete Bilddatei `Rotation curve of spiral galaxy Messier 33 (Triangulum).png` wurde als von [Professor Mark Whittle (University of Virginia)](https://markwhittle.uvacreate.virginia.edu/) stammendes, nichtfreies Werk, das vom Wikimedia-Benutzer [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama) ohne angemessene Quellenangabe plagiiert und als Derivat hochgeladen wurde, eingestuft und [daher aus Wikimedia Commons gelöscht](https://commons.wikimedia.org/wiki/Commons:Deletion_requests/File:Rotation_curve_of_spiral_galaxy_Messier_33_(Triangulum).png); folglich wurde sie auch auf dieser Seite entfernt.
+{: .prompt-danger } 
 
 Lassen Sie uns die Orbitalgeschwindigkeit in Abhängigkeit von der Entfernung vorhersagen, wenn die Masse der Galaxie im Zentrum konzentriert ist, bestätigen, dass diese Vorhersage nicht mit den Beobachtungsergebnissen übereinstimmt, und zeigen, dass die Masse $M(R)$, die innerhalb der Entfernung $R$ vom galaktischen Zentrum verteilt ist, proportional zu $R$ sein muss, um die Beobachtungsergebnisse zu erklären.
 

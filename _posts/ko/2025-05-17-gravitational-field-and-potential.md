@@ -217,10 +217,22 @@ $$\begin{align*}
 > - 저작자: 위키피디아 유저 [PhilHibbs](https://en.wikipedia.org/wiki/User:PhilHibbs)
 > - 라이선스: Public Domain
 
-![Rotation Curve of Spiral Galaxy M33](https://upload.wikimedia.org/wikipedia/commons/c/cd/Rotation_curve_of_spiral_galaxy_Messier_33_%28Triangulum%29.png)
-> **나선 은하 M33(삼각형자리 은하)의 회전 곡선**
-> - 저작자: 위키미디어 유저 [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama)
-> - 라이선스: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+{% 
+  include embed/video.html 
+  src='https://cdn.jsdelivr.net/gh/yunseo-kim/yunseo-kim.github.io/assets/video/gravitational-field-and-potential/Galaxy_rotation_under_the_influence_of_dark_matter.webm' 
+  title="좌: 관측 가능 질량으로부터 예측한 은하 회전 | 우: 실제 관측한 은하 회전." 
+  types='ogg'
+  autoplay=true 
+  loop=true 
+%}
+> *영상 출처*
+> - 원본 파일(Ogg Theora video) 링크: <https://commons.wikimedia.org/wiki/File:Galaxy_rotation_under_the_influence_of_dark_matter.ogv>
+> - 저작자: [Ingo Berg](https://beltoforion.de/en/index.php)
+> - 라이선스: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
+> - 사용된 시뮬레이션 방법 및 코드: <https://beltoforion.de/en/spiral_galaxy_renderer/>
+
+> 기존에 이 페이지에 삽입하였던 `Rotation curve of spiral galaxy Messier 33 (Triangulum).png` 이미지 파일은 [버지니아 대학교 Mark Whittle 교수](https://markwhittle.uvacreate.virginia.edu/)의 비자유 저작물을 위키미디어 유저 [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama)가 [적절한 인용 없이 표절한 파생 저작물인 것으로 판명됨에 따라 위키미디어 공용에서 삭제되었으며](https://commons.wikimedia.org/wiki/Commons:Deletion_requests/File:Rotation_curve_of_spiral_galaxy_Messier_33_(Triangulum).png), 이에 본 페이지에서도 삭제하였음을 밝힘.
+{: .prompt-danger }
 
 은하의 질량이 중심부에 집중되어 있을 경우의 거리에 따른 궤도 속력을 예측하여 해당 예측값은 이러한 관측 결과와 일치하지 않음을 확인하고, 은하 중심으로부터 거리 $R$ 이내에 분포하는 질량 $M(R)$이 $R$에 비례하여야 관측 결과를 설명할 수 있음을 보이자.
 

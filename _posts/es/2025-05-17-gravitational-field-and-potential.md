@@ -214,10 +214,22 @@ Según observaciones astronómicas, en muchas galaxias espirales que rotan alred
 > - Autor: Usuario de Wikipedia [PhilHibbs](https://en.wikipedia.org/wiki/User:PhilHibbs)
 > - Licencia: Dominio Público
 
-![Rotation Curve of Spiral Galaxy M33](https://upload.wikimedia.org/wikipedia/commons/c/cd/Rotation_curve_of_spiral_galaxy_Messier_33_%28Triangulum%29.png)
-> **Curva de rotación de la galaxia espiral M33 (galaxia del Triángulo)**
-> - Autor: Usuario de Wikimedia [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama)
-> - Licencia: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+{% 
+  include embed/video.html 
+  src='https://cdn.jsdelivr.net/gh/yunseo-kim/yunseo-kim.github.io/assets/video/gravitational-field-and-potential/Galaxy_rotation_under_the_influence_of_dark_matter.webm' 
+  title="Izquierda: rotación galáctica predicha a partir de la masa observable | Derecha: rotación galáctica observada." 
+  types='ogg'
+  autoplay=true 
+  loop=true 
+%}
+> *Fuente del video*
+> - Enlace al archivo original (vídeo Ogg Theora): <https://commons.wikimedia.org/wiki/File:Galaxy_rotation_under_the_influence_of_dark_matter.ogv>
+> - Autor: [Ingo Berg](https://beltoforion.de/en/index.php)
+> - Licencia: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en)
+> - Método de simulación y código utilizados: <https://beltoforion.de/en/spiral_galaxy_renderer/>
+
+> La imagen `Rotation curve of spiral galaxy Messier 33 (Triangulum).png`, previamente insertada en esta página, [fue eliminada de Wikimedia Commons](https://commons.wikimedia.org/wiki/Commons:Deletion_requests/File:Rotation_curve_of_spiral_galaxy_Messier_33_(Triangulum).png) por haberse determinado que era una obra derivada plagiada por el usuario de Wikimedia [Mario De Leo](https://commons.wikimedia.org/wiki/User:Accrama) de una obra no libre del [profesor Mark Whittle de la Universidad de Virginia](https://markwhittle.uvacreate.virginia.edu/), sin la citación adecuada; por lo tanto, también se ha eliminado de esta página.
+{: .prompt-danger }
 
 Predijamos la velocidad orbital según la distancia cuando la masa de la galaxia está concentrada en el centro, confirmemos que esta predicción no coincide con los resultados observacionales, y demostremos que la masa $M(R)$ distribuida dentro de la distancia $R$ desde el centro galáctico debe ser proporcional a $R$ para explicar los resultados observacionales.
 
