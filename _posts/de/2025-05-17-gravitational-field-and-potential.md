@@ -159,6 +159,7 @@ $$ \Phi = -\frac{2\pi\rho G}{R} \int_b^a r^\prime dr^\prime \int_{r_\mathrm{min}
 Hier werden $r_\mathrm{max}$ und $r_\mathrm{min}$ durch die Position des Punktes $P$ bestimmt.
 
 ### Für $R>a$
+
 $$ \begin{align*}
 \Phi(R>a) &= -\frac{2\pi\rho G}{R} \int_b^a r^\prime dr^\prime \int_{R-r^\prime}^{R+r^\prime} dr \\
 &= - \frac{4\pi\rho G}{R} \int_b^a {r^\prime}^2 dr^\prime \\
@@ -177,6 +178,7 @@ $$ \boxed{\Phi(R>a) = -\frac{GM}{R}} \label{eqn:spherical_shell_outside_2}\tag{1
 {: .prompt-info }
 
 ### Für $R<b$
+
 $$\begin{align*}
 \Phi(R<b) &= -\frac{2\pi\rho G}{R} \int_b^a r^\prime dr^\prime \int_{r^\prime - R}^{r^\prime + R}dr \\
 &= -4\pi\rho G \int_b^a r^\prime dr^\prime \\
@@ -191,6 +193,7 @@ $$\begin{align*}
 {: .prompt-tip }
 
 ### Für $b<R<a$
+
 $$\begin{align*}
 \Phi(b<R<a) &= -\frac{4\pi\rho G}{3R}(R^3 - b^3) - 2\pi\rho G(a^2 - R^2) \\
 &= -4\pi\rho G \left( \frac{a^2}{2} - \frac{b^3}{3R} - \frac{R^2}{6} \right) \label{eqn:within_spherical_shell}\tag{21}
