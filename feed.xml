@@ -3,8 +3,7 @@ layout: compress
 permalink: /feed.xml
 # Atom Feed, reference: https://validator.w3.org/feed/docs/atom.html
 ---
-
-{% capture source %}
+<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>{% if site.active_lang == site.default_lang %}{{ "/" | absolute_url }}{% else %}{{ site.active_lang | prepend: "/" | append: "/" | absolute_url }}{% endif %}</id>
   <title>{{ site.title }}</title>
@@ -50,18 +49,16 @@ permalink: /feed.xml
     <category term="{{ category }}" />
     {% endfor %}
   {% endif %}
-
-    <summary xml:lang="{{ site.active_lang }}">{% include post-summary.html max_length=400 %}</summary>
-    <content type="html" xml:lang="{{ site.active_lang }}" src="{{ post_absolute_url }}">
-    {{ post.description }}
+    {% capture summary -%}{% include post-summary.html max_length=400 %}{%- endcapture %}
+    <summary xml:lang="{{ site.active_lang }}">{{ summary | xml_escape }}</summary>
+    <content type="html" xml:lang="{{ site.active_lang }}">
     <![CDATA[
+    <p>{{ post.description }}</p>
     <em><p>* Mathematical equations and diagrams included in posts may not display properly when viewed with a feed reader.</p></em>
-    {{ post.content }}
+    {{ post.content | replace: ']]>', ']]&gt;' }}
     ]]>
     </content>
 
   </entry>
 {% endfor %}
 </feed>
-{% endcapture %}
-{{ source | replace: '&', '&amp;' }}
