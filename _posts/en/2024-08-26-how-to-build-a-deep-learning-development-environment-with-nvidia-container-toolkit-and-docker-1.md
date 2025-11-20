@@ -115,8 +115,23 @@ activate the rpmfusion-nonfree-tainted repository and then install the akmod-nvi
 sudo dnf update --refresh
 sudo dnf install rpmfusion-nonfree-release-tainted
 sudo dnf install akmod-nvidia-open
-sudo dnf mark install akmod-nvidia-open
+sudo dnf mark user akmod-nvidia-open
 ```
+
+> In older DNF versions (Fedora 40 and earlier), the command on the last line to prevent the NVIDIA driver from being removed by autoremove was as follows:
+>
+> ```bash
+> sudo dnf mark install akmod-nvidia-open
+> ```
+>
+> However, starting with DNF 5 (Fedora 41+), you must enter
+>
+> ```bash
+> sudo dnf mark user akmod-nvidia-open
+> ```
+>
+> instead of the above command. The main text has been updated to reflect this.
+{: .prompt-tip }
 
 #### 1-Fedora-3. Registering Keys for Driver Loading with Secure Boot Enabled  
 

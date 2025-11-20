@@ -113,8 +113,23 @@ Seguindo o [guia de instalação de drivers NVIDIA do RPM Fusion](https://rpmfus
 sudo dnf update --refresh
 sudo dnf install rpmfusion-nonfree-release-tainted
 sudo dnf install akmod-nvidia-open
-sudo dnf mark install akmod-nvidia-open
+sudo dnf mark user akmod-nvidia-open
 ```
+
+> Nas versões antigas do DNF (Fedora 40 e anteriores), a linha de comando usada na última linha para evitar que o driver NVIDIA fosse removido pelo `autoremove` era a seguinte.
+>
+> ```bash
+> sudo dnf mark install akmod-nvidia-open
+> ```
+>
+> No entanto, a partir do DNF 5 (Fedora 41+), em vez da linha de comando acima
+>
+> ```bash
+> sudo dnf mark user akmod-nvidia-open
+> ```
+>
+> é essa que deve ser utilizada, e o conteúdo principal já foi atualizado para refletir essa mudança.
+{: .prompt-tip }
 
 #### 1-Fedora-3. Registro de Chave para Carregamento Correto do Driver com Secure Boot  
 

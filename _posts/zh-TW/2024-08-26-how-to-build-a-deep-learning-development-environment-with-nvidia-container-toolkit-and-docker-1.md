@@ -117,8 +117,23 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 sudo dnf update --refresh
 sudo dnf install rpmfusion-nonfree-release-tainted
 sudo dnf install akmod-nvidia-open
-sudo dnf mark install akmod-nvidia-open
+sudo dnf mark user akmod-nvidia-open
 ```
+
+> 在DNF舊版本（Fedora 40及更早版本）中，為了在執行最後一行的autoremove時防止NVIDIA驅動被刪除，應使用以下命令：
+>
+> ```bash
+> sudo dnf mark install akmod-nvidia-open
+> ```
+>
+> 但從DNF 5（Fedora 41+）開始，必須改為輸入下列指令：
+>
+> ```bash
+> sudo dnf mark user akmod-nvidia-open
+> ```
+>
+> 本文內容已依此更新。
+{: .prompt-tip }
 
 #### 1-Fedora-3. 安全啟動（Secure Boot）時驅動正常載入的金鑰註冊  
 
