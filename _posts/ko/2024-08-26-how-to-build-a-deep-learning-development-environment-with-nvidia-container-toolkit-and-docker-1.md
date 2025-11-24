@@ -118,8 +118,23 @@ rpmfusion-nonfree-tainted 리포지터리를 활성화한 다음 akmod-nvidia-op
 sudo dnf update --refresh
 sudo dnf install rpmfusion-nonfree-release-tainted
 sudo dnf install akmod-nvidia-open
-sudo dnf mark install akmod-nvidia-open
+sudo dnf mark user akmod-nvidia-open
 ```
+
+> DNF 구 버전(Fedora 40 및 그 이전 버전)에서는 마지막 줄의 autoremove 시 NVIDIA 드라이버 삭제 방지를 위한 명령줄이 다음과 같았다.
+>
+> ```bash
+> sudo dnf mark install akmod-nvidia-open
+> ```
+>
+> 그러나 DNF 5(Fedora 41+)에서부터는 위 명령줄 대신
+>
+> ```bash
+> sudo dnf mark user akmod-nvidia-open
+> ```
+>
+> 을 대신 입력해야 하며, 이를 반영해 본문 내용을 갱신해 두었다.
+{: .prompt-tip }
 
 #### 1-Fedora-3. 보안 부팅(Secure Boot) 시 드라이버 정상 로드를 위한 키 등록  
 

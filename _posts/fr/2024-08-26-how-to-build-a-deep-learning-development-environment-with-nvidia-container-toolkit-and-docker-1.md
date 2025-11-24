@@ -115,8 +115,23 @@ activez le dépôt rpmfusion-nonfree-tainted puis installez le paquet akmod-nvid
 sudo dnf update --refresh
 sudo dnf install rpmfusion-nonfree-release-tainted
 sudo dnf install akmod-nvidia-open
-sudo dnf mark install akmod-nvidia-open
+sudo dnf mark user akmod-nvidia-open
 ```
+
+> Dans les anciennes versions de DNF (Fedora 40 et antérieures), la commande de la dernière ligne permettant d’éviter la suppression du pilote NVIDIA lors d’un `autoremove` était la suivante.
+>
+> ```bash
+> sudo dnf mark install akmod-nvidia-open
+> ```
+>
+> Cependant, à partir de DNF 5 (Fedora 41+), il faut saisir la commande suivante à la place :
+>
+> ```bash
+> sudo dnf mark user akmod-nvidia-open
+> ```
+>
+> Le texte principal a été mis à jour en conséquence.
+{: .prompt-tip }
 
 #### 1-Fedora-3. Enregistrement de la clé pour le chargement normal du pilote avec Secure Boot  
 
