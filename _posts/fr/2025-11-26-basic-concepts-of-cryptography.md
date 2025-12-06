@@ -121,7 +121,7 @@ flowchart TD
 
     Protocol-- participe au concours -->C
     Protocol-- normalisation -->Standard(Norme)
-    Protocol-- dépôt de brevet -->Patent(Brevet (expiration))
+    Protocol-- dépôt de brevet -->Patent(Expiration du brevet)
     Protocol-- implémentation -->Library(Bibliothèque)
     
     C-- gagne le concours -->Standard

@@ -106,7 +106,7 @@ Como o objetivo da criptografia é proteger protocolos contra ações adversári
 
 ```mermaid
 flowchart TD
-    Alice[Pesquisador(a) em criptografia]-- inventa primitivo -->Primitive(Nova proposta de primitivo)
+    Alice["Pesquisador(a) em criptografia"]-- inventa primitivo -->Primitive(Nova proposta de primitivo)
     Alice-- inventa protocolo -->Protocol(Nova proposta de protocolo)
     Alice-. organiza competição .->C(Competição de algoritmos)
 
