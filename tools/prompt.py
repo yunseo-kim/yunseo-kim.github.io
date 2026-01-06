@@ -402,5 +402,5 @@ if __name__ == "__main__":
     
     print(f"Translating {args.file_path}")
     print(f"source_lang: {source_lang}, target_lang: {target_lang}:")
-    translate(args.file_path, source_lang, target_lang, "gpt-5")
+    translate(args.file_path, source_lang, target_lang, "gpt-5.2-2025-12-11")
     print("Completed the requested task.")

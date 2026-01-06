@@ -88,7 +88,7 @@ if __name__ == "__main__":
         
         # Inner loop: Progress through target languages
         for target_lang in tqdm(target_langs, desc="Languages", position=1, leave=False):
-            model = "gpt-5.1-2025-11-13"  # model = "gemini-2.5-pro" if target_lang in ["English", "Traditional Chinese (Taiwan)", "German"] else "claude-sonnet-4-20250514"
+            model = "gpt-5.2-2025-12-11"  # model = "gemini-2.5-pro" if target_lang in ["English", "Traditional Chinese (Taiwan)", "German"] else "claude-sonnet-4-20250514"
             if args.incremental:
                 translate_incremental(filepath, source_lang, target_lang, model)
             else:
