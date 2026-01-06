@@ -1,178 +1,241 @@
 ---
-title: NVIDIA Container Toolkit e Docker/Podman para Construir um Ambiente de Desenvolvimento de Deep Learning (1) - Instalação do NVIDIA Container Toolkit & Motor de Contêiner
-description: Esta série aborda como configurar um ambiente de desenvolvimento de deep learning baseado em contêineres usando o NVIDIA Container Toolkit localmente, e como configurar SSH e Jupyter Lab para utilizá-lo como servidor remoto. Este post é o primeiro da série e introduz os métodos de instalação do NVIDIA Container Toolkit e do motor de contêiner.
+title: "Construindo um ambiente de desenvolvimento de Deep Learning com NVIDIA Container Toolkit e Docker/Podman (1) - Instalação do NVIDIA Container Toolkit e do engine de contêiner"
+description: "Esta série mostra como montar localmente um ambiente de desenvolvimento de deep learning baseado em contêineres com o NVIDIA Container Toolkit e como configurá-lo para uso remoto via SSH e JupyterLab. Neste primeiro post, apresento a instalação do NVIDIA Container Toolkit e do engine de contêiner (Docker/Podman)."
 categories: [AI & Data, Machine Learning]
 tags: [Development Environment, Docker, CUDA, PyTorch]
 image: /assets/img/technology.webp
 ---
-## Visão Geral
-Esta série aborda o processo de instalação do NVIDIA Container Toolkit e Docker ou Podman, e a criação de um ambiente de desenvolvimento de deep learning usando um Dockerfile baseado nas imagens CUDA e cuDNN fornecidas pelo [repositório nvidia/cuda](https://hub.docker.com/r/nvidia/cuda) no Docker Hub. Para aqueles que precisam, compartilho o [Dockerfile](https://github.com/yunseo-kim/dl-env-docker) e a [imagem](https://hub.docker.com/r/yunseokim/dl-env/tags) resultantes deste processo no GitHub e Docker Hub para uso livre, além de fornecer um guia de configuração de SSH e Jupyter Lab para uso como servidor remoto.  
-A série consistirá em 3 posts, e este é o primeiro deles.
-- Parte 1: Instalação do NVIDIA Container Toolkit e Engine de Contêiner (este post)
-- [Parte 2: Configuração do Runtime de Contêiner para Uso de GPU, Escrita de Dockerfile e Construção de Imagem de Contêiner](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-2)
-- Parte 3 (em breve)
 
-Assumimos um sistema Linux x86_64 com uma placa gráfica NVIDIA compatível com CUDA. Embora os detalhes possam variar ligeiramente em distribuições além do Ubuntu ou Fedora, pois não foram testadas diretamente.  
-(Atualizado em 18.02.12025)
+## Visão geral
 
-### Configuração do Ambiente de Desenvolvimento
-- Sistema operacional e arquitetura do host: x86_64, ambiente Linux (Ubuntu 18.04/20.04/22.04 LTS, RHEL/Centos, Fedora, openSUSE/SLES 15.x, etc.)
-- Stack tecnológico a ser construído (linguagens e bibliotecas)
-  - Python 3
-  - NVIDIA Container Toolkit
-  - Docker CE / Podman
-  - CUDA 12.4
-  - cuDNN
-  - OpenSSH
-  - tmux
-  - JupyterLab
-  - NumPy & SciPy
-  - CuPy (opcional, biblioteca de arrays compatível com NumPy/SciPy para computação acelerada por GPU com Python)
-  - pandas
-  - cuDF (opcional, para acelerar pandas com zero mudanças de código usando acelerador GPU)
-  - Matplotlib & Seaborn
-  - DALI (opcional, alternativa de alto desempenho aos data loaders e iteradores nativos usando GPU)
-  - scikit-learn
-  - cuML (opcional, para executar algoritmos de machine learning em GPUs com uma API que segue de perto a API do scikit-learn)
-  - PyTorch
-  - tqdm
+Nesta série, instalamos o NVIDIA Container Toolkit e Docker ou Podman e, com base nas imagens CUDA e cuDNN fornecidas pelo [repositório nvidia/cuda](https://hub.docker.com/r/nvidia/cuda) no Docker Hub, escrevemos um Dockerfile para construir um ambiente de desenvolvimento de deep learning. Para quem precisar, compartilho via GitHub e Docker Hub o [Dockerfile](https://github.com/yunseo-kim/dl-env-docker) e a [imagem](https://hub.docker.com/r/yunseokim/dl-env/tags) final produzidos por esse processo, além de fornecer um guia adicional de configuração de SSH e JupyterLab para uso como servidor remoto.  
+A série será composta por 3 posts, e este post que você está lendo é o primeiro da série.
+- Parte 1: Instalação do NVIDIA Container Toolkit e do engine de contêiner (este post)
+- [Parte 2: Configuração do runtime de contêiner para uso de GPU, escrita do Dockerfile e build da imagem de contêiner](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-2)
+- Parte 3 (a ser publicada)
 
-  > Dependendo da situação e preferência pessoal, você pode considerar usar a biblioteca DataFrame [Polars](https://pola.rs/) em vez do pandas. Escrita em Rust, ela [tem desempenho inferior à combinação cuDF + pandas para processamento de grandes volumes de dados, mas supera significativamente o pacote pandas puro](https://docs.rapids.ai/api/cudf/stable/cudf_pandas/benchmarks/) e oferece uma sintaxe mais especializada para consultas. De acordo com o [blog oficial do Polars](https://pola.rs/posts/polars-on-gpu/), eles estão trabalhando com a equipe NVIDIA RAPIDS para suportar integração com cuDF em um futuro próximo.
+Partimos do pressuposto de um sistema Linux x86_64 com uma GPU NVIDIA que suporte CUDA. Não testei diretamente em distribuições além de Ubuntu ou Fedora, então alguns detalhes podem variar ligeiramente.  
+(Revisado em 12026.1.6.)
+
+### Composição do ambiente
+
+- Sistema operacional e arquitetura do host: x86_64, ambiente Linux (Ubuntu 22.04/24.04 LTS, RHEL/Centos, Fedora, openSUSE/SLES 15.x etc.)
+- Stack a ser montada (linguagens e bibliotecas)
+  - [Python 3](https://www.python.org/)
+  - [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit)
+  - [Docker Engine](https://docs.docker.com/engine/) / [Podman](https://podman.io/)
+  - CUDA 12.4 / 12.8 / 13.0
+  - cuDNN 9
+  - [OpenSSH](https://www.openssh.com/)
+  - [tmux](https://github.com/tmux/tmux/wiki)
+  - [JupyterLab](https://jupyter.org/)
+  - [NumPy](https://numpy.org/) & [SciPy](https://scipy.org/)
+  - [CuPy](https://cupy.dev/) (opcional, biblioteca de arrays compatível com NumPy/SciPy para computação acelerada por GPU com Python)
+  - [pandas](https://pandas.pydata.org/)
+  - [cuDF](https://docs.rapids.ai/api/cudf/stable/) (opcional, para acelerar pandas com zero alteração de código usando o acelerador de GPU)
+  - [Matplotlib](https://matplotlib.org/) & [Seaborn](https://seaborn.pydata.org/)
+  - [cuxfilter](https://docs.rapids.ai/api/cuxfilter/stable/) (opcional, para visualizar e filtrar rapidamente grandes datasets com poucas linhas de código, usando bibliotecas de gráficos de alto nível)
+  - [DALI](https://developer.nvidia.com/DALI) (opcional, alternativa de alto desempenho aos data loaders e iteradores embutidos usando GPU)
+  - [scikit-image](https://scikit-image.org/)
+  - [cuCIM](https://docs.rapids.ai/api/cucim/stable/) (opcional, alternativa acelerada para processamento e I/O de imagens n-dimensionais ao scikit-image)
+  - [scikit-learn](https://scikit-learn.org/)
+  - [XGBoost](https://xgboost.ai/)
+  - [cuML](https://docs.rapids.ai/api/cuml/stable/) (opcional, para executar algoritmos de machine learning em GPUs com uma API que segue de perto a API do scikit-learn)
+  - [cuVS](https://docs.rapids.ai/api/cuvs/stable/) (opcional, algoritmos otimizados para vizinhos aproximados e clustering, além de outras ferramentas essenciais para busca vetorial acelerada)
+  - [RAFT](https://docs.rapids.ai/api/raft/stable/) (opcional, primitivas aceleradas por CUDA usadas por outras bibliotecas RAPIDS)
+  - [PyTorch](https://pytorch.org/)
+  - [cuGraph](https://docs.rapids.ai/api/cugraph/stable/) (opcional, biblioteca de analytics de grafos acelerada por GPU que inclui um acelerador “zero-code-change” para NetworkX)
+  - [tqdm](https://tqdm.github.io/)
+
+  > Dependendo da situação e da sua preferência, você também pode considerar usar a biblioteca de DataFrame [Polars](https://pola.rs/) no lugar de pandas. Ela é escrita em Rust e, [embora perca para a combinação cuDF + pandas no processamento de dados em grande escala, apresenta desempenho excelente quando comparada ao pacote pandas “puro”](https://docs.rapids.ai/api/cudf/stable/cudf_pandas/benchmarks/). Além disso, oferece uma sintaxe mais especializada para queries. De acordo com o [blog oficial do Polars](https://pola.rs/posts/polars-on-gpu/) e a [documentação do cuDF](https://docs.rapids.ai/api/cudf/stable/cudf_polars/), o Polars e a equipe do NVIDIA RAPIDS estão colaborando para oferecer, em open beta, um engine de aceleração por GPU baseado em cuDF, e o desenvolvimento está avançando rapidamente.
   {: .prompt-tip }
 
-  > Se você está em dúvida entre Docker CE e Podman, a [tabela comparativa abaixo](#3-instalação-do-motor-de-contêiner) pode ajudar.
+  > Se você estiver em dúvida sobre qual usar entre Docker CE e Podman, a [tabela comparativa apresentada mais adiante](#3-instalacao-do-engine-de-conteiner) pode ajudar.
   {: .prompt-tip }
 
-### Tabela Comparativa com o Guia Anterior de Configuração de Ambiente de Machine Learning
-Já existe [um guia anterior de configuração de ambiente de machine learning neste blog](/posts/Setting-up-a-Machine-Learning-Development-Environment) que ainda é válido em grande parte, mas há algumas mudanças que motivaram este novo post. As diferenças são resumidas na tabela abaixo:
+### Tabela comparativa com o guia de ambiente de ML que escrevi anteriormente
 
-| Diferença | Post Anterior (versão 12021) | Este Post (versão 12024) |
+Já existe um [guia de configuração de ambiente de desenvolvimento de machine learning publicado anteriormente neste blog](/posts/Setting-up-a-Machine-Learning-Development-Environment), mas escrevi este post novamente porque houve várias mudanças. As diferenças estão resumidas na tabela abaixo.
+
+| Diferença | Post antigo (versão 12021) | Este post (escrito em 12024, revisado em 12026) |
 | --- | --- | --- |
-| Distribuição Linux | Baseado no Ubuntu | Aplicável ao Ubuntu e também Fedora/RHEL/Centos,<br> Debian, openSUSE/SLES, etc. |
-| Método de configuração<br> do ambiente | Ambiente virtual Python usando venv | Ambiente baseado em contêiner usando<br> [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit) |
-| Instalação do driver<br> gráfico NVIDIA | Sim | Sim |
-| Instalação direta de CUDA<br> e cuDNN no sistema host | Sim (usando o gerenciador de pacotes Apt) | Não (usando [imagens pré-instaladas fornecidas<br> pela NVIDIA no Docker Hub](https://hub.docker.com/r/nvidia/cuda),<br> eliminando a necessidade de instalação direta) |
-| Portabilidade | Necessidade de reconstruir o ambiente<br> ao migrar para outro sistema | Baseado em Docker, permitindo fácil portabilidade<br> usando o Dockerfile criado para construir novas<br> imagens ou transferir imagens existentes<br> (excluindo configurações adicionais de volume<br> ou rede) |
-| Uso de bibliotecas adicionais<br> de aceleração GPU além<br> do cuDNN | Não | Introdução de [CuPy](https://cupy.dev/), [cuDF](https://docs.rapids.ai/api/cudf/stable/),<br> [cuML](https://docs.rapids.ai/api/cuml/stable/), [DALI](https://developer.nvidia.com/DALI) |
-| Interface Jupyter Notebook | Jupyter Notebook (clássico) | JupyterLab (Nova Geração) |
-| Configuração do servidor SSH | Não abordado | Inclui configuração básica de servidor SSH na parte 3 |
+| Distribuição Linux | Baseado em Ubuntu | Além de Ubuntu, aplicável também em Fedora/RHEL/Centos,<br> Debian, openSUSE/SLES etc. |
+| Método de montagem do ambiente | Instalação direta no host<br>Ambiente virtual Python com venv | Ambiente baseado em contêiner Docker<br> com [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit)<br>Ambiente virtual Python e gestão de pacotes com uv |
+| Instalação do driver gráfico NVIDIA | O | O |
+| Instalação direta de <br>CUDA e cuDNN no host | O (usando o gerenciador Apt) | X ([usa imagens pré-instaladas fornecidas pela NVIDIA<br> no Docker Hub](https://hub.docker.com/r/nvidia/cuda), então não é necessário fazer manualmente) |
+| Portabilidade | Ao migrar para outro sistema, era necessário<br> reconstruir o ambiente do zero | Por ser baseado em Docker, é possível<br> construir novas imagens quando necessário a partir do Dockerfile<br> ou migrar facilmente a imagem usada anteriormente<br> (exceto configurações adicionais de volume ou rede) |
+| Uso de bibliotecas adicionais <br>de aceleração por GPU além de cuDNN | X | Introdução de [CuPy](https://cupy.dev/), [RAPIDS](https://rapids.ai/), [DALI](https://developer.nvidia.com/DALI) |
+| Interface do Jupyter Notebook | Jupyter Notebook (classic) | JupyterLab (Next-Generation) |
+| Configuração de servidor SSH | Não abordado separadamente | Inclui uma configuração básica de servidor SSH |
 
-Se você preferir usar ambientes virtuais Python como venv em vez do Docker, o [post anterior](/posts/Setting-up-a-Machine-Learning-Development-Environment) ainda é válido e recomendado.
+## 0. Verificações prévias
 
-## 0. Verificações Preliminares
-- [O NVIDIA Container Toolkit está disponível para distribuições Linux que suportam os gerenciadores de pacotes Apt, Yum ou Dnf, e Zypper.](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/supported-platforms.html) Você pode verificar a lista de distribuições Linux suportadas no link fornecido. Embora não esteja listado explicitamente na tabela de suporte oficial, o Fedora também é compatível por ser baseado no Red Hat Linux. Se você não está familiarizado com o Linux e não sabe qual distribuição escolher, o Ubuntu LTS é a opção mais segura. Ele inclui drivers proprietários que facilitam o uso para iniciantes, e por ter muitos usuários, a maioria da documentação técnica é escrita com base no Ubuntu.
-  - Você pode verificar a arquitetura do seu sistema e a versão da distribuição Linux executando `uname -m && cat /etc/*release` no terminal.
-- Primeiro, verifique se a placa gráfica instalada no seu sistema suporta a versão CUDA e cuDNN que você pretende usar.
+- [O NVIDIA Container Toolkit pode ser usado em distribuições Linux que suportem os gerenciadores de pacotes Apt, Yum ou Dnf, e Zypper.](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/supported-platforms.html) Na página linkada, você pode conferir a lista de distribuições suportadas. Embora não esteja explicitamente listado na tabela oficial de suporte, o Fedora também é baseado em Red Hat Linux (como o RHEL), então pode ser usado sem problemas. Se você não tem familiaridade com Linux e não sabe qual distribuição usar, a opção mais segura é usar o Ubuntu LTS. Drivers proprietários (não open source) também costumam ser instalados automaticamente, o que é relativamente conveniente para iniciantes, e como há muitos usuários, a maioria da documentação técnica é escrita com base em Ubuntu.
+  - Você pode verificar a arquitetura do sistema e a versão da distribuição Linux em uso executando `uname -m && cat /etc/*release` no terminal.
+- Primeiro, é necessário verificar se a GPU instalada no sistema suporta as versões de CUDA e cuDNN que você pretende usar.
   - Você pode verificar o modelo da GPU instalada executando `lspci | grep -i nvidia` no terminal.
-  - Na página <https://docs.nvidia.com/deeplearning/cudnn/latest/reference/support-matrix.html>, verifique a **versão do driver NVIDIA** suportada por cada versão do cuDNN, os requisitos de **CUDA Compute Capability**, e a lista de **hardware NVIDIA suportado**.
-  - Em <https://developer.nvidia.com/cuda-gpus>, encontre seu modelo de GPU e verifique seu valor de **Compute Capability**. Este valor deve atender aos requisitos de **CUDA Compute Capability** verificados anteriormente para usar CUDA e cuDNN sem problemas.
+  - Na página <https://docs.nvidia.com/deeplearning/cudnn/latest/reference/support-matrix.html>, confira por versão do cuDNN: a **versão do driver gráfico NVIDIA suportada**, os requisitos de **CUDA Compute Capability** e a lista de **hardware NVIDIA suportado**.
+  - Na lista de GPUs em <https://developer.nvidia.com/cuda-gpus>, encontre o modelo correspondente e verifique o valor de **Compute Capability**. Esse valor deve satisfazer o requisito de **CUDA Compute Capability** verificado acima para que CUDA e cuDNN funcionem sem problemas.
 
-> Se você planeja comprar uma nova placa gráfica para deep learning, os critérios de seleção de GPU estão bem resumidos no seguinte artigo, que o autor atualiza continuamente:  
-> [Which GPU(s) to Get for Deep Learning](https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/)  
-> Outro artigo muito útil do mesmo autor é [A Full Hardware Guide to Deep Learning](https://timdettmers.com/2018/12/16/deep-learning-hardware-guide/).
+> Se você pretende comprar uma nova GPU para deep learning, os critérios de seleção estão bem organizados no post abaixo (o autor atualiza de tempos em tempos):  
+> - [Which GPU(s) to Get for Deep Learning](https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/)
+>
+> Além da GPU, se você precisar de um guia de configuração de hardware de forma mais ampla, o post [A Full Hardware Guide to Deep Learning](https://timdettmers.com/2018/12/16/deep-learning-hardware-guide/) do mesmo autor também é muito útil.
 {: .prompt-tip }
 
-Se você atender a todos os requisitos mencionados acima, vamos começar a configurar o ambiente de trabalho.
+Se você atende a todos os requisitos citados acima, vamos começar a montar o ambiente.
 
-## 1. Instalação do Driver Gráfico NVIDIA
-Primeiro, você precisa instalar o driver gráfico NVIDIA no sistema host. Você pode baixar o instalador .run da [página de download de drivers NVIDIA](https://www.nvidia.com/drivers/), mas é preferível usar o gerenciador de pacotes do seu sistema para facilitar o gerenciamento de versões e manutenção. Consulte a documentação oficial <https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#driver-installation> e instale o driver gráfico adequado para seu ambiente.
+## 1. Instalação do driver gráfico NVIDIA
 
-### Módulo Proprietário vs Módulo Open-source
-Os drivers Linux da NVIDIA consistem em vários módulos de kernel, e a partir do driver versão 515 e posteriores, a NVIDIA oferece dois tipos de módulos de kernel:
+Primeiro, é preciso instalar o driver gráfico NVIDIA no host. Você pode baixar e usar o instalador `.run` na [página de download de drivers da NVIDIA](https://www.nvidia.com/drivers/), mas, sempre que possível, é melhor instalar via o gerenciador de pacotes do seu sistema, do ponto de vista de versionamento e manutenção. Consulte a documentação oficial em <https://docs.nvidia.com/cuda/cuda-installation-guide-linux/#driver-installation> e instale o driver adequado ao seu ambiente.
 
-- Proprietário: O driver de software proprietário que a NVIDIA fornecia tradicionalmente.
-- Open-source: Driver de código aberto fornecido sob licença dupla MIT/GPLv2. O código-fonte está disponível em <https://github.com/NVIDIA/open-gpu-kernel-modules>.
+### Módulo proprietário vs módulo open source
 
-Os drivers proprietários são fornecidos para GPUs baseadas em arquiteturas desde Maxwell até antes de Blackwell, e serão descontinuados a partir da arquitetura Blackwell.
-Por outro lado, os drivers open-source são suportados para arquiteturas Turing e posteriores.
+O driver NVIDIA para Linux é composto por vários módulos de kernel e, a partir do driver versão 515 e releases posteriores, a NVIDIA passou a oferecer dois tipos de módulos de kernel do driver.
 
-[A NVIDIA recomenda usar o módulo de kernel open-source quando possível.](https://us.download.nvidia.com/XFree86/Linux-x86_64/560.35.03/README/kernel_open.html)
-Você pode verificar se sua GPU é compatível com o driver open-source [neste link](https://github.com/NVIDIA/open-gpu-kernel-modules?tab=readme-ov-file#compatible-gpus).
+- Proprietary: driver proprietário que a NVIDIA vinha fornecendo tradicionalmente.
+- Open-source: driver open source sob licença dupla MIT/GPLv2. O código-fonte é publicado em <https://github.com/NVIDIA/open-gpu-kernel-modules>.
 
-Este guia assume a instalação do driver open-source.
+O driver Proprietary é fornecido para GPUs projetadas com base em arquiteturas desde Maxwell até antes de Blackwell, e deverá ser descontinuado a partir da arquitetura Blackwell.  
+Já o driver Open-source é suportado para Turing e arquiteturas posteriores.
+
+[A NVIDIA recomenda usar os módulos de kernel open source sempre que possível.](https://us.download.nvidia.com/XFree86/Linux-x86_64/560.35.03/README/kernel_open.html)  
+Você pode verificar se a sua GPU é compatível com o driver open source [neste link](https://github.com/NVIDIA/open-gpu-kernel-modules?tab=readme-ov-file#compatible-gpus).
+
+Neste post, vou assumir a instalação do driver open source.
 
 ### Debian & Ubuntu
-Para Ubuntu ou Debian, execute os seguintes comandos no terminal:
+
+No Ubuntu ou Debian, execute os comandos abaixo no terminal:
 ```bash
 sudo apt update
 sudo apt install nvidia-open
 ```
 
 ### Fedora
-Para Fedora 40, apresentamos o método de instalação usando pacotes pré-compilados fornecidos pelo [RPM Fusion](https://rpmfusion.org/RPM%20Fusion).
 
-#### 1-Fedora-1. Configuração do Repositório RPM Fusion  
-Seguindo o [guia oficial do RPM Fusion](https://rpmfusion.org/Configuration), execute o seguinte comando no terminal:
+Com base no Fedora 40, apresento o método de baixar e instalar os pacotes pré-compilados fornecidos pelo [RPM Fusion](https://rpmfusion.org/RPM%20Fusion).
+
+#### 1-Fedora-1. Configuração do repositório RPM Fusion
+
+Siga o [guia oficial do RPM Fusion](https://rpmfusion.org/Configuration).  
+Execute os comandos abaixo no terminal.
+
 ```bash
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 ```
 
-#### 1-Fedora-2. Instalação do Pacote akmod-nvidia-open  
-Seguindo o [guia de instalação de drivers NVIDIA do RPM Fusion](https://rpmfusion.org/Howto/NVIDIA?highlight=%28%5CbCategoryHowto%5Cb%29#Kernel_Open), ative o repositório rpmfusion-nonfree-tainted e instale o pacote akmod-nvidia-open:
+> Em versões antigas do DNF (Fedora 40 e anteriores), a linha de comando para habilitar o repositório da biblioteca openh264 na segunda linha era a seguinte:
+>
+> ```bash
+> sudo dnf config-manager --enable fedora-cisco-openh264
+> ```
+>
+> Porém, a partir do DNF 5 (Fedora 41+), em vez disso é necessário usar:
+>
+> ```bash
+> sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
+> ```
+>
+> Atualizei o conteúdo do post para refletir isso.
+{: .prompt-info }
+
+#### 1-Fedora-2. Instalação do pacote akmod-nvidia
+
+Com base no [guia de instalação do driver NVIDIA fornecido pelo RPM Fusion](https://rpmfusion.org/Howto/NVIDIA), instale o pacote akmod-nvidia.
+
 ```bash
-sudo dnf update --refresh
-sudo dnf install rpmfusion-nonfree-release-tainted
-sudo dnf install akmod-nvidia-open
-sudo dnf mark user akmod-nvidia-open
+sudo dnf update  # se houver atualização de kernel nesta etapa, reinicie no kernel mais recente e continue
+sudo dnf install akmod-nvidia
+sudo dnf mark user akmod-nvidia
 ```
 
-> Nas versões antigas do DNF (Fedora 40 e anteriores), a linha de comando usada na última linha para evitar que o driver NVIDIA fosse removido pelo `autoremove` era a seguinte.
+> Da mesma forma, em versões antigas do DNF (Fedora 40 e anteriores), a linha de comando da terceira linha para evitar que o driver NVIDIA fosse removido por autoremove era:
 >
 > ```bash
-> sudo dnf mark install akmod-nvidia-open
+> sudo dnf mark install akmod-nvidia
 > ```
 >
-> No entanto, a partir do DNF 5 (Fedora 41+), em vez da linha de comando acima
+> Porém, a partir do DNF 5 (Fedora 41+), em vez disso é necessário usar:
 >
 > ```bash
-> sudo dnf mark user akmod-nvidia-open
+> sudo dnf mark user akmod-nvidia
 > ```
 >
-> é essa que deve ser utilizada, e o conteúdo principal já foi atualizado para refletir essa mudança.
-{: .prompt-tip }
+> Atualizei o conteúdo do post para refletir isso.
+{: .prompt-info }
 
-#### 1-Fedora-3. Registro de Chave para Carregamento Correto do Driver com Secure Boot  
+> Por outro lado, no passado o RPM Fusion mostrava uma posição negativa em relação aos [módulos de kernel open source da NVIDIA](#modulo-proprietario-vs-modulo-open-source) e, a menos que você especificasse algo, fornecia por padrão o driver Proprietary. No entanto, de acordo com a [diretriz recente do RPM Fusion (alterada em dezembro de 12025)](https://rpmfusion.org/Howto/NVIDIA?highlight=%28%5CbCategoryHowto%5Cb%29#Kernel_Open), para hardwares com suporte duplicado (arquiteturas de Turing até antes de Blackwell), ele agora selecionará automaticamente a melhor opção entre as duas e, portanto, não seria necessário escolher manualmente. Para arquiteturas antigas anteriores a Turing, e para arquiteturas mais recentes como Blackwell e posteriores, já existia apenas uma opção desde antes, então não há mudanças.
+> Com isso, confirmei que foi removido o conteúdo sobre especificar a opção de uso do módulo open source via `/etc/rpm/macros.nvidia-kmod`.
+>
+> Além disso, no caso do pacote `akmod-nvidia-open`, é recomendado não usá-lo, a menos que você precise aplicar diretamente alterações downstream no driver em kernel space.
+>
+> Também incorporei esses pontos ao post.
+{: .prompt-info }
 
-> Com apenas alguns procedimentos adicionais explicados abaixo, você pode usar normalmente o driver gráfico NVIDIA com o Secure Boot ativado. Desativar o Secure Boot torna o sistema significativamente vulnerável, então é recomendado não desativá-lo. Pelo menos desde o início da década de 12020, raramente há motivo para desativar o Secure Boot.
+#### 1-Fedora-3. Registro de chave para carregar corretamente o driver com Secure Boot habilitado
+
+> Com apenas alguns passos adicionais como descrito abaixo, é possível usar normalmente o driver gráfico NVIDIA mantendo o Secure Boot ativado. Como desativar o Secure Boot torna o sistema significativamente mais vulnerável, recomendo não desativá-lo. Pelo menos desde que entramos nos anos 12020, dificilmente há motivo para desativar o Secure Boot.
 {: .prompt-danger }
 
-Primeiro, instale as seguintes ferramentas:
+Primeiro, instale as ferramentas abaixo.
+
 ```bash
 sudo dnf install kmodtool akmods mokutil openssl
 ```
 
-Em seguida, execute o comando abaixo para gerar uma chave:
+Em seguida, gere a chave executando:
+
 ```bash
 sudo kmodgenca -a
 ```
-Agora, você precisa registrar a chave gerada no MOK do firmware UEFI:
+
+Agora é necessário registrar a chave gerada no MOK do firmware UEFI.
+
 ```bash
 sudo mokutil --import /etc/pki/akmods/certs/public_key.der
 ```
-Ao executar este comando, será solicitada uma senha para o registro da chave. Esta é uma senha de uso único que você usará após reiniciar, então escolha algo que possa lembrar facilmente.
 
-Agora reinicie o sistema com o seguinte comando:
+Ao executar esse comando, será solicitado que você digite uma senha para registro da chave. Em breve você reiniciará o sistema para concluir o processo; essa senha será usada apenas uma vez nesse momento, então digite algo que consiga lembrar.
+
+Agora reinicie o sistema:
+
 ```bash
 systemctl reboot
 ```
-Durante a inicialização, a tela de gerenciamento MOK aparecerá automaticamente. Selecione "Enroll MOK", depois "Continue" e "Yes" em sequência, e então será solicitada a senha que você definiu anteriormente. Após inserir a senha, o processo de registro da chave será concluído. Digite reboot para reiniciar novamente, e o driver NVIDIA será carregado normalmente.
 
-### Verificação da Instalação do Driver NVIDIA
-Execute o seguinte comando no terminal para verificar o módulo de kernel NVIDIA atualmente carregado:
+Durante a inicialização, a tela de gerenciamento do MOK aparecerá automaticamente. Selecione “Enroll MOK” e então escolha “Continue” e “Yes” em seguida; aparecerá uma tela solicitando a senha que você definiu há pouco. Após inserir a senha, o registro da chave será concluído. Agora, ao digitar reboot para inicializar novamente, o driver NVIDIA deverá ser carregado corretamente.
+
+### Verificando a instalação do driver NVIDIA
+
+No terminal, você pode verificar os módulos de kernel NVIDIA atualmente carregados com:
+
 ```bash
 cat /proc/driver/nvidia/version
 ```
-Se você ver uma mensagem semelhante à seguinte, a instalação foi bem-sucedida:
+
+Se uma mensagem semelhante à seguinte aparecer, a instalação foi bem-sucedida.
+
 ```bash
 NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  555.58.02  Release Build  (dvs-builder@U16-I3-B03-4-3)  Tue Jun 25 01:26:03 UTC 2024
 GCC version:  gcc version 14.2.1 20240801 (Red Hat 14.2.1-1) (GCC) 
 ```
 
-## 2. Instalação do NVIDIA Container Toolkit
-Agora você precisa instalar o [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit). Siga o [guia oficial de instalação do NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html), mas observe que há considerações especiais para o Fedora, então leia esta seção até o final antes de prosseguir.
+Além disso, o driver gráfico open source **nouveau** (módulo de kernel), que em muitos casos é adotado por padrão no Linux, deve ficar desativado após instalar o driver NVIDIA; caso contrário, pode causar problemas. Após instalar o driver NVIDIA e reiniciar, ao executar o comando abaixo não deve haver saída alguma.
 
-### Para usuários de Apt (Ubuntu, Debian, etc.)
-#### 2-Apt-1. Configuração do Repositório para Download de Pacotes
+```bash
+lsmod |grep nouveau
+```
+
+## 2. Instalação do NVIDIA Container Toolkit
+
+Agora é necessário instalar o [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit). Siga o [guia oficial de instalação do NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html), mas, no caso do Fedora, há pontos de atenção durante a instalação; portanto, leia esta seção até o fim antes de prosseguir.
+
+### Caso use Apt (Ubuntu, Debian etc.)
+
+#### 2-Apt-1. Configurar o repositório para download dos pacotes
+
 ```bash
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
 && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
@@ -180,63 +243,74 @@ curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dear
   sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 ```
 
-#### 2-Apt-2. Atualização da Lista de Pacotes
+#### 2-Apt-2. Atualizar a lista de pacotes
+
 ```bash
 sudo apt update
 ```
 
-#### 2-Apt-3. Instalação do Pacote
+#### 2-Apt-3. Instalar os pacotes
+
 ```bash
 sudo apt install nvidia-container-toolkit
 ```
 
-### Para usuários de Yum ou Dnf (Fedora, RHEL, Centos, etc.)
-> Ao testar no Fedora 40, diferentemente do Ubuntu, o comando `nvidia-smi` e o pacote `nvidia-persistenced` não estavam incluídos por padrão no driver gráfico NVIDIA, sendo necessário instalar o pacote `xorg-x11-drv-nvidia-cuda` adicionalmente. Não testei diretamente no RHEL e Centos, mas como a configuração do sistema é muito semelhante ao Fedora, se você encontrar problemas seguindo este guia, tentar o mesmo método pode ser útil.
+### Caso use Yum ou Dnf (Fedora, RHEL, Centos etc.)
+
+> Ao testar no Fedora 40, diferentemente do Ubuntu, o comando `nvidia-smi` e o pacote `nvidia-persistenced` não vinham incluídos por padrão no driver gráfico NVIDIA, então foi necessário instalar adicionalmente o pacote `xorg-x11-drv-nvidia-cuda`. Não testei diretamente em RHEL e Centos, mas como a composição do sistema é bastante semelhante à do Fedora, se ocorrer algum problema ao seguir o guia abaixo, pode ser útil tentar o mesmo método.
 {: .prompt-warning }
 
-> No Fedora 40, após instalar o `xorg-x11-drv-nvidia-cuda` conforme descrito acima e testar com uma carga de trabalho de exemplo, funcionou normalmente no meu sistema. Se você ainda encontrar problemas, possivelmente devido ao SELinux, o [pacote nvidia-container-toolkit específico para Fedora e guia fornecido pelo grupo AI-ML do Fedora](https://copr.fedorainfracloud.org/coprs/g/ai-ml/nvidia-container-toolkit/) pode ser útil.
+> Ao instalar `xorg-x11-drv-nvidia-cuda` pelo método acima no Fedora 40 e executar um workload de exemplo para testar, no meu sistema funcionou corretamente. Se ainda houver problemas por motivos como SELinux etc., o [pacote e guia específicos para Fedora do nvidia-container-toolkit](https://copr.fedorainfracloud.org/coprs/g/ai-ml/nvidia-container-toolkit/) fornecidos pelo grupo AI-ML do Fedora também podem ajudar.
 {: .prompt-tip }
 
-#### 2-Dnf-1. Configuração do Repositório para Download de Pacotes
+#### 2-Dnf-1. Configurar o repositório para download dos pacotes
+
 ```bash
 curl -s -L https://nvidia.github.io/libnvidia-container/stable/rpm/nvidia-container-toolkit.repo | \
 sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo
 ```
 
-#### 2-Dnf-2. Instalação do Pacote
+#### 2-Dnf-2. Instalar os pacotes
+
 ```bash
 sudo dnf install nvidia-container-toolkit
 ```
-ou
+
+Ou
+
 ```bash
 sudo yum install nvidia-container-toolkit
 ```
 
-### Para usuários de Zypper (openSUSE, SLES)
-#### 2-Zypper-1. Configuração do Repositório para Download de Pacotes
+### Caso use Zypper (openSUSE, SLES)
+
+#### 2-Zypper-1. Configurar o repositório para download dos pacotes
+
 ```bash
 sudo zypper ar https://nvidia.github.io/libnvidia-container/stable/rpm/nvidia-container-toolkit.repo
 ```
 
-#### 2-Zypper-2. Instalação do Pacote
+#### 2-Zypper-2. Instalar os pacotes
+
 ```bash
 sudo zypper --gpg-auto-import-keys install nvidia-container-toolkit
 ```
 
-## 3. Instalação do Motor de Contêiner
-Em seguida, instale Docker CE ou Podman como motor de contêiner. Escolha um deles de acordo com seu ambiente e preferência, consultando a [documentação oficial do Docker](https://docs.docker.com/engine/install/) ou a [documentação oficial do Podman](https://podman.io/docs/installation).
+## 3. Instalação do engine de contêiner
 
-A tabela a seguir resume as principais diferenças e vantagens/desvantagens entre Docker e Podman.
+Em seguida, instale Docker CE ou Podman como engine de contêiner. Você pode escolher um dos dois conforme seu ambiente e preferência; consulte a [documentação oficial do Docker](https://docs.docker.com/engine/install/) e a [documentação oficial do Podman](https://podman.io/docs/installation).
 
-| Item de Comparação | Docker | Podman |
+A tabela abaixo resume as principais diferenças e prós/contras do Docker e do Podman.
+
+| Item de comparação | Docker | Podman |
 | --- | --- | --- |
-| Arquitetura | Modelo cliente-servidor, baseado em daemon | Estrutura sem daemon (daemonless) |
-| Segurança | Potenciais riscos de segurança por depender de<br> um daemon executado com privilégios root<br> (suporta modo rootless desde a versão 20.10<br> lançada em 12020, mas requer configuração adicional) | Não depende de daemon, opera por padrão<br> em modo rootless e é protegido pelo SELinux |
-| Uso de Recursos | Maior consumo de recursos devido ao processo<br> de daemon em segundo plano | Geralmente menor overhead de recursos |
-| Tempo de Inicialização<br> do Contêiner | Relativamente mais lento | Até 50% mais rápido devido à<br> arquitetura simplificada |
-| Ecossistema e<br> Documentação | Amplo ecossistema e suporte comunitário,<br> documentação abundante | Ecossistema e documentação<br> relativamente menores |
-| Redes | Usa Docker Bridge Network | Usa plugins CNI<br> (Container Network Interface) |
-| Suporte Nativo a<br> YAML do Kubernetes | Não (requer conversão) | Sim |
+| Arquitetura | Modelo cliente-servidor, baseado em daemon | Estrutura daemonless |
+| Segurança | Depende de um daemon que roda com privilégios root <br>por padrão, então há risco potencial de segurança<br>(a partir da versão 20.10 lançada em 12020, suporta<br> modo rootless, mas requer configuração adicional) | Não depende de daemon e, a menos que você especifique<br> o contrário, funciona em modo rootless por padrão,<br> protegido por SELinux |
+| Uso de recursos | Por ser baseado em daemon, há um processo em<br> segundo plano rodando continuamente; em geral,<br> consome mais recursos | Em geral, menor overhead |
+| Tempo de inicialização do contêiner | Relativamente mais lento | Arquitetura simplificada: até ~50%<br> mais rápido |
+| Ecossistema e documentação | Ecossistema amplo e suporte de comunidade,<br> muita documentação | Ecossistema menor e menos documentação |
+| Networking | Usa Docker Bridge Network | Usa plugins CNI (Container Network Interface) |
+| Suporte nativo a<br> Kubernetes YAML | X (precisa converter) | O |
 
 Referências:
 - <https://www.redhat.com/en/topics/containers/what-is-podman>
@@ -244,37 +318,93 @@ Referências:
 - <https://apidog.com/blog/docker-vs-podman/>
 - <https://www.privacyguides.org/articles/2022/04/22/linux-application-sandboxing/#securing-linux-containers>
 
-Docker tem uma história mais longa e desfrutou do status de padrão de facto na indústria, resultando em um ecossistema mais amplo e documentação abundante, o que é sua maior vantagem.  
-Podman foi desenvolvido mais recentemente pela Red Hat e, por design, visa ser daemonless e rootless, oferecendo vantagens em segurança, uso de recursos do sistema e tempo de inicialização de contêineres. Outra vantagem do Podman é que, diferentemente do Docker, onde todos os contêineres caem juntos se o daemon tiver problemas, cada contêiner é completamente independente, então a queda de um contêiner específico não afeta os outros.
+O Docker tem uma história mais longa e foi, na prática, o padrão de fato da indústria, então seu maior ponto forte é a existência de um ecossistema amplo e muita documentação relacionada.  
+O Podman foi desenvolvido mais recentemente pela Red Hat e, por ter uma estrutura mais moderna que prioriza daemonless e rootless desde a origem, tem vantagens em vários aspectos, como segurança, uso de recursos do sistema e tempo de inicialização do contêiner. Outra vantagem do Podman é que, ao contrário do Docker (onde se o daemon cai todos os contêineres caem junto), cada contêiner é totalmente independente, então a queda de um contêiner específico não afeta os demais.
 
-É importante escolher a ferramenta que melhor se adapta às suas circunstâncias, e para usuários individuais iniciantes, começar com Podman pode ser uma boa escolha. Embora seu ecossistema seja relativamente menor comparado ao Docker, está crescendo rapidamente devido às vantagens mencionadas, e como é compatível com a sintaxe Dockerfile, imagens Docker e CLI (interface de linha de comando), isso não deve ser um problema para indivíduos ou pequenos grupos.
+O mais importante é escolher a ferramenta adequada às suas condições e necessidades; no entanto, para quem está começando, parece uma boa escolha iniciar com Podman. Embora o ecossistema seja menor do que o do Docker, graças às vantagens mencionadas ele cresce rapidamente e vem reduzindo a diferença; além disso, é compatível com muitos aspectos do Docker, como a sintaxe de Dockerfile, imagens Docker e a CLI (interface de linha de comando). A menos que você já tenha um sistema de grande escala baseado em Docker e a adoção do Podman implique um alto custo de migração, é mais racional adotar Podman desde o início.
 
 ### Podman
-Disponível nos repositórios padrão da maioria das principais distribuições Linux, pode ser instalado facilmente.
 
-#### Para Ubuntu
+Como a maioria das principais distribuições Linux oferece suporte via repositórios padrão do sistema, a instalação é simples.
+
+#### No Ubuntu
+
 ```bash
 sudo apt install podman
 ```
 
-#### Para Fedora
+#### No Fedora
+
 ```bash
 sudo dnf install podman
 ```
 
-#### Para openSUSE
+#### No openSUSE
+
 ```bash
 sudo zypper install podman
 ```
 
+#### Verificando se está configurado corretamente
+
+Execute o comando abaixo no terminal:
+
+```bash
+podman run --rm hello-world
+```
+
+Se aparecer uma mensagem como a seguir, deu certo.
+
+```bash
+!... Hello Podman World ...!
+
+         .--"--.           
+       / -     - \         
+      / (O)   (O) \        
+   ~~~| -=(,Y,)=- |         
+    .---. /`  \   |~~      
+ ~/  o  o \~~~~.----. ~~   
+  | =(X)= |~  / (O (O) \   
+   ~~~~~~~  ~| =(Y_)=-  |   
+  ~~~~    ~~~|   U      |~~ 
+
+Project:   https://github.com/containers/podman
+Website:   https://podman.io
+Desktop:   https://podman-desktop.io
+Documents: https://docs.podman.io
+YouTube:   https://youtube.com/@Podman
+X/Twitter: @Podman_io
+Mastodon:  @Podman_io@fosstodon.org
+```
+
+> Ao testar em 12025-12-18T00:43:00+09:00 com podman versão 5.7.1, [passt](https://passt.top/passt/about/) `20251215.gb40f5cd-1.fc43.x86_64`, em ambiente Fedora 43, ao executar o hello-world acima e também ao rodar contêineres ou fazer build de imagens, ocorreu o seguinte erro:
+>
+> ```bash
+> Error: pasta failed with exit code 1:
+> Couldn't set IPv6 route(s) in guest: Operation not supported
+> ```
+>
+> Apesar de eu não usar IPv6 e estar em uma rede IPv4, o problema parece ocorrer porque, na etapa de configuração de rede do contêiner, o pasta (incluído na biblioteca passt) tenta configurar roteamento IPv6. Confirmei que, ao especificar explicitamente `--net=pasta:-4` para forçar IPv4, como abaixo, o problema não ocorre durante a execução do contêiner ou na [etapa de build da imagem descrita mais adiante](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-2/#6-construindo-a-imagem-docker-e-executando-o-conteiner).
+>
+> ```bash
+> podman run --net=pasta:-4 --rm hello-world
+> ```
+>
+> Pesquisando, encontrei [um issue registrado anteriormente com o mesmo sintoma](https://github.com/containers/podman/issues/22824). O issue teria sido corrigido em [2024_06_24.1ee2eca](https://archives.passt.top/passt-user/20240624210651.61ce77af@elisabeth/), mas como o sintoma observado é idêntico e vários detalhes (como o fato de ter ocorrido usando Proton VPN) são muito parecidos, suspeito que um problema semelhante tenha reaparecido.
+{: .prompt-warning }
+
 ### Docker CE
-#### Para Ubuntu
-##### 3-Ubuntu-1. Remoção de Versões Anteriores ou Pacotes Não Oficiais para Evitar Conflitos
+
+#### No Ubuntu
+
+##### 3-Ubuntu-1. Remover versões antigas ou pacotes não oficiais para evitar conflitos
+
 ```bash
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt remove $pkg; done
 ```
 
-##### 3-Ubuntu-2. Configuração do Repositório
+##### 3-Ubuntu-2. Configurar o repositório
+
 ```bash
 # Add Docker's official GPG key:
 sudo apt update
@@ -290,21 +420,27 @@ echo \
 sudo apt update
 ```
 
-##### 3-Ubuntu-3. Instalação dos Pacotes
+##### 3-Ubuntu-3. Instalar os pacotes
+
 ```bash
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-##### 3-Ubuntu-4. Criação do Grupo `Docker` e Registro de Usuário
-Para permitir que usuários não-root gerenciem o Docker sem `sudo`, crie um grupo `Docker` e adicione os usuários que desejam usar o Docker. Execute os seguintes comandos no terminal:
+##### 3-Ubuntu-4. Criar o grupo `Docker` e registrar o usuário
+
+Para permitir que usuários non-root gerenciem Docker sem `sudo`, crie o grupo `Docker` e adicione o usuário que vai usar Docker. Execute:
+
 ```bash
 sudo groupadd docker
 sudo usermod -aG docker $USER
 ```
-Depois, faça logout e login novamente para aplicar as configurações alteradas. No Ubuntu ou Debian, o serviço Docker é iniciado automaticamente a cada inicialização do sistema sem necessidade de configuração adicional.
 
-#### Para Fedora
-##### 3-Fedora-1. Remoção de Versões Anteriores ou Pacotes Não Oficiais para Evitar Conflitos
+Depois disso, faça logout e login novamente para aplicar a configuração. No Ubuntu ou Debian, sem ações adicionais, o serviço do Docker inicia automaticamente a cada boot do sistema.
+
+#### No Fedora
+
+##### 3-Fedora-1. Remover versões antigas ou pacotes não oficiais para evitar conflitos
+
 ```bash
 sudo dnf remove docker \
                 docker-client \
@@ -318,44 +454,57 @@ sudo dnf remove docker \
                 docker-engine
 ```
 
-##### 3-Fedora-2. Configuração do Repositório
+##### 3-Fedora-2. Configurar o repositório
+
 ```bash
 sudo dnf install dnf-plugins-core
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 ```
 
-##### 3-Fedora-3. Instalação dos Pacotes
+##### 3-Fedora-3. Instalar os pacotes
+
 ```bash
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
-Durante a instalação, você será solicitado a aprovar uma chave GPG. Se a chave GPG corresponder a `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35`, digite y para aprovar.  
-> Se a chave GPG não corresponder, você pode estar baixando um pacote falsificado por um ataque à cadeia de suprimentos e deve interromper a instalação.
+
+Durante a instalação, aparecerá um prompt perguntando se você deseja aprovar a chave GPG. Se a chave GPG corresponder a `060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35`, digite `y` para aprovar.  
+> Se a chave GPG não corresponder, pode ser que você tenha baixado um pacote falsificado por um ataque à cadeia de suprimentos; nesse caso, você deve interromper a instalação.
 {: .prompt-danger }
 
-##### 3-Fedora-4. Inicialização do Daemon Docker
-Agora o Docker está instalado, mas não iniciado. Execute o seguinte comando para iniciar o Docker:
+##### 3-Fedora-4. Iniciar o daemon do Docker
+
+Agora o Docker está instalado, mas ainda não está em execução. Para iniciá-lo:
+
 ```bash
 sudo systemctl start docker
 ```
-Para que o serviço Docker seja iniciado automaticamente na inicialização do sistema, execute:
+
+Para iniciar automaticamente o serviço do Docker no boot do sistema:
+
 ```bash
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
 
-##### 3-Fedora-5. Registro de Usuário no Grupo `Docker`
-Para permitir que usuários não-root gerenciem o Docker, adicione-os ao grupo `Docker`. No Fedora, o grupo `Docker` é criado automaticamente durante a instalação do pacote, então você só precisa registrar os usuários:
+##### 3-Fedora-5. Registrar o usuário no grupo `Docker`
+
+Para permitir que usuários non-root gerenciem Docker, registre o usuário que vai usar Docker no grupo `Docker`. No Fedora, o grupo `Docker` é criado automaticamente durante a instalação; portanto, basta registrar o usuário.
+
 ```bash
 sudo usermod -aG docker $USER
 ```
-Depois, faça logout e login novamente para aplicar as configurações alteradas.
 
-#### Verificação da Configuração
-Execute o seguinte comando no terminal:
+Depois disso, faça logout e login novamente para aplicar a configuração.
+
+#### Verificando se está configurado corretamente
+
+Execute o comando abaixo no terminal:
+
 ```bash
 docker run hello-world
 ```
-Se você ver uma mensagem como esta, a configuração foi bem-sucedida:
+
+Se a saída for semelhante à abaixo, deu certo.
 
 ```bash
 Hello from Docker!
@@ -380,5 +529,5 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
-## Leitura Adicional
+## Leitura adicional
 Continua na [Parte 2](/posts/how-to-build-a-deep-learning-development-environment-with-nvidia-container-toolkit-and-docker-2)
