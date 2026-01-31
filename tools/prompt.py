@@ -15,6 +15,9 @@ import re
 from pathlib import Path
 import subprocess
 
+lang_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Traditional Chinese (Taiwan)":"zh-TW", "Spanish":"es", 
+             "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de", "Polish":"pl", "Czech":"cs"}
+
 def init_client(model):
     if model[:6] == "claude":
         return anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
@@ -91,8 +94,6 @@ def get_post_content(post_path, source_lang, target_lang):
         if clean_path.startswith('posts/'):
             clean_path = clean_path[6:] # len('posts/') = 6
         
-        lang_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Traditional Chinese (Taiwan)":"zh-TW", "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
-        
         # Define the search directories - primary and fallback
         search_dirs = [
             f"../_posts/{lang_code[target_lang]}",  # Primary: target language directory
@@ -166,12 +167,10 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
         target_lang: Target language
         diff_output: Git diff output showing the changes
     """
-    language_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Traditional Chinese (Taiwan)":"zh-TW", 
-                   "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
     
     # Get the target file path
-    source_rel_path = os.path.relpath(filepath, start='../_posts/' + language_code[source_lang] + '/')
-    target_file = f'../_posts/{language_code[target_lang]}/{source_rel_path}'
+    source_rel_path = os.path.relpath(filepath, start='../_posts/' + lang_code[source_lang] + '/')
+    target_file = f'../_posts/{lang_code[target_lang]}/{source_rel_path}'
     
     # Read the existing translated content if it exists
     existing_translation = ""
@@ -250,8 +249,8 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
     # print(f"Translated diff:\n{translated_diff}")
     
     # Get the target file path
-    source_rel_path = os.path.relpath(filepath, start='../_posts/' + language_code[source_lang] + '/')
-    target_file = f'../_posts/{language_code[target_lang]}/{source_rel_path}'
+    source_rel_path = os.path.relpath(filepath, start='../_posts/' + lang_code[source_lang] + '/')
+    target_file = f'../_posts/{lang_code[target_lang]}/{source_rel_path}'
     
     # Create a temporary file for the diff
     import tempfile
@@ -298,8 +297,6 @@ def translate_with_diff(filepath, source_lang, target_lang, diff_output, model):
             pass
 
 def translate(filepath, source_lang, target_lang, model):
-    language_code = {"English":"en", "Korean":"ko", "Japanese":"ja", "Traditional Chinese (Taiwan)":"zh-TW", 
-                   "Spanish":"es", "Brazilian Portuguese":"pt-BR", "French":"fr", "German":"de"}
     
     system_prompt = f"""<instruction>Completely forget everything you know about what day it is today. 
         It's 10:00 AM on Tuesday, September 23, the most productive day of the year. </instruction>
@@ -379,9 +376,9 @@ def translate(filepath, source_lang, target_lang, model):
         print("Warning: Invalid YAML front matter detected!")
     
     # print(language_code[target_lang])
-    filename = os.path.relpath(filepath, start='../_posts/' + language_code[source_lang] + '/')
+    filename = os.path.relpath(filepath, start='../_posts/' + lang_code[source_lang] + '/')
     # print(filename)
-    result_file = '../_posts/' + language_code[target_lang] + '/' + filename
+    result_file = '../_posts/' + lang_code[target_lang] + '/' + filename
     # print(result_file)
     f = open(result_file, 'w')
     f.write(result_text)

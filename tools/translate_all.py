@@ -26,9 +26,8 @@ def is_valid_file(filename):
 
 posts_dir = '../_posts/'
 source_lang = "Korean"
-target_langs = ["English", "Japanese", "Traditional Chinese (Taiwan)","Spanish", "Brazilian Portuguese", "French", "German"]
+target_langs = ["Polish", "Czech"] #["English", "Japanese", "Traditional Chinese (Taiwan)","Spanish", "Brazilian Portuguese", "French", "German", "Polish", "Czech"]
 source_lang_code = "ko"
-target_lang_codes = ["en", "ja", "zh-TW", "es", "pt-BR", "fr", "de"]
 
 if __name__ == "__main__":
     initial_wd = os.getcwd()
@@ -52,12 +51,13 @@ if __name__ == "__main__":
 
     print("")
     print("*** Translation start! ***")
+    model = "gpt-5.2-2025-12-11"
     # 외부 루프: 전체 파일 진행상황
     for file in tqdm(filelist, desc="Files", position=0):
         filepath = os.path.join(source_dir, file)
         # 내부 루프: 각 파일의 언어별 번역 진행상황
         for target_lang in tqdm(target_langs, desc="Languages", position=1, leave=False):
-            prompt.translate(filepath, source_lang, target_lang)
+            prompt.translate(filepath, source_lang, target_lang, model)
         
     print("\nTranslation completed!")
     os.chdir(initial_wd)

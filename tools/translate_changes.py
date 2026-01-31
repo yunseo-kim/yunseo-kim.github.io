@@ -29,7 +29,7 @@ def is_valid_file(filename):
 
 posts_dir = '../_posts/'
 source_lang = "Korean"
-target_langs = ["English", "Japanese", "Traditional Chinese (Taiwan)", "Spanish", "Brazilian Portuguese", "French", "German"]
+target_langs = ["English", "Japanese", "Traditional Chinese (Taiwan)", "Spanish", "Brazilian Portuguese", "French", "German", "Polish", "Czech"]
 source_lang_code = "ko"
 
 def get_git_diff(filepath):
@@ -81,6 +81,8 @@ if __name__ == "__main__":
 
     print("")
     print("*** Translation start! ***")
+
+    model = "gpt-5.2-2025-12-11"  # model = "gemini-2.5-pro" if target_lang in ["English", "Traditional Chinese (Taiwan)", "German"] else "claude-sonnet-4-20250514"
     
     # Outer loop: Progress through changed files
     for changed_file in tqdm(changed_files, desc="Files", position=0):
@@ -88,7 +90,6 @@ if __name__ == "__main__":
         
         # Inner loop: Progress through target languages
         for target_lang in tqdm(target_langs, desc="Languages", position=1, leave=False):
-            model = "gpt-5.2-2025-12-11"  # model = "gemini-2.5-pro" if target_lang in ["English", "Traditional Chinese (Taiwan)", "German"] else "claude-sonnet-4-20250514"
             if args.incremental:
                 translate_incremental(filepath, source_lang, target_lang, model)
             else:
