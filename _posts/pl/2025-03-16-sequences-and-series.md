@@ -1,6 +1,6 @@
 ---
-title: Ciągi i szeregi
-description: Omawiamy podstawowe pojęcia analizy matematycznej: definicje ciągów i szeregów, zbieżność i rozbieżność ciągów oraz szeregów, a także definicję liczby e jako podstawy logarytmu naturalnego.
+title: "Ciągi i szeregi"
+description: "Omawiamy podstawowe pojęcia analizy matematycznej: definicje ciągów i szeregów, zbieżność i rozbieżność ciągów oraz szeregów, a także definicję liczby e jako podstawy logarytmu naturalnego."
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true

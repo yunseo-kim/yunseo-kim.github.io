@@ -1,6 +1,6 @@
 ---
-title: I AI si chce na Halloween odpočinout(?) (Does AI Hate to Work on Halloween?)
-description: Dne 31. října 12024 kolem 18:00 (korejského času) se náhle objevil podivný jev, kdy model Claude 3.5 Sonnet zpracovával zadané úlohy velmi odfláknutě, což narušilo systém automatického překladu příspěvků na blogu, který předtím několik měsíců fungoval bez problémů. Článek nabízí domněnky o příčině a možná řešení.
+title: "I AI si chce na Halloween odpočinout(?) (Does AI Hate to Work on Halloween?)"
+description: "Dne 31. října 12024 kolem 18:00 (korejského času) se náhle objevil podivný jev, kdy model Claude 3.5 Sonnet zpracovával zadané úlohy velmi odfláknutě, což narušilo systém automatického překladu příspěvků na blogu, který předtím několik měsíců fungoval bez problémů. Článek nabízí domněnky o příčině a možná řešení."
 categories: [AI & Data, GenAI]
 tags: [LLM]
 image: /assets/img/technology.webp

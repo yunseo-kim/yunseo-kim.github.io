@@ -1,6 +1,6 @@
 ---
-title: Posloupnosti a řady
-description: Probereme základní pojmy z kalkulu: definici posloupností a řad, jejich konvergenci a divergenci, a také definici čísla e jako základu přirozeného logaritmu.
+title: "Posloupnosti a řady"
+description: "Probereme základní pojmy z kalkulu: definici posloupností a řad, jejich konvergenci a divergenci, a také definici čísla e jako základu přirozeného logaritmu."
 categories: [Mathematics, Calculus]
 tags: [Sequence, Series, Convergence, Divergence, Limit]
 math: true

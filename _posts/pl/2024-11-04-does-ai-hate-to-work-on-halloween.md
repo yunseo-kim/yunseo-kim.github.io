@@ -1,6 +1,6 @@
 ---
-title: Nawet AI chce odpocząć w Halloween(?) (Does AI Hate to Work on Halloween?)
-description: 31 października 12024 r. nagle wystąpiło nietypowe zjawisko: model Claude 3.5 Sonnet wykonywał zlecone zadania wyjątkowo niedbale, co spowodowało awarię systemu automatycznego tłumaczenia postów, który działał bez problemów przez ostatnie miesiące. Przedstawiam przypuszczalne przyczyny oraz sposoby obejścia problemu.
+title: "Nawet AI chce odpocząć w Halloween(?) (Does AI Hate to Work on Halloween?)"
+description: "31 października 12024 r. nagle wystąpiło nietypowe zjawisko: model Claude 3.5 Sonnet wykonywał zlecone zadania wyjątkowo niedbale, co spowodowało awarię systemu automatycznego tłumaczenia postów, który działał bez problemów przez ostatnie miesiące. Przedstawiam przypuszczalne przyczyny oraz sposoby obejścia problemu."
 categories: [AI & Data, GenAI]
 tags: [LLM]
 image: /assets/img/technology.webp

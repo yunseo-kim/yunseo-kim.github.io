@@ -1,6 +1,6 @@
 ---
-title: Jednorozměrná nekonečná čtvercová jáma (The 1D Infinite Square Well)
-description: Probereme 1D nekonečnou potenciálovou jámu: vlastní funkce ψ_n(x), energie E_n, 4 klíčové matematické vlastnosti ψ(x) a obecné řešení Ψ(x,t).
+title: "Jednorozměrná nekonečná čtvercová jáma (The 1D Infinite Square Well)"
+description: "Probereme 1D nekonečnou potenciálovou jámu: vlastní funkce ψ_n(x), energie E_n, 4 klíčové matematické vlastnosti ψ(x) a obecné řešení Ψ(x,t)."
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true

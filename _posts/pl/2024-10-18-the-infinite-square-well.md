@@ -1,6 +1,6 @@
 ---
-title: 1-wymiarowa nieskończona studnia potencjału (The 1D Infinite Square Well)
-description: Prosty, ale kluczowy problem mechaniki kwantowej: 1D nieskończona studnia. Wyznaczamy n-ty stan stacjonarny ψ(x) i energię E, omawiamy 4 własności ψ(x) oraz konstruujemy rozwiązanie ogólne Ψ(x,t).
+title: "1-wymiarowa nieskończona studnia potencjału (The 1D Infinite Square Well)"
+description: "Prosty, ale kluczowy problem mechaniki kwantowej: 1D nieskończona studnia. Wyznaczamy n-ty stan stacjonarny ψ(x) i energię E, omawiamy 4 własności ψ(x) oraz konstruujemy rozwiązanie ogólne Ψ(x,t)."
 categories: [Physics, Modern Physics]
 tags: [Quantum Mechanics, Schrödinger Equation, Wave Function, Hamiltonian]
 math: true
