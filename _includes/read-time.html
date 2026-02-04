@@ -1,0 +1,83 @@
+<!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+<!-- Determine word count method and reading speed based on language -->
+{% if include.lang == 'ja' or include.lang == 'zh-TW' or include.lang == 'zh-CN' -%}
+  {% comment %} CJK languages (except Korean): CPM-based calculation {% endcomment %}
+  {% assign words = include.content | strip_html | number_of_words: 'cjk' %}
+  {% if include.lang == 'ja' -%}
+    {% assign wpm = 355 %}
+  {%- else -%}
+    {% assign wpm = 255 %}
+  {%- endif %}
+{%- else -%}
+  {% comment %} Roman-based languages and Korean: WPM-based calculation {% endcomment %}
+  {% assign words = include.content | strip_html | number_of_words %}
+  {% case include.lang -%}
+    {% when 'ko' %}
+      {% assign wpm = 200 %}
+    {% when 'en' %}
+      {% assign wpm = 230 %}
+    {% when 'fr' %}
+      {% assign wpm = 195 %}
+    {% when 'de' %}
+      {% assign wpm = 180 %}
+    {% when 'pt-BR' %}
+      {% assign wpm = 180 %}
+    {% when 'pt-PT' %}
+      {% assign wpm = 180 %}
+    {% when 'sl' %}
+      {% assign wpm = 180 %}
+    {% when 'es' %}
+      {% assign wpm = 220 %}
+    {% when 'pl' %}
+      {% assign wpm = 165 %}
+    {% when 'tr' %}
+      {% assign wpm = 165 %}
+    {% when 'ar' %}
+      {% assign wpm = 140 %}
+    {% when 'nl' %}
+      {% assign wpm = 200 %}
+    {% when 'sv' %}
+      {% assign wpm = 200 %}
+    {% when 'fi' %}
+      {% assign wpm = 160 %}
+    {% when 'ru' %}
+      {% assign wpm = 185 %}
+    {% when 'he' %}
+      {% assign wpm = 185 %}
+    {% when 'it' %}
+      {% assign wpm = 190 %}
+    {% else %}
+      {% assign wpm = 185 %}
+  {%- endcase %}
+{%- endif %}
+
+{% assign min_time = 1 %}
+{% assign read_time = words | divided_by: wpm %}
+
+{% unless read_time > 0 -%}
+  {% assign read_time = min_time %}
+{%- endunless %}
+
+{% capture read_prompt -%}
+  {{- site.data.locales[include.lang].post.read_time.prompt -}}
+{%- endcapture %}
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="{{ words }} {{ site.data.locales[include.lang].post.words }}"
+>
+  <em>
+    {{- read_time -}}
+    {{ ' ' }}
+    {{- site.data.locales[include.lang].post.read_time.unit -}}
+  </em>
+  {%- if include.prompt -%}
+    {%- assign _prompt_words = read_prompt | number_of_words: 'auto' -%}
+    {%- unless _prompt_words > 1 -%}{{ ' ' }}{%- endunless -%}
+    {{ read_prompt }}
+  {%- endif -%}
+</span>
