@@ -31,14 +31,14 @@ search:
   js: https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js
 
 mermaid:
-  js: https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js
+  js: https://cdn.jsdelivr.net/npm/mermaid@11.12.2/dist/mermaid.min.js
 
 dayjs:
   js:
-    common: https://cdn.jsdelivr.net/npm/dayjs@1.11.18/dayjs.min.js
-    locale: https://cdn.jsdelivr.net/npm/dayjs@1.11.18/locale/:LOCALE.js
-    relativeTime: https://cdn.jsdelivr.net/npm/dayjs@1.11.18/plugin/relativeTime.js
-    localizedFormat: https://cdn.jsdelivr.net/npm/dayjs@1.11.18/plugin/localizedFormat.js
+    common: https://cdn.jsdelivr.net/npm/dayjs@1.11.19/dayjs.min.js
+    locale: https://cdn.jsdelivr.net/npm/dayjs@1.11.19/locale/:LOCALE.js
+    relativeTime: https://cdn.jsdelivr.net/npm/dayjs@1.11.19/plugin/relativeTime.js
+    localizedFormat: https://cdn.jsdelivr.net/npm/dayjs@1.11.19/plugin/localizedFormat.js
 
 glightbox:
   css: https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/css/glightbox.min.css
@@ -48,4 +48,4 @@ clipboard:
   js: https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js
 
 mathjax:
-  js: https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml.js
+  js: https://cdn.jsdelivr.net/npm/mathjax@4.1.0/tex-chtml.js
