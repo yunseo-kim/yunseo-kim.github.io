@@ -155,22 +155,37 @@
 
   <!-- Web Font -->
   <link rel="stylesheet" href="{{ site.data.origin[type].webfonts | relative_url }}">
-  {% if site.active_lang == 'ko' -%}
-    <link rel="preload" as="style" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-    <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-  {%- elsif site.active_lang == 'ja' or site.active_lang == 'zh-TW' -%}
-    <link rel="preload" as="style" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp-dynamic-subset.min.css">
-    <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp-dynamic-subset.min.css" />
-  {%- else -%}
-    <link rel="preload" as="style" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-std-dynamic-subset.min.css">
-    <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-std-dynamic-subset.min.css" />
-  {%- endif %}
-  {% if site.active_lang == 'zh-TW' -%}
+  {% if site.active_lang == 'ko' or site.active_lang == 'zh-TW' -%}
     <style>
       body {
-        font-feature-settings: "ss05";
+        font-feature-settings: "calt", "ss05", "ss06";
       }
     </style>
+  {%- else -%}
+    <style>
+      body {
+        font-feature-settings: "calt", "ss06";
+      }
+    </style>
+  {%- endif %}
+  {% if site.active_lang == 'pl' or site.active_lang == 'cs' -%}
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard-std/dist/web/variable/woff2-dynamic-subset/PretendardStdVariable.subset.5.woff2">
+  {%- endif %}
+  {% if site.active_lang == 'ko' -%}
+    <link rel="preload" as="style" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@v3.3.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff2">
+    <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@v3.3.0/css/SpoqaHanSansNeo.css" />
+    <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp-dynamic-subset.min.css" />
+  {%- elsif site.active_lang == 'ja' or site.active_lang == 'zh-TW' -%}
+    <link rel="preload" as="style" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp-dynamic-subset.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@v3.3.0/Subset/SpoqaHanSans_JP/SpoqaHanSansJPLight.woff2">
+    <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp-dynamic-subset.min.css" />
+    <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@v3.3.0/css/SpoqaHanSans-jp.css" />
+  {%- else -%}
+    <link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard-std/dist/web/variable/woff2-dynamic-subset/PretendardStdVariable.subset.6.woff2">
+    <link rel="preload" as="style" crossorigin="anonymous" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-std-dynamic-subset.min.css">
+    <link rel="stylesheet" as="style" type="text/css" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-std-dynamic-subset.min.css" />
   {%- endif %}
 
   <!-- Font Awesome Icons -->
