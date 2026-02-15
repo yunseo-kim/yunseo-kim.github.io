@@ -1,15 +1,18 @@
 ---
-title: Nuclear Stability and Radioactive Decay
-description: Explore the Segré chart and various types of radioactive decay, the energy spectrum of electrons/positrons emitted in beta decay and the discovery of neutrinos, decay chains of several key nuclides (carbon-14, potassium-40, tritium, cesium-137), and isomeric transitions.
+title: "Nuclear Stability and Radioactive Decay"
+description: "Explore the Segré chart and various types of radioactive decay, the energy spectrum of electrons/positrons emitted in beta decay and the discovery of neutrinos, decay chains of several key nuclides (carbon-14, potassium-40, tritium, cesium-137), and isomeric transitions."
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.webp
 ---
+
 ## Prerequisites
+
 - [Subatomic Particles and Constituents of an Atom](/posts/constituents-of-an-atom/)
 
 ## Segre Chart or Nuclide Chart
+
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *Image source*
 > - Author: Wikimedia user [Sjlegg](https://commons.wikimedia.org/wiki/User:Sjlegg)
@@ -19,11 +22,13 @@ image: /assets/img/atoms.webp
 - Neutrons serve to bind the nucleus together, overcoming the electrical repulsion between protons
 
 ## Reasons for Radioactive Decay
+
 - Only specific combinations of neutrons and protons form stable nuclides
 - If the neutron-to-proton ratio is too high or too low, the nuclide becomes unstable and undergoes *radioactive decay*
 - The nucleus formed after decay is usually in an excited state, releasing energy in the form of gamma rays or X-rays
 
 ## Beta Decay ($\beta$-decay)
+
 ### Positive Beta Decay ($\beta^+$-decay)
 
  $$p \to n+\beta^+ +\nu_e$$
@@ -45,6 +50,7 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 Example: $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 
 ### Energy Spectrum of Emitted Electrons (Positrons)
+
 ![energy spectrum of electrons emitted in beta decay](https://upload.wikimedia.org/wikipedia/commons/e/e6/Beta_spectrum_of_RaE.jpg)
 > *Image source*
 > - Author: German Wikipedia user [HPaul](https://de.wikipedia.org/wiki/Benutzer:HPaul)
@@ -62,14 +68,17 @@ Example: $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 {: .prompt-info }
 
 ### Decay Chain
+
 Often, the *daughter nuclide* formed through beta decay is also unstable and undergoes subsequent beta decay. This leads to a *decay chain* as follows:
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
 
 ### Important Beta Decays
+
 Below are some important beta decays.
 
 #### Carbon-14
+
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
 
@@ -77,6 +86,7 @@ Below are some important beta decays.
 {: .prompt-tip }
 
 #### Potassium-40
+
 - $^{40}\mathrm{K} \to {^{40}\mathrm{Ca}} + e^{-} + \overline{\nu}_e + 1311\ \mathrm{keV}$ (89%)
 - $^{40}\mathrm{K} + e^{-} \to {^{40}\mathrm{Ar}}  + \nu_e + 1505\ \mathrm{keV}$ (11%)
 
@@ -85,6 +95,7 @@ Below are some important beta decays.
 {: .prompt-tip }
 
 #### Tritium
+
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
@@ -96,6 +107,7 @@ Below are some important beta decays.
 {: .prompt-tip }
 
 #### Cesium-137
+
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
 
 > Cesium-137 is a major byproduct of nuclear reactor fission reactions and nuclear tests. Due to its relatively long half-life (about 30 years), emission of highly penetrating gamma rays, and chemical properties similar to potassium that allow easy absorption into the body, it is a key isotope for monitoring and management. Originally almost non-existent in nature, it now exists in soil worldwide at an average of about 7 μg/g, resulting from the Trinity nuclear test and the atomic bombings of Hiroshima and Nagasaki by the United States to subdue the rampaging Imperial Japan, as well as numerous atmospheric nuclear tests mainly conducted in the 11950s-11960s and several major nuclear accidents (Chernobyl nuclear power plant accident, Goiânia accident in Brazil, etc.).  
@@ -114,6 +126,7 @@ $$ p + e \to n + \nu_e $$
 - The daughter nuclide produced by electron capture is identical to that produced by $\beta^+$ decay, so these two processes compete with each other
 
 ## Alpha Decay ($\alpha$-decay)
+
 - Emits an alpha particle ($\alpha$, $^4_2\mathrm{He}$)
 - Atomic number decreases by 2, and mass number decreases by 4
 - Commonly occurs in nuclei heavier than lead
@@ -122,6 +135,7 @@ $$ p + e \to n + \nu_e $$
 Example: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He}$
 
 ## Spontaneous Fission
+
 - Very heavy and unstable nuclides can undergo fission on their own without absorbing neutrons
 - Included in radioactive decay in a broad sense
 - Uranium-238 undergoes alpha decay with a half-life of $10^9$ years, but simultaneously undergoes rare spontaneous fission with a half-life of about $10^{16}$ years. The following table shows the spontaneous fission half-lives of several nuclides.
@@ -133,15 +147,19 @@ Example: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He
 | $^{252}\mathrm{Cf}$ | About $2.6$ years | Undergoes spontaneous fission very actively <br>$\rightarrow$ Used as a neutron source for reactor startup, etc. |
 
 ## Proton Emission
+
 - In extremely proton-rich unstable nuclides, a single proton may be emitted
 - Atomic number and mass number decrease by 1
 - Occurs very rarely
 
 ## Decay Schemes and Isomeric Transitions
+
 ### Decay Scheme
+
 *Decay scheme*: A diagram that visually represents all decay pathways of a radioactive material
 
 ### Isomeric Transition
+
 - Nuclei formed by radioactive decay may remain in an excited state after transformation, in which case they release energy in the form of gamma rays (although gamma ray emission does not change the nuclide and is not strictly decay, the term gamma decay is sometimes used conventionally).
 - Most excited nuclei transition to the ground state by emitting gamma rays in a very short time, but in certain cases, gamma ray emission is delayed, appearing like a metastable state. These delayed states are called *isomeric states* of the nucleus.
 - The transition from an isomeric state to the ground state by emitting gamma rays is called an *isomeric transition* and is denoted as IT.

@@ -1,12 +1,12 @@
 ---
-title: Bernoulli-Gleichung (Bernoulli Equation)
-description: Wir untersuchen die Bernoulli-Gleichung und die Lösungsmethode für die
-  logistische Gleichung, eine spezielle Form der Bernoulli-Gleichung.
+title: "Bernoulli-Gleichung (Bernoulli Equation)"
+description: "Wir untersuchen die Bernoulli-Gleichung und die Lösungsmethode für die logistische Gleichung, eine spezielle Form der Bernoulli-Gleichung."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## Bernoulli-Gleichung (Bernoulli Equation)
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{ ist eine beliebige reelle Zahl)}  \tag{1} $$
@@ -30,11 +30,13 @@ In der rechten Seite ist $y^{1-a}=u$, also erhalten wir die folgende lineare Dif
 $$ u'+(1-a)pu=(1-a)g \tag{2} $$
 
 ## Beispiel: Logistische Gleichung (Logistic Equation)
+
 Lösen Sie die logistische Gleichung (eine spezielle Form der Bernoulli-Gleichung):
 
 $$ y'=Ay-By^2 \tag{3} $$
 
 ### Lösung
+
 Wenn wir Gleichung (3) in die Form von Gleichung (1) umschreiben, erhalten wir
 
 $$ y'-Ay=-By^2 $$

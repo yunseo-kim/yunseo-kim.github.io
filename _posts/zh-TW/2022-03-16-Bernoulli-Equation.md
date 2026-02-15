@@ -1,11 +1,12 @@
 ---
-title: 伯努利方程式(Bernoulli Equation)
-description: 探討伯努利方程式及其特殊形式邏輯斯方程式的解法。
+title: "伯努利方程式(Bernoulli Equation)"
+description: "探討伯努利方程式及其特殊形式邏輯斯方程式的解法。"
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## 伯努利方程式(Bernoulli Equation)
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{為任意實數)}  \tag{1} $$
@@ -27,11 +28,13 @@ u'&=(1-a)y^{-a}y'
 $$ u'+(1-a)pu=(1-a)g \tag{2} $$
 
 ## 例題：邏輯斯方程式(Logistic Equation)
+
 求解邏輯斯方程式（伯努利方程式的特殊形式）：
 
 $$ y'=Ay-By^2 \tag{3} $$
 
 ### 解法
+
 將式 (3) 改寫成式 (1) 的形式：
 
 $$ y'-Ay=-By^2 $$

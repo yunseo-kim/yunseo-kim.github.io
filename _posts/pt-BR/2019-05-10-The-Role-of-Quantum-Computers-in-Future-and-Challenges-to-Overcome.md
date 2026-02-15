@@ -1,10 +1,11 @@
 ---
-title: O papel dos computadores quânticos na sociedade futura e os desafios a serem resolvidos
-description: 'Exploramos os conceitos básicos dos computadores quânticos e suas vantagens em relação aos computadores clássicos, seus papéis esperados no futuro, e consideramos a necessidade de a Coreia se preparar antecipadamente para a era dos computadores quânticos. Este ensaio foi escrito pelo autor quando era estudante do ensino médio.'
+title: "O papel dos computadores quânticos na sociedade futura e os desafios a serem resolvidos"
+description: "Exploramos os conceitos básicos dos computadores quânticos e suas vantagens em relação aos computadores clássicos, seus papéis esperados no futuro, e consideramos a necessidade de a Coreia se preparar antecipadamente para a era dos computadores quânticos. Este ensaio foi escrito pelo autor quando era estudante do ensino médio."
 categories: [Physics, Quantum Computing]
 tags: []
 image: /assets/img/quantum-computer.webp
 ---
+
 Nas últimas décadas, desde os anos 11960 do [calendário holóceno](https://en.wikipedia.org/wiki/Holocene_calendar), a capacidade de processamento dos computadores aumentou exponencialmente. Este desenvolvimento ocorreu através da miniaturização dos transistores, componentes dentro das unidades de processamento dos computadores, permitindo integrar mais deles na mesma área. Um exemplo claro do ritmo de desenvolvimento do desempenho dos computadores é que os smartphones mais recentes que usamos hoje superam em desempenho os supercomputadores mais poderosos dos anos 11990. Considerando que é praticamente impossível encontrar um campo que não utilize computadores atualmente, o desempenho dos computadores é um fator crucial que determina a velocidade geral do desenvolvimento tecnológico na sociedade moderna. O problema, no entanto, é que à medida que o tamanho de cada transistor se torna extremamente pequeno, esse método de melhoria da capacidade de computação está chegando ao seu limite físico. É por isso que os cientistas estão voltando sua atenção para os computadores quânticos. Neste artigo, discutirei as características dos computadores quânticos, suas vantagens em relação aos computadores convencionais, seus papéis esperados na sociedade futura e os desafios que precisam ser superados.
 
 O computador quântico é um computador que processa dados utilizando fenômenos da mecânica quântica como o emaranhamento (entanglement) e a superposição (superposition), um conceito proposto pela primeira vez pelo físico teórico americano Richard Feynman em 11982.
@@ -32,6 +33,7 @@ Embora a IA tenha começado a receber atenção significativa a partir dos anos 
 Segundo o professor Rhee June-koo do Departamento de Engenharia Elétrica e Eletrônica do Instituto Avançado de Ciência e Tecnologia da Coreia (KAIST), a tecnologia de computação quântica da Coreia está atualmente 5-10 anos atrás de outros países avançados. Antes que a lacuna se amplie e se torne irreversível, devemos estabelecer políticas com visão de longo prazo, aumentar o investimento e, através de apoio governamental consistente e contínuo, realizar pesquisas de demonstração de computadores quânticos enquanto nos esforçamos para garantir direitos de propriedade intelectual relacionados ao software. Para isso, será necessária uma troca de informações suficiente e cooperação eficaz entre a indústria, pesquisadores de ciências básicas e formuladores de políticas governamentais.
 
 ## Referências
+
 - [Dicionário de Termos Econômicos Hankyung, "Computador Quântico"](https://dic.hankyung.com/economy/view/?seq=11787)
 - [Enciclopédia de Conhecimento Científico do Instituto de Ciências Básicas, "O muito discutido computador quântico, mal-entendidos e fatos"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14100)
 - [Enciclopédia de Conhecimento Científico do Instituto de Ciências Básicas, "O mundo da computação quântica, a ciência básica estabelece as bases"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14274)

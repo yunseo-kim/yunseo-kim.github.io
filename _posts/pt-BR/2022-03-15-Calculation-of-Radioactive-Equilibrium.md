@@ -1,15 +1,15 @@
 ---
-title: Cálculo do Equilíbrio Radioativo
-description: Vamos explorar a relação entre a constante de decaimento, a meia-vida
-  e a vida média de radionuclídeos, e calcular a atividade de um radionuclídeo em
-  um tempo t arbitrário em uma cadeia de decaimento dada.
+title: "Cálculo do Equilíbrio Radioativo"
+description: "Vamos explorar a relação entre a constante de decaimento, a meia-vida e a vida média de radionuclídeos, e calcular a atividade de um radionuclídeo em um tempo t arbitrário em uma cadeia de decaimento dada."
 categories: [Nuclear Engineering, Radiation]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
 ---
+
 ## TL;DR
+
 > **Atividade em um tempo t arbitrário**
 >
 > $$\begin{align*}
@@ -30,27 +30,33 @@ image: /assets/img/atoms.webp
 {: .prompt-info }
 
 ## Constante de Decaimento (Decay Constant)
+
 - Probabilidade de um núcleo decair por unidade de tempo
 - Constante independente do tempo, determinada apenas pelo tipo de núcleo
 - Representada pelo símbolo $\lambda$
 
 ## Radioatividade (Radioactivity)
+
 Se o número de núcleos que ainda não decaíram no tempo $t$ for n(t), então, em média, $\lambda n(t)$ núcleos decairão durante o intervalo $dt$ entre os tempos $t$ e $t+dt$. Esta taxa de decaimento é chamada de *radioatividade* da amostra e é representada pelo símbolo $\alpha$. Portanto, a radioatividade em um tempo $t$ é:
 
 $$ \alpha (t)=\lambda n(t) \tag{1}$$
 
 ## Unidades de Radioatividade
+
 ### Curie (Ci)
+
 - Unidade tradicionalmente usada antes da adoção do becquerel
 - Radioatividade de 1g de rádio-226
 - $3,7\times 10^{10}$ decaimentos nucleares por segundo ($3,7\times 10^{10}\text{Bq}$)
 
 ### Becquerel (Bq)
+
 - Unidade padrão internacional (SI)
 - Um decaimento nuclear por segundo
 - $1 \text{Bq} = 2,703\times 10^{-11}\text{Ci} = 27\text{pCi}$
 
 ## Cálculo da Variação da Radioatividade com o Tempo
+
 Como $\lambda n(t)$ núcleos decaem durante o tempo $dt$, a diminuição no número de núcleos que permanecem sem decair na amostra durante $dt$ pode ser expressa como:
 
 $$ -dn(t)=\lambda n(t)dt $$
@@ -101,7 +107,9 @@ $$ \begin{align*}
 \end{align*}$$
 
 ## Exemplo: Cadeia de Decaimento Radioativo 1
+
 Suponha que um radionuclídeo seja produzido a uma taxa de $R$ átomos/s. Esses núcleos começam a decair radioativamente assim que são formados. Calcule a radioatividade deste nuclídeo em um tempo t arbitrário.
+
 ```mermaid
 flowchart LR
 	Start[?] -- R --> A[Modelo Matemático]
@@ -117,6 +125,7 @@ Em notação matemática:
 $$ dn/dt = -\lambda n + R $$
 
 ### 2. Solução Geral
+
 Movendo todos os termos em n para o lado esquerdo e multiplicando ambos os lados por $e^{\lambda t}$:
 
 $$ \frac {dn}{dt} + \lambda n = R $$
@@ -134,6 +143,7 @@ $$ e^{\lambda t}n=\frac {R}{\lambda}e^{\lambda t}+c $$
 $$ n=ce^{-\lambda t}+\frac {R}{\lambda} $$
 
 ### 3. Solução Particular
+
 Suponha que o número deste nuclídeo seja $n_0$ quando $t=0$, e encontre o valor da constante $c$:
 
 $$ n(0)=c+\frac {R}{\lambda}=n_0 $$
@@ -151,7 +161,9 @@ $$ \alpha = \alpha_0e^{-\lambda t}+R(1-e^{-\lambda t}) \tag{8} $$
 Ou seja, quando $t\to\infty$, converge para $\alpha_{\text{max}}=R$, $n_{\text{max}}=R/\lambda$.
 
 ## Exemplo: Cadeia de Decaimento Radioativo 2
+
 Calcule a radioatividade do radionuclídeo B na seguinte cadeia de decaimento:
+
 ```mermaid
 flowchart LR
 	A --> B
@@ -169,6 +181,7 @@ Substituindo a equação (2) para $n_A$, obtemos a seguinte equação diferencia
 $$  \frac {dn_B}{dt} = -\lambda_B n_B + \lambda_A n_{A0}e^{-\lambda_A t} \tag{9}$$ 
 
 ### 2. Solução Geral
+
 Para resolver a equação diferencial, movemos todos os termos em $n_B$ para o lado esquerdo e multiplicamos ambos os lados por $e^{\lambda_B t}$:
 
 $$ \frac {dn_B}{dt} + \lambda_B n_B = n_{A0}\lambda_A e^{-\lambda_A t} $$
@@ -188,6 +201,7 @@ Dividindo ambos os lados por $e^{\lambda_B t}$, obtemos a solução geral:
 $$ n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{-\lambda_A t}+ce^{-\lambda_B t} $$
 
 ### 3. Solução Particular
+
 Suponha que o número de elementos B seja $n_{B0}$ quando $t=0$, e encontre o valor da constante $c$:
 
 $$ n_B(0)=\frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}+c=n_{B0} $$

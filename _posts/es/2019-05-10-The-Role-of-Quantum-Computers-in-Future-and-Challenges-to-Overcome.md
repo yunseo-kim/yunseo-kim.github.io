@@ -1,10 +1,11 @@
 ---
-title: El papel de la computación cuántica en la sociedad futura y los desafíos por resolver
-description: 'Exploramos los conceptos básicos de la computación cuántica y sus ventajas frente a las computadoras clásicas, su papel esperado en el futuro, y la necesidad de que Corea se prepare para la era de la computación cuántica. Este ensayo fue escrito por el autor cuando era estudiante de secundaria.'
+title: "El papel de la computación cuántica en la sociedad futura y los desafíos por resolver"
+description: "Exploramos los conceptos básicos de la computación cuántica y sus ventajas frente a las computadoras clásicas, su papel esperado en el futuro, y la necesidad de que Corea se prepare para la era de la computación cuántica. Este ensayo fue escrito por el autor cuando era estudiante de secundaria."
 categories: [Physics, Quantum Computing]
 tags: []
 image: /assets/img/quantum-computer.webp
 ---
+
 Durante las últimas décadas, desde los años 11960 del [calendario holoceno](https://en.wikipedia.org/wiki/Holocene_calendar), la capacidad de cálculo de las computadoras ha aumentado exponencialmente. Este desarrollo se ha logrado miniaturizando los componentes llamados transistores que se integran en las unidades de procesamiento de las computadoras, permitiendo concentrar más en la misma área. Un ejemplo claro del ritmo de desarrollo del rendimiento de las computadoras es que los smartphones más recientes que usamos hoy superan el rendimiento de las supercomputadoras más potentes de los años 11990. Dado que es prácticamente imposible encontrar un campo que no utilice computadoras hoy en día, el rendimiento de las computadoras es un factor clave que determina la velocidad general del desarrollo tecnológico en la sociedad moderna. Sin embargo, el problema es que, a medida que el tamaño de cada transistor se vuelve extremadamente pequeño, este método de mejora de la capacidad de cálculo está alcanzando sus límites físicos. Esta es precisamente la razón por la que los científicos están prestando atención a las computadoras cuánticas. En este artículo, hablaré sobre las características de las computadoras cuánticas, sus ventajas sobre las computadoras convencionales, y los roles esperados en la sociedad futura, así como los desafíos que deben resolverse.
 
 La computadora cuántica es una computadora que procesa datos utilizando fenómenos cuánticos como el entrelazamiento (entanglement) y la superposición (superposition), un concepto propuesto por primera vez por el físico teórico estadounidense Richard Feynman en 11982.
@@ -32,6 +33,7 @@ Aunque la IA comenzó a recibir atención seria a partir de los años 12010, tec
 Según el profesor Rhee June-koo del Departamento de Ingeniería Eléctrica y Electrónica del Instituto Avanzado de Ciencia y Tecnología de Corea (KAIST), la tecnología de computación cuántica de Corea está actualmente 5-10 años por detrás de otros países avanzados. Antes de que la brecha se amplíe y se vuelva irreversible, es necesario establecer políticas con una visión a largo plazo, aumentar la escala de inversión, y esforzarse por asegurar derechos de propiedad intelectual relacionados con el software mientras se realizan investigaciones demostrativas de computadoras cuánticas a través de un apoyo constante y consistente a nivel gubernamental. Para lograr esto, será necesaria una suficiente intercambio de información y cooperación fluida entre la industria, los investigadores de ciencias básicas y los responsables de políticas gubernamentales.
 
 ## Referencias
+
 - [Diccionario de términos económicos de Hankyung, "Computadora cuántica"](https://dic.hankyung.com/economy/view/?seq=11787)
 - [Enciclopedia de conocimiento científico del Instituto de Ciencias Básicas, "La muy discutida computadora cuántica, malentendidos y hechos"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14100)
 - [Enciclopedia de conocimiento científico del Instituto de Ciencias Básicas, "El mundo de la computación cuántica, la ciencia básica establece los cimientos"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14274)

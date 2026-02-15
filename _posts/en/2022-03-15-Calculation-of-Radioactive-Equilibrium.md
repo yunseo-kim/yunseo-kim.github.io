@@ -1,15 +1,15 @@
 ---
-title: Calculation of Radioactive Equilibrium
-description: We explore the relationship between decay constants, half-lives, and
-  mean lifetimes of radioactive nuclides, and calculate the radioactivity of radioactive
-  nuclides at any given time t in a given decay chain.
+title: "Calculation of Radioactive Equilibrium"
+description: "We explore the relationship between decay constants, half-lives, and mean lifetimes of radioactive nuclides, and calculate the radioactivity of radioactive nuclides at any given time t in a given decay chain."
 categories: [Nuclear Engineering, Radiation]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
 ---
+
 ## TL;DR
+
 > **Radioactivity at any time t**
 >
 > $$\begin{align*}
@@ -30,27 +30,33 @@ image: /assets/img/atoms.webp
 {: .prompt-info }
 
 ## Decay Constant
+
 - The probability that a nucleus will decay per unit time
 - A constant that is independent of time and determined only by the nuclide
 - Denoted by the symbol $\lambda$
 
 ## Radioactivity
+
 If the number of nuclei that have not yet decayed at time $t$ is n(t), then on average $\lambda n(t)$ nuclei decay during the interval $dt$ between times $t$ and $t+dt$. This decay rate is called the *radioactivity* of the sample and is denoted by the symbol $\alpha$. Therefore, the radioactivity at any time $t$ is:
 
 $$ \alpha (t)=\lambda n(t) \tag{1}$$
 
 ## Units of Radioactivity
+
 ### Curie (Ci)
+
 - Traditionally used unit before the becquerel
 - Radioactivity of 1g of radium-226
 - $3.7\times 10^{10}$ nuclear decays per second ($3.7\times 10^{10}\text{Bq}$)
 
 ### Becquerel (Bq)
+
 - International Standard (SI) unit
 - One nuclear decay per second
 - $1 \text{Bq} = 2.703\times 10^{-11}\text{Ci} = 27\text{pCi}$
 
 ## Calculation of Radioactivity Change Over Time
+
 Since $\lambda n(t)$ nuclei decay during time $dt$, the decrease in the number of nuclei remaining in the sample during $dt$ can be expressed as:
 
 $$ -dn(t)=\lambda n(t)dt $$
@@ -101,7 +107,9 @@ $$ \begin{align*}
 \end{align*}$$
 
 ## Example: Radioactive Decay Chain 1
+
 Assume that a radioactive nuclide is produced at a rate of $R$ atoms/s. These nuclei undergo radioactive decay as soon as they are formed. Calculate the radioactivity of this nuclide at any time t.
+
 ```mermaid
 flowchart LR
 	Start[?] -- R --> A[Mathematical Model]
@@ -117,6 +125,7 @@ Expressed in mathematical notation:
 $$ dn/dt = -\lambda n + R $$
 
 ### 2. General Solution
+
 Move all terms related to $n$ to the left side and multiply both sides by $e^{\lambda t}$:
 
 $$ \frac {dn}{dt} + \lambda n = R $$
@@ -134,6 +143,7 @@ $$ e^{\lambda t}n=\frac {R}{\lambda}e^{\lambda t}+c $$
 $$ n=ce^{-\lambda t}+\frac {R}{\lambda} $$
 
 ### 3. Particular Solution
+
 Let's say the number of this nuclide at $t=0$ is $n_0$ and find the value of the constant $c$:
 
 $$ n(0)=c+\frac {R}{\lambda}=n_0 $$
@@ -151,7 +161,9 @@ $$ \alpha = \alpha_0e^{-\lambda t}+R(1-e^{-\lambda t}) \tag{8} $$
 That is, as $t\to\infty$, it converges to $\alpha_{\text{max}}=R$, $n_{\text{max}}=R/\lambda$.
 
 ## Example: Radioactive Decay Chain 2
+
 Calculate the radioactivity of radioactive nuclide B in the following decay chain:
+
 ```mermaid
 flowchart LR
 	A --> B
@@ -169,6 +181,7 @@ Substituting equation (2) for $n_A$, we get the following differential equation 
 $$  \frac {dn_B}{dt} = -\lambda_B n_B + \lambda_A n_{A0}e^{-\lambda_A t} \tag{9}$$ 
 
 ### 2. General Solution
+
 To solve the differential equation, move all terms related to $n_B$ to the left side and multiply both sides by $e^{\lambda_B t}$:
 
 $$ \frac {dn_B}{dt} + \lambda_B n_B = n_{A0}\lambda_A e^{-\lambda_A t} $$
@@ -188,6 +201,7 @@ Dividing both sides by $e^{\lambda_B t}$ gives the general solution:
 $$ n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{-\lambda_A t}+ce^{-\lambda_B t} $$
 
 ### 3. Particular Solution
+
 Let's say the number of element B at $t=0$ is $n_{B0}$ and find the value of the constant $c$:
 
 $$ n_B(0)=\frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}+c=n_{B0} $$

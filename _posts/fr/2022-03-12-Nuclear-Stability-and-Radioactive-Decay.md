@@ -1,15 +1,18 @@
 ---
-title: Stabilité nucléaire et désintégration radioactive
-description: Découvrez le tableau de Segrè, les différents types de désintégration radioactive, le spectre d'énergie des électrons/positrons émis lors de la désintégration bêta et le contexte de la découverte du neutrino, les chaînes de désintégration de certains nucléides importants (carbone-14, potassium-40, tritium, césium-137), ainsi que la transition isomère.
+title: "Stabilité nucléaire et désintégration radioactive"
+description: "Découvrez le tableau de Segrè, les différents types de désintégration radioactive, le spectre d'énergie des électrons/positrons émis lors de la désintégration bêta et le contexte de la découverte du neutrino, les chaînes de désintégration de certains nucléides importants (carbone-14, potassium-40, tritium, césium-137), ainsi que la transition isomère."
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.webp
 ---
+
 ## Prérequis
+
 - [Particules subatomiques et constituants de l'atome](/posts/constituents-of-an-atom/)
 
 ## Tableau de Segré (Segre Chart) ou carte des nucléides
+
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *Source de l'image*
 > - Auteur: Utilisateur Wikimedia [Sjlegg](https://commons.wikimedia.org/wiki/User:Sjlegg)
@@ -19,11 +22,13 @@ image: /assets/img/atoms.webp
 - Les neutrons jouent un rôle dans la cohésion du noyau en contrebalançant la répulsion électrique entre les protons
 
 ## Raisons de la désintégration radioactive
+
 - Seules certaines combinaisons de neutrons et de protons forment des nucléides stables
 - Si le nombre de neutrons est trop élevé ou trop faible par rapport au nombre de protons, le nucléide est instable et subit une *désintégration radioactive*
 - Le noyau formé après la désintégration est généralement dans un état excité et libère de l'énergie sous forme de rayons gamma ou de rayons X
 
 ## Désintégration bêta ($\beta$-decay)
+
 ### Désintégration bêta plus ($\beta^+$-decay)
 
  $$p \to n+\beta^+ +\nu_e$$
@@ -45,6 +50,7 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 Exemple: $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 
 ### Spectre d'énergie des électrons (positrons) émis
+
 ![energy spectrum of electrons emitted in beta decay](https://upload.wikimedia.org/wikipedia/commons/e/e6/Beta_spectrum_of_RaE.jpg)
 > *Source de l'image*
 > - Auteur: Utilisateur Wikipédia allemand [HPaul](https://de.wikipedia.org/wiki/Benutzer:HPaul)
@@ -62,14 +68,17 @@ Exemple: $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 {: .prompt-info }
 
 ### Chaînes de désintégration (Decay Chain)
+
 Souvent, le *nucléide fils (daughter nuclide)* formé par désintégration bêta est également instable et subit une désintégration bêta supplémentaire. Cela conduit à une *chaîne de désintégration* comme suit:
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
 
 ### Désintégrations bêta importantes
+
 Voici quelques désintégrations bêta importantes:
 
 #### Carbone-14
+
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
 
@@ -77,6 +86,7 @@ Voici quelques désintégrations bêta importantes:
 {: .prompt-tip }
 
 #### Potassium-40
+
 - $^{40}\mathrm{K} \to {^{40}\mathrm{Ca}} + e^{-} + \overline{\nu}_e + 1311\ \mathrm{keV}$ (89%)
 - $^{40}\mathrm{K} + e^{-} \to {^{40}\mathrm{Ar}}  + \nu_e + 1505\ \mathrm{keV}$ (11%)
 
@@ -85,6 +95,7 @@ Voici quelques désintégrations bêta importantes:
 {: .prompt-tip }
 
 #### Tritium
+
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
@@ -96,6 +107,7 @@ Voici quelques désintégrations bêta importantes:
 {: .prompt-tip }
 
 #### Césium-137
+
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
 
 > Le césium-137 est un sous-produit majeur des réactions de fission dans les réacteurs nucléaires et des essais nucléaires. Il fait l'objet d'une surveillance et d'une gestion particulières en raison de sa demi-vie relativement longue (environ 30 ans), de l'émission de rayons gamma pénétrants, et de ses propriétés chimiques similaires au potassium qui facilitent son absorption par l'organisme. Pratiquement inexistant naturellement, il est aujourd'hui présent dans les sols du monde entier à une concentration moyenne d'environ 7 μg/g, résultant de l'essai nucléaire Trinity et des bombardements atomiques d'Hiroshima et Nagasaki par les États-Unis pour vaincre l'Empire japonais, ainsi que des nombreux essais nucléaires atmosphériques principalement menés dans les années 11950-11960 et de quelques accidents nucléaires majeurs (accident de Tchernobyl, accident de Goiânia au Brésil, etc.).  
@@ -114,6 +126,7 @@ $$ p + e \to n + \nu_e $$
 - Le nucléide fils produit par capture électronique est identique à celui produit par désintégration $\beta^+$, ces deux processus sont donc en compétition.
 
 ## Désintégration alpha ($\alpha$-decay)
+
 - Émission d'une particule alpha ($\alpha$, $^4_2\mathrm{He}$)
 - Le numéro atomique diminue de 2 et le nombre de masse diminue de 4
 - Fréquente chez les noyaux plus lourds que le plomb
@@ -122,6 +135,7 @@ $$ p + e \to n + \nu_e $$
 Exemple: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He}$
 
 ## Fission spontanée (Spontaneous Fission)
+
 - Les nucléides très lourds et instables peuvent subir une fission sans absorption préalable de neutrons
 - Considérée au sens large comme une forme de désintégration radioactive
 - L'uranium-238, par exemple, se désintègre par émission alpha avec une demi-vie de $10^9$ ans, mais subit également, rarement, une fission spontanée avec une demi-vie d'environ $10^{16}$ ans. Le tableau suivant présente les demi-vies de fission spontanée de quelques nucléides.
@@ -133,15 +147,19 @@ Exemple: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He
 | $^{252}\mathrm{Cf}$ | Environ $2.6$ ans | Fission spontanée très active <br>$\rightarrow$ Utilisé comme source de neutrons pour le démarrage des réacteurs |
 
 ## Émission de proton (Proton Emission)
+
 - Les nucléides extrêmement riches en protons et instables peuvent émettre un seul proton
 - Le numéro atomique et le nombre de masse diminuent de 1
 - Phénomène très rare
 
 ## Schéma de désintégration et transition isomérique
+
 ### Schéma de désintégration (Decay Scheme)
+
 *Schéma de désintégration*: Diagramme visuel représentant toutes les voies de désintégration d'une substance radioactive
 
 ### Transition isomérique (Isomeric Transition)
+
 - Les noyaux formés par désintégration radioactive peuvent rester dans un état excité et libérer de l'énergie sous forme de rayons gamma (bien que l'émission de rayons gamma ne change pas le nucléide, on utilise parfois par convention le terme "désintégration gamma").
 - La plupart des noyaux excités émettent des rayons gamma et passent à l'état fondamental très rapidement, mais dans certains cas, l'émission de rayons gamma est retardée, créant un état quasi-stable. Ces états retardés sont appelés *états isomériques* du noyau.
 - Le passage d'un état isomérique à l'état fondamental par émission de rayons gamma est appelé *transition isomérique* et est noté IT.

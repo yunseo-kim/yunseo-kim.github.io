@@ -1,11 +1,12 @@
 ---
-title: 베르누이 방정식(Bernoulli Equation)
-description: 베르누이 방정식과, 베르누이 방정식의 특수한 형태인 로지스틱 방정식의 풀이법을 알아본다.
+title: "베르누이 방정식(Bernoulli Equation)"
+description: "베르누이 방정식과, 베르누이 방정식의 특수한 형태인 로지스틱 방정식의 풀이법을 알아본다."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## 베르누이 방정식(Bernoulli Equation)
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{는 임의의 실수)}  \tag{1} $$
@@ -27,11 +28,13 @@ u'&=(1-a)y^{-a}y'
 $$ u'+(1-a)pu=(1-a)g \tag{2} $$
 
 ## 예제: 로지스틱 방정식(Logistic Equation)
+
 로지스틱 방정식(베르누이 방정식의 특수한 형태)을 풀어라.
 
 $$ y'=Ay-By^2 \tag{3} $$
 
 ### 풀이
+
 식 (3)을 식 (1)의 형태로 쓰면
 
 $$ y'-Ay=-By^2 $$

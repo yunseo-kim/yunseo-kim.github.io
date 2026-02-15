@@ -1,13 +1,15 @@
 ---
-title: 完全微分方程式（Exact Differential Equation）與積分因子
-description: 探討完全微分方程式的判別法和解法，以及積分因子。
+title: "完全微分方程式（Exact Differential Equation）與積分因子"
+description: "探討完全微分方程式的判別法和解法，以及積分因子。"
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 ```mermaid
 flowchart TD
 	ODE[給定一個可能是完全微分方程式的常微分方程]
@@ -30,6 +32,7 @@ flowchart TD
 ```
 
 ## 完全微分方程式（Exact Differential Equation）
+
 一階常微分方程 $M(x,y)+N(x,y)y'=0$ 可以寫成
 
 $$ M(x,y)dx+N(x,y)dy=0 \tag{1} $$
@@ -51,6 +54,7 @@ $$ du=0 $$
 $$ u(x,y)=c \tag{4} $$
 
 ## 完全微分方程式的判別
+
 假設在 $xy$ 平面上，在一個以不與自身相交的閉曲線為邊界的閉區域內，$M$ 和 $N$ 及其各自的一階偏導數都是連續的。再次看條件 (2)：
 
 $$ \begin{align*}
@@ -72,6 +76,7 @@ $$ \therefore \frac {\partial M}{\partial y}=\frac {\partial N}{\partial x} \tag
 因此，我們可以看出條件 (5) 是常微分方程 (1) 成為完全微分方程式的必要條件，雖然這裡沒有證明，但事實上它也是充分條件。也就是說，我們可以通過檢查這個條件是否滿足來判斷是否為完全微分方程式。
 
 ## 完全微分方程式的解法
+
 將式 (2a) 視 $y$ 為常數，對 $x$ 積分，得到
 
 $$ u = \int M(x,y) dx + k(y) \tag{6} $$
@@ -96,6 +101,7 @@ $$ \int M(x,y)dx + \int N(x,y)dy - \int \left(\frac{\partial}{\partial y}\int Md
 {: .prompt-tip }
 
 ## 積分因子（Integrating Factor）
+
 假設給定一個非完全（Inexact）常微分方程：
 
 $$ P(x,y)dx+Q(x,y)dy = 0 \quad \left( \frac {\partial P}{\partial y} \neq \frac {\partial Q}{\partial x} \right) \tag{7} $$
@@ -111,6 +117,7 @@ $$ FP\ dx+FQ\ dy = 0 \tag{9} $$
 此時，我們稱函數 $F(x,y)$ 為式 (7) 的**積分因子（integrating factor）**。
 
 ## 求積分因子的方法
+
 對式 (8) 應用乘積求導法則，並用下標表示偏導數，得到：
 
 $$ F_y P + FP_y = F_x Q + FQ_x $$

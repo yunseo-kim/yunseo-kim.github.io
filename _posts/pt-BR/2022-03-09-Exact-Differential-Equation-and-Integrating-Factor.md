@@ -1,14 +1,15 @@
 ---
-title: Equação Diferencial Exata e Fator Integrante
-description: Aprenda sobre os métodos de identificação e resolução de equações diferenciais
-  exatas, bem como sobre fatores integrantes.
+title: "Equação Diferencial Exata e Fator Integrante"
+description: "Aprenda sobre os métodos de identificação e resolução de equações diferenciais exatas, bem como sobre fatores integrantes."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 ```mermaid
 flowchart TD
 	ODE[Dada uma equação diferencial ordinária que pode ser exata]
@@ -31,6 +32,7 @@ flowchart TD
 ```
 
 ## Equação Diferencial Exata
+
 Uma equação diferencial ordinária de primeira ordem $M(x,y)+N(x,y)y'=0$ pode ser escrita como:
 
 $$ M(x,y)dx+N(x,y)dy=0 \tag{1} $$
@@ -52,6 +54,7 @@ e, integrando, obtemos a solução geral na forma:
 $$ u(x,y)=c \tag{4} $$
 
 ## Verificação de uma Equação Diferencial Exata
+
 Considerando uma região fechada no plano $xy$ com uma curva fechada que não se cruza como fronteira, onde $M$ e $N$ e suas derivadas parciais de primeira ordem são contínuas. Revisitando a condição (2), temos:
 
 $$ \begin{align*}
@@ -73,6 +76,7 @@ $$ \therefore \frac {\partial M}{\partial y}=\frac {\partial N}{\partial x} \tag
 Portanto, a condição (5) é uma condição necessária para que a equação diferencial (1) seja exata, e de fato, embora não provado aqui, é também uma condição suficiente. Ou seja, podemos verificar se uma equação diferencial é exata verificando se esta condição é satisfeita.
 
 ## Resolução de Equações Diferenciais Exatas
+
 Integrando a equação (2a) em relação a $x$, considerando $y$ como constante, temos:
 
 $$ u = \int M(x,y) dx + k(y) \tag{6} $$
@@ -97,6 +101,7 @@ $$ \int M(x,y)dx + \int N(x,y)dy - \int \left(\frac{\partial}{\partial y}\int Md
 {: .prompt-tip }
 
 ## Fator Integrante
+
 Considere uma equação diferencial inexata:
 
 $$ P(x,y)dx+Q(x,y)dy = 0 \quad \left( \frac {\partial P}{\partial y} \neq \frac {\partial Q}{\partial x} \right) \tag{7} $$
@@ -112,6 +117,7 @@ $$ FP\ dx+FQ\ dy = 0 \tag{9} $$
 Neste caso, a função $F(x,y)$ é chamada de **fator integrante** da equação (7).
 
 ## Método para Encontrar o Fator Integrante
+
 Aplicando a regra do produto à equação (8) e usando a notação de subíndice para derivadas parciais, temos:
 
 $$ F_y P + FP_y = F_x Q + FQ_x $$

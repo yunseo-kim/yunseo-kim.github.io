@@ -1,15 +1,15 @@
 ---
-title: Berechnung des Strahlungsgleichgewichts
-description: Wir untersuchen die Beziehung zwischen der Zerfallskonstante, der Halbwertszeit
-  und der mittleren Lebensdauer von Radionukliden und berechnen die Radioaktivität
-  von Radionukliden zu einem beliebigen Zeitpunkt t in einer gegebenen Zerfallskette.
+title: "Berechnung des Strahlungsgleichgewichts"
+description: "Wir untersuchen die Beziehung zwischen der Zerfallskonstante, der Halbwertszeit und der mittleren Lebensdauer von Radionukliden und berechnen die Radioaktivität von Radionukliden zu einem beliebigen Zeitpunkt t in einer gegebenen Zerfallskette."
 categories: [Nuclear Engineering, Radiation]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
 ---
+
 ## TL;DR
+
 > **Radioaktivität zu einem beliebigen Zeitpunkt t**
 >
 > $$\begin{align*}
@@ -30,27 +30,33 @@ image: /assets/img/atoms.webp
 {: .prompt-info }
 
 ## Zerfallskonstante (Decay Constant)
+
 - Die Wahrscheinlichkeit, dass ein Kern pro Zeiteinheit zerfällt
 - Eine Konstante, die unabhängig von der Zeit ist und nur vom Nuklid abhängt
 - Mit dem Symbol $\lambda$ bezeichnet
 
 ## Radioaktivität (Radioactivity)
+
 Wenn n(t) die Anzahl der Kerne ist, die zum Zeitpunkt t noch nicht zerfallen sind, zerfallen durchschnittlich $\lambda n(t)$ Kerne im Zeitintervall dt zwischen t und t+dt. Diese Zerfallsrate wird als *Radioaktivität* der Probe bezeichnet und mit dem Symbol $\alpha$ gekennzeichnet. Daher ist die Radioaktivität zu einem bestimmten Zeitpunkt t:
 
 $$ \alpha (t)=\lambda n(t) \tag{1}$$
 
 ## Einheiten der Radioaktivität
+
 ### Curie (Ci)
+
 - Traditionelle Einheit, die vor der Verwendung der Becquerel-Einheit verwendet wurde
 - Radioaktivität von 1g Radium-226
 - $3,7\times 10^{10}$ Kernzerfälle pro Sekunde ($3,7\times 10^{10}\text{Bq}$)
 
 ### Becquerel (Bq)
+
 - Internationale Standardeinheit (SI)
 - Ein Kernzerfall pro Sekunde
 - $1 \text{Bq} = 2,703\times 10^{-11}\text{Ci} = 27\text{pCi}$
 
 ## Berechnung der Änderung der Radioaktivität mit der Zeit
+
 Da $\lambda n(t)$ Kerne während dt zerfallen, kann die Abnahme der nicht zerfallenen Kerne in der Probe während dt wie folgt ausgedrückt werden:
 
 $$ -dn(t)=\lambda n(t)dt $$
@@ -101,7 +107,9 @@ $$ \begin{align*}
 \end{align*}$$
 
 ## Beispiel: Radioaktive Zerfallskette 1
+
 Nehmen wir an, dass ein Radionuklid mit einer Rate von $R$ Atomen/s erzeugt wird. Diese Kerne beginnen sofort nach ihrer Entstehung zu zerfallen. Berechnen Sie die Radioaktivität dieses Nuklids zu einem beliebigen Zeitpunkt t.
+
 ```mermaid
 flowchart LR
 	Start[?] -- R --> A[Mathematisches Modell]
@@ -117,6 +125,7 @@ In mathematischer Notation:
 $$ dn/dt = -\lambda n + R $$
 
 ### 2. Allgemeine Lösung
+
 Bringen wir alle Terme mit n auf die linke Seite und multiplizieren beide Seiten mit $e^{\lambda t}$:
 
 $$ \frac {dn}{dt} + \lambda n = R $$
@@ -134,6 +143,7 @@ $$ e^{\lambda t}n=\frac {R}{\lambda}e^{\lambda t}+c $$
 $$ n=ce^{-\lambda t}+\frac {R}{\lambda} $$
 
 ### 3. Spezielle Lösung
+
 Nehmen wir an, dass zum Zeitpunkt t=0 die Anzahl dieses Nuklids $n_0$ beträgt, und bestimmen wir den Wert der Konstante c:
 
 $$ n(0)=c+\frac {R}{\lambda}=n_0 $$
@@ -151,7 +161,9 @@ $$ \alpha = \alpha_0e^{-\lambda t}+R(1-e^{-\lambda t}) \tag{8} $$
 Das bedeutet, dass für $t\to\infty$ die Radioaktivität gegen $\alpha_{\text{max}}=R$ und die Anzahl der Kerne gegen $n_{\text{max}}=R/\lambda$ konvergiert.
 
 ## Beispiel: Radioaktive Zerfallskette 2
+
 Berechnen Sie die Radioaktivität des Radionuklids B in der folgenden Zerfallskette:
+
 ```mermaid
 flowchart LR
 	A --> B
@@ -169,6 +181,7 @@ Wenn wir Gleichung (2) für $n_A$ einsetzen, erhalten wir die folgende Different
 $$  \frac {dn_B}{dt} = -\lambda_B n_B + \lambda_A n_{A0}e^{-\lambda_A t} \tag{9}$$ 
 
 ### 2. Allgemeine Lösung
+
 Um die Differentialgleichung zu lösen, bringen wir alle Terme mit $n_B$ auf die linke Seite und multiplizieren beide Seiten mit $e^{\lambda_B t}$:
 
 $$ \frac {dn_B}{dt} + \lambda_B n_B = n_{A0}\lambda_A e^{-\lambda_A t} $$
@@ -188,6 +201,7 @@ Wenn wir beide Seiten durch $e^{\lambda_B t}$ dividieren, erhalten wir die allge
 $$ n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{-\lambda_A t}+ce^{-\lambda_B t} $$
 
 ### 3. Spezielle Lösung
+
 Nehmen wir an, dass zum Zeitpunkt t=0 die Anzahl der B-Elemente $n_{B0}$ beträgt, und bestimmen wir den Wert der Konstante c:
 
 $$ n_B(0)=\frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}+c=n_{B0} $$

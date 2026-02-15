@@ -1,14 +1,15 @@
 ---
-title: Équation différentielle exacte et facteur intégrant
-description: Nous examinons les méthodes pour déterminer et résoudre les équations
-  différentielles exactes, ainsi que le concept de facteur intégrant.
+title: "Équation différentielle exacte et facteur intégrant"
+description: "Nous examinons les méthodes pour déterminer et résoudre les équations différentielles exactes, ainsi que le concept de facteur intégrant."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 ```mermaid
 flowchart TD
 	ODE[Une équation différentielle ordinaire qui pourrait être exacte est donnée]
@@ -31,6 +32,7 @@ flowchart TD
 ```
 
 ## Équation différentielle exacte
+
 Une équation différentielle ordinaire du premier ordre $M(x,y)+N(x,y)y'=0$ peut être écrite sous la forme :
 
 $$ M(x,y)dx+N(x,y)dy=0 \tag{1} $$
@@ -52,6 +54,7 @@ et en intégrant, on obtient directement la solution générale sous la forme :
 $$ u(x,y)=c \tag{4} $$
 
 ## Détermination d'une équation différentielle exacte
+
 Supposons que dans le plan $xy$, $M$ et $N$ ainsi que leurs dérivées partielles du premier ordre soient continues sur une région fermée délimitée par une courbe fermée qui ne se croise pas elle-même. En examinant à nouveau la condition (2), on a :
 
 $$ \begin{align*}
@@ -73,6 +76,7 @@ $$ \therefore \frac {\partial M}{\partial y}=\frac {\partial N}{\partial x} \tag
 Par conséquent, on peut voir que la condition (5) est une condition nécessaire pour que l'équation différentielle (1) soit exacte, et bien que nous ne l'ayons pas prouvé ici, c'est en fait aussi une condition suffisante. Ainsi, on peut déterminer si une équation différentielle est exacte en vérifiant si cette condition est satisfaite.
 
 ## Résolution d'une équation différentielle exacte
+
 En intégrant l'équation (2a) par rapport à $x$, en considérant $y$ comme une constante, on obtient :
 
 $$ u = \int M(x,y) dx + k(y) \tag{6} $$
@@ -97,6 +101,7 @@ $$ \int M(x,y)dx + \int N(x,y)dy - \int \left(\frac{\partial}{\partial y}\int Md
 {: .prompt-tip }
 
 ## Facteur intégrant
+
 Supposons qu'une équation différentielle ordinaire inexacte soit donnée :
 
 $$ P(x,y)dx+Q(x,y)dy = 0 \quad \left( \frac {\partial P}{\partial y} \neq \frac {\partial Q}{\partial x} \right) \tag{7} $$
@@ -112,6 +117,7 @@ $$ FP\ dx+FQ\ dy = 0 \tag{9} $$
 Dans ce cas, la fonction $F(x,y)$ est appelée **facteur intégrant** de l'équation (7).
 
 ## Méthode pour trouver le facteur intégrant
+
 En appliquant la règle du produit à l'équation (8) et en notant les dérivées partielles en indice, on obtient :
 
 $$ F_y P + FP_y = F_x Q + FQ_x $$

@@ -1,6 +1,6 @@
 ---
-title: 中子交互作用與反應截面
-description: 探討微觀與宏觀截面的概念及原子核與中子間的交互作用類型，並透過韓國原子能研究院提供的實際截面數據，分析中子在不同能量區域的散射與吸收行為。
+title: "中子交互作用與反應截面"
+description: "探討微觀與宏觀截面的概念及原子核與中子間的交互作用類型，並透過韓國原子能研究院提供的實際截面數據，分析中子在不同能量區域的散射與吸收行為。"
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter, Nuclear Reaction]
 math: true
@@ -9,6 +9,7 @@ image: /assets/img/atoms.webp
 ---
 
 ## 截面（cross-section）或微觀截面（microscopic cross-section）
+
 假設單一能量中子束入射到（非常薄的）厚度為 $\tau$ 和面積為 $A$ 的目標物上，且每秒每單位面積入射到目標物上的中子數為 $I\ \text{neutrons/cm}^2\cdot \text{s}$。由於原子中原子核所佔的體積比例非常小，且假設目標物非常薄，因此大部分中子不會與原子核反應而直接穿過目標物。那麼，每秒每單位面積與原子核碰撞的中子數與中子束強度 $I$、目標物厚度 $\tau$ 和目標物的原子密度 $N$ 成正比。
 
 $$ \Delta I \propto I\tau N $$
@@ -26,11 +27,13 @@ $$ p = \frac {\Delta I}{I} = \sigma\tau N = \frac {\sigma}{A} A\tau N = \frac {\
 從這個式子可以看出 $\sigma$ 具有面積的單位。這個比例常數 $\sigma$ 被稱為*截面（cross-section）*或*微觀截面（microscopic cross-section）*。物理上，截面代表原子核與中子反應的有效截面積。
 
 ## 微觀截面的單位
+
 cm$^2$ 對於表示微觀截面來說太大了，因此通常使用*巴恩（barn）*（b）作為單位。
 
 $$ 1\ \text{b} = 10^{-24}\ \text{cm}^2 \label{eqn:barn}\tag{3}$$
 
 ## 微觀截面的類型
+
 - 總（total）截面：$\sigma_t$
   - 散射（scattering）截面：$\sigma_s$
     - 彈性散射（elastic scattering）截面：$\sigma_e$
@@ -56,9 +59,11 @@ flowchart LR
 ```
 
 ## 中子交互作用
+
 中子電中性，因此不受原子內電子或原子核正電荷的電場影響。因此，中子可以穿過原子的電子雲直接與原子核反應。
 
 ### 複合核形成
+
 大多數物質與中子的反應分為兩個階段：
 1. 中子與原子核結合形成複合核（compound nucleus）
 2. 複合核以多種方式衰變
@@ -74,6 +79,7 @@ $$ \begin{align*}
 原子核根據其組成核子的排列具有多個量子化能級，當入射中子的能量對應於目標核的某一激發態時，複合核更容易形成。因此，對於特定能量的中子，截面會達到最大值，這種現象稱為*共振（resonance）*。
 
 ### 彈性散射（elastic scattering）
+
 - 中子碰撞原子核後彈出
 - 原子核保持基態，能量不變
 - 表示為 $(\mathrm{n}, \mathrm{n})$
@@ -89,6 +95,7 @@ $$ \begin{align*}
 > - 圖表來源：韓國原子能研究院核數據中心（Nuclear Data Center at KAERI），核素表（Table of Nuclides）(<https://atom.kaeri.re.kr/nuchart/>)
 
 #### 低能區（low-energy region）
+
 在這個區域，彈性散射截面近似為常數。此區域不形成複合核，而是原子核對經過其周圍的中子施加力，產生微弱的散射現象。這稱為勢能散射（potential scattering），當原子半徑為 $R$ 時，勢能散射截面為：
 
 $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
@@ -104,14 +111,17 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 {: .prompt-info }
 
 #### 共振區（resonance region）
+
 從這個區域開始，原子核會暫時吸收中子形成複合核，然後再釋放與入射中子能量相同的中子，產生彈性共振散射（elastic resonance scattering）。由於共振發生在對應於目標原子核能級差的中子能量上，因此在特定能量值處中子截面會顯著增大。
 
 核種越重，共振區出現在越低的中子能量。鈾-238的共振區從約6 eV開始，一直持續到約1 keV，比碳-12的共振區低得多。
 
 #### 高能區（smooth region）
+
 在高能區，原子核各能級間隔變得非常小，以至於各個共振無法區分。在這個區域，$\sigma_e$ 隨中子能量變化緩慢，呈現連續函數形式。
 
 ### 非彈性散射（inelastic scattering）
+
 - 中子碰撞原子核後彈出
 - 與彈性散射不同，原子核吸收部分中子能量進入激發態（[吸熱反應](/posts/nuclear-reactions-and-binding-energy/#放熱反應exothermic-reaction--吸熱反應endothermic-reaction)）
 - 由於原子核能級量子化，只有當碰撞中子能量大於或等於該原子核兩能級差時才會發生
@@ -130,6 +140,7 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 > - 圖表來源：韓國原子能研究院核數據中心（Nuclear Data Center at KAERI），核素表（Table of Nuclides）(<https://atom.kaeri.re.kr/nuchart/>)
 
 ### 輻射俘獲（radiative capture）
+
 - 原子核俘獲中子並釋放一個或多個伽馬射線（[放熱反應](/posts/nuclear-reactions-and-binding-energy/#放熱反應exothermic-reaction--吸熱反應endothermic-reaction)）
 - 表示為 $(\mathrm{n}, \gamma)$
 - 產生的伽馬射線稱為*俘獲伽馬射線（capture $\gamma$-ray）*
@@ -142,11 +153,13 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 > - 圖表來源：韓國原子能研究院核數據中心（Nuclear Data Center at KAERI），核素表（Table of Nuclides）(<https://atom.kaeri.re.kr/nuchart/>)
 
 #### 低能區（$1/v$ 區）
+
 在低能區，大多數核種的 $\sigma_\gamma$ 與 $1/\sqrt{E}$，即 $1/v$ 成正比。在上面的對數-對數尺度金-197輻射俘獲截面圖中，可以看到斜率為 $-1/2$ 的直線段。
 
 某些重要核種的 $\sigma_\gamma$ 在低中子能量區域不完全遵循 $1/v$ 行為，這些核種稱為非-$1/v$ 吸收體（non-$1/v$ absorber）。
 
 #### 共振區
+
 超過 $1/v$ 區後，在與散射反應相同的能量區域觀察到共振區。當共振發生在能量 $E_r$ 時，該共振附近的 $\sigma_\gamma$ 由以下布萊特-維格納（Breit-Wigner）單級公式給出：
 
 $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + \Gamma^2/4} \label{eqn:breit_wigner}\tag{5}$$
@@ -161,9 +174,11 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 {: .prompt-tip }
 
 #### 高能區（共振區以上）
+
 在共振區之上的更高能量區域（重核種約1 keV以上，輕核種則更高），$\sigma_\gamma$ 先急劇下降，然後以很小的值緩慢減少。
 
 ### 帶電粒子反應（charged-particle reactions）
+
 - 原子核俘獲中子並釋放阿爾法粒子（$\alpha$）或質子（$\mathrm{p}$）等帶電粒子
 - 表示為 $(\mathrm{n}, \alpha)$、$(\mathrm{n}, \mathrm{p})$ 等
 - 根據情況可能是[放熱反應](/posts/nuclear-reactions-and-binding-energy/#放熱反應exothermic-reaction--吸熱反應endothermic-reaction)或[吸熱反應](/posts/nuclear-reactions-and-binding-energy/#放熱反應exothermic-reaction--吸熱反應endothermic-reaction)，但通常是[吸熱反應](/posts/nuclear-reactions-and-binding-energy/#放熱反應exothermic-reaction--吸熱反應endothermic-reaction)
@@ -172,7 +187,9 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 雖然帶電粒子反應需要超過閾能才能發生，且截面通常較小，但輕核中有幾個重要的帶電粒子反應：
 
 #### 放熱反應
+
 ##### $^{10}\mathrm{B}(\mathrm{n},\alpha){^7\mathrm{Li}}$
+
 ![(n, alpha) Cross Section of B-10](/assets/img/neutron-interactions-and-cross-sections/n-alpha-cross-section-of-b-10.png)
 > **$^{10}\mathrm{B}(\mathrm{n},\alpha){^7\mathrm{Li}}$ 反應的截面**  
 > - 圖表來源：韓國原子能研究院核數據中心（Nuclear Data Center at KAERI），核素表（Table of Nuclides）(<https://atom.kaeri.re.kr/nuchart/>)
@@ -184,6 +201,7 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 {: .prompt-tip }
 
 ##### $^{6}\mathrm{Li}(\mathrm{n},\alpha){^3\mathrm{H}}$
+
 ![(n, alpha) Cross Section of Li-6](/assets/img/neutron-interactions-and-cross-sections/n-alpha-cross-section-of-li-6.png)
 > **$^{6}\mathrm{Li}(\mathrm{n},\alpha){^3\mathrm{H}}$ 反應的截面**  
 > - 圖表來源：韓國原子能研究院核數據中心（Nuclear Data Center at KAERI），核素表（Table of Nuclides）(<https://atom.kaeri.re.kr/nuchart/>)
@@ -196,7 +214,9 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 {: .prompt-tip }
 
 #### 吸熱反應
+
 ##### $^{16}\mathrm{O}(\mathrm{n},\mathrm{p}){^{16}\mathrm{N}}$
+
 ![(n, p) Cross Section of O-16](/assets/img/neutron-interactions-and-cross-sections/n-p-cross-section-of-o-16.png)
 > **$^{16}\mathrm{O}(\mathrm{n},\mathrm{p}){^{16}\mathrm{N}}$ 反應的截面**  
 > - 圖表來源：韓國原子能研究院核數據中心（Nuclear Data Center at KAERI），核素表（Table of Nuclides）(<https://atom.kaeri.re.kr/nuchart/>)
@@ -206,6 +226,7 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
   - 水分子中的 $^{16}\mathrm{O}$ 通過此反應變成 $^{16}\mathrm{N}$，$^{16}\mathrm{N}$ 半衰期約7秒，通過[貝塔衰變](/posts/Nuclear-Stability-and-Radioactive-Decay/#貝他衰變β-decay)並[釋放6-7 MeV的伽馬射線](/posts/Nuclear-Stability-and-Radioactive-Decay/#同質異能態轉變isomeric-transition)
 
 ### 中子產生反應（neutron-producing reactions）
+
 - 高能中子與原子核碰撞產生2個或更多新中子（吸熱反應）
 - 表示為 (n, 2n)、(n, 3n) 等
 - (n, 2n) 反應在含重水或鈹的反應堆中特別重要，因為 $^2\text{H}$ 和 $^9\text{Be}$ 中的中子結合能較低，即使與低能中子碰撞也容易被釋放
@@ -215,12 +236,14 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 > - 圖表來源：韓國原子能研究院核數據中心（Nuclear Data Center at KAERI），核素表（Table of Nuclides）(<https://atom.kaeri.re.kr/nuchart/>)
 
 ### 核分裂（fission）
+
 - 中子與某些原子核碰撞，使該原子核分裂為兩個或多個子核
 
 > 關於核分裂和核分裂截面的詳細內容將在另一篇文章中整理。
 {: .prompt-info }
 
 ### 總截面
+
 #### 低能區
 
 $$ \sigma_t = 4\pi R^2 + \frac{C}{\sqrt{E}} \label{eqn:total_cross_section}\tag{6}$$
@@ -229,12 +252,15 @@ $$ \sigma_t = 4\pi R^2 + \frac{C}{\sqrt{E}} \label{eqn:total_cross_section}\tag{
 - 如果第一項占主導，則低能區為常數；反之則呈 $1/v$ 行為
 
 #### 共振區
+
 包含[$\sigma_s$](#共振區resonance-region)和[$\sigma_\gamma$](#共振區)中出現的共振，與這兩個截面在相同能量下出現共振區。輕核種在較高、較寬的能量區域出現共振，重核種則在較低、較窄的能量區域出現共振區。
 
 #### 高能區
+
 在超過共振區的高能區，$\sigma_t$ 隨能量緩慢下降。
 
 ## 氫和氘的截面
+
 許多反應堆中含有大量 $^1\mathrm{H}$ 和 $^2\mathrm{H}$ 核*，這些核與中子的反應方式與其他核有所不同：
 - 不形成[複合核](#複合核形成)
 - 沒有[共振區](#共振區-1)
@@ -254,6 +280,7 @@ $$ \sigma_t = 4\pi R^2 + \frac{C}{\sqrt{E}} \label{eqn:total_cross_section}\tag{
 > - 圖表來源：韓國原子能研究院核數據中心（Nuclear Data Center at KAERI），核素表（Table of Nuclides）(<https://atom.kaeri.re.kr/nuchart/>)
 
 ## 宏觀截面（macroscopic cross-section）
+
 從式（$\ref{eqn:collision_rate}$）計算中子束單位距離的碰撞率：
 
 $$ \frac {p}{\tau} = \frac {1}{\tau} \frac {\Delta I}{I} = \sigma N \equiv \Sigma\ \text{[cm}^{-1}\text{]} \label{eqn:macroscopic_cross_section}\tag{7}$$
@@ -267,6 +294,7 @@ $$ \frac {p}{\tau} = \frac {1}{\tau} \frac {\Delta I}{I} = \sigma N \equiv \Sigm
 一般而言，對於任何反應，宏觀截面 $\Sigma_{reaction}=N\sigma_{reaction}$。
 
 ## 碰撞密度（collision density），即反應率（reaction rate）
+
 *碰撞密度（collision density）*或*反應率（reaction rate）*表示目標物中單位時間、單位體積的碰撞次數。從式（$\ref{eqn:microscopic_cross_section}$）和（$\ref{eqn:macroscopic_cross_section}$）可定義為：
 
 $$ F = \frac {\Delta I}{\tau} = I\sigma N = I\Sigma \label{eqn:reaction_rate}\tag{8} $$

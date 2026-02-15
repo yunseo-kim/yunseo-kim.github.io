@@ -6,6 +6,7 @@ tags: [ODE, First-Order ODEs]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## Équation de Bernoulli
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{ est un nombre réel quelconque)}  \tag{1} $$
@@ -27,11 +28,13 @@ Dans le membre de droite, $y^{1-a}=u$, donc nous obtenons l'équation différent
 $$ u'+(1-a)pu=(1-a)g \tag{2} $$
 
 ## Exemple : Équation logistique
+
 Résolvez l'équation logistique (une forme spéciale de l'équation de Bernoulli).
 
 $$ y'=Ay-By^2 \tag{3} $$
 
 ### Solution
+
 Si nous écrivons l'équation (3) sous la forme de l'équation (1), nous obtenons
 
 $$ y'-Ay=-By^2 $$

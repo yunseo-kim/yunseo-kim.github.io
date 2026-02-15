@@ -1,13 +1,15 @@
 ---
-title: 輻射平衡計算
-description: 探討放射性核種的衰變常數、半衰期和平均壽命之間的關係，並計算給定衰變鏈中任意時間 t 的放射性核種的放射性活度。
+title: "輻射平衡計算"
+description: "探討放射性核種的衰變常數、半衰期和平均壽命之間的關係，並計算給定衰變鏈中任意時間 t 的放射性核種的放射性活度。"
 categories: [Nuclear Engineering, Radiation]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
 ---
+
 ## TL;DR
+
 > **任意時間 t 的放射性活度**
 >
 > $$\begin{align*}
@@ -28,27 +30,33 @@ image: /assets/img/atoms.webp
 {: .prompt-info }
 
 ## 衰變常數（Decay Constant）
+
 - 某個原子核在單位時間內衰變的機率
 - 與時間無關，只由核種決定的常數
 - 用符號 $\lambda$ 表示
 
 ## 放射性活度（Radioactivity）
+
 在時間 $t$ 時尚未衰變的原子核數量為 n(t)，則在時間 $t$ 和 $t+dt$ 之間的間隔 $dt$ 內，平均有 $\lambda n(t)$ 個原子核衰變。這種衰變率稱為該樣品的*放射性活度（radioactivity）*，用符號 $\alpha$ 表示。因此，在任何時間 $t$ 的放射性活度為：
 
 $$ \alpha (t)=\lambda n(t) \tag{1}$$
 
 ## 放射性活度的單位
+
 ### 居里（Curie, Ci）
+
 - 在使用貝克勒爾單位之前傳統使用的單位
 - 1克鐳-226的放射性活度
 - 每秒 $3.7\times 10^{10}$ 次核衰變（$3.7\times 10^{10}\text{Bq}$）
 
 ### 貝克勒爾（Becquerel, Bq）
+
 - 國際標準（SI）單位
 - 每秒1次核衰變
 - $1 \text{Bq} = 2.703\times 10^{-11}\text{Ci} = 27\text{pCi}$
 
 ## 計算放射性活度隨時間的變化
+
 在時間 $dt$ 內有 $\lambda n(t)$ 個原子核衰變，因此在 $dt$ 內樣品中未衰變而剩餘的原子核數量減少量可以表示為：
 
 $$ -dn(t)=\lambda n(t)dt $$
@@ -99,7 +107,9 @@ $$ \begin{align*}
 \end{align*}$$
 
 ## 例題：放射性衰變鏈 1
+
 假設某放射性核種以 $R$ atom/s 的速率產生。這些原子核一產生就立即開始放射性衰變。求任意時刻 t 時該核種的放射性活度。
+
 ```mermaid
 flowchart LR
 	Start[?] -- R --> A[數學模型]
@@ -115,6 +125,7 @@ $$ \text{核種隨時間的變化率} = \text{產生率}-\text{損失率} $$
 $$ dn/dt = -\lambda n + R $$
 
 ### 2. 一般解
+
 將 $n$ 的項全部移到左邊，兩邊乘以 $e^{\lambda t}$：
 
 $$ \frac {dn}{dt} + \lambda n = R $$
@@ -132,6 +143,7 @@ $$ e^{\lambda t}n=\frac {R}{\lambda}e^{\lambda t}+c $$
 $$ n=ce^{-\lambda t}+\frac {R}{\lambda} $$
 
 ### 3. 特解
+
 假設在 $t=0$ 時，這個核種的數量為 $n_0$，求常數 $c$ 的值：
 
 $$ n(0)=c+\frac {R}{\lambda}=n_0 $$
@@ -149,7 +161,9 @@ $$ \alpha = \alpha_0e^{-\lambda t}+R(1-e^{-\lambda t}) \tag{8} $$
 也就是說，當 $t\to\infty$ 時，$\alpha_{\text{max}}=R$，$n_{\text{max}}=R/\lambda$。
 
 ## 例題：放射性衰變鏈 2
+
 在下面的衰變鏈中，計算放射性核種 B 的放射性活度。
+
 ```mermaid
 flowchart LR
 	A --> B
@@ -167,6 +181,7 @@ $$ \frac {dn_B}{dt} = -\lambda_B n_B + \lambda_A n_A $$
 $$  \frac {dn_B}{dt} = -\lambda_B n_B + \lambda_A n_{A0}e^{-\lambda_A t} \tag{9}$$ 
 
 ### 2. 一般解
+
 為了解微分方程，將 $n_B$ 的項全部移到左邊，兩邊乘以 $e^{\lambda_B t}$：
 
 $$ \frac {dn_B}{dt} + \lambda_B n_B = n_{A0}\lambda_A e^{-\lambda_A t} $$
@@ -186,6 +201,7 @@ $$ e^{\lambda_B t}n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{(\lambda_
 $$ n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{-\lambda_A t}+ce^{-\lambda_B t} $$
 
 ### 3. 特解
+
 假設在 $t=0$ 時，B 元素的數量為 $n_{B0}$，求常數 $c$ 的值：
 
 $$ n_B(0)=\frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}+c=n_{B0} $$

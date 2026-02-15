@@ -1,14 +1,15 @@
 ---
-title: Exakte Differentialgleichung und Integrierende Faktoren
-description: Wir untersuchen die Methoden zur Bestimmung und Lösung exakter Differentialgleichungen
-  sowie integrierende Faktoren.
+title: "Exakte Differentialgleichung und Integrierende Faktoren"
+description: "Wir untersuchen die Methoden zur Bestimmung und Lösung exakter Differentialgleichungen sowie integrierende Faktoren."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 ```mermaid
 flowchart TD
 	ODE[Eine gewöhnliche Differentialgleichung, die möglicherweise exakt ist, wird gegeben]
@@ -31,6 +32,7 @@ flowchart TD
 ```
 
 ## Exakte Differentialgleichung
+
 Eine gewöhnliche Differentialgleichung erster Ordnung $M(x,y)+N(x,y)y'=0$ kann geschrieben werden als:
 
 $$ M(x,y)dx+N(x,y)dy=0 \tag{1} $$
@@ -52,6 +54,7 @@ und durch Integration erhalten wir die allgemeine Lösung in der Form:
 $$ u(x,y)=c \tag{4} $$
 
 ## Bestimmung einer exakten Differentialgleichung
+
 Betrachten wir ein geschlossenes Gebiet in der xy-Ebene mit einer geschlossenen Kurve als Rand, die sich nicht selbst schneidet. Nehmen wir an, dass $M$ und $N$ sowie ihre partiellen Ableitungen erster Ordnung in diesem Gebiet stetig sind. Betrachten wir die Bedingung (2) erneut:
 
 $$ \begin{align*}
@@ -73,6 +76,7 @@ $$ \therefore \frac {\partial M}{\partial y}=\frac {\partial N}{\partial x} \tag
 Daher ist die Bedingung (5) eine notwendige Bedingung dafür, dass die Differentialgleichung (1) exakt ist. Obwohl wir es hier nicht bewiesen haben, ist sie tatsächlich auch eine hinreichende Bedingung. Das bedeutet, dass wir durch Überprüfung dieser Bedingung feststellen können, ob eine Differentialgleichung exakt ist.
 
 ## Lösung einer exakten Differentialgleichung
+
 Wenn wir Gleichung (2a) integrieren und dabei y als Konstante betrachten, erhalten wir:
 
 $$ u = \int M(x,y) dx + k(y) \tag{6} $$
@@ -97,6 +101,7 @@ $$ \int M(x,y)dx + \int N(x,y)dy - \int \left(\frac{\partial}{\partial y}\int Md
 {: .prompt-tip }
 
 ## Integrierender Faktor
+
 Betrachten wir eine nicht-exakte Differentialgleichung:
 
 $$ P(x,y)dx+Q(x,y)dy = 0 \quad \left( \frac {\partial P}{\partial y} \neq \frac {\partial Q}{\partial x} \right) \tag{7} $$
@@ -112,6 +117,7 @@ $$ FP\ dx+FQ\ dy = 0 \tag{9} $$
 In diesem Fall wird die Funktion $F(x,y)$ als **integrierender Faktor** der Gleichung (7) bezeichnet.
 
 ## Methode zur Bestimmung des integrierenden Faktors
+
 Wenn wir die Produktregel der Differentiation auf Gleichung (8) anwenden und partielle Ableitungen mit Indizes darstellen, erhalten wir:
 
 $$ F_y P + FP_y = F_x Q + FQ_x $$

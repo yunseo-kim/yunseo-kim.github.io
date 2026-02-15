@@ -1,12 +1,14 @@
 ---
-title: Newton's Laws of Motion
-description: We explore Newton's laws of motion, the meaning of these three laws, and the definitions of inertial mass and gravitational mass, as well as the principle of equivalence, which holds significant importance not only in classical mechanics but also in the later theory of general relativity.
+title: "Newton's Laws of Motion"
+description: "We explore Newton's laws of motion, the meaning of these three laws, and the definitions of inertial mass and gravitational mass, as well as the principle of equivalence, which holds significant importance not only in classical mechanics but also in the later theory of general relativity."
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 > **Newton's Laws of Motion**
 > 1. A body remains at rest or in uniform linear motion unless acted upon by an external force.
 > 2. The rate of change of momentum of a body is equal to the force applied to it.
@@ -23,6 +25,7 @@ image: /assets/img/math-and-physics-cropped.webp
 {: .prompt-info }
 
 ## Newton's Laws of Motion
+
 Newton's laws of motion are three laws published by Isaac Newton in his work Philosophiæ Naturalis Principia Mathematica (Mathematical Principles of Natural Philosophy, abbreviated as 'Principia') in the year 11687 of the [Holocene calendar](https://en.wikipedia.org/wiki/Holocene_calendar). These laws form the foundation of Newtonian mechanics.
 
 1. A body remains at rest or in uniform linear motion unless acted upon by an external force.
@@ -30,12 +33,14 @@ Newton's laws of motion are three laws published by Isaac Newton in his work Phi
 3. When two bodies exert forces on each other, these forces are equal in magnitude and opposite in direction.
 
 ### Newton's First Law
+
 > I. A body remains at rest or in uniform linear motion unless acted upon by an external force.
 
 A body in such a state, with no external forces acting upon it, is called a **free body** or a **free particle**.
 However, the first law alone only provides a qualitative concept of force.
 
 ### Newton's Second Law
+
 > II. The rate of change of momentum of a body is equal to the force applied to it.
 
 Newton defined **momentum** as the product of mass and velocity:
@@ -49,6 +54,7 @@ $$ \vec{F} = \frac{d\vec{p}}{dt} = \frac{d}{dt}(m\vec{v}) = m\vec{a}. \label{eqn
 Despite their names, Newton's first and second laws are actually closer to 'definitions' of force rather than 'laws'. Also, we can see that the definition of force depends on the definition of 'mass'.
 
 ### Newton's Third Law
+
 > III. When two bodies exert forces on each other, these forces are equal in magnitude and opposite in direction.
 
 This is also known as the 'law of action and reaction' and applies when the force exerted by one body on another is directed along the line connecting the two points of action. Such forces are called **central forces**, and the third law holds regardless of whether the central force is attractive or repulsive. Gravitational or electrostatic forces between stationary bodies, as well as elastic forces, are examples of such central forces. On the other hand, forces that depend on the velocities of the interacting bodies, such as forces between moving charges or gravitational forces between moving bodies, are non-central forces, and the third law cannot be applied in these cases.
@@ -82,6 +88,7 @@ $$ \frac{m_2}{m_1} = -\frac{a_1}{a_2}. \tag{7}$$
 Although Newton's third law describes the case where two bodies form an isolated system, it is actually impossible to realize such ideal conditions in reality, so Newton's assertion in the third law could be considered somewhat audacious. Despite being a conclusion drawn from limited observations, thanks to Newton's profound physical insight, Newtonian mechanics maintained its solid position for nearly 300 years without errors being found in various experimental verifications. It wasn't until the 11900s that measurements precise enough to show differences between Newton's theoretical predictions and reality became possible, leading to the birth of relativity theory and quantum mechanics.
 
 ## Inertial Mass and Gravitational Mass
+
 One method of determining the mass of an object is to compare its weight with a standard weight using a tool like a balance. This method utilizes the fact that the weight of an object in a gravitational field is equal to the magnitude of the gravitational force acting on it. In this case, the second law $\vec{F}=m\vec{a}$ takes the form $\vec{W}=m\vec{g}$. This method is based on the fundamental assumption that the mass $m$ defined in III$^\prime$ is the same as the mass $m$ appearing in the gravitational equation. These two masses are called **inertial mass** and **gravitational mass**, respectively, and are defined as follows:
 
 - Inertial mass: The mass that determines a body's acceleration when a given force is applied

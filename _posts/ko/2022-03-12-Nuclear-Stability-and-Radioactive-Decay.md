@@ -1,15 +1,18 @@
 ---
-title: 핵안정성 및 방사성 붕괴
-description: 세그레표와 여러 방사성 붕괴 유형, 베타붕괴에서 방출되는 전자/양전자의 에너지 스펙트럼 및 중성미자의 발견 배경, 몇 가지 주요 핵종(탄소-14, 칼륨-40, 삼중수소, 세슘-137)의 붕괴 사슬, 그리고 이성체 천이에 대해 알아본다.
+title: "핵안정성 및 방사성 붕괴"
+description: "세그레표와 여러 방사성 붕괴 유형, 베타붕괴에서 방출되는 전자/양전자의 에너지 스펙트럼 및 중성미자의 발견 배경, 몇 가지 주요 핵종(탄소-14, 칼륨-40, 삼중수소, 세슘-137)의 붕괴 사슬, 그리고 이성체 천이에 대해 알아본다."
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.webp
 ---
+
 ## Prerequisites
+
 - [아원자 입자와 원자의 구성 요소](/posts/constituents-of-an-atom/)
 
 ## 세그레표(Segre Chart) 또는 핵종 도표 
+
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *이미지 출처*
 > - 저작자: 위키미디어 유저 [Sjlegg](https://commons.wikimedia.org/wiki/User:Sjlegg)
@@ -19,11 +22,13 @@ image: /assets/img/atoms.webp
 - 중성자들은 양성자들 간의 전기적 반발력을 이기고 핵을 묶어 두는 역할을 함
 
 ## 방사성 붕괴(Radioactive Decay)를 하는 이유
+
 - 특정한 중성자와 양성자의 조합만이 안정한 핵종을 이룸
 - 양성자 수 대비 중성자 수가 너무 많거나 적으면 해당 핵종은 불안정하여 *방사성 붕괴(radioactive decay)* 를 일으킴
 - 붕괴 이후 생성된 핵은 대부분 들뜬 상태이므로, 감마선이나 엑스선의 형태로 에너지를 방출
 
 ## 베타붕괴($\beta$-decay)
+
 ### 양의 베타붕괴($\beta^+$-decay)
 
  $$p \to n+\beta^+ +\nu_e$$
@@ -45,6 +50,7 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 예) $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 
 ### 방출되는 전자(양전자)의 에너지 스펙트럼
+
 ![energy spectrum of electrons emitted in beta decay](https://upload.wikimedia.org/wikipedia/commons/e/e6/Beta_spectrum_of_RaE.jpg)
 > *이미지 출처*
 > - 저작자: 독일 위키피디아 유저 [HPaul](https://de.wikipedia.org/wiki/Benutzer:HPaul)
@@ -62,14 +68,17 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 {: .prompt-info }
 
 ### 붕괴 사슬(Decay Chain)
+
 종종 베타붕괴를 통해 형성된 *딸핵종(daughter nuclide)* 도 불안정하여 연달아 베타붕괴가 일어나곤 한다. 이는 다음과 같은 *붕괴 사슬(decay chain)* 로 이어진다.
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
 
 ### 주요 베타붕괴
+
 몇 가지 중요한 베타붕괴를 아래에 소개하겠다.
 
 #### 탄소-14
+
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
 
@@ -77,6 +86,7 @@ $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\bet
 {: .prompt-tip }
 
 #### 칼륨-40
+
 - $^{40}\mathrm{K} \to {^{40}\mathrm{Ca}} + e^{-} + \overline{\nu}_e + 1311\ \mathrm{keV}$ (89%)
 - $^{40}\mathrm{K} + e^{-} \to {^{40}\mathrm{Ar}}  + \nu_e + 1505\ \mathrm{keV}$ (11%)
 
@@ -85,6 +95,7 @@ $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\bet
 {: .prompt-tip }
 
 #### 삼중수소
+
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
@@ -96,6 +107,7 @@ $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\bet
 {: .prompt-tip }
 
 #### 세슘-137
+
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
 
 > 세슘-137은 원자로의 핵분열 반응이나 핵실험 등으로부터 발생하는 주요 부산물로, 비교적 긴 반감기(약 30년), 투과성이 강한 감마선을 방출하는 점, 칼륨과 유사한 화학적 특성을 지녀 체내에 쉽게 흡수되는 점 등으로 인해 주요 감시 및 관리 대상인 핵종이다. 원래 자연적으로는 거의 존재하지 않았으나, 현재는 전 지구상의 토양에 평균적으로 7 μg/g 정도가 존재하는데 이는 폭주하던 전범국 일본 제국을 제압하기 위해 미국이 행한 트리니티 핵실험 및 히로시마$\cdot$나가사키 원자폭탄 투하, 그리고 그 이후 11950-11960년대에 주로 행해진 다수의 대기 중 핵실험과 몇몇 중대 원자력사고(체르노빌 원자력 발전소 사고, 브라질 고이아니아 사고 등)로 인해 발생한 것이다.  
@@ -114,6 +126,7 @@ $$ p + e \to n + \nu_e $$
 - 전자포획에 의해 생겨난 딸핵종(daughter nuclide)은 $\beta^+$붕괴에 의해 생성된 핵과 동일하므로, 이 두 과정은 서로 경쟁한다.
 
 ## 알파붕괴($\alpha$-decay)
+
 - 알파입자($\alpha$, $^4_2\mathrm{He}$)를 방출
 - 원자번호는 2만큼 감소하고, 질량수는 4만큼 감소
 - 납보다 무거운 핵들에서 흔히 일어남
@@ -122,6 +135,7 @@ $$ p + e \to n + \nu_e $$
 예) $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He}$
 
 ## 자발핵분열(Spontaneous Fission)
+
 - 매우 무겁고 불안정한 핵종은 중성자를 흡수하지 않고도 스스로 핵분열하기도 함
 - 넓은 의미로 방사성 붕괴에 포함함
 - 우라늄-238의 경우 $10^9$년의 반감기로 알파 붕괴하지만, 그와 동시에 $10^{16}$년 정도의 반감기로 드물게 자발핵분열하기도 한다. 다음 표는 몇 가지 핵종의 자발핵분열 반감기를 나타낸 것이다.
@@ -133,15 +147,19 @@ $$ p + e \to n + \nu_e $$
 | $^{252}\mathrm{Cf}$ | 약 $2.6$년 | 자발핵분열이 대단히 활발하게 일어남 <br>$\rightarrow$ 원자로 시동 등에 중성자원으로 사용 |
 
 ## 양성자 방출(Proton Emission)
+
 - 양성자가 극도로 많은 불안정한 핵종의 경우, 양성자 1개를 단독으로 방출하기도 함
 - 원자번호와 질량수가 1만큼 감소
 - 매우 드물게 일어남
 
 ## 붕괴도와 이성체 천이
+
 ### 붕괴도(Decay Scheme)
+
 *붕괴도(decay scheme)*: 방사성 물질의 모든 붕괴 경로를 시각적으로 나타낸 도표
 
 ### 이성체 천이(Isomeric Transition)
+
 - 방사성 붕괴에 의해 형성된 핵은 변환 후에도 들뜬 상태인 경우가 있는데, 이 경우 감마선의 형태로 에너지를 방출한다(감마선 방출 시 핵종이 바뀌지는 않으므로 엄밀히는 붕괴가 아니지만, 관습적으로 감마붕괴라는 표현을 사용하기도 한다). 
 - 들뜬 상태의 핵은 대부분 아주 짧은 시간 내에 감마선을 방출하며 바닥 상태로 천이하지만, 특정한 경우에는 감마선 방출이 지연되어 준안정상태처럼 보이기도 한다. 이러한 지연상태를 해당 핵의 *이성체 상태(isomeric states)* 라 한다.
 - 이성체 상태에서 감마선을 방출하며 바닥 상태로 천이하는 것을 *이성체 천이(isomeric transition)* 라 하고 IT로 표시한다.

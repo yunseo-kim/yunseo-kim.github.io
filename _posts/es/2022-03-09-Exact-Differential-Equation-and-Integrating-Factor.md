@@ -1,14 +1,15 @@
 ---
-title: Ecuación Diferencial Exacta y Factor Integrante
-description: Exploramos los métodos para determinar y resolver ecuaciones diferenciales
-  exactas, así como el concepto de factor integrante.
+title: "Ecuación Diferencial Exacta y Factor Integrante"
+description: "Exploramos los métodos para determinar y resolver ecuaciones diferenciales exactas, así como el concepto de factor integrante."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 ```mermaid
 flowchart TD
 	ODE[Se da una ecuación diferencial ordinaria que podría ser exacta]
@@ -31,6 +32,7 @@ flowchart TD
 ```
 
 ## Ecuación Diferencial Exacta
+
 Una ecuación diferencial ordinaria de primer orden $M(x,y)+N(x,y)y'=0$ se puede escribir como:
 
 $$ M(x,y)dx+N(x,y)dy=0 \tag{1} $$
@@ -52,6 +54,7 @@ y al integrar, obtenemos inmediatamente la solución general en la forma:
 $$ u(x,y)=c \tag{4} $$
 
 ## Determinación de una Ecuación Diferencial Exacta
+
 Supongamos que en una región cerrada del plano $xy$, con una curva cerrada que no se interseca a sí misma como frontera, $M$ y $N$ y sus derivadas parciales de primer orden son continuas. Revisando la condición (2) nuevamente, tenemos:
 
 $$ \begin{align*}
@@ -73,6 +76,7 @@ $$ \therefore \frac {\partial M}{\partial y}=\frac {\partial N}{\partial x} \tag
 Por lo tanto, podemos ver que la condición (5) es una condición necesaria para que la ecuación diferencial ordinaria (1) sea exacta, y aunque no lo hemos demostrado aquí, de hecho, también es una condición suficiente. Es decir, podemos determinar si una ecuación diferencial es exacta verificando si cumple esta condición.
 
 ## Resolución de una Ecuación Diferencial Exacta
+
 Si integramos la ecuación (2a) con respecto a $x$, considerando $y$ como una constante, obtenemos:
 
 $$ u = \int M(x,y) dx + k(y) \tag{6} $$
@@ -97,6 +101,7 @@ $$ \int M(x,y)dx + \int N(x,y)dy - \int \left(\frac{\partial}{\partial y}\int Md
 {: .prompt-tip }
 
 ## Factor Integrante
+
 Supongamos que se nos da una ecuación diferencial inexacta:
 
 $$ P(x,y)dx+Q(x,y)dy = 0 \quad \left( \frac {\partial P}{\partial y} \neq \frac {\partial Q}{\partial x} \right) \tag{7} $$
@@ -112,6 +117,7 @@ $$ FP\ dx+FQ\ dy = 0 \tag{9} $$
 En este caso, la función $F(x,y)$ se llama **factor integrante** de la ecuación (7).
 
 ## Método para Encontrar el Factor Integrante
+
 Aplicando la regla del producto a la ecuación (8) y usando subíndices para denotar derivadas parciales, obtenemos:
 
 $$ F_y P + FP_y = F_x Q + FQ_x $$

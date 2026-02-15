@@ -1,12 +1,14 @@
 ---
-title: Newtons Bewegungsgesetze
-description: Wir betrachten Newtons Bewegungsgesetze und die Bedeutung dieser drei Gesetze, sowie die Definitionen von träger und schwerer Masse, und untersuchen das Äquivalenzprinzip, das nicht nur in der klassischen Mechanik, sondern auch in der späteren Allgemeinen Relativitätstheorie eine wichtige Bedeutung hat.
+title: "Newtons Bewegungsgesetze"
+description: "Wir betrachten Newtons Bewegungsgesetze und die Bedeutung dieser drei Gesetze, sowie die Definitionen von träger und schwerer Masse, und untersuchen das Äquivalenzprinzip, das nicht nur in der klassischen Mechanik, sondern auch in der späteren Allgemeinen Relativitätstheorie eine wichtige Bedeutung hat."
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 > **Newtons Bewegungsgesetze (Newton's laws of motion)**
 > 1. Ein Körper verharrt im Zustand der Ruhe oder der gleichförmigen geradlinigen Bewegung, sofern keine äußere Kraft auf ihn einwirkt.
 > 2. Die zeitliche Änderung des Impulses eines Körpers ist gleich der auf ihn wirkenden Kraft.

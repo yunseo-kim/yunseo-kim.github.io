@@ -6,7 +6,9 @@ tags: [ODE, First-Order ODEs]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## Equação Diferencial Ordinária Linear de Primeira Ordem
+
 Se uma equação diferencial ordinária de primeira ordem pode ser algebricamente colocada na forma
 
 $$ y'+p(x)y=r(x) \tag{1} $$
@@ -18,6 +20,7 @@ A forma da equação (1) é chamada de **forma padrão** de uma EDO linear de pr
 Na engenharia, $r(x)$ é frequentemente chamado de **entrada (input)**, e $y(x)$ é chamado de **saída (output)** ou **resposta (response)** à entrada (e às condições iniciais).
 
 ## Equação Diferencial Ordinária Linear Homogênea
+
 Seja $J$ o intervalo $a<x<b$ no qual queremos resolver a equação (1). Se $r(x)\equiv 0$ na equação (1) para o intervalo $J$, temos
 
 $$ y'+p(x)y=0 \tag{2}$$
@@ -33,6 +36,7 @@ $$ y(x) = ce^{-\int p(x)dx} \tag{3}$$
 Quando $c=0$, obtemos a **solução trivial** $y(x)=0$.
 
 ## Equação Diferencial Ordinária Linear Não Homogênea
+
 Quando $r(x)\not\equiv 0$ no intervalo $J$, chamamos de **não homogêneo**. Sabe-se que a equação diferencial ordinária linear não homogênea (1) tem um fator integrante que depende apenas de $x$. Este fator integrante $F(x)$ pode ser encontrado usando a equação (11) do [método para encontrar fatores integrantes](/posts/Exact-Differential-Equation-and-Integrating-Factor/#método-para-encontrar-o-fator-integrante), ou pode ser encontrado diretamente da seguinte maneira:
 
 Multiplicando a equação (1) por $F(x)$, obtemos
@@ -71,7 +75,9 @@ a partir disso, podemos ver que:
 $$ \text{Saída total}=\text{Resposta à entrada }r+\text{Resposta à condição inicial} \tag{5} $$
 
 ## Exemplo: Circuito RL
+
 Suponha que um circuito RL consiste em uma bateria com força eletromotriz $E=48\textrm{V}$, um resistor com $R=11\mathrm{\Omega}$, e um indutor com $L=0.1\text{H}$, e que a corrente inicial é 0. Encontre o modelo deste circuito RL e resolva a equação diferencial resultante para a corrente $I(t)$.
+
 > **Lei de Ohm**  
 > A corrente $I$ no circuito causa uma queda de tensão $RI$ nos terminais do resistor.
 {: .prompt-info }
@@ -85,6 +91,7 @@ Suponha que um circuito RL consiste em uma bateria com força eletromotriz $E=48
 {: .prompt-info }
 
 ### Solução
+
 De acordo com as leis acima, o modelo do circuito RL é $LI'+RI=E(t)$, e na forma padrão é
 
 $$ I'+\frac{R}{L}I=\frac{E(t)}{L} \tag{6}$$

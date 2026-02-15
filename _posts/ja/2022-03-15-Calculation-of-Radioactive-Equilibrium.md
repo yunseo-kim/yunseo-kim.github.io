@@ -1,13 +1,15 @@
 ---
-title: 放射平衡計算
-description: 放射性核種の崩壊定数と半減期、平均寿命の相関関係について学び、与えられた崩壊連鎖における任意の時間tでの放射性核種の放射能を計算してみる。
+title: "放射平衡計算"
+description: "放射性核種の崩壊定数と半減期、平均寿命の相関関係について学び、与えられた崩壊連鎖における任意の時間tでの放射性核種の放射能を計算してみる。"
 categories: [Nuclear Engineering, Radiation]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
 ---
+
 ## TL;DR
+
 > **任意の時間tでの放射能**
 >
 > $$\begin{align*}
@@ -28,27 +30,33 @@ image: /assets/img/atoms.webp
 {: .prompt-info }
 
 ## 崩壊定数(Decay Constant)
+
 - ある核が単位時間当たりに崩壊する確率
 - 時間に関係なく一定で、核種によってのみ決定される定数
 - 記号 $\lambda$ で表記
 
 ## 放射能(Radioactivity)
+
 時間 $t$ でまだ崩壊していない核の数を n(t) とすると、時間 $t$ と $t+dt$ の間の間隔 $dt$ の間に平均的に $\lambda n(t)$ 個の核が崩壊する。この崩壊率をそのサンプルの *放射能(radioactivity)* と呼び、記号 $\alpha$ で表記する。したがって、ある時間 $t$ での放射能は次のようになる。
 
 $$ \alpha (t)=\lambda n(t) \tag{1}$$
 
 ## 放射能の単位
+
 ### キュリー(Curie, Ci)
+
 - ベクレル単位を使用する前に伝統的に使用された単位
 - ラジウム-226 1gが持つ放射能
 - 毎秒 $3.7\times 10^{10}$ 回の核崩壊($3.7\times 10^{10}\text{Bq}$)
 
 ### ベクレル(Becquerel, Bq)
+
 - 国際標準(SI)単位
 - 毎秒1回の核崩壊
 - $1 \text{Bq} = 2.703\times 10^{-11}\text{Ci} = 27\text{pCi}$
 
 ## 時間に伴う放射能変化の計算
+
 時間 $dt$ の間に $\lambda n(t)$ 個の核が崩壊するので、$dt$ の間にサンプル内で崩壊せずに残っている核の減少量は次のように表現できる。
 
 $$ -dn(t)=\lambda n(t)dt $$
@@ -101,7 +109,9 @@ $$ \begin{align*}
 \end{align*}$$
 
 ## 例題：放射性崩壊連鎖 1
+
 ある放射性核種が $R$ atom/s の速度で生成されると仮定する。この核は生成されるとすぐに放射性崩壊が起こる。任意の時刻 t でのこの核種の放射能を求めよ。
+
 ```mermaid
 flowchart LR
 	Start[?] -- R --> A[数学的モデル]
@@ -119,6 +129,7 @@ $$ dn/dt = -\lambda n + R $$
 となる。
 
 ### 2. 一般解
+
 $n$ に関する項をすべて左辺に移項し、両辺に $e^{\lambda t}$ を掛ける。
 
 $$ \frac {dn}{dt} + \lambda n = R $$
@@ -136,6 +147,7 @@ $$ e^{\lambda t}n=\frac {R}{\lambda}e^{\lambda t}+c $$
 $$ n=ce^{-\lambda t}+\frac {R}{\lambda} $$
 
 ### 3. 特殊解
+
 $t=0$ のときにこの核種の数が $n_0$ であるとし、定数 $c$ の値を求める。
 
 $$ n(0)=c+\frac {R}{\lambda}=n_0 $$
@@ -153,7 +165,9 @@ $$ \alpha = \alpha_0e^{-\lambda t}+R(1-e^{-\lambda t}) \tag{8} $$
 つまり、$t\to\infty$ のとき $\alpha_{\text{max}}=R$, $n_{\text{max}}=R/\lambda$ に収束する。
 
 ## 例題：放射性崩壊連鎖 2
+
 以下のような崩壊連鎖において放射性核種 B の放射能を計算せよ。
+
 ```mermaid
 flowchart LR
 	A --> B
@@ -171,6 +185,7 @@ $n_A$ について式 (2) を代入すると、$n_B$ に関する次の微分方
 $$  \frac {dn_B}{dt} = -\lambda_B n_B + \lambda_A n_{A0}e^{-\lambda_A t} \tag{9}$$ 
 
 ### 2. 一般解
+
 微分方程式を解くために、$n_B$ に関する項をすべて左辺に移項し、両辺に $e^{\lambda_B t}$ を掛ける。
 
 $$ \frac {dn_B}{dt} + \lambda_B n_B = n_{A0}\lambda_A e^{-\lambda_A t} $$
@@ -190,6 +205,7 @@ $$ e^{\lambda_B t}n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{(\lambda_
 $$ n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{-\lambda_A t}+ce^{-\lambda_B t} $$
 
 ### 3. 特殊解
+
 $t=0$ のとき B 元素の数が $n_{B0}$ であるとし、定数 $c$ の値を求める。
 
 $$ n_B(0)=\frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}+c=n_{B0} $$

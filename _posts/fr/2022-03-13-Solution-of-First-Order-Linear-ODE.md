@@ -6,7 +6,9 @@ tags: [ODE, First-Order ODEs]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## Équation différentielle linéaire du premier ordre
+
 Si une équation différentielle du premier ordre peut être mise sous la forme algébrique
 
 $$ y'+p(x)y=r(x) \tag{1} $$
@@ -18,6 +20,7 @@ La forme de l'équation (1) est appelée **forme standard** d'une équation diff
 En ingénierie, $r(x)$ est souvent appelé **entrée (input)**, $y(x)$ est appelé **sortie (output)** ou **réponse (response)** à l'entrée (et aux conditions initiales).
 
 ## Équation différentielle linéaire homogène
+
 Soit $J$ l'intervalle $a<x<b$ sur lequel nous cherchons à résoudre l'équation (1). Si $r(x)\equiv 0$ sur l'intervalle $J$ dans l'équation (1), alors
 
 $$ y'+p(x)y=0 \tag{2}$$
@@ -33,6 +36,7 @@ $$ y(x) = ce^{-\int p(x)dx} \tag{3}$$
 Lorsque $c=0$, on obtient la **solution triviale** $y(x)=0$.
 
 ## Équation différentielle linéaire non homogène
+
 Si $r(x)\not\equiv 0$ sur l'intervalle $J$, on dit que l'équation est **non homogène**. Il est connu que l'équation différentielle linéaire non homogène (1) a un facteur intégrant qui ne dépend que de $x$. Ce facteur intégrant $F(x)$ peut être trouvé en utilisant [la méthode pour trouver le facteur intégrant](/posts/Exact-Differential-Equation-and-Integrating-Factor/#méthode-pour-trouver-le-facteur-intégrant) de l'équation (11), ou directement comme suit.
 
 En multipliant l'équation (1) par $F(x)$, on obtient
@@ -71,6 +75,7 @@ on peut voir que
 $$ \text{Sortie totale}=\text{Réponse à l'entrée }r+\text{Réponse à la condition initiale} \tag{5} $$
 
 ## Exemple : Circuit RL
+
 Supposons qu'un circuit RL soit composé d'une batterie avec une force électromotrice $E=48\textrm{V}$, une résistance $R=11\mathrm{\Omega}$, et une inductance $L=0.1\text{H}$, et que le courant initial soit 0. Trouvez le modèle de ce circuit RL et résolvez l'équation différentielle résultante pour le courant $I(t)$.
 > **Loi d'Ohm**  
 > Le courant $I$ dans le circuit provoque une chute de tension $RI$ aux bornes de la résistance.
@@ -85,6 +90,7 @@ Supposons qu'un circuit RL soit composé d'une batterie avec une force électrom
 {: .prompt-info }
 
 ### Solution
+
 Selon ces lois, le modèle du circuit RL est $LI'+RI=E(t)$, et sous forme standard
 
 $$ I'+\frac{R}{L}I=\frac{E(t)}{L} \tag{6}$$

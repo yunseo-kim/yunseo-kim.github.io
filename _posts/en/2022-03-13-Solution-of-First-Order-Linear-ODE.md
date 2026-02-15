@@ -1,12 +1,14 @@
 ---
-title: Solution of First-Order Linear ODEs
-description: Learn how to solve first-order linear ordinary differential equations using the integrating factor method, with a practical example of an RL circuit.
+title: "Solution of First-Order Linear ODEs"
+description: "Learn how to solve first-order linear ordinary differential equations using the integrating factor method, with a practical example of an RL circuit."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## First-Order Linear Ordinary Differential Equations
+
 A first-order ordinary differential equation is called **linear** if it can be written algebraically in the form
 
 $$ y'+p(x)y=r(x) \tag{1} $$
@@ -18,6 +20,7 @@ The form of equation (1) is called the **standard form** of a first-order linear
 In engineering, $r(x)$ is often called the **input**, and $y(x)$ is called the **output** or the **response** to the input (and initial conditions).
 
 ## Homogeneous Linear Ordinary Differential Equations
+
 Let $J$ be an interval $a<x<b$ where we want to solve equation (1). If $r(x)\equiv 0$ for the interval $J$ in equation (1), we have
 
 $$ y'+p(x)y=0 \tag{2}$$
@@ -33,6 +36,7 @@ $$ y(x) = ce^{-\int p(x)dx} \tag{3}$$
 If $c=0$, we get the **trivial solution** $y(x)=0$.
 
 ## Nonhomogeneous Linear Ordinary Differential Equations
+
 If $r(x)\not\equiv 0$ in the interval $J$, it is called **nonhomogeneous**. It is known that the nonhomogeneous linear ODE (1) has an integrating factor that depends only on $x$. This integrating factor $F(x)$ can be found using equation (11) from the [Method for Finding Integrating Factors](/posts/Exact-Differential-Equation-and-Integrating-Factor/#method-for-finding-integrating-factors), or it can be derived directly as follows.
 
 Multiplying equation (1) by $F(x)$ gives
@@ -71,7 +75,9 @@ we can see the following:
 $$ \text{Total Output} = \text{Response to Input } r + \text{Response to Initial Condition} \tag{5} $$
 
 ## Example: RL Circuit
+
 An $RL$ circuit consists of a battery with an electromotive force (EMF) of $E=48\textrm{V}$, a resistor with $R=11\mathrm{\Omega}$, and an inductor with $L=0.1\text{H}$. Assume the initial current is zero. Find the model for this $RL$ circuit and solve the resulting ordinary differential equation for the current $I(t)$.
+
 > **Ohm's Law**  
 > The current $I$ in the circuit causes a voltage drop of $RI$ across the resistor.
 {: .prompt-info }
@@ -85,6 +91,7 @@ An $RL$ circuit consists of a battery with an electromotive force (EMF) of $E=48
 {: .prompt-info }
 
 ### Solution
+
 According to the laws above, the model for the $RL$ circuit is $LI'+RI=E(t)$, and in standard form, it is:
 
 $$ I'+\frac{R}{L}I=\frac{E(t)}{L} \tag{6}$$

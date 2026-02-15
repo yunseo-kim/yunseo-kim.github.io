@@ -1,12 +1,14 @@
 ---
-title: Prawa ruchu Newtona
-description: Omówienie praw ruchu Newtona i znaczenia trzech zasad, definicji masy bezwładnej i grawitacyjnej oraz zasady równoważności, kluczowej nie tylko w mechanice klasycznej, ale też w ogólnej teorii względności.
+title: "Prawa ruchu Newtona"
+description: "Omówienie praw ruchu Newtona i znaczenia trzech zasad, definicji masy bezwładnej i grawitacyjnej oraz zasady równoważności, kluczowej nie tylko w mechanice klasycznej, ale też w ogólnej teorii względności."
 categories: [Physics, Classical Dynamics]
 tags: [Newtonian Mechanics, Principle of Equivalence]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 > **Prawa ruchu Newtona**
 > 1. O ile nie działa siła zewnętrzna, ciało pozostaje w spoczynku albo porusza się ruchem jednostajnym prostoliniowym.
 > 2. Szybkość zmian pędu ciała w czasie jest równa sile działającej na to ciało.

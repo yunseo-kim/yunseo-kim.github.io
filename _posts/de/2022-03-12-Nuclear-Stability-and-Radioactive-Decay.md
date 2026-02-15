@@ -1,15 +1,18 @@
 ---
-title: Kernstabilität und radioaktiver Zerfall
-description: Wir betrachten das Segré-Diagramm und verschiedene Arten radioaktiven Zerfalls, das Energiespektrum von Elektronen/Positronen bei Betazerfall und die Entdeckung des Neutrinos, die Zerfallsketten einiger wichtiger Nuklide (Kohlenstoff-14, Kalium-40, Tritium, Cäsium-137) sowie isomere Übergänge.
+title: "Kernstabilität und radioaktiver Zerfall"
+description: "Wir betrachten das Segré-Diagramm und verschiedene Arten radioaktiven Zerfalls, das Energiespektrum von Elektronen/Positronen bei Betazerfall und die Entdeckung des Neutrinos, die Zerfallsketten einiger wichtiger Nuklide (Kohlenstoff-14, Kalium-40, Tritium, Cäsium-137) sowie isomere Übergänge."
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.webp
 ---
+
 ## Voraussetzungen
+
 - [Subatomare Teilchen und Bestandteile des Atoms](/posts/constituents-of-an-atom/)
 
 ## Segré-Diagramm oder Nuklidkarte
+
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *Bildquelle*
 > - Autor: Wikimedia-Benutzer [Sjlegg](https://commons.wikimedia.org/wiki/User:Sjlegg)
@@ -19,11 +22,13 @@ image: /assets/img/atoms.webp
 - Neutronen dienen dazu, die elektrische Abstoßung zwischen den Protonen zu überwinden und den Kern zusammenzuhalten
 
 ## Gründe für radioaktiven Zerfall
+
 - Nur bestimmte Kombinationen von Neutronen und Protonen bilden stabile Nuklide
 - Wenn das Verhältnis von Neutronen zu Protonen zu hoch oder zu niedrig ist, wird das Nuklid instabil und unterliegt einem *radioaktiven Zerfall*
 - Der nach dem Zerfall entstandene Kern befindet sich meist in einem angeregten Zustand und gibt Energie in Form von Gamma- oder Röntgenstrahlung ab
 
 ## Beta-Zerfall ($\beta$-Zerfall)
+
 ### Positiver Beta-Zerfall ($\beta^+$-Zerfall)
 
  $$p \to n+\beta^+ +\nu_e$$
@@ -45,6 +50,7 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 Beispiel: $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 
 ### Energiespektrum der emittierten Elektronen (Positronen)
+
 ![Energiespektrum der beim Beta-Zerfall emittierten Elektronen](https://upload.wikimedia.org/wikipedia/commons/e/e6/Beta_spectrum_of_RaE.jpg)
 > *Bildquelle*
 > - Autor: Deutscher Wikipedia-Benutzer [HPaul](https://de.wikipedia.org/wiki/Benutzer:HPaul)
@@ -62,14 +68,17 @@ Beispiel: $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 {: .prompt-info }
 
 ### Zerfallsketten (Decay Chains)
+
 Häufig ist auch das durch Beta-Zerfall entstandene *Tochternuklid* instabil und unterliegt einem weiteren Beta-Zerfall. Dies führt zu einer *Zerfallskette*:
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stabil)} $$
 
 ### Wichtige Beta-Zerfall
+
 Im Folgenden werden einige wichtige Beta-Zerfall vorgestellt.
 
 #### Kohlenstoff-14
+
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
 
@@ -77,6 +86,7 @@ Im Folgenden werden einige wichtige Beta-Zerfall vorgestellt.
 {: .prompt-tip }
 
 #### Kalium-40
+
 - $^{40}\mathrm{K} \to {^{40}\mathrm{Ca}} + e^{-} + \overline{\nu}_e + 1311\ \mathrm{keV}$ (89%)
 - $^{40}\mathrm{K} + e^{-} \to {^{40}\mathrm{Ar}}  + \nu_e + 1505\ \mathrm{keV}$ (11%)
 
@@ -85,6 +95,7 @@ Im Folgenden werden einige wichtige Beta-Zerfall vorgestellt.
 {: .prompt-tip }
 
 #### Tritium
+
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
@@ -96,6 +107,7 @@ Im Folgenden werden einige wichtige Beta-Zerfall vorgestellt.
 {: .prompt-tip }
 
 #### Cäsium-137
+
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
 
 > Cäsium-137 ist ein Hauptnebenprodukt von Kernspaltungsreaktionen in Reaktoren und Kernwaffentests. Aufgrund seiner relativ langen Halbwertszeit (etwa 30 Jahre), der Emission durchdringender Gammastrahlung und seiner chemischen Ähnlichkeit mit Kalium, wodurch es leicht vom Körper aufgenommen wird, ist es ein wichtiges Nuklid für Überwachung und Management. Ursprünglich kam es in der Natur kaum vor, heute findet man jedoch durchschnittlich etwa 7 μg/g in Böden weltweit. Dies ist auf den Trinity-Kernwaffentest und die Atombombenabwürfe auf Hiroshima und Nagasaki durch die USA zur Niederschlagung des kriegführenden japanischen Kaiserreichs, sowie auf zahlreiche atmosphärische Kernwaffentests hauptsächlich in den 11950er und 11960er Jahren und einige schwere Nuklearunfälle (Tschernobyl, Goiânia-Unfall in Brasilien usw.) zurückzuführen.  
@@ -114,6 +126,7 @@ $$ p + e \to n + \nu_e $$
 - Das durch Elektroneneinfang entstandene Tochternuklid ist identisch mit dem durch $\beta^+$-Zerfall erzeugten, daher konkurrieren diese beiden Prozesse miteinander
 
 ## Alpha-Zerfall ($\alpha$-Zerfall)
+
 - Emission eines Alpha-Teilchens ($\alpha$, $^4_2\mathrm{He}$)
 - Die Ordnungszahl nimmt um 2 ab, die Massenzahl um 4
 - Tritt häufig bei Kernen schwerer als Blei auf
@@ -122,6 +135,7 @@ $$ p + e \to n + \nu_e $$
 Beispiel: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He}$
 
 ## Spontane Spaltung (Spontaneous Fission)
+
 - Sehr schwere und instabile Nuklide können sich ohne Neutronenabsorption von selbst spalten
 - Wird im weiteren Sinne zum radioaktiven Zerfall gezählt
 - Uran-238 zerfällt mit einer Halbwertszeit von $10^9$ Jahren durch Alpha-Zerfall, kann aber gleichzeitig mit einer Halbwertszeit von etwa $10^{16}$ Jahren selten spontan spalten. Die folgende Tabelle zeigt die Halbwertszeiten für spontane Spaltung einiger Nuklide.
@@ -133,15 +147,19 @@ Beispiel: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{H
 | $^{252}\mathrm{Cf}$ | ca. $2.6$ Jahre | Sehr aktive spontane Spaltung <br>$\rightarrow$ Wird als Neutronenquelle für Reaktorstarts verwendet |
 
 ## Protonenabgabe (Proton Emission)
+
 - Bei extrem protonenreichen instabilen Nukliden kann ein einzelnes Proton emittiert werden
 - Ordnungszahl und Massenzahl nehmen um 1 ab
 - Tritt sehr selten auf
 
 ## Zerfallsschema und isomere Übergänge
+
 ### Zerfallsschema (Decay Scheme)
+
 *Zerfallsschema*: Eine visuelle Darstellung aller Zerfallswege eines radioaktiven Materials
 
 ### Isomerer Übergang (Isomeric Transition)
+
 - Kerne, die durch radioaktiven Zerfall entstehen, können sich nach der Umwandlung in einem angeregten Zustand befinden und geben dann Energie in Form von Gammastrahlung ab (obwohl bei Gammaemission kein Nuklid verändert wird und es streng genommen kein Zerfall ist, wird umgangssprachlich manchmal der Begriff "Gammazerfall" verwendet).
 - Die meisten angeregten Kerne gehen sehr schnell durch Gammaemission in den Grundzustand über, in bestimmten Fällen kann die Gammaemission jedoch verzögert sein, was wie ein metastabiler Zustand erscheint. Diese verzögerten Zustände werden als *isomere Zustände* des Kerns bezeichnet.
 - Der Übergang von einem isomeren Zustand in den Grundzustand durch Gammaemission wird als *isomerer Übergang* bezeichnet und mit IT abgekürzt.

@@ -1,12 +1,14 @@
 ---
-title: Kernfusionsmechanismen in Sternen
-description: Dieser Artikel stellt die Kernfusionsreaktionen im Inneren von Sternen vor, insbesondere die Proton-Proton-Kettenreaktion und den Kohlenstoff-Stickstoff-Sauerstoff-Zyklus (CNO-Zyklus). Es handelt sich um einen Essay, den der Autor in der 10. Klasse für einen Schulwissenschaftsclub verfasst hat. Im Gegensatz zu anderen Beiträgen ist er in einem umgangssprachlichen Stil geschrieben und wurde zu Archivierungszwecken im Originalformat hochgeladen.
+title: "Kernfusionsmechanismen in Sternen"
+description: "Dieser Artikel stellt die Kernfusionsreaktionen im Inneren von Sternen vor, insbesondere die Proton-Proton-Kettenreaktion und den Kohlenstoff-Stickstoff-Sauerstoff-Zyklus (CNO-Zyklus). Es handelt sich um einen Essay, den der Autor in der 10. Klasse für einen Schulwissenschaftsclub verfasst hat. Im Gegensatz zu anderen Beiträgen ist er in einem umgangssprachlichen Stil geschrieben und wurde zu Archivierungszwecken im Originalformat hochgeladen."
 categories: [Nuclear Engineering, Plasma Physics]
 tags: [Nuclear Physics, Nuclear Reaction, Fusion Power]
 math: true
 image: /assets/img/tokamak-plasma-cropped.webp
 ---
+
 ## Proton-Proton-Kettenreaktion (proton-proton chain reaction)
+
 Dies ist die bekannteste Kernfusionsreaktion in Sternen. Der Kern des schweren Wasserstoffs, das Deuteron, besteht aus einem Proton (p) und einem Neutron (n). Damit zwei Protonen zu einem Deuteriumkern fusionieren können, muss sich eines der Protonen in ein Neutron umwandeln. Wie kann sich also ein Proton in ein Neutron verwandeln?
 
 - Beim '[Betazerfall](/posts/Nuclear-Stability-and-Radioactive-Decay/#negativer-beta-zerfall-beta--zerfall)' wandelt sich ein Neutron ($n$) in ein Proton ($p$) um und gibt dabei ein Elektron ($e^{-}$) und ein Antineutrino ($\overline{\nu_e}$) ab. Als Reaktionsgleichung geschrieben: $n \rightarrow p + e^{-} + \overline{\nu_e}$.
@@ -20,6 +22,7 @@ Tatsächlich gibt es nicht nur einen Reaktionsweg für die Proton-Proton-Kettenr
 Diese Proton-Proton-Kettenreaktion findet vorwiegend bei Temperaturen von etwa 10 bis 14 Millionen Kelvin statt. Im Fall der Sonne, deren Kerntemperatur etwa 15 Millionen Kelvin beträgt, macht die pp-Kettenreaktion 98,3% aus (der Rest von 1,3% entfällt auf den CNO-Zyklus).
 
 ## Kohlenstoff-Stickstoff-Sauerstoff-Zyklus (CNO Cycle)
+
 Der CNO-Zyklus ist eine Reaktion, bei der Kohlenstoff ein Proton aufnimmt und zu Stickstoff wird, dann Stickstoff ein Proton aufnimmt und zu Sauerstoff wird, und so weiter. Am Ende werden vier Protonen aufgenommen, ein Helium freigesetzt, und der Prozess kehrt wieder zu Kohlenstoff zurück. Charakteristisch ist, dass Kohlenstoff, Stickstoff und Sauerstoff als Katalysatoren wirken. Theoretisch dominiert dieser CNO-Zyklus in Sternen mit mehr als 1,5-facher Sonnenmasse. Der Unterschied in den Reaktionen je nach Sternmasse liegt in der unterschiedlichen Temperaturabhängigkeit der Proton-Proton-Kettenreaktion und des CNO-Zyklus. Erstere beginnt bei relativ niedrigen Temperaturen um 4 Millionen Kelvin, und ihre Reaktionsrate ist proportional zur vierten Potenz der Temperatur. Letztere beginnt bei etwa 15 Millionen Kelvin, ist aber sehr temperaturempfindlich (die Reaktionsrate ist proportional zur 16. Potenz der Temperatur), sodass bei Temperaturen über 17 Millionen Kelvin der CNO-Zyklus überwiegt.
 
 ![Stellar Nuclear Energy Generation](https://upload.wikimedia.org/wikipedia/commons/5/5b/Nuclear_energy_generation.svg)
@@ -37,6 +40,7 @@ Auch für den CNO-Zyklus existieren verschiedene Wege. Er wird grob in den kalte
 Wie in der obigen Abbildung dargestellt, zirkulieren Kohlenstoff, Stickstoff und Sauerstoff und fungieren als Katalysatoren. Unabhängig vom Reaktionsweg sind jedoch die Gesamtreaktionsgleichung und die erzeugte Energiemenge gleich.
 
 ## More Readings
+
 - Park Inkyu (Professor für Physik an der Universität Seoul), [Naver Cast Physics Walk: Wie viele Neutrinos werden in der Sonne erzeugt?](https://terms.naver.com/entry.naver?docId=4125519&cid=58941&categoryId=58960)
 - Wikipedia, [Proton-proton chain](https://en.wikipedia.org/wiki/Proton%E2%80%93proton_chain)
 - Wikipedia, [CNO cycle](https://en.wikipedia.org/wiki/CNO_cycle)

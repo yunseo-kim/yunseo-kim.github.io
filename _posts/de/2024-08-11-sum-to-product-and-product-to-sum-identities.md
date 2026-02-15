@@ -1,16 +1,15 @@
 ---
-title: Produkt-zu-Summe und Summe-zu-Produkt Identitäten
-description: Wir untersuchen Formeln zur Umwandlung von Produkten trigonometrischer
-  Funktionen in Summen oder Differenzen und leiten diese aus den trigonometrischen
-  Additionstheoreme ab. Daraus leiten wir auch Formeln ab, um Summen oder Differenzen
-  trigonometrischer Funktionen in Produkte umzuwandeln.
+title: "Produkt-zu-Summe und Summe-zu-Produkt Identitäten"
+description: "Wir untersuchen Formeln zur Umwandlung von Produkten trigonometrischer Funktionen in Summen oder Differenzen und leiten diese aus den trigonometrischen Additionstheoremen ab. Daraus leiten wir auch Formeln ab, um Summen oder Differenzen trigonometrischer Funktionen in Produkte umzuwandeln."
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product
     Identities]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 > **Produkt-zu-Summe Identitäten**
 >
 > - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
@@ -31,15 +30,18 @@ image: /assets/img/math-and-physics-cropped.webp
 {: .prompt-tip }
 
 ## Voraussetzungen
+
 - [Trigonometrische Additionstheoreme](/posts/trigonometric-addition-formulas)
 
 ## Produkt-zu-Summe Identitäten
+
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \sin \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) - \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \cos \beta = \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) + \cos ( \alpha - \beta )\} $$
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### Ableitung
+
 Wir verwenden die [trigonometrischen Additionstheoreme](/posts/trigonometric-addition-formulas)
 
 $$ \begin{align}
@@ -79,12 +81,14 @@ $$ \cos(\alpha+\beta) - \cos(\alpha-\beta) = -2 \sin \alpha \sin \beta \tag{8}\l
 $$ \therefore \sin \alpha \sin \beta = -\frac { 1 } { 2 } \{ \cos(\alpha+\beta) - \cos(\alpha-\beta) \}. $$
 
 ## Summe-zu-Produkt Identitäten
+
 - $$ \sin A + \sin B = 2\sin \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \sin A - \sin B = 2\cos \frac{A+B}{2}\sin \frac{A-B}{2} $$
 - $$ \cos A + \cos B = 2\cos \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \cos A - \cos B = -2\sin \frac{A+B}{2}\sin \frac{A-B}{2} $$
 
 ### Ableitung
+
 Wir können die Summe-zu-Produkt Identitäten aus den Produkt-zu-Summe Identitäten ableiten.
 
 Setzen wir

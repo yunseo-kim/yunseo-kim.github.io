@@ -1,11 +1,12 @@
 ---
-title: ベルヌーイ方程式（Bernoulli Equation）
-description: ベルヌーイ方程式と、ベルヌーイ方程式の特殊な形であるロジスティック方程式の解法を学ぶ。
+title: "ベルヌーイ方程式（Bernoulli Equation）"
+description: "ベルヌーイ方程式と、ベルヌーイ方程式の特殊な形であるロジスティック方程式の解法を学ぶ。"
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## ベルヌーイ方程式（Bernoulli Equation）
 
 $$ y'+p(x)y=g(x)y^a\quad \text{(}a\text{は任意の実数)}  \tag{1} $$
@@ -27,11 +28,13 @@ u'&=(1-a)y^{-a}y'
 $$ u'+(1-a)pu=(1-a)g \tag{2} $$
 
 ## 例題：ロジスティック方程式（Logistic Equation）
+
 ロジスティック方程式（ベルヌーイ方程式の特殊な形）を解け。
 
 $$ y'=Ay-By^2 \tag{3} $$
 
 ### 解法
+
 式 (3)を式 (1)の形で書くと
 
 $$ y'-Ay=-By^2 $$

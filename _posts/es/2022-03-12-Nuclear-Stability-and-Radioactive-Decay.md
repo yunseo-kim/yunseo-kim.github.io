@@ -1,15 +1,18 @@
 ---
-title: Estabilidad nuclear y desintegración radiactiva
-description: Exploramos la tabla de Segrè, varios tipos de desintegración radiactiva, el espectro energético de electrones/positrones emitidos en la desintegración beta y el trasfondo del descubrimiento del neutrino, las cadenas de desintegración de algunos nucleidos importantes (carbono-14, potasio-40, tritio, cesio-137), y la transición isomérica.
+title: "Estabilidad nuclear y desintegración radiactiva"
+description: "Exploramos la tabla de Segrè, varios tipos de desintegración radiactiva, el espectro energético de electrones/positrones emitidos en la desintegración beta y el trasfondo del descubrimiento del neutrino, las cadenas de desintegración de algunos nucleidos importantes (carbono-14, potasio-40, tritio, cesio-137), y la transición isomérica."
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.webp
 ---
+
 ## Prerrequisitos
+
 - [Partículas subatómicas y componentes del átomo](/posts/constituents-of-an-atom/)
 
 ## Tabla de Segré (Segre Chart) o Tabla de núclidos
+
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *Fuente de la imagen*
 > - Autor: Usuario de Wikimedia [Sjlegg](https://commons.wikimedia.org/wiki/User:Sjlegg)
@@ -19,11 +22,13 @@ image: /assets/img/atoms.webp
 - Los neutrones cumplen la función de mantener unido el núcleo, superando la repulsión eléctrica entre protones
 
 ## Razones para la desintegración radiactiva
+
 - Solo ciertas combinaciones de neutrones y protones forman núclidos estables
 - Si la proporción de neutrones respecto a protones es demasiado alta o baja, el núclido es inestable y sufre *desintegración radiactiva*
 - El núcleo formado tras la desintegración suele estar en estado excitado, por lo que emite energía en forma de rayos gamma o rayos X
 
 ## Desintegración beta ($\beta$-decay)
+
 ### Desintegración beta positiva ($\beta^+$-decay)
 
  $$p \to n+\beta^+ +\nu_e$$
@@ -45,6 +50,7 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 Ejemplo: $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 
 ### Espectro de energía de los electrones (positrones) emitidos
+
 ![energy spectrum of electrons emitted in beta decay](https://upload.wikimedia.org/wikipedia/commons/e/e6/Beta_spectrum_of_RaE.jpg)
 > *Fuente de la imagen*
 > - Autor: Usuario de Wikipedia alemana [HPaul](https://de.wikipedia.org/wiki/Benutzer:HPaul)
@@ -62,14 +68,17 @@ Ejemplo: $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 {: .prompt-info }
 
 ### Cadenas de desintegración (Decay Chain)
+
 A menudo, el *núclido hijo (daughter nuclide)* formado por la desintegración beta también es inestable y sufre desintegraciones beta consecutivas. Esto lleva a una *cadena de desintegración (decay chain)* como la siguiente:
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (estable)} $$
 
 ### Desintegraciónes beta importantes
+
 A continuación, presentaré algunas desintegraciónes beta importantes.
 
 #### Carbono-14
+
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
 
@@ -77,6 +86,7 @@ A continuación, presentaré algunas desintegraciónes beta importantes.
 {: .prompt-tip }
 
 #### Potasio-40
+
 - $^{40}\mathrm{K} \to {^{40}\mathrm{Ca}} + e^{-} + \overline{\nu}_e + 1311\ \mathrm{keV}$ (89%)
 - $^{40}\mathrm{K} + e^{-} \to {^{40}\mathrm{Ar}}  + \nu_e + 1505\ \mathrm{keV}$ (11%)
 
@@ -85,6 +95,7 @@ A continuación, presentaré algunas desintegraciónes beta importantes.
 {: .prompt-tip }
 
 #### Tritio
+
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
@@ -96,6 +107,7 @@ A continuación, presentaré algunas desintegraciónes beta importantes.
 {: .prompt-tip }
 
 #### Cesio-137
+
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
 
 > El cesio-137 es un subproducto principal de las reacciones de fisión en reactores nucleares o pruebas nucleares. Debido a su vida media relativamente larga (aproximadamente 30 años), su emisión de rayos gamma altamente penetrantes, y sus propiedades químicas similares al potasio que facilitan su absorción por el cuerpo, es un isótopo que requiere vigilancia y gestión especial. Originalmente casi inexistente en la naturaleza, ahora está presente en el suelo de todo el planeta a un nivel promedio de 7 μg/g, resultado de la prueba nuclear Trinity y los bombardeos atómicos de Hiroshima y Nagasaki realizados por Estados Unidos para someter al Imperio Japonés, así como numerosas pruebas nucleares atmosféricas principalmente en las décadas de 11950-11960 y varios accidentes nucleares graves (como el accidente de Chernóbil y el incidente de Goiânia en Brasil).  
@@ -114,6 +126,7 @@ $$ p + e \to n + \nu_e $$
 - El núclido hijo producido por captura electrónica es idéntico al producido por desintegración $\beta^+$, por lo que estos dos procesos compiten entre sí.
 
 ## Desintegración alfa ($\alpha$-decay)
+
 - Emisión de una partícula alfa ($\alpha$, $^4_2\mathrm{He}$)
 - El número atómico disminuye en 2 y el número másico disminuye en 4
 - Común en núcleos más pesados que el plomo
@@ -122,6 +135,7 @@ $$ p + e \to n + \nu_e $$
 Ejemplo: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He}$
 
 ## Fisión espontánea (Spontaneous Fission)
+
 - Los núclidos muy pesados e inestables pueden sufrir fisión por sí mismos sin absorber neutrones
 - Se incluye en un sentido amplio dentro de la desintegración radiactiva
 - El uranio-238, por ejemplo, sufre desintegración alfa con una vida media de $10^9$ años, pero también, raramente, fisión espontánea con una vida media de aproximadamente $10^{16}$ años. La siguiente tabla muestra las vidas medias de fisión espontánea de varios núclidos.
@@ -133,15 +147,19 @@ Ejemplo: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He
 | $^{252}\mathrm{Cf}$ | Aproximadamente $2.6$ años | La fisión espontánea ocurre muy activamente <br>$\rightarrow$ Se usa como fuente de neutrones para el arranque de reactores |
 
 ## Emisión de protones (Proton Emission)
+
 - En núclidos extremadamente inestables con exceso de protones, a veces se emite un solo protón
 - El número atómico y el número másico disminuyen en 1
 - Ocurre muy raramente
 
 ## Esquema de desintegración y transición isomérica
+
 ### Esquema de desintegración (Decay Scheme)
+
 *Esquema de desintegración (decay scheme)*: Diagrama visual que representa todas las vías de desintegración de un material radiactivo
 
 ### Transición isomérica (Isomeric Transition)
+
 - Los núcleos formados por desintegración radiactiva a menudo quedan en estado excitado y emiten energía en forma de rayos gamma (aunque técnicamente no es una desintegración ya que el núclido no cambia, convencionalmente a veces se usa el término "desintegración gamma").
 - La mayoría de los núcleos excitados emiten rayos gamma y pasan al estado fundamental muy rápidamente, pero en ciertos casos, la emisión de rayos gamma se retrasa, aparentando un estado metaestable. Estos estados retardados se denominan *estados isoméricos (isomeric states)* del núcleo.
 - La transición de un estado isomérico al estado fundamental mediante la emisión de rayos gamma se denomina *transición isomérica (isomeric transition)* y se denota como IT.

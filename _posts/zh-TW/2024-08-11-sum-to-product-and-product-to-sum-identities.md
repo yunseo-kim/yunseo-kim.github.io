@@ -1,13 +1,15 @@
 ---
-title: 和或差公式（積和公式和和積公式）
-description: 探討將三角函數的乘積轉換為和或差形式的公式，並從三角函數的加法定理推導出這些公式。然後從中推導出將三角函數的和或差形式轉換為乘積形式的公式。
+title: "和或差公式（積和公式和和積公式）"
+description: "探討將三角函數的乘積轉換為和或差形式的公式，並從三角函數的加法定理推導出這些公式。然後從中推導出將三角函數的和或差形式轉換為乘積形式的公式。"
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product
     Identities]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 > **積和公式（Product-to-Sum Identities）**
 >
 > - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
@@ -28,15 +30,18 @@ image: /assets/img/math-and-physics-cropped.webp
 {: .prompt-tip }
 
 ## 先備知識
+
 - [三角函數的加法定理](/posts/trigonometric-addition-formulas)
 
 ## 積和公式（Product-to-Sum Identities）
+
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \sin \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) - \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \cos \beta = \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) + \cos ( \alpha - \beta )\} $$
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### 推導
+
 利用[三角函數的加法定理](/posts/trigonometric-addition-formulas)
 
 $$ \begin{align}
@@ -76,12 +81,14 @@ $$ \cos(\alpha+\beta) - \cos(\alpha-\beta) = -2 \sin \alpha \sin \beta \tag{8}\l
 $$ \therefore \sin \alpha \sin \beta = -\frac { 1 } { 2 } \{ \cos(\alpha+\beta) - \cos(\alpha-\beta) \}. $$
 
 ## 和積公式（Sum-to-Product Identities）
+
 - $$ \sin A + \sin B = 2\sin \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \sin A - \sin B = 2\cos \frac{A+B}{2}\sin \frac{A-B}{2} $$
 - $$ \cos A + \cos B = 2\cos \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \cos A - \cos B = -2\sin \frac{A+B}{2}\sin \frac{A-B}{2} $$
 
 ### 推導
+
 我們可以從積和公式（Product-to-Sum Identities）推導出和積公式（Sum-to-Product Identities）。
 
 令 $$ \alpha + \beta = A, \quad \alpha - \beta = B $$

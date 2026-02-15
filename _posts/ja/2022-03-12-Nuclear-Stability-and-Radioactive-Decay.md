@@ -1,15 +1,18 @@
 ---
-title: 核安定性および放射性崩壊
-description: セグレ図表と様々な放射性崩壊の種類、ベータ崩壊で放出される電子/陽電子のエネルギースペクトルと中性微子の発見背景、いくつかの主要な核種（炭素-14、カリウム-40、三重水素、セシウム-137）の崩壊連鎖、そして異性体転移について学ぶ。
+title: "核安定性および放射性崩壊"
+description: "セグレ図表と様々な放射性崩壊の種類、ベータ崩壊で放出される電子/陽電子のエネルギースペクトルと中性微子の発見背景、いくつかの主要な核種（炭素-14、カリウム-40、三重水素、セシウム-137）の崩壊連鎖、そして異性体転移について学ぶ。"
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.webp
 ---
+
 ## 前提知識
+
 - [亜原子粒子と原子の構成要素](/posts/constituents-of-an-atom/)
 
 ## セグレ図（Segre Chart）または核種図表
+
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *画像出典*
 > - 作者：ウィキメディアユーザー [Sjlegg](https://commons.wikimedia.org/wiki/User:Sjlegg)
@@ -19,11 +22,13 @@ image: /assets/img/atoms.webp
 - 中性子は陽子間の電気的反発力に打ち勝ち、核を束縛する役割を果たす
 
 ## 放射性崩壊（Radioactive Decay）をする理由
+
 - 特定の中性子と陽子の組み合わせだけが安定な核種を形成する
 - 陽子数に対して中性子数が多すぎるか少なすぎると、その核種は不安定となり*放射性崩壊（radioactive decay）*を起こす
 - 崩壊後に生成された核はほとんどが励起状態であるため、ガンマ線やX線の形でエネルギーを放出する
 
 ## ベータ崩壊（$\beta$-decay）
+
 ### 正のベータ崩壊（$\beta^+$-decay）
 
  $$p \to n+\beta^+ +\nu_e$$
@@ -45,6 +50,7 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 例）$^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 
 ### 放出される電子（陽電子）のエネルギースペクトル
+
 ![energy spectrum of electrons emitted in beta decay](https://upload.wikimedia.org/wikipedia/commons/e/e6/Beta_spectrum_of_RaE.jpg)
 > *画像出典*
 > - 作者：ドイツウィキペディアユーザー [HPaul](https://de.wikipedia.org/wiki/Benutzer:HPaul)
@@ -62,14 +68,17 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 {: .prompt-info }
 
 ### 崩壊連鎖（Decay Chain）
+
 しばしばベータ崩壊によって形成された*娘核種（daughter nuclide）*も不安定であり、連続してベータ崩壊が起こることがある。これは次のような*崩壊連鎖（decay chain）*につながる。
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
 
 ### 重要なベータ崩壊
+
 いくつかの重要なベータ崩壊を以下に紹介する。
 
 #### 炭素-14
+
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
 
@@ -77,6 +86,7 @@ $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\bet
 {: .prompt-tip }
 
 #### カリウム-40
+
 - $^{40}\mathrm{K} \to {^{40}\mathrm{Ca}} + e^{-} + \overline{\nu}_e + 1311\ \mathrm{keV}$ (89%)
 - $^{40}\mathrm{K} + e^{-} \to {^{40}\mathrm{Ar}}  + \nu_e + 1505\ \mathrm{keV}$ (11%)
 
@@ -85,6 +95,7 @@ $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\bet
 {: .prompt-tip }
 
 #### 三重水素
+
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
@@ -96,6 +107,7 @@ $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\bet
 {: .prompt-tip }
 
 #### セシウム-137
+
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
 
 > セシウム-137は原子炉の核分裂反応や核実験などから発生する主要な副産物であり、比較的長い半減期（約30年）、透過性の強いガンマ線を放出する点、カリウムと類似した化学的特性を持ち体内に容易に吸収される点などから、主要な監視および管理対象となる核種である。本来は自然にはほとんど存在しなかったが、現在は地球上の土壌に平均して7 μg/g程度存在しており、これは暴走していた戦犯国日本帝国を制圧するために米国が行ったトリニティ核実験および広島・長崎への原子爆弾投下、そしてその後の11950-11960年代に主に行われた多数の大気中核実験といくつかの重大な原子力事故（チェルノブイリ原子力発電所事故、ブラジルのゴイアニア事故など）によって発生したものである。  
@@ -114,6 +126,7 @@ $$ p + e \to n + \nu_e $$
 - 電子捕獲によって生じた娘核種（daughter nuclide）は$\beta^+$崩壊によって生成された核と同一であるため、この二つの過程は互いに競合する
 
 ## アルファ崩壊（$\alpha$-decay）
+
 - アルファ粒子（$\alpha$、$^4_2\mathrm{He}$）を放出
 - 原子番号は2だけ減少し、質量数は4だけ減少
 - 鉛より重い核でよく起こる
@@ -122,6 +135,7 @@ $$ p + e \to n + \nu_e $$
 例）$^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He}$
 
 ## 自発核分裂（Spontaneous Fission）
+
 - 非常に重く不安定な核種は中性子を吸収しなくても自ら核分裂することがある
 - 広義では放射性崩壊に含まれる
 - ウラン-238の場合、$10^9$年の半減期でアルファ崩壊するが、それと同時に$10^{16}$年程度の半減期でまれに自発核分裂することもある。次の表はいくつかの核種の自発核分裂半減期を示したものである。
@@ -133,15 +147,19 @@ $$ p + e \to n + \nu_e $$
 | $^{252}\mathrm{Cf}$ | 約 $2.6$年 | 自発核分裂が非常に活発に起こる <br>$\rightarrow$ 原子炉の起動などに中性子源として使用 |
 
 ## 陽子放出（Proton Emission）
+
 - 陽子が極端に多い不安定な核種の場合、陽子1個を単独で放出することもある
 - 原子番号と質量数が1だけ減少
 - 非常にまれに起こる
 
 ## 崩壊図と異性体転移
+
 ### 崩壊図（Decay Scheme）
+
 *崩壊図（decay scheme）*：放射性物質のすべての崩壊経路を視覚的に表した図表
 
 ### 異性体転移（Isomeric Transition）
+
 - 放射性崩壊によって形成された核は変換後も励起状態である場合があり、この場合ガンマ線の形でエネルギーを放出する（ガンマ線放出時に核種が変わるわけではないので厳密には崩壊ではないが、慣習的にガンマ崩壊という表現を使うこともある）。
 - 励起状態の核はほとんどが非常に短い時間内にガンマ線を放出して基底状態に遷移するが、特定の場合にはガンマ線放出が遅延して準安定状態のように見えることもある。このような遅延状態をその核の*異性体状態（isomeric states）*という。
 - 異性体状態からガンマ線を放出して基底状態に遷移することを*異性体転移（isomeric transition）*といい、ITと表記する。

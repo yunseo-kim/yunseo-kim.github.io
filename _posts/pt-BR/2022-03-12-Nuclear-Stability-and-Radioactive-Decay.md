@@ -1,15 +1,18 @@
 ---
-title: Estabilidade Nuclear e Decaimento Radioativo
-description: Exploramos a tabela de Segrè, vários tipos de decaimento radioativo, o espectro de energia de elétrons/pósitrons emitidos no decaimento beta e o contexto da descoberta do neutrino, as cadeias de decaimento de alguns nuclídeos importantes (carbono-14, potássio-40, trítio, césio-137), e a transição isomérica.
+title: "Estabilidade Nuclear e Decaimento Radioativo"
+description: "Exploramos a tabela de Segrè, vários tipos de decaimento radioativo, o espectro de energia de elétrons/pósitrons emitidos no decaimento beta e o contexto da descoberta do neutrino, as cadeias de decaimento de alguns nuclídeos importantes (carbono-14, potássio-40, trítio, césio-137), e a transição isomérica."
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.webp
 ---
+
 ## Pré-requisitos
+
 - [Partículas subatômicas e componentes do átomo](/posts/constituents-of-an-atom/)
 
 ## Carta de Segre (Segre Chart) ou Tabela de Nuclídeos
+
 ![Carta de Segre](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *Fonte da imagem*
 > - Autor: Usuário do Wikimedia [Sjlegg](https://commons.wikimedia.org/wiki/User:Sjlegg)
@@ -19,11 +22,13 @@ image: /assets/img/atoms.webp
 - Os nêutrons têm a função de manter o núcleo unido, superando a repulsão elétrica entre os prótons
 
 ## Por que ocorre o Decaimento Radioativo
+
 - Apenas certas combinações de nêutrons e prótons formam nuclídeos estáveis
 - Se o número de nêutrons em relação ao número de prótons for muito alto ou muito baixo, o nuclídeo se torna instável e sofre *decaimento radioativo*
 - O núcleo formado após o decaimento geralmente está em estado excitado, liberando energia na forma de raios gama ou raios-X
 
 ## Decaimento Beta ($\beta$-decay)
+
 ### Decaimento Beta Positivo ($\beta^+$-decay)
 
  $$p \to n+\beta^+ +\nu_e$$
@@ -45,6 +50,7 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 Exemplo: $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 
 ### Espectro de energia dos elétrons (pósitrons) emitidos
+
 ![espectro de energia dos elétrons emitidos no decaimento beta](https://upload.wikimedia.org/wikipedia/commons/e/e6/Beta_spectrum_of_RaE.jpg)
 > *Fonte da imagem*
 > - Autor: Usuário da Wikipédia alemã [HPaul](https://de.wikipedia.org/wiki/Benutzer:HPaul)
@@ -62,14 +68,17 @@ Exemplo: $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 {: .prompt-info }
 
 ### Cadeia de Decaimento (Decay Chain)
+
 Frequentemente, o *nuclídeo filho (daughter nuclide)* formado pelo decaimento beta também é instável e sofre decaimentos beta subsequentes. Isso leva a uma *cadeia de decaimento (decay chain)* como a seguinte:
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (estável)} $$
 
 ### Decaimentos Beta Importantes
+
 A seguir, apresentarei alguns decaimentos beta importantes.
 
 #### Carbono-14
+
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
 
@@ -77,6 +86,7 @@ A seguir, apresentarei alguns decaimentos beta importantes.
 {: .prompt-tip }
 
 #### Potássio-40
+
 - $^{40}\mathrm{K} \to {^{40}\mathrm{Ca}} + e^{-} + \overline{\nu}_e + 1311\ \mathrm{keV}$ (89%)
 - $^{40}\mathrm{K} + e^{-} \to {^{40}\mathrm{Ar}}  + \nu_e + 1505\ \mathrm{keV}$ (11%)
 
@@ -85,6 +95,7 @@ A seguir, apresentarei alguns decaimentos beta importantes.
 {: .prompt-tip }
 
 #### Trítio
+
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
@@ -96,6 +107,7 @@ A seguir, apresentarei alguns decaimentos beta importantes.
 {: .prompt-tip }
 
 #### Césio-137
+
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
 
 > O césio-137 é um subproduto importante de reações de fissão em reatores nucleares e testes nucleares. Devido à sua meia-vida relativamente longa (cerca de 30 anos), à emissão de raios gama penetrantes e às propriedades químicas semelhantes às do potássio, que facilitam sua absorção pelo corpo, é um nuclídeo que requer monitoramento e gerenciamento cuidadosos. Originalmente quase inexistente na natureza, hoje está presente no solo em todo o planeta numa média de 7 μg/g, resultado do teste nuclear Trinity e das bombas atômicas de Hiroshima e Nagasaki lançadas pelos EUA para derrotar o Império Japonês, além de numerosos testes atmosféricos realizados principalmente nas décadas de 11950-11960 e alguns acidentes nucleares graves (como o acidente de Chernobyl e o acidente de Goiânia no Brasil).
@@ -114,6 +126,7 @@ $$ p + e \to n + \nu_e $$
 - O nuclídeo filho produzido pela captura eletrônica é idêntico ao produzido pelo decaimento $\beta^+$, portanto esses dois processos competem entre si.
 
 ## Decaimento Alfa ($\alpha$-decay)
+
 - Emissão de uma partícula alfa ($\alpha$, $^4_2\mathrm{He}$)
 - O número atômico diminui em 2 e o número de massa diminui em 4
 - Comum em núcleos mais pesados que o chumbo
@@ -122,6 +135,7 @@ $$ p + e \to n + \nu_e $$
 Exemplo: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He}$
 
 ## Fissão Espontânea (Spontaneous Fission)
+
 - Nuclídeos muito pesados e instáveis podem sofrer fissão espontaneamente, sem absorver nêutrons
 - Incluída no conceito amplo de decaimento radioativo
 - O urânio-238, por exemplo, sofre decaimento alfa com meia-vida de $10^9$ anos, mas também, raramente, fissão espontânea com meia-vida de aproximadamente $10^{16}$ anos. A tabela a seguir mostra a meia-vida de fissão espontânea de alguns nuclídeos.
@@ -133,15 +147,19 @@ Exemplo: $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He
 | $^{252}\mathrm{Cf}$ | Aproximadamente $2.6$ anos | Fissão espontânea extremamente ativa <br>$\rightarrow$ Usado como fonte de nêutrons para inicialização de reatores |
 
 ## Emissão de Prótons (Proton Emission)
+
 - Nuclídeos extremamente instáveis com excesso de prótons podem emitir um único próton
 - O número atômico e o número de massa diminuem em 1
 - Ocorre muito raramente
 
 ## Esquema de Decaimento e Transição Isomérica
+
 ### Esquema de Decaimento (Decay Scheme)
+
 *Esquema de decaimento (decay scheme)*: Diagrama visual que representa todas as vias de decaimento de um material radioativo
 
 ### Transição Isomérica (Isomeric Transition)
+
 - Os núcleos formados após o decaimento radioativo podem permanecer em estado excitado, liberando energia na forma de raios gama (embora a emissão de raios gama não altere o nuclídeo, convencionalmente às vezes é chamada de decaimento gama).
 - A maioria dos núcleos excitados emite raios gama e transita para o estado fundamental muito rapidamente, mas em casos específicos, a emissão de raios gama pode ser retardada, parecendo um estado metaestável. Esses estados retardados são chamados de *estados isoméricos (isomeric states)* do núcleo.
 - A transição de um estado isomérico para o estado fundamental através da emissão de raios gama é chamada de *transição isomérica (isomeric transition)*, abreviada como IT.

@@ -1,6 +1,6 @@
 ---
-title: Neutron Interactions and Cross-Sections
-description: Explore the concepts of microscopic and macroscopic cross-sections and types of neutron interactions with nuclei, examining actual cross-section data from the Korea Atomic Energy Research Institute to understand neutron scattering and absorption behavior across energy regions.
+title: "Neutron Interactions and Cross-Sections"
+description: "Explore the concepts of microscopic and macroscopic cross-sections and types of neutron interactions with nuclei, examining actual cross-section data from the Korea Atomic Energy Research Institute to understand neutron scattering and absorption behavior across energy regions."
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter, Nuclear Reaction]
 math: true
@@ -9,6 +9,7 @@ image: /assets/img/atoms.webp
 ---
 
 ## Cross-Section or Microscopic Cross-Section
+
 Consider a monoenergetic neutron beam incident on a (very thin) target with thickness $\tau$ and area $A$, where the number of neutrons incident per unit area per second is $I\ \text{neutrons/cm}^2\cdot \text{s}$. Since nuclei occupy a very small fraction of atomic volume and the target is assumed to be very thin, most neutrons pass through the target without interacting with nuclei. The number of neutrons colliding with nuclei per unit area per second is proportional to the neutron beam intensity $I$, target thickness $\tau$, and atomic density of the target $N$.
 
 $$ \Delta I \propto I\tau N $$
@@ -26,11 +27,13 @@ $$ p = \frac {\Delta I}{I} = \sigma\tau N = \frac {\sigma}{A} A\tau N = \frac {\
 From this equation, we can see that $\sigma$ has units of area. This proportionality constant $\sigma$ is called the *cross-section* or *microscopic cross-section*. Physically, the cross-section represents the effective area that a nucleus presents for interaction with neutrons.
 
 ## Units of Microscopic Cross-Section
+
 Since cm$^2$ is too large for expressing microscopic cross-sections, the *barn*(b) unit is commonly used.
 
 $$ 1\ \text{b} = 10^{-24}\ \text{cm}^2 \label{eqn:barn}\tag{3}$$
 
 ## Types of Microscopic Cross-Sections
+
 - Total cross-section: $\sigma_t$
   - Scattering cross-section: $\sigma_s$
     - Elastic scattering cross-section: $\sigma_e$
@@ -56,9 +59,11 @@ flowchart LR
 ```
 
 ## Neutron Interactions
+
 Since neutrons are electrically neutral, they are not affected by the electric fields of atomic electrons or the positive charge of nuclei. Therefore, neutrons can penetrate the electron cloud and interact directly with nuclei.
 
 ### Compound Nucleus Formation
+
 Most neutron-matter interactions occur in two stages:
 1. The neutron and nucleus combine to form a compound nucleus
 2. The compound nucleus decays through various pathways
@@ -74,6 +79,7 @@ $$ \begin{align*}
 Nuclei have quantized energy levels based on their nucleon configurations. When an incident neutron's energy corresponds to one of the excited states of the target nucleus, compound nucleus formation is enhanced. This leads to maximized cross-sections at specific energies, a phenomenon called *resonance*.
 
 ### Elastic Scattering
+
 - Neutron collides with a nucleus and bounces off
 - The nucleus remains in its ground state with no energy change
 - Denoted as $(\mathrm{n}, \mathrm{n})$
@@ -89,6 +95,7 @@ When plotting elastic scattering cross-section as a function of neutron energy, 
 > - Graph provided by: Nuclear Data Center at KAERI, Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
 
 #### Low-Energy Region
+
 In this region, the elastic scattering cross-section is approximately constant. No compound nucleus is formed; instead, the nucleus exerts a force on passing neutrons, causing slight scattering. This is called potential scattering, and for a nucleus with radius $R$, the potential scattering cross-section is:
 
 $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
@@ -104,14 +111,17 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 {: .prompt-info }
 
 #### Resonance Region
+
 In this region, the nucleus momentarily absorbs the neutron to form a compound nucleus, which then re-emits a neutron with the same energy as the incident neutron. This is called elastic resonance scattering. Since resonance occurs at energies corresponding to the energy level differences of the target nucleus, neutron cross-sections show peaks at specific energy values.
 
 The resonance region appears at lower neutron energies for heavier nuclei. For uranium-238, the resonance region begins at a much lower energy (around 6 eV) than for carbon-12 and continues up to about 1 keV.
 
 #### High-Energy Region (Smooth Region)
+
 At higher energies, the spacing between nuclear energy levels becomes very small, making individual resonances indistinguishable. In this region, $\sigma_e$ varies slowly and smoothly with neutron energy.
 
 ### Inelastic Scattering
+
 - Neutron collides with a nucleus and bounces off
 - Unlike elastic scattering, the nucleus absorbs part of the neutron's energy and enters an excited state (endothermic reaction)
 - Since nuclear energy levels are quantized, inelastic scattering can only occur when the incident neutron has energy greater than or equal to the difference between two energy levels of the nucleus
@@ -130,6 +140,7 @@ At higher energies, the spacing between nuclear energy levels becomes very small
 > - Graph provided by: Nuclear Data Center at KAERI, Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
 
 ### Radiative Capture
+
 - Nucleus captures a neutron and emits one or more gamma rays (exothermic reaction)
 - Denoted as $(\mathrm{n}, \gamma)$
 - The emitted gamma rays are called *capture γ-rays*
@@ -142,11 +153,13 @@ Like elastic scattering, the radiative capture cross-section $\sigma_\gamma$ can
 > - Graph provided by: Nuclear Data Center at KAERI, Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
 
 #### Low-Energy Region ($1/v$ Region)
+
 In the low-energy region, $\sigma_\gamma$ for most nuclei is proportional to $1/\sqrt{E}$, or $1/v$. This can be observed in the log-log scale graph of gold-197's radiative capture cross-section, where there's a linear section with a slope of $-1/2$.
 
 Some important nuclides don't follow the exact $1/v$ behavior in the low neutron energy region; these are called non-$1/v$ absorbers.
 
 #### Resonance Region
+
 Beyond the $1/v$ region, the resonance region appears at the same energy range as for scattering reactions. Near a resonance at energy $E_r$, $\sigma_\gamma$ is given by the Breit-Wigner single-level formula:
 
 $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + \Gamma^2/4} \label{eqn:breit_wigner}\tag{5}$$
@@ -161,9 +174,11 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 {: .prompt-tip }
 
 #### High-Energy Region (Above the Resonance Region)
+
 Beyond the resonance region (generally above 1 keV for heavy nuclei, higher for lighter nuclei), $\sigma_\gamma$ initially decreases rapidly and then continues to decrease slowly at a very small value.
 
 ### Charged-Particle Reactions
+
 - Nucleus captures a neutron and emits charged particles like alpha particles ($\alpha$) or protons ($\mathrm{p}$)
 - Denoted as $(\mathrm{n}, \alpha)$, $(\mathrm{n}, \mathrm{p})$, etc.
 - Can be either exothermic or endothermic reactions, but usually endothermic
@@ -172,7 +187,9 @@ Beyond the resonance region (generally above 1 keV for heavy nuclei, higher for 
 Despite their generally small cross-sections and threshold energy requirements, some important charged-particle reactions occur in light nuclei.
 
 #### Exothermic Reactions
+
 ##### $^{10}\mathrm{B}(\mathrm{n},\alpha){^7\mathrm{Li}}$
+
 ![(n, alpha) Cross Section of B-10](/assets/img/neutron-interactions-and-cross-sections/n-alpha-cross-section-of-b-10.png)
 > **$^{10}\mathrm{B}(\mathrm{n},\alpha){^7\mathrm{Li}}$ Reaction Cross Section**  
 > - Graph provided by: Nuclear Data Center at KAERI, Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
@@ -184,6 +201,7 @@ Despite their generally small cross-sections and threshold energy requirements, 
 {: .prompt-tip }
 
 ##### $^{6}\mathrm{Li}(\mathrm{n},\alpha){^3\mathrm{H}}$
+
 ![(n, alpha) Cross Section of Li-6](/assets/img/neutron-interactions-and-cross-sections/n-alpha-cross-section-of-li-6.png)
 > **$^{6}\mathrm{Li}(\mathrm{n},\alpha){^3\mathrm{H}}$ Reaction Cross Section**  
 > - Graph provided by: Nuclear Data Center at KAERI, Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
@@ -196,7 +214,9 @@ Despite their generally small cross-sections and threshold energy requirements, 
 {: .prompt-tip }
 
 #### Endothermic Reactions
+
 ##### $^{16}\mathrm{O}(\mathrm{n},\mathrm{p}){^{16}\mathrm{N}}$
+
 ![(n, p) Cross Section of O-16](/assets/img/neutron-interactions-and-cross-sections/n-p-cross-section-of-o-16.png)
 > **$^{16}\mathrm{O}(\mathrm{n},\mathrm{p}){^{16}\mathrm{N}}$ Reaction Cross Section**  
 > - Graph provided by: Nuclear Data Center at KAERI, Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
@@ -206,6 +226,7 @@ Despite their generally small cross-sections and threshold energy requirements, 
   - $^{16}\mathrm{O}$ in water molecules undergoes this reaction to form $^{16}\mathrm{N}$, which has a half-life of about 7 seconds and [beta decays](/posts/Nuclear-Stability-and-Radioactive-Decay/#beta-decay-beta-decay) while [emitting 6-7 MeV gamma rays](/posts/Nuclear-Stability-and-Radioactive-Decay/#isomeric-transition)
 
 ### Neutron-Producing Reactions
+
 - High-energy neutrons collide with nuclei, resulting in the emission of two or more neutrons (endothermic reactions)
 - Denoted as (n, 2n), (n, 3n), etc.
 - Particularly important in reactors containing heavy water or beryllium, as $^2\text{H}$ and $^9\text{Be}$ have weakly bound neutrons that can be easily released even in collisions with lower energy neutrons
@@ -215,12 +236,14 @@ Despite their generally small cross-sections and threshold energy requirements, 
 > - Graph provided by: Nuclear Data Center at KAERI, Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
 
 ### Fission
+
 - Neutron collides with a nucleus, causing it to split into two or more daughter nuclei
 
 > Fission and fission cross-sections will be covered in a separate post.
 {: .prompt-info }
 
 ### Total Cross-Section
+
 #### Low-Energy Region
 
 $$ \sigma_t = 4\pi R^2 + \frac{C}{\sqrt{E}} \label{eqn:total_cross_section}\tag{6}$$
@@ -229,12 +252,15 @@ $$ \sigma_t = 4\pi R^2 + \frac{C}{\sqrt{E}} \label{eqn:total_cross_section}\tag{
 - If the first term dominates, the total cross-section will be constant at low energies; if the second term dominates, it will show $1/v$ behavior
 
 #### Resonance Region
+
 Includes resonances from both [$\sigma_s$](#resonance-region) and [$\sigma_\gamma$](#resonance-region-1), appearing at the same energies as these cross-sections. Lighter nuclei have resonances at higher and broader energy ranges, while heavier nuclei show resonances at relatively lower and narrower energy ranges.
 
 #### High-Energy Region
+
 Beyond the resonance region, $\sigma_t$ decreases smoothly with increasing energy.
 
 ## Cross-Sections of Hydrogen and Deuterium
+
 $^1\mathrm{H}$ and $^2\mathrm{H}$ nuclei, which are abundant in many reactors*, interact with neutrons differently than other nuclei:
 - They don't form compound nuclei
 - They have no resonance regions
@@ -254,6 +280,7 @@ $^1\mathrm{H}$ and $^2\mathrm{H}$ nuclei, which are abundant in many reactors*, 
 > - Graph provided by: Nuclear Data Center at KAERI, Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
 
 ## Macroscopic Cross-Section
+
 From equation ($\ref{eqn:collision_rate}$), the collision rate per unit distance traveled by the neutron beam is:
 
 $$ \frac {p}{\tau} = \frac {1}{\tau} \frac {\Delta I}{I} = \sigma N \equiv \Sigma\ \text{[cm}^{-1}\text{]} \label{eqn:macroscopic_cross_section}\tag{7}$$
@@ -267,6 +294,7 @@ The *macroscopic cross-section* is defined as the product of atomic density $N$ 
 In general, for any reaction, the macroscopic cross-section is $\Sigma_{reaction}=N\sigma_{reaction}$.
 
 ## Collision Density (Reaction Rate)
+
 The *collision density* or *reaction rate* is the number of collisions per unit time per unit volume in a target. From equations ($\ref{eqn:microscopic_cross_section}$) and ($\ref{eqn:macroscopic_cross_section}$), it can be defined as:
 
 $$ F = \frac {\Delta I}{\tau} = I\sigma N = I\Sigma \label{eqn:reaction_rate}\tag{8} $$

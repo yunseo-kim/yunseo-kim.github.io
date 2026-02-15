@@ -1,14 +1,15 @@
 ---
-title: Exact Differential Equations and Integrating Factors
-description: Learn about the identification and solution methods for exact differential
-  equations, as well as integrating factors.
+title: "Exact Differential Equations and Integrating Factors"
+description: "Learn about the identification and solution methods for exact differential equations, as well as integrating factors."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 ```mermaid
 flowchart TD
 	ODE[Given an ODE that might be exact]
@@ -31,6 +32,7 @@ flowchart TD
 ```
 
 ## Exact Differential Equations
+
 A first-order ordinary differential equation $M(x,y)+N(x,y)y'=0$ can be written as:
 
 $$ M(x,y)dx+N(x,y)dy=0 \tag{1} $$
@@ -52,6 +54,7 @@ Integrating this gives the general solution in the form:
 $$ u(x,y)=c \tag{4} $$
 
 ## Identifying Exact Differential Equations
+
 Consider a closed region in the xy-plane bounded by a closed curve that does not intersect itself, where $M$ and $N$ and their first-order partial derivatives are continuous. Looking at condition (2) again:
 
 $$ \begin{align*}
@@ -73,6 +76,7 @@ $$ \therefore \frac {\partial M}{\partial y}=\frac {\partial N}{\partial x} \tag
 Thus, condition (5) is a necessary condition for ODE (1) to be an exact differential equation, and while not proven here, it is also a sufficient condition. Therefore, we can determine if an ODE is exact by checking if this condition is satisfied.
 
 ## Solving Exact Differential Equations
+
 Integrating equation (2a) with respect to x, treating y as a constant:
 
 $$ u = \int M(x,y) dx + k(y) \tag{6} $$
@@ -97,6 +101,7 @@ $$ \int M(x,y)dx + \int N(x,y)dy - \int \left(\frac{\partial}{\partial y}\int Md
 {: .prompt-tip }
 
 ## Integrating Factors
+
 Consider an inexact differential equation:
 
 $$ P(x,y)dx+Q(x,y)dy = 0 \quad \left( \frac {\partial P}{\partial y} \neq \frac {\partial Q}{\partial x} \right) \tag{7} $$
@@ -112,6 +117,7 @@ $$ FP\ dx+FQ\ dy = 0 \tag{9} $$
 The function $F(x,y)$ is called an **integrating factor** of equation (7).
 
 ## Method for Finding Integrating Factors
+
 Applying the product rule to equation (8) and using subscript notation for partial derivatives:
 
 $$ F_y P + FP_y = F_x Q + FQ_x $$

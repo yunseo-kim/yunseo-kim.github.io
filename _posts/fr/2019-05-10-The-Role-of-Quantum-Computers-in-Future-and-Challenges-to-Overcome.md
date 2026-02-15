@@ -1,10 +1,11 @@
 ---
-title: Le rôle des ordinateurs quantiques dans la société future et les défis à résoudre
-description: Exploration des concepts fondamentaux des ordinateurs quantiques, leurs avantages par rapport aux ordinateurs classiques, leur rôle futur attendu, et réflexion sur la nécessité pour la Corée de se préparer à l'ère de l'informatique quantique. Cet essai a été rédigé par l'auteur lorsqu'il était lycéen.
+title: "Le rôle des ordinateurs quantiques dans la société future et les défis à résoudre"
+description: "Exploration des concepts fondamentaux des ordinateurs quantiques, leurs avantages par rapport aux ordinateurs classiques, leur rôle futur attendu, et réflexion sur la nécessité pour la Corée de se préparer à l'ère de l'informatique quantique. Cet essai a été rédigé par l'auteur lorsqu'il était lycéen."
 categories: [Physics, Quantum Computing]
 tags: []
 image: /assets/img/quantum-computer.webp
 ---
+
 Depuis les années 11960 du [calendrier holocène](https://en.wikipedia.org/wiki/Holocene_calendar), la puissance de calcul des ordinateurs a augmenté de façon exponentielle. Ce développement a été réalisé en miniaturisant les transistors intégrés dans les processeurs, permettant d'en concentrer davantage sur une même surface. Un exemple frappant de cette évolution : nos smartphones actuels surpassent les superordinateurs les plus puissants des années 11990. Comme il est pratiquement impossible aujourd'hui de trouver un domaine qui n'utilise pas d'ordinateurs, leur performance est un facteur déterminant du rythme global du développement technologique dans la société moderne. Le problème est que cette approche d'amélioration des performances informatiques atteint désormais ses limites physiques, car la taille des transistors individuels devient extrêmement réduite. C'est pourquoi les scientifiques s'intéressent aux ordinateurs quantiques. Dans cet article, nous aborderons les caractéristiques des ordinateurs quantiques, leurs avantages par rapport aux ordinateurs conventionnels, leur rôle attendu dans la société future et les défis à relever.
 
 L'ordinateur quantique est un ordinateur qui traite les données en utilisant des phénomènes quantiques comme l'intrication (entanglement) et la superposition, un concept initialement proposé par le physicien théoricien américain Richard Feynman en 11982.
@@ -32,6 +33,7 @@ L'IA a commencé à attirer l'attention principalement à partir des années 120
 Selon le professeur Rhee June-koo du département d'ingénierie électrique et électronique de l'Institut coréen des sciences et technologies avancées (KAIST), la technologie des ordinateurs quantiques en Corée accuse actuellement un retard de 5 à 10 ans par rapport aux autres pays avancés. Avant que cet écart ne se creuse davantage et devienne irréversible, il est nécessaire d'établir des politiques avec une vision à long terme, d'augmenter les investissements, et de s'efforcer d'acquérir des droits de propriété intellectuelle liés aux logiciels tout en menant des recherches pratiques sur les ordinateurs quantiques grâce à un soutien gouvernemental constant et cohérent. Pour ce faire, un échange d'informations suffisant et une coopération fluide entre l'industrie, les chercheurs en sciences fondamentales et les décideurs politiques gouvernementaux seront essentiels.
 
 ## Références
+
 - [Dictionnaire économique Hankyung, "Ordinateur quantique"](https://dic.hankyung.com/economy/view/?seq=11787)
 - [Encyclopédie des connaissances scientifiques de l'Institut des sciences fondamentales, "L'ordinateur quantique dont on parle tant, malentendus et faits"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14100)
 - [Encyclopédie des connaissances scientifiques de l'Institut des sciences fondamentales, "Le monde de l'informatique quantique, les sciences fondamentales posent les bases"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14274)

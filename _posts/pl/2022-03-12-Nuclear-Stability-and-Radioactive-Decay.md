@@ -1,15 +1,18 @@
 ---
-title: Stabilność jądrowa i rozpad promieniotwórczy
-description: Omawiamy wykres Segrégo i typy rozpadów promieniotwórczych, widmo energii elektronów/pozytonów w rozpadzie beta oraz tło odkrycia neutrina, łańcuchy rozpadu wybranych nuklidów (węgiel-14, potas-40, tryt, cez-137) oraz przejście izomeryczne.
+title: "Stabilność jądrowa i rozpad promieniotwórczy"
+description: "Omawiamy wykres Segrégo i typy rozpadów promieniotwórczych, widmo energii elektronów/pozytonów w rozpadzie beta oraz tło odkrycia neutrina, łańcuchy rozpadu wybranych nuklidów (węgiel-14, potas-40, tryt, cez-137) oraz przejście izomeryczne."
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.webp
 ---
+
 ## Wymagania wstępne
+
 - [Cząstki subatomowe i składniki atomu](/posts/constituents-of-an-atom/)
 
 ## Wykres Segrégo (Segre Chart) lub mapa nuklidów
+
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *Źródło obrazu*
 > - autor: użytkownik Wikimedia [Sjlegg](https://commons.wikimedia.org/wiki/User:Sjlegg)
@@ -19,11 +22,13 @@ image: /assets/img/atoms.webp
 - Neutrony pełnią rolę „spoiwa” jądra: przeciwdziałają elektrycznemu odpychaniu między protonami i utrzymują jądro razem
 
 ## Dlaczego zachodzi rozpad promieniotwórczy (Radioactive Decay)
+
 - Tylko określone kombinacje liczby neutronów i protonów tworzą stabilne nuklidy
 - Gdy liczba neutronów względem liczby protonów jest zbyt duża albo zbyt mała, dany nuklid jest niestabilny i wywołuje *rozpad promieniotwórczy (radioactive decay)*
 - Jądro powstałe po rozpadzie jest w większości przypadków w stanie wzbudzonym, więc emituje energię w postaci promieniowania gamma lub promieniowania rentgenowskiego
 
 ## Rozpad beta ($\beta$-decay)
+
 ### Rozpad beta dodatni ($\beta^+$-decay)
 
  $$p \to n+\beta^+ +\nu_e$$
@@ -45,6 +50,7 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 Przykład) $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 
 ### Widmo energii emitowanych elektronów (pozytonów)
+
 ![energy spectrum of electrons emitted in beta decay](https://upload.wikimedia.org/wikipedia/commons/e/e6/Beta_spectrum_of_RaE.jpg)
 > *Źródło obrazu*
 > - autor: użytkownik niemieckiej Wikipedii [HPaul](https://de.wikipedia.org/wiki/Benutzer:HPaul)
@@ -62,14 +68,17 @@ Przykład) $^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 {: .prompt-info }
 
 ### Łańcuch rozpadu (Decay Chain)
+
 Często zdarza się, że *nuklid potomny (daughter nuclide)* powstały w wyniku rozpadu beta również jest niestabilny, przez co kolejne rozpady beta zachodzą jeden po drugim. Prowadzi to do *łańcucha rozpadu (decay chain)*, jak poniżej.
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
 
 ### Ważne rozpady beta
+
 Poniżej przedstawiam kilka istotnych rozpadów beta.
 
 #### Węgiel-14
+
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
 
@@ -77,6 +86,7 @@ Poniżej przedstawiam kilka istotnych rozpadów beta.
 {: .prompt-tip }
 
 #### Potas-40
+
 - $^{40}\mathrm{K} \to {^{40}\mathrm{Ca}} + e^{-} + \overline{\nu}_e + 1311\ \mathrm{keV}$ (89%)
 - $^{40}\mathrm{K} + e^{-} \to {^{40}\mathrm{Ar}}  + \nu_e + 1505\ \mathrm{keV}$ (11%)
 
@@ -85,6 +95,7 @@ Poniżej przedstawiam kilka istotnych rozpadów beta.
 {: .prompt-tip }
 
 #### Tryt
+
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
@@ -96,6 +107,7 @@ Poniżej przedstawiam kilka istotnych rozpadów beta.
 {: .prompt-tip }
 
 #### Cez-137
+
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
 
 > Cez-137 jest jednym z głównych produktów ubocznych reakcji rozszczepienia w reaktorach oraz prób jądrowych. Ze względu na stosunkowo długi okres półtrwania (ok. 30 lat), emisję silnie penetrującego promieniowania gamma oraz podobieństwo chemiczne do potasu (co ułatwia wchłanianie przez organizm) jest ważnym nuklidem podlegającym monitorowaniu i kontroli. Naturalnie praktycznie nie występował, ale obecnie w skali globalnej w glebie znajduje się średnio ok. 7 μg/g, co jest skutkiem m.in. testu jądrowego Trinity przeprowadzonego przez USA oraz zrzucenia bomb atomowych na Hiroszimę$\cdot$Nagasaki, a także licznych atmosferycznych prób jądrowych z lat 11950–11960 oraz kilku poważnych wypadków jądrowych (awaria elektrowni jądrowej w Czarnobylu, zdarzenie radiacyjne w Goiânii w Brazylii itp.).  
@@ -114,6 +126,7 @@ $$ p + e \to n + \nu_e $$
 - Nuklid potomny (daughter nuclide) powstały w wyniku wychwytu elektronu jest taki sam jak jądro powstałe w rozpadzie $\beta^+$, więc oba procesy konkurują ze sobą.
 
 ## Rozpad alfa ($\alpha$-decay)
+
 - Emisja cząstki alfa ($\alpha$, $^4_2\mathrm{He}$)
 - Liczba atomowa maleje o 2, a liczba masowa maleje o 4
 - Częsty w jądrach cięższych od ołowiu
@@ -122,6 +135,7 @@ $$ p + e \to n + \nu_e $$
 Przykład) $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He}$
 
 ## Samorzutne rozszczepienie (Spontaneous Fission)
+
 - Bardzo ciężkie i niestabilne nuklidy potrafią ulegać rozszczepieniu samorzutnie, nawet bez pochłaniania neutronu
 - W szerokim ujęciu zalicza się je do rozpadu promieniotwórczego
 - Uran-238 rozpada się alfa z okresem półtrwania $10^9$ lat, ale jednocześnie bardzo rzadko ulega samorzutnemu rozszczepieniu z okresem półtrwania rzędu $10^{16}$ lat. Poniższa tabela przedstawia okresy półtrwania samorzutnego rozszczepienia dla kilku nuklidów.
@@ -133,15 +147,19 @@ Przykład) $^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{
 | $^{252}\mathrm{Cf}$ | ok. $2.6$ roku | samorzutne rozszczepienie zachodzi wyjątkowo intensywnie <br>$\rightarrow$ używany jako źródło neutronów np. do rozruchu reaktorów |
 
 ## Emisja protonu (Proton Emission)
+
 - W przypadku niestabilnych nuklidów o skrajnie dużej liczbie protonów zdarza się emisja pojedynczego protonu
 - Liczba atomowa i liczba masowa maleją o 1
 - Zjawisko bardzo rzadkie
 
 ## Schemat rozpadu i przejście izomeryczne
+
 ### Schemat rozpadu (Decay Scheme)
+
 *Szmat rozpadu (decay scheme)*: diagram, który wizualnie przedstawia wszystkie drogi rozpadu substancji promieniotwórczej
 
 ### Przejście izomeryczne (Isomeric Transition)
+
 - Jądro powstałe w wyniku rozpadu promieniotwórczego może pozostać w stanie wzbudzonym; wówczas emituje energię w postaci promieniowania gamma (ponieważ przy emisji gamma nuklid się nie zmienia, ściśle rzecz biorąc nie jest to rozpad, ale zwyczajowo używa się też określenia „rozpad gamma”). 
 - Stan wzbudzony zwykle w bardzo krótkim czasie emituje promieniowanie gamma i przechodzi do stanu podstawowego, ale w pewnych przypadkach emisja gamma jest opóźniona i jądro wygląda jakby było w stanie metastabilnym. Taki stan opóźniony nazywa się *stanem izomerycznym (isomeric states)*.
 - Emisję gamma w stanie izomerycznym i przejście do stanu podstawowego nazywa się *przejściem izomerycznym (isomeric transition)* i oznacza się jako IT.

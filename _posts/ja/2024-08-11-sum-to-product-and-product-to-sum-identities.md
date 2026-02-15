@@ -1,13 +1,14 @@
 ---
-title: 和または差の公式（積和公式と和積公式）
-description: 三角関数の積を和または差の形に変形する公式を学び、三角関数の加法定理からその公式を導出します。そして、これらから三角関数の和または差の形を積の形に変形する公式も導出します。
+title: "和または差の公式（積和公式と和積公式）"
+description: "三角関数の積を和または差の形に変形する公式を学び、三角関数の加法定理からその公式を導出します。そして、これらから三角関数の和または差の形を積の形に変形する公式も導出します。"
 categories: [Mathematics, Trigonometry]
-tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product
-    Identities]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 > **積を和または差に変形する公式（積和公式）**
 >
 > - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
@@ -28,15 +29,18 @@ image: /assets/img/math-and-physics-cropped.webp
 {: .prompt-tip }
 
 ## 前提知識
+
 - [三角関数の加法定理](/posts/trigonometric-addition-formulas)
 
 ## 積を和または差に変形する公式（積和公式）
+
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \sin \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) - \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \cos \beta = \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) + \cos ( \alpha - \beta )\} $$
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### 導出
+
 [三角関数の加法定理](/posts/trigonometric-addition-formulas)
 
 $$ \begin{align}
@@ -80,12 +84,14 @@ $$ \cos(\alpha+\beta) - \cos(\alpha-\beta) = -2 \sin \alpha \sin \beta \tag{8}\l
 $$ \therefore \sin \alpha \sin \beta = -\frac { 1 } { 2 } \{ \cos(\alpha+\beta) - \cos(\alpha-\beta) \}. $$
 
 ## 和または差を積に変形する公式（和積公式）
+
 - $$ \sin A + \sin B = 2\sin \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \sin A - \sin B = 2\cos \frac{A+B}{2}\sin \frac{A-B}{2} $$
 - $$ \cos A + \cos B = 2\cos \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \cos A - \cos B = -2\sin \frac{A+B}{2}\sin \frac{A-B}{2} $$
 
 ### 導出
+
 積を和または差に変形する公式（積和公式）から和または差を積に変形する公式（和積公式）も導出できます。
 
 $$ \alpha + \beta = A, \quad \alpha - \beta = B $$

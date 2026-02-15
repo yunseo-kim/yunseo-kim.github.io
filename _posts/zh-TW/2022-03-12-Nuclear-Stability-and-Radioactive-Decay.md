@@ -1,15 +1,18 @@
 ---
-title: 核穩定性及放射性衰變
-description: 探討塞格雷圖與各種放射性衰變類型、貝塔衰變中釋放的電子/正電子能量譜及中微子的發現背景、幾種主要核種(碳-14、鉀-40、氚、銫-137)的衰變鏈，以及同質異能態轉變。
+title: "核穩定性及放射性衰變"
+description: "探討塞格雷圖與各種放射性衰變類型、貝塔衰變中釋放的電子/正電子能量譜及中微子的發現背景、幾種主要核種(碳-14、鉀-40、氚、銫-137)的衰變鏈，以及同質異能態轉變。"
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Nuclear Radiation, Radioactive Decay]
 math: true
 image: /assets/img/atoms.webp
 ---
+
 ## 先備知識
+
 - [次原子粒子與原子的組成元素](/posts/constituents-of-an-atom/)
 
 ## 塞格雷圖(Segre Chart)或核種圖表
+
 ![Segre Chart](https://upload.wikimedia.org/wikipedia/commons/c/c4/Table_isotopes_en.svg)
 > *圖片來源*
 > - 作者：維基媒體用戶 [Sjlegg](https://commons.wikimedia.org/wiki/User:Sjlegg)
@@ -19,11 +22,13 @@ image: /assets/img/atoms.webp
 - 中子的作用是克服質子之間的電荷排斥力，將原子核束縛在一起
 
 ## 放射性衰變(Radioactive Decay)的原因
+
 - 只有特定的中子與質子組合才能形成穩定的核種
 - 如果相對於質子數，中子數太多或太少，該核種就會不穩定而發生*放射性衰變(radioactive decay)*
 - 衰變後產生的原子核大多處於激發態，因此會以伽瑪射線或X射線的形式釋放能量
 
 ## 貝他衰變（β-decay）
+
 ### 正貝他衰變（$\beta^+$衰變）
 
  $$p \to n+\beta^+ +\nu_e$$
@@ -45,6 +50,7 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 例）$^3_1\mathrm{H} \to\;^3_2\mathrm{He} + e^- + \overline{\nu}_e$
 
 ### 貝塔衰變釋放的電子(正電子)能量譜
+
 ![energy spectrum of electrons emitted in beta decay](https://upload.wikimedia.org/wikipedia/commons/e/e6/Beta_spectrum_of_RaE.jpg)
 > *圖片來源*
 > - 作者：德國維基百科用戶 [HPaul](https://de.wikipedia.org/wiki/Benutzer:HPaul)
@@ -62,14 +68,17 @@ $$ n\to p+\beta^- + \overline{\nu}_e $$
 {: .prompt-info }
 
 ### 衰變鏈(Decay Chain)
+
 有時貝塔衰變形成的*子核種(daughter nuclide)*也不穩定，會連續發生貝塔衰變。這形成了所謂的*衰變鏈(decay chain)*：
 
 $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{Ne}\text{ (stable)} $$
 
 ### 主要的貝塔衰變
+
 以下介紹幾個主要的貝塔衰變。
 
 #### 碳-14
+
 - $^{14}\mathrm{N} + n \to {^{14}\mathrm{C}} + p$
 - $^{14}\mathrm{C} \to {^{14}\mathrm{N}} + e^{-} + \overline{\nu}_e + 156\ \mathrm{keV}$
 
@@ -77,6 +86,7 @@ $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\bet
 {: .prompt-tip }
 
 #### 鉀-40
+
 - $^{40}\mathrm{K} \to {^{40}\mathrm{Ca}} + e^{-} + \overline{\nu}_e + 1311\ \mathrm{keV}$ (89%)
 - $^{40}\mathrm{K} + e^{-} \to {^{40}\mathrm{Ar}}  + \nu_e + 1505\ \mathrm{keV}$ (11%)
 
@@ -85,6 +95,7 @@ $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\bet
 {: .prompt-tip }
 
 #### 氚
+
 - $^{14}\mathrm{N} + n \to {^{12}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{16}\mathrm{O} + n \to {^{14}\mathrm{C}} + {^3\mathrm{H}}$
 - $^{6}\mathrm{Li} + n \to {^{4}\mathrm{He}} + {^{3}\mathrm{H}}$
@@ -96,6 +107,7 @@ $$ ^{20}\mathrm{O} \overset{\beta^-}{\rightarrow}\;^{20}\mathrm{F} \overset{\bet
 {: .prompt-tip }
 
 #### 銫-137
+
 - $^{137}\mathrm{Cs} \to {^{137}\mathrm{Ba}} + e^{-} + \overline{\nu}_e + 1174\ \mathrm{keV}$
 
 > 銫-137是核反應堆裂變反應或核試驗的主要副產品，由於其相對較長的半衰期（約30年）、釋放穿透力強的伽瑪射線，以及與鉀相似的化學特性容易被人體吸收，因此是主要監測和管理的核種。原本在自然界幾乎不存在，但現在全球土壤中平均含量約為7 μg/g，這主要來自於美國為制止日本帝國而進行的三位一體核試驗及廣島、長崎原子彈投擲，以及之後11950-11960年代進行的多次大氣核試驗和一些重大核事故（如切爾諾貝利核電站事故、巴西戈亞尼亞事故等）。
@@ -114,6 +126,7 @@ $$ p + e \to n + \nu_e $$
 - 電子捕獲產生的子核種與$\beta^+$衰變產生的核相同，因此這兩個過程相互競爭
 
 ## 阿爾法衰變($\alpha$-decay)
+
 - 釋放阿爾法粒子($\alpha$, $^4_2\mathrm{He}$)
 - 原子序數減少2，質量數減少4
 - 常見於比鉛重的核種
@@ -122,6 +135,7 @@ $$ p + e \to n + \nu_e $$
 例）$^{238}\_{92}\mathrm{U} \to\;^{234}\_{90}\mathrm{Th} +\; ^4_2\mathrm{He}$
 
 ## 自發裂變(Spontaneous Fission)
+
 - 非常重且不穩定的核種即使不吸收中子也會自行裂變
 - 廣義上屬於放射性衰變
 - 鈾-238的阿爾法衰變半衰期為$10^9$年，同時也以約$10^{16}$年的半衰期罕見地發生自發裂變。下表顯示了幾種核種的自發裂變半衰期：
@@ -133,15 +147,19 @@ $$ p + e \to n + \nu_e $$
 | $^{252}\mathrm{Cf}$ | 約 $2.6$年 | 自發裂變非常活躍 <br>$\rightarrow$ 用作反應堆啟動等中子源 |
 
 ## 質子發射(Proton Emission)
+
 - 質子極多的不穩定核種有時會單獨釋放一個質子
 - 原子序數和質量數減少1
 - 非常罕見
 
 ## 衰變圖和同質異能態轉變
+
 ### 衰變圖(Decay Scheme)
+
 *衰變圖(decay scheme)*：視覺化呈現放射性物質所有衰變路徑的圖表
 
 ### 同質異能態轉變(Isomeric Transition)
+
 - 放射性衰變形成的核在轉變後可能仍處於激發態，此時會以伽瑪射線形式釋放能量（雖然伽瑪射線釋放不改變核種，嚴格來說不是衰變，但習慣上有時稱為伽瑪衰變）。
 - 激發態的核通常會很快釋放伽瑪射線回到基態，但某些情況下伽瑪射線釋放會延遲，表現得像亞穩態。這種延遲狀態稱為該核的*同質異能態(isomeric states)*。
 - 從同質異能態釋放伽瑪射線回到基態的過程稱為*同質異能態轉變(isomeric transition)*，簡稱IT。

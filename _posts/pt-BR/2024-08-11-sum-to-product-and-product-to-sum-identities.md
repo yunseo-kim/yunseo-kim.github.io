@@ -1,17 +1,15 @@
 ---
-title: Fórmulas de Produto para Soma e Soma para Produto (Product-to-Sum and Sum-to-Product
-  Identities)
-description: Explore as fórmulas para transformar produtos de funções trigonométricas
-  em somas ou diferenças, derivando essas fórmulas a partir dos teoremas de adição
-  trigonométrica. Além disso, derive fórmulas para transformar somas ou diferenças
-  de funções trigonométricas em produtos.
+title: "Fórmulas de Produto para Soma e Soma para Produto (Product-to-Sum and Sum-to-Product Identities)"
+description: "Explore as fórmulas para transformar produtos de funções trigonométricas em somas ou diferenças, derivando essas fórmulas a partir dos teoremas de adição trigonométrica. Além disso, derive fórmulas para transformar somas ou diferenças de funções trigonométricas em produtos."
 categories: [Mathematics, Trigonometry]
 tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product
     Identities]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 > **Fórmulas de Produto para Soma (Product-to-Sum Identities)**
 >
 > - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
@@ -32,15 +30,18 @@ image: /assets/img/math-and-physics-cropped.webp
 {: .prompt-tip }
 
 ## Pré-requisitos
+
 - [Fórmulas de adição trigonométrica](/posts/trigonometric-addition-formulas)
 
 ## Fórmulas de Produto para Soma (Product-to-Sum Identities)
+
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \sin \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) - \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \cos \beta = \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) + \cos ( \alpha - \beta )\} $$
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### Derivação
+
 Usamos as [fórmulas de adição trigonométrica](/posts/trigonometric-addition-formulas)
 
 $$ \begin{align}
@@ -80,12 +81,14 @@ $$ \cos(\alpha+\beta) - \cos(\alpha-\beta) = -2 \sin \alpha \sin \beta \tag{8}\l
 $$ \therefore \sin \alpha \sin \beta = -\frac { 1 } { 2 } \{ \cos(\alpha+\beta) - \cos(\alpha-\beta) \}. $$
 
 ## Fórmulas de Soma para Produto (Sum-to-Product Identities)
+
 - $$ \sin A + \sin B = 2\sin \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \sin A - \sin B = 2\cos \frac{A+B}{2}\sin \frac{A-B}{2} $$
 - $$ \cos A + \cos B = 2\cos \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \cos A - \cos B = -2\sin \frac{A+B}{2}\sin \frac{A-B}{2} $$
 
 ### Derivação
+
 Podemos derivar as fórmulas de Soma para Produto (Sum-to-Product Identities) a partir das fórmulas de Produto para Soma (Product-to-Sum Identities).
 
 Definimos

@@ -1,6 +1,6 @@
 ---
-title: Neutronenwechselwirkungen und Wirkungsquerschnitte
-description: Wir untersuchen die Konzepte des mikroskopischen und makroskopischen Wirkungsquerschnitts sowie die Arten der Wechselwirkung zwischen Neutronen und Atomkernen, und analysieren das Streu- und Absorptionsverhalten von Neutronen in verschiedenen Energiebereichen anhand realer Daten des Korea Atomic Energy Research Institute.
+title: "Neutronenwechselwirkungen und Wirkungsquerschnitte"
+description: "Wir untersuchen die Konzepte des mikroskopischen und makroskopischen Wirkungsquerschnitts sowie die Arten der Wechselwirkung zwischen Neutronen und Atomkernen, und analysieren das Streu- und Absorptionsverhalten von Neutronen in verschiedenen Energiebereichen anhand realer Daten des Korea Atomic Energy Research Institute."
 categories: [Nuclear Engineering, Basis]
 tags: [Nuclear Physics, Interaction of Radiation with Matter, Nuclear Reaction]
 math: true
@@ -9,6 +9,7 @@ image: /assets/img/atoms.webp
 ---
 
 ## Wirkungsquerschnitt (cross-section) oder mikroskopischer Wirkungsquerschnitt (microscopic cross-section)
+
 Betrachten wir einen monoenergetischen Neutronenstrahl, der auf ein (sehr dünnes) Target mit der Dicke $\tau$ und der Fläche $A$ trifft, wobei die Anzahl der pro Sekunde und Flächeneinheit auf das Target treffenden Neutronen $I\ \text{neutrons/cm}^2\cdot \text{s}$ beträgt. Da der Atomkern nur einen sehr kleinen Teil des Atomvolumens einnimmt und wir ein sehr dünnes Target angenommen haben, passieren die meisten Neutronen das Target, ohne mit einem Atomkern zu reagieren. Die Anzahl der Neutronen, die pro Sekunde und Flächeneinheit mit Atomkernen kollidieren, ist proportional zur Intensität des Neutronenstrahls $I$, zur Dicke des Targets $\tau$ und zur Atomdichte des Targets $N$.
 
 $$ \Delta I \propto I\tau N $$
@@ -26,11 +27,13 @@ $$ p = \frac {\Delta I}{I} = \sigma\tau N = \frac {\sigma}{A} A\tau N = \frac {\
 Aus dieser Gleichung ist ersichtlich, dass $\sigma$ die Einheit einer Fläche hat. Diese Proportionalitätskonstante $\sigma$ wird als *Wirkungsquerschnitt (cross-section)* oder *mikroskopischer Wirkungsquerschnitt (microscopic cross-section)* bezeichnet. Physikalisch repräsentiert der Wirkungsquerschnitt die effektive Fläche, mit der ein Atomkern mit Neutronen wechselwirken kann.
 
 ## Einheit des mikroskopischen Wirkungsquerschnitts
+
 Da cm$^2$ eine zu große Einheit für die Darstellung des mikroskopischen Wirkungsquerschnitts ist, wird üblicherweise die Einheit *barn* (b) verwendet.
 
 $$ 1\ \text{b} = 10^{-24}\ \text{cm}^2 \label{eqn:barn}\tag{3}$$
 
 ## Arten des mikroskopischen Wirkungsquerschnitts
+
 - Totaler (total) Wirkungsquerschnitt: $\sigma_t$
   - Streuungs- (scattering) Wirkungsquerschnitt: $\sigma_s$
     - Elastischer Streuungs- (elastic scattering) Wirkungsquerschnitt: $\sigma_e$
@@ -56,9 +59,11 @@ flowchart LR
 ```
 
 ## Neutronenwechselwirkungen
+
 Da Neutronen elektrisch neutral sind, werden sie weder von den Elektronen noch von der positiven Ladung des Atomkerns elektrisch beeinflusst. Daher können Neutronen die Elektronenhülle des Atoms durchdringen und direkt mit dem Atomkern wechselwirken.
 
 ### Bildung eines Compoundkerns
+
 Die meisten Wechselwirkungen zwischen Neutronen und Materie erfolgen in zwei Schritten:
 1. Das Neutron und der Atomkern verschmelzen zu einem Compoundkern (compound nucleus)
 2. Der Compoundkern zerfällt auf verschiedene Arten
@@ -74,6 +79,7 @@ $$ \begin{align*}
 Atomkerne besitzen quantisierte Energieniveaus, die von der Anordnung ihrer Nukleonen abhängen. Wenn die Energie des einfallenden Neutrons einem angeregten Zustand des Zielkerns entspricht, wird die Bildung eines Compoundkerns begünstigt. Dadurch wird der Wirkungsquerschnitt für bestimmte Neutronenenergien maximiert, ein Phänomen, das als *Resonanz (resonance)* bezeichnet wird.
 
 ### Elastische Streuung (elastic scattering)
+
 - Das Neutron kollidiert mit dem Atomkern und wird abgelenkt
 - Der Atomkern bleibt im Grundzustand ohne Energieänderung
 - Wird als $(\mathrm{n}, \mathrm{n})$ bezeichnet
@@ -89,6 +95,7 @@ Der elastische Streuungs-Wirkungsquerschnitt als Funktion der Neutronenenergie k
 > - Grafik bereitgestellt von: Nuclear Data Center at KAERI (Korea Atomic Energy Research Institute), Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
 
 #### Niederenergiebereich (low-energy region)
+
 In diesem Bereich ist der elastische Streuungs-Wirkungsquerschnitt näherungsweise konstant. Es bildet sich kein Compoundkern, sondern der Atomkern übt eine Kraft auf das vorbeifliegende Neutron aus, was zu einer geringfügigen Streuung führt. Dies wird als Potentialstreuung (potential scattering) bezeichnet. Wenn $R$ der Atomradius ist, beträgt der Potentialstreuungs-Wirkungsquerschnitt:
 
 $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
@@ -104,14 +111,17 @@ $$ \sigma_e = 4\pi R^2 \label{eqn:potential_scattering}\tag{4}$$
 {: .prompt-info }
 
 #### Resonanzbereich (resonance region)
+
 In diesem Bereich absorbiert der Atomkern das Neutron kurzzeitig und bildet einen Compoundkern, der anschließend ein Neutron mit der gleichen Energie wie das einfallende Neutron wieder emittiert. Dies wird als elastische Resonanzstreuung (elastic resonance scattering) bezeichnet. Da Resonanzen bei Neutronenenergien auftreten, die den Energieniveaudifferenzen des Zielkerns entsprechen, zeigt der Wirkungsquerschnitt bei bestimmten Energiewerten deutliche Spitzen.
 
 Je schwerer der Kern, desto niedriger liegt der Resonanzbereich. Bei Uran-238 beginnt der Resonanzbereich bereits bei etwa 6 eV und erstreckt sich bis etwa 1 keV, deutlich niedriger als bei Kohlenstoff-12.
 
 #### Hochenergiebereich (smooth region)
+
 Im Hochenergiebereich werden die Abstände zwischen den Energieniveaus des Atomkerns so klein, dass die einzelnen Resonanzen nicht mehr unterscheidbar sind. In diesem Bereich ändert sich $\sigma_e$ nur leicht und kontinuierlich mit der Neutronenenergie.
 
 ### Inelastische Streuung (inelastic scattering)
+
 - Das Neutron kollidiert mit dem Atomkern und wird abgelenkt
 - Im Gegensatz zur elastischen Streuung absorbiert der Atomkern einen Teil der Neutronenenergie und geht in einen angeregten Zustand über ([endotherme Reaktion](/posts/nuclear-reactions-and-binding-energy/#exotherme-reaktion-exothermic-reaction--endotherme-reaktion-endothermic-reaction))
 - Da die Energieniveaus des Atomkerns quantisiert sind, kann diese Reaktion nur stattfinden, wenn das einfallende Neutron eine Energie hat, die mindestens so groß ist wie die Differenz zwischen zwei Energieniveaus des Kerns
@@ -130,6 +140,7 @@ Im Hochenergiebereich werden die Abstände zwischen den Energieniveaus des Atomk
 > - Grafik bereitgestellt von: Nuclear Data Center at KAERI (Korea Atomic Energy Research Institute), Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
 
 ### Strahlungseinfang (radiative capture)
+
 - Der Atomkern fängt ein Neutron ein und emittiert ein oder mehrere Gammaquanten ([exotherme Reaktion](/posts/nuclear-reactions-and-binding-energy/#exotherme-reaktion-exothermic-reaction--endotherme-reaktion-endothermic-reaction))
 - Wird als $(\mathrm{n}, \gamma)$ bezeichnet
 - Die dabei entstehende Gammastrahlung wird als *Einfang-Gammastrahlung (capture $\gamma$-ray)* bezeichnet
@@ -142,11 +153,13 @@ Im Hochenergiebereich werden die Abstände zwischen den Energieniveaus des Atomk
 > - Grafik bereitgestellt von: Nuclear Data Center at KAERI (Korea Atomic Energy Research Institute), Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
 
 #### Niederenergiebereich ($1/v$-Bereich)
+
 Im Niederenergiebereich ist $\sigma_\gamma$ für die meisten Nuklide proportional zu $1/\sqrt{E}$, also zu $1/v$. In der obigen log-log-Darstellung des Strahlungseinfang-Wirkungsquerschnitts von Gold-197 ist ein linearer Abschnitt mit einer Steigung von $-1/2$ zu erkennen.
 
 Einige wichtige Nuklide zeigen im niedrigen Energiebereich nicht exakt ein $1/v$-Verhalten. Diese Nuklide werden als Nicht-$1/v$-Absorber (non-$1/v$ absorber) bezeichnet.
 
 #### Resonanzbereich
+
 Jenseits des $1/v$-Bereichs tritt der Resonanzbereich im gleichen Energiebereich auf wie bei Streuungsreaktionen. In der Nähe einer Resonanz bei der Energie $E_r$ wird $\sigma_\gamma$ durch die Breit-Wigner-Formel (Breit-Wigner) für eine einzelne Stufe beschrieben:
 
 $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + \Gamma^2/4} \label{eqn:breit_wigner}\tag{5}$$
@@ -161,9 +174,11 @@ $$ \sigma_\gamma = \frac{\gamma_r^2 g}{4\pi}\frac{\Gamma_n\Gamma_g}{(E-E_r)^2 + 
 {: .prompt-tip }
 
 #### Hochenergiebereich (oberhalb des Resonanzbereichs)
+
 Oberhalb des Resonanzbereichs (bei schweren Kernen etwa ab 1 keV, bei leichteren Kernen bei höheren Energien) nimmt $\sigma_\gamma$ zunächst stark ab und fällt dann langsam auf einen sehr kleinen Wert.
 
 ### Reaktionen mit geladenen Teilchen (charged-particle reactions)
+
 - Der Atomkern fängt ein Neutron ein und emittiert ein geladenes Teilchen wie ein Alpha-Teilchen ($\alpha$) oder ein Proton ($\mathrm{p}$)
 - Werden als $(\mathrm{n}, \alpha)$, $(\mathrm{n}, \mathrm{p})$ usw. bezeichnet
 - Können je nach Fall [exotherm](/posts/nuclear-reactions-and-binding-energy/#exotherme-reaktion-exothermic-reaction--endotherme-reaktion-endothermic-reaction) oder [endotherm](/posts/nuclear-reactions-and-binding-energy/#exotherme-reaktion-exothermic-reaction--endotherme-reaktion-endothermic-reaction) sein, sind aber meist [endotherm](/posts/nuclear-reactions-and-binding-energy/#exotherme-reaktion-exothermic-reaction--endotherme-reaktion-endothermic-reaction)
@@ -172,7 +187,9 @@ Oberhalb des Resonanzbereichs (bei schweren Kernen etwa ab 1 keV, bei leichteren
 Obwohl Reaktionen mit geladenen Teilchen eine Schwellenenergie benötigen und generell kleine Wirkungsquerschnitte haben, gibt es einige wichtige Reaktionen dieser Art bei leichten Kernen.
 
 #### Exotherme Reaktionen
+
 ##### $^{10}\mathrm{B}(\mathrm{n},\alpha){^7\mathrm{Li}}$
+
 ![(n, alpha) Cross Section of B-10](/assets/img/neutron-interactions-and-cross-sections/n-alpha-cross-section-of-b-10.png)
 > **Wirkungsquerschnitt der $^{10}\mathrm{B}(\mathrm{n},\alpha){^7\mathrm{Li}}$-Reaktion**  
 > - Grafik bereitgestellt von: Nuclear Data Center at KAERI (Korea Atomic Energy Research Institute), Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
@@ -184,6 +201,7 @@ Obwohl Reaktionen mit geladenen Teilchen eine Schwellenenergie benötigen und ge
 {: .prompt-tip }
 
 ##### $^{6}\mathrm{Li}(\mathrm{n},\alpha){^3\mathrm{H}}$
+
 ![(n, alpha) Cross Section of Li-6](/assets/img/neutron-interactions-and-cross-sections/n-alpha-cross-section-of-li-6.png)
 > **Wirkungsquerschnitt der $^{6}\mathrm{Li}(\mathrm{n},\alpha){^3\mathrm{H}}$-Reaktion**  
 > - Grafik bereitgestellt von: Nuclear Data Center at KAERI (Korea Atomic Energy Research Institute), Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
@@ -196,7 +214,9 @@ Obwohl Reaktionen mit geladenen Teilchen eine Schwellenenergie benötigen und ge
 {: .prompt-tip }
 
 #### Endotherme Reaktionen
+
 ##### $^{16}\mathrm{O}(\mathrm{n},\mathrm{p}){^{16}\mathrm{N}}$
+
 ![(n, p) Cross Section of O-16](/assets/img/neutron-interactions-and-cross-sections/n-p-cross-section-of-o-16.png)
 > **Wirkungsquerschnitt der $^{16}\mathrm{O}(\mathrm{n},\mathrm{p}){^{16}\mathrm{N}}$-Reaktion**  
 > - Grafik bereitgestellt von: Nuclear Data Center at KAERI (Korea Atomic Energy Research Institute), Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
@@ -206,6 +226,7 @@ Obwohl Reaktionen mit geladenen Teilchen eine Schwellenenergie benötigen und ge
   - Das $^{16}\mathrm{O}$ im Wassermolekül wird durch diese Reaktion in $^{16}\mathrm{N}$ umgewandelt, das mit einer Halbwertszeit von etwa 7 Sekunden [beta-zerfällt](/posts/Nuclear-Stability-and-Radioactive-Decay/#beta-zerfall-beta-zerfall) und dabei auch [hochenergetische Gammastrahlung von 6-7 MeV emittiert](/posts/Nuclear-Stability-and-Radioactive-Decay/#isomerer-übergang-isomeric-transition)
 
 ### Neutronenerzeugende Reaktionen (neutron-producing reactions)
+
 - Hochenergetische Neutronen kollidieren mit einem Atomkern und erzeugen zwei oder mehr neue Neutronen (endotherme Reaktion)
 - Werden als (n, 2n), (n, 3n) usw. bezeichnet
 - Die (n, 2n)-Reaktion ist besonders wichtig in Reaktoren mit Schwerwasser oder Beryllium, da die Neutronen in $^2\text{H}$ und $^9\text{Be}$ schwach gebunden sind und leicht durch Kollisionen mit Neutronen freigesetzt werden können
@@ -215,12 +236,14 @@ Obwohl Reaktionen mit geladenen Teilchen eine Schwellenenergie benötigen und ge
 > - Grafik bereitgestellt von: Nuclear Data Center at KAERI (Korea Atomic Energy Research Institute), Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
 
 ### Kernspaltung (fission)
+
 - Ein Neutron kollidiert mit einem Atomkern und spaltet diesen in zwei oder mehr Tochterkerne
 
 > Die Kernspaltung und der Spaltungs-Wirkungsquerschnitt werden in einem separaten Artikel behandelt.
 {: .prompt-info }
 
 ### Totaler Wirkungsquerschnitt
+
 #### Niederenergiebereich
 
 $$ \sigma_t = 4\pi R^2 + \frac{C}{\sqrt{E}} \label{eqn:total_cross_section}\tag{6}$$
@@ -229,12 +252,15 @@ $$ \sigma_t = 4\pi R^2 + \frac{C}{\sqrt{E}} \label{eqn:total_cross_section}\tag{
 - Wenn der erste Term dominiert, wird der totale Wirkungsquerschnitt im niedrigen Energiebereich konstant sein; dominiert der zweite Term, zeigt er ein $1/v$-Verhalten
 
 #### Resonanzbereich
+
 Der totale Wirkungsquerschnitt umfasst die Resonanzen, die in [$\sigma_s$](#resonanzbereich-resonance-region) und [$\sigma_\gamma$](#resonanzbereich) auftreten, und zeigt Resonanzen bei den gleichen Energien. Bei leichten Kernen treten Resonanzen in höheren und breiteren Energiebereichen auf, während sie bei schweren Kernen in niedrigeren und engeren Energiebereichen zu finden sind.
 
 #### Hochenergiebereich
+
 Oberhalb des Resonanzbereichs nimmt $\sigma_t$ mit steigender Energie allmählich ab.
 
 ## Wirkungsquerschnitte von Wasserstoff und Deuterium
+
 In vielen Reaktoren sind $^1\mathrm{H}$ und $^2\mathrm{H}$ in großen Mengen vorhanden\*, und diese Kerne wechselwirken etwas anders mit Neutronen als andere Kerne:
 - Sie bilden keinen [Compoundkern](#bildung-eines-compoundkerns)
 - Sie haben keinen [Resonanzbereich](#resonanzbereich-1)
@@ -254,6 +280,7 @@ In vielen Reaktoren sind $^1\mathrm{H}$ und $^2\mathrm{H}$ in großen Mengen vor
 > - Grafik bereitgestellt von: Nuclear Data Center at KAERI (Korea Atomic Energy Research Institute), Table of Nuclides (<https://atom.kaeri.re.kr/nuchart/>)
 
 ## Makroskopischer Wirkungsquerschnitt (macroscopic cross-section)
+
 Aus Gleichung ($\ref{eqn:collision_rate}$) ergibt sich die Kollisionsrate pro Weglängeneinheit:
 
 $$ \frac {p}{\tau} = \frac {1}{\tau} \frac {\Delta I}{I} = \sigma N \equiv \Sigma\ \text{[cm}^{-1}\text{]} \label{eqn:macroscopic_cross_section}\tag{7}$$
@@ -267,6 +294,7 @@ Der *makroskopische Wirkungsquerschnitt (macroscopic cross-section)* wird als Pr
 Allgemein gilt für jede Reaktion: $\Sigma_{reaction}=N\sigma_{reaction}$.
 
 ## Kollisionsdichte (collision density), d.h. Reaktionsrate (reaction rate)
+
 Die *Kollisionsdichte (collision density)* oder *Reaktionsrate (reaction rate)* gibt die Anzahl der Kollisionen pro Zeit- und Volumeneinheit in einem Material an. Aus den Gleichungen ($\ref{eqn:microscopic_cross_section}$) und ($\ref{eqn:macroscopic_cross_section}$) ergibt sich:
 
 $$ F = \frac {\Delta I}{\tau} = I\sigma N = I\Sigma \label{eqn:reaction_rate}\tag{8} $$

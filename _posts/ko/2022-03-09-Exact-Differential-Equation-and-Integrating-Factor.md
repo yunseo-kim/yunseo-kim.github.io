@@ -1,13 +1,15 @@
 ---
-title: 완전미분방정식(Exact Differential Equation)과 적분인자
-description: 완전미분방정식의 판별법과 풀이법, 그리고 적분인자에 대해 알아본다.
+title: "완전미분방정식(Exact Differential Equation)과 적분인자"
+description: "완전미분방정식의 판별법과 풀이법, 그리고 적분인자에 대해 알아본다."
 categories: [Mathematics, Differential Equation]
 tags: [ODE, First-Order ODEs]
 math: true
 mermaid: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 ```mermaid
 flowchart TD
 	ODE[완전미분방정식일 수도 있는 어떤 상미분방정식이 주어지면]
@@ -30,6 +32,7 @@ flowchart TD
 ```
 
 ## 완전미분방정식(Exact Differential Equation)
+
 1계 상미분방정식 $M(x,y)+N(x,y)y'=0$은 
 
 $$ M(x,y)dx+N(x,y)dy=0 \tag{1} $$
@@ -53,6 +56,7 @@ $$ u(x,y)=c \tag{4} $$
 의 형태로 일반해를 바로 얻는다.
 
 ## 완전미분방정식의 판별
+
 $xy$ 평면상의, 자기 자신과 교차하지 않는 닫힌 곡선을 경계로 갖는 닫힌 영역에서, $M$과 $N$ 그리고 각각의 1계 편도함수가 연속이라고 하자. 조건 (2)를 다시 살펴보면 다음과 같다.
 
 $$ \begin{align*}
@@ -74,6 +78,7 @@ $$ \therefore \frac {\partial M}{\partial y}=\frac {\partial N}{\partial x} \tag
 따라서 조건 (5)는 상미분방정식 (1)이 완전미분방정식이 되기 위한 필요조건임을 알 수 있으며, 여기서 증명하진 않았으나 사실은 충분조건이기도 하다. 즉 이 조건을 충족하는지 확인함으로써 완전미분방정식 여부를 판별할 수 있다.
 
 ## 완전미분방정식의 풀이
+
 식 (2a)를, $y$는 상수로 간주하고 $x$에 관하여 적분하면
 
 $$ u = \int M(x,y) dx + k(y) \tag{6} $$
@@ -98,6 +103,7 @@ $$ \int M(x,y)dx + \int N(x,y)dy - \int \left(\frac{\partial}{\partial y}\int Md
 {: .prompt-tip }
 
 ## 적분인자(Integrating Factor)
+
 어떤 불완전한(Inexact) 상미분방정식이 주어졌다고 하자.
 
 $$ P(x,y)dx+Q(x,y)dy = 0 \quad \left( \frac {\partial P}{\partial y} \neq \frac {\partial Q}{\partial x} \right) \tag{7} $$
@@ -113,6 +119,7 @@ $$ FP\ dx+FQ\ dy = 0 \tag{9} $$
 이때 함수 $F(x,y)$를 식 (7)의 **적분인자(integrating factor)** 라고 부른다.
 
 ## 적분인자를 구하는 방법
+
 식 (8)에 대해 곱의 미분법을 쓰고 편도함수를 아래 첨자로 나타내면 다음과 같다.
 
 $$ F_y P + FP_y = F_x Q + FQ_x $$

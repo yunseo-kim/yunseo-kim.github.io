@@ -29,15 +29,18 @@ image: /assets/img/math-and-physics-cropped.webp
 {: .prompt-tip }
 
 ## Wymagania wstępne
+
 - [Twierdzenia o dodawaniu funkcji trygonometrycznych](/posts/trigonometric-addition-formulas)
 
 ## Wzory przekształcające iloczyn do postaci sumy lub różnicy (Product-to-Sum Identities)
+
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \sin \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) - \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \cos \beta = \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) + \cos ( \alpha - \beta )\} $$
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### Wyprowadzenie
+
 [Twierdzenia o dodawaniu funkcji trygonometrycznych](/posts/trigonometric-addition-formulas)
 
 $$ \begin{align}
@@ -81,12 +84,14 @@ $$ \cos(\alpha+\beta) - \cos(\alpha-\beta) = -2 \sin \alpha \sin \beta \tag{8}\l
 $$ \therefore \sin \alpha \sin \beta = -\frac { 1 } { 2 } \{ \cos(\alpha+\beta) - \cos(\alpha-\beta) \}. $$
 
 ## Wzory przekształcające sumę lub różnicę do postaci iloczynu (Sum-to-Product Identities)
+
 - $$ \sin A + \sin B = 2\sin \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \sin A - \sin B = 2\cos \frac{A+B}{2}\sin \frac{A-B}{2} $$
 - $$ \cos A + \cos B = 2\cos \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \cos A - \cos B = -2\sin \frac{A+B}{2}\sin \frac{A-B}{2} $$
 
 ### Wyprowadzenie
+
 Z wzorów przekształcających iloczyn do postaci sumy lub różnicy (Product-to-Sum Identities) można również wyprowadzić wzory przekształcające sumę lub różnicę do postaci iloczynu (Sum-to-Product Identities).
 
 Przyjmijmy

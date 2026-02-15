@@ -29,15 +29,18 @@ image: /assets/img/math-and-physics-cropped.webp
 {: .prompt-tip }
 
 ## Prerequisites
+
 - [Sčítací vzorce goniometrických funkcí](/posts/trigonometric-addition-formulas)
 
 ## Vzorce pro převod součinu na součet nebo rozdíl (Product-to-Sum Identities)
+
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \sin \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) - \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \cos \beta = \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) + \cos ( \alpha - \beta )\} $$
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### Odvození
+
 [Sčítací vzorce goniometrických funkcí](/posts/trigonometric-addition-formulas)
 
 Použijeme
@@ -83,12 +86,14 @@ $$ \cos(\alpha+\beta) - \cos(\alpha-\beta) = -2 \sin \alpha \sin \beta \tag{8}\l
 $$ \therefore \sin \alpha \sin \beta = -\frac { 1 } { 2 } \{ \cos(\alpha+\beta) - \cos(\alpha-\beta) \}. $$
 
 ## Vzorce pro převod součtu nebo rozdílu na součin (Sum-to-Product Identities)
+
 - $$ \sin A + \sin B = 2\sin \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \sin A - \sin B = 2\cos \frac{A+B}{2}\sin \frac{A-B}{2} $$
 - $$ \cos A + \cos B = 2\cos \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \cos A - \cos B = -2\sin \frac{A+B}{2}\sin \frac{A-B}{2} $$
 
 ### Odvození
+
 Ze vzorců pro převod součinu na součet nebo rozdíl (Product-to-Sum Identities) lze odvodit i vzorce pro převod součtu nebo rozdílu na součin (Sum-to-Product Identities).
 
 Položme

@@ -1,14 +1,14 @@
 ---
-title: 합 또는 차의 공식(Product-to-Sum and Sum-to-Product Identities)
-description: 삼각함수의 곱을 합 또는 차의 형태로 변형하는 공식을 알아보고, 삼각함수의 덧셈정리로부터 해당 공식을 유도한다. 그리고 이로부터
-  삼각함수의 합 또는 차의 형태를 곱의 형태로 변형하는 공식 또한 유도한다.
+title: "합 또는 차의 공식(Product-to-Sum and Sum-to-Product Identities)"
+description: "삼각함수의 곱을 합 또는 차의 형태로 변형하는 공식을 알아보고, 삼각함수의 덧셈정리로부터 해당 공식을 유도한다. 그리고 이로부터 삼각함수의 합 또는 차의 형태를 곱의 형태로 변형하는 공식 또한 유도한다."
 categories: [Mathematics, Trigonometry]
-tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product
-    Identities]
+tags: [Trigonometric Addition Formulas, Product-to-Sum Identities, Sum-to-Product Identities]
 math: true
 image: /assets/img/math-and-physics-cropped.webp
 ---
+
 ## TL;DR
+
 > **곱을 합 또는 차로 변형하는 공식 (Product-to-Sum Identities)**
 >
 > - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
@@ -29,15 +29,18 @@ image: /assets/img/math-and-physics-cropped.webp
 {: .prompt-tip }
 
 ## Prerequisites
+
 - [삼각함수의 덧셈정리](/posts/trigonometric-addition-formulas)
 
 ## 곱을 합 또는 차로 변형하는 공식 (Product-to-Sum Identities)
+
 - $$ \sin \alpha \cos \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) + \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \sin \beta = \frac { 1 } { 2 } \{ \sin ( \alpha + \beta ) - \sin ( \alpha - \beta ) \} $$
 - $$ \cos \alpha \cos \beta = \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) + \cos ( \alpha - \beta )\} $$
 - $$ \sin \alpha \sin \beta = - \frac { 1 } { 2 } \{ \cos ( \alpha + \beta ) - \cos ( \alpha - \beta ) \} $$
 
 ### 유도
+
 [삼각함수의 덧셈정리](/posts/trigonometric-addition-formulas)
 
 $$ \begin{align}
@@ -81,12 +84,14 @@ $$ \cos(\alpha+\beta) - \cos(\alpha-\beta) = -2 \sin \alpha \sin \beta \tag{8}\l
 $$ \therefore \sin \alpha \sin \beta = -\frac { 1 } { 2 } \{ \cos(\alpha+\beta) - \cos(\alpha-\beta) \}. $$
 
 ## 합 또는 차를 곱으로 변형하는 공식 (Sum-to-Product Identities)
+
 - $$ \sin A + \sin B = 2\sin \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \sin A - \sin B = 2\cos \frac{A+B}{2}\sin \frac{A-B}{2} $$
 - $$ \cos A + \cos B = 2\cos \frac{A+B}{2}\cos \frac{A-B}{2} $$
 - $$ \cos A - \cos B = -2\sin \frac{A+B}{2}\sin \frac{A-B}{2} $$
 
 ### 유도
+
 곱을 합 또는 차로 변형하는 공식(Product-to-Sum Identities)으로부터 합 또는 차를 곱으로 변형하는 공식(Sum-to-Product Identities)도 유도할 수 있다.
 
 $$ \alpha + \beta = A, \quad \alpha - \beta = B $$

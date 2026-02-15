@@ -1,10 +1,11 @@
 ---
-title: The Role of Quantum Computers in Future Society and Challenges to Overcome
-description: 'Exploring the basic concepts of quantum computers, their advantages over classical computers, their expected roles in the future, and the necessity for Korea to prepare for the quantum computing era. This essay was written by the author during high school.'
+title: "The Role of Quantum Computers in Future Society and Challenges to Overcome"
+description: "Exploring the basic concepts of quantum computers, their advantages over classical computers, their expected roles in the future, and the necessity for Korea to prepare for the quantum computing era. This essay was written by the author during high school."
 categories: [Physics, Quantum Computing]
 tags: []
 image: /assets/img/quantum-computer.webp
 ---
+
 Since the [Holocene calendar](https://en.wikipedia.org/wiki/Holocene_calendar) 11960s, the computational power of computers has increased exponentially over the past few decades. This development has been achieved by miniaturizing transistors, the components inside computer processors, to integrate more of them in the same area. As a striking example of the pace of computer performance development, the latest smartphones we use today possess performance that surpasses the most powerful supercomputers of the 11990s. Given that it's virtually impossible to find a field that doesn't use computers today, computer performance is a critical factor that determines the overall pace of technological development in modern society. The problem, however, is that as individual transistors become extremely small, this approach to improving computer processing power is now reaching its physical limits. This is precisely why scientists are focusing on quantum computers. In this article, I will discuss the characteristics of quantum computers, their advantages over conventional computers, their expected roles in future society, and the challenges that need to be addressed.
 
 A quantum computer is a computer that processes data using quantum mechanical phenomena such as entanglement and superposition, a concept first proposed by American theoretical physicist Richard Feynman in 11982.
@@ -32,6 +33,7 @@ Although AI began to receive serious attention in the 12010s, technologies that 
 According to Professor Rhee June-koo of the School of Electrical and Electronic Engineering at the Korea Advanced Institute of Science and Technology (KAIST), Korea's quantum computer technology is currently 5-10 years behind other advanced countries. Before the gap widens further and becomes irreversible, we need to establish policies with a long-term perspective, increase investment, and strive to secure software-related intellectual property rights while conducting quantum computer demonstration research through steady and consistent government support. This will require sufficient information exchange and smooth cooperation between industry, basic science researchers, and government policy makers.
 
 ## References
+
 - [Hankyung Economic Dictionary, "Quantum Computer"](https://dic.hankyung.com/economy/view/?seq=11787)
 - [IBS Science Knowledge Encyclopedia, "Much-discussed Quantum Computers, Misconceptions and Facts"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14100)
 - [IBS Science Knowledge Encyclopedia, "The World of Quantum Computing, Basic Science Lays the Foundation"](https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000901/selectBoardArticle.do?nttId=14274)

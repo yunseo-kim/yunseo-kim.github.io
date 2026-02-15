@@ -1,15 +1,17 @@
 ---
-title: Calcul de l'équilibre radiatif
-description: Nous examinons la relation entre la constante de désintégration, la demi-vie
+title: "Calcul de l'équilibre radiatif"
+description: "Nous examinons la relation entre la constante de désintégration, la demi-vie
   et la durée de vie moyenne des radionucléides, et calculons l'activité des radionucléides
-  à un temps t donné dans une chaîne de désintégration donnée.
+  à un temps t donné dans une chaîne de désintégration donnée."
 categories: [Nuclear Engineering, Radiation]
 tags: [Nuclear Physics, Radioactive Decay]
 math: true
 mermaid: true
 image: /assets/img/atoms.webp
 ---
+
 ## TL;DR
+
 > **Activité à un temps t arbitraire**
 >
 > $$\begin{align*}
@@ -30,27 +32,33 @@ image: /assets/img/atoms.webp
 {: .prompt-info }
 
 ## Constante de désintégration (Decay Constant)
+
 - Probabilité qu'un noyau se désintègre par unité de temps
 - Constante indépendante du temps, déterminée uniquement par le type de nucléide
 - Notée par le symbole $\lambda$
 
 ## Radioactivité (Radioactivity)
+
 Si le nombre de noyaux qui ne se sont pas encore désintégrés au temps $t$ est n(t), alors en moyenne $\lambda n(t)$ noyaux se désintègrent pendant l'intervalle $dt$ entre $t$ et $t+dt$. Ce taux de désintégration est appelé *radioactivité* de l'échantillon et est noté par le symbole $\alpha$. Ainsi, la radioactivité à un temps $t$ donné est :
 
 $$ \alpha (t)=\lambda n(t) \tag{1}$$
 
 ## Unités de radioactivité
+
 ### Curie (Ci)
+
 - Unité traditionnellement utilisée avant l'adoption du becquerel
 - Radioactivité de 1g de radium-226
 - $3.7\times 10^{10}$ désintégrations nucléaires par seconde ($3.7\times 10^{10}\text{Bq}$)
 
 ### Becquerel (Bq)
+
 - Unité du Système International (SI)
 - Une désintégration nucléaire par seconde
 - $1 \text{Bq} = 2.703\times 10^{-11}\text{Ci} = 27\text{pCi}$
 
 ## Calcul de l'évolution de la radioactivité dans le temps
+
 Comme $\lambda n(t)$ noyaux se désintègrent pendant $dt$, la diminution du nombre de noyaux restants dans l'échantillon pendant $dt$ peut être exprimée comme suit :
 
 $$ -dn(t)=\lambda n(t)dt $$
@@ -101,7 +109,9 @@ $$ \begin{align*}
 \end{align*}$$
 
 ## Exemple : Chaîne de désintégration radioactive 1
+
 Supposons qu'un radionucléide soit produit à une vitesse de $R$ atomes/s. Ces noyaux commencent à se désintégrer dès leur formation. Calculez la radioactivité de ce nucléide à un temps t arbitraire.
+
 ```mermaid
 flowchart LR
 	Start[?] -- R --> A[Modèle mathématique]
@@ -117,6 +127,7 @@ En notation mathématique :
 $$ dn/dt = -\lambda n + R $$
 
 ### 2. Solution générale
+
 Déplaçons tous les termes en $n$ vers la gauche et multiplions les deux côtés par $e^{\lambda t}$.
 
 $$ \frac {dn}{dt} + \lambda n = R $$
@@ -134,6 +145,7 @@ $$ e^{\lambda t}n=\frac {R}{\lambda}e^{\lambda t}+c $$
 $$ n=ce^{-\lambda t}+\frac {R}{\lambda} $$
 
 ### 3. Solution particulière
+
 Supposons que le nombre de ce nucléide soit $n_0$ à $t=0$ et trouvons la valeur de la constante $c$.
 
 $$ n(0)=c+\frac {R}{\lambda}=n_0 $$
@@ -151,7 +163,9 @@ $$ \alpha = \alpha_0e^{-\lambda t}+R(1-e^{-\lambda t}) \tag{8} $$
 Ainsi, quand $t\to\infty$, $\alpha_{\text{max}}=R$, $n_{\text{max}}=R/\lambda$.
 
 ## Exemple : Chaîne de désintégration radioactive 2
+
 Calculez la radioactivité du radionucléide B dans la chaîne de désintégration suivante :
+
 ```mermaid
 flowchart LR
 	A --> B
@@ -169,6 +183,7 @@ En substituant l'équation (2) pour $n_A$, on obtient l'équation différentiell
 $$  \frac {dn_B}{dt} = -\lambda_B n_B + \lambda_A n_{A0}e^{-\lambda_A t} \tag{9}$$ 
 
 ### 2. Solution générale
+
 Pour résoudre l'équation différentielle, déplaçons tous les termes en $n_B$ vers la gauche et multiplions les deux côtés par $e^{\lambda_B t}$.
 
 $$ \frac {dn_B}{dt} + \lambda_B n_B = n_{A0}\lambda_A e^{-\lambda_A t} $$
@@ -188,6 +203,7 @@ En divisant les deux côtés par $e^{\lambda_B t}$, on obtient la solution gén�
 $$ n_B = \frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}e^{-\lambda_A t}+ce^{-\lambda_B t} $$
 
 ### 3. Solution particulière
+
 Supposons que le nombre d'éléments B soit $n_{B0}$ à $t=0$ et trouvons la valeur de la constante $c$.
 
 $$ n_B(0)=\frac {n_{A0}\lambda_A}{\lambda_B-\lambda_A}+c=n_{B0} $$
