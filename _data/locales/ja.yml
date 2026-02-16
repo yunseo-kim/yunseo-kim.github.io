@@ -55,7 +55,7 @@ post:
   written_by: 投稿者
   posted: 投稿日
   updated: 更新日
-  words: 語
+  words: 字
   pageview_measure: 回閲覧
   read_time:
     unit: 分
@@ -75,8 +75,8 @@ post:
 # See: <http://strftime.net/>, <https://day.js.org/docs/en/display/format>
 df:
   post:
-    strftime: "1%Y/%m/%d HE"
-    dayjs: "[1]YYYY/MM/DD [HE]"
+    strftime: "人類1%Y年%-m月%-d日"
+    dayjs: "[人類1]YYYY[年]M[月]D[日]"
   archives:
     strftime: "%m /"
     dayjs: "MM /"

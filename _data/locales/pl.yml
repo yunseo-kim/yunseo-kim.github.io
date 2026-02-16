@@ -1,0 +1,91 @@
+# The layout text of site
+
+# ----- Commons label -----
+
+layout:
+  post: Wpis
+  category: Kategoria
+  tag: Tag
+
+# The tabs of sidebar
+tabs:
+  # format: <filename_without_extension>: <value>
+  home: Strona główna
+  categories: Kategorie
+  tags: Tagi
+  archives: Archiwa
+  about: O mnie
+
+# the text displayed in the search bar & search results
+search:
+  hint: szukaj
+  cancel: Anuluj
+  no_results: Ups! Nie znaleziono wyników.
+
+panel:
+  lastmod: Ostatnia aktualizacja
+  trending_tags: Popularne tagi
+  toc: Spis treści
+
+copyright:
+  # Shown at the bottom of the post
+  license:
+    template: Ten wpis jest objęty licencją :LICENSE_NAME przez autora.
+    name: CC BY-NC 4.0
+    link: https://creativecommons.org/licenses/by-nc/4.0/
+
+  # Displayed in the footer
+  brief: Niektóre prawa zastrzeżone.
+  verbose: >-
+    O ile nie zaznaczono inaczej, wpisy na tym blogu są objęte licencją
+    Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) przez autora.
+
+meta: Oparte na :PLATFORM z motywem :THEME
+
+not_found:
+  statement: Przepraszamy, ten adres URL nie istnieje lub prowadzi do nieistniejącej strony.
+
+notification:
+  update_found: Dostępna jest nowa wersja treści.
+  update: Aktualizuj
+
+# ----- Posts related labels -----
+
+post:
+  written_by: Autor
+  posted: Opublikowano
+  updated: Zaktualizowano
+  words: słów
+  pageview_measure: odsłon
+  read_time:
+    unit: min
+    prompt: czytania
+  relate_posts: Powiązane wpisy
+  share: Udostępnij
+  button:
+    next: Nowszy
+    previous: Starszy
+    copy_code:
+      succeed: Skopiowano!
+    share_link:
+      title: Kopiuj link
+      succeed: Link został skopiowany!
+
+# Date time format.
+# See: <http://strftime.net/>, <https://day.js.org/docs/en/display/format>
+df:
+  post:
+    strftime: "%e %b 1%Y HE"
+    dayjs: "D MMM [1]YYYY [HE]"
+  archives:
+    strftime: "%b"
+    dayjs: "MMM"
+
+# categories page
+categories:
+  category_measure:
+    singular: kategoria
+    plural: kategorie
+  post_measure:
+    singular: wpis
+    plural: wpisy

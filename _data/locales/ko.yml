@@ -30,7 +30,7 @@ panel:
 copyright:
   # Shown at the bottom of the post
   license:
-    template: 이 게시물은 저작권자의 :LICENSE_NAME 라이센스를 따릅니다.
+    template: 이 게시물은 저작권자의 :LICENSE_NAME 라이선스를 따릅니다.
     name: CC BY-NC 4.0
     link: https://creativecommons.org/licenses/by-nc/4.0/
 
@@ -59,27 +59,27 @@ post:
   pageview_measure: 조회
   read_time:
     unit: 분
-    prompt: 읽는 시간
+    prompt: " 길이"
   relate_posts: 관련 글
   share: 공유하기
   button:
     next: 다음 글
     previous: 이전 글
     copy_code:
-      succeed: 복사되었습니다!
+      succeed: 복사했습니다!
     share_link:
       title: 링크 복사하기
-      succeed: 링크가 복사되었습니다!
+      succeed: 링크를 복사했습니다!
 
 # Date time format.
 # See: <http://strftime.net/>, <https://day.js.org/docs/en/display/format>
 df:
   post:
-    strftime: "1%Y/%m/%d HE"
-    dayjs: "[1]YYYY/MM/DD [HE]"
+    strftime: "인류력 1%Y년 %-m월 %-d일"
+    dayjs: "[인류력] [1]YYYY[년] M[월] D[일]"
   archives:
-    strftime: "%m /"
-    dayjs: "MM /"
+    strftime: "%m ."
+    dayjs: "MM ."
 
 # categories page
 categories:

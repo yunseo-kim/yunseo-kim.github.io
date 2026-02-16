@@ -31,14 +31,14 @@ copyright:
   # Shown at the bottom of the post
   license:
     template: Tento příspěvek je licencován pod :LICENSE_NAME autorem.
-    name: CC BY 4.0
-    link: https://creativecommons.org/licenses/by/4.0/
+    name: CC BY-NC 4.0
+    link: https://creativecommons.org/licenses/by-nc/4.0/
 
   # Displayed in the footer
   brief: Některá práva vyhrazena.
   verbose: >-
     Pokud není uvedeno jinak, jsou příspěvky na tomto webu licencovány
-    pod licencí Creative Commons Attribution 4.0 International (CC BY 4.0) Licence autora.
+    pod licencí Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) Licence autora.
 
 meta: Použití :PLATFORM s motivem :THEME
 
@@ -75,8 +75,8 @@ post:
 # See: <http://strftime.net/>, <https://day.js.org/docs/en/display/format>
 df:
   post:
-    strftime: "%b %e, %Y"
-    dayjs: "ll"
+    strftime: "%e. %b 1%Y HE"
+    dayjs: "D. MMM [1]YYYY [HE]"
   archives:
     strftime: "%b"
     dayjs: "MMM"

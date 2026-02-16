@@ -27,9 +27,17 @@ layout: page
       <span class="date month small text-muted" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
         {{ post.date | date: df_strftime_m }}
       </span>
+        {% if lang == "ko" %}
+      <span class="date day ms-1" data-ts="{{ ts }}" data-df="DD .">{{ post.date | date: '%d .' }}</span>
+        {% else %}
       <span class="date day ms-1" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: '%d' }}</span>
+        {% endif %}
       {% else %}
+        {% if lang == "de" or lang == "cs" %}
+      <span class="date day" data-ts="{{ ts }}" data-df="DD.">{{ post.date | date: '%d.' }}</span>
+        {% else %}
       <span class="date day" data-ts="{{ ts }}" data-df="DD">{{ post.date | date: '%d' }}</span>
+        {% endif %}
       <span class="date month small text-muted ms-1" data-ts="{{ ts }}" data-df="{{ df_dayjs_m }}">
         {{ post.date | date: df_strftime_m }}
       </span>
