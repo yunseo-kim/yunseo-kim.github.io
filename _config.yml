@@ -69,6 +69,7 @@ analytics:
     id: G-FBSWTJ27CE # fill in your Google Analytics ID
   goatcounter:
     id: yunseo # fill in your GoatCounter ID
+    domain: stats.yunseo.kim # If you have one, fill in your GoatCounter Custom Domain.
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain
