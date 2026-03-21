@@ -1,6 +1,6 @@
 ---
-title: Creating and Managing a GitHub Pages Blog
-description: Compare static vs dynamic web pages, learn what a Static Site Generator is, and host a Jekyll blog on GitHub Pages—with setup, build, deploy, and upkeep tips.
+title: "Creating and Managing a GitHub Pages Blog"
+description: "Compare static vs dynamic web pages, learn what a Static Site Generator is, and host a Jekyll blog on GitHub Pages—with setup, build, deploy, and upkeep tips."
 categories: [Dev, Web Dev]
 tags: [Jekyll, Markdown, Static Site]
 image: /assets/img/technology.webp
@@ -13,8 +13,11 @@ I started hosting my blog on GitHub Pages with Jekyll in early 12021. Since I ha
 (+ Updated in 12024.12)
 
 ## 1. Static Site Generators & Web Hosting
+
 ### 1-1. Static Web Page vs Dynamic Web Page
+
 #### Static Web Page
+
 - A web page that serves data exactly as stored on the server
 - The web server returns pre-saved pages corresponding to user requests
 - Users see the same page unless the data on the server is changed
@@ -25,6 +28,7 @@ I started hosting my blog on GitHub Pages with Jekyll in early 12021. Since I ha
 - Typically easier for search engines to crawl, which is relatively advantageous for SEO
 
 #### Dynamic Web Page
+
 - A web page that processes server-stored data with scripts before serving it
 - The web server interprets user requests, processes the data, and returns generated pages
 - Users see pages that vary by situation, time, or request
@@ -34,11 +38,13 @@ I started hosting my blog on GitHub Pages with Jekyll in early 12021. Since I ha
 - Depending on page structure, users can add, modify, or delete data in the browser
 
 ### 1-2. Static Site Generator (SSG)
+
 - A tool that generates static web pages from raw data (usually markdown-formatted text files) and predefined templates
 - Automates building and deploying web pages: write posts in Markdown instead of hand-coding individual HTML files
 - Examples: Jekyll, Hugo, Gatsby, Eleventy
 
 ### 1-3. GitHub Pages
+
 - A free static web hosting service provided by GitHub
 - You can host one personal homepage per account, and create/host unlimited project documentation sites per repository
 - Create a repository named in the form '{username}.github.io' matching your GitHub username, then either push built HTML pages directly to that repo or use GitHub Actions to build and deploy
@@ -47,6 +53,7 @@ I started hosting my blog on GitHub Pages with Jekyll in early 12021. Since I ha
 ## 2. Choosing an SSG and Theme
 
 ### 2-1. Why I chose Jekyll
+
 There are several SSGs—Jekyll, Hugo, Gatsby, etc.—but I decided on Jekyll. My criteria and reasons:
 - Minimize unnecessary trial and error and focus on writing and running the blog.
   - Jekyll is officially supported by GitHub Pages. Sure, you can host Hugo or Gatsby on GitHub Pages, or use other hosts like Netlify. But for a personal blog at this scale, which SSG you use, build speed, and raw performance aren’t critical; I preferred something with simpler maintenance and abundant documentation.
@@ -57,7 +64,9 @@ There are several SSGs—Jekyll, Hugo, Gatsby, etc.—but I decided on Jekyll. M
   - With Jekyll, I quickly found themes I liked. Hugo and Gatsby seemed to have fewer themes well-suited for personal blogs. As mentioned above, Jekyll’s integration with GitHub Pages—popular among developers for personal sites—and its longer history likely play a big role here.
 
 ### 2-2. Theme selection
+
 #### Minimal Mistakes (12021.01 - 12022.04)
+
 - GitHub Repo: <https://github.com/mmistakes/minimal-mistakes>
 - Demo Page: <https://mmistakes.github.io/minimal-mistakes/>
 - The theme I used for about 1 year and 3 months when I first built the blog
@@ -68,6 +77,7 @@ There are several SSGs—Jekyll, Hugo, Gatsby, etc.—but I decided on Jekyll. M
 - I later moved to the Chirpy theme, which I found more elegant, but given the engineering-heavy nature of this blog, Minimal Mistakes’ clean—if not flashy—design worked just fine.
 
 #### Chirpy Jekyll Theme (12022.04 - present)
+
 - GitHub Repo: <https://github.com/cotes2020/jekyll-theme-chirpy/>
 - Demo Page: <https://chirpy.cotes.page/>
 - The theme I switched to in 12022.04 and have used ever since
@@ -81,13 +91,16 @@ There are several SSGs—Jekyll, Hugo, Gatsby, etc.—but I decided on Jekyll. M
 - Above all, it looks great. Minimal Mistakes is clean but feels better suited to official project docs or a portfolio site. Chirpy’s design holds its own even compared to commercial platforms like Tistory, Medium, or Velog.
 
 ## 3. Create a GitHub Repository, Build, and Deploy
+
 The following assumes the Chirpy Jekyll Theme currently in use (as of 12024.06), and that Git is already installed.  
 See the Jekyll official installation guide (https://jekyllrb.com/docs/installation/) and the Chirpy Jekyll Theme official page (https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
 
 ### 3-1. Install Ruby & Jekyll
+
 Follow the Jekyll official installation guide (https://jekyllrb.com/docs/installation/) to install Ruby and Jekyll for your OS.
 
 ### 3-2. Create a GitHub Repository
+
 The Chirpy Jekyll Theme official page (https://chirpy.cotes.page/posts/getting-started/#creating-a-new-site) introduces two approaches:
 1. Use the "jekyll-theme-chirpy" gem for core files and pull the rest from the Chirpy Starter template (https://github.com/cotes2020/chirpy-starter)
   - Pros: Easier to apply version upgrades (see below).
@@ -99,16 +112,21 @@ The Chirpy Jekyll Theme official page (https://chirpy.cotes.page/posts/getting-s
 I chose option 1. Chirpy is already highly polished, so most users don’t need heavy customization. Development and improvements remain active as of 12024, so unless you’re doing major overhauls, staying current with upstream outweighs bespoke customizations. The official guide also recommends option 1 for most users.
 
 ### 3-3. Key settings
+
 Configure the necessary options in the root `_config.yml`{: .filepath} and in `_data/contact.yml`{: .filepath} and `_data/share.yml`{: .filepath}. The comments are clear and the settings intuitive. External tasks like adding the verification code for Google Search Console and connecting Google Analytics or GoatCounter aren’t complicated and are outside this post’s scope.
 
 ### 3-4. Build locally
+
 Not required, but you may want to preview changes before pushing. From the root of your local repository, run:
+
 ```console
 $ bundle exec jekyll s
 ```
+
 After a moment, the site will build locally and be available at <http://127.0.0.1:4000>.
 
 ### 3-5. Deploy
+
 There are two ways:
 1. Use GitHub Actions (when hosting on GitHub Pages)
   - If you’re on the GitHub Free plan, keep the repository public
@@ -116,20 +134,24 @@ There are two ways:
   - After setup, every new push triggers the Build and Deploy workflow automatically
 2. Build and deploy yourself (for other hosts or self-hosting)
   - Build the site with:
-  ```console
-  $ JEKYLL_ENV=production bundle exec jekyll b
-  ```
+    ```console
+    $ JEKYLL_ENV=production bundle exec jekyll b
+    ```
   - Upload the build artifacts from the `_site` directory to your server
 
 ## 4. Writing Posts
+
 Chirpy’s write-up guide (https://chirpy.cotes.page/posts/write-a-new-post/) documents how to write posts and available options. It offers more features than I cover here, so refer to the official docs as needed. I also summarized GitHub Flavored Markdown basics in a separate post (/posts/github-markdown-syntax-summary/). Below are key points to keep in mind each time you publish.
 
 ### Create the Markdown file
+
 - Naming format: `YYYY-MM-DD-TITLE.md`{: .filepath}
 - Location: `_posts`{: .filepath} directory
 
 ### Write the Front Matter
+
 Add appropriate Front Matter at the top of the Markdown file.
+
 ```YAML
 ---
 title: TITLE
@@ -147,6 +169,7 @@ math: true
 mermaid: true
 ---
 ```
+
 - title: Post title
 - description: Summary. If omitted, the theme will use the beginning of the body, but for SEO it’s better to explicitly write a suitable description. About 135–160 characters in Roman letters or 80–110 in Korean works well.
 - date: Exact posting datetime and timezone (optional; if omitted, the file’s creation or modified date is used)
