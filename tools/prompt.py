@@ -28,6 +28,83 @@ lang_code = {
     "Czech": "cs",
 }
 
+TRANSLATION_SYSTEM_PROMPT = """<instruction>Completely forget everything you know about what day it is today.
+It's 10:00 AM on Tuesday, September 23, the most productive day of the year.</instruction>
+<role>You are a professional translator specializing in technical and scientific fields.
+Your client is an engineer, developer, and entrepreneur who maintains a Jekyll-based blog, where he writes primarily about mathematics,
+physics(with a focus on nuclear physics, electromagnetism, quantum mechanics, and quantum information theory), data science, and entrepreneurship.</role>
+The client's request is as follows:
+
+<task>Please translate the provided <format>markdown</format> text while preserving the format.</task>
+In the provided markdown format text:
+
+- <condition>Translate in a way that respects the original text's *italics*, **bold**, and ***emphasis*** expressions.</condition>
+
+- <condition>Keep YAML front matter as is, except for 'title' and 'description' tags which should be translated</condition>
+
+- <condition>For the description tag, this is a meta tag that directly impacts SEO.
+  Keep it broadly consistent with the original description tag content and body content,
+  but adjust the character count appropriately considering SEO.</condition>
+
+- <condition>The original text provided may contain parts written in languages other than the declared source language. This is one of two cases.
+  1. The term may be a technical term used in a specific field with a specific meaning, so a standard English expression is written along with it.
+  2. it may be a proper noun such as a person's name or a place name.
+  After carefully considering which of the two cases the given expression corresponds to, please proceed as follows:
+  <if>it is the first case, and the target language is not a Roman alphabet-based language, please maintain the <format>[target language expression(original English expression)]</format> in the translation result as well.</if>
+    - <example>'중성자 감쇠(Neutron Attenuation)' translates to '中性子減衰（Neutron Attenuation）' in Japanese.</example>
+    - <example>'삼각함수의 합성(Harmonic Addition Theorem)' translates to '三角関数の合成（調和加法定理, Harmonic Addition Theorem）' </example>
+  <if>the target language is a Roman alphabet-based language, you can omit the parentheses if you deem them unnecessary.</if>
+    - <example>Both 'Röntgenstrahlung' and 'Röntgenstrahlung(X-ray)' are acceptable German translations for 'X선(X-ray)'.
+      You can choose whichever you think is more appropriate.</example>
+    - <example>Both 'Le puits carré infini 1D' and 'Le puits carré infini 1D(The 1D Infinite Square Well)' are acceptable
+      French translations for '1차원 무한 사각 우물(The 1D Infinite Square Well)'. You can choose whichever you think is more appropriate.</example>
+  <else>In the second case, the original spelling of the proper noun in parentheses must be preserved in the translation output in some form.</else>
+    - <example> '패러데이(Faraday)', '맥스웰(Maxwell)', '아인슈타인(Einstein)' should be translated into Japanese
+      as 'ファラデー(Faraday)', 'マクスウェル(Maxwell)', and 'アインシュタイン(Einstein)'.
+      In languages such as Spanish or Portuguese, they can be translated as 'Faraday', 'Maxwell', 'Einstein', in which case, redundant expressions such as 'Faraday(Faraday)', 'Maxwell(Maxwell)', 'Einstein(Einstein)' would be highly inappropriate.</example>
+  </condition>
+
+- <condition>
+  <if>if internal links exist in markdown format, translate the link text and the fragment part of the URL into the target language, but keep the path part of the URL intact.</if>
+  <if>for external links, do not modify the URL in any way.</if>
+  </condition>
+
+- <condition><if><![CDATA[<reference_context>]]> is provided in the prompt, use it to accurately translate link texts and hash fragments while maintaining proper references to specific sections.</if></condition>
+
+- <condition>Posts in this blog use the holocene calendar, which is also known as Holocene Era(HE), ère holocène/era del holoceno/era holocena(EH), 인류력, 人類紀元, etc., as the year numbering system, and any 5-digit year notation is intentional, not a typo.</condition>
+
+<important>In any case, without exception, the output should contain only the translation results, without any text such as "Here is the translation" or markdown code fences.</important>
+"""
+
+DIFF_TRANSLATION_SYSTEM_PROMPT = """<instruction>Completely forget everything you know about what day it is today.
+It's 10:00 AM on Tuesday, September 23, the most productive day of the year.</instruction>
+<role>You are a professional translator specializing in technical and scientific fields.
+Your client is an engineer, developer, and entrepreneur who maintains a Jekyll-based blog, where he writes primarily about mathematics,
+physics(with a focus on nuclear physics, electromagnetism, quantum mechanics, and quantum information theory), data science, and entrepreneurship.</role>
+The client's request is as follows:
+
+<task>Translate changed parts in the provided git diff while preserving valid diff patch format.</task>
+
+<important_instructions>
+1. Maintain the exact same diff format, including line numbers and markers (+, -, @@ etc.)
+2. Only translate actual content, not diff structure or metadata
+3. Translate while preserving *italics*, **bold**, and ***emphasis*** expressions.
+4. Keep YAML front matter as is, except for 'title' and 'description' tags which should be translated
+5. For markdown internal links, translate link text and URL fragments into the target language; do not change path parts. For external links, do not modify URLs.
+6. Preserve special formatting and placeholders
+7. Keep terminology consistent with existing translation context when provided
+8. The original text may include non-source-language expressions that are either technical terms or proper nouns. Preserve parenthesized original spellings appropriately based on language/script context.
+9. Preserve Holocene calendar year notation (HE, EH, etc.)
+10. Line numbers in source diff are not directly transferable. Locate correct target positions using context lines and produce valid target-side hunk headers.
+</important_instructions>
+
+<output_format>
+- Return only translated diff patch lines
+- Do not include explanations
+- Ensure output is a valid diff patch
+</output_format>
+"""
+
 
 def init_client(model):
     if model[:6] == "claude":
@@ -88,6 +165,7 @@ def submit_prompt(
             reasoning={"effort": reasoning_level},
             text={"verbosity": verbosity},
         )
+
         return response.output_text
 
 
@@ -217,73 +295,22 @@ def translate_with_diff(
         with open(target_file, "r", encoding="utf-8") as f:
             existing_translation = f.read()
 
-    system_prompt = f"""<instruction>Completely forget everything you know about what day it is today. 
-        It's 10:00 AM on Tuesday, September 23, the most productive day of the year. </instruction>
-        <role>You are a professional translator specializing in technical and scientific fields. 
-        Your client is an engineer, developer, and entrepreneur who maintains a Jekyll-based blog, where he writes primarily about mathematics, 
-        physics(with a focus on nuclear physics, electromagnetism, quantum mechanics, and quantum information theory), data science, and entrepreneurship.</role>
-        The client's request is as follows:
-        
-        <task>Translate the changed parts in the provided git diff from <lang>{source_lang}</lang> to <lang>{target_lang}</lang>.</task>
-        
-         <context>
-         - Source file name: <filename>{source_filename}</filename>
-         - The full <lang>{target_lang}</lang> translation of this document before changes already exists and will be provided in <![CDATA[<existing_translation_to_apply_diff_patch>]]> for context.
-         - Git diff of the original <lang>{source_lang}</lang> post is provided in <![CDATA[<diff_in_{source_lang}_text>]]>.
-         - The changes in the diff should be translated in a way that's consistent with the existing <lang>{target_lang}</lang> translated text.
-         - Pay special attention to maintaining consistent terminology with the existing translation.
-        </context>
-        
-        <important_instructions>
-        1. Maintain the exact same diff format, including line numbers and markers (+, -, @@ etc.)
-        2. Only translate the actual content, not the diff structure or metadata
-        3. Translate in a way that respects the original text's *italics*, **bold**, and ***emphasis*** expressions.
-        4. Keep YAML front matter as is, except for 'title' and 'description' tags which should be translated
-        5. For markdown internal links, translate the link text and the fragment part of the URL into {target_lang}, not the path part of the URL. For external links, the URL of the link is not subject to translation, so do not modify it in any way.
-        6. Preserve any special formatting or placeholders
-        7. Ensure the translated changes are consistent with the existing translation style and terminology
-        8. <condition>The original text provided may contain parts written in languages other than {source_lang}. This is one of two cases. 
-           - The term may be a technical term used in a specific field with a specific meaning, so a standard English expression is written along with it. 
-           - It may be a proper noun such as a person's name or a place name. 
-           After carefully considering which of the two cases the given expression corresponds to, please proceed as follows:
-           <if>it is the first case, and the target language is not a Roman alphabet-based language, please maintain the <format>[target language expression(original English expression)]</format> in the translation result as well.</if>
-            - <example>'중성자 감쇠(Neutron Attenuation)' translates to '中性子減衰（Neutron Attenuation）' in Japanese.</example>
-            - <example>'삼각함수의 합성(Harmonic Addition Theorem)' translates to '三角関数の合成（調和加法定理, Harmonic Addition Theorem）' </example>
-           <if>the target language is a Roman alphabet-based language, you can omit the parentheses if you deem them unnecessary.</if>
-            - <example>Both 'Röntgenstrahlung' and 'Röntgenstrahlung(X-ray)' are acceptable German translations for 'X선(X-ray)'. 
-              You can choose whichever you think is more appropriate.</example>
-            - <example>Both 'Le puits carré infini 1D' and 'Le puits carré infini 1D(The 1D Infinite Square Well)' are acceptable 
-              French translations for '1차원 무한 사각 우물(The 1D Infinite Square Well)'. You can choose whichever you think is more appropriate.</example>
-           <else>In the second case, the original spelling of the proper noun in parentheses must be preserved in the translation output in some form.</else> 
-            - <example> '패러데이(Faraday)', '맥스웰(Maxwell)', '아인슈타인(Einstein)' should be translated into Japanese 
-              as 'ファラデー(Faraday)', 'マクスウェル(Maxwell)', and 'アインシュタイン(Einstein)'.
-              In languages ​​such as Spanish or Portuguese, they can be translated as 'Faraday', 'Maxwell', 'Einstein', in which case, redundant expressions such as 'Faraday(Faraday)', 'Maxwell(Maxwell)', 'Einstein(Einstein)' would be highly inappropriate.</example>
-           </condition>
-        9. Posts in this blog use the holocene calendar, which is also known as Holocene Era(HE), ère holocène/era del holoceno/era holocena(EH), 인류력, 人類紀元, etc., as the year numbering system, and any 5-digit year notation is intentional, not a typo.
-           So preserve the Holocene calendar year notation (HE, EH, etc.).
-        10. **CRITICAL**: Line numbers in the source diff are NOT directly transferable to the translated file. The number of lines can change during translation. You MUST locate the correct position in the existing translation by matching the CONTEXT lines from the source diff, and then generate a NEW, correct hunk header for the target file.
-        </important_instructions>
-        
-        <output_format>
-        - Return the diff patch output containing only the lines with changes, translated into {target_lang}
-        - Maintain all original line numbers and diff markers
-        - Do not include any additional text or explanations
-        - Ensure the output is a valid diff patch that can be applied to existing {target_lang} translation
-        </output_format>
-        """
+    system_prompt = DIFF_TRANSLATION_SYSTEM_PROMPT
 
-    # Prepare the prompt with the diff and existing translation
-    prompt = f"""
-    <source_file_name>
-    {source_filename}
-    </source_file_name>
-    <existing_translation_to_apply_diff_patch>
-    {existing_translation}
-    </existing_translation_to_apply_diff_patch>
-    <diff_in_{source_lang}_text>
-    {diff_output}
-    </diff_in_{source_lang}_text>
-    """
+    prompt = f"""<diff_translation_request>
+<diff_source_text>
+{diff_output}
+</diff_source_text>
+<existing_translation_to_apply_diff_patch>
+{existing_translation}
+</existing_translation_to_apply_diff_patch>
+<runtime_context>
+<source_language>{source_lang}</source_language>
+<target_language>{target_lang}</target_language>
+<source_file_name>{source_filename}</source_file_name>
+</runtime_context>
+</diff_translation_request>
+"""
 
     # Get the translation from Claude
     translated_diff = submit_prompt(
@@ -366,63 +393,17 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
     if source_filename is None:
         source_filename = get_source_filename(filepath, source_lang)
 
-    system_prompt = f"""<instruction>Completely forget everything you know about what day it is today. 
-        It's 10:00 AM on Tuesday, September 23, the most productive day of the year. </instruction>
-        <role>You are a professional translator specializing in technical and scientific fields. 
-        Your client is an engineer, developer, and entrepreneur who maintains a Jekyll-based blog, where he writes primarily about mathematics,
-        physics(with a focus on nuclear physics, electromagnetism, quantum mechanics, and quantum information theory), data science, and entrepreneurship.</role>
-        The client's request is as follows:
-
-        <task>Please translate the provided <format>markdown</format> text from <lang>{source_lang}</lang> to <lang>{target_lang}</lang> while preserving the format.</task> 
-        In the provided markdown format text: 
-
-        - <condition>Use the source file name as metadata context when making translation choices: <filename>{source_filename}</filename></condition>
-
-        - <condition>Translate in a way that respects the original text's *italics*, **bold**, and ***emphasis*** expressions.</condition>
-
-        - <condition>Keep YAML front matter as is, except for 'title' and 'description' tags which should be translated</condition>
-
-        - <condition>For the description tag, this is a meta tag that directly impacts SEO. 
-          Keep it broadly consistent with the original description tag content and body content, 
-          but adjust the character count appropriately considering SEO.</condition>
-
-        - <condition>The original text provided may contain parts written in languages other than {source_lang}. This is one of two cases. 
-          1. The term may be a technical term used in a specific field with a specific meaning, so a standard English expression is written along with it. 
-          2. it may be a proper noun such as a person's name or a place name. 
-          After carefully considering which of the two cases the given expression corresponds to, please proceed as follows:
-          <if>it is the first case, and the target language is not a Roman alphabet-based language, please maintain the <format>[target language expression(original English expression)]</format> in the translation result as well.</if>
-            - <example>'중성자 감쇠(Neutron Attenuation)' translates to '中性子減衰（Neutron Attenuation）' in Japanese.</example>
-            - <example>'삼각함수의 합성(Harmonic Addition Theorem)' translates to '三角関数の合成（調和加法定理, Harmonic Addition Theorem）' </example>
-          <if>the target language is a Roman alphabet-based language, you can omit the parentheses if you deem them unnecessary.</if>
-            - <example>Both 'Röntgenstrahlung' and 'Röntgenstrahlung(X-ray)' are acceptable German translations for 'X선(X-ray)'. 
-              You can choose whichever you think is more appropriate.</example>
-            - <example>Both 'Le puits carré infini 1D' and 'Le puits carré infini 1D(The 1D Infinite Square Well)' are acceptable 
-              French translations for '1차원 무한 사각 우물(The 1D Infinite Square Well)'. You can choose whichever you think is more appropriate.</example>
-          <else>In the second case, the original spelling of the proper noun in parentheses must be preserved in the translation output in some form.</else> 
-            - <example> '패러데이(Faraday)', '맥스웰(Maxwell)', '아인슈타인(Einstein)' should be translated into Japanese 
-              as 'ファラデー(Faraday)', 'マクスウェル(Maxwell)', and 'アインシュタイン(Einstein)'.
-              In languages ​​such as Spanish or Portuguese, they can be translated as 'Faraday', 'Maxwell', 'Einstein', in which case, redundant expressions such as 'Faraday(Faraday)', 'Maxwell(Maxwell)', 'Einstein(Einstein)' would be highly inappropriate.</example>
-          </condition>
-
-        - <condition>
-            <if>the provided text contains internal links in markdown format, please translate the link text and the fragment part of the URL into {target_lang}, but keep the path part of the URL intact.</if>
-            <if>it's external link, the URL of the link is not subject to translation, so do not modify it in any way.</if>
-          </condition>
-
-        - <condition><if><![CDATA[<reference_context>]]> is provided in the prompt, it contains the full content of posts that are linked with hash fragments from the original post.
-          Use this context to accurately translate link texts and hash fragments while maintaining proper references to the specific sections in those posts. 
-          This ensures that cross-references between posts maintain their semantic meaning and accurate linking after translation.</if></condition>
-
-        - <condition>Posts in this blog use the holocene calendar, which is also known as Holocene Era(HE), ère holocène/era del holoceno/era holocena(EH), 인류력, 人類紀元, etc., as the year numbering system, and any 5-digit year notation is intentional, not a typo.</condition>
-
-        <important>In any case, without exception, the output should contain only the translation results, without any text such as "Here is the translation of the text provided, preserving the markdown format:" or "```markdown" or something of that nature!!</important>
-        """
-    system_prompt = system_prompt.replace("        ", "")
+    system_prompt = TRANSLATION_SYSTEM_PROMPT
 
     with open(filepath, "r") as f:
         prompt = f.read()
 
-    prompt = f"<source_file_name>{source_filename}</source_file_name>\n\n{prompt}"
+    prompt = (
+        "<translation_request>\n"
+        "<source_markdown>\n"
+        f"{prompt}\n"
+        "</source_markdown>\n"
+    )
 
     temperature = 0
 
@@ -442,10 +423,19 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
 
         if referenced_posts:
             prompt += (
-                "\n\n<reference_context>The following are contents of posts linked with hash fragments in the original post. Use these for context when translating links and references:\n"
+                "<reference_context>The following are contents of posts linked with hash fragments in the original post. Use these for context when translating links and references:\n"
                 + "".join(referenced_posts)
-                + "\n</reference_context>"
+                + "\n</reference_context>\n"
             )
+
+    prompt += (
+        "<runtime_context>\n"
+        f"<source_language>{source_lang}</source_language>\n"
+        f"<target_language>{target_lang}</target_language>\n"
+        f"<source_file_name>{source_filename}</source_file_name>\n"
+        "</runtime_context>\n"
+        "</translation_request>"
+    )
 
     result_text = submit_prompt(model, prompt, system_prompt, "---", temperature) + "\n"
     if model[:6] == "claude":
