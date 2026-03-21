@@ -176,6 +176,32 @@ def extract_hash_links(content):
     return re.findall(pattern, content)
 
 
+def extract_translation_liquid_comment_instructions(content):
+    blocks = re.findall(
+        r"{%-?\s*comment\s*-?%}(.*?){%-?\s*endcomment\s*-?%}",
+        content,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+
+    translation_keywords = (
+        "translate",
+        "translation",
+        "translator",
+        "번역",
+    )
+
+    instructions = []
+    for block in blocks:
+        cleaned = block.strip()
+        if not cleaned:
+            continue
+        lowered = cleaned.lower()
+        if any(keyword in lowered for keyword in translation_keywords):
+            instructions.append(cleaned)
+
+    return instructions
+
+
 def get_post_content(post_path, source_lang, target_lang):
     """Get content of a referenced post"""
     try:
@@ -295,6 +321,13 @@ def translate_with_diff(
         with open(target_file, "r", encoding="utf-8") as f:
             existing_translation = f.read()
 
+    source_content = ""
+    with open(filepath, "r", encoding="utf-8") as f:
+        source_content = f.read()
+    additional_instructions = extract_translation_liquid_comment_instructions(
+        source_content
+    )
+
     system_prompt = DIFF_TRANSLATION_SYSTEM_PROMPT
 
     prompt = f"""<diff_translation_request>
@@ -304,6 +337,19 @@ def translate_with_diff(
 <existing_translation_to_apply_diff_patch>
 {existing_translation}
 </existing_translation_to_apply_diff_patch>
+"""
+
+    if additional_instructions:
+        prompt += (
+            "<additional_translation_instructions_from_liquid_comment>\n"
+            + "\n\n".join(additional_instructions)
+            + "\n</additional_translation_instructions_from_liquid_comment>\n"
+            "<additional_instruction_precedence>\n"
+            "If these additional translation instructions conflict with base prompt instructions, prioritize the additional translation instructions from Liquid comments.\n"
+            "</additional_instruction_precedence>\n"
+        )
+
+    prompt += f"""
 <runtime_context>
 <source_language>{source_lang}</source_language>
 <target_language>{target_lang}</target_language>
@@ -395,13 +441,17 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
 
     system_prompt = TRANSLATION_SYSTEM_PROMPT
 
-    with open(filepath, "r") as f:
-        prompt = f.read()
+    with open(filepath, "r", encoding="utf-8") as f:
+        source_markdown = f.read()
+
+    additional_instructions = extract_translation_liquid_comment_instructions(
+        source_markdown
+    )
 
     prompt = (
         "<translation_request>\n"
         "<source_markdown>\n"
-        f"{prompt}\n"
+        f"{source_markdown}\n"
         "</source_markdown>\n"
     )
 
@@ -434,8 +484,19 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
         f"<target_language>{target_lang}</target_language>\n"
         f"<source_file_name>{source_filename}</source_file_name>\n"
         "</runtime_context>\n"
-        "</translation_request>"
     )
+
+    if additional_instructions:
+        prompt += (
+            "<additional_translation_instructions_from_liquid_comment>\n"
+            + "\n\n".join(additional_instructions)
+            + "\n</additional_translation_instructions_from_liquid_comment>\n"
+            "<additional_instruction_precedence>\n"
+            "If these additional translation instructions conflict with base prompt instructions, prioritize the additional translation instructions from Liquid comments.\n"
+            "</additional_instruction_precedence>\n"
+        )
+
+    prompt += "</translation_request>"
 
     result_text = submit_prompt(model, prompt, system_prompt, "---", temperature) + "\n"
     if model[:6] == "claude":
