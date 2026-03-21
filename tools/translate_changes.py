@@ -82,7 +82,7 @@ if __name__ == "__main__":
     print("")
     print("*** Translation start! ***")
 
-    model = "gpt-5.2-2025-12-11"  # model = "gemini-2.5-pro" if target_lang in ["English", "Traditional Chinese (Taiwan)", "German"] else "claude-sonnet-4-20250514"
+    model = "gpt-5.4-2026-03-05"  # model = "gemini-2.5-pro" if target_lang in ["English", "Traditional Chinese (Taiwan)", "German"] else "claude-sonnet-4-20250514"
     
     # Outer loop: Progress through changed files
     for changed_file in tqdm(changed_files, desc="Files", position=0):

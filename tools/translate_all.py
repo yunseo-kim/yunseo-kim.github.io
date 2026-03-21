@@ -51,7 +51,7 @@ if __name__ == "__main__":
 
     print("")
     print("*** Translation start! ***")
-    model = "gpt-5.2-2025-12-11"
+    model = "gpt-5.4-2026-03-05"
     # 외부 루프: 전체 파일 진행상황
     for file in tqdm(filelist, desc="Files", position=0):
         filepath = os.path.join(source_dir, file)
