@@ -105,6 +105,8 @@ The client's request is as follows:
 </output_format>
 """
 
+MAX_TRANSLATION_ATTEMPTS = 3
+
 
 def init_client(model):
     if model[:6] == "claude":
@@ -200,6 +202,152 @@ def extract_translation_liquid_comment_instructions(content):
             instructions.append(cleaned)
 
     return instructions
+
+
+def validate_full_translation_output(text):
+    errors = []
+    if not isinstance(text, str) or not text.strip():
+        errors.append("Output is empty.")
+        return False, errors
+
+    normalized = text.lstrip()
+    if normalized.startswith("```"):
+        errors.append("Do not wrap output with markdown code fences.")
+
+    if not normalized.startswith("---"):
+        errors.append("Output must start with YAML front matter delimiter '---'.")
+    else:
+        lines = normalized.splitlines()
+        has_closing_yaml = any(line.strip() == "---" for line in lines[1:])
+        if not has_closing_yaml:
+            errors.append("YAML front matter closing delimiter '---' is missing.")
+
+    return len(errors) == 0, errors
+
+
+def validate_diff_translation_output(text):
+    errors = []
+    if not isinstance(text, str) or not text.strip():
+        errors.append("Diff output is empty.")
+        return False, errors
+
+    lines = text.splitlines()
+
+    if any(line.startswith("```") for line in lines):
+        errors.append("Do not include markdown code fences in diff output.")
+
+    first_nonempty = None
+    second_nonempty = None
+    for line in lines:
+        if line.strip():
+            if first_nonempty is None:
+                first_nonempty = line
+            elif second_nonempty is None:
+                second_nonempty = line
+                break
+
+    if first_nonempty is None or not first_nonempty.startswith("--- "):
+        errors.append(
+            "Diff must start with a source header line beginning with '--- '."
+        )
+    if second_nonempty is None or not second_nonempty.startswith("+++ "):
+        errors.append("Diff must include a target header line beginning with '+++ '.")
+
+    if not any(line.startswith("@@") for line in lines):
+        errors.append(
+            "Diff must include at least one hunk header line starting with '@@'."
+        )
+
+    allowed_prefixes = ("--- ", "+++ ", "@@", "+", "-", " ", "\\ No newline")
+    for line in lines:
+        if not line:
+            continue
+        if line.startswith(allowed_prefixes):
+            continue
+        errors.append(
+            "Diff contains an invalid line prefix. Only unified diff patch lines are allowed."
+        )
+        break
+
+    return len(errors) == 0, errors
+
+
+def format_retry_feedback(mode_name, attempt, errors, previous_output):
+    issues = "\n".join(f"- {error}" for error in errors)
+    return (
+        "\n<retry_feedback>\n"
+        f"<mode>{mode_name}</mode>\n"
+        f"<attempt>{attempt}/{MAX_TRANSLATION_ATTEMPTS}</attempt>\n"
+        "<validation_errors>\n"
+        f"{issues}\n"
+        "</validation_errors>\n"
+        "<instruction>Regenerate the entire output as a valid final result that strictly follows the required output format. Do not add explanations.</instruction>\n"
+        "<previous_invalid_output>\n"
+        f"{previous_output}\n"
+        "</previous_invalid_output>\n"
+        "</retry_feedback>"
+    )
+
+
+def apply_translated_diff(target_file, translated_diff):
+    import tempfile
+
+    with tempfile.NamedTemporaryFile(
+        mode="w+", delete=False, suffix=".diff", encoding="utf-8"
+    ) as tmp_diff:
+        tmp_diff.write(translated_diff)
+        tmp_diff_path = tmp_diff.name
+
+    try:
+        dry_run = subprocess.run(
+            [
+                "patch",
+                "--dry-run",
+                "--no-backup-if-mismatch",
+                "-u",
+                target_file,
+                tmp_diff_path,
+            ],
+            capture_output=True,
+            text=True,
+            timeout=10,
+            stdin=subprocess.DEVNULL,
+        )
+        if dry_run.returncode != 0:
+            stderr = dry_run.stderr.strip()
+            stdout = dry_run.stdout.strip()
+            error_msg = (
+                f"Patch dry-run failed (return code {dry_run.returncode}). "
+                f"stderr: {stderr} stdout: {stdout}"
+            )
+            return False, error_msg
+
+        result = subprocess.run(
+            ["patch", "--no-backup-if-mismatch", "-u", target_file, tmp_diff_path],
+            capture_output=True,
+            text=True,
+            timeout=10,
+            stdin=subprocess.DEVNULL,
+        )
+        if result.returncode == 0:
+            return True, ""
+
+        stderr = result.stderr.strip()
+        stdout = result.stdout.strip()
+        error_msg = (
+            f"Patch command failed (return code {result.returncode}). "
+            f"stderr: {stderr} stdout: {stdout}"
+        )
+        return False, error_msg
+    except subprocess.TimeoutExpired:
+        return False, "Patch command timed out after 10 seconds."
+    except Exception as e:
+        return False, f"Unexpected patch execution error: {e}"
+    finally:
+        try:
+            os.unlink(tmp_diff_path)
+        except Exception:
+            pass
 
 
 def get_post_content(post_path, source_lang, target_lang):
@@ -358,70 +506,63 @@ def translate_with_diff(
 </diff_translation_request>
 """
 
-    # Get the translation from Claude
-    translated_diff = submit_prompt(
-        model, prompt, system_prompt, "```diff", reasoning_level="low", verbosity="low"
-    )
-    if model[:6] == "claude":
-        translated_diff = "```diff" + translated_diff
-    # print(f"Translated diff:\n{translated_diff}")
-
-    # Get the target file path
     target_file = f"../_posts/{lang_code[target_lang]}/{source_filename}"
 
-    # Create a temporary file for the diff
-    import tempfile
+    retry_feedback = ""
+    previous_output = ""
 
-    with tempfile.NamedTemporaryFile(
-        mode="w+", delete=False, suffix=".diff"
-    ) as tmp_diff:
-        tmp_diff.write(translated_diff)
-        tmp_diff_path = tmp_diff.name
-    # print(tmp_diff_path)
-    # print(f"patch --no-backup-if-mismatch -u {target_file} {tmp_diff_path}")
-    try:
-        # Apply the diff using the patch command
-        try:
-            # Run the patch command non-interactively with a timeout
-            result = subprocess.run(
-                ["patch", "--no-backup-if-mismatch", "-u", target_file, tmp_diff_path],
-                capture_output=True,
-                text=True,
-                timeout=10,
-                stdin=subprocess.DEVNULL,
+    for attempt in range(1, MAX_TRANSLATION_ATTEMPTS + 1):
+        prompt_with_feedback = prompt + retry_feedback
+
+        translated_diff = submit_prompt(
+            model,
+            prompt_with_feedback,
+            system_prompt,
+            "```diff",
+            reasoning_level="low",
+            verbosity="low",
+        )
+
+        if model[:6] == "claude":
+            translated_diff = "```diff" + translated_diff
+
+        previous_output = translated_diff
+
+        is_valid_diff, diff_errors = validate_diff_translation_output(translated_diff)
+        if not is_valid_diff:
+            if attempt == MAX_TRANSLATION_ATTEMPTS:
+                print(f"\n❌ Failed to generate valid diff for {target_file}")
+                print("  - Validation Errors:")
+                for error in diff_errors:
+                    print(f"    - {error}")
+                print(f"  - Last Diff Output:\n{translated_diff}")
+                return
+
+            retry_feedback = format_retry_feedback(
+                "diff-translation",
+                attempt,
+                diff_errors,
+                previous_output,
             )
+            continue
 
-            if result.returncode != 0:
-                print(f"\n❌ Failed to apply changes to {target_file}")
-                print(f"  - Return Code: {result.returncode}")
-                print(f"  - Stderr: {result.stderr}")
-                print(f"  - Problematic Diff:\n{translated_diff}")
+        patch_ok, patch_error = apply_translated_diff(target_file, translated_diff)
+        if patch_ok:
+            return
 
-        except subprocess.TimeoutExpired:
-            print(f"\n❌ Patch command timed out for {target_file}")
-            print(f"  - The 'patch' command took more than 10 seconds to execute.")
-            print(f"  - This might be due to a complex or invalid diff.")
-            print(
-                f"  - Make sure that uncommitted changes have not already been applied to the target file."
-            )
-            print(f"  - Problematic Diff:\n{translated_diff}")
-        except Exception as e:
-            print(
-                f"\n❌ An unexpected error occurred while running patch for {target_file}"
-            )
-            print(f"  - Error: {e}")
+        patch_errors = [patch_error]
+        if attempt == MAX_TRANSLATION_ATTEMPTS:
+            print(f"\n❌ Failed to apply translated diff to {target_file}")
+            print(f"  - Error: {patch_error}")
+            print(f"  - Last Diff Output:\n{translated_diff}")
+            return
 
-    except Exception as e:
-        print(f"\n❌ Error applying changes: {e}")
-        print("\nTranslated diff that caused the error:")
-        print(translated_diff)
-
-    finally:
-        # Clean up the temporary file
-        try:
-            os.unlink(tmp_diff_path)
-        except:
-            pass
+        retry_feedback = format_retry_feedback(
+            "diff-patch-failure",
+            attempt,
+            patch_errors,
+            previous_output,
+        )
 
 
 def translate(filepath, source_lang, target_lang, model, source_filename=None):
@@ -498,20 +639,49 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
 
     prompt += "</translation_request>"
 
-    result_text = submit_prompt(model, prompt, system_prompt, "---", temperature) + "\n"
-    if model[:6] == "claude":
-        result_text = "---" + result_text
-    elif not result_text[:3] == "---":
-        print("Warning: Invalid YAML front matter detected!")
+    retry_feedback = ""
+    previous_output = ""
+    final_output = ""
+
+    for attempt in range(1, MAX_TRANSLATION_ATTEMPTS + 1):
+        prompt_with_feedback = prompt + retry_feedback
+        model_output = submit_prompt(
+            model, prompt_with_feedback, system_prompt, "---", temperature
+        )
+        if model[:6] == "claude":
+            model_output = "---" + model_output
+
+        previous_output = model_output
+        is_valid_full, full_errors = validate_full_translation_output(model_output)
+
+        if is_valid_full:
+            final_output = model_output
+            break
+
+        if attempt == MAX_TRANSLATION_ATTEMPTS:
+            print(f"\n❌ Failed to generate valid markdown translation for {filepath}")
+            print("  - Validation Errors:")
+            for error in full_errors:
+                print(f"    - {error}")
+            print(f"  - Last Output:\n{model_output}")
+            return
+
+        retry_feedback = format_retry_feedback(
+            "full-translation",
+            attempt,
+            full_errors,
+            previous_output,
+        )
+
+    result_text = final_output + "\n"
 
     # print(language_code[target_lang])
     filename = source_filename
     # print(filename)
     result_file = "../_posts/" + lang_code[target_lang] + "/" + filename
     # print(result_file)
-    f = open(result_file, "w")
-    f.write(result_text)
-    f.close()
+    with open(result_file, "w", encoding="utf-8") as f:
+        f.write(result_text)
     # print(result_text)
 
 
