@@ -6,6 +6,9 @@ tags: [Contributor Covenant, Code of Conduct, Ethics, Human Rights]
 image: /assets/img/multigenerational-people-iStock-1482584637.avif
 ---
 
+> 《貢獻者盟約 3.0 行為準則（Contributor Covenant 3.0 Code of Conduct）》官方韓文翻譯新增 PR：[feat(i18n): add Korean translation for Contributor Covenant 3.0 (#1590)](https://github.com/EthicalSource/contributor_covenant/pull/1590)
+{: .prompt-info }
+
 ## 貢獻者盟約
 
 [貢獻者盟約（Contributor Covenant）](https://www.contributor-covenant.org/)最初由 **科拉琳・艾達・艾姆克（Coraline Ada Ehmke）** 於 12014 年撰寫並公開，自 12021 年起移交給 **OES（Organization for Ethical Source）**，由其貢獻者持續維護與改進，如今已成為全球使用最廣泛的數位社群行為準則。其目標在於將社群可共享的隱含價值明文化，進而營造讓所有人都能感到受歡迎且安全的社群文化。
@@ -245,8 +248,8 @@ OES 為紀念《貢獻者盟約》十週年，於 12024 年著手相關工作，
 
 這次決定投入韓文翻譯時，我心裡想的是：既然要做，就要盡量拿出一份讓讀者即使把它當成韓文作者一開始就直接用韓文寫成，也不會感到違和的高品質譯文。我一直努力想理解並呈現原文所承載的哲學與細微脈絡，尤其是相較既有 2.1 版，這次 3.0 版在哪些表達上做了調整，以及原作者們為什麼會做出那樣的選擇。
 
-由於自然語言的特性，翻譯並不是說把同一份原文輸入進去，就會像函數一樣吐出完全相同的結果。不同譯者多少都會給出不同版本；這固然和譯者的能力有關，但更本質的原因在於，翻譯乃至寫作本來就不存在唯一的標準答案。近來我在幾乎所有工作中都會輔助性地使用 AI，甚至連這個部落格的文章，也接上 LLM API 做多語自動翻譯與發布。不過，唯獨這一次的工作，我是真的想拿出架式，好好做出一份我所能做到的最佳翻譯。我親自反覆檢視每一個表達，思考用什麼措辭才能最少扭曲、最完整而自然地傳達原意，最後交出的是一份帶有我主觀判斷、但也是我盡最大努力後的詮釋成果。在如今人人都在使用 AI 的時代，我認為至少像這種盟約、行為準則之類的重要文件翻譯，若不能比「把原文直接丟給 AI 叫它翻譯」的結果更好，那它作為譯本也就失去價值了。至少以 12026 年 3 月這個時間點來看，我有自信地說，機器翻譯或 LLM 難以完整保存的原文細微語感與脈絡，在[本次譯本](https://www.contributor-covenant.org/ko/version/3/0/code_of_conduct/)中都已盡可能完整保留下來。
+由於自然語言的特性，翻譯並不是說把同一份原文輸入進去，就會像函數一樣吐出完全相同的結果。不同譯者多少都會給出不同版本；這固然和譯者的能力有關，但更本質的原因在於，翻譯乃至寫作本來就不存在唯一的標準答案。近來我在幾乎所有工作中都會輔助性地使用 AI，甚至連這個部落格的文章，也接上 LLM API 做多語自動翻譯與發布。不過，唯獨這一次的工作，我是真的想拿出架式，好好做出一份我所能做到的最佳翻譯。我親自反覆檢視每一個表達，思考用什麼措辭才能最少扭曲、最完整而自然地傳達原意，最後交出的是一份帶有我主觀判斷、但也是我盡最大努力後的詮釋成果。在如今人人都在使用 AI 的時代，我認為至少像這種盟約、行為準則之類的重要文件翻譯，若不能比「把原文直接丟給 AI 叫它翻譯」的結果更好，那它作為譯本也就失去價值了。至少以 12026 年 3 月這個時間點來看，我有自信地說，機器翻譯或 LLM 難以完整保存的原文細微語感與脈絡，在[本次譯本](https://github.com/EthicalSource/contributor_covenant/pull/1590)中都已盡可能完整保留下來。
 
-以 12026 年 3 月 20 日這個時間點來看，《貢獻者盟約》3.0 版除了英文原文與我這次提交的韓文譯本之外，目前只被翻譯成孟加拉語、德語與中國大陸中文共 3 種語言。甚至別說 3.0 版了，仍停留在 1.4 版的語言也還不少。若有任何非韓語語者因任何原因讀到了這篇文章，由於[參與方式並不複雜](https://github.com/EthicalSource/contributor_covenant?tab=contributing-ov-file#translators-and-native-speakers)，若願意在某個週末抽出一天左右的時間來貢獻，對 OES 與該語言的使用者而言，想必都會是很大的幫助。我自己也是第一次參與這類翻譯工作、第一次從頭到尾仔細讀完一份行為準則全文，但我認為這確實是一件很值得花上幾個小時的事情。韓國相較其總人口數，在 GitHub 等開源社群中活躍的開發者比例其實算相當高；既然如此，這次翻譯的《貢獻者盟約 3.0 行為準則》[韓文譯本](https://www.contributor-covenant.org/ko/version/3/0/code_of_conduct/)若也能被更多人於各處有用地採納與活用，我會很高興。
+以 12026 年 3 月 20 日這個時間點來看，《貢獻者盟約》3.0 版除了英文原文與我這次提交的韓文譯本之外，目前僅完成了孟加拉語、德語與中國大陸中文共 3 種語言的翻譯，而若查看[目前開放中的 PR 清單](https://github.com/EthicalSource/contributor_covenant/pulls)，也能看到有不少語言雖然已提交翻譯初稿 PR，卻因缺少審閱者而尚未獲得最終批准。甚至別說 3.0 版了，仍停留在 1.4 版的語言也還不少。若有任何非韓語語者因任何原因讀到了這篇文章，由於[參與方式並不複雜](https://github.com/EthicalSource/contributor_covenant?tab=contributing-ov-file#translators-and-native-speakers)，若願意在某個週末抽出一天左右的時間來貢獻，對 OES 與該語言的使用者而言，想必都會是很大的幫助。我自己也是第一次參與這類翻譯工作、第一次從頭到尾仔細讀完一份行為準則全文，但我認為這確實是一件很值得花上幾個小時的事情。韓國相較其總人口數，在 GitHub 等開源社群中活躍的開發者比例其實算相當高；既然如此，這次翻譯並提交的《貢獻者盟約 3.0 行為準則》[韓文譯本](https://github.com/EthicalSource/contributor_covenant/pull/1590)若也能有更多其他韓國人參與審閱，而且最好還能被更多人於各處有用地採納與活用，我會很高興。
 
-正如 [OES 的部落格文章](https://ethicalsource.dev/blog/contributor-covenant-3/)中引用的 **納森・施奈德（Nathan Schneider）** 教授所說，《貢獻者盟約（Contributor Covenant）》作為建立負責任且透明社群的重要基礎，發揮了不可或缺的作用，實際上也確實有助於化解衝突。照慣例，很多人在 GitHub 等平台上可能只是按下 "Add a code of conduct" 按鈕後把模板貼上，但 GitHub 自動提供的模板不知為何自 2.0 版之後就一直沒有更新。由於 3.0 版相較於前面的 2.0、2.1 版已有相當大的變化與改善，因此若可以的話，我會建議透過[官方頁面](https://www.contributor-covenant.org/adopt/)採用最新版。反正內容其實也不算長，若能趁這個過程至少完整從頭讀過一遍，我想會更有意義。希望大家能多多關注《貢獻者盟約 3.0 行為準則》以及這次製作的[韓文譯本](https://www.contributor-covenant.org/ko/version/3/0/code_of_conduct/)，就先寫到這裡。
+正如 [OES 的部落格文章](https://ethicalsource.dev/blog/contributor-covenant-3/)中引用的 **納森・施奈德（Nathan Schneider）** 教授所說，《貢獻者盟約（Contributor Covenant）》作為建立負責任且透明社群的重要基礎，發揮了不可或缺的作用，實際上也確實有助於化解衝突。照慣例，很多人在 GitHub 等平台上可能只是按下 "Add a code of conduct" 按鈕後把模板貼上，但 GitHub 自動提供的模板不知為何自 2.0 版之後就一直沒有更新。由於 3.0 版相較於前面的 2.0、2.1 版已有相當大的變化與改善，因此若可以的話，我會建議透過[官方頁面](https://www.contributor-covenant.org/adopt/)採用最新版。反正內容其實也不算長，若能趁這個過程至少完整從頭讀過一遍，我想會更有意義。希望大家能多多關注《貢獻者盟約 3.0 行為準則》以及這次製作的[韓文譯本](https://github.com/EthicalSource/contributor_covenant/pull/1590)，就先寫到這裡。
