@@ -128,7 +128,7 @@ The client's request is as follows:
 """
 )
 
-MAX_TRANSLATION_ATTEMPTS = 3
+MAX_TRANSLATION_ATTEMPTS = 5
 
 FAILURE_CODES = {
     "DIFF_EMPTY": "DIFF_EMPTY",
@@ -841,7 +841,7 @@ def translate_with_diff(
                 repeated_failure_count = 1
                 previous_failure_code = diff_failure_code
 
-            if repeated_failure_count >= 2 and attempt < MAX_TRANSLATION_ATTEMPTS:
+            if repeated_failure_count >= 4 and attempt < MAX_TRANSLATION_ATTEMPTS:
                 print(
                     format_failure_header(
                         FAILURE_CODES["DIFF_RETRY_STUCK"],
@@ -930,7 +930,7 @@ def translate_with_diff(
             repeated_failure_count = 1
             previous_failure_code = patch_failure_code
 
-        if repeated_failure_count >= 2 and attempt < MAX_TRANSLATION_ATTEMPTS:
+        if repeated_failure_count >= 4 and attempt < MAX_TRANSLATION_ATTEMPTS:
             print(
                 format_failure_header(
                     FAILURE_CODES["DIFF_RETRY_STUCK"],
