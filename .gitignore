@@ -8,7 +8,7 @@ Gemfile.lock
 
 # Jekyll cache
 .jekyll-cache
-.jekyll-metadate
+.jekyll-metadata
 _site
 
 # Jampack cache
