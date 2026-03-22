@@ -158,6 +158,7 @@ _PIPELINE_LOGGER = None
 METRICS_STATE = {
     "overall": {"calls": 0, "success": 0, "failure": 0, "max_attempt_exhausted": 0},
     "by_language": {},
+    "by_model": {},
     "by_failure_code": defaultdict(int),
     "max_attempts": MAX_TRANSLATION_ATTEMPTS,
 }
@@ -209,6 +210,7 @@ def update_aggregate_metrics(
     mode,
     source_filename,
     target_lang,
+    model_name,
     attempts_used,
     success,
     max_attempts,
@@ -242,6 +244,23 @@ def update_aggregate_metrics(
         if attempts_used >= max_attempts:
             language_stats["max_attempt_exhausted"] += 1
 
+    model_stats = METRICS_STATE["by_model"].setdefault(
+        model_name,
+        {
+            "calls": 0,
+            "success": 0,
+            "failure": 0,
+            "max_attempt_exhausted": 0,
+        },
+    )
+    model_stats["calls"] += 1
+    if success:
+        model_stats["success"] += 1
+    else:
+        model_stats["failure"] += 1
+        if attempts_used >= max_attempts:
+            model_stats["max_attempt_exhausted"] += 1
+
     if failure_code:
         METRICS_STATE["by_failure_code"][failure_code] += 1
 
@@ -254,6 +273,7 @@ def update_aggregate_metrics(
         "run_id": RUN_ID,
         "call_id": f"{RUN_ID}:{mode}:{target_lang}:{source_filename}:{overall['calls']}",
         "mode": mode,
+        "model": model_name,
         "source_file": source_filename,
         "target_language": target_lang,
         "attempts_used": attempts_used,
@@ -283,6 +303,17 @@ def update_aggregate_metrics(
             "max_attempt_exhausted": stats["max_attempt_exhausted"],
         }
 
+    model_snapshot = {}
+    for model_key, stats in METRICS_STATE["by_model"].items():
+        model_snapshot[model_key] = {
+            "calls": stats["calls"],
+            "success": stats["success"],
+            "failure": stats["failure"],
+            "success_rate": safe_rate(stats["success"], stats["calls"]),
+            "failure_rate": safe_rate(stats["failure"], stats["calls"]),
+            "max_attempt_exhausted": stats["max_attempt_exhausted"],
+        }
+
     summary_event = {
         "event": "translation_aggregate_snapshot",
         "timestamp": now_iso_utc(),
@@ -297,15 +328,17 @@ def update_aggregate_metrics(
             "max_attempt_exhausted": overall["max_attempt_exhausted"],
         },
         "by_language": language_snapshot,
+        "by_model": model_snapshot,
         "by_failure_code": dict(METRICS_STATE["by_failure_code"]),
     }
     append_metrics_event(summary_event)
 
     logger = get_pipeline_logger()
     logger.info(
-        "[%s][%s] file=%s attempts=%s/%s success=%s failure_code=%s",
+        "[%s][%s] model=%s file=%s attempts=%s/%s success=%s failure_code=%s",
         mode,
         target_lang,
+        model_name,
         source_filename,
         attempts_used,
         max_attempts,
@@ -826,6 +859,7 @@ def translate_with_diff(
                     mode="incremental",
                     source_filename=source_filename,
                     target_lang=target_lang,
+                    model_name=model,
                     attempts_used=attempt,
                     success=False,
                     max_attempts=MAX_TRANSLATION_ATTEMPTS,
@@ -854,6 +888,7 @@ def translate_with_diff(
                     mode="incremental",
                     source_filename=source_filename,
                     target_lang=target_lang,
+                    model_name=model,
                     attempts_used=attempt,
                     success=False,
                     max_attempts=MAX_TRANSLATION_ATTEMPTS,
@@ -879,6 +914,7 @@ def translate_with_diff(
                 mode="incremental",
                 source_filename=source_filename,
                 target_lang=target_lang,
+                model_name=model,
                 attempts_used=attempt,
                 success=True,
                 max_attempts=MAX_TRANSLATION_ATTEMPTS,
@@ -907,6 +943,7 @@ def translate_with_diff(
                 mode="incremental",
                 source_filename=source_filename,
                 target_lang=target_lang,
+                model_name=model,
                 attempts_used=attempt,
                 success=False,
                 max_attempts=MAX_TRANSLATION_ATTEMPTS,
@@ -930,6 +967,7 @@ def translate_with_diff(
                 mode="incremental",
                 source_filename=source_filename,
                 target_lang=target_lang,
+                model_name=model,
                 attempts_used=attempt,
                 success=False,
                 max_attempts=MAX_TRANSLATION_ATTEMPTS,
@@ -1064,6 +1102,7 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
                 mode="full",
                 source_filename=source_filename,
                 target_lang=target_lang,
+                model_name=model,
                 attempts_used=attempt,
                 success=False,
                 max_attempts=MAX_TRANSLATION_ATTEMPTS,
@@ -1088,6 +1127,7 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
                 mode="full",
                 source_filename=source_filename,
                 target_lang=target_lang,
+                model_name=model,
                 attempts_used=attempt,
                 success=False,
                 max_attempts=MAX_TRANSLATION_ATTEMPTS,
@@ -1116,6 +1156,7 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
         mode="full",
         source_filename=source_filename,
         target_lang=target_lang,
+        model_name=model,
         attempts_used=attempt,
         success=True,
         max_attempts=MAX_TRANSLATION_ATTEMPTS,
