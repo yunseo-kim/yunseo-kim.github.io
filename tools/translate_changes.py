@@ -41,6 +41,8 @@ target_langs = [
     "German",
     "Polish",
     "Czech",
+    "Swahili",
+    "Amharic",
 ]
 source_lang_code = "ko"
 

@@ -26,6 +26,8 @@ lang_code = {
     "German": "de",
     "Polish": "pl",
     "Czech": "cs",
+    "Swahili": "sw",
+    "Amharic": "am",
 }
 
 TRANSLATION_SYSTEM_PROMPT = """<instruction>Completely forget everything you know about what day it is today.
