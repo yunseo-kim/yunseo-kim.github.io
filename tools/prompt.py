@@ -10,10 +10,14 @@
 # from google import genai
 # from google.genai import types
 from openai import OpenAI
+import logging
 import os
 import re
+import json
 from pathlib import Path
 import subprocess
+from datetime import datetime, timezone
+from collections import defaultdict
 
 lang_code = {
     "English": "en",
@@ -78,17 +82,28 @@ In the provided markdown format text:
 <important>In any case, without exception, the output should contain only the translation results, without any text such as "Here is the translation" or markdown code fences.</important>
 """
 
-DIFF_TRANSLATION_SYSTEM_PROMPT = """<instruction>Completely forget everything you know about what day it is today.
+UNIFIED_DIFF_POLICY = """<unified_diff_policy>
+Use exactly one canonical format: unified diff patch lines only.
+- First non-empty line must start with '--- '.
+- Second non-empty line must start with '+++ '.
+- Include at least one hunk header line starting with '@@'.
+- Allowed line prefixes are only: '--- ', '+++ ', '@@', '+', '-', ' ', '\\ No newline'.
+- Do not include git extended headers such as 'diff --git' or 'index'.
+- Do not include explanations, markdown code fences, or trailing non-diff text.
+</unified_diff_policy>"""
+
+DIFF_TRANSLATION_SYSTEM_PROMPT = (
+    """<instruction>Completely forget everything you know about what day it is today.
 It's 10:00 AM on Tuesday, September 23, the most productive day of the year.</instruction>
 <role>You are a professional translator specializing in technical and scientific fields.
 Your client is an engineer, developer, and entrepreneur who maintains a Jekyll-based blog, where he writes primarily about mathematics,
 physics(with a focus on nuclear physics, electromagnetism, quantum mechanics, and quantum information theory), data science, and entrepreneurship.</role>
 The client's request is as follows:
 
-<task>Translate changed parts in the provided git diff while preserving valid diff patch format.</task>
+<task>Translate changed parts in the provided git diff while preserving valid unified diff patch format.</task>
 
 <important_instructions>
-1. Maintain the exact same diff format, including line numbers and markers (+, -, @@ etc.)
+1. Maintain the exact same unified diff format, including hunk markers (+, -, @@ etc.)
 2. Only translate actual content, not diff structure or metadata
 3. Translate while preserving *italics*, **bold**, and ***emphasis*** expressions.
 4. Keep YAML front matter as is, except for 'title' and 'description' tags which should be translated
@@ -98,16 +113,224 @@ The client's request is as follows:
 8. The original text may include non-source-language expressions that are either technical terms or proper nouns. Preserve parenthesized original spellings appropriately based on language/script context.
 9. Preserve Holocene calendar year notation (HE, EH, etc.)
 10. Line numbers in source diff are not directly transferable. Locate correct target positions using context lines and produce valid target-side hunk headers.
+11. Follow the canonical unified diff policy below without exception.
 </important_instructions>
+
+"""
+    + UNIFIED_DIFF_POLICY
+    + """
 
 <output_format>
 - Return only translated diff patch lines
 - Do not include explanations
-- Ensure output is a valid diff patch
+- Ensure output is a canonical unified diff patch
 </output_format>
 """
+)
 
 MAX_TRANSLATION_ATTEMPTS = 3
+
+FAILURE_CODES = {
+    "DIFF_EMPTY": "DIFF_EMPTY",
+    "DIFF_CODE_FENCE": "DIFF_CODE_FENCE",
+    "DIFF_HEADER_INVALID": "DIFF_HEADER_INVALID",
+    "DIFF_HUNK_MISSING": "DIFF_HUNK_MISSING",
+    "DIFF_INVALID_PREFIX": "DIFF_INVALID_PREFIX",
+    "PATCH_DRY_RUN_FAILED": "PATCH_DRY_RUN_FAILED",
+    "PATCH_APPLY_FAILED": "PATCH_APPLY_FAILED",
+    "PATCH_TIMEOUT": "PATCH_TIMEOUT",
+    "PATCH_UNEXPECTED_ERROR": "PATCH_UNEXPECTED_ERROR",
+    "DIFF_RETRY_EXHAUSTED": "DIFF_RETRY_EXHAUSTED",
+    "DIFF_RETRY_STUCK": "DIFF_RETRY_STUCK",
+    "FULL_OUTPUT_EMPTY": "FULL_OUTPUT_EMPTY",
+    "FULL_CODE_FENCE": "FULL_CODE_FENCE",
+    "FULL_YAML_INVALID": "FULL_YAML_INVALID",
+    "FULL_RETRY_EXHAUSTED": "FULL_RETRY_EXHAUSTED",
+}
+
+LOGS_DIR = Path(__file__).resolve().parent / "logs"
+PIPELINE_LOG_FILE = LOGS_DIR / "translation_pipeline.log"
+METRICS_LOG_FILE = LOGS_DIR / "translation_metrics.jsonl"
+RUN_ID = datetime.now(timezone.utc).strftime("run-%Y%m%dT%H%M%SZ")
+
+_PIPELINE_LOGGER = None
+
+METRICS_STATE = {
+    "overall": {"calls": 0, "success": 0, "failure": 0, "max_attempt_exhausted": 0},
+    "by_language": {},
+    "by_failure_code": defaultdict(int),
+    "max_attempts": MAX_TRANSLATION_ATTEMPTS,
+}
+
+
+def ensure_logs_dir():
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def get_pipeline_logger():
+    global _PIPELINE_LOGGER
+    if _PIPELINE_LOGGER is not None:
+        return _PIPELINE_LOGGER
+
+    ensure_logs_dir()
+    logger = logging.getLogger("translation_pipeline")
+    logger.setLevel(logging.INFO)
+    logger.propagate = False
+
+    if not logger.handlers:
+        file_handler = logging.FileHandler(PIPELINE_LOG_FILE, encoding="utf-8")
+        formatter = logging.Formatter(
+            "%(asctime)s %(levelname)s %(message)s", "%Y-%m-%dT%H:%M:%S%z"
+        )
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+
+    _PIPELINE_LOGGER = logger
+    return _PIPELINE_LOGGER
+
+
+def append_metrics_event(event):
+    ensure_logs_dir()
+    with open(METRICS_LOG_FILE, "a", encoding="utf-8") as f:
+        f.write(json.dumps(event, ensure_ascii=False) + "\n")
+
+
+def now_iso_utc():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def safe_rate(numerator, denominator):
+    if denominator == 0:
+        return 0.0
+    return round(numerator / denominator, 6)
+
+
+def update_aggregate_metrics(
+    mode,
+    source_filename,
+    target_lang,
+    attempts_used,
+    success,
+    max_attempts,
+    failure_code=None,
+    failure_codes=None,
+):
+    failure_codes = failure_codes or []
+    overall = METRICS_STATE["overall"]
+    overall["calls"] += 1
+    if success:
+        overall["success"] += 1
+    else:
+        overall["failure"] += 1
+        if attempts_used >= max_attempts:
+            overall["max_attempt_exhausted"] += 1
+
+    language_stats = METRICS_STATE["by_language"].setdefault(
+        target_lang,
+        {
+            "calls": 0,
+            "success": 0,
+            "failure": 0,
+            "max_attempt_exhausted": 0,
+        },
+    )
+    language_stats["calls"] += 1
+    if success:
+        language_stats["success"] += 1
+    else:
+        language_stats["failure"] += 1
+        if attempts_used >= max_attempts:
+            language_stats["max_attempt_exhausted"] += 1
+
+    if failure_code:
+        METRICS_STATE["by_failure_code"][failure_code] += 1
+
+    for code in failure_codes:
+        METRICS_STATE["by_failure_code"][code] += 1
+
+    call_event = {
+        "event": "translation_call_result",
+        "timestamp": now_iso_utc(),
+        "run_id": RUN_ID,
+        "call_id": f"{RUN_ID}:{mode}:{target_lang}:{source_filename}:{overall['calls']}",
+        "mode": mode,
+        "source_file": source_filename,
+        "target_language": target_lang,
+        "attempts_used": attempts_used,
+        "max_attempts": max_attempts,
+        "max_attempt_exhausted": attempts_used >= max_attempts and not success,
+        "success": success,
+        "failure": not success,
+        "call_success_rate": 1.0 if success else 0.0,
+        "call_failure_rate": 0.0 if success else 1.0,
+        "final_failure_code": failure_code,
+        "failure_codes_seen": failure_codes,
+    }
+    append_metrics_event(call_event)
+
+    overall_calls = overall["calls"]
+    overall_success = overall["success"]
+    overall_failure = overall["failure"]
+
+    language_snapshot = {}
+    for lang, stats in METRICS_STATE["by_language"].items():
+        language_snapshot[lang] = {
+            "calls": stats["calls"],
+            "success": stats["success"],
+            "failure": stats["failure"],
+            "success_rate": safe_rate(stats["success"], stats["calls"]),
+            "failure_rate": safe_rate(stats["failure"], stats["calls"]),
+            "max_attempt_exhausted": stats["max_attempt_exhausted"],
+        }
+
+    summary_event = {
+        "event": "translation_aggregate_snapshot",
+        "timestamp": now_iso_utc(),
+        "run_id": RUN_ID,
+        "max_attempts": METRICS_STATE["max_attempts"],
+        "overall": {
+            "calls": overall_calls,
+            "success": overall_success,
+            "failure": overall_failure,
+            "success_rate": safe_rate(overall_success, overall_calls),
+            "failure_rate": safe_rate(overall_failure, overall_calls),
+            "max_attempt_exhausted": overall["max_attempt_exhausted"],
+        },
+        "by_language": language_snapshot,
+        "by_failure_code": dict(METRICS_STATE["by_failure_code"]),
+    }
+    append_metrics_event(summary_event)
+
+    logger = get_pipeline_logger()
+    logger.info(
+        "[%s][%s] file=%s attempts=%s/%s success=%s failure_code=%s",
+        mode,
+        target_lang,
+        source_filename,
+        attempts_used,
+        max_attempts,
+        success,
+        failure_code,
+    )
+
+
+def format_failure_header(code, message):
+    logger = get_pipeline_logger()
+    logger.error("[%s] %s", code, message)
+    return f"\n❌ [{code}] {message}"
+
+
+def collect_offending_lines(lines, allowed_prefixes, limit=2):
+    offenders = []
+    for line in lines:
+        if not line:
+            continue
+        if line.startswith(allowed_prefixes):
+            continue
+        offenders.append(line)
+        if len(offenders) >= limit:
+            break
+    return offenders
 
 
 def init_client(model):
@@ -210,33 +433,38 @@ def validate_full_translation_output(text):
     errors = []
     if not isinstance(text, str) or not text.strip():
         errors.append("Output is empty.")
-        return False, errors
+        return False, errors, FAILURE_CODES["FULL_OUTPUT_EMPTY"]
 
     normalized = text.lstrip()
     if normalized.startswith("```"):
         errors.append("Do not wrap output with markdown code fences.")
+        return False, errors, FAILURE_CODES["FULL_CODE_FENCE"]
 
     if not normalized.startswith("---"):
         errors.append("Output must start with YAML front matter delimiter '---'.")
+        return False, errors, FAILURE_CODES["FULL_YAML_INVALID"]
     else:
         lines = normalized.splitlines()
         has_closing_yaml = any(line.strip() == "---" for line in lines[1:])
         if not has_closing_yaml:
             errors.append("YAML front matter closing delimiter '---' is missing.")
+            return False, errors, FAILURE_CODES["FULL_YAML_INVALID"]
 
-    return len(errors) == 0, errors
+    return len(errors) == 0, errors, None
 
 
 def validate_diff_translation_output(text):
     errors = []
+    offending_lines = []
     if not isinstance(text, str) or not text.strip():
         errors.append("Diff output is empty.")
-        return False, errors
+        return False, errors, FAILURE_CODES["DIFF_EMPTY"], offending_lines
 
     lines = text.splitlines()
 
     if any(line.startswith("```") for line in lines):
         errors.append("Do not include markdown code fences in diff output.")
+        offending_lines.extend([line for line in lines if line.startswith("```")][:2])
 
     first_nonempty = None
     second_nonempty = None
@@ -261,32 +489,55 @@ def validate_diff_translation_output(text):
         )
 
     allowed_prefixes = ("--- ", "+++ ", "@@", "+", "-", " ", "\\ No newline")
-    for line in lines:
-        if not line:
-            continue
-        if line.startswith(allowed_prefixes):
-            continue
+    offending_lines.extend(collect_offending_lines(lines, allowed_prefixes))
+    if offending_lines:
         errors.append(
             "Diff contains an invalid line prefix. Only unified diff patch lines are allowed."
         )
-        break
 
-    return len(errors) == 0, errors
+    if errors:
+        if any("code fences" in error for error in errors):
+            return False, errors, FAILURE_CODES["DIFF_CODE_FENCE"], offending_lines
+        if any("source header" in error for error in errors) or any(
+            "target header" in error for error in errors
+        ):
+            return False, errors, FAILURE_CODES["DIFF_HEADER_INVALID"], offending_lines
+        if any("hunk header" in error for error in errors):
+            return False, errors, FAILURE_CODES["DIFF_HUNK_MISSING"], offending_lines
+        if any("invalid line prefix" in error for error in errors):
+            return False, errors, FAILURE_CODES["DIFF_INVALID_PREFIX"], offending_lines
+
+    return True, errors, None, offending_lines
 
 
-def format_retry_feedback(mode_name, attempt, errors, previous_output):
+def format_retry_feedback(
+    mode_name, attempt, errors, failure_code, offending_lines=None
+):
     issues = "\n".join(f"- {error}" for error in errors)
+    offending_block = ""
+    if offending_lines:
+        formatted_offending = "\n".join(f"- {line}" for line in offending_lines)
+        offending_block = (
+            f"<offending_lines>\n{formatted_offending}\n</offending_lines>\n"
+        )
+    if mode_name == "full-translation":
+        policy_block = ""
+        retry_instruction = "<instruction>Regenerate the entire output as a valid final result that strictly follows the required output format. Do not add explanations.</instruction>\n"
+    else:
+        policy_block = f"{UNIFIED_DIFF_POLICY}\n"
+        retry_instruction = "<instruction>Regenerate from scratch. Do not copy previous output. Return only canonical unified diff patch lines and nothing else.</instruction>\n"
+
     return (
         "\n<retry_feedback>\n"
         f"<mode>{mode_name}</mode>\n"
         f"<attempt>{attempt}/{MAX_TRANSLATION_ATTEMPTS}</attempt>\n"
+        f"<failure_code>{failure_code}</failure_code>\n"
         "<validation_errors>\n"
         f"{issues}\n"
         "</validation_errors>\n"
-        "<instruction>Regenerate the entire output as a valid final result that strictly follows the required output format. Do not add explanations.</instruction>\n"
-        "<previous_invalid_output>\n"
-        f"{previous_output}\n"
-        "</previous_invalid_output>\n"
+        f"{offending_block}"
+        f"{policy_block}"
+        f"{retry_instruction}"
         "</retry_feedback>"
     )
 
@@ -322,7 +573,7 @@ def apply_translated_diff(target_file, translated_diff):
                 f"Patch dry-run failed (return code {dry_run.returncode}). "
                 f"stderr: {stderr} stdout: {stdout}"
             )
-            return False, error_msg
+            return False, error_msg, FAILURE_CODES["PATCH_DRY_RUN_FAILED"]
 
         result = subprocess.run(
             ["patch", "--no-backup-if-mismatch", "-u", target_file, tmp_diff_path],
@@ -332,7 +583,7 @@ def apply_translated_diff(target_file, translated_diff):
             stdin=subprocess.DEVNULL,
         )
         if result.returncode == 0:
-            return True, ""
+            return True, "", None
 
         stderr = result.stderr.strip()
         stdout = result.stdout.strip()
@@ -340,11 +591,19 @@ def apply_translated_diff(target_file, translated_diff):
             f"Patch command failed (return code {result.returncode}). "
             f"stderr: {stderr} stdout: {stdout}"
         )
-        return False, error_msg
+        return False, error_msg, FAILURE_CODES["PATCH_APPLY_FAILED"]
     except subprocess.TimeoutExpired:
-        return False, "Patch command timed out after 10 seconds."
+        return (
+            False,
+            "Patch command timed out after 10 seconds.",
+            FAILURE_CODES["PATCH_TIMEOUT"],
+        )
     except Exception as e:
-        return False, f"Unexpected patch execution error: {e}"
+        return (
+            False,
+            f"Unexpected patch execution error: {e}",
+            FAILURE_CODES["PATCH_UNEXPECTED_ERROR"],
+        )
     finally:
         try:
             os.unlink(tmp_diff_path)
@@ -373,7 +632,9 @@ def get_post_content(post_path, source_lang, target_lang):
         for posts_dir in search_dirs:
             # Check if the directory exists
             if not os.path.exists(posts_dir):
-                print(f"Warning: Posts directory not found at {posts_dir}")
+                get_pipeline_logger().warning(
+                    "[POST_REFERENCE_DIR_MISSING] posts_dir=%s", posts_dir
+                )
                 continue
 
             # First check for direct match (no date prefix)
@@ -423,14 +684,20 @@ def get_post_content(post_path, source_lang, target_lang):
                         with open(nested_index, "r") as f:
                             return f.read()
             except Exception as e:
-                print(f"Error searching in {posts_dir}: {e}")
+                get_pipeline_logger().error(
+                    "[POST_REFERENCE_SEARCH_ERROR] posts_dir=%s error=%s", posts_dir, e
+                )
                 continue
 
         # If we get here, the file wasn't found in this directory
-        print(f"File not found in {posts_dir}")
+        get_pipeline_logger().warning(
+            "[POST_REFERENCE_NOT_FOUND] last_posts_dir=%s post_path=%s",
+            posts_dir,
+            post_path,
+        )
 
     except Exception as e:
-        print(f"Error in get_post_content: {e}")
+        get_pipeline_logger().error("[POST_REFERENCE_UNEXPECTED_ERROR] error=%s", e)
 
     return None
 
@@ -511,7 +778,9 @@ def translate_with_diff(
     target_file = f"../_posts/{lang_code[target_lang]}/{source_filename}"
 
     retry_feedback = ""
-    previous_output = ""
+    previous_failure_code = None
+    repeated_failure_count = 0
+    failure_code_history = []
 
     for attempt in range(1, MAX_TRANSLATION_ATTEMPTS + 1):
         prompt_with_feedback = prompt + retry_feedback
@@ -528,42 +797,152 @@ def translate_with_diff(
         if model[:6] == "claude":
             translated_diff = "```diff" + translated_diff
 
-        previous_output = translated_diff
-
-        is_valid_diff, diff_errors = validate_diff_translation_output(translated_diff)
+        is_valid_diff, diff_errors, diff_failure_code, offending_lines = (
+            validate_diff_translation_output(translated_diff)
+        )
         if not is_valid_diff:
+            failure_code_history.append(diff_failure_code)
+            if diff_failure_code == previous_failure_code:
+                repeated_failure_count += 1
+            else:
+                repeated_failure_count = 1
+                previous_failure_code = diff_failure_code
+
+            if repeated_failure_count >= 2 and attempt < MAX_TRANSLATION_ATTEMPTS:
+                print(
+                    format_failure_header(
+                        FAILURE_CODES["DIFF_RETRY_STUCK"],
+                        f"Repeated diff generation failure for {target_file}",
+                    )
+                )
+                print(f"  - Last Failure Code: {diff_failure_code}")
+                for error in diff_errors:
+                    print(f"    - {error}")
+                if offending_lines:
+                    print("  - Offending Lines:")
+                    for line in offending_lines:
+                        print(f"    - {line}")
+                update_aggregate_metrics(
+                    mode="incremental",
+                    source_filename=source_filename,
+                    target_lang=target_lang,
+                    attempts_used=attempt,
+                    success=False,
+                    max_attempts=MAX_TRANSLATION_ATTEMPTS,
+                    failure_code=FAILURE_CODES["DIFF_RETRY_STUCK"],
+                    failure_codes=failure_code_history,
+                )
+                return
+
             if attempt == MAX_TRANSLATION_ATTEMPTS:
-                print(f"\n❌ Failed to generate valid diff for {target_file}")
+                print(
+                    format_failure_header(
+                        FAILURE_CODES["DIFF_RETRY_EXHAUSTED"],
+                        f"Failed to generate valid diff for {target_file}",
+                    )
+                )
+                print(f"  - Last Failure Code: {diff_failure_code}")
                 print("  - Validation Errors:")
                 for error in diff_errors:
                     print(f"    - {error}")
+                if offending_lines:
+                    print("  - Offending Lines:")
+                    for line in offending_lines:
+                        print(f"    - {line}")
                 print(f"  - Last Diff Output:\n{translated_diff}")
+                update_aggregate_metrics(
+                    mode="incremental",
+                    source_filename=source_filename,
+                    target_lang=target_lang,
+                    attempts_used=attempt,
+                    success=False,
+                    max_attempts=MAX_TRANSLATION_ATTEMPTS,
+                    failure_code=FAILURE_CODES["DIFF_RETRY_EXHAUSTED"],
+                    failure_codes=failure_code_history,
+                )
                 return
 
             retry_feedback = format_retry_feedback(
                 "diff-translation",
                 attempt,
                 diff_errors,
-                previous_output,
+                diff_failure_code,
+                offending_lines,
             )
             continue
 
-        patch_ok, patch_error = apply_translated_diff(target_file, translated_diff)
+        patch_ok, patch_error, patch_failure_code = apply_translated_diff(
+            target_file, translated_diff
+        )
         if patch_ok:
+            update_aggregate_metrics(
+                mode="incremental",
+                source_filename=source_filename,
+                target_lang=target_lang,
+                attempts_used=attempt,
+                success=True,
+                max_attempts=MAX_TRANSLATION_ATTEMPTS,
+                failure_code=None,
+                failure_codes=failure_code_history,
+            )
+            return
+
+        failure_code_history.append(patch_failure_code)
+        if patch_failure_code == previous_failure_code:
+            repeated_failure_count += 1
+        else:
+            repeated_failure_count = 1
+            previous_failure_code = patch_failure_code
+
+        if repeated_failure_count >= 2 and attempt < MAX_TRANSLATION_ATTEMPTS:
+            print(
+                format_failure_header(
+                    FAILURE_CODES["DIFF_RETRY_STUCK"],
+                    f"Repeated patch failure for {target_file}",
+                )
+            )
+            print(f"  - Last Failure Code: {patch_failure_code}")
+            print(f"  - Error: {patch_error}")
+            update_aggregate_metrics(
+                mode="incremental",
+                source_filename=source_filename,
+                target_lang=target_lang,
+                attempts_used=attempt,
+                success=False,
+                max_attempts=MAX_TRANSLATION_ATTEMPTS,
+                failure_code=FAILURE_CODES["DIFF_RETRY_STUCK"],
+                failure_codes=failure_code_history,
+            )
             return
 
         patch_errors = [patch_error]
         if attempt == MAX_TRANSLATION_ATTEMPTS:
-            print(f"\n❌ Failed to apply translated diff to {target_file}")
+            print(
+                format_failure_header(
+                    FAILURE_CODES["DIFF_RETRY_EXHAUSTED"],
+                    f"Failed to apply translated diff to {target_file}",
+                )
+            )
+            print(f"  - Last Failure Code: {patch_failure_code}")
             print(f"  - Error: {patch_error}")
             print(f"  - Last Diff Output:\n{translated_diff}")
+            update_aggregate_metrics(
+                mode="incremental",
+                source_filename=source_filename,
+                target_lang=target_lang,
+                attempts_used=attempt,
+                success=False,
+                max_attempts=MAX_TRANSLATION_ATTEMPTS,
+                failure_code=FAILURE_CODES["DIFF_RETRY_EXHAUSTED"],
+                failure_codes=failure_code_history,
+            )
             return
 
         retry_feedback = format_retry_feedback(
             "diff-patch-failure",
             attempt,
             patch_errors,
-            previous_output,
+            patch_failure_code,
         )
 
 
@@ -642,8 +1021,11 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
     prompt += "</translation_request>"
 
     retry_feedback = ""
-    previous_output = ""
     final_output = ""
+    previous_failure_code = None
+    repeated_failure_count = 0
+    failure_code_history = []
+    attempt = 0
 
     for attempt in range(1, MAX_TRANSLATION_ATTEMPTS + 1):
         prompt_with_feedback = prompt + retry_feedback
@@ -653,26 +1035,72 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
         if model[:6] == "claude":
             model_output = "---" + model_output
 
-        previous_output = model_output
-        is_valid_full, full_errors = validate_full_translation_output(model_output)
+        is_valid_full, full_errors, full_failure_code = (
+            validate_full_translation_output(model_output)
+        )
 
         if is_valid_full:
             final_output = model_output
             break
 
+        failure_code_history.append(full_failure_code)
+        if full_failure_code == previous_failure_code:
+            repeated_failure_count += 1
+        else:
+            repeated_failure_count = 1
+            previous_failure_code = full_failure_code
+
+        if repeated_failure_count >= 2 and attempt < MAX_TRANSLATION_ATTEMPTS:
+            print(
+                format_failure_header(
+                    FAILURE_CODES["FULL_RETRY_EXHAUSTED"],
+                    f"Repeated markdown generation failure for {filepath}",
+                )
+            )
+            print(f"  - Last Failure Code: {full_failure_code}")
+            for error in full_errors:
+                print(f"    - {error}")
+            update_aggregate_metrics(
+                mode="full",
+                source_filename=source_filename,
+                target_lang=target_lang,
+                attempts_used=attempt,
+                success=False,
+                max_attempts=MAX_TRANSLATION_ATTEMPTS,
+                failure_code=FAILURE_CODES["FULL_RETRY_EXHAUSTED"],
+                failure_codes=failure_code_history,
+            )
+            return
+
         if attempt == MAX_TRANSLATION_ATTEMPTS:
-            print(f"\n❌ Failed to generate valid markdown translation for {filepath}")
+            print(
+                format_failure_header(
+                    FAILURE_CODES["FULL_RETRY_EXHAUSTED"],
+                    f"Failed to generate valid markdown translation for {filepath}",
+                )
+            )
+            print(f"  - Last Failure Code: {full_failure_code}")
             print("  - Validation Errors:")
             for error in full_errors:
                 print(f"    - {error}")
             print(f"  - Last Output:\n{model_output}")
+            update_aggregate_metrics(
+                mode="full",
+                source_filename=source_filename,
+                target_lang=target_lang,
+                attempts_used=attempt,
+                success=False,
+                max_attempts=MAX_TRANSLATION_ATTEMPTS,
+                failure_code=FAILURE_CODES["FULL_RETRY_EXHAUSTED"],
+                failure_codes=failure_code_history,
+            )
             return
 
         retry_feedback = format_retry_feedback(
             "full-translation",
             attempt,
             full_errors,
-            previous_output,
+            full_failure_code,
         )
 
     result_text = final_output + "\n"
@@ -684,6 +1112,16 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
     # print(result_file)
     with open(result_file, "w", encoding="utf-8") as f:
         f.write(result_text)
+    update_aggregate_metrics(
+        mode="full",
+        source_filename=source_filename,
+        target_lang=target_lang,
+        attempts_used=attempt,
+        success=True,
+        max_attempts=MAX_TRANSLATION_ATTEMPTS,
+        failure_code=None,
+        failure_codes=failure_code_history,
+    )
     # print(result_text)
 
 

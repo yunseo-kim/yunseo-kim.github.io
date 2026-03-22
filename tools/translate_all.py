@@ -6,6 +6,8 @@
 # ///
 import sys
 import os
+import logging
+from pathlib import Path
 from tqdm import tqdm
 import prompt
 
@@ -43,6 +45,36 @@ target_langs = [
 ]
 source_lang_code = "ko"
 
+LOGS_DIR = Path(__file__).resolve().parent / "logs"
+SCRIPT_LOG_FILE = LOGS_DIR / "translate_all.log"
+
+_SCRIPT_LOGGER = None
+
+
+def ensure_logs_dir():
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def get_script_logger():
+    global _SCRIPT_LOGGER
+    if _SCRIPT_LOGGER is not None:
+        return _SCRIPT_LOGGER
+
+    ensure_logs_dir()
+    logger = logging.getLogger("translate_all")
+    logger.setLevel(logging.INFO)
+    logger.propagate = False
+    if not logger.handlers:
+        handler = logging.FileHandler(SCRIPT_LOG_FILE, encoding="utf-8")
+        formatter = logging.Formatter(
+            "%(asctime)s %(levelname)s %(message)s", "%Y-%m-%dT%H:%M:%S%z"
+        )
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+    _SCRIPT_LOGGER = logger
+    return _SCRIPT_LOGGER
+
+
 if __name__ == "__main__":
     initial_wd = os.getcwd()
     os.chdir(os.path.abspath(os.path.dirname(__file__)))
@@ -58,6 +90,8 @@ if __name__ == "__main__":
 
     if not filelist:
         sys.exit("No files to translate.")
+
+    get_script_logger().info("Full translation run started files=%s", len(filelist))
 
     print("These files will be translated:")
     for file in filelist:
@@ -82,4 +116,5 @@ if __name__ == "__main__":
             )
 
     print("\nTranslation completed!")
+    get_script_logger().info("Full translation run completed")
     os.chdir(initial_wd)

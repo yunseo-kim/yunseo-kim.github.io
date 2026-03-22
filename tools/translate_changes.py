@@ -8,6 +8,8 @@
 import sys
 import os
 import subprocess
+import logging
+from pathlib import Path
 from tqdm import tqdm
 import compare_hash
 import prompt
@@ -46,6 +48,45 @@ target_langs = [
 ]
 source_lang_code = "ko"
 
+FAILURE_CODES = {
+    "GIT_DIFF_COMMAND_FAILED": "GIT_DIFF_COMMAND_FAILED",
+    "GIT_DIFF_EMPTY_OR_UNCHANGED": "GIT_DIFF_EMPTY_OR_UNCHANGED",
+}
+
+LOGS_DIR = Path(__file__).resolve().parent / "logs"
+SCRIPT_LOG_FILE = LOGS_DIR / "translate_changes.log"
+
+_SCRIPT_LOGGER = None
+
+
+def ensure_logs_dir():
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def get_script_logger():
+    global _SCRIPT_LOGGER
+    if _SCRIPT_LOGGER is not None:
+        return _SCRIPT_LOGGER
+
+    ensure_logs_dir()
+    logger = logging.getLogger("translate_changes")
+    logger.setLevel(logging.INFO)
+    logger.propagate = False
+    if not logger.handlers:
+        handler = logging.FileHandler(SCRIPT_LOG_FILE, encoding="utf-8")
+        formatter = logging.Formatter(
+            "%(asctime)s %(levelname)s %(message)s", "%Y-%m-%dT%H:%M:%S%z"
+        )
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+    _SCRIPT_LOGGER = logger
+    return _SCRIPT_LOGGER
+
+
+def format_failure_header(code, message):
+    get_script_logger().error("[%s] %s", code, message)
+    return f"\n❌ [{code}] {message}"
+
 
 def get_git_diff(filepath):
     """Get the diff of the file using git"""
@@ -58,7 +99,13 @@ def get_git_diff(filepath):
         )
         return result.stdout.strip()
     except Exception as e:
-        print(f"Error getting git diff: {e}")
+        print(
+            format_failure_header(
+                FAILURE_CODES["GIT_DIFF_COMMAND_FAILED"],
+                f"Error getting git diff for {filepath}",
+            )
+        )
+        print(f"  - Error: {e}")
         return None
 
 
@@ -77,7 +124,15 @@ def translate_incremental(filepath, source_lang, target_lang, model, source_file
     diff_output = get_git_diff(filepath)
     # print(f"Diff output: {diff_output}")
     if not diff_output:
-        print(f"No changes detected or error getting diff for {filepath}")
+        print(
+            format_failure_header(
+                FAILURE_CODES["GIT_DIFF_EMPTY_OR_UNCHANGED"],
+                f"No incremental diff available for {filepath}",
+            )
+        )
+        print(
+            "  - Reason: No changes detected, file unchanged, or diff retrieval failed."
+        )
         return
 
     # Call the translation function with the diff
@@ -114,6 +169,12 @@ if __name__ == "__main__":
     if not changed_files:
         sys.exit("No files have changed.")
 
+    get_script_logger().info(
+        "Translation run started incremental=%s changed_files=%s",
+        args.incremental,
+        len(changed_files),
+    )
+
     print("Changed files:")
     for file in changed_files:
         print(f"- {file}")
@@ -149,4 +210,5 @@ if __name__ == "__main__":
                 )
 
     print("\nTranslation completed!")
+    get_script_logger().info("Translation run completed")
     os.chdir(initial_wd)
