@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Union Color Emoji Font Test</title>
+    <style>
+        @font-face {
+            font-family: 'AfricanUnionEmoji';
+            src: url('AfricanUnionEmoji.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+            unicode-range: U+E001;
+        }
+
+        .au-emoji {
+            font-family: 'AfricanUnionEmoji', 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;
+            font-style: normal;
+        }
+
+        .test-large { font-size: 64px; }
+        .test-medium { font-size: 32px; }
+        .test-small { font-size: 16px; }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .color-box {
+            display: inline-block;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Monaco, Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌍 African Union Color Emoji Font Test</h1>
+
+    <div class="test-section">
+        <h2>Color Font Rendering</h2>
+        <p>This font preserves the original colors: green background, gold stars, white sunburst.</p>
+        <div class="color-box">
+            <span class="au-emoji test-large">&#xE001;</span>
+        </div>
+        <p>Large (64px): <span class="au-emoji test-large">&#xE001;🇰🇷 </span></p>
+        <p>Medium (32px): <span class="au-emoji test-medium">&#xE001;🇰🇷 </span></p>
+        <p>Small (16px): <span class="au-emoji test-small">&#xE001;🇰🇷 </span></p>
+        
+        <p><small>File: <code>AfricanUnionEmoji.woff2</code> (10.7KB, COLRv1 + CPAL)</small></p>
+    </div>
+
+    <div class="test-section">
+        <h2>Unicode Character Reference</h2>
+        <ul>
+            <li>Codepoint: <code>U+E001</code></li>
+            <li>HTML entity: <code>&amp;#xE001;</code></li>
+            <li>BMP Private Use Area</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>Browser Compatibility</h2>
+        <ul>
+            <li>✅ Chrome 90+</li>
+            <li>✅ Firefox 105+</li>
+            <li>✅ Edge 90+</li>
+            <li>✅ Safari 15.4+</li>
+        </ul>
+        <p>Older browsers will fall back to system emoji fonts.</p>
+    </div>
+
+    <div class="test-section">
+        <h2>CSS Usage</h2>
+        <pre><code>@font-face {
+  font-family: 'AfricanUnionEmoji';
+  src: url('AfricanUnionEmoji.woff2') format('woff2');
+  unicode-range: U+E001;
+}
+
+.au-emoji {
+  font-family: 'AfricanUnionEmoji', sans-serif;
+}
+
+/* HTML */
+&lt;span class="au-emoji"&gt;&amp;#xE001;&lt;/span&gt;</code></pre>
+    </div>
+</body>
+</html>

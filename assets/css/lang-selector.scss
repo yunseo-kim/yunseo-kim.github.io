@@ -6,7 +6,24 @@
  * 
  * 사이드바에 위치한 언어 선택 드롭다운의 스타일을 정의합니다.
  * 테마의 다크 모드를 지원하며, 모바일 환경에서도 최적화되어 있습니다.
+ * 
+ * 모바일 호환성 참고사항:
+ * - iOS Safari와 Android Chrome은 <select> 드롭다운에 시스템 UI를 사용합니다
+ * - 펼쳐진 상태에서는 CSS 스타일링이 일부 무시될 수 있습니다
+ * - 다국어 폰트 스택은 닫힌 상태에서만 완전히 적용됩니다
+ * - 접근성을 위해 네이티브 <select>를 유지합니다 (커스텀 드롭다운 미사용)
  */
+
+/* African Union Flag Emoji Font */
+/* COLRv1 Color Font - preserves green background, gold stars, white sunburst */
+@font-face {
+  font-family: 'AfricanUnionEmoji';
+  src: url("{{ '/assets/fonts/au-flag-emoji/AfricanUnionEmoji.woff2' | relative_url }}") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+E001;
+}
 
 /* 언어 선택기 컨테이너 */
 .lang-selector-wrapper {
@@ -33,8 +50,8 @@
     width: 100%;
     padding: 0.5rem 2rem 0.5rem 1rem;
     
-    /* 폰트 및 색상 */
-    font-family: "Pretendard JP Variable", "Pretendard Variable", sans-serif;
+    /* 접힌 상태의 폰트 및 색상 스타일 지정 */
+    font-family: "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "AfricanUnionEmoji", "Pretendard Std Variable", "Pretendard Variable", "Pretendard JP Variable", "Noto Serif Ethiopic", sans-serif;
     font-size: 0.95rem;
     color: var(--sidebar-muted);
     background-color: var(--sidebar-bg);
@@ -53,15 +70,10 @@
 
 /* 국기 이모지 스타일 */
 .lang-select option {
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+    /* 펼쳐진 상태의 폰트 스타일 지정 */
+    font-family: "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "AfricanUnionEmoji", "Pretendard Std Variable", "Pretendard Variable", "Pretendard JP Variable", "Noto Serif Ethiopic", sans-serif;
     padding: 0.35rem;
     font-size: 1rem;
-}
-
-.lang-flag {
-    display: inline-block;
-    margin-right: 0.5rem;
-    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
 }
 
 /* 호버 상태 */
