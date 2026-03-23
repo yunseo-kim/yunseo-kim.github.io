@@ -22,7 +22,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+E001;
+  unicode-range: U+1F30D;
 }
 
 /* 언어 선택기 컨테이너 */
@@ -51,7 +51,8 @@
     padding: 0.5rem 2rem 0.5rem 1rem;
     
     /* 접힌 상태의 폰트 및 색상 스타일 지정 */
-    font-family: "Pretendard Std Variable", "Pretendard Variable", "Pretendard JP Variable", "Noto Serif Ethiopic", "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "AfricanUnionEmoji", sans-serif;
+    font-family: "AfricanUnionEmoji", "Pretendard Std Variable", "Pretendard Variable", "Pretendard JP Variable", "Noto Serif Ethiopic", "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-variant-emoji: emoji;
     font-size: 0.95rem;
     color: var(--sidebar-muted);
     background-color: var(--sidebar-bg);
@@ -71,7 +72,8 @@
 /* 국기 이모지 스타일 */
 .lang-select option {
     /* 펼쳐진 상태의 폰트 스타일 지정 */
-    font-family: "Pretendard Std Variable", "Pretendard Variable", "Pretendard JP Variable", "Noto Serif Ethiopic", "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "AfricanUnionEmoji", sans-serif;
+    font-family: "AfricanUnionEmoji", "Pretendard Std Variable", "Pretendard Variable", "Pretendard JP Variable", "Noto Serif Ethiopic", "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-variant-emoji: emoji;
     padding: 0.35rem;
     font-size: 1rem;
 }
