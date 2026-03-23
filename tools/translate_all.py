@@ -7,6 +7,7 @@
 import sys
 import os
 import logging
+import argparse
 from pathlib import Path
 from tqdm import tqdm
 import prompt
@@ -76,6 +77,16 @@ def get_script_logger():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Translate blog posts from source language to target languages."
+    )
+    parser.add_argument(
+        "--override",
+        action="store_true",
+        help="Overwrite existing translated files. Without this flag, existing files are skipped.",
+    )
+    args = parser.parse_args()
+
     initial_wd = os.getcwd()
     os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
@@ -91,30 +102,76 @@ if __name__ == "__main__":
     if not filelist:
         sys.exit("No files to translate.")
 
-    get_script_logger().info("Full translation run started files=%s", len(filelist))
+    files_to_translate = []
+    skipped_files = []
+
+    for file in filelist:
+        file_needs_translation = False
+        for target_lang in target_langs:
+            target_lang_code = prompt.lang_code.get(target_lang)
+            if target_lang_code:
+                target_file_path = f"../_posts/{target_lang_code}/{file}"
+                if not os.path.exists(target_file_path) or args.override:
+                    file_needs_translation = True
+                else:
+                    skipped_files.append((file, target_lang))
+        if file_needs_translation:
+            files_to_translate.append(file)
+
+    skipped_by_file = {}
+    for file, target_lang in skipped_files:
+        if file not in skipped_by_file:
+            skipped_by_file[file] = []
+        skipped_by_file[file].append(target_lang)
+
+    if skipped_by_file and not args.override:
+        print("The following files already exist and will be skipped:")
+        for file, langs in skipped_by_file.items():
+            print(f"- {file} ({', '.join(langs)})")
+        print("")
+
+    if not files_to_translate:
+        print("No files need translation (all target files already exist).")
+        print("Use --override to force re-translation of existing files.")
+        sys.exit(0)
+
+    get_script_logger().info(
+        "Full translation run started files=%s (skipped=%s)",
+        len(files_to_translate),
+        len(skipped_files),
+    )
 
     print("These files will be translated:")
-    for file in filelist:
+    for file in files_to_translate:
         print(f"- {file}")
 
     print("")
     print("*** Translation start! ***")
     model = "gpt-5.4-2026-03-05"
     # 외부 루프: 전체 파일 진행상황
-    for file in tqdm(filelist, desc="Files", position=0):
+    for file in tqdm(files_to_translate, desc="Files", position=0):
         filepath = os.path.join(source_dir, file)
         # 내부 루프: 각 파일의 언어별 번역 진행상황
         for target_lang in tqdm(
             target_langs, desc="Languages", position=1, leave=False
         ):
-            prompt.translate(
-                filepath,
-                source_lang,
-                target_lang,
-                model,
-                source_filename=file,
-            )
+            target_lang_code = prompt.lang_code.get(target_lang)
+            if target_lang_code:
+                target_file_path = f"../_posts/{target_lang_code}/{file}"
+                if os.path.exists(target_file_path) and not args.override:
+                    continue
+                prompt.translate(
+                    filepath,
+                    source_lang,
+                    target_lang,
+                    model,
+                    source_filename=file,
+                )
 
     print("\nTranslation completed!")
+    if skipped_files and not args.override:
+        print(
+            f"Skipped {len(skipped_files)} existing translations (use --override to re-translate)."
+        )
     get_script_logger().info("Full translation run completed")
     os.chdir(initial_wd)
