@@ -11,7 +11,7 @@
             font-weight: normal;
             font-style: normal;
             font-display: swap;
-            unicode-range: U+E001;
+            unicode-range: U+1F30D;
         }
 
         .au-emoji {
@@ -61,11 +61,11 @@
         <h2>Color Font Rendering</h2>
         <p>This font preserves the original colors: green background, gold stars, white sunburst.</p>
         <div class="color-box">
-            <span class="au-emoji test-large">&#xE001;</span>
+            <span class="au-emoji test-large">&#x1F30D;</span>
         </div>
-        <p>Large (64px): <span class="au-emoji test-large">&#xE001;🇰🇷 </span></p>
-        <p>Medium (32px): <span class="au-emoji test-medium">&#xE001;🇰🇷 </span></p>
-        <p>Small (16px): <span class="au-emoji test-small">&#xE001;🇰🇷 </span></p>
+        <p>Large (64px): <span class="au-emoji test-large">&#x1F30D;🇰🇷 </span></p>
+        <p>Medium (32px): <span class="au-emoji test-medium">&#x1F30D;🇰🇷 </span></p>
+        <p>Small (16px): <span class="au-emoji test-small">&#x1F30D;🇰🇷 </span></p>
         
         <p><small>File: <code>AfricanUnionEmoji.woff2</code> (10.7KB, COLRv1 + CPAL)</small></p>
     </div>
@@ -73,9 +73,9 @@
     <div class="test-section">
         <h2>Unicode Character Reference</h2>
         <ul>
-            <li>Codepoint: <code>U+E001</code></li>
-            <li>HTML entity: <code>&amp;#xE001;</code></li>
-            <li>BMP Private Use Area</li>
+            <li>Codepoint: <code>U+1F30D</code> (🌍 Earth Globe Europe-Africa)</li>
+            <li>HTML entity: <code>&amp;#x1F30D;</code> or direct emoji <code>🌍</code></li>
+            <li>Falls back to 🌍 when font fails to load</li>
         </ul>
     </div>
 
@@ -95,15 +95,15 @@
         <pre><code>@font-face {
   font-family: 'AfricanUnionEmoji';
   src: url('AfricanUnionEmoji.woff2') format('woff2');
-  unicode-range: U+E001;
+  unicode-range: U+1F30D;
 }
 
 .au-emoji {
   font-family: 'AfricanUnionEmoji', sans-serif;
 }
 
-/* HTML */
-&lt;span class="au-emoji"&gt;&amp;#xE001;&lt;/span&gt;</code></pre>
+/* HTML - Font loads: African Union flag | Font fails: 🌍 emoji */
+&lt;span class="au-emoji"&gt;&amp;#x1F30D;&lt;/span&gt;</code></pre>
     </div>
 </body>
 </html>

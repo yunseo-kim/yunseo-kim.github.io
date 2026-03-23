@@ -1,6 +1,8 @@
 # African Union Flag Emoji Font
 
-Custom COLRv1 color webfont containing the African Union flag emoji mapped to Unicode Private Use Area codepoint **U+E001**.
+Custom COLRv1 color webfont containing the African Union flag emoji mapped to **U+1F30D** (🌍 Earth Globe Europe-Africa emoji).
+
+> **Fallback strategy**: When the custom font loads, displays the African Union flag. When the font fails, falls back to the standard 🌍 emoji.
 
 ## Files
 
@@ -14,10 +16,13 @@ Custom COLRv1 color webfont containing the African Union flag emoji mapped to Un
 
 ```html
 <!-- Using the utility class -->
-<span class="au-emoji">&#xE001;</span>
+<span class="au-emoji">🌍</span>
+
+<!-- Or with HTML entity -->
+<span class="au-emoji">&#x1F30D;</span>
 
 <!-- Or with inline style -->
-<span style="font-family: 'AfricanUnionEmoji', sans-serif;">&#xE001;</span>
+<span style="font-family: 'AfricanUnionEmoji', 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;">🌍</span>
 ```
 
 ### CSS
@@ -29,7 +34,7 @@ Custom COLRv1 color webfont containing the African Union flag emoji mapped to Un
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+E001;
+  unicode-range: U+1F30D;
 }
 
 .au-emoji {
@@ -39,9 +44,9 @@ Custom COLRv1 color webfont containing the African Union flag emoji mapped to Un
 
 ## Unicode Mapping
 
-| Codepoint | Glyph | Description |
-|-----------|-------|-------------|
-| U+E001 | 🇦🇺 | African Union flag (green, gold, white) |
+| Codepoint | Glyph | Description | Fallback |
+|-----------|-------|-------------|----------|
+| U+1F30D | 🇦🇺 | African Union flag (green, gold, white) | 🌍 Earth emoji |
 
 ## Browser Compatibility
 
@@ -60,12 +65,12 @@ Older browsers will fall back to system emoji fonts.
 # Install nanoemoji
 pip install nanoemoji
 
-# Generate COLRv1 color font
-cp african-union.svg emoji_uE001.svg
+# Generate COLRv1 color font (mapped to U+1F30D 🌍)
+cp african-union.svg emoji_u1F30D.svg
 nanoemoji --color_format glyf_colr_1 \
   --family AfricanUnionEmoji \
   --output_file AfricanUnionEmoji.ttf \
-  emoji_uE001.svg
+  emoji_u1F30D.svg
 
 # Convert to WOFF2
 python3 -c "
@@ -76,14 +81,15 @@ font.save('AfricanUnionEmoji.woff2')
 "
 
 # Cleanup
-rm -rf build emoji_uE001.svg
+rm -rf build emoji_u1F30D.svg
 ```
 
 ## Font Details
 
 - **Format**: WOFF2 with COLRv1 color tables
 - **Family Name**: AfricanUnionEmoji
-- **Codepoint**: U+E001 (BMP Private Use Area)
+- **Codepoint**: U+1F30D (🌍 Earth Globe Europe-Africa)
+- **Fallback**: 🌍 emoji when font unavailable
 - **Glyphs**: Single glyph (African Union flag)
 - **Colors**: Green (#3f724a), Gold (#eec62d), White (#fff)
 - **Source**: African Union flag SVG from Wikimedia Commons
