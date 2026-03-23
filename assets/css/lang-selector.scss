@@ -46,12 +46,12 @@
     /* 기본 스타일 */
     appearance: none;
     -webkit-appearance: none;
-    -moz-appearance: none;
+    -moz-appearance: none !important;  /* Firefox 네이티브 스타일링 강제 제거 */
     width: 100%;
     padding: 0.5rem 2rem 0.5rem 1rem;
     
     /* 접힌 상태의 폰트 및 색상 스타일 지정 */
-    font-family: "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "AfricanUnionEmoji", "Pretendard Std Variable", "Pretendard Variable", "Pretendard JP Variable", "Noto Serif Ethiopic", sans-serif;
+    font-family: "Pretendard Std Variable", "Pretendard Variable", "Pretendard JP Variable", "Noto Serif Ethiopic", "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "AfricanUnionEmoji", sans-serif;
     font-size: 0.95rem;
     color: var(--sidebar-muted);
     background-color: var(--sidebar-bg);
@@ -71,7 +71,7 @@
 /* 국기 이모지 스타일 */
 .lang-select option {
     /* 펼쳐진 상태의 폰트 스타일 지정 */
-    font-family: "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "AfricanUnionEmoji", "Pretendard Std Variable", "Pretendard Variable", "Pretendard JP Variable", "Noto Serif Ethiopic", sans-serif;
+    font-family: "Pretendard Std Variable", "Pretendard Variable", "Pretendard JP Variable", "Noto Serif Ethiopic", "Apple Color Emoji", "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "AfricanUnionEmoji", sans-serif;
     padding: 0.35rem;
     font-size: 1rem;
 }
@@ -91,7 +91,8 @@
 
 /* Firefox 브라우저 대응 */
 .lang-select:-moz-focusring {
-    color: transparent;
+    color: inherit;  /* 이모지가 투명해지는 것 방지 */
+    outline: none;
     text-shadow: 0 0 0 var(--sidebar-muted);
 }
 
