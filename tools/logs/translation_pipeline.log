@@ -19,3 +19,16 @@
 2026-03-22T23:25:26+0900 INFO [incremental][Czech] model=gpt-5.4-2026-03-05 file=2026-03-20-notes-on-the-korean-translation-of-the-contributor-covenant-3.0-code-of-conduct.md attempts=1/5 success=True failure_code=None
 2026-03-22T23:29:52+0900 INFO [incremental][Traditional Chinese (Taiwan)] model=gpt-5.4-2026-03-05 file=2026-03-20-notes-on-the-korean-translation-of-the-contributor-covenant-3.0-code-of-conduct.md attempts=4/5 success=True failure_code=None
 2026-03-22T23:30:22+0900 INFO [incremental][Polish] model=gpt-5.4-2026-03-05 file=2026-03-20-notes-on-the-korean-translation-of-the-contributor-covenant-3.0-code-of-conduct.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:25:53+0900 INFO [full][Swahili] model=gpt-5.4-2026-03-05 file=2024-08-11-sum-to-product-and-product-to-sum-identities.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:27:11+0900 INFO [full][Amharic] model=gpt-5.4-2026-03-05 file=2024-08-11-sum-to-product-and-product-to-sum-identities.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:30:21+0900 INFO [full][Swahili] model=gpt-5.4-2026-03-05 file=2021-04-10-summary-of-kaggle-pandas-course-1.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:34:58+0900 INFO [full][Amharic] model=gpt-5.4-2026-03-05 file=2021-04-10-summary-of-kaggle-pandas-course-1.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:36:13+0900 INFO [full][Swahili] model=gpt-5.4-2026-03-05 file=2025-03-10-newtons-laws-of-motion.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:39:20+0900 INFO [full][Amharic] model=gpt-5.4-2026-03-05 file=2025-03-10-newtons-laws-of-motion.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:42:20+0900 INFO [full][Swahili] model=gpt-5.4-2026-03-05 file=2025-04-20-method-of-undetermined-coefficients.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:46:48+0900 INFO [full][Amharic] model=gpt-5.4-2026-03-05 file=2025-04-20-method-of-undetermined-coefficients.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:47:16+0900 INFO [full][Swahili] model=gpt-5.4-2026-03-05 file=2022-03-16-Bernoulli-Equation.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:48:13+0900 INFO [full][Amharic] model=gpt-5.4-2026-03-05 file=2022-03-16-Bernoulli-Equation.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:49:08+0900 INFO [full][Swahili] model=gpt-5.4-2026-03-05 file=2018-05-27-mechanisms-of-stellar-nuclear-fusion-reactions.md attempts=1/5 success=True failure_code=None
+2026-03-23T00:51:45+0900 INFO [full][Amharic] model=gpt-5.4-2026-03-05 file=2018-05-27-mechanisms-of-stellar-nuclear-fusion-reactions.md attempts=1/5 success=True failure_code=None
+2026-03-24T21:27:45+0900 INFO [full][Swahili] model=gpt-5.4-2026-03-05 file=2026-03-20-notes-on-the-korean-translation-of-the-contributor-covenant-3.0-code-of-conduct.md attempts=1/5 success=True failure_code=None
