@@ -1,0 +1,90 @@
+# The layout text of site
+
+# ----- Commons label -----
+
+layout:
+  post: Makala
+  category: Kategoria
+  tag: Lebo
+
+# The tabs of sidebar
+tabs:
+  home: Nyumbani
+  categories: Kategoria
+  tags: Lebo
+  archives: Kumbukumbu
+  about: Kuhusu
+
+# the text displayed in the search bar & search results
+search:
+  hint: tafuta
+  cancel: Ghairi
+  no_results: Samahani! Hakuna matokeo yaliyopatikana.
+
+panel:
+  lastmod: Iliyosasishwa Hivi Karibuni
+  trending_tags: Lebo Zinazovuma
+  toc: Yaliyomo
+
+copyright:
+  # Shown at the bottom of the post
+  license:
+    template: Makala hii iko chini ya leseni ya :LICENSE_NAME ya mwandishi.
+    name: CC BY-NC 4.0
+    link: https://creativecommons.org/licenses/by-nc/4.0/
+
+  # Displayed in the footer
+  brief: Baadhi ya haki zimehifadhiwa.
+  verbose: >-
+    Isipokuwa pale panapotajwa vinginevyo, makala za blogu kwenye tovuti hii
+    ziko chini ya leseni ya Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+    ya mwandishi.
+
+meta: Inatumia mandhari ya :THEME kwa :PLATFORM.
+
+not_found:
+  statement: Samahani, URL hii haipo au inaelekeza kwenye kitu kisichokuwepo.
+
+notification:
+  update_found: Toleo jipya la maudhui linapatikana.
+  update: Sasisha
+
+# ----- Posts related labels -----
+
+post:
+  written_by: Na
+  posted: Imechapishwa
+  updated: Iliyosasishwa
+  words: maneno
+  pageview_measure: mitazamo
+  read_time:
+    unit: dk
+    prompt: kusoma
+  relate_posts: Soma Zaidi
+  share: Shiriki
+  button:
+    next: Mpya Zaidi
+    previous: Ya Zamani
+    copy_code:
+      succeed: Imenakiliwa!
+    share_link:
+      title: Nakili kiungo
+      succeed: Kiungo kimenakiliwa!
+
+# Date time format.
+# See: <http://strftime.net/>, <https://day.js.org/docs/en/display/format>
+df:
+  post:
+    strftime: "%e %b 1%Y HE"
+    dayjs: "D MMM [1]YYYY [HE]"
+  archives:
+    strftime: "%b"
+    dayjs: "MMM"
+
+categories:
+  category_measure:
+    singular: kategoria
+    plural: kategoria
+  post_measure:
+    singular: makala
+    plural: makala

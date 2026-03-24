@@ -1,0 +1,90 @@
+# The layout text of site
+
+# ----- Commons label -----
+
+layout:
+  post: ልጥፍ
+  category: ምድብ
+  tag: መለያ
+
+# The tabs of sidebar
+tabs:
+  home: መነሻ
+  categories: ምድቦች
+  tags: መለያዎች
+  archives: ማህደር
+  about: ስለ
+
+# the text displayed in the search bar & search results
+search:
+  hint: ፈልግ
+  cancel: ሰርዝ
+  no_results: ይቅርታ! ምንም ውጤት አልተገኘም።
+
+panel:
+  lastmod: በቅርቡ የተዘመነ
+  trending_tags: ተወዳጅ መለያዎች
+  toc: ማውጫ
+
+copyright:
+  # Shown at the bottom of the post
+  license:
+    template: ይህ ልጥፍ በ :LICENSE_NAME ፈቃድ ስር ነው።
+    name: CC BY-NC 4.0
+    link: https://creativecommons.org/licenses/by-nc/4.0/
+
+  # Displayed in the footer
+  brief: አንዳንድ መብቶች የተጠበቁ ናቸው።
+  verbose: >-
+    ካልተገለጸ በስተቀር፣ በዚህ ድረ-ገጽ ላይ ያሉ የብሎግ ልጥፎች
+    በ Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+    ፈቃድ ስር ናቸው።
+
+meta: በ :PLATFORM የተገነባ፣ ከ :THEME ገጽታ ጋር።
+
+not_found:
+  statement: ይቅርታ፣ ይህ URL አልተገኘም ወይም የማይኖር ነገርን ያመለክታል።
+
+notification:
+  update_found: አዲስ ይዘት ይገኛል።
+  update: አዘምን
+
+# ----- Posts related labels -----
+
+post:
+  written_by: በ
+  posted: ተለጠፈ
+  updated: ተዘመነ
+  words: ቃላት
+  pageview_measure: እይታዎች
+  read_time:
+    unit: ደቂቃ
+    prompt: ንባብ
+  relate_posts: ተጨማሪ ንባብ
+  share: አጋራ
+  button:
+    next: አዲስ
+    previous: የቀድሞ
+    copy_code:
+      succeed: ተቀድቷል!
+    share_link:
+      title: አገናኝ ቅዳ
+      succeed: አገናኝ ተቀድቷል!
+
+# Date time format.
+# See: <http://strftime.net/>, <https://day.js.org/docs/en/display/format>
+df:
+  post:
+    strftime: "%e %b 1%Y HE"
+    dayjs: "D MMM [1]YYYY [HE]"
+  archives:
+    strftime: "%b"
+    dayjs: "MMM"
+
+categories:
+  category_measure:
+    singular: ምድብ
+    plural: ምድቦች
+  post_measure:
+    singular: ልጥፍ
+    plural: ልጥፎች
