@@ -1,3 +1,7 @@
+---
+Permalink: /robots.txt
+---
+
 User-agent: *
 Disallow: /norobots/
 
