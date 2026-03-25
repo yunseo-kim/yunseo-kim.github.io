@@ -381,7 +381,7 @@ def submit_prompt(
     system_prompt,
     prefill,
     temperature=0.0,
-    reasoning_level="medium",
+    reasoning_level="low",
     verbosity="medium",
 ):
     client = init_client(model)
@@ -1068,7 +1068,13 @@ def translate(filepath, source_lang, target_lang, model, source_filename=None):
     for attempt in range(1, MAX_TRANSLATION_ATTEMPTS + 1):
         prompt_with_feedback = prompt + retry_feedback
         model_output = submit_prompt(
-            model, prompt_with_feedback, system_prompt, "---", temperature
+            model,
+            prompt_with_feedback,
+            system_prompt,
+            "---",
+            temperature,
+            reasoning_level="low",
+            verbosity="medium",
         )
         if model[:6] == "claude":
             model_output = "---" + model_output
