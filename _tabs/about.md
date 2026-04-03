@@ -11,13 +11,15 @@ seo:
 <p align="center" style="font-size: 1.36rem;"><em>"I sell here, Sir, what all the world desires to have—TRUST."</em></p>
 <p align="right">―after <a href="https://en.wikipedia.org/wiki/Matthew_Boulton"><i>Matthew Boulton</i></a></p>
 
-👋 Hello, I'm **Yunseo Kim**, founder of **[Windlass](https://gravatar.com/windlasstech)**. I am an undergraduate student on leave from Seoul National University, where I majored in Nuclear Engineering.
+👋 Hello, I'm **Yunseo Kim**, founder of **[Windlass](https://gravatar.com/windlasstech)**. Currently building infrastructure for the next generation of software: **AI agents**.
 
-My focus has shifted from physical energy to digital integrity. As the rise of AI makes the boundary between truth and fabrication increasingly blur, the ability to verify and prove the integrity of information has become the most critical asset in the digital economy.
+My focus has shifted from physical energy to the fundamental infrastructure of the AI era. As autonomous AI agents rapidly become an integral part of modern software, the ecosystem is suffering from severe fragmentation and security vulnerabilities. I believe that the ability to safely package, distribute, and verify these AI components is the most critical bottleneck in the generative AI economy today.
 
-At Windlass, I'm building a blockchain-based '3-step proof system' (Send, Delivery, Read) to resolve structural trust bottlenecks in global business communications. By leveraging advanced cryptography and machine learning, we ensure that digital evidence remains immutable and legally binding, establishing a new standard of trust for the high-tech era.
+At Windlass, I am building the definitive supply chain infrastructure for this new paradigm. I lead the development of **Agent Volumes** (an open standard for AI agent components), alongside **Alexandria** (a secure, centralized registry) and **`shelf`** (an intuitive CLI package manager). By providing seamless compatibility and robust security verification, we empower developers to build and deploy AI agents with absolute confidence.
 
-I believe that reliable and transparent digital trust will arrive **"when mankind needs it—and that time is 2026"**!
+This standardized supply chain is just the beginning. Ultimately, I am laying the groundwork for a scalable **agent harness and unified collaboration platform**—a future workspace where human intelligence and autonomous AI agents can interact, orchestrate, and work together seamlessly.
+
+I believe that a robust, interconnected AI ecosystem will arrive **"when mankind needs it—and that time is 2026"**!
 - - -
 
 ### Social Links <img src = "https://media.giphy.com/media/pLo39nQ9yGahnDFbay/giphy.gif" width=32 alt="">

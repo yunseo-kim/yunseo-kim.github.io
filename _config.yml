@@ -19,7 +19,7 @@ title: Yunseo Kim's Study Notes        # the main title
 tagline: Mathematics, Physics, and Engineering. # it will display as the subtitle
 
 description: >-                        # used by seo meta and the atom feed
-  Yunseo Kim's personal blog mainly covering mathematics, physics, and engineering.
+  Yunseo Kim's personal blog on mathematics, physics, and engineering, now expanding to business, AI agent ecosystems, software supply chains, and digital trust.
 
 # fill in the protocol & hostname for your site
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -41,16 +41,17 @@ social:
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Yunseo Kim
   email: contact@yunseo.kim        # change to your email address
-  fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
+  fediverse_handle: "@yunseo.kim@bsky.brid.gy" # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/yunseo-kim       # change to your GitHub homepage
     - https://twitter.com/yunse0_kim   # change to your Twitter homepage
     # Uncomment below to add more social links
-    - https://www.facebook.com/yunse0.kim
-    - https://www.linkedin.com/in/yunseo-kim
-    - https://www.kaggle.com/yunseo47
+    - https://bsky.app/profile/yunseo.kim
     - https://www.threads.net/@yxnseo.k
+    - https://www.linkedin.com/in/yunseo-kim
+    - https://www.facebook.com/yunse0.kim
+    - https://www.kaggle.com/yunseo47
 
 # Site Verification Settings
 webmaster_verifications:
