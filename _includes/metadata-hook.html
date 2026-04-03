@@ -1,0 +1,39 @@
+<!-- A placeholder to allow defining custom metadata -->
+
+{% comment -%}
+  Fediverse/Bluesky verification links via fed.brid.gy
+  https://fed.brid.gy/docs#mastodon-link-verification
+{%- endcomment %}
+
+{% if page.layout == 'home' or page.url == '/about/' or page.url == '/' -%}
+  {% comment %} Profile pages (home, about): rel="me" for identity verification {% endcomment %}
+  {% for entry in site.data.contact -%}
+    {%- assign rel_me_url = null -%}
+    {%- case entry.type -%}
+      {%- when 'github' -%}
+        {%- if site.github.username -%}
+          {%- assign rel_me_url = 'https://github.com/' | append: site.github.username -%}
+        {%- endif -%}
+      {%- when 'twitter' -%}
+        {%- if site.twitter.username -%}
+          {%- assign rel_me_url = 'https://x.com/' | append: site.twitter.username -%}
+        {%- endif -%}
+      {%- else -%}
+        {%- if entry.url and entry.url != empty -%}
+          {%- assign rel_me_url = entry.url -%}
+        {%- endif -%}
+    {%- endcase -%}
+    {% if rel_me_url -%}
+  <link rel="me" href="{{ rel_me_url }}" />
+    {%- endif %}
+  {%- endfor %}
+  
+  {% comment -%} Bridged Bluesky account via fed.brid.gy {%- endcomment %}
+  {% if site.social.bluesky_did and site.social.bluesky_did != empty -%}
+  <link rel="me" href="https://bsky.brid.gy/ap/{{ site.social.bluesky_did }}" />
+  {%- endif %}
+  
+{%- elsif page.layout == 'post' or page.layout == 'page' -%}
+  {% comment -%} Content pages: rel="author" linking to author profile {%- endcomment %}
+  <link rel="author" href="{{ '/about/' | absolute_url }}" />
+{%- endif %}

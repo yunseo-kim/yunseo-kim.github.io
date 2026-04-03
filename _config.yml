@@ -42,10 +42,11 @@ social:
   name: Yunseo Kim
   email: contact@yunseo.kim        # change to your email address
   fediverse_handle: "@yunseo.kim@bsky.brid.gy" # fill in your fediverse handle. E.g. "@username@domain.com"
+  bluesky_did: "did:plc:mewuigqcszx6lhxcnok3d53b"  # Bluesky account DID for fed.brid.gy bridge verification
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/yunseo-kim       # change to your GitHub homepage
-    - https://twitter.com/yunse0_kim   # change to your Twitter homepage
+    - https://x.com/yunse0_kim   # change to your Twitter homepage
     # Uncomment below to add more social links
     - https://bsky.app/profile/yunseo.kim
     - https://www.threads.net/@yxnseo.k
