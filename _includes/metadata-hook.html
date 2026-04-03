@@ -36,4 +36,8 @@
 {%- elsif page.layout == 'post' or page.layout == 'page' -%}
   {% comment -%} Content pages: rel="author" linking to author profile {%- endcomment %}
   <link rel="author" href="{{ '/about/' | absolute_url }}" />
+  {% comment -%} Bridged Bluesky account via fed.brid.gy {%- endcomment %}
+  {% if site.social.bluesky_did and site.social.bluesky_did != empty -%}
+  <link rel="author" type="application/activity+json" href="https://bsky.brid.gy/ap/{{ site.social.bluesky_did }}" />
+  {%- endif %}
 {%- endif %}
