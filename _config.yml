@@ -124,7 +124,7 @@ theme_mode:   # [light|dark]
 cdn: 'https://yunseo.kim/cdn-cgi/image/background=white,fit=scale-down,format=auto,onerror=redirect/'
 
 # the avatar on sidebar, support local or CORS resources
-avatar: 'https://avatars.githubusercontent.com/u/65203374' # '/assets/img/profile.tiff'
+avatar: 'https://gravatar.com/avatar/1f4a5ce40fd90e465d7e2c30af6ffcc89886dfcf09321d47f75d4fc7905824aa?s=256' # '/assets/img/profile.tiff'
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
